@@ -1,0 +1,504 @@
+/*_about.scss*/
+
+
+body.page-id-2{
+
+	
+	section#about-page-details{
+	}//section#about-page-details{
+
+	#about-logo{
+    min-height: 25vh;
+    padding-top: 10vh;
+	//margin: auto;
+	//float: right;
+
+		@media (min-width: map-get($breakpoints,md)) {
+		min-height: initial;
+   		padding-top: 20vh;
+		}
+
+		.logo-wrap{
+		overflow: visible;
+
+			img{
+			margin-left: -3%;// offset - to line up with copy
+			width: 75%;
+			max-width: 300px;
+			float: left;
+	    	position: relative;
+	    	display: block;
+	    	float: left;
+				
+				@media (min-width: map-get($breakpoints,lg)) {
+			    margin-left: -23%;
+				}
+			}
+		}
+	 	
+	}//#about-logo
+
+	#intro-copy{
+	overflow: hidden;
+	position: relative;	
+	width: 100%;
+	pointer-events:none;
+
+		@media (min-width: map-get($breakpoints,md)) {
+		position: absolute;	
+		z-index: 9;
+		top: 40vh;
+		width:100%;
+		} //md
+
+		#intro-copy-inner{
+		position:relative;
+
+			.intro-wrap{
+			pointer-events:initial;
+
+			//	margin:auto; // don't use this
+				@media (min-width: map-get($breakpoints,lg)) {
+				margin-left: initial;
+				} //md
+			
+				.copy-pos{
+				//max-width: 300px;
+				margin:auto;
+				display: block;
+				position:relative;
+
+					@media (min-width: map-get($breakpoints,lg)) {
+					max-width:initial;
+					} //md
+				
+				}
+
+			}
+
+		}//#intro-copy-inner
+
+	}//#intro-copy
+	
+	#top-line{
+    min-height: 0vh;
+    position: absolute!important;
+    display: none;
+	width: 100%;// not setting width causing overflow issues?
+	
+		@media (min-width: map-get($breakpoints,md)) {         
+ 		display: block;
+ 		min-height: 100vh;
+ 		top: -80vh;
+ 		z-index: 9;
+        }
+
+		.line{
+		pointer-events:none;
+		z-index: 9;
+		width: 50%;
+		height: auto;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom:0px;
+		border-right: 1px solid	$red;
+	 	
+			@media (min-width: map-get($breakpoints,md)) {         
+	 		width: 68.5%;
+	        }
+	 		
+	 		@media (min-width: map-get($breakpoints,lg)) {
+	 		width: 50%;
+   	        }
+
+		} //.line
+
+
+	}//#top-line
+
+	#time-line{
+	overflow: hidden;
+	width: 100%;// not setting width causing overflow issues?
+    position: relative;
+
+		.line{
+		pointer-events:none;
+		z-index: 9;
+		width: 50%;
+		height: auto;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		@include padding(bottom, 4);// this value to corelate wiht first item (or last on page)
+		border-right: 1px solid	$red;
+		
+			@media (min-width: map-get($breakpoints,md)) {         
+	 		width: 68.5%;
+	        }
+	 		
+	 		@media (min-width: map-get($breakpoints,lg)) {
+	 		width: 50%;
+   	        }
+
+		} //.line
+
+
+		.time-line-item{
+		clear: both;//?
+		display: block;
+		position: relative;   
+		overflow: hidden;
+
+			.time-line-item-date,
+			.time-line-item-title{
+			text-align: center;
+			color: $red;
+			}
+			.time-line-item-date{
+            font-weight: $lightweight;
+			}
+
+			.time-line-item-title{
+ 			 font-weight: $boldweight;
+ 			}
+			
+			.time-line-item-line{
+			max-width: 40px;//?
+			display: block;
+			height: 2px;
+			position: relative;
+			left:-1px;
+			background: transparent;
+ 			border-bottom:1px solid	$red;
+			margin: auto;
+			//z-index: 9;
+			}
+
+		}//.time-line-item
+
+		.time-line-item.date-item{
+
+        @include cssvalue(font-size, 0.6);
+        @include cssvalue(line-height, 0.6);
+	    min-height: 60vh;
+     	padding-top: 10vh;
+    	padding-bottom: 10vh;
+   			
+			@media (min-width: map-get($breakpoints,md)) {    
+			width: 37.5vw;
+			max-width: initial;
+			margin-right: 12.5vw;
+			padding-left:map-get($gutter,md);
+			padding-right:map-get($gutter,md);
+			float: right;
+			display: block;
+			}
+			@media (min-width: map-get($breakpoints,lg)) { 
+			width:100%;
+			margin-right:0;
+			padding-top: 20vh;
+    		padding-bottom: 20vh;
+			}  
+
+ 			
+ 			.time-line-item-date{
+ 			margin-left: 50%;
+ 			text-align: left;
+ 			width: 37.5%;
+			padding-left:map-get($gutter,md);
+ 			font-weight: $lightweight;
+ 			@include padding(padding-bottom,0.125);
+			@include padding(padding-top,0.125);
+			//@include cssvalue(line-height, 1);
+	
+				@media (min-width: map-get($breakpoints,md)) {    
+				//@include padding(padding-right,0.25); 
+				//@include padding(padding-bottom,0.25);
+ 
+				//@include cssvalue(line-height, 1.6);
+				width: 50%;
+		        }
+
+		        @media (min-width: map-get($breakpoints,lg)) {    
+				margin-right:37.5%;
+				margin-left:50%;
+				width: 12.5%;
+				max-width: 300px;// this good idea?
+		        }
+
+            }//.time-line-item-date
+			
+			.time-line-item-title{
+			margin-left: 50%;
+			width: 37.5%;
+ 			text-align: left;
+			padding-left:map-get($gutter,md);
+			font-weight: $boldweight;
+			@include padding(padding-bottom,0.025);
+			@include padding(padding-top,0.25);
+		
+				@media (min-width: map-get($breakpoints,md)) {    
+				@include padding(padding-bottom,0.25);
+				@include padding(padding-top,0.25);     
+		        width: 50%;
+		        }
+
+		        @media (min-width: map-get($breakpoints,lg)) {    
+				margin-right:37.5%;
+				margin-left:50%;
+				width: 12.5%;
+				max-width: 300px;// this good idea?
+		        }
+		
+			}//.time-line-item-title
+
+    	
+		}//.time-line-item.date-item
+ 		
+		.time-line-item.date-item.align-left {
+
+			.time-line-item-line{
+			left:-21px;
+			}
+
+
+			@media (min-width: map-get($breakpoints,md)) {    
+			width: 37.5vw;
+			max-width: initial;
+			margin-right: 12.5vw;
+	 		float: right;
+			display: block;
+			}
+			@media (min-width: map-get($breakpoints,lg)) { 
+ 			margin-right: 0;
+  			width: 100%;
+			}  
+
+ 			
+ 			.time-line-item-date{
+ 			margin-left: 12.5%;
+ 			text-align: right;
+ 			width: 37.5%;
+			padding-right:map-get($gutter,md);
+ 		 
+				@media (min-width: map-get($breakpoints,md)) {    
+				width: 50%;
+				margin-left: 0;
+		        }
+
+		        @media (min-width: map-get($breakpoints,lg)) {    
+				margin-right:50%;
+				margin-left: 37.5%;
+				width: 12.5%;
+				max-width: 300px;// this good idea?
+		        }
+
+            }//.time-line-item-date
+			
+			.time-line-item-title{
+			margin-left: 12.5%;
+ 			text-align: right;
+ 			width: 37.5%;
+			padding-right:map-get($gutter,md);
+ 		
+		 
+				@media (min-width: map-get($breakpoints,md)) {    
+		        width: 50%;
+		     	margin-left: 0;
+		        }
+
+		        @media (min-width: map-get($breakpoints,lg)) {    
+				margin-right:50%;
+				margin-left: 37.5%;
+				width: 12.5%;
+				max-width: 300px;
+ 		        }
+		
+			}//.time-line-item-title
+
+
+		}//.time-line-item.date-item.align-left
+
+		.time-line-item.date-item.align-right {
+
+			.time-line-item-line{
+			left:18px;
+			}
+
+		}//.time-line-item.date-item.align-right
+		
+
+		.time-line-item.date-item:last-of-type{
+ 		width: 80%;
+		margin: auto;
+		@include padding(min-height, 4);
+		padding-top: 0;
+        padding-bottom:0;    
+
+            @media (min-width: map-get($breakpoints,md)) {         
+		    width: 37.5vw;
+		    max-width: initial;
+		    margin-right: 12.5vw;
+			}//md
+
+			@media (min-width: map-get($breakpoints,lg)) {         
+			width:100%;
+			margin-right:0;
+			}
+
+			.time-line-item-date{
+            width: 100%;
+            float: left;
+			margin-left: 0;
+			padding-left: 0;
+			text-align: center;
+				@include padding(padding-top,0.25);     
+
+            	@media (min-width: map-get($breakpoints,lg)) {         
+				//width: 50%;
+				//float: none;
+				margin:auto;
+		        max-width: 100%;
+		        clear: both;
+	 			padding-right: 0;
+		        }
+         
+            }//.time-line-item-date
+
+			.time-line-item-title{
+			text-align: center;
+ 			width: 100%;
+			margin-left: 0;
+			padding-left: 0;
+
+				@media (min-width: map-get($breakpoints,md)) {         
+				float: none;
+				margin:auto;
+		        }
+
+ 			}
+			
+			.time-line-item-line{
+			margin-top: -1px;
+			left:-1px;
+			}
+ 		
+ 		}//.time-line-item:last-of-type
+
+ 		.time-line-item.text-item{
+		width: 80%;
+		max-width: 400px;
+   		margin: auto;
+		text-align: center;
+		@include padding(padding-top,1);     
+		@include padding(padding-bottom,1);  
+		z-index: 10;// 1 above line
+
+
+			@media (min-width: map-get($breakpoints,md)) {         
+			max-width: initial; // reset max
+			width: 50%;
+			@include padding(padding-top,2);     
+			@include padding(padding-bottom,2);     
+			padding-right: 12vw;
+			//padding-left: @gutter;
+			float: right;
+			display: block;
+	        }
+
+			@media (min-width: map-get($breakpoints,lg)) { 
+ 		    width: 25%;
+		    float: none;
+			padding:map-get($gutter,lg);
+			@include padding(padding-top,2);     
+			@include padding(padding-bottom,2);   
+			}
+
+
+			.time-line-item-text{
+			float: right;
+	   		background: $black;
+			@include padding(padding-top,0.5);     
+
+				&:after{
+				border-bottom:1px solid $red;
+         		content:"";
+				@include padding(padding-bottom,0.5);
+			    display: block;
+			    margin: auto;
+			    width: 40px;
+        		}
+		
+				@media (min-width: map-get($breakpoints,md)) {         
+				max-width: 400px;
+		        }
+
+				@media (min-width: map-get($breakpoints,lg)) { 
+	       		float: none;
+				}
+
+			}
+
+		}//.time-line-item.text-item
+
+ 		.time-line-item.image{
+ 		
+ 			img{
+ 				width: 100%;
+ 				height: auto
+ 			}
+
+ 			.time-line-image-item-wrap.align-left{
+				
+				img{
+ 				margin:auto;
+ 				display: block;
+ 				float: left;
+ 				}
+ 				
+			}//.align-left
+			
+			.time-line-image-item-wrap.align-center{
+				
+				img{
+ 				margin:auto;
+ 				display: block;
+ 				float: none;
+ 				}
+ 				
+			}//.align-center
+
+			.time-line-image-item-wrap.align-right{
+				
+				img{
+ 				margin:auto;
+ 				display: block;
+ 				float: right;
+ 				}
+ 				
+			}//.align-center
+
+ 		}//.time-line-item.image-item
+		
+
+		#item-id-1{
+		margin-top: 20vh; // provide space for the first itme
+		}
+
+
+	}//	#time-line
+
+	#about-page-contact-details{
+	padding-top: 20vh;
+	padding-bottom: 20vh;
+	min-height: 100vh;
+
+		.contact-title{
+			font-weight: $boldweight;
+		}
+
+	}
+
+
+}//body.page-id-2{

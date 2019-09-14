@@ -1,0 +1,274 @@
+/* GRID */
+
+
+// media query mixin
+@mixin break($size) {  
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+
+/* END GRID */
+
+
+
+
+
+ // ----
+// libsass (v3.3.6)
+// ----
+
+// =========================================================================
+//
+//  PRECISE CONTROL OVER RESPONSIVE TYPOGRAPHY FOR SASS
+//  ---------------------------------------------------
+//  Indrek Paas @indrekpaas
+//
+//  Inspired by Mike Riethmuller's Precise control over responsive typography
+//  http://madebymike.com.au/writing/precise-control-responsive-typography/
+//
+//  `strip-unit()` function by Hugo Giraudel
+//  
+//  11.08.2016 Remove redundant `&` self-reference
+//  31.03.2016 Remove redundant parenthesis from output
+//  02.10.2015 Add support for multiple properties
+//  24.04.2015 Initial release
+//
+// =========================================================================
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media screen and (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+// Usage:
+// ======
+
+// /* Single property */
+// html {
+//   @include fluid-type(font-size, 320px, 1366px, 14px, 18px);
+// }
+
+// /* Multiple properties with same values */
+// h1 {
+//   @include fluid-type(padding-bottom padding-top, 20em, 70em, 2em, 4em);
+// }
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+// media query mixin
+@mixin break($size) {  
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+ 
+
+@mixin body{
+ 
+@include fluid-type(font-size, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($fontsize, xs)*1, map-get($fontsize, lg)*1); // fixed sizing 
+@include fluid-type(font-size, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($fontsize, lg)*0.8, map-get($fontsize, xxl)*0.8); // fixed sizing 
+
+@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*1); // fixed sizing 
+@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*1); // viewport sizing
+
+}
+
+
+
+
+@mixin h1{
+//font-family: $medium-font-family;
+
+@include fluid-type(font-size, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($fontsize, xs)*1, map-get($fontsize, lg)*1.25); // fixed sizing 
+@include fluid-type(font-size, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($fontsize, lg)*1, map-get($fontsize, xxl)*1.25); // fixed sizing 
+
+@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*1); // fixed sizing 
+@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*1); // viewport sizing
+
+}
+
+
+
+@mixin h2{
+//font-family: $medium-font-family;
+
+@include fluid-type(font-size, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($fontsize, xs)*1, map-get($fontsize, lg)*1); // fixed sizing 
+@include fluid-type(font-size, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($fontsize, lg)*1, map-get($fontsize, xxl)*1); // fixed sizing 
+
+@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*0.75); // fixed sizing 
+@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*0.75); // viewport sizing
+
+}
+
+
+@mixin sideheader{
+ 
+@include fluid-type(font-size, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($fontsize, xs)*1.4, map-get($fontsize, lg)*1.4); // fixed sizing 
+@include fluid-type(font-size, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($fontsize, lg)*1.4, map-get($fontsize, xxl)*1.4); // fixed sizing 
+
+//@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*1); // fixed sizing 
+//@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*1); // viewport sizing
+
+}
+
+
+
+@mixin li{
+ 
+@include fluid-type(font-size, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($fontsize, xs)*1, map-get($fontsize, lg)*1); // fixed sizing 
+@include fluid-type(font-size, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($fontsize, lg)*1, map-get($fontsize, xxl)*1); // fixed sizing 
+
+@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*1); // fixed sizing 
+@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*1); // viewport sizing
+
+}
+
+ 
+
+@mixin smaller{
+ 
+@include fluid-type(font-size, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($fontsize, xs)*1, map-get($fontsize, lg)*0.8); // fixed sizing 
+@include fluid-type(font-size, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($fontsize, lg)*0.8, map-get($fontsize, xxl)*0.8); // fixed sizing 
+
+@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*0.8); // fixed sizing 
+@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*0.8); // viewport sizing
+
+}
+
+
+  /* start "measurements" & "spacing" */
+
+@mixin lineheight{
+ 
+@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*1); // fixed sizing 
+@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*1); // viewport sizing
+
+}
+
+
+@mixin cssvalue($type, $size){ // this for vertical measuring 
+@include fluid-type($type, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*$size, map-get($lineheight, lg)*$size); // fixed sizing 
+@include fluid-type($type, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*$size, map-get($lineheight, xxl)*$size); // viewport sizing
+}
+
+@mixin cssvaluegutter($type, $size){ // this for horizontal meassuring - based on gutter
+@include fluid-type($type, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($gutter, xs)*$size, map-get($gutter, lg)*$size); // fixed sizing 
+@include fluid-type($type, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($gutter, lg)*$size, map-get($gutter, xxl)*$size); // viewport sizing
+}
+
+@mixin padding($type, $size){
+
+@include fluid-type($type, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*$size, map-get($lineheight, lg)*$size); // fixed sizing 
+@include fluid-type($type, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*$size, map-get($lineheight, xxl)*$size); // viewport sizing
+
+
+}
+
+
+@mixin paddingtop{
+ 
+@include fluid-type(padding-top, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)); // fixed sizing 
+@include fluid-type(padding-top, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)); // viewport sizing
+
+}
+
+@mixin paddingbottom{
+ 
+@include fluid-type(padding-bottom, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)); // fixed sizing 
+@include fluid-type(padding-bottom, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)); // viewport sizing
+
+}
+
+
+
+/* TO DO - tidy up */
+
+$grey:rgba(255,255,255,0.25);
+
+
+@keyframes blurout{
+  from { filter: blur(0px); }
+  to { filter: blur(3px); }
+} 
+
+@keyframes blurin{
+  from { filter: blur(3px); }
+  to { filter: blur(0px); }
+} 
+@keyframes image-blur-in{
+  from { filter: blur(10px); }
+  to { filter: blur(3px); }
+} 
+
+@keyframes image-blur-out{
+  from { filter: blur(3px); }
+  to { filter: blur(10px); }
+} 
+
+@keyframes image-blur-in-active{
+  from { filter: blur(3px); }
+  to { filter: blur(0px); }
+} 
+
+@keyframes opacityin{
+  from { opacity: 0; }
+  to { opacity: 1; }
+} 
+@keyframes opacityout{
+  from { opacity: 1; }
+  to { opacity: 0; }
+} 
+
+@mixin blur{
+ //filter: blur(5px); 
+// animation-iteration-count: 1;
+ animation: blurout 400ms ease-in forwards;
+}
+
+
+@mixin image-blur{
+ animation: image-blur-in 400ms ease-in-out forwards;
+}
+
+@mixin image-blur-out{
+ animation: image-blur-out 400ms ease-in-out forwards;
+}
+
+@mixin focus{
+// filter: blur(0px); 
+// animation-iteration-count: 1;
+ animation: blurin 200ms ease-in forwards;
+}
+
+ 
+
+
+@mixin scalelink{
+transform:scale(1.025);
+transform-origin:center;
+transition: all 200ms ease-in-out;
+
+}
+

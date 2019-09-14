@@ -1,0 +1,312 @@
+/*_typography.scss*/
+
+
+body {
+color: $text-color;
+font-size: $base-font-size;
+font-family: "Objectivity", Helvetica, Arial, sans-serif;
+font-weight: $baseweight;
+line-height: $base-line-height;
+@include body;
+} /* body */
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+a{
+color: $text-color;
+text-decoration: none;
+@include body;
+
+}
+
+
+a:hover,
+a:visited,
+a:active{
+color: $text-color;
+}
+
+/* Start news typestyles */
+body.post-type-archive-news,
+body.single-news
+{
+color: $news-text-color;
+
+    a{
+    color: $news-text-color;
+    text-decoration: none;
+    @include body;
+    }
+
+    a:hover,
+    a:visited,
+    a:active{
+    color: $news-text-color;
+    }
+
+} /* body.post-type-archive-news,
+     body.single-news */
+
+/* End news typestyles */
+
+
+
+li{
+@include li;
+font-weight: $mediumweight;
+}
+
+
+@mixin linkanimation{
+}
+
+/* link animations 
+
+
+circles https://codepen.io/YusukeNakaya/pen/KyKJBE/
+
+*/
+// Please change your favorite font-size!
+$fontSize: 10rem;
+
+.room-items{
+  // background: rgba(10, 20, 40, 1);
+  //height: 100vh;
+ /* overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+*/}
+
+div.anim-text,
+span.anim-text,
+div.link-animation,
+a.link-animation
+ {
+  will-change: transform;
+}
+
+.link-animation {
+  transform-style: preserve-3d;
+position: relative;
+    overflow: hidden;
+    display: block;
+    width: auto;
+    overflow: visible;
+   	color: transparent;
+
+  .anim-text {
+  //	left:0;
+//  	right:0;
+    position: absolute;
+    color: #fff;
+   // padding: 20px 0;
+   // mix-blend-mode: difference;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    @for $i from 1 through 26 {
+      $key: $i - 1;
+      $param: 5;
+      &:nth-child(#{$i}) {
+        clip-path: polygon(
+          -30% + ($key * $param) 0,
+          -20% + ($key * $param) 0,
+          20% + ($key * $param) 100%,
+          0% + ($key * $param) 100%
+        );
+       
+//        animation: wave 2000ms $key * 200 - 10000ms ease-in-out infinite alternate;
+      }
+    }
+  }
+  .anim-text:nth-of-type(1) {
+ // position: relative;
+  }
+
+  .height-item{
+  	opacity: 0;
+  	position: relative;
+  	//  background: red;
+
+  }
+
+}
+
+.link-animation:hover {
+
+     animation: blurring 1500ms ease-out forwards;
+
+   .anim-text {
+   	top:0;
+//      mix-blend-mode: difference;
+
+      @for $i from 1 through 26 {
+      $key: $i - 1;
+      $param: 5;
+      &:nth-child(#{$i}) {
+       // margin-top:#{$i}px;
+		animation: wave 1000ms $key * 50 - 5000ms ease-in-out 5 alternate;
+		//animation: wave 2000ms $key * 200 - 10000ms ease-in-out 5 alternate;
+
+		//animation-iteration-count: 1;
+
+       // animation:     wave 2000ms $key * 200 - 10000ms ease-in-out infinite alternate;
+        // blurin 
+        //@include blur;
+      //   clip-path{
+       // @include blur;
+       // };
+      }
+    }
+  }
+  .anim-text:nth-of-type(1) {
+ // position: absolute;
+  //background: red;
+
+  }
+}
+
+
+
+@keyframes blurring {
+ 0% {
+	filter: blur(0px)
+  }
+    25% {
+    		filter: blur(3px)
+
+	}
+  50% {
+
+	filter: blur(4px)
+
+  }
+
+  75%{
+  		filter: blur(3px)
+
+  }
+
+  100%{
+	filter: blur(0px)
+
+  }
+
+} //@keyframes blurring
+
+
+@keyframes wave {
+	
+	0%{
+	 // filter: blur(1px);
+	 //  transform: translate(0%, 0%) scale(1) rotateX(0deg) rotateY(0deg);
+    transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
+
+	}
+
+  50% {
+   transform: translate(0%, 0%) scale(0.9) rotateX(random(100)+deg) rotateY(10deg);
+ //  transform: translate(0%, 0%) scale(0.9) rotateX(10deg) rotateY(10deg);
+
+
+//  	color: rgba(0, 0, 0, 1);
+  //color: rgba(50, 230, 255, 1);
+    
+//color: rgba(0, 0, 0, 1);
+    // filter: blur(1px)
+
+//	@include blur
+
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
+// @include focus
+  	color: rgba(255, 255, 255, 1);
+
+
+    //color: rgba(50, 230, 255, 1);
+ 	//filter: blur(0px)
+
+  }
+}
+
+	@keyframes blurlink {
+		0%		{text-shadow:  0 0 100px #fff; opacity:0;}
+		5%		{text-shadow:  0 0 90px #fff;}
+		15%		{opacity: 1;}
+		20%		{text-shadow:  0 0 10px #fff;}
+		80%		{text-shadow:  0 0 10px #fff;}
+		85%		{opacity: 1;}
+		95%		{text-shadow:  0 0 90px #fff;}
+		100%	{text-shadow:  0 0 100px #fff; opacity:0;}
+	}
+
+	@-webkit-keyframes blurlink {
+		0%		{text-shadow:  0 0 100px #fff; opacity:0;}
+		5%		{text-shadow:  0 0 90px #fff;}
+		15%		{opacity: 1;}
+		20%		{text-shadow:  0 0 10px #fff;}
+		80%		{text-shadow:  0 0 10px #fff;}
+		85%		{opacity: 1;}
+		95%		{text-shadow:  0 0 90px #fff;}
+		100%	{text-shadow:  0 0 100px #fff; opacity:0;}
+	}
+
+a._link-animation{
+
+	span {
+	//	color: transparent;
+	//	animation: blurlink 1s ease-in;
+	//	-webkit-animation: blurlink 1s ease-in;
+	}
+
+}
+
+a._link-animation:hover{
+
+	span {
+		color: transparent;
+		animation: blurlink 10s ease-out;
+		-webkit-animation: blurlink 10s ease-out;
+	}
+
+	span:nth-child(1) {
+		animation-delay: 0.1s;
+		-webkit-animation-delay: 0.1s;
+	}
+	span:nth-child(2) {
+		animation-delay: 0.2s;
+		-webkit-animation-delay: 0.2s;
+	}
+	span:nth-child(3) {
+		animation-delay: 0.3s;
+		-webkit-animation-delay: 0.3s;
+	}
+	span:nth-child(4) {
+		animation-delay: 0.4s;
+		-webkit-animation-delay: 0.4s;
+	}
+	span:nth-child(5) {
+		animation-delay: 0.5s;
+		-webkit-animation-delay: 0.5s;
+	}
+	span:nth-child(6) {
+		animation-delay: 0.6s;
+		-webkit-animation-delay: 0.6s;
+	}
+	span:nth-child(7) {
+		animation-delay: 0.7s;
+		-webkit-animation-delay: 0.7s;
+	}
+
+	
+
+}
+

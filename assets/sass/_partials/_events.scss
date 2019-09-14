@@ -1,0 +1,356 @@
+/*site wide */
+
+.upcoming-events-title{
+width: 100%;
+text-align: center;
+
+  @include padding(padding-top, 1);
+  @include padding(padding-bottom, 1);
+}
+
+
+.date-item{
+@include smaller;
+
+  .date{
+  width: 100%;
+  display: flex; 
+  }
+
+  .time{
+  width: 100%;
+  display: flex;
+  }
+
+} /* .date-item */
+
+
+
+
+
+/* single */
+
+.single-events{
+
+  .details-wrap.outer-grid-item{
+  @include padding(padding-top, 2);
+  @include padding(padding-bottom, 2);
+  }
+  
+  .cover-image-item{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  }
+
+  .event-name{
+  @include h1;
+  font-weight: $boldweight;
+  }
+
+
+
+  section#upcoming-events{
+  width: 100%;
+
+    .event-item{
+    min-height: 50vh;
+    @include padding(padding, 2);
+
+      .event-name{
+      @include h2;
+      font-weight: $boldweight;
+      } 
+
+    }
+    
+  } /*section#upcoming-events*/
+
+
+} /* single */
+
+
+
+
+.event-summary{
+overflow: visible; // for transforms
+
+
+  div.summary-item{
+   border-bottom: 1px solid white;   
+  @include padding(padding-top, 0.2);
+  @include padding(padding-bottom, 0.2);
+  @include smaller;
+
+    a{
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    }
+
+    span{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    float: left;
+    }
+
+    .svg-icon.inline-icon{
+ //height: @mixin cssvalue($type, $size){
+   @include cssvalue(height, 0.8); // 1 -padding minus (from above though -- not sure it adds up)
+   @include cssvalue(padding, 0.1); // 1 -padding minus
+
+    }
+    &:hover{
+     
+        .scale-me{
+        @include scalelink;
+        }
+     
+        a{
+    
+          .right{ 
+           font-weight: $boldweight;
+          }
+
+        }
+
+    }
+
+  }
+  div.summary-item:first-child{
+  }
+  div.summary-item:last-child{
+  border-bottom: none;   
+
+      &:hover{
+      // border-top: 1px solid white; 
+      }
+  
+  }
+  div.summary-item:first-child:last-child{
+  border: none;
+  }
+
+
+  div.summary-item.past{
+
+      span{
+      float: left;
+      }
+
+      a{
+      width: 100%;
+      float: left;
+      display: block;
+     // width: auto;
+
+          .right{ 
+          float:right;  
+          font-weight: $mediumweight;
+          }
+
+          
+      }
+
+  } /* div.summary-item */
+
+
+} /* event-summary */
+
+
+#lineup-wrap{
+
+
+    li.room{
+
+    }
+
+    .room-name{
+    @include body;
+    font-weight: $boldweight;
+    }
+
+    ul.room-items{
+    @include padding(padding-bottom, 0.8);
+    }
+                        
+    li.artist-name.label-artist{
+    @include body;
+      font-weight: $lightweight;
+   // background: red;
+      a{
+        font-weight: inherit;
+        font-size: inherit;
+         }
+
+    }
+                        
+    li.artist-name.other-artist{
+    @include body;
+      font-weight: $lightweight;
+  
+      span{
+            font-weight: inherit;
+        font-size: inherit;
+     
+        }
+
+    }
+
+    li.text-item{
+    @include body;
+      font-weight: $lightweight; 
+  
+      span{
+            font-weight: inherit;
+        font-size: inherit;
+     
+        }
+    }
+ 
+
+
+} /*#lineup-wrap*/
+
+
+
+
+
+
+
+section.view.container{
+   @include padding(padding, 2);
+
+  .row{
+  text-align: center;
+  }
+
+
+}//section#upcoming-events
+
+
+section#past-events{
+width: 100%;
+  
+  .past-event-title{
+  text-align: center;
+  }
+
+  .event-items{
+
+    a{
+    border-bottom: 1px solid white;   
+    }
+    a:first-child{
+    }
+    a:last-child{
+    border-bottom: none;   
+    }
+    a:first-child:last-child{
+      border: none;
+    }
+
+  } /* .event-items */
+
+
+} //section#past-events
+
+
+.event-items{
+position: relative;
+overflow: visible; /* this because of sticky can't be hidden? */
+}
+
+
+/* archive */
+
+.post-type-archive-events{
+
+   .event-item{
+    min-height: 100vh;
+    @include padding(padding, 2);
+
+      .event-name{
+      @include h2;
+      font-weight: $boldweight;
+      } 
+
+    } /*event-item */
+
+    section#past-events{
+    @include padding(padding-top, 2);
+    @include padding(padding-bottom, 2);
+
+        .past-event-title{
+        @include padding(padding, 1);
+        text-align: center;
+        font-weight: $boldweight;
+        }
+
+        .past-event-item{
+//          @include lineheight;
+
+            .date{
+             @include smaller;
+                       @include lineheight;
+
+            //  font-weight: $boldweight;
+            }
+
+            .event-name{
+                        @include lineheight;
+
+          //   text-align: center;
+            }
+
+            .venue{
+              text-align: right;
+                        @include lineheight;
+
+              @include smaller;
+              font-weight: $mediumweight;
+            }
+
+
+
+        }/*event-item */
+
+        .event-items{
+
+            .past-event-item{
+            border-bottom: 1px solid white;   
+           
+              &:hover{
+                 
+                 .scale-me{
+                  @include scalelink;
+                  }
+
+              }
+
+            }/*a*/
+
+            .past-event-item:first-child{
+            }
+            .past-event-item:last-child{
+            border-bottom: none;   
+            }
+            .past-event-item:first-child:last-child{
+              border: none;
+            }
+
+
+          } /* .event-items */
+
+
+    } /*section#past-events */
+
+
+} /*  archive */
+
+

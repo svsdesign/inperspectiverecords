@@ -1,0 +1,61 @@
+/*
+Error: File to import not found or unreadable: compass.
+       Load path: /Users/simonvanstipriaan/Sites/inp-wp/wp-content/themes/inperspectiverecords/assets/sass
+        on line 14 of ./style.scss
+
+9: License URI: http://www.gnu.org/licenses/gpl-2.0.html
+10: Tags: svsdesign, insperspective records
+11: Text Domain:  
+12: *\/
+13: 
+14: @import "compass";
+15: @import "compass/reset";
+16: @import "_partials/mixins";
+17: @import "_partials/variables";
+18: @import "_partials/gridsystem";
+19: @import "_partials/icons";
+
+Backtrace:
+./style.scss:14
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/import_node.rb:44:in `import'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Users/simonvanstipriaan/.rvm/gems/ruby-2.6.2/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: compass.\A        Load path: /Users/simonvanstipriaan/Sites/inp-wp/wp-content/themes/inperspectiverecords/assets/sass\A         on line 14 of ./style.scss\A \A 9: License URI: http://www.gnu.org/licenses/gpl-2.0.html\A 10: Tags: svsdesign, insperspective records\A 11: Text Domain:  \A 12: */\A 13: \A 14: @import \"compass\";\A 15: @import \"compass/reset\";\A 16: @import \"_partials/mixins\";\A 17: @import \"_partials/variables\";\A 18: @import \"_partials/gridsystem\";\A 19: @import \"_partials/icons\";"; }

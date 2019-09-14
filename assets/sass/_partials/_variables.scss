@@ -1,0 +1,84 @@
+/* GRID */
+
+// breakpoints map
+$breakpoints: (
+  xs: 0px,
+  sm: 320px,
+  md: 640px,
+  lg: 960px,
+  xl: 1280px,
+  xxl: 1440px
+);
+
+// gutter map
+$gutter: (
+  xs: 5px,
+  sm: 5px,
+  md: 10px,
+  lg: 15px,
+  xl: 20px,
+  xxl: 20px
+);
+
+ $fontsize: (
+  xs: 10px,
+  sm: 12px,
+  md: 14px,
+  lg: 16px,
+  xl: 20px,
+  xxl: 24px
+);
+
+$lineheight: (
+  xs: 18px,
+  sm: 18px,
+  md: 20px,
+  lg: 26px,
+  xl: 30px,
+  xxl: 32px
+);
+// number of columns variable
+	$items: 6; 
+	$devitems: 8; // + outergrid
+
+/* COLORS */
+
+  //variables / colour range
+	$svsgold:rgba(223, 163, 45,1); // gold
+	$green:rgba(45, 175, 57,1); // green
+  $red:rgba(240, 82, 59, 1);; // red
+	$black:rgba(0,0,0,1);
+	$black_zero_p:rgba(0,0,0,0);
+	$black_ten_p:rgba(0,0,0,0.1);
+  $grey:rgba(216,216,216,1);
+	$white:rgba(255,255,255,1);
+
+  //application
+  $text-color: rgba(255,255,255,1); // white
+  $news-text-color: $black;
+  $background-color: rgba(0,0,0,1); // black
+  $news-background-color: $grey; // black
+
+
+	//dev		
+	$dev-grid-color-one:red;
+	$dev-grid-color-two:green;
+
+/* SIZES */
+
+//	$base-font-size: 16px;
+
+
+/* WEIGHTS */
+
+	$baseweight: 100;
+	$lightweight: 100;
+	$mediumweight: 400;
+	$boldweight: 500;
+	$heavyweight: 800;
+
+//$base-font-weight: 100;
+
+/* LINEHEIGHT */
+
+	$base-lineheight: 16;
