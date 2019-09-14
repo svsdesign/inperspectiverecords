@@ -14,7 +14,7 @@
 //was this 
 // if ( is_page(2) ) : //is about page - id = 2   
 //but lets use an array now so we can target either the local id or the live id for 
-is_page( array( 2, 679, 'About' ) );
+if (is_page( array( 2, 679, 'About' ) ));
 $intro = get_field( 'introduction' ); // text area
 $contactintro = get_field( 'contact_intro' ); // text area
 
@@ -290,10 +290,6 @@ $contactintro = get_field( 'contact_intro' ); // text area
 			</div><!--id="contact-intro-copy" class="grid"> -->
 
 		<?php endif; //$contactintro ?>	
-
-		
-
-
 	  		
 	</section><!-- #about-page-contact-details -->
 		  		
