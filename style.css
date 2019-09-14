@@ -2741,7 +2741,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(38deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(98deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -3670,7 +3670,6 @@ ul.links li {
 /* tidy the following up: */
 /* line 31, assets/sass/_partials/_artists.scss */
 body.single-artists {
-  background: red;
   /* .release-details */
   /* start (one) record */
   /* end (one) record */
@@ -3680,7 +3679,7 @@ body.single-artists {
   /* end three records */
   /* opacity */
 }
-/* line 35, assets/sass/_partials/_artists.scss */
+/* line 33, assets/sass/_partials/_artists.scss */
 body.single-artists .cover-image-item {
   width: 100%;
   height: 100vh;
@@ -3691,63 +3690,63 @@ body.single-artists .cover-image-item {
   background-repeat: no-repeat;
   background-position: center center;
 }
-/* line 51, assets/sass/_partials/_artists.scss */
+/* line 49, assets/sass/_partials/_artists.scss */
 body.single-artists #artist-details #artist-info {
   padding-top: 12.5vw;
 }
 @media (min-width: 320px) {
-  /* line 51, assets/sass/_partials/_artists.scss */
+  /* line 49, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-details #artist-info {
     padding-top: 6.25vw;
   }
 }
 @media (min-width: 640px) {
-  /* line 51, assets/sass/_partials/_artists.scss */
+  /* line 49, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-details #artist-info {
     padding-top: 18px;
     padding-top: 26px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 51, assets/sass/_partials/_artists.scss */
+  /* line 49, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-details #artist-info {
     padding-top: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 51, assets/sass/_partials/_artists.scss */
+  /* line 49, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-details #artist-info {
     padding-top: 26px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 51, assets/sass/_partials/_artists.scss */
+  /* line 49, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-details #artist-info {
     padding-top: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 51, assets/sass/_partials/_artists.scss */
+  /* line 49, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-details #artist-info {
     padding-top: 32px;
   }
 }
 
-/* line 64, assets/sass/_partials/_artists.scss */
+/* line 62, assets/sass/_partials/_artists.scss */
 body.single-artists #artist-details #artist-info .artist-description {
   text-align: center;
 }
 @media (min-width: 640px) {
-  /* line 64, assets/sass/_partials/_artists.scss */
+  /* line 62, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-details #artist-info .artist-description {
     text-align: left;
   }
 }
-/* line 74, assets/sass/_partials/_artists.scss */
+/* line 72, assets/sass/_partials/_artists.scss */
 body.single-artists #artist-details #artist-info .artist-links {
   margin: auto;
 }
-/* line 82, assets/sass/_partials/_artists.scss */
+/* line 80, assets/sass/_partials/_artists.scss */
 body.single-artists #artist-releases {
   width: 100%;
   padding-top: 36px;
@@ -3756,55 +3755,55 @@ body.single-artists #artist-releases {
   padding-bottom: 104px;
 }
 @media screen and (min-width: 0px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-top: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-top: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-top: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-top: 64px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-bottom: calc(72px + 32 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-bottom: 104px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-bottom: calc(104px + 24 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-bottom: 128px;
   }
 }
 @media (min-width: 640px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-top: 18px;
     padding-top: 26px;
@@ -3813,55 +3812,55 @@ body.single-artists #artist-releases {
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-top: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-top: 26px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-top: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-top: 32px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-bottom: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-bottom: 52px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-bottom: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 82, assets/sass/_partials/_artists.scss */
+  /* line 80, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases {
     padding-bottom: 64px;
   }
 }
 
-/* line 95, assets/sass/_partials/_artists.scss */
+/* line 93, assets/sass/_partials/_artists.scss */
 body.single-artists #artist-releases .section-title {
   text-align: center;
   padding-top: 18px;
@@ -3870,54 +3869,54 @@ body.single-artists #artist-releases .section-title {
   padding-bottom: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 95, assets/sass/_partials/_artists.scss */
+  /* line 93, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases .section-title {
     padding-top: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 95, assets/sass/_partials/_artists.scss */
+  /* line 93, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases .section-title {
     padding-top: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 95, assets/sass/_partials/_artists.scss */
+  /* line 93, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases .section-title {
     padding-top: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 95, assets/sass/_partials/_artists.scss */
+  /* line 93, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases .section-title {
     padding-top: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 95, assets/sass/_partials/_artists.scss */
+  /* line 93, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases .section-title {
     padding-bottom: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 95, assets/sass/_partials/_artists.scss */
+  /* line 93, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases .section-title {
     padding-bottom: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 95, assets/sass/_partials/_artists.scss */
+  /* line 93, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases .section-title {
     padding-bottom: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 95, assets/sass/_partials/_artists.scss */
+  /* line 93, assets/sass/_partials/_artists.scss */
   body.single-artists #artist-releases .section-title {
     padding-bottom: 32px;
   }
 }
-/* line 108, assets/sass/_partials/_artists.scss */
+/* line 106, assets/sass/_partials/_artists.scss */
 body.single-artists #container {
   background: black;
   width: 100%;
@@ -3926,7 +3925,7 @@ body.single-artists #container {
   display: block;
   position: relative;
 }
-/* line 116, assets/sass/_partials/_artists.scss */
+/* line 114, assets/sass/_partials/_artists.scss */
 body.single-artists .record-circle-container {
   display: block;
   height: 37.5vw;
@@ -3938,13 +3937,13 @@ body.single-artists .record-circle-container {
   padding-top: 6.25vw;
   padding-bottom: 6.25vw;
 }
-/* line 127, assets/sass/_partials/_artists.scss */
+/* line 125, assets/sass/_partials/_artists.scss */
 body.single-artists .inner-container {
   margin: auto;
   position: relative;
   width: 25vw;
 }
-/* line 132, assets/sass/_partials/_artists.scss */
+/* line 130, assets/sass/_partials/_artists.scss */
 body.single-artists .sleave-square {
   position: relative;
   margin: auto;
@@ -3953,7 +3952,7 @@ body.single-artists .sleave-square {
   pointer-events: none;
   z-index: 92;
 }
-/* line 147, assets/sass/_partials/_artists.scss */
+/* line 145, assets/sass/_partials/_artists.scss */
 body.single-artists .sleave-square.inner-back {
   position: absolute;
   margin: auto;
@@ -3967,7 +3966,7 @@ body.single-artists .sleave-square.inner-back {
   bottom: 0;
   z-index: 80;
 }
-/* line 162, assets/sass/_partials/_artists.scss */
+/* line 160, assets/sass/_partials/_artists.scss */
 body.single-artists .sleave-square.inner-sleave {
   position: absolute;
   margin: auto;
@@ -3982,25 +3981,25 @@ body.single-artists .sleave-square.inner-sleave {
   z-index: 91;
   animation: moveleft 500ms ease-out forwards;
 }
-/* line 178, assets/sass/_partials/_artists.scss */
+/* line 176, assets/sass/_partials/_artists.scss */
 body.single-artists .active .sleave-square.inner-sleave {
   animation-iteration-count: 1;
   animation: moverighttwo 500ms ease-in-out forwards;
 }
-/* line 183, assets/sass/_partials/_artists.scss */
+/* line 181, assets/sass/_partials/_artists.scss */
 body.single-artists .record-sleave {
   display: block;
   width: 25vw;
   height: 25vw;
   position: absolute;
 }
-/* line 191, assets/sass/_partials/_artists.scss */
+/* line 189, assets/sass/_partials/_artists.scss */
 body.single-artists .active.record-sleave {
   opacity: 0;
   animation-iteration-count: 1;
   animation: decreaseopacity 1000ms ease-out forwards;
 }
-/* line 198, assets/sass/_partials/_artists.scss */
+/* line 196, assets/sass/_partials/_artists.scss */
 body.single-artists .release-details {
   position: absolute;
   width: 100%;
@@ -4021,79 +4020,79 @@ body.single-artists .release-details {
   animation: decreaseopacity 500ms ease-out forwards;
 }
 @media screen and (min-width: 0px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     font-size: calc(10.8px + 4.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     font-size: 15.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     font-size: calc(15.6px + 3.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     line-height: calc(12.6px + 5.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     line-height: 18.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     line-height: calc(18.2px + 4.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     line-height: 22.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     margin-top: calc(-12.6px + -5.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     margin-top: -18.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     margin-top: calc(-18.2px + -4.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     margin-top: -22.4px;
   }
 }
 @media (min-width: 640px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     font-size: 14.4px;
     font-size: 20.8px;
@@ -4102,55 +4101,55 @@ body.single-artists .release-details {
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     font-size: calc(14.4px + 6.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     font-size: 20.8px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     font-size: calc(20.8px + 4.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     font-size: 25.6px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     line-height: calc(16.2px + 7.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     line-height: 23.4px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     line-height: calc(23.4px + 5.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 198, assets/sass/_partials/_artists.scss */
+  /* line 196, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details {
     line-height: 28.8px;
   }
 }
 
-/* line 223, assets/sass/_partials/_artists.scss */
+/* line 221, assets/sass/_partials/_artists.scss */
 body.single-artists .release-details .release-code {
   font-weight: 100;
   padding-bottom: 5.4px;
@@ -4161,78 +4160,78 @@ body.single-artists .release-details .release-code {
   line-height: 10.4px;
 }
 @media screen and (min-width: 0px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     padding-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     padding-bottom: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     padding-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     padding-bottom: 9.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     font-size: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     line-height: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     line-height: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     line-height: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 223, assets/sass/_partials/_artists.scss */
+  /* line 221, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-code {
     line-height: 12.8px;
   }
 }
-/* line 230, assets/sass/_partials/_artists.scss */
+/* line 228, assets/sass/_partials/_artists.scss */
 body.single-artists .release-details .release-artists {
   font-weight: 400;
   font-style: italic;
@@ -4240,30 +4239,30 @@ body.single-artists .release-details .release-artists {
   padding-bottom: 5.2px;
 }
 @media screen and (min-width: 0px) {
-  /* line 230, assets/sass/_partials/_artists.scss */
+  /* line 228, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artists {
     padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_artists.scss */
+  /* line 228, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artists {
     padding-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_artists.scss */
+  /* line 228, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artists {
     padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 230, assets/sass/_partials/_artists.scss */
+  /* line 228, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artists {
     padding-bottom: 6.4px;
   }
 }
-/* line 237, assets/sass/_partials/_artists.scss */
+/* line 235, assets/sass/_partials/_artists.scss */
 body.single-artists .release-details .release-artist {
   float: left;
   font-weight: 400;
@@ -4276,118 +4275,118 @@ body.single-artists .release-details .release-artist {
   line-height: 18.2px;
 }
 @media screen and (min-width: 0px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     padding-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     padding-bottom: 6.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     font-size: calc(10.8px + 4.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     font-size: 15.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     font-size: calc(15.6px + 3.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     line-height: calc(12.6px + 5.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     line-height: 18.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     line-height: calc(18.2px + 4.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 237, assets/sass/_partials/_artists.scss */
+  /* line 235, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-artist {
     line-height: 22.4px;
   }
 }
-/* line 252, assets/sass/_partials/_artists.scss */
+/* line 250, assets/sass/_partials/_artists.scss */
 body.single-artists .release-details .release-artist:after {
   content: '/ ';
   white-space: pre-wrap;
 }
-/* line 257, assets/sass/_partials/_artists.scss */
+/* line 255, assets/sass/_partials/_artists.scss */
 body.single-artists .release-details .release-title {
   font-weight: 600;
   padding-bottom: 5.4px;
   padding-bottom: 7.8px;
 }
 @media screen and (min-width: 0px) {
-  /* line 257, assets/sass/_partials/_artists.scss */
+  /* line 255, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-title {
     padding-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 257, assets/sass/_partials/_artists.scss */
+  /* line 255, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-title {
     padding-bottom: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 257, assets/sass/_partials/_artists.scss */
+  /* line 255, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-title {
     padding-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 257, assets/sass/_partials/_artists.scss */
+  /* line 255, assets/sass/_partials/_artists.scss */
   body.single-artists .release-details .release-title {
     padding-bottom: 9.6px;
   }
 }
-/* line 263, assets/sass/_partials/_artists.scss */
+/* line 261, assets/sass/_partials/_artists.scss */
 body.single-artists .release-details .release-artist:last-child:after {
   content: '';
   background: red;
 }
-/* line 272, assets/sass/_partials/_artists.scss */
+/* line 270, assets/sass/_partials/_artists.scss */
 body.single-artists .active .release-details {
   opacity: 1;
   animation-iteration-count: 1;
@@ -4395,7 +4394,7 @@ body.single-artists .active .release-details {
   z-index: 93;
   pointer-events: none;
 }
-/* line 281, assets/sass/_partials/_artists.scss */
+/* line 279, assets/sass/_partials/_artists.scss */
 body.single-artists .record-circle {
   height: 25vw;
   width: 100%;
@@ -4405,47 +4404,47 @@ body.single-artists .record-circle {
   z-index: 90;
   overflow: hidden;
 }
-/* line 290, assets/sass/_partials/_artists.scss */
+/* line 288, assets/sass/_partials/_artists.scss */
 body.single-artists .record-item {
   position: absolute;
   width: 25vw;
   height: 25vw;
   z-index: 1;
 }
-/* line 296, assets/sass/_partials/_artists.scss */
+/* line 294, assets/sass/_partials/_artists.scss */
 body.single-artists .record-label {
   z-index: 2;
   position: absolute;
   width: 25vw;
   height: 25vw;
 }
-/* line 305, assets/sass/_partials/_artists.scss */
+/* line 303, assets/sass/_partials/_artists.scss */
 body.single-artists .inner-container {
   z-index: 30;
 }
-/* line 308, assets/sass/_partials/_artists.scss */
+/* line 306, assets/sass/_partials/_artists.scss */
 body.single-artists .inner-container.two {
   z-index: 20;
 }
-/* line 311, assets/sass/_partials/_artists.scss */
+/* line 309, assets/sass/_partials/_artists.scss */
 body.single-artists .inner-container.three {
   z-index: 10;
 }
-/* line 315, assets/sass/_partials/_artists.scss */
+/* line 313, assets/sass/_partials/_artists.scss */
 body.single-artists .rotated .record-item {
   animation: moveleft 500ms ease-out forwards;
 }
-/* line 320, assets/sass/_partials/_artists.scss */
+/* line 318, assets/sass/_partials/_artists.scss */
 body.single-artists .rotated .record-label {
   animation: rollingleft 500ms ease-out forwards, moveleft 500ms ease-out forwards;
 }
-/* line 325, assets/sass/_partials/_artists.scss */
+/* line 323, assets/sass/_partials/_artists.scss */
 body.single-artists .rotated.rotate .record-item {
   animation-iteration-count: 1;
   animation: moveright 500ms ease-out forwards;
   left: 0px;
 }
-/* line 331, assets/sass/_partials/_artists.scss */
+/* line 329, assets/sass/_partials/_artists.scss */
 body.single-artists .rotate .record-label {
   animation-iteration-count: 1;
   animation: rollingright 500ms ease-out forwards, moveright 500ms ease-out forwards;
@@ -4483,21 +4482,21 @@ body.single-artists .rotate .record-label {
     left: 0px;
   }
 }
-/* line 377, assets/sass/_partials/_artists.scss */
+/* line 375, assets/sass/_partials/_artists.scss */
 body.single-artists .rotated .record-item.two {
   animation: movelefttwo 500ms ease-out forwards;
 }
-/* line 382, assets/sass/_partials/_artists.scss */
+/* line 380, assets/sass/_partials/_artists.scss */
 body.single-artists .rotated .record-label.two {
   animation: rollinglefttwo 500ms ease-out forwards, movelefttwo 500ms ease-out forwards;
 }
-/* line 385, assets/sass/_partials/_artists.scss */
+/* line 383, assets/sass/_partials/_artists.scss */
 body.single-artists .rotated.rotate .record-item.two {
   animation-iteration-count: 1;
   animation: moverighttwo 500ms ease-out forwards;
   left: 0px;
 }
-/* line 393, assets/sass/_partials/_artists.scss */
+/* line 391, assets/sass/_partials/_artists.scss */
 body.single-artists .rotate .record-label.two {
   animation-iteration-count: 1;
   animation: rollingrighttwo 500ms ease-out forwards, moverighttwo 500ms ease-out forwards;
@@ -4535,21 +4534,21 @@ body.single-artists .rotate .record-label.two {
     left: 0px;
   }
 }
-/* line 430, assets/sass/_partials/_artists.scss */
+/* line 428, assets/sass/_partials/_artists.scss */
 body.single-artists .rotated .record-item.three {
   animation: moveleftthree 500ms ease-out forwards;
 }
-/* line 435, assets/sass/_partials/_artists.scss */
+/* line 433, assets/sass/_partials/_artists.scss */
 body.single-artists .rotated .record-label.three {
   animation: rollingleftthree 500ms ease-out forwards,  moveleftthree 500ms ease-out forwards;
 }
-/* line 440, assets/sass/_partials/_artists.scss */
+/* line 438, assets/sass/_partials/_artists.scss */
 body.single-artists .rotated.rotate .record-item.three {
   animation-iteration-count: 1;
   animation: moverightthree 500ms ease-out forwards;
   left: 0px;
 }
-/* line 448, assets/sass/_partials/_artists.scss */
+/* line 446, assets/sass/_partials/_artists.scss */
 body.single-artists .rotate .record-label.three {
   animation-iteration-count: 1;
   animation: rollingrightthree 500ms ease-out forwards, moverightthree 500ms ease-out forwards;
@@ -6777,7 +6776,7 @@ body.single-releases section#release-artists .artist-title {
 /* Start Single */
 /* line 25, assets/sass/_partials/_news.scss */
 body.single-news article {
-  background: #f0523b;
+  background: #d8d8d8;
   padding-bottom: 18px;
   padding-bottom: 26px;
 }
@@ -6810,7 +6809,7 @@ body.single-news article {
 /* Start Archive */
 /* line 53, assets/sass/_partials/_news.scss */
 body.post-type-archive-news {
-  background: #f0523b;
+  background: #d8d8d8;
 }
 /* line 56, assets/sass/_partials/_news.scss */
 body.post-type-archive-news article.news-item {
