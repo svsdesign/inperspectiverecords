@@ -10,7 +10,11 @@
 ?>
 
 
-<?php if ( is_page(2) ) : //is about page - id = 2   
+<?php
+//was this 
+// if ( is_page(2) ) : //is about page - id = 2   
+//but lets use an array now so we can target either the local id or the live id for 
+is_page( array( 2, 679, 'About' ) );
 $intro = get_field( 'introduction' ); // text area
 $contactintro = get_field( 'contact_intro' ); // text area
 
@@ -295,8 +299,7 @@ $contactintro = get_field( 'contact_intro' ); // text area
 		  		
 
 <?php else: // other pages: ?>
-
-not about page
+<!--not about page -->
 
 <div class="container">
   
