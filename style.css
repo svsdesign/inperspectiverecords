@@ -2741,7 +2741,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(12deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(62deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -3670,6 +3670,7 @@ ul.links li {
 /* tidy the following up: */
 /* line 31, assets/sass/_partials/_artists.scss */
 body.single-artists {
+  background: red;
   /* .release-details */
   /* start (one) record */
   /* end (one) record */
@@ -6776,7 +6777,7 @@ body.single-releases section#release-artists .artist-title {
 /* Start Single */
 /* line 25, assets/sass/_partials/_news.scss */
 body.single-news article {
-  background: #d8d8d8;
+  background: #f0523b;
   padding-bottom: 18px;
   padding-bottom: 26px;
 }
@@ -6809,7 +6810,7 @@ body.single-news article {
 /* Start Archive */
 /* line 53, assets/sass/_partials/_news.scss */
 body.post-type-archive-news {
-  background: #d8d8d8;
+  background: #f0523b;
 }
 /* line 56, assets/sass/_partials/_news.scss */
 body.post-type-archive-news article.news-item {
