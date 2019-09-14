@@ -10,16 +10,11 @@
 ?>
 
 
-<?php
-//was this 
-// if ( is_page(2) ) : //is about page - id = 2   
-//but lets use an array now so we can target either the local id or the live id for 
-if (is_page( array( 2, 679, 'About' ) ));
+<?php //if ( is_page(2) ) : //is about page - id = 2   
+if ( is_page( array( 2, 679, 'about') ) ): // ensure to target the correct id's or permalinks on the live site as well
 $intro = get_field( 'introduction' ); // text area
 $contactintro = get_field( 'contact_intro' ); // text area
-
 // time line items:
-
 
 ?>
 
@@ -290,12 +285,16 @@ $contactintro = get_field( 'contact_intro' ); // text area
 			</div><!--id="contact-intro-copy" class="grid"> -->
 
 		<?php endif; //$contactintro ?>	
+
+		
+
+
 	  		
 	</section><!-- #about-page-contact-details -->
 		  		
 
 <?php else: // other pages: ?>
-<!--not about page -->
+<!-- not about page -->
 
 <div class="container">
   
