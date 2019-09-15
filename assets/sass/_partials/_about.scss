@@ -1,7 +1,9 @@
 /*_about.scss*/
 
 
-body.page-id-2{
+body.page-id-2,// local site id
+body.page-id-679// live site id
+{	
 
 	
 	section#about-page-details{
@@ -501,4 +503,5 @@ body.page-id-2{
 	}
 
 
-}//body.page-id-2{
+}//body.page-id-2,// local site id
+ //body.page-id-679// live site id
