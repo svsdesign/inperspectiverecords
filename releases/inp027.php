@@ -35,7 +35,7 @@
 
 	     <div class="sleave-square inner-sleave">
 	 
-	     	<img class="record-sleave" src="<?php echo $releaseassetslocation ;?>/pvc_sleave_400.png"/>
+	     	<img class="record-sleave" src="<?php echo $releaseassetslocation ;?>/INP027-innersleave_back.png"/>
 	   	
 	   	</div> 
 	    
