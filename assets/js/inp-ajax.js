@@ -48,13 +48,16 @@ jQuery(document).ready(function($) {
           // put your dependent JS here.
         }); 
 */
-          $.getScript( "http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-base.js", function( data, textStatus, jqxhr ) {
-        //        console.log( data ); // Data returned
-        //        console.log( textStatus ); // Success
+
+ 
+  //  console.log("theme dir=" +theme_directory + "");
+           $.getScript( ""+theme_directory +"/assets/js/inp-base.js", function( data, textStatus, jqxhr ) {
+      //       console.log( data ); // Data returned
+       //       console.log( textStatus ); // Success
         //        console.log( jqxhr.status ); // 200
       
 
-                console.log( "inp-base.js Load was performed." );
+             console.log( "inp-base.js Load was performed." );
           });
 
 

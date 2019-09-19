@@ -41,6 +41,11 @@
  
 </head>
 
+<script>
+/* used for determining if we're local or live */
+  theme_directory = "<?php echo get_template_directory_uri() ?>";
+</script>
+
 <body <?php body_class(''); // 'dev-on' - whilst working site leave dev-on by default ?>>
 
 	<?php include( 'navigation.php' );?>
