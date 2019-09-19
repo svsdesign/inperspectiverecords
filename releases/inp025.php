@@ -7,22 +7,11 @@
  *
  *  Release - inp025
  */
-/*
--
-
--  if multiple artists - such as an collective album? - Mabe the details 
--
-
-Variables:
-
-This will also require the js that I have - which might be possibly be different for each release.
-- but the release code, name of release and artist associated should as a "template" remain the same. - so maybe those variabvles are pulled into this template accordingly?
-- So do we
-
-*/
 
 
 
+$phptemplate = get_field('release_php_template', $releaseid);
+$releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;	
 ?>
  
 
@@ -30,7 +19,7 @@ This will also require the js that I have - which might be possibly be different
 	   
 	 	 <div class="sleave-square">
 	      
-	      <img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/seba_cover_600px.jpg"/>
+	      <img class="record-sleave" src="<?php echo $releaseassetslocation ;?>/seba_cover_600px.jpg"/>
 	    
 	    </div>  
 	    
@@ -57,17 +46,17 @@ This will also require the js that I have - which might be possibly be different
 	    
 	      <div class="inner-container"> 
 	     
-	        <img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
+	        <img class="record-label" src="<?php echo $releaseassetslocation ;?>/web_label_seba_side_a_600.png"/>
 	      
-	        <img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
+	        <img class="record-item" src="<?php echo $releaseassetslocation ;?>/web_records_blank_black.png"/>
 	        
 	      </div><!-- .inner-container-->
 	      
 	      <div class="inner-container two"> 
 	     
-	        <img class="record-label two" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_b_600.png"/>
+	        <img class="record-label two" src="<?php echo $releaseassetslocation ;?>/web_label_seba_side_b_600.png"/>
 	      
-	        <img class="record-item two" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
+	        <img class="record-item two" src="<?php echo $releaseassetslocation ;?>/web_records_blank_black.png"/>
 	        
 	      </div><!-- .inner-container-->
 	      

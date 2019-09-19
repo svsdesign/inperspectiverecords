@@ -828,8 +828,8 @@ function inp_scripts()
 
     wp_enqueue_script(
         'radioloader',
-        'http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-radio-loader.js',
-         array('jquery'),
+        get_stylesheet_directory_uri().'/assets/js/inp-radio-loader.js',
+        array('jquery'),
         false,
         true
     );

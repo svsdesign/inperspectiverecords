@@ -20,8 +20,7 @@
 	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
 	$releaseproductcover = get_field('release_product_image_front', $releaseid); // 
 	$releaseimage = get_field('release_vinyl_label_image', $releaseid); 
-
-	
+	$releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;		
 	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS	
   	?>
 	<div class="record-circle-container">
@@ -36,7 +35,7 @@
 
 	     <div class="sleave-square inner-sleave">
 	 
-	     	<img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/pvc_sleave_400.png"/> -->
+	     	<img class="record-sleave" src="<?php echo $releaseassetslocation ;?>/pvc_sleave_400.png"/>
 	   	
 	   	</div> 
 	    
