@@ -1,0 +1,157 @@
+/* Testimonial Block */
+
+
+//not sure this is going down the right root.
+
+.inp-block.block-z-index{
+//z-index: 0;// this needs to be lower than other blocks - which is 10 as standard - in nexw.scss, in order for he image overlap to work
+}
+ 
+//.inp-block.block-z-index:nth-of-type(2) {
+
+	//@for $i from 1 through 10 {
+	//   &:nth-child(#{$i}) {
+	//     z-index: #{10 - $i};
+	//   }
+	//}
+
+//}
+
+/*
+How can ensure that there's no bad overlap - it requires the blcosk not be above each other
+i also need to ensure the z-index of other items is always more - but then would also need transparent bgs?
+*/
+
+.quote-block{
+@include h1;
+font-family: $fontfamily;
+font-weight: $boldweight;
+margin:auto;
+position: relative;
+@include padding(margin-top, -2);
+@include padding(margin-bottom, -2);
+
+
+		.quote-blockquote{
+		@include padding(padding-top, 2);
+		@include padding(padding-bottom, 2);
+		}
+
+		.quote-text-wrap{
+		margin:auto;
+		@include padding(padding-top, 0.25);
+  		@include padding(padding-bottom, 0.25);
+  		@include padding(margin-top, 0.25);
+  		@include padding(margin-bottom, 0.25);
+
+
+			.quote-inner-text-wrap{
+			border-top: 1px solid;
+			border-bottom: 1px solid;
+			//@include padding(padding-top, 0.25);
+  			//@include padding(padding-bottom, 0.25);
+			z-index: 3
+			}
+
+			.quote-text{
+			position: relative;
+			z-index: 2;
+			display: block;
+			clear:both;
+	  		}
+
+	  		.quote-author{
+			@include body;
+			@include padding(padding-top, 0.25);
+  			font-weight: $boldweight;
+  			display: block;
+  			width: auto;
+	  		}
+
+
+		}
+
+		.quote-image{
+		position: absolute;
+	    background-size: cover;
+	    top: 0px;
+	    bottom: 0px;
+	    height: 100%;
+//	    width: 100%;
+	    background-repeat: no-repeat;
+		}
+
+		
+
+
+
+
+
+
+
+	&.alignleft{
+	text-align: left;
+	
+		.grid.align-position{
+		justify-content:flex-start;
+		}	
+
+		.quote-image{
+		right: 0;
+		}
+
+		.quote-inner-text-wrap{
+		//float: left;
+		}
+		.quote-author{
+		float:right;
+
+		}
+
+
+	}//&.alignleft
+
+	&.aligncenter{
+	text-align: center;
+	
+		.quote-image{
+		left: 12.5%;//we know the image only takes up 75%;
+		right: 12.5%;//we know the image only takes up 75%;
+		}
+		.grid.align-position{
+	    justify-content: center;
+		}
+
+		.quote-inner-text-wrap{
+  	   // align-items: center;
+		}
+		.quote-author{
+		margin:auto;
+		text-align: center;
+    	width: 100%;
+	    display: block;
+		}
+
+	}//&.aligncenter
+
+	&.alignright{
+	text-align: right;
+	
+		.quote-image{
+		left: 0;
+		}
+
+		.grid.align-position{
+		justify-content:flex-end;
+		}	
+
+		.quote-inner-text-wrap{
+		//float:right;
+		}
+		.quote-author{
+		float:left;
+		}
+
+	}//&.alignright
+
+} //.quote

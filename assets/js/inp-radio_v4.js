@@ -32,6 +32,15 @@
   //  console.log("playtoggle")
 
 
+        var toMaximise = function(){
+          console.log("toMaximise function");
+        }// toMaximise
+        
+        var toMinimise = function(){
+          console.log("toMinimise function");
+
+        }// toMinimise
+
 
       var toPause = function(){
 
@@ -750,6 +759,18 @@ console.log("track" + track);
         }
 
 
+//TO DO:
+
+
+// 1.
+//https://www.jqueryscript.net/demo/Circular-Html5-Audio-Player-jQuery/ implement something like this? 
+//- I probably just want to make two scrubbers?
+/// one as is
+// other is svg cirlce
+//
+// and show which ever is needed based on toggling the min/max icon.
+
+
         // adding controls to the player
         $player
           .find('.sc-controls')
@@ -758,6 +779,7 @@ console.log("track" + track);
       // .append('<a class="sc-play"> <div class="play-toggle"> <svg id="playertoggle" class=""  width="100%" viewBox="0 0 1005.115 677.875" xmlns="http://www.w3.org/2000/svg"> <path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> </svg> </div> </a>')
    //     .append('<a class="sc-play"> <div class="play-toggle"> <svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> <path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path id="play-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path id="play-right" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path opacity="0" id="pause-left" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> <path opacity="0" id="pause-right" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path style="display:none;" id="play-path-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path-right" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> </svg> </div> </a>')
        .append('<a class="sc-play"> <div class="play-toggle"> <svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> <path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path id="play-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path id="play-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> <path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path opacity="0" id="pause-left" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> <path opacity="0" id="pause-right" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path style="display:none;" id="play-path-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> </svg> </div> </a>')
+       .append('<div class="player-toggle">hello<div class="minimise">min</div><div class="maximise">max</div>')
           .end()
           .append('<a href="#info" class="sc-info-toggle">Info</a>')
           .append('<div class="sc-scrubber"></div>')
@@ -884,6 +906,15 @@ console.log("track" + track);
   // the GUI event bindings
   //--------------------------------------------------------
 
+  // toggling Minmise / Maximise
+  $(document).on('click','a.sc-maximise, a.sc-minimise', function(event) {
+   // var $list = $(this).closest('.sc-player').find('ol.sc-trackslist');
+    // simulate the click in the tracklist
+    console.log("clicking maximum / minumum")
+    //$list.find('li.active').click();
+    return false;
+  });
+
   // toggling play/pause
   $(document).on('click','a.sc-play, a.sc-pause', function(event) {
     var $list = $(this).closest('.sc-player').find('ol.sc-trackslist');
@@ -947,9 +978,10 @@ var $track = $(this),
   });
 
 
-   // selecting tracks in the bottom list
-   // find the associated item in the above list and peform a click even on this.
-  $(document).on('click','.radio-items li', function(event) {
+  // selecting tracks in the bottom list
+  // from the list find the associated item in the above list and peform a click event on this.  
+  // also do the same for blocks
+  $(document).on('click','.radio-items li, .sound-block .radio-item', function(event) {
     var $radioitem = $(this),
         radioitemUrl = $radioitem.data('tracklink'); // sc permalink of the track
        

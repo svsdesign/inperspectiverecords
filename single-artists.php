@@ -15,8 +15,8 @@ if ( have_posts() ) :?>
     <article class="grid">
 
 		<?php while ( have_posts() ) : the_post();?>
-
-	  		<?php get_template_part( 'content', 'artists' );?>
+ 
+ 	  		<?php get_template_part( 'content', 'artists' );?>
 	  
 	  	<?php endwhile;?>
 	

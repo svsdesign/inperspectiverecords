@@ -1,0 +1,22 @@
+/* Artist Block */
+
+
+.artist-block{
+width: 100%;// this dirty?
+
+	.banner-image{
+	height: 40vh;
+	//min-height: 300px; // adresss this problem
+	position: relative;
+	width: 100%;
+	display:block;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;;
+	}
+
+	a{
+	width: 100%;// this dirty?
+	}
+
+} //.artist-block

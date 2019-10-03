@@ -49,6 +49,7 @@ REGISTER PAGE TYPES
 */
 
 
+
 /* create custom post types */
 
 	/* ARTISTS */
@@ -177,30 +178,254 @@ REGISTER PAGE TYPES
      
     add_action( 'init', 'post_type_news', 0 );
 
-//start Testimonial block
 
+
+/// START BLOCKS 
+
+// allow only certain blocks:
+/* review this - probaby just use the options availavle int h CMS?
+'block manager'
+https://rudrastyh.com/gutenberg/remove-default-blocks.html
+add_filter( 'allowed_block_types', 'wpse324908_allowed_block_types', 10, 2 );
+
+function wpse324908_allowed_block_types( $allowed_blocks, $post ) {    
+   $allowed_blocks = array(
+        'core/shortcode',
+        'core/image',
+        'core/gallery',
+  //      'core/heading',
+       // 'core/quote',       
+        'core/embed',
+  //      'core/list',
+        'core/separator',
+  //      'core/more',
+  //     'core/button',
+  //      'core/pullquote',
+ //       'core/table',
+        'core/preformatted',
+        'core/code',
+        'core/html',
+//        'core/freeform',
+ //       'core/latest-posts',
+//        'core/categories',
+//        'core/cover',
+        'core/text-columns',
+ //       'core/verse',
+        'core/video',
+        'core/audio',
+        'core/block',
+        'core/paragraph',
+        'core-embed/twitter',
+        'core-embed/youtube',
+        'core-embed/facebook',
+        'core-embed/instagram',
+        'core-embed/wordpress',
+        'core-embed/soundcloud',
+        'core-embed/spotify',
+//        'core-embed/flickr',
+        'core-embed/vimeo',
+//        'core-embed/animoto',
+//        'core-embed/cloudup',
+//        'core-embed/collegehumor',
+//        'core-embed/dailymotion',
+//        'core-embed/funnyordie',
+//        'core-embed/hulu',
+//        'core-embed/imgur',
+//        'core-embed/issuu',
+//        'core-embed/kickstarter',
+//        'core-embed/meetup-com',
+        'core-embed/mixcloud',
+ //       'core-embed/photobucket',
+ //       'core-embed/polldaddy',
+//        'core-embed/reddit',
+//        'core-embed/reverbnation',
+//      'core-embed/screencast',
+//        'core-embed/scribd',
+//        'core-embed/slideshare',
+//        'core-embed/smugmug',
+//        'core-embed/speaker',
+//        'core-embed/ted',
+//        'core-embed/tumblr',
+//        'core-embed/videopress',
+  //      'core-embed/wordpress-tv'
+        //inp ones:
+
+    );     
+    return $allowed_blocks;    
+}
+//end allow only certain blocks:
+
+*/
+ // as per:    https://www.advancedcustomfields.com/blog/acf-5-8-introducing-acf-blocks-for-gutenberg/
+//start quote block
+
+
+add_action('acf/init', 'my_acf_init');
+function my_acf_init() {
+    
+    // check function exists
+    if( function_exists('acf_register_block') ) {
+        
+    // register a quote block:
+    
+        acf_register_block(array(
+            'name'              => 'inpquote',
+            'title'             => __('Inp Quote'),
+            'description'       => __('A custom quote block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',
+            'enqueue_assets'    => function(){
+            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
+            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
+            wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
+         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+            },
+            'icon'              => 'editor-quote',
+            'keywords'          => array( 'inpquote'),
+        ));
+    
+    
+    // register a credit block:
+    
+        acf_register_block(array(
+            'name'              => 'inpcredit',
+            'title'             => __('Inp Credit'),
+            'description'       => __('A custom credit block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
+            'enqueue_assets'    => function(){
+            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
+            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
+          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
+         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+            },
+            'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
+            'keywords'          => array( 'inpcredit'),
+        ));
+    
+
+    // register an artist block:
+    
+        acf_register_block(array(
+            'name'              => 'inpartist',
+            'title'             => __('Inp Artist'),
+            'description'       => __('A custom artist block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
+            'enqueue_assets'    => function(){
+            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
+            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
+          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
+         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+            },
+            'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
+            'keywords'          => array( 'inpartist'),
+        ));
+
+    
+    // register a text block:
+    
+        acf_register_block(array(
+            'name'              => 'inptext',
+            'title'             => __('Inp Text'),
+            'description'       => __('A custom text block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
+            'enqueue_assets'    => function(){
+            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
+            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
+          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
+         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+            },
+            'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
+            'keywords'          => array( 'inptext'),
+        ));
+
+    
+    // register a sound block:
+    
+        acf_register_block(array(
+            'name'              => 'inpsound',
+            'title'             => __('Inp Sound'),
+            'description'       => __('A custom sound block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
+            'enqueue_assets'    => function(){
+            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
+            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
+          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
+         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+            },
+            'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
+            'keywords'          => array( 'inpsound'),
+        ));
+
+    
+    // register a release block:
+    
+        acf_register_block(array(
+            'name'              => 'inprelease',
+            'title'             => __('Inp Release'),
+            'description'       => __('A custom release block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
+            'enqueue_assets'    => function(){
+            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
+            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
+          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
+         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+            },
+            'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
+            'keywords'          => array( 'inprelease'),
+        ));
+
+
+
+
+
+    }// if( function_exists('acf_register_block') )
+
+}//function my_acf_init() {
+
+
+
+
+function my_acf_block_render_callback( $block ) {
+    
+    // convert name ("acf/quote") into path friendly slug ("quote")
+    $slug = str_replace('acf/', '', $block['name']);
+    
+    // include a template part from within the "template-parts/block" folder
+    if( file_exists( get_theme_file_path("/template-parts/blocks/{$slug}/content-{$slug}.php") ) ) {
+        include( get_theme_file_path("/template-parts/blocks/{$slug}/content-{$slug}.php") );
+    } //if
+
+}
+
+/*
+// old:
     function register_acf_block_types() {
 // assigning js + css?
 
 //https://www.billerickson.net/block-styles-in-gutenberg/
  //end asigning js + css - this the best approcah?
 
-/*
-       enqueing syles for blcoks
+ 
+      // enqueing syles for blcoks
        
-       https://jasonyingling.me/enqueueing-scripts-and-styles-for-gutenberg-blocks/
+       //https://jasonyingling.me/enqueueing-scripts-and-styles-for-gutenberg-blocks/
 
-       */ 
+       
 
-        // register a testimonial block.
+        // register a quote block.
         acf_register_block_type(array(
-            'name'              => 'testimonial',
-            'title'             => __('Testimonial'),
-            'description'       => __('A custom testimonial block.'),
-            'render_template'   => 'template-parts/blocks/testimonial/testimonial.php',
+            'name'              => 'quote',
+            'title'             => __('quote'),
+            'description'       => __('A custom quote block.'),
+            'render_template'   => 'template-parts/blocks/quote/quote.php',
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
-            'keywords'          => array( 'testimonial', 'quote' ),
+            'keywords'          => array( 'quote', 'quote' ),
         ));
     }
 
@@ -210,9 +435,21 @@ REGISTER PAGE TYPES
     }
 
 
+function my_acf_block_render_callback( $block ) {
+    
+    // convert name ("acf/quote") into path friendly slug ("quote")
+    $slug = str_replace('acf/', '', $block['name']);
+    
+    // include a template part from within the "template-parts/block" folder
+    if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+        include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+    }
+}
 
-//end testimonial block
 
+//end quote block
+end old blcok markup
+*/
     /* NEWS */
 
 
@@ -900,6 +1137,22 @@ function inp_scripts()
 
 };
 add_action('wp_enqueue_scripts', 'inp_scripts');
+
+
+
+
+// Enqueue WordPress theme styles within Gutenberg. 
+// I need to find a better solution for this.
+// have disabled this for now, because causing issues with CMS markups
+//function theme_editor_styles() {
+    //wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . '/css/editor.css' ); // i basically need to make another stylesheet for my admin
+  //  wp_enqueue_style( 'editor-style', get_stylesheet_uri() ); // i basically need to make another stylesheet for my admin
+
+   // wp_enqueue_style( 'system-style', get_stylesheet_uri() );
+
+
+//}
+//add_action( 'enqueue_block_editor_assets', 'theme_editor_styles' );
 
 
 /* Add Navigations */

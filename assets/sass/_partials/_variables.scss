@@ -40,6 +40,7 @@ $lineheight: (
 // number of columns variable
 	$items: 6; 
 	$devitems: 8; // + outergrid
+  $z-index-items: 10;
 
 /* COLORS */
 
@@ -82,3 +83,9 @@ $lineheight: (
 /* LINEHEIGHT */
 
 	$base-lineheight: 16;
+
+/* FONTS */
+
+$fontfamily: "Objectivity", Helvetica, Arial, sans-serif;
+
+

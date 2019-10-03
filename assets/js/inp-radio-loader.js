@@ -2,13 +2,17 @@ var radioscriptloaded, // set as undefined initially;//
     scsjsonobject, // new track
     activescsjsonobject, // active track
     newitemurl,
-    itemurl;
+    itemurl,
+    dir = theme_directory;
+
   //  sound;
 
 
 
 //console.log("inp-radio-loader.js running. This only loads once")
 
+
+console.log("theme_directory" + dir+"");
 
  jQuery(document).ready(function($) {
 
@@ -40,16 +44,21 @@ var radioscriptloaded, // set as undefined initially;//
 
 
 
-                     
+                                              console.log('itemurl on single radio page ='+itemurl+'')
+
                           // permalink to a track
                           var track_url = itemurl;//feedsclink;
 
 
-                          reload_js('http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-radio_v4.js'); 
+                          reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
 
 
                           } else if ($('body').hasClass('post-type-archive-radio')) {
                                       radioscriptloaded = true;  // now defined
+
+
+// ISSUES - when coming from somwhere else the archive page needs to have a link for people to play the top one.
+// it currently just pauses the existing track if you click the play
 
                         // console.log("else iunnit? ")
                             console.log('body.post-type-archive-radio')
@@ -60,10 +69,15 @@ var radioscriptloaded, // set as undefined initially;//
                      
                           // permalink to a track
                           var track_url = itemurl;//feedsclink;
-                          reload_js('http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-radio_v4.js'); 
+                          //reload_js('http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-radio_v4.js'); 
+                            reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
 
-                          } else if ($('.radio-item li').length > 0){ // we want to detect if there's a link to a sc url?
-                           
+                          } else if ($('_.radio-item li').length > 0){ // we want to detect if there's a link to a sc url?
+                           // I'm not sure this is ever used? not on the archve page
+                           //suggest deleting this ?
+                           // $this is not define
+                            console.log("I'm not sure this is ever used?");
+
                             $thisitem = $this;
                                           radioscriptloaded = true;  // now defined
 
@@ -72,10 +86,61 @@ var radioscriptloaded, // set as undefined initially;//
                             console.log(".radio-item li itemurl = " +itemurl +"");
 
                      
-                          // permalink to a track
-                          var track_url = itemurl;//feedsclink;
+                            // permalink to a track
+                            var track_url = itemurl;//feedsclink;
 
-                            reload_js('http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-radio_v4.js'); 
+                            reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
+
+
+                            } else if ($('.sound-block').length > 0){ 
+
+                                console.log("we have a soundblock");
+
+                              // if there's more than one item - im not sure we need to run this twice?
+                              // the script I load in, should be able to check - so maybe just load the first one?
+                              // this currently not able to retreive the associated data (trakclink)
+
+                                console.log("$this" + $(this)+"")
+                                var itemurl =  $('body .radio-item:first').data("tracklink"); // pull in the first item only?
+
+
+                              //  $('.radio-item').each(function() {
+                                  
+                                   // console.log("radio item each");
+                                  //  $thisitem = $(this).closest('.radio-item'); 
+                                radioscriptloaded = true;  // now defined
+
+
+                                    //                                    console.log("$thisitem " + $thisitem +"");
+
+                      
+                                   // itemurl = $thisitem.data('tracklink');
+                                     
+                                console.log("radio block item itemurl = " +itemurl +"");
+                                  //  console.log("sound block tracklink " + $thisitem.data("tracklink") +"");
+
+                                  // permalink to a track  
+                                var track_url = itemurl;//feedsclink;
+                                    console.log("track_url " +track_url +"");
+
+                                    reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
+                      
+
+
+                          
+//                            console.log("sound block tracklink " + $thisitem.data("tracklink") +"");
+
+                            //itemurl = $('.sound-block .radio-item').data("tracklink"); // this is a sc url but only exist on the single page atm 
+
+
+                     
+                          // permalink to a track
+                          //  var track_url = itemurl;//feedsclink;
+
+                            //reload_js('http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-radio_v4.js'); 
+
+
+                          
 
 
                           } else {
@@ -186,8 +251,21 @@ var radioscriptloaded, // set as undefined initially;//
 
 
         } else { // if the radio script already defined:
+        
 
-          console.log("radio script already defined - so no need to reload it"); //
+          console.log('radio script defined');
+        //  console.log("radio script already defined - so no need to reload it"); //
+
+             if ($('body').hasClass('post-type-archive-radio')) {
+            
+             console.log("Radio script defined - post-type-archive-radio");
+             //if already defined on arvhice post - maybe we need to add/change the classes to resovle the following issue: 
+  
+// ISSUES - when coming from somwhere else the archive page needs to have a link for people to play the top one.
+// I think it currently just pauses the existing track if you click the play?
+
+ 
+              } // if body has class: .post-type-archive-radio
 
 
         } //  if (typeof radioscriptloaded === 'undefined')

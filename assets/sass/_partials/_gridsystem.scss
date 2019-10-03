@@ -73,6 +73,7 @@
 
 // loop over the breakpoints - for grid item sizing
 @each $key, $value in $breakpoints {
+  
   @for $i from 1 through $items {
     .grid-item-#{$key}-#{$i} {
      // flex: 0 0 100%;
@@ -80,43 +81,77 @@
         flex: 0 0 #{$i / $items * 100%};
       }
     }
+  
+
     .push-item-left-#{$key}-#{$i}, {
        @include break($key) {
       margin-left: #{$i / $items * 100%};
       }
     }
-     .push-item-right-#{$key}-#{$i}, {
+    .push-item-right-#{$key}-#{$i}, {
        @include break($key) {
       margin-right: #{$i / $items * 100%};
       }
     }
-  }
 
-@for $i from 1 through $devitems {
-    .outer-grid-item-#{$key}-#{$i} {
-      flex: 0 0 100%;
-      @include break($key) {
-        flex: 0 0 #{$i / $devitems * 100%};
+    .padding-item-left-#{$key}-#{$i}, {
+       @include break($key) {
+      padding-left: #{$i / $items * 100%};
       }
     }
-  }
-
-
-@for $i from 1 through $devitems {
-    .dev-grid-item-#{$key}-#{$i} {
-      flex: 0 0 100%;
-      @include break($key) {
-        flex: 0 0 #{$i / $devitems * 100%};
+     .padding-item-right-#{$key}-#{$i}, {
+       @include break($key) {
+      padding-right: #{$i / $items * 100%};
       }
     }
+
+
+
   }
 
+  @for $i from 1 through $devitems {
+      .outer-grid-item-#{$key}-#{$i} {
+        flex: 0 0 100%;
+        @include break($key) {
+          flex: 0 0 #{$i / $devitems * 100%};
+        }
+      }
+
+      .size-item-#{$key}-#{$i} {
+       // flex: 0 0 100%;
+        @include break($key) {
+          width: #{$i / $devitems * 100%};
+        }
+      }
+
+  } //@for $i from 1 through $devitems {
 
 
 
-} 
+  @for $i from 1 through $devitems {
+      .dev-grid-item-#{$key}-#{$i} {
+        flex: 0 0 100%;
+        @include break($key) {
+          flex: 0 0 #{$i / $devitems * 100%};
+        }
+      }
+  }
 
- 
+} //@each $key, $value in $breakpoints 
+
+
+
+/* z-index generator for blocks*/
+
+ @for $i from 1 through $z-index-items {
+    .block-z-index-#{$i} {
+    //  flex: 0 0 #{$i / $devitems * 100%};
+    z-index:#{$i};
+    }
+  }
+  
+/* end z-index generator for blocks*/
+
 /* gutter */
 
 @media (min-width: map-get($breakpoints,xs)) {

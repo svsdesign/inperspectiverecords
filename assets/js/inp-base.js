@@ -33,9 +33,8 @@ var radioscriptloaded, // set as undefined initially;//
     activescsjsonobject, // active track
     newitemurl,
     itemurl,
-    sound;
-
-var stickyradioplayer = false; // initially false - change this variable depending on where you are on the site
+    sound,
+    stickyradioplayer = false; // initially false - change this variable depending on where you are on the site
 
 jQuery(document).ready(function($) {
 
@@ -498,6 +497,8 @@ TO DO:
 
           } else {// if not single radio - apply sticky radio player class regardless
 
+            // What about the news post blcocks - currently the top player dissapears?
+
               //     console.log("body does NOT have single radio class=");
 
            $('body').addClass("sticky-radio-player");
@@ -516,26 +517,24 @@ TO DO:
 
 
 
-            if ($('body.single-artists').length > 0) 
+            if ($('body.single-artists, body.single-news').length > 0) 
             {
                         
+            // console.log("if ($('body.single-artist').length > 0)");
 
-                       // console.log("if ($('body.single-artist').length > 0)");
 
+                 if ($('#artist-releases, .release-block').length > 0) 
+                  {
+            
+                     console.log('recordcircle');
 
-                         if ($('#artist-releases').length > 0) 
-                          {
-                    
-                       // console.log('recordcircle');
+                     recordcircle();// this needs to trigger other stuff like resiae as well I guess?
 
-                             recordcircle();// this needs to trigger other stuff like resiae as well I guess?
-
-                          };  /*  #artist-releases  */
-
-                    
+                  };  /*  #artist-releases  */
+             
 
              /*
-             body.single-artists
+             body.single-artists,  body.single-news
              */
 
             };  

@@ -106,9 +106,18 @@ transform-origin: bottom right;
         top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
       }
 
-    }
+    } // .page-titler
+    
+    .page-titler.inline{ // used on single news items for artist blocks
+    height: 100%;
 
-}
+      .inner{
+      width: 40vh; // height of the banners for these block
+      }
+
+    }//.page-titler.inline{
+
+}//.page-title-positioner.sticky
 
 
 
@@ -129,25 +138,34 @@ transform-origin: bottom right;
     height: 100vh;
     overflow: hidden;
 
-    .inner{
-     transform-origin: bottom left;
-     color: white;
-    font-weight: $lightweight;
-    @include sideheader;
-    text-align: center;
-    transform:rotate(90deg); 
-    width: 100vh;
-    height: 12.5vw;
-    line-height: 12.5vw!important;
-    position: relative;
-    display: block;
-    float: left;
-    top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
+      .inner{
+      transform-origin: bottom left;
+      color: white;
+      font-weight: $lightweight;
+      @include sideheader;
+      text-align: center;
+      transform:rotate(90deg); 
+      width: 100vh;
+      height: 12.5vw;
+      line-height: 12.5vw!important;
+      position: relative;
+      display: block;
+      float: left;
+      top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
       }
 
-    }
+    }//.page-titler
 
-}
+    .page-titler.inline{ // used on single news items for artist blocks
+       height: 100%;
+
+      .inner{
+      width: 40vh; // height of the banners for these block
+      }
+
+    }//.page-titler.inline
+
+}//.page-title-positioner.left-side.sticky
 
 
 

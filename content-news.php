@@ -28,7 +28,46 @@
 	$featureimage = get_field('feature_image'); // image
 	$categories = get_the_category( $post->ID );
  	?>
-	<?php the_content();?>
+
+ 
+
+ 	<div class="container post-entry-content grid inner outer-grid-item outer-grid-item-xs-8">
+
+		<div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
+									  
+			<div class="page-titler">
+						    
+				<span class="inner">
+				News
+				</span><!-- inner -->
+
+		    </div> <!--.page-title -->
+
+		</div><!-- .page-title-position -->
+
+		<div class="post-entry-details grid inner outer-grid-item outer-grid-item-xs-6">
+	 
+		 	<div class="grid-item grid-item-xs-8 grid-item-sm-4 grid-item-md-3">
+
+				<div class="news-item-title">
+				<?php the_title();?>
+				</div><!--news-item-title -->
+
+				<div class="date-wrap">
+
+					<div class="date">
+					 <?php echo $date;?>
+					</div>
+
+				</div><!--date-wrap-->
+
+			</div><!--.grid-item-->
+
+	 	</div><!--.post-entry-details -->
+
+			<?php the_content(); ?>
+
+ 	</div><!--.post-entry-content -->
 
 
 <?php endif; // is single ?>

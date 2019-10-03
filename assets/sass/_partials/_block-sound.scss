@@ -1,0 +1,55 @@
+/* Sound Block */
+
+
+.sound-block{
+width: 100%;// this dirty?
+
+		
+	.play-icon-wrap{
+	width: 12.5vw;
+	overflow: hidden;
+	float: left;
+	@extend .grid-item;
+	}
+
+	.play-toggle{
+	border-radius:50%;
+	margin:0% 20%;
+	padding:20%;
+	background: $black;	
+	}
+	.play-toggle .small{
+	//padding: 25% 0;
+	
+	}       
+
+	.show-title{
+	@include cssvalue(padding-top, 0.25);
+	@include h1;
+    font-weight: $boldweight;
+	}
+	.show-start{
+	@include smaller;
+	
+	}
+
+	&.alignright .radio-item.grid{
+	flex-direction:row-reverse;
+	text-align: right;
+	}
+	
+	&.aligncenter .radio-item.grid{
+	flex-direction:initial;
+	text-align: left;
+	
+		.play-icon-wrap{
+		@extend .push-item-left-sm-1;
+   		}
+	}
+
+	&.alignleft .radio-item.grid{
+	flex-direction:initial;
+	text-align: left;
+	}
+
+} //.sound-block

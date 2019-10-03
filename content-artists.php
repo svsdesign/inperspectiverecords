@@ -1,15 +1,21 @@
 <?php
-/**
+/*
  *  Inperspective Records
  *  
  *  Developed by Simon van Stipriaan 
  * 	http://svs.design
  *
  * content-artists.php -  the template for displaying 'artists content
+ 
+TO DO IN THIS FILE:
+
+- resolve relative paths; local and online locations
+
+
  */
 ?>
 
- <?php if ( is_single() ) : //is single content  
+ 	<?php if ( is_single() ) : //is single content  
 	
 	//start get fields
 	$artistid = get_the_ID();
@@ -112,20 +118,21 @@
 
 			</div><!-- grid -->
 
-		</div><!-- outer-grid-item -->
+		</div><!-- id="artist-info" outer-grid-item -->
 
-	<?php if( $artistsreleases ): ?>
+		<?php if( $artistsreleases ): ?>
 
-		<div id="artist-releases">
+			<div id="artist-releases">
 
-			<div class="outer-grid-item inner outer-grid-item-sm-6 section-title">
-				Releases
+				<div class="outer-grid-item inner outer-grid-item-sm-6 section-title">
+					Releases
+				</div><!--outer-grid-item -->
 
-			</div><!--outer-grid-item -->
-
-			<div class="outer-grid-item inner outer-grid-item-sm-6">
-
+				<div class="outer-grid-item inner outer-grid-item-sm-6">
+				
+ 
 				<ul>
+
 				<?php foreach( $artistsreleases as $artistsrelease ): 
 
 					$releaseid = $artistsrelease->ID;
@@ -241,173 +248,13 @@
 
 				<?php endforeach; ?>
 
-				</ul>
+				</div>
 
-			</div><!--outer-grid-item -->
-	
-		</div><!--#artist-releases-->
-	
-	</section><!-- id="artist-details" class="grid" this end tag was missing; added 27may -->
+			</ul>
 
+		<?php endif; ?>
 
- <?php
- /*
-<!-- this nieed to be integrated in the above relase php blcok -->
-
-<div id="container">
-
-   <div class="record-circle-container">
-
-    <div class="record-circle rotated">
-       
-      <div class="inner-container">  
-
-         <img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
-        
-         <img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-    
-      </div><!--inner-container-->  
-
-    </div><!-- .record-circle-->
-  
-  </div> <!-- .record-circle-container-->
- 
-
-  <div class="record-circle-container">
-   
-    <div class="sleave-square">
-      
-      <img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/seba_cover_600px.jpg"/>
-    
-    </div>
- 
-    <div class="record-circle rotated">
-    
-      <div class="inner-container"> 
-     
-        <img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
-      
-        <img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-        
-      </div><!-- .inner-container-->     
-
-    </div><!-- .record-circle-->
-
-  </div> <!-- .record-circle-container--> 
- 
-  <div class="record-circle-container">
-   
-    <div class="record-circle rotated">
-    
-      <div class="inner-container"> 
-     
-        <img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
-      
-        <img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-        
-      </div><!-- .inner-container-->
-      
-      <div class="inner-container two"> 
-     
-        <img class="record-label two" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_b_600.png"/>
-      
-        <img class="record-item two" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-        
-      </div><!-- .inner-container-->
-      
-    </div><!-- .record-circle-->
-
-  </div> <!-- .record-circle-container-->
-  
-  <div class="record-circle-container">
-   
-    <div class="sleave-square">
-      
-      <img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/seba_cover_600px.jpg"/>
-    
-    </div>
- 
-    <div class="record-circle rotated">
-    
-      <div class="inner-container"> 
-     
-        <img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
-      
-        <img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-        
-      </div><!-- .inner-container-->
-      
-      <div class="inner-container two"> 
-     
-        <img class="record-label two" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_b_600.png"/>
-      
-        <img class="record-item two" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-        
-      </div><!-- .inner-container-->
-      
-    </div><!-- .record-circle-->
-
-  </div> <!-- .record-circle-container-->
- 
-
-  <div class="record-circle-container">
-   
- 	 <div class="sleave-square">
-      
-      <img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/seba_cover_600px.jpg"/>
-    
-    </div>  
-    
-    <div class="release-details">
-
-      <div class="inner-container">  
-
-        <div class="release-code">
-          INP026
-        </div>
-        <div class="release-artist">
-          Seba
-        </div>
-        <div class="release-tracks">
-          No One Dies / Island Dub
-        </div>
-      
-      </div><!-- .inner-container -->
-
-    </div><!-- .release-details -->
- 
-    <div class="record-circle rotated">
-    
-      <div class="inner-container"> 
-     
-        <img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
-      
-        <img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-        
-      </div><!-- .inner-container-->
-      
-      <div class="inner-container two"> 
-     
-        <img class="record-label two" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_b_600.png"/>
-      
-        <img class="record-item two" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-        
-      </div><!-- .inner-container-->
-      
-    </div><!-- .record-circle-->
-
-  </div> <!-- .record-circle-container-->
-  
-</div> <!-- #container-->
- 
-*/?>
-
-
-	<?php endif; ?>
-
-
- 
-
+ 	</section>
 
 <?php endif; // endif is_single() ?>
 

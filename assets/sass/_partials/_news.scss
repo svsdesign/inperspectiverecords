@@ -1,6 +1,23 @@
 /*_news.scss*/
 
 
+/* Start all "block rules" */
+
+// allow z-index options for specific layer orders of blocks
+
+  //div,
+  .inp-block.block-z-index, // default
+  .post-entry-content p, // normal paragraph
+  .wp-block-gallery, // gallery block
+  {
+      z-index: 10;// this standard for all blocks
+  }
+
+
+
+/* all "block rules" */     
+
+
 /* Start All News */
 
   body.single-news,
@@ -26,21 +43,45 @@
     background: $news-background-color;
     @include padding(padding-bottom, 1);
     
+     
+      .post-entry-details{
+      
+        .date-wrap{
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+          width: 100%;
+          @include padding(padding-top, 0.5);
+          @include padding(padding-bottom, 0.5);
 
+
+            .date{
+            @include padding(padding-right, 0.5);
+            @include cssvalue(line-height, 0.5);
+            //@include lineheight;
+
+            }
+
+          }//.date-wrap
+
+          .news-item-title{
+          @include h1;
+          font-weight: $boldweight;
+          @include cssvalue(padding-top, 0.5);
+
+          }
+
+      }//.post-entry-details
+
+      .post-entry-content{
+
+        p{
+        z-index: 10; 
+        }
+
+      }
 
     }//article
-
-
-
-
-
-
-
-
-
-
-
-
 
   }//body.single-news
 
@@ -146,11 +187,6 @@
     article.news-item:last-child{
     padding-bottom: 0;
     }
-
-
-
-
-
 
     .post-navigation-wrap{
     width: 100%;

@@ -145,8 +145,8 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
             margin:auto;
 
                @media (min-width: map-get($breakpoints,md)) {                
-                width: 50%;
-                }
+               width: 50%;
+               }
 
             }
 
@@ -164,8 +164,8 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
             -moz-transition: opacity 200ms ease-in;
             transition: opacity 200ms ease-in;
 
-            img{
-                width:100%;
+              img{
+              width:100%;
               }
             
             }
@@ -189,9 +189,7 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
       opacity: 1;
       position: fixed; 
       @include focus;
-        top: 50vh;
-
-     
+      top: 50vh;   
       }
 
       .description-wrap{
@@ -1227,7 +1225,7 @@ body.single-releases{
       width: 100%;
      font-weight: $boldweight;
 
-     @include lineheight;
+     @include lineheight; 
      @include padding(padding-top, 0.5);
      @include padding(padding-bottom, 0.5);
     }

@@ -1512,7 +1512,36 @@ body.post-type-archive-releases{
 
 
 
-} /* body.post-type-archive-release
+} /* body.post-type-archive-release */
+
+
+/* markup for the mix max toggle */
+
+body{
+   
+   .sc-player{
+
+    .player-toggle{
+    background: red;
+    
+      .maximise{
+      @include cssvalue(padding-top, 0.25);
+      background: green;
+      }
+      
+      .minimise{
+      @include cssvalue(padding-top, 0.25);
+      background: blue;
+      }
+
+
+    }/* .player-toggle */
+ 
+  } /*sc-player.*/
+
+} /* body */
+
+/*
 
 
 body:not(.single-radio) { // if not single radio - always have sticky radio? < is this overrding a lot of other erules

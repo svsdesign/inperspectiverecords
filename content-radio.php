@@ -220,7 +220,7 @@
 							//start get fields - sort these out
 						 	$showid = get_the_ID();		// this is the post id					
 							$showstart = get_field('show_start_date'); // date and time picker
-							$showtend = get_field('show_end_date');  // date and time picker
+							$showend = get_field('show_end_date');  // date and time picker
 							$soundcloudlink = get_field('soundcloud_link');
 
 							?>

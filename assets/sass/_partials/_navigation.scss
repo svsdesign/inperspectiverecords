@@ -352,7 +352,7 @@ body{
 		-moz-filter: saturate(0) blur(4px);
 		-o-filter: saturate(0) blur(4px);
 		-ms-filter: saturate(0) blur(4px);	 
-		opacity: 1;
+		opacity: 0.9;// to ensure white on white doesn's show
    	   -webkit-transition: all 200ms ease-in;
 	 // 	-webkit-transform: scale(1.25);
 	    -ms-transition: all 200ms ease-in;
