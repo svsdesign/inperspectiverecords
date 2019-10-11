@@ -3640,7 +3640,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(83deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(30deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -10475,8 +10475,9 @@ body.post-type-archive-news.paged article a .news-item-title {
   width: 100%;
   height: 100vh;
   background-size: cover;
+  background-position: center center;
 }
-/* line 46, assets/sass/_partials/_events.scss */
+/* line 47, assets/sass/_partials/_events.scss */
 .single-events .event-name {
   font-size: 10px;
   font-size: 16px;
@@ -10485,88 +10486,88 @@ body.post-type-archive-news.paged article a .news-item-title {
   font-weight: 500;
 }
 @media screen and (min-width: 0px) {
-  /* line 46, assets/sass/_partials/_events.scss */
+  /* line 47, assets/sass/_partials/_events.scss */
   .single-events .event-name {
     font-size: calc(10px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 46, assets/sass/_partials/_events.scss */
+  /* line 47, assets/sass/_partials/_events.scss */
   .single-events .event-name {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 46, assets/sass/_partials/_events.scss */
+  /* line 47, assets/sass/_partials/_events.scss */
   .single-events .event-name {
     font-size: calc(16px + 14 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 46, assets/sass/_partials/_events.scss */
+  /* line 47, assets/sass/_partials/_events.scss */
   .single-events .event-name {
     font-size: 30px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 46, assets/sass/_partials/_events.scss */
+  /* line 47, assets/sass/_partials/_events.scss */
   .single-events .event-name {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 46, assets/sass/_partials/_events.scss */
+  /* line 47, assets/sass/_partials/_events.scss */
   .single-events .event-name {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 46, assets/sass/_partials/_events.scss */
+  /* line 47, assets/sass/_partials/_events.scss */
   .single-events .event-name {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 46, assets/sass/_partials/_events.scss */
+  /* line 47, assets/sass/_partials/_events.scss */
   .single-events .event-name {
     line-height: 32px;
   }
 }
-/* line 53, assets/sass/_partials/_events.scss */
+/* line 54, assets/sass/_partials/_events.scss */
 .single-events section#upcoming-events {
   width: 100%;
 }
-/* line 56, assets/sass/_partials/_events.scss */
+/* line 57, assets/sass/_partials/_events.scss */
 .single-events section#upcoming-events .event-item {
   min-height: 50vh;
   padding: 36px;
   padding: 52px;
 }
 @media screen and (min-width: 0px) {
-  /* line 56, assets/sass/_partials/_events.scss */
+  /* line 57, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item {
     padding: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 56, assets/sass/_partials/_events.scss */
+  /* line 57, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item {
     padding: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 56, assets/sass/_partials/_events.scss */
+  /* line 57, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item {
     padding: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 56, assets/sass/_partials/_events.scss */
+  /* line 57, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item {
     padding: 64px;
   }
 }
-/* line 60, assets/sass/_partials/_events.scss */
+/* line 61, assets/sass/_partials/_events.scss */
 .single-events section#upcoming-events .event-item .event-name {
   font-size: 10px;
   font-size: 16px;
@@ -10575,61 +10576,61 @@ body.post-type-archive-news.paged article a .news-item-title {
   font-weight: 500;
 }
 @media screen and (min-width: 0px) {
-  /* line 60, assets/sass/_partials/_events.scss */
+  /* line 61, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item .event-name {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 60, assets/sass/_partials/_events.scss */
+  /* line 61, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item .event-name {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 60, assets/sass/_partials/_events.scss */
+  /* line 61, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item .event-name {
     font-size: calc(16px + 8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 60, assets/sass/_partials/_events.scss */
+  /* line 61, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item .event-name {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 60, assets/sass/_partials/_events.scss */
+  /* line 61, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item .event-name {
     line-height: calc(18px + 1.5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 60, assets/sass/_partials/_events.scss */
+  /* line 61, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item .event-name {
     line-height: 19.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 60, assets/sass/_partials/_events.scss */
+  /* line 61, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item .event-name {
     line-height: calc(26px + -2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 60, assets/sass/_partials/_events.scss */
+  /* line 61, assets/sass/_partials/_events.scss */
   .single-events section#upcoming-events .event-item .event-name {
     line-height: 24px;
   }
 }
 
 /* single */
-/* line 75, assets/sass/_partials/_events.scss */
+/* line 76, assets/sass/_partials/_events.scss */
 .event-summary {
   overflow: visible;
   /* div.summary-item */
 }
-/* line 79, assets/sass/_partials/_events.scss */
+/* line 80, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item {
   border-bottom: 1px solid white;
   padding-top: 3.6px;
@@ -10642,102 +10643,102 @@ body.post-type-archive-news.paged article a .news-item-title {
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     padding-top: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     padding-top: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     padding-top: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     padding-top: 6.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     padding-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     padding-bottom: 6.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 79, assets/sass/_partials/_events.scss */
+  /* line 80, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item {
     line-height: 25.6px;
   }
 }
-/* line 85, assets/sass/_partials/_events.scss */
+/* line 86, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item a {
   transform: scale(1);
   transform-origin: center;
@@ -10749,7 +10750,7 @@ body.post-type-archive-news.paged article a .news-item-title {
   overflow: hidden;
   display: block;
 }
-/* line 96, assets/sass/_partials/_events.scss */
+/* line 97, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item span {
   display: flex;
   justify-content: center;
@@ -10757,7 +10758,7 @@ body.post-type-archive-news.paged article a .news-item-title {
   text-align: center;
   float: left;
 }
-/* line 104, assets/sass/_partials/_events.scss */
+/* line 105, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item .svg-icon.inline-icon {
   height: 14.4px;
   height: 20.8px;
@@ -10765,96 +10766,96 @@ body.post-type-archive-news.paged article a .news-item-title {
   padding: 2.6px;
 }
 @media screen and (min-width: 0px) {
-  /* line 104, assets/sass/_partials/_events.scss */
+  /* line 105, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item .svg-icon.inline-icon {
     height: calc(14.4px + 6.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 104, assets/sass/_partials/_events.scss */
+  /* line 105, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item .svg-icon.inline-icon {
     height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 104, assets/sass/_partials/_events.scss */
+  /* line 105, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item .svg-icon.inline-icon {
     height: calc(20.8px + 4.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 104, assets/sass/_partials/_events.scss */
+  /* line 105, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item .svg-icon.inline-icon {
     height: 25.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 104, assets/sass/_partials/_events.scss */
+  /* line 105, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item .svg-icon.inline-icon {
     padding: calc(1.8px + 0.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 104, assets/sass/_partials/_events.scss */
+  /* line 105, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item .svg-icon.inline-icon {
     padding: 2.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 104, assets/sass/_partials/_events.scss */
+  /* line 105, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item .svg-icon.inline-icon {
     padding: calc(2.6px + 0.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 104, assets/sass/_partials/_events.scss */
+  /* line 105, assets/sass/_partials/_events.scss */
   .event-summary div.summary-item .svg-icon.inline-icon {
     padding: 3.2px;
   }
 }
-/* line 112, assets/sass/_partials/_events.scss */
+/* line 113, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item:hover a.scale-link {
   transform: scale(1.025);
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 115, assets/sass/_partials/_events.scss */
+/* line 116, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item:hover a.scale-link .right {
   font-weight: 500;
 }
-/* line 123, assets/sass/_partials/_events.scss */
+/* line 124, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item:hover a.scale-link-right .right {
   font-weight: 500;
   transform: scale(1.025);
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 136, assets/sass/_partials/_events.scss */
+/* line 137, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item:last-child {
   border-bottom: none;
 }
-/* line 144, assets/sass/_partials/_events.scss */
+/* line 145, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item:first-child:last-child {
   border: none;
 }
-/* line 151, assets/sass/_partials/_events.scss */
+/* line 152, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item.past span {
   float: left;
 }
-/* line 155, assets/sass/_partials/_events.scss */
+/* line 156, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item.past a {
   width: 100%;
   float: left;
   display: block;
 }
-/* line 161, assets/sass/_partials/_events.scss */
+/* line 162, assets/sass/_partials/_events.scss */
 .event-summary div.summary-item.past a .right {
   float: right;
   font-weight: 400;
 }
 
 /* event-summary */
-/* line 182, assets/sass/_partials/_events.scss */
+/* line 183, assets/sass/_partials/_events.scss */
 #lineup-wrap .room-name {
   font-size: 10px;
   font-size: 12.8px;
@@ -10866,78 +10867,78 @@ body.post-type-archive-news.paged article a .news-item-title {
   font-size: 11.7px;
 }
 @media screen and (min-width: 0px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     line-height: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     font-size: calc(8.1px + 3.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     font-size: 11.7px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     font-size: calc(11.7px + 2.7 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 182, assets/sass/_partials/_events.scss */
+  /* line 183, assets/sass/_partials/_events.scss */
   #lineup-wrap .room-name {
     font-size: 14.4px;
   }
 }
-/* line 189, assets/sass/_partials/_events.scss */
+/* line 190, assets/sass/_partials/_events.scss */
 #lineup-wrap ul.room-items {
   padding-bottom: 14.4px;
   padding-bottom: 20.8px;
@@ -10945,54 +10946,54 @@ body.post-type-archive-news.paged article a .news-item-title {
   padding-top: 2.6px;
 }
 @media screen and (min-width: 0px) {
-  /* line 189, assets/sass/_partials/_events.scss */
+  /* line 190, assets/sass/_partials/_events.scss */
   #lineup-wrap ul.room-items {
     padding-bottom: calc(14.4px + 6.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 189, assets/sass/_partials/_events.scss */
+  /* line 190, assets/sass/_partials/_events.scss */
   #lineup-wrap ul.room-items {
     padding-bottom: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 189, assets/sass/_partials/_events.scss */
+  /* line 190, assets/sass/_partials/_events.scss */
   #lineup-wrap ul.room-items {
     padding-bottom: calc(20.8px + 4.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 189, assets/sass/_partials/_events.scss */
+  /* line 190, assets/sass/_partials/_events.scss */
   #lineup-wrap ul.room-items {
     padding-bottom: 25.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 189, assets/sass/_partials/_events.scss */
+  /* line 190, assets/sass/_partials/_events.scss */
   #lineup-wrap ul.room-items {
     padding-top: calc(1.8px + 0.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 189, assets/sass/_partials/_events.scss */
+  /* line 190, assets/sass/_partials/_events.scss */
   #lineup-wrap ul.room-items {
     padding-top: 2.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 189, assets/sass/_partials/_events.scss */
+  /* line 190, assets/sass/_partials/_events.scss */
   #lineup-wrap ul.room-items {
     padding-top: calc(2.6px + 0.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 189, assets/sass/_partials/_events.scss */
+  /* line 190, assets/sass/_partials/_events.scss */
   #lineup-wrap ul.room-items {
     padding-top: 3.2px;
   }
 }
-/* line 194, assets/sass/_partials/_events.scss */
+/* line 195, assets/sass/_partials/_events.scss */
 #lineup-wrap li.artist-name.label-artist {
   font-size: 10px;
   font-size: 12.8px;
@@ -11001,59 +11002,59 @@ body.post-type-archive-news.paged article a .news-item-title {
   font-weight: 500;
 }
 @media screen and (min-width: 0px) {
-  /* line 194, assets/sass/_partials/_events.scss */
+  /* line 195, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.label-artist {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 194, assets/sass/_partials/_events.scss */
+  /* line 195, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.label-artist {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 194, assets/sass/_partials/_events.scss */
+  /* line 195, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.label-artist {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 194, assets/sass/_partials/_events.scss */
+  /* line 195, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.label-artist {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 194, assets/sass/_partials/_events.scss */
+  /* line 195, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.label-artist {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 194, assets/sass/_partials/_events.scss */
+  /* line 195, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.label-artist {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 194, assets/sass/_partials/_events.scss */
+  /* line 195, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.label-artist {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 194, assets/sass/_partials/_events.scss */
+  /* line 195, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.label-artist {
     line-height: 32px;
   }
 }
-/* line 198, assets/sass/_partials/_events.scss */
+/* line 199, assets/sass/_partials/_events.scss */
 #lineup-wrap li.artist-name.label-artist a {
   font-weight: inherit;
   font-size: inherit;
 }
-/* line 205, assets/sass/_partials/_events.scss */
+/* line 206, assets/sass/_partials/_events.scss */
 #lineup-wrap li.artist-name.other-artist {
   font-size: 10px;
   font-size: 12.8px;
@@ -11062,59 +11063,59 @@ body.post-type-archive-news.paged article a .news-item-title {
   font-weight: 500;
 }
 @media screen and (min-width: 0px) {
-  /* line 205, assets/sass/_partials/_events.scss */
+  /* line 206, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.other-artist {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 205, assets/sass/_partials/_events.scss */
+  /* line 206, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.other-artist {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 205, assets/sass/_partials/_events.scss */
+  /* line 206, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.other-artist {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 205, assets/sass/_partials/_events.scss */
+  /* line 206, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.other-artist {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 205, assets/sass/_partials/_events.scss */
+  /* line 206, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.other-artist {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 205, assets/sass/_partials/_events.scss */
+  /* line 206, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.other-artist {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 205, assets/sass/_partials/_events.scss */
+  /* line 206, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.other-artist {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 205, assets/sass/_partials/_events.scss */
+  /* line 206, assets/sass/_partials/_events.scss */
   #lineup-wrap li.artist-name.other-artist {
     line-height: 32px;
   }
 }
-/* line 209, assets/sass/_partials/_events.scss */
+/* line 210, assets/sass/_partials/_events.scss */
 #lineup-wrap li.artist-name.other-artist span {
   font-weight: inherit;
   font-size: inherit;
 }
-/* line 216, assets/sass/_partials/_events.scss */
+/* line 217, assets/sass/_partials/_events.scss */
 #lineup-wrap li.text-item {
   font-size: 10px;
   font-size: 12.8px;
@@ -11123,127 +11124,127 @@ body.post-type-archive-news.paged article a .news-item-title {
   font-weight: 100;
 }
 @media screen and (min-width: 0px) {
-  /* line 216, assets/sass/_partials/_events.scss */
+  /* line 217, assets/sass/_partials/_events.scss */
   #lineup-wrap li.text-item {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 216, assets/sass/_partials/_events.scss */
+  /* line 217, assets/sass/_partials/_events.scss */
   #lineup-wrap li.text-item {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 216, assets/sass/_partials/_events.scss */
+  /* line 217, assets/sass/_partials/_events.scss */
   #lineup-wrap li.text-item {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 216, assets/sass/_partials/_events.scss */
+  /* line 217, assets/sass/_partials/_events.scss */
   #lineup-wrap li.text-item {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 216, assets/sass/_partials/_events.scss */
+  /* line 217, assets/sass/_partials/_events.scss */
   #lineup-wrap li.text-item {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 216, assets/sass/_partials/_events.scss */
+  /* line 217, assets/sass/_partials/_events.scss */
   #lineup-wrap li.text-item {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 216, assets/sass/_partials/_events.scss */
+  /* line 217, assets/sass/_partials/_events.scss */
   #lineup-wrap li.text-item {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 216, assets/sass/_partials/_events.scss */
+  /* line 217, assets/sass/_partials/_events.scss */
   #lineup-wrap li.text-item {
     line-height: 32px;
   }
 }
-/* line 220, assets/sass/_partials/_events.scss */
+/* line 221, assets/sass/_partials/_events.scss */
 #lineup-wrap li.text-item span {
   font-weight: inherit;
   font-size: inherit;
 }
 
 /*#lineup-wrap*/
-/* line 237, assets/sass/_partials/_events.scss */
+/* line 238, assets/sass/_partials/_events.scss */
 section.view.container {
   padding: 36px;
   padding: 52px;
 }
 @media screen and (min-width: 0px) {
-  /* line 237, assets/sass/_partials/_events.scss */
+  /* line 238, assets/sass/_partials/_events.scss */
   section.view.container {
     padding: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 237, assets/sass/_partials/_events.scss */
+  /* line 238, assets/sass/_partials/_events.scss */
   section.view.container {
     padding: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 237, assets/sass/_partials/_events.scss */
+  /* line 238, assets/sass/_partials/_events.scss */
   section.view.container {
     padding: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 237, assets/sass/_partials/_events.scss */
+  /* line 238, assets/sass/_partials/_events.scss */
   section.view.container {
     padding: 64px;
   }
 }
-/* line 240, assets/sass/_partials/_events.scss */
+/* line 241, assets/sass/_partials/_events.scss */
 section.view.container .row {
   text-align: center;
 }
-/* line 244, assets/sass/_partials/_events.scss */
+/* line 245, assets/sass/_partials/_events.scss */
 section.view.container .item {
   display: block;
 }
-/* line 248, assets/sass/_partials/_events.scss */
+/* line 249, assets/sass/_partials/_events.scss */
 section.view.container .item:hover {
   transform: scale(1.025);
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
 
-/* line 258, assets/sass/_partials/_events.scss */
+/* line 259, assets/sass/_partials/_events.scss */
 section#past-events {
   width: 100%;
   /* .event-items */
 }
-/* line 261, assets/sass/_partials/_events.scss */
+/* line 262, assets/sass/_partials/_events.scss */
 section#past-events .past-event-title {
   text-align: center;
 }
-/* line 267, assets/sass/_partials/_events.scss */
+/* line 268, assets/sass/_partials/_events.scss */
 section#past-events .event-items a {
   border-bottom: 1px solid white;
 }
-/* line 272, assets/sass/_partials/_events.scss */
+/* line 273, assets/sass/_partials/_events.scss */
 section#past-events .event-items a:last-child {
   border-bottom: none;
 }
-/* line 275, assets/sass/_partials/_events.scss */
+/* line 276, assets/sass/_partials/_events.scss */
 section#past-events .event-items a:first-child:last-child {
   border: none;
 }
 
-/* line 285, assets/sass/_partials/_events.scss */
+/* line 286, assets/sass/_partials/_events.scss */
 .event-items {
   position: relative;
   overflow: visible;
@@ -11251,42 +11252,42 @@ section#past-events .event-items a:first-child:last-child {
 }
 
 /* archive */
-/* line 293, assets/sass/_partials/_events.scss */
+/* line 294, assets/sass/_partials/_events.scss */
 .post-type-archive-events {
   /*event-item */
   /*section#past-events */
 }
-/* line 295, assets/sass/_partials/_events.scss */
+/* line 296, assets/sass/_partials/_events.scss */
 .post-type-archive-events .event-item {
   min-height: 100vh;
   padding: 36px;
   padding: 52px;
 }
 @media screen and (min-width: 0px) {
-  /* line 295, assets/sass/_partials/_events.scss */
+  /* line 296, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item {
     padding: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 295, assets/sass/_partials/_events.scss */
+  /* line 296, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item {
     padding: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 295, assets/sass/_partials/_events.scss */
+  /* line 296, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item {
     padding: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 295, assets/sass/_partials/_events.scss */
+  /* line 296, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item {
     padding: 64px;
   }
 }
-/* line 299, assets/sass/_partials/_events.scss */
+/* line 300, assets/sass/_partials/_events.scss */
 .post-type-archive-events .event-item .event-name {
   font-size: 10px;
   font-size: 16px;
@@ -11295,54 +11296,54 @@ section#past-events .event-items a:first-child:last-child {
   font-weight: 500;
 }
 @media screen and (min-width: 0px) {
-  /* line 299, assets/sass/_partials/_events.scss */
+  /* line 300, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item .event-name {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 299, assets/sass/_partials/_events.scss */
+  /* line 300, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item .event-name {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 299, assets/sass/_partials/_events.scss */
+  /* line 300, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item .event-name {
     font-size: calc(16px + 8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 299, assets/sass/_partials/_events.scss */
+  /* line 300, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item .event-name {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 299, assets/sass/_partials/_events.scss */
+  /* line 300, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item .event-name {
     line-height: calc(18px + 1.5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 299, assets/sass/_partials/_events.scss */
+  /* line 300, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item .event-name {
     line-height: 19.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 299, assets/sass/_partials/_events.scss */
+  /* line 300, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item .event-name {
     line-height: calc(26px + -2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 299, assets/sass/_partials/_events.scss */
+  /* line 300, assets/sass/_partials/_events.scss */
   .post-type-archive-events .event-item .event-name {
     line-height: 24px;
   }
 }
-/* line 306, assets/sass/_partials/_events.scss */
+/* line 307, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events {
   padding-top: 36px;
   padding-top: 52px;
@@ -11352,54 +11353,54 @@ section#past-events .event-items a:first-child:last-child {
   /* .event-items */
 }
 @media screen and (min-width: 0px) {
-  /* line 306, assets/sass/_partials/_events.scss */
+  /* line 307, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events {
     padding-top: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 306, assets/sass/_partials/_events.scss */
+  /* line 307, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events {
     padding-top: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 306, assets/sass/_partials/_events.scss */
+  /* line 307, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events {
     padding-top: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 306, assets/sass/_partials/_events.scss */
+  /* line 307, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events {
     padding-top: 64px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 306, assets/sass/_partials/_events.scss */
+  /* line 307, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events {
     padding-bottom: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 306, assets/sass/_partials/_events.scss */
+  /* line 307, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events {
     padding-bottom: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 306, assets/sass/_partials/_events.scss */
+  /* line 307, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events {
     padding-bottom: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 306, assets/sass/_partials/_events.scss */
+  /* line 307, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events {
     padding-bottom: 64px;
   }
 }
-/* line 310, assets/sass/_partials/_events.scss */
+/* line 311, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .past-event-title {
   padding: 18px;
   padding: 26px;
@@ -11407,30 +11408,30 @@ section#past-events .event-items a:first-child:last-child {
   font-weight: 500;
 }
 @media screen and (min-width: 0px) {
-  /* line 310, assets/sass/_partials/_events.scss */
+  /* line 311, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-title {
     padding: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 310, assets/sass/_partials/_events.scss */
+  /* line 311, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-title {
     padding: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 310, assets/sass/_partials/_events.scss */
+  /* line 311, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-title {
     padding: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 310, assets/sass/_partials/_events.scss */
+  /* line 311, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-title {
     padding: 32px;
   }
 }
-/* line 319, assets/sass/_partials/_events.scss */
+/* line 320, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .past-event-item .date {
   font-size: 10px;
   font-size: 12.8px;
@@ -11440,107 +11441,107 @@ section#past-events .event-items a:first-child:last-child {
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     line-height: 25.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 319, assets/sass/_partials/_events.scss */
+  /* line 320, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .date {
     line-height: 32px;
   }
 }
-/* line 326, assets/sass/_partials/_events.scss */
+/* line 327, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .past-event-item .event-name {
   line-height: 18px;
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 326, assets/sass/_partials/_events.scss */
+  /* line 327, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .event-name {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 326, assets/sass/_partials/_events.scss */
+  /* line 327, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .event-name {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 326, assets/sass/_partials/_events.scss */
+  /* line 327, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .event-name {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 326, assets/sass/_partials/_events.scss */
+  /* line 327, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .event-name {
     line-height: 32px;
   }
 }
-/* line 332, assets/sass/_partials/_events.scss */
+/* line 333, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .past-event-item .venue {
   text-align: right;
   line-height: 18px;
@@ -11552,96 +11553,96 @@ section#past-events .event-items a:first-child:last-child {
   font-weight: 400;
 }
 @media screen and (min-width: 0px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     line-height: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 332, assets/sass/_partials/_events.scss */
+  /* line 333, assets/sass/_partials/_events.scss */
   .post-type-archive-events section#past-events .past-event-item .venue {
     line-height: 25.6px;
   }
 }
-/* line 344, assets/sass/_partials/_events.scss */
+/* line 345, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .event-items {
   /*a*/
 }
-/* line 346, assets/sass/_partials/_events.scss */
+/* line 347, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .event-items .past-event-item {
   border-bottom: 1px solid white;
 }
-/* line 351, assets/sass/_partials/_events.scss */
+/* line 352, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .event-items .past-event-item:hover .scale-me {
   transform: scale(1.025);
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 361, assets/sass/_partials/_events.scss */
+/* line 362, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .event-items .past-event-item:last-child {
   border-bottom: none;
 }
-/* line 364, assets/sass/_partials/_events.scss */
+/* line 365, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .event-items .past-event-item:first-child:last-child {
   border: none;
 }

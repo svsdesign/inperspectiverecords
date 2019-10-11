@@ -11,6 +11,10 @@ I would suggest looking into the CMS complications before code any more blocks.
 		Addition blocks:
 			- A merch block. Image & copy + link to 3rd party if required. Design > Code
 	
+
+- Events - Add banner image to fields - I think?
+
+
 - Release
 
 	- create image for the white / small disc - including the sticker etc - how when it moves?
