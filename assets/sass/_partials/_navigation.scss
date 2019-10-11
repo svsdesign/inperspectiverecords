@@ -219,8 +219,9 @@ body{
  			    	content:" \25CF";
  			    	line-height: 1.5vw;
 					font-size: 1.5vw;
-
+					color:$text-color;
 			    	}
+
 			    	li:first-child:before{
  			    	content:"";
 			    	}
@@ -244,7 +245,6 @@ body{
     //	}
 
 
- 
 
 
 
@@ -255,6 +255,7 @@ body{
 	    	right: 0px;
 	    	bottom:0px;
 	    	pointer-events:none;
+	    	z-index: -1;
 
 	    		.inp-bg{
 	    		position: relative;
@@ -270,7 +271,7 @@ body{
 
 					path{
 					stroke: none;
-					fill: rgba(128, 128, 128, 0.2);
+					fill: rgba(128, 128, 128, 0.25);
 				    mix-blend-mode: luminosity;
 
 					}
@@ -292,6 +293,7 @@ body{
 	 		width: 12.5%;
  			pointer-events:initial;
  			cursor: pointer;
+			@include scalelink-out-value(1);
 
 				svg {
 				width: 100%;
@@ -307,6 +309,11 @@ body{
 				 	 stroke-linejoin: round;
 				 	}
 
+				}
+
+				&:hover{
+			    //@include scalelink;
+			    @include scalelink-in-value(1.25);
 				}
 
  			}
@@ -500,7 +507,197 @@ body{
 
 
 	} /*&.vertical */
- 
+
 
 
 }
+
+/* start colours for toggle files - REVIEW - this maybe not used */
+/* white */
+
+body.post-type-archive-news,
+{
+
+	.navigation-toggle-wrap{
+ 
+			
+		.navigation-toggle{
+ 		
+ 			svg {
+			 
+				path{
+			//	fill:$news-background-color;
+				}
+
+			}
+		
+			&.toggled-on{
+
+				svg {
+			 
+				path{
+			//	fill:none;
+				}
+
+				}
+
+			}//&.toggled-on
+
+		}
+	}
+
+}//body.post-type-archive-news*/
+
+/* end colours for toggle filss */
+
+/* Start Headroom */
+
+	/* start animations*/
+
+
+	@-webkit-keyframes slideDown {
+	  0% {
+	    -webkit-transform: translateY(-100%);
+	  }
+
+	  100% {
+	    -webkit-transform: translateY(0);
+	  }
+	}
+
+	@-moz-keyframes slideDown {
+	  0% {
+	    -moz-transform: translateY(-100%);
+	  }
+
+	  100% {
+	    -moz-transform: translateY(0);
+	  }
+	}
+
+	@-o-keyframes slideDown {
+	  0% {
+	    -o-transform: translateY(-100%);
+	  }
+
+	  100% {
+	    -o-transform: translateY(0);
+	  }
+	}
+
+	@keyframes slideDown {
+	  0% {
+	    transform: translateY(-100%);
+	  }
+
+	  100% {
+	    transform: translateY(0);
+	  }
+	}
+
+
+	@-webkit-keyframes slideUp {
+	  0% {
+	    -webkit-transform: translateY(0);
+	  }
+
+	  100% {
+	    -webkit-transform: translateY(-100%);
+	  }
+	}
+	@-moz-keyframes slideUp {
+	  0% {
+	    -moz-transform: translateY(0);
+	  }
+
+	  100% {
+	    -moz-transform: translateY(-100%);
+	  }
+	}
+	@-o-keyframes slideUp {
+	  0% {
+	    -o-transform: translateY(0);
+	  }
+
+	  100% {
+	    -o-transform: translateY(-100%);
+	  }
+	}
+	@keyframes slideUp {
+	  0% {
+	    transform: translateY(0);
+	  }
+
+	  100% {
+	    transform: translateY(-100%);
+	  }
+	}
+
+
+	/* end animations*/
+
+ /* TO DO - ensure this headroom doesn't intervene with my sticky players classes + design states */
+ 
+.sc-player {
+    will-change: transform;
+   // transition: transform 200ms linear;
+}
+.headroom--pinned {
+}
+.headroom--unpinned {
+}
+
+
+
+.animated.slideUp, //.sc-trackslist,
+.animated.slideUp// .sc-scrubber
+ {
+ 	    transform: translateY(0%);
+/*
+  -webkit-animation-name: slideUp;
+  -moz-animation-name: slideUp;
+  -o-animation-name: slideUp;
+  animation-name: slideUp;
+  */
+  background: green!important;
+
+}
+
+
+
+.animated.slideDown,// .sc-trackslist,
+.animated.slideDown// .sc-scrubber 
+{
+	    transform: translateY(-100%);
+/*
+  -webkit-animation-name: slideDown;
+  -moz-animation-name: slideDown;
+  -o-animation-name: slideDown;
+  animation-name: slideDown;*/
+
+  background: red!important;
+}
+
+
+
+
+
+/**
+ * Note: I have omitted any vendor-prefixes for clarity. - svs to add
+ * Adding them is left as an exercise for the reader.
+ */
+
+ /*
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+*/
+
+/* End Headroom */

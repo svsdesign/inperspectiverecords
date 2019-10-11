@@ -5,7 +5,8 @@
  *  Developed by Simon van Stipriaan 
  * 	http://svs.design
  *
- *   TEMPLATE FOR Will miles - 1 disc S
+ *   TEMPLATE FOR Dissident - iNP028. 
+ * 	"Digital template"
  */
 ?>
 
@@ -27,7 +28,7 @@
 								   
 	 	 <div class="sleave-square">
 	      		       	
- 	      <!-- 	<img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/pvc_sleave_400-v7.png"/>
+ 	      <!--<img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/pvc_sleave_400-v7.png"/>
  	       	<img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/pvc_sleave_400.png"/> -->
 			<img class="record-sleave" src="<?php echo $releaseproductcover;?>">
 
@@ -35,7 +36,7 @@
 
 	     <div class="sleave-square inner-sleave">
 	 
-	     	<img class="record-sleave" src="<?php echo $releaseassetslocation ;?>/INP027-innersleave_back.png"/>
+	     	<img class="record-sleave" src="<?php echo $releaseassetslocation ;?>/INP028-digital-icon.png"/>
 	   	
 	   	</div> 
 	    

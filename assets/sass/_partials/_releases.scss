@@ -948,6 +948,7 @@ z-index: 99; // this was 9 - but increased to be 1 above the sticky radio cntain
             display: block;
             position: relative;
             width: 100%;
+            cursor: pointer;
             float: left;
              // padding:10% 30% 0% 30% ;
              @include padding(padding, 0.1);

@@ -1,4 +1,4 @@
-/*_artist.scss*/
+/*_icons.scss*/
 
 .svg-icon{
 
@@ -10,17 +10,15 @@ height:100%;
 float: left;
  }
 
-/*	.svg-icon.white svg{
-fill:@rs-white;
-}
-.svg-icon.green svg{
-fill:@rs-green;
-}
-.svg-icon.black svg{
-fill:@rs-black;
+ .svg-icon.white-icon svg{
+fill:$white;
+stroke:$white; // if strokes are used; apply same colour
 }
 
-*/
+ .svg-icon.black-icon svg{
+fill:$black; 
+stroke:$black;// if strokes are used; apply same colour
+}
 
 
 .inline-icon{

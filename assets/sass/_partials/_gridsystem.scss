@@ -157,7 +157,8 @@
 @media (min-width: map-get($breakpoints,xs)) {
     .grid-item,
     .inp-bg,
-    .navigation-toggle{
+    .navigation-toggle,
+    .toggle-icon{
       padding:map-get($gutter,xs);
     }
 } // xs
@@ -171,7 +172,8 @@
 @media (min-width: map-get($breakpoints,md)) {
     .grid-item,
     .inp-bg,
-    .navigation-toggle{
+    .navigation-toggle,
+    .toggle-icon{
       padding:map-get($gutter,md);
     }
 } // md
@@ -179,7 +181,8 @@
 @media (min-width: map-get($breakpoints,lg)) {
     .grid-item,
     .inp-bg,
-    .navigation-toggle{
+    .navigation-toggle,
+    .toggle-icon{
       padding:map-get($gutter,lg);
     }
 } // lg
@@ -187,7 +190,8 @@
 @media (min-width: map-get($breakpoints,xl)) {
     .grid-item,
     .inp-bg,
-    .navigation-toggle{
+    .navigation-toggle,
+    .toggle-icon{
       padding:map-get($gutter,xl);
     }
 } // xl

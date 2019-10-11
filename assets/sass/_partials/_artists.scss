@@ -30,7 +30,7 @@ text-align: center;
 
 body.single-artists,
 .release-block
-{ 
+  { 
   
   .cover-image-item{
   width: 100%;
@@ -186,6 +186,7 @@ body.single-artists,
     width:25vw;//30vw;//400px; 
     height:25vw;//30vw;//400px;
     position: absolute; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); // review this.
 
   }
   .active.record-sleave{

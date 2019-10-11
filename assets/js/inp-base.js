@@ -316,20 +316,26 @@ TO DO:
 
           var $thiscontainer = $(this),
               $thiscircle = $(this).find(".record-circle");
-          
+              $thiscontainer.removeClass("active");// incase its active still - seems to be some buggy behavior atm
+              console.log('active');
+
           $thiscircle.hover(function() {
           
             if( $thiscircle.hasClass("rotating")){
 
-              $thiscircle.removeClass("rotating"); 
+             /* $thiscircle.removeClass("rotating"); 
               $thiscircle.toggleClass("rotate");
-              $thiscontainer.toggleClass("active")
+              $thiscontainer.toggleClass("active");
+*/
+              $thiscircle.removeClass("rotating"); 
+              $thiscircle.removeClass("rotate");
+              $thiscontainer.removeClass("active");
 
             } else {
 
                $thiscircle.addClass("rotating");
-               $thiscircle.toggleClass("rotate");
-               $thiscontainer.toggleClass("active")
+               $thiscircle.addClass("rotate");
+               $thiscontainer.addClass("active");
 
             } // if
 
@@ -339,12 +345,48 @@ TO DO:
 
     } // function recordscircle
 
+
+/* - moved to radio script
+    function initheadroom(){
+
+        if ($(".sc-player").length){
+        
+
+        console.log(".sc-player exists")
+
+             $(".sc-player").headroom({
+                "offset": 205,
+                "tolerance": 5,
+                "classes": {
+                  "initial": "animated",
+                  "pinned": "slideDown",
+                  "unpinned": "slideUp"
+                }
+              });
+
+        } else {
+        console.log(".radio container doesn't exist");
+        }
+
+    } // function initheadroom()
+
+
+
+    function destroyheadroom(){
+      // to destroy
+      $(".sc-player").headroom("destroy");
+
+    }// destroyheadroom()
+
+*/
+
 // END global functions
 
 // add script for reasize of 
  
        
     function start(){
+
 
       //console.log("function start()")
  

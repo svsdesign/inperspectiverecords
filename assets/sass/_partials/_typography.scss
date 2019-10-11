@@ -1,6 +1,8 @@
 /*_typography.scss*/
 
 
+/*TO - review the code in here-  usage of that  animation markup as per what I've put on Codepen */
+
 body {
 color: $text-color;
 font-size: $base-font-size;
@@ -95,16 +97,14 @@ a.link-animation
 
 .link-animation {
   transform-style: preserve-3d;
-position: relative;
-    overflow: hidden;
-    display: block;
-    width: auto;
-    overflow: visible;
-   	color: transparent;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: auto;
+  overflow: visible;
+ 	color: transparent;
 
   .anim-text {
-  //	left:0;
-//  	right:0;
     position: absolute;
     color: #fff;
    // padding: 20px 0;

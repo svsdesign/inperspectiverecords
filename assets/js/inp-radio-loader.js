@@ -10,9 +10,7 @@ var radioscriptloaded, // set as undefined initially;//
 
 
 //console.log("inp-radio-loader.js running. This only loads once")
-
-
-console.log("theme_directory" + dir+"");
+//console.log("theme_directory" + dir+"");
 
  jQuery(document).ready(function($) {
 
@@ -35,32 +33,29 @@ console.log("theme_directory" + dir+"");
                   
                           // if not defined yet, we need to find the scsjonobject
                           // and hecause we are on a single radio page, there should the first available data attribute
-    //                      itemurl = $('#radio-code').data("url");
+                         //  itemurl = $('#radio-code').data("url");
                           if ($('body').hasClass('single-radio')) {
-                                          radioscriptloaded = true;  // now defined
+                             
+                            radioscriptloaded = true;  // now defined
+                            itemurl = $('#show-details').data("radio-link"); // this is a sc url but only exist on the single page atm 
+                          
+                            // permalink to a track
+                            var track_url = itemurl;//feedsclink;
+                          
+                            console.log('body.singleradio')
+                            console.log('itemurl on single radio page ='+itemurl+'')
 
-                          itemurl = $('#show-details').data("radio-link"); // this is a sc url but only exist on the single page atm 
-                         console.log('body.singleradio')
-
-
-
-                                              console.log('itemurl on single radio page ='+itemurl+'')
-
-                          // permalink to a track
-                          var track_url = itemurl;//feedsclink;
-
-
-                          reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
-
+                            reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
 
                           } else if ($('body').hasClass('post-type-archive-radio')) {
-                                      radioscriptloaded = true;  // now defined
+                            
+                            radioscriptloaded = true;  // now defined
 
 
 // ISSUES - when coming from somwhere else the archive page needs to have a link for people to play the top one.
 // it currently just pauses the existing track if you click the play
 
-                        // console.log("else iunnit? ")
+                            // console.log("else iunnit? ")
                             console.log('body.post-type-archive-radio')
 
                             itemurl = $('.top-container li:first').data("tracklink"); //so on archive we just pull the first item
@@ -73,25 +68,26 @@ console.log("theme_directory" + dir+"");
                             reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
 
                           } else if ($('_.radio-item li').length > 0){ // we want to detect if there's a link to a sc url?
-                           // I'm not sure this is ever used? not on the archve page
-                           //suggest deleting this ?
-                           // $this is not define
-                            console.log("I'm not sure this is ever used?");
+                             // I'm not sure this is ever used? not on the archve page
+                             //suggest deleting this ?
+                             // $this is not define
+                              console.log("I'm not sure this is ever used? - delete if neeedd");
 
-                            $thisitem = $this;
-                                          radioscriptloaded = true;  // now defined
+                             /* $thisitem = $this;
+                              radioscriptloaded = true;  // now defined
 
-                            itemurl = $thisitem.data("radio-link"); // this is a sc url but only exist on the single page atm 
+                              itemurl = $thisitem.data("radio-link"); // this is a sc url but only exist on the single page atm 
 
-                            console.log(".radio-item li itemurl = " +itemurl +"");
+                              console.log(".radio-item li itemurl = " +itemurl +"");
 
-                     
-                            // permalink to a track
-                            var track_url = itemurl;//feedsclink;
+                       
+                              // permalink to a track
+                              var track_url = itemurl;//feedsclink;
 
-                            reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
+                              reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
+                              */
 
-
+    
                             } else if ($('.sound-block').length > 0){ 
 
                                 console.log("we have a soundblock");
@@ -108,7 +104,7 @@ console.log("theme_directory" + dir+"");
                                   
                                    // console.log("radio item each");
                                   //  $thisitem = $(this).closest('.radio-item'); 
-                                radioscriptloaded = true;  // now defined
+                                   radioscriptloaded = true;  // now defined
 
 
                                     //                                    console.log("$thisitem " + $thisitem +"");
@@ -116,7 +112,7 @@ console.log("theme_directory" + dir+"");
                       
                                    // itemurl = $thisitem.data('tracklink');
                                      
-                                console.log("radio block item itemurl = " +itemurl +"");
+                                   console.log("radio block item itemurl = " +itemurl +"");
                                   //  console.log("sound block tracklink " + $thisitem.data("tracklink") +"");
 
                                   // permalink to a track  
@@ -146,32 +142,59 @@ console.log("theme_directory" + dir+"");
                           } else {
 
 
-                        // console.log("else iunnit? ")
+                            // console.log("else iunnit? ")
                             console.log('body - but we wont have a radio item yet - so keep look for attrchange to the body class?' )
                             // here I want to look for dom changes and thenn whenn they happend we run - checkScript() 
                             //checkScript()
                             // This makes a lot changes and then runs it immediately again - not sure this is very good appraoch
 
-                              $("body").attrchange({
+                                  $("body").attrchange({
                                     trackValues: true, // set to true so that the event object is updated with old & new values
                                     callback: function(evnt) {
                                         if(evnt.attributeName == "class") { // which attribute you want to watch for changes
-                                            console.log("class changes exist");
+                                            console.log("a class changes existed");
 
-                                            if(evnt.newValue.search(/post-type-archive-radio/i) == -1)
-                                            //if((evnt.newValue.search(/post-type-archive-radio/i) == -1) || (evnt.newValue.search(/single-radio/i) == -1))
-                                             { // "open" is the class name you search for inside "class" attribute
-                                             console.log("we dont have archive radio class");
+                                            // var bodyclass = $("body").attr("class"); 
+                                            /// console.log(bodyclass); 
+                                            //console.log(evnt.newValue); 
 
-                                                // your code to execute goes here...
-                                            } else{
-                                             console.log("not the classes we want - so don't run?");
-                                             checkScript(); // initial run 
+                                        
+                                          //start review this - ensure all if statemnents are consolidated to ensure I'm not running anything more than once
+
+                                               if (evnt.newValue.search(/has-sound-block/i) == -1){
+                                                 
+                                                 console.log("we dont have a sound block class - do nothing");
+
+                                               } else {
+                                                 
+                                                 console.log("we DO have a block class - run script again");
+                                                 checkScript(); // initial run 
+
+                                               }
+
+                                                // review this Part 2 - establish why again we need to run this on archive page?
+                                                
+                                                if (evnt.newValue.search(/post-type-archive-radio/i) == -1)
+                                                //if((evnt.newValue.search(/post-type-archive-radio/i) == -1) || (evnt.newValue.search(/single-radio/i) == -1))
+                                                { // "open" is the class name you search for inside "class" attribute
+                                                 console.log("we dont have archive radio class OR sound block class");
+                                                 // yeah but this would also be true mean that if the radio wone did exist, but the archive didn't 
+
+                                                } else {
+                                                 
+                                                //  console.log("else - so we might have the archive or soundblock class ");
+                                                 console.log("we DO have post-type-archive-radio - run script again");
+
+                                                 checkScript(); // initial run 
+
+                                                }//if(evnt.newValue.search(/post-type-archive-radio/i) == -1)
+                                                
+                                                // end review this Part 2 
 
 
+                                            //end review this - Part 1
 
-                                            }
-                                        }
+                                        }// if(evnt.attributeName == "class") { 
                                     }
                                 });
 

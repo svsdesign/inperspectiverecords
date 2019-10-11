@@ -263,8 +263,6 @@ $grey:rgba(255,255,255,0.25);
 }
 
  
-
-
 @mixin scalelink{
 transform:scale(1.025);
 transform-origin:center;
@@ -272,3 +270,29 @@ transition: all 200ms ease-in-out;
 
 }
 
+@mixin scalelink-in-value($scalesize){
+transform:scale($scalesize);
+transform-origin:center;
+transition: all 200ms ease-in;
+}
+
+
+@mixin scalelink-out-value($scalesize){
+transform:scale($scalesize);
+transform-origin:center;
+transition: all 200ms ease-out;
+}
+
+
+@mixin scalelink-in{
+transform:scale(1.025);
+transform-origin:center;
+transition: all 200ms ease-in-out;
+}
+
+
+@mixin scalelink-out{
+transform:scale(1);
+transform-origin:center;
+transition: all 200ms ease-in-out;
+}

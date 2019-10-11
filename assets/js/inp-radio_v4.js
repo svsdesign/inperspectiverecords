@@ -21,6 +21,14 @@
 *   The link will be automatically replaced by the HTML based player
 */
 
+
+/* TO do
+If the player js hasn't loaded yet - but we allow teh UI elements to be visible, people will click but it won't work
+So I need to maybe create loading states (or just don't display any of the UI elements) untill we can allow for interaction
+This was happening because the Internet was slow.
+
+*/
+
 (function($) {
 
 
@@ -31,15 +39,16 @@
 
   //  console.log("playtoggle")
 
-
-        var toMaximise = function(){
+      var toggleicon ='<svg width="69px" height="50px" viewBox="0 0 69 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Sound-Note" transform="translate(-1.000000, 0.000000)" stroke="#FFFFFF"> <path d="M67.8594209,1 L31.4014689,1 C30.5867899,1 29.7418533,1.63982037 29.5199009,2.42362522 L27.6745188,9.06773125 L27.6756096,9.01641662 C26.4949463,13.3009035 25.3019524,17.580458 24.1084842,21.8605817 C23.9318234,22.4935728 23.755542,23.1254256 23.5801143,23.755334 L23.2757834,24.8479277 C23.1562232,25.2767985 23.036663,25.705527 22.9171501,26.1344452 L22.8996975,26.1970945 L22.899982,26.1970945 L20.4891905,34.8523356 C20.464624,34.9093887 20.3923472,34.9402154 20.3554974,34.8829726 C19.9681241,34.2815196 19.0170013,33.1182616 19.0170013,33.1182616 C16.4239053,29.8250671 12.8992733,29.3072257 9.10502616,30.1304413 C2.51835268,31.5595679 -0.325767662,39.433992 3.95501997,44.558246 C7.02109267,48.2324587 13.0485221,49.9548185 17.5911471,48.4124393 C20.5295498,47.4137959 22.5950821,45.4712859 23.4412043,42.4167377 C25.0867819,36.4729672 26.0951475,32.784432 27.213778,28.7042077 C27.2163389,28.7059625 27.2187102,28.7078121 27.2212712,28.7095668 L28.5523214,23.9122657 C28.7642195,23.1617537 29.5502534,22.5393386 30.3432114,22.4956595 L32.800907,22.4929562 L33.950459,22.4929562 L33.9500322,22.4917231 L58.4076175,22.4651173 C58.2856859,22.902667 58.1636596,23.3401218 58.041728,23.7777189 L54.9508043,34.8747205 C54.9262852,34.9317737 54.853961,34.9626478 54.8171112,34.905405 C54.4297379,34.3038571 53.4786151,33.140694 53.4786151,33.140694 C50.8855665,29.8474995 47.3608871,29.3296107 43.56664,30.1528737 C36.9800139,31.5819529 34.1358936,39.4563769 38.4166812,44.5806309 C41.4827065,48.2548436 47.5101833,49.9772034 52.0528083,48.4348242 C54.991211,47.4361809 57.0567433,45.4936709 57.9028655,42.4391226 C60.7073854,32.3090366 61.6610692,28.7303867 64.4641663,18.597218 L64.4613682,18.5771569 L68.9485051,2.42362522 C69.1660943,1.63982037 68.6735308,1 67.8594209,1" id="Fill-1"></path> </g> </g> </svg>';
+      var toMaximise = function(){
           console.log("toMaximise function");
-        }// toMaximise
+
+      }// toMaximise
         
-        var toMinimise = function(){
+      var toMinimise = function(){
           console.log("toMinimise function");
 
-        }// toMinimise
+      }// toMinimise
 
 
       var toPause = function(){
@@ -137,6 +146,108 @@
       };
 
  // }// playtoggle
+
+
+  /* headroom */
+
+    function initheadroom(){
+
+        if ($(".sc-player").length){
+      
+        console.log(".sc-player exists")
+
+             $(".sc-player").headroom({
+                  // vertical offset in px before element is first unpinned
+                "offset": 0, // This value maybe a variable; we need to cater for the arhive page
+                "tolerance": 5,
+                    // scroll tolerance in px before state changes
+
+                // "tolerance" : {
+                //    "up" : ,
+                //   "down" : 100
+                //    },
+                "classes": {
+                  "initial": "animated",
+                  "pinned": "slideUp",
+                  "unpinned": "slideDown"
+                }
+              });
+
+
+             /*
+
+
+
+var options = {
+
+    offset : 0,
+    // scroll tolerance in px before state changes
+    tolerance : 0,
+    // or you can specify tolerance individually for up/down scroll
+    tolerance : {
+        up : 5,
+        down : 0
+    },
+    // css classes to apply
+    classes : {
+        // when element is initialised
+        initial : "headroom",
+        // when scrolling up
+        pinned : "headroom--pinned",
+        // when scrolling down
+        unpinned : "headroom--unpinned",
+        // when above offset
+        top : "headroom--top",
+        // when below offset
+        notTop : "headroom--not-top",
+        // when at bottom of scoll area
+        bottom : "headroom--bottom",
+        // when not at bottom of scroll area
+        notBottom : "headroom--not-bottom",
+        // when frozen method has been called
+        frozen: "headroom--frozen"
+    },
+    // element to listen to scroll events on, defaults to `window`
+    scroller : someElement,
+    // callback when pinned, `this` is headroom object
+    onPin : function() {},
+    // callback when unpinned, `this` is headroom object
+    onUnpin : function() {},
+    // callback when above offset, `this` is headroom object
+    onTop : function() {},
+    // callback when below offset, `this` is headroom object
+    onNotTop : function() {},
+    // callback when at bottom of page, `this` is headroom object
+    onBottom : function() {},
+    // callback when moving away from bottom of page, `this` is headroom object
+    onNotBottom : function() {}
+};
+// pass options as the second argument to the constructor
+// supplied options are merged with defaults
+var headroom = new Headroom(element, options);
+
+
+
+
+                */
+
+
+        } else {
+        console.log(".radio container doesn't exist");
+        }
+
+    } // function initheadroom()
+
+
+
+    function destroyheadroom(){
+      // to destroy
+      $(".sc-player").headroom("destroy");
+
+    }// destroyheadroom()
+
+  /* end headroom */
+
 
 
   // Convert milliseconds into Hours (h), Minutes (m), and Seconds (s)
@@ -759,18 +870,6 @@ console.log("track" + track);
         }
 
 
-//TO DO:
-
-
-// 1.
-//https://www.jqueryscript.net/demo/Circular-Html5-Audio-Player-jQuery/ implement something like this? 
-//- I probably just want to make two scrubbers?
-/// one as is
-// other is svg cirlce
-//
-// and show which ever is needed based on toggling the min/max icon.
-
-
         // adding controls to the player
         $player
           .find('.sc-controls')
@@ -778,8 +877,10 @@ console.log("track" + track);
         //      .append('<a class="sc-play"> <div class="play-toggle"> <svg id="playertoggle" class=""  width="100%" viewBox="0 0 1005.115 677.875" xmlns="http://www.w3.org/2000/svg"> <path id="play" d="M981.065,0H212.327c-17.178,0-34.994,13.491-39.674,30.018L1.039,647.903 c-4.463,16.55,5.866,29.972,22.93,29.972h174.845c17.223,0,35.039-13.422,39.673-29.972l45.905-165.451 c4.635-16.413,22.291-29.927,39.628-29.927h531.177c17.395,0,35.153-13.468,39.788-29.949l109.045-392.559 C1008.617,13.491,998.231,0,981.065,0z" fill-rule="nonzero"/> <path opacity="0" id="pause" d="M901.569,280.438H132.831c-17.178,0-34.994,13.491-39.674,30.018l-15.801,58.011 c-4.463,16.55,5.866,29.972,22.93,29.972h174.845c17.223,0,32.254,0,32.254,0l0,0h31.952h531.177 c17.395,0,35.153-12.38,39.788-28.861l14.231-59.121C929.121,293.929,918.735,280.438,901.569,280.438z" fill-rule="nonzero"/> <path style="display:none;" id="play-path" d="M981.065,0H212.327c-17.178,0-34.994,13.491-39.674,30.018L1.039,647.903 c-4.463,16.55,5.866,29.972,22.93,29.972h174.845c17.223,0,35.039-13.422,39.673-29.972l45.905-165.451 c4.635-16.413,22.291-29.927,39.628-29.927h531.177c17.395,0,35.153-13.468,39.788-29.949l109.045-392.559 C1008.617,13.491,998.231,0,981.065,0z" fill-rule="nonzero"/> </svg> </div> </a>')
       // .append('<a class="sc-play"> <div class="play-toggle"> <svg id="playertoggle" class=""  width="100%" viewBox="0 0 1005.115 677.875" xmlns="http://www.w3.org/2000/svg"> <path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> </svg> </div> </a>')
    //     .append('<a class="sc-play"> <div class="play-toggle"> <svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> <path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path id="play-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path id="play-right" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path opacity="0" id="pause-left" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> <path opacity="0" id="pause-right" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path style="display:none;" id="play-path-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path-right" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> </svg> </div> </a>')
-       .append('<a class="sc-play"> <div class="play-toggle"> <svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> <path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path id="play-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path id="play-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> <path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path opacity="0" id="pause-left" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> <path opacity="0" id="pause-right" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path style="display:none;" id="play-path-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> </svg> </div> </a>')
-       .append('<div class="player-toggle">hello<div class="minimise">min</div><div class="maximise">max</div>')
+          .append('<a class="sc-play"> <div class="play-toggle"> <svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> <path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path id="play-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path id="play-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> <path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path opacity="0" id="pause-left" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> <path opacity="0" id="pause-right" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> <path style="display:none;" id="play-path-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> <path style="display:none;" id="play-path-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> </svg> </div> </a>')
+          .append('<div class="player-toggle"><div class="toggle-icon-wrap"><div class="toggle-icon">'+ toggleicon +'</div></div><div class="sc-minimise">hide</div><div class="sc-maximise">&nbsp&nbsp&nbsp&nbsp</div></div>')
+        //  .append('icon')
+         // .append('')
           .end()
           .append('<a href="#info" class="sc-info-toggle">Info</a>')
           .append('<div class="sc-scrubber"></div>')
@@ -907,10 +1008,13 @@ console.log("track" + track);
   //--------------------------------------------------------
 
   // toggling Minmise / Maximise
-  $(document).on('click','a.sc-maximise, a.sc-minimise', function(event) {
+  $(document).on('click','.sc-maximise, .sc-minimise', function(event) {
    // var $list = $(this).closest('.sc-player').find('ol.sc-trackslist');
     // simulate the click in the tracklist
-    console.log("clicking maximum / minumum")
+    console.log("clicking maximum / minumum");
+    $('body').toggleClass("sc-minimised");
+//    $('body').removeClass("sc-player-paused"); // if this existed remove it
+
     //$list.find('li.active').click();
     return false;
   });
@@ -1096,6 +1200,10 @@ var $track = $(this),
   $(function() {
     if($.isFunction($.scPlayer.defaults.onDomReady)){
       $.scPlayer.defaults.onDomReady();
+
+      //    initheadroom();
+    initheadroom();
+
     }
   });
 

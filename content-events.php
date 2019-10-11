@@ -105,7 +105,7 @@
 
 						<div class="venue summary-item">
 							
-							<a class="scale-me" target="_blank" href="<?php echo $venuelink;?>">
+							<a class="scale-link" target="_blank" href="<?php echo $venuelink;?>">
 
 							<span><?php the_field('venue'); ?></span>   
 							<div class="svg-icon inline-icon right">
@@ -122,10 +122,10 @@
 
 						<div class="summary-item price">
 							
-							<a class="scale-me" target="_blank" href="<?php echo $ralink;?>">
+							<a class="scale-link" target="_blank" href="<?php echo $ralink;?>">
 								
 								<span class="">Buy Tickets</span>
-								<div class="svg-icon inline-icon right">
+								<div class="svg-icon inline-icon right white-icon">
 								<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
 					 			</div><!-- svg-icon inline-icon -->	
 					 		
@@ -142,7 +142,7 @@
 						<div class="summary-item event-social">
 
 
-								<a class="fb-details scale-me" href="<?php echo $fblink ;?>">
+								<a class="fb-details scale-link" target="_blank" href="<?php echo $fblink ;?>">
 									
 										<span>Facebook Event</span>
 										<div class="svg-icon inline-icon right">
@@ -193,7 +193,7 @@
 										// Start the Loop.
 										while ( have_posts() ) : the_post(); ?>
  		 
-					 						<a class="event-link scale-me" href="<?php the_permalink();?>">	
+					 						<a class="event-link scale-link-right" href="<?php the_permalink();?>">	
 
 						 						<span>This event has now passed</span>
 												<span class="right">View Next Event<span>
@@ -259,7 +259,16 @@
 
 													 	<li class="artist-name label-artist">
 													 	
-														 	<a class="link-animation" href="<?php echo get_permalink($artistid); ?>">
+														 	<a class="" href="<?php echo get_permalink($artistid); ?>">
+															
+																<span>
+																<?php echo $name; ?>
+																</span>
+
+															</a>
+													    
+													    <?php /*
+															<a class="link-animation" href="<?php echo get_permalink($artistid); ?>">
 
 														 		<?php for ($k = 0 ; $k < 26; $k++):?>
 														    	<span class="anim-text"><?php echo $name; ?> </span>
@@ -267,24 +276,17 @@
 														    	<div class="height-item"><?php echo $name; ?></div>
 
 															</a>
-													    
+													    */ ?>
+
 													    </li>
 														 
 													<?php elseif( get_row_layout() == 'other_artist_item' ):?>
 														
 														<li class="artist-name other-artist">
 
-															<div class="link-animation">
-																
-																<?php for ($k = 0 ; $k < 26; $k++):?>
-														    	<span class="anim-text"><?php the_sub_field('other_artist'); ?></span>
-																<?php endfor; ?>
-															    
-																<span class="height-item">
-																<?php the_sub_field('other_artist'); ?>
-																</span>
-
-															</div>
+ 															<span>
+ 																<?php the_sub_field('other_artist'); ?>
+															</span>
 
 														</li>
 
@@ -620,7 +622,7 @@
 
 						<div class="venue summary-item">
 							
-							<a class="scale-me" target="_blank" href="<?php echo $venuelink;?>">
+							<a class="scale-link" target="_blank" href="<?php echo $venuelink;?>">
 
 							<span><?php the_field('venue'); ?></span>   
 							<div class="svg-icon inline-icon right">
@@ -637,10 +639,10 @@
 
 						<div class="price summary-item">
 							
-							<a class="scale-me" target="_blank" href="<?php echo $ralink;?>">
+							<a class="scale-link" target="_blank" href="<?php echo $ralink;?>">
 								
 								<span class="">Buy Tickets</span>
-								<div class="svg-icon inline-icon right">
+								<div class="svg-icon inline-icon right white-icon">
 								<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
 					 			</div><!-- svg-icon inline-icon -->	
 					 	
@@ -655,7 +657,7 @@
 				 
 						<div class="fb-details summary-item">
 							
-							<a class="scale-me" href="<?php echo $fblink ;?>">
+							<a class="scale-link" href="<?php echo $fblink ;?>">
 								
 								<span>Facebook Event</span>	
 								<div class="svg-icon inline-icon right">
@@ -671,10 +673,10 @@
 
 					<div class="event-link summary-item">
 							
-							<a class="scale-me" href="<?php the_permalink();?>">
+							<a class="scale-link" href="<?php the_permalink();?>">
 							
 							<span class="">More Information</span>
-							<div class="svg-icon inline-icon right">
+							<div class="svg-icon inline-icon right white-icon">
 							<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
 				 			</div><!-- svg-icon inline-icon -->	
 				 		

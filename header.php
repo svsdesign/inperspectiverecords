@@ -63,7 +63,6 @@
 			
 			<?php if ( have_posts() ) :
  				$number = 0;
-
 				?>
 
 				<div class="radio-container">

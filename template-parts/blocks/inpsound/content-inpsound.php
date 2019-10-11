@@ -34,7 +34,7 @@ if( !empty($block['align']) ) {
 //$line_color = get_field('line_color');
 $text_color = get_field('text_color');
 $soundblockid = get_field('sound'); //post object - IDS
-$soundcloudlink = get_field('soundcloud_link',$soundblockid);
+$soundcloudlink = get_field('soundcloud_link', $soundblockid);
 $thisnumber = 0; // this number to be changed based on number of blocks - or does it not matter?
 ?>
  

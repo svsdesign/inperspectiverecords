@@ -15,9 +15,11 @@ body{
 	#signup{
 	height: auto;
 	width: 100%;
-	background: white;
+	background: $white;
+	opacity: 0.8;
 	padding-top: 2vh;
 	padding-bottom: 2vh;
+	transition: opacity 1s ease-in-out 0s;
 
 
 		.title{
@@ -28,8 +30,7 @@ body{
 		@include cssvalue(padding-bottom, 1);
 		pointer-events:none;
 		font-weight: $boldweight;
-         @include smaller;
-
+        @include smaller;
 		}
 
 		.form{
@@ -88,7 +89,7 @@ body{
 			border: 0 none; 
 			cursor: pointer; 
 			padding:0; 
-			transition: all 0.23s ease-in-out 0s;
+			transition: all 1s ease-in-out 0s;
 			}
 	 
 			 .button:hover {
@@ -173,6 +174,9 @@ body{
 	}/*#signup:hover */
 
 	#signup:hover{ 			
+
+	opacity: 0.95;
+	transition: opacity 0.23s ease-in-out 0s;
 
 		.form{
 	    @include focus;
@@ -411,7 +415,7 @@ body{
     	content:"\00a0\25CF\00a0";
     	line-height: inherit;
 		font-size: inherit;
-
+		color: $text-color;
     	}
     	li:first-child:before{
 	    	content:"";
@@ -432,7 +436,6 @@ body{
 		    -webkit-align-content:  left;
 		    -ms-flex-line-pack:  left;
 		    align-content: left;
-
 			margin: 0;
 
 
@@ -490,7 +493,10 @@ body{
 
 		.svs-gold{	
 		color: $svsgold;
+		}
 
+		.svs-white{	
+		color: $white;
 		}
 
 		@media (min-width: map-get($breakpoints,md)) {

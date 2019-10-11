@@ -1000,6 +1000,7 @@ function inp_scripts()
         true
     );
 
+// go trough my code and remove any traces of system
 
     wp_enqueue_style( 'system-style', get_stylesheet_uri() );
   
@@ -1036,8 +1037,6 @@ function inp_scripts()
 		true
 	);
 
-
-
     wp_enqueue_script(
         'isotope',
         'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js',
@@ -1054,7 +1053,7 @@ function inp_scripts()
 		true
     ); 
     
-   /* this an issue maybe - needs enquering every time its called ? which sound ike bollocks? */
+
     wp_enqueue_script(
         'scsdk',
         'https://connect.soundcloud.com/sdk/sdk-3.3.0.js',
@@ -1071,6 +1070,21 @@ function inp_scripts()
         true
     );
 
+    wp_enqueue_script(
+        'headroom',
+        'https://cdnjs.cloudflare.com/ajax/libs/headroom/0.10.3/headroom.min.js',
+        array('jquery'),
+        false,
+        true
+    );
+
+    wp_enqueue_script(
+        'headroom-jquery',
+        'https://cdnjs.cloudflare.com/ajax/libs/headroom/0.10.3/jQuery.headroom.min.js',
+        array('jquery'),
+        false,
+        true
+    );
 
 
  /*

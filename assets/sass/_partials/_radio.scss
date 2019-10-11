@@ -309,7 +309,6 @@ body.post-type-archive-radio{
             width: 75%;
             margin: auto;
             @extend .grid-item; // for padding reasons
-
             }
 
             .cover-image-item{
@@ -333,11 +332,13 @@ body.post-type-archive-radio{
             .radio-name{
             @include h1;
             font-weight: $boldweight;
+            @include cssvalue(font-size, 0.6);
+            @include cssvalue(line-height, 0.8);
+            @include cssvalue(padding-top, 0.2);
+            
             }
 
-
-
-        }
+        }//.radio-item
 
         .radio-item.radio-item-1{
         padding:0px;
@@ -600,27 +601,25 @@ body.post-type-archive-radio{
 
 .post-type-archive-radio{
 
-  .page-nav{
-  margin:auto;
-  width: 100%;
-  display: block;
-  position: relative;
-  clear:both;
-  text-align: center;
-  @include padding(padding-bottom,4);
-  @include padding(padding-top,1);
+    .page-nav{
+    margin:auto;
+    width: 100%;
+    display: block;
+    position: relative;
+    clear:both;
+    text-align: center;
+    @include padding(padding-bottom,4);
+    @include padding(padding-top,1);
 
     .page-numbers{
     margin: auto;
     width: auto;
     @include padding(padding-left,0.5);
     @include padding(padding-right,0.5);
-
     position: relative;
     display: inline-block;
     float: none;
-
-    }//.page-numbers
+    } 
 
    .prev{
     //  float: left;
@@ -641,7 +640,7 @@ body.post-type-archive-radio{
         float: left;
         }
   
-    }
+    } //.prev
 
     .next{
     //  float: right;
@@ -661,7 +660,7 @@ body.post-type-archive-radio{
         float: right;
         }
 
-     }
+     } //.next
 
   }//.page-nav
 
@@ -669,7 +668,6 @@ body.post-type-archive-radio{
 
 
 /* end archive navigation */
-
 
 
 /* Player */
@@ -712,12 +710,14 @@ $grey: #4d4d4d;
 
 
 .play-toggle{
-  padding:30%;
+padding:30%;
+cursor: pointer;
 
       svg{
       width: 100%;
       height: 100%;
       display: block;
+      cursor: inherit;
       }
 
       path{
@@ -806,13 +806,32 @@ a.sc-player,
 /* controls */
 .sc-player .sc-controls{
     display: block;
-    height: 12.5vw;//25vw
+    height: 25vw;//12.5vw;//25vw
     margin-top:37.5vh;//43.75vh;///37.5vw;
     position: absolute;
     left: 43.75vw;///37.5vw;
     width: 12.5vw;//25vw;
-    pointer-events:none
-}
+    pointer-events:none;
+
+
+    @media (min-width: map-get($breakpoints,sm)) {   
+ //   height: 12.5vw;//12.5vw;//25vw
+  //  margin-top:37.5vh;//43.75vh;///37.5vw;
+    }
+    @media (min-width: map-get($breakpoints,md)) {
+    @include cssvalue(height, 4);
+    min-height: initial;
+   // height: 12.5vw;//12.5vw;//25vw
+  //  margin-top:37.5vh;//43.75vh;///37.5vw;
+ // background: red;
+    }
+ 
+    @media (min-width: map-get($breakpoints,xl)) {  
+  //  height: 6.25vw;//12.5vw;//25vw
+  //  margin-top:37.5vh;//43.75vh;///37.5vw;
+    }
+
+}//.sc-player .sc-controls
 
 .sc-player .sc-controls a {
   pointer-events:initial;
@@ -862,11 +881,14 @@ a.sc-player,
 }
 
 .sc-scrubber .sc-time-indicators{
-  
-  //color:$white;
+  color:$white;
  // border-radius: 4px;
  // padding: 10px;
   text-align: right;
+}
+
+.sc-player .sc-controls a{
+  height: 50%;// this is the play/pause toggle
 }
 
 .sc-player .sc-controls a.sc-pause {
@@ -875,6 +897,7 @@ a.sc-player,
 
 .sc-player.playing .sc-controls a.sc-play {
 //  display: none;
+
 }
 
 .sc-player.playing .sc-controls a.sc-pause {
@@ -957,10 +980,12 @@ a.sc-player,
   }
 
   .sc-played {
+    cursor: pointer;
     background: $white;
     opacity: 1;
     z-index: 799;
   }
+
 }
 
 /* volume control */
@@ -1155,11 +1180,11 @@ a.sc-player,
 }
 
 p {
-  max-width: 38em;
+ /* max-width: 38em;
   max-width: 38rem;
   margin: 0 auto 1em;
   line-height: 1.5;
-  text-align: left;
+  text-align: left;*/
 }
 
 .sc-player .sc-info-toggle,
@@ -1334,16 +1359,11 @@ body.post-type-archive-radio
             position: absolute;
             left: 43.75vw;///37.5vw;
             width: 12.5vw;//25vw;
-            pointer-events:none
+            pointer-events:none;
             }
-
-
-
 
             .sc-scrubber{
             width: 100%;
-
-
             position: absolute;
             bottom: 12.5vw;
            // width: 87.5%;
@@ -1379,10 +1399,11 @@ body.post-type-archive-radio
 } //body.post-type-archive-radio
 
 
-.radio-container.minimised{ // this used?
+/*
+.radio-container.minimised{ // delete - don't this is used?
 height: 10vh; // this used?
 }
-
+*/
 
 body.sticky-radio-player,
 body.post-type-archive-releases, 
@@ -1394,13 +1415,31 @@ body
   .radio-container{
   position: fixed;
   // height: 12.5vh;
-   pointer-events:none;
-   z-index: 98;
+  pointer-events:none;
+  z-index: 98;
 
     .sc-player{
     pointer-events:initial;
-    height: auto;
+   height: auto;
+      //  @include cssvalue(height, 4);
+
+    //min-height: 12.5vw;
+    @include cssvalue(min-height, 4);
+//    max-height: 37.5vw;
+
+    @media (min-width: map-get($breakpoints,md)) {
+    //min-height: 12.5vw;
+     //   max-height: 12.5vw;
+
+    }
+
+    @media (min-width: map-get($breakpoints,lg)) {
     min-height: 12.5vw;
+    }
+    @media (min-width: map-get($breakpoints,xl)) {
+   // min-height: 6.25vw; // the height should be based on 
+    }
+
     background: black;
     overflow: hidden;
     box-shadow: 1px 1px 10px black;
@@ -1409,13 +1448,54 @@ body
       .sc-controls{ // moves top left of screen
       margin-top: 0;
       z-index: 2; // 1 above the scrubber (which is 1)
-      position: relative;
+      position: absolute;//
       left: 0;
+      top: 0;
+      bottom:0;
       float: left;// this needed?
+      height: inherit;// overrides the vw values
+
+        a.sc-play{
+        width: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        border-radius: 0;
+        background:transparent;
+
+          .play-toggle{
+          top: 50%; // review - dirty offsets
+          margin-top: -50%;
+          position: relative;
+          }
+
+        }
+
+        .player-toggle{
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        //@include cssvalue(line-height,1);
+        line-height: 6.25vw;// does this work
+
+        }
+
       }
 
       .sc-scrubber{
-      top: 6.25vw;
+     // top: 6.25vw;
+    @include cssvalue(top,1);
+
+      @media (min-width: map-get($breakpoints,md)) {
+    //  top: 3.125vw;
+      }
+      @media (min-width: map-get($breakpoints,xl)) {
+     // top: 1.5625vw;
+      }
+
       margin-top: -5px;
       bottom:initial;
       width: 100%;
@@ -1433,14 +1513,23 @@ body
       position: relative;
       opacity: 1;
       pointer-events:initial;
-      @include cssvalue(padding-top,0.75);
-      margin-top: -6.25vw;
+    //  @include cssvalue(padding-top,0.75);
+      @include cssvalue(margin-top,2);
+      //margin-top: -12.5vw;// offset againts controls
+      //margin-top: -18.75vw;//-6.25vw; 
       float: left;//because sc-controls also floating
+
+        @media (min-width: map-get($breakpoints,md)) {
+       // margin-top: -7.8125vw; //review this - because dividing these number generates far to many decimal places.
+        }
+        @media (min-width: map-get($breakpoints,xl)) {
+        //margin-top: -3.90625vw; // maybe review this - because dividing these number generates far to many decimal places
+        }
       }
 
       .sc-trackslist li{
       display: block; 
-       height: 0px;// don't display the non-active items
+      height: 0px;// don't display the non-active items
      //   height: auto;// temporarily
       overflow: hidden;
       background: transparent;
@@ -1454,19 +1543,16 @@ body
 
       .sc-trackslist li.active{
       display: block; // show the active item
+      pointer-events:none;// don't allow the click of item to pause on text
       height: auto;
       padding-right: 12.5vw;
       padding-left: 12.5vw;
       @include padding(padding-bottom, 0.5);
-
-
       }
 
     }/* .sc-container */
 
-
   }/*.radio-container */
-
 
 }/* body.sticky-radio-player
     body:not(.single-radio) */
@@ -1477,14 +1563,14 @@ body.post-type-archive-releases{
   
 
     .sc-player{
-     padding-left: 12.5vw; // because we don't have the full width on the screen
+    // padding-left: 12.5vw; // because we don't have the full width on the screen
 
       .sc-controls{
-     
+      //left: 12.5vw!important;// No - we need to re-position ghte view module I think!
       }
 
       .sc-scrubber{
-      width: 87.5%; // because we don't have the full width on the screen
+    //  width: 87.5%; // because we don't have the full width on the screen
       }
 
       .sc-time-indicators{
@@ -1511,33 +1597,238 @@ body.post-type-archive-releases{
   }/*.radio-container */
 
 
+  &.sc-minimised,
+  &.sc-player-playing,
+  &.sc-player-paused{
+  //&.sticky-radio-player{
+// No - we need to re-position ghte view module I think!
+
+    .view-module{
+    top:12.5vw;
+    }//.view-module
+
+    // this needs sorting - i.e the js script for sticky class - :the sticky radio player class is being added, even if the radio never been "initiliased?"
+
+
+  } /*
+  &.sc-minimised,
+  &.sticky-radio-player
+  */
+
+
 
 } /* body.post-type-archive-release */
 
 
-/* markup for the mix max toggle */
+/* markup for the min / max toggle: */
 
 body{
    
-   .sc-player{
+  .sc-player{
 
     .player-toggle{
-    background: red;
-    
-      .maximise{
-      @include cssvalue(padding-top, 0.25);
-      background: green;
-      }
-      
-      .minimise{
-      @include cssvalue(padding-top, 0.25);
-      background: blue;
+    height: 50%;
+
+    @media (min-width: map-get($breakpoints,md)) {
+    width: 50%;
+    }
+    @media (min-width: map-get($breakpoints,xl)) {
+    width: 50%;
+    }
+
+    display: block;
+    position: relative;
+    pointer-events:initial;// reset
+
+      .toggle-icon-wrap{
+      display: none;
+
+        .toggle-icon{
+         
+          svg{
+          width: 100%;
+          height: 100%;
+          padding: 25%; // This needs to be adjusted inorder to achive same size as nav toggle
+          display: block;
+          margin: 0 auto;
+          overflow: visible;
+          }
+
+        }
+
+      }//.toggle-icon-wrap
+
+      .sc-maximise,
+      .sc-minimise{
+      //   @include cssvalue(padding-top, 0.25);
+      position: relative;
+      height: 100%;
+      display: block;
+      width: 100%;
+      top: 0px;
+      cursor: pointer;
+      right: 0px;
+      color:white;
+      text-align: center;
+
+        &:hover{
+        }
+
+      }//sc-min / sc-max
+
+      .sc-maximise{
+      opacity: 0;
       }
 
+      .sc-minimise{
+      opacity: 1;
+      }
 
     }/* .player-toggle */
  
   } /*sc-player.*/
+
+  &.sc-minimised{
+
+    /* player specifics*/ 
+
+    .radio-container{
+
+      .sc-player{
+      pointer-events:none;// was initial; - but block content
+      height: auto;
+      min-height: 12.5vw;
+      background: transparent;
+      overflow: hidden;
+      box-shadow:none;
+      padding-left:0px;
+
+        .sc-controls{ // moves top left of screen
+        margin-top: 0;
+        z-index: 2; // 1 above the scrubber (which is 1)
+        position: relative;
+        left: 0;
+       // height: 12.5vw;// reduce size
+        float: left;// this needed?
+
+          a.sc-play{
+          display: none;
+          pointer-events:none!important;// don't allow clicking of the play/pause button
+          //position: absolute;
+          height: 50%;       
+          }
+
+          .player-toggle{
+          height: 100%; 
+          width: 100%;
+         // padding-top: 12.5vw;  
+          min-height: 12.5vh;//  
+        //  @include cssvalue(padding-top, 2);
+
+          position: absolute;
+          bottom: 0;
+          top: 0;    
+
+            .toggle-icon-wrap{
+            display: block;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            width: 100%;
+             
+             .toggle-icon{
+             height: 100%;
+             position: relative;
+              @include scalelink-out-value(1);
+             
+            
+             }
+            
+            }//.toggle-icon-wrap
+
+            .sc-maximise{
+            position: relative;
+            width: 100%;
+            opacity: 1;
+            }
+
+            .sc-minimise{
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            }
+            
+
+          &:hover{
+
+             .toggle-icon-wrap{
+            
+                  .toggle-icon{
+ 
+                  //@include scalelink;
+                  @include scalelink-in-value(1.25);
+                }
+
+              }
+
+           }//.player-toggle &:hover
+
+          }//.player-toggle
+
+        }//.sc-controls
+
+        .sc-scrubber{
+        display: none;
+        }
+
+        .sc-time-indicators{
+        display: none;
+        }
+
+        ol.sc-trackslist{
+        display: none; 
+        }
+
+        .sc-trackslist li{
+        display: none; 
+        height: 0px;// don't display the non-active items
+
+          .sc-track-duration{
+          display: none; 
+          }
+
+        }// .sc-trackslist li 
+
+      }//.sc-player
+
+    }//.radio-container
+
+  }// &.sc-minimised
+
+    /*end player specifics */
+
+    /*if on release page */
+
+  &.sc-minimised.post-type-archive-releases{ 
+
+    .view-module{
+    //background: red;
+    //top: 25vw;
+    }//&.sc-minimised
+
+  }//&.sc-minimised.post-type-archive-releases{ 
+
+
+
+
+
+
+
+ /* not sure we need to have this class in use
+  &.sc-maximised{
+
+  }//&.sc-maximised
+  */
 
 } /* body */
 

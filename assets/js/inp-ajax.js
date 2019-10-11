@@ -23,8 +23,12 @@ jQuery(document).ready(function($) {
   console.log("hello newPageReady");
   
 
-  var activeradio = false;
-  var pausedradio = false;
+  var activeradio = false,
+      pausedradio = false,
+      stickyradio = false,
+      minimisedradio = false;
+      //hasradioblock = false;
+
 
   /*$(container).find('script').each(function (i, script) {
      
@@ -130,6 +134,9 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, containe
       /**
        * this.oldContainer is the HTMLElement of the old Container
        */
+
+// see what radio classes we need to retain:
+
        if($('body').hasClass('sc-player-playing')){
 
         console.log("player is playing - apply class sc-player-playing")
@@ -150,7 +157,30 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, containe
         pausedradio = false
        };// if($('body').hasClass('sc-player-paused')){
 
+        
+        if($('body').hasClass('sticky-radio-player')){
 
+        console.log("sticky-radio-player = true")
+        stickyradio = true;
+
+       } else {
+        console.log("sticky-radio-player = false")
+        stickyradio = false;
+       };// if($('body').hasClass('sc-player-paused')){
+ 
+
+        if($('body').hasClass('sc-minimised')){
+
+        console.log("sc-minimised = true")
+        minimisedradio = true;
+
+       } else {
+        console.log("sc-minimised  = false")
+        minimisedradio = false;
+       };// if($('body').hasClass('sc-minimised')){
+
+
+    
       return $(this.oldContainer).animate({ opacity: 0 }).promise();
     },
 
@@ -166,6 +196,14 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, containe
 
       $(this.oldContainer).hide();
 
+    
+       if ($(".sound-block")[0]){
+         console.log("we have a sound-block on the page - add class to body - for the radio loader to discover")
+
+         $('body').addClass('has-sound-block')
+
+       }
+
        if (activeradio == true) {
         console.log("player is playing - apply class sc-player-playing")
         $('body').addClass('sc-player-playing')
@@ -176,6 +214,16 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, containe
           console.log("player is paused - apply class sc-player-paused")
           $('body').addClass('sc-player-paused')
        }/// if radio was paused
+
+      if (stickyradio == true) {
+          console.log("apply sticky radio classes")
+          $('body').addClass('sticky-radio-player')
+       }/// if sticky-radio-player
+
+      if (minimisedradio == true) {
+          console.log("apply minmised radio classes")
+          $('body').addClass('sc-minimised')
+       }/// if minimisedradio
 
 
       $el.css({
