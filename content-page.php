@@ -206,12 +206,6 @@ $contactintro = get_field( 'contact_intro' ); // text area
 	</section><!--<section id="about-page-details" class="grid"-->
 	
 
-
- 		
-
-
-
-
 	<section id="about-page-contact-details" class="grid">
 		
 		<div id="contact"><!-- anchor -->
@@ -286,15 +280,51 @@ $contactintro = get_field( 'contact_intro' ); // text area
 
 		<?php endif; //$contactintro ?>	
 
-		
-
+	
 
 	  		
 	</section><!-- #about-page-contact-details -->
 		  		
 
+<?php elseif ( is_page( array( 3, 0000, 'privacy-policy') ) ): // ensure to target the correct id's or permalinks on the live site as well
+// privacy poliscy  -- TO do:
+//- add live host id; replace the 0000
+?>
+
+	<section id="privacy-page-details" class="grid">
+ 
+		<div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
+								  
+			<div class="page-titler">
+						    
+				 <span class="inner">
+    			  <?php the_title();?>
+				</span><!-- inner -->
+
+		    </div> <!--.page-title -->
+				    
+		</div><!-- .page-title-position -->
+
+		
+		<div id="privacy-page-content" class="outer-grid-item outer-grid-item-xs-6 inner">
+			
+			<div class="grid">
+
+				<div class="grid-item grid-item-xs-8 grid-item-md-4">
+    			  <?php the_content();?>		
+				</div><!-- .grid-item -->
+
+  			</div><!-- .grid -->
+
+ 		</div> <!-- id="privacy-page-content-->
+
+
+ 	</section><!-- #rivacy-page-details -->
+
+
 <?php else: // other pages: ?>
-<!-- not about page -->
+else - page
+<!-- non of the above pages - review this design + markup; its not complete or needed at all? -->
 
 <div class="container">
   

@@ -203,7 +203,7 @@
 
 
 
-/* TO DO - tidy up */
+/* TO DO - tidy up  + sort cross browser previxes out */
 
 $grey:rgba(255,255,255,0.25);
 
@@ -232,14 +232,15 @@ $grey:rgba(255,255,255,0.25);
   to { filter: blur(0px); }
 } 
 
-@keyframes opacityin{
+/*@keyframes opacity-in{
   from { opacity: 0; }
   to { opacity: 1; }
 } 
-@keyframes opacityout{
+@keyframes opacity-out{
   from { opacity: 1; }
   to { opacity: 0; }
 } 
+*/
 
 @mixin blur{
  //filter: blur(5px); 
@@ -247,6 +248,14 @@ $grey:rgba(255,255,255,0.25);
  animation: blurout 400ms ease-in forwards;
 }
 
+
+@mixin opacity-in{
+transition: opacity 1s ease-in;
+}
+
+@mixin opacity-out{
+transition: opacity-out 100ms ease-in-out forwards;
+}
 
 @mixin image-blur{
  animation: image-blur-in 400ms ease-in-out forwards;

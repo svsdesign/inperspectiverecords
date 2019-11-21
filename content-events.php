@@ -15,7 +15,8 @@
 	$name =  get_field('event_name');						
  	$eventstart = get_field('event_start_date'); // date and time picker
 //	$eventend = get_field('event_end_date');  // date and time picker
-	$posterart =  get_field('poster_art'); // image
+	$posterart =  get_field('poster_art'); // image - large bg
+	$bannerart =  get_field('banner_art'); // image - banner
 	//$artists =  get_field('artists_playing');  // relationship / change to  post object?
 	$venue =  get_field('venue');  // text
 	$venuelink =  get_field('venue_url');  // text
@@ -101,6 +102,11 @@
 
 				<div class="event-summary grid-item grid-item-xs-6 grid-item-md-3">
 					
+
+					<div class="event-summary-bg">	
+					</div>	
+			
+
 					<?php if($venue): ?>
 
 						<div class="venue summary-item">
@@ -385,8 +391,11 @@
 
 				<section id="upcoming-events" class="">
 
-					<div class="upcoming-events-title">	
-					Upcoming Events		
+					<div class="upcoming-events-title grid">	
+						<span class="outer-grid-item-sm-4">
+						Upcoming Events:	
+						</span>
+
 					</div><!--.event-items-title-->	
 
 					<div class="event-items grid post-total-<?php echo $argseventspage_query->post_count; ?>">	
@@ -400,6 +409,8 @@
 							$eventstart = get_field('event_start_date'); // date and time picker
 							$eventend = get_field('event_end_date');  // date and time picker
 							$posterart =  get_field('poster_art'); // image
+							$bannerart =  get_field('banner_art'); // image - banner
+
 							$venue =  get_field('venue');  // text
 							$venuelink =  get_field('venue_url');  // text
 							$name =  get_field('event_name');						
@@ -411,9 +422,9 @@
 							//var_dump($isupcomingnextevent) 
 							?>
 		 	
-								<?php if($posterart): ?>
+								<?php if($bannerart): ?>
 
-									<div class="event-item event-image-item outer-grid-item inner-padded outer-grid-item-sm-6 <?php if (in_array("true", $isupcomingnextevent)): ?>next-event<?php endif; //$isupcomingnextevent ?>" style="background-image: url('<?php echo $posterart;?>');">
+									<div class="event-item event-image-item outer-grid-item inner-padded outer-grid-item-sm-6 <?php if (in_array("true", $isupcomingnextevent)): ?>next-event<?php endif; //$isupcomingnextevent ?>" style="background-image: url('<?php echo $bannerart;?>');">
 								
 									<?php else:?>
 
@@ -442,15 +453,19 @@
 										</div><!-- .date -->
 
 										<div class="event-summary grid-item grid-item-xs-6 grid-item-md-3">
-										
+												
+											<!-- review this <div class="event-summary-bg">	
+											</div>	-->
+			
+
 											<?php if($venue): ?>
 
 												<div class="summary-item venue">
 													
-													<a class="scale-me" target="_blank" href="<?php echo $venuelink;?>">
+													<a class="scale-link" target="_blank" href="<?php echo $venuelink;?>">
 
 													<span><?php the_field('venue'); ?></span>   
-													<div class="svg-icon inline-icon right">
+													<div class="svg-icon inline-icon right white-icon">
 													<?php get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
 											 		</div><!-- svg-icon inline-icon -->	
 												
@@ -464,10 +479,10 @@
 
 												<div class="summary-item price">
 													
-													<a class="scale-me" target="_blank" href="<?php echo $ralink;?>">
+													<a class="scale-link" target="_blank" href="<?php echo $ralink;?>">
 														
 														<span class="">Buy Tickets</span>
-														<div class="svg-icon inline-icon right">
+														<div class="svg-icon inline-icon right white-icon">
 														<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
 											 			</div><!-- svg-icon inline-icon -->	
 											 		
@@ -481,10 +496,10 @@
 
 												<div class="summary-item fb-details">
 														
-													<a class="scale-me" href="<?php echo $fblink ;?>">
+													<a class="scale-link" href="<?php echo $fblink ;?>">
 													
 														<span>Facebook Event</span>
-														<div class="svg-icon inline-icon right">
+														<div class="svg-icon inline-icon right white-icon">
 														<?php get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
 									 					</div><!-- svg-icon inline-icon -->	
 									
@@ -496,10 +511,10 @@
 									
 											<div class="summary-item event-link">
 
-												<a class="scale-me" href="<?php the_permalink();?>">
+												<a class="scale-link" href="<?php the_permalink();?>">
 													
 													<span class="">More Information</span>
-													<div class="svg-icon inline-icon right">
+													<div class="svg-icon inline-icon right white-icon">
 													<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
 										 			</div><!-- svg-icon inline-icon -->	
 										 													 		
@@ -617,7 +632,7 @@
 				</div><!-- .date -->
 
 				<div class="event-summary grid-item grid-item-xs-6 grid-item-md-3">
-					
+
 					<?php if($venue): ?>
 
 						<div class="venue summary-item">

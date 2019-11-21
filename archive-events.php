@@ -121,14 +121,72 @@
 	 
 
 				<?php else:  ?>
-				
-					<div class="" style="">
-						<?php _e( 'Sorry, no events' ); ?>
-					</div>
-					<?php get_template_part( 'content', 'none' ); ?>
-				
 
-				<?php endif; ?>
+					<?php //_e( 'Sorry, no events' );  
+ 						
+//include a random image of a previous event
+
+								$randomimagearg = array (
+									'post_type'              => 'events', // your event post type slug
+									'post_status'            => 'publish', // only show published events
+									//'orderby'                => 'meta_value', // order by date
+									//'meta_key'               => 'event_start', // your ACF Date & Time Picker field
+									//'meta_value'             => $now, // Use the current time from above
+									//'meta_compare'           => '>=', // Compare today's datetime with our event datetime
+								//	'order'                  => 'ASC', // Show earlier events last
+									'posts_per_page'         => 1, // because, divisible by 1, 2 and 3 (ensuring all breakpoint designs)
+								//	'paged' 				 => $paged,
+   									'orderby' 				 => 'rand'
+   									); 
+										 
+									$random_image_query = new WP_Query( $randomimagearg );?>
+
+										<?php if ($random_image_query->have_posts() ) : ?>
+
+											<div class="event-items">
+
+												 <div class="page-title-positioner outer-grid-item outer-grid-item-sm-6 sticky">
+												    <div class="page-titler">
+												    
+												    <span class="inner">
+
+												      Events
+												  	</span><!-- inner -->
+
+												    </div> <!--.page-title -->
+												</div><!-- .page-title-position -->
+
+
+												<?php while ( $random_image_query->have_posts() ) : $random_image_query->the_post(); 
+
+													$randomposterart =  get_field('poster_art'); // image
+													?>
+
+														<div id="random-event-details" class="grid random-event">
+																
+															<?php// if($posterart): ?>
+
+															<div class="cover-image-item outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo $randomposterart;?>');">
+															</div><!-- image-item -->
+
+															<?php //endif; //$posterart ?>
+
+														</div>
+
+
+												<?php endwhile;	?>
+											
+											</div><!--event -items -->	
+
+										<?php endif; //$posterart ?>
+
+									<?php 
+									// clean up after the randomn image query
+									wp_reset_postdata();  
+
+					 //_e( 'Sorry, no events' );  
+
+				 	endif; ?>
 
 			<?php wp_reset_query(); //reset: $upcoming_events_query  ?>			
 

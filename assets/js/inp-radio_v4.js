@@ -156,7 +156,7 @@ This was happening because the Internet was slow.
       
         console.log(".sc-player exists")
 
-             $(".sc-player").headroom({
+            $(".sc-player").headroom({
                   // vertical offset in px before element is first unpinned
                 "offset": 0, // This value maybe a variable; we need to cater for the arhive page
                 "tolerance": 5,
@@ -168,15 +168,22 @@ This was happening because the Internet was slow.
                 //    },
                 "classes": {
                   "initial": "animated",
-                  "pinned": "slideUp",
-                  "unpinned": "slideDown"
+                  "pinned": "pinned",
+                  "unpinned": "unpinned"
                 }
-              });
+
+            });
+
+            $('.sc-player').hover(function(){
+                 
+               //console.log("sc-player hover")
+               // ensure headroom pinned
+                forceheadroompin();
+
+            }); // hover 
 
 
              /*
-
-
 
 var options = {
 
@@ -231,6 +238,7 @@ var headroom = new Headroom(element, options);
 
                 */
 
+      
 
         } else {
         console.log(".radio container doesn't exist");
@@ -245,6 +253,20 @@ var headroom = new Headroom(element, options);
       $(".sc-player").headroom("destroy");
 
     }// destroyheadroom()
+
+
+    function forceheadroompin(){
+
+       if ($(".sc-player").hasClass("unpinned")){
+        
+          $(".sc-player").removeClass("unpinned");
+          $(".sc-player").addClass("pinned");
+
+          //console.log("unpinned - now pinned");
+
+       }
+
+    }//forceheadroom
 
   /* end headroom */
 
@@ -1078,6 +1100,24 @@ var $track = $(this),
     $('.artworks li', $player).each(function(index) {
       $(this).toggleClass('active', index === trackId);
     });
+
+    // ensure the player is visble at top - if not hidden
+    forceheadroompin();
+    // if hidden - assign a class and remove it again after a few seconds - signifying the change
+
+      $("body").addClass("pulsate-player-icon");
+            console.log("forcing pulstate")
+    
+        setTimeout(function() {
+
+            $("body").removeClass("pulsate-player-icon");
+            console.log("removeng pulstate")
+
+
+      }, 1000);
+
+
+
     return false;
   });
 
@@ -1108,6 +1148,9 @@ var $track = $(this),
 
        $tracklistitemlink.trigger( "click" ); // trigger the click in the top list
        $('body').attr("data-activescurl",radioitemUrl); // set id to body data
+
+       // ensure the player is pinned:
+       forceheadroompin();
 
     // $tracklistitemlink.click();
       // $tracklistitemlink.trigger( "click" );

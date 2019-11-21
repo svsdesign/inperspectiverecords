@@ -5,6 +5,7 @@
 
 body {
 color: $text-color;
+
 font-size: $base-font-size;
 font-family: "Objectivity", Helvetica, Arial, sans-serif;
 font-weight: $baseweight;
@@ -12,6 +13,15 @@ line-height: $base-line-height;
 @include body;
 } /* body */
 
+
+*::selection{
+  background-color: $text-color; /* black */
+  color: $background-color; /* white */
+}
+*::-moz-selection {
+    background-color: $text-color; /* black */
+  color: $background-color; /* white */
+}
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -55,9 +65,24 @@ color: $news-text-color;
 } /* body.post-type-archive-news,
      body.single-news */
 
+.post-type-archive-news::-moz-selection,
+.post-type-archive-news::selection,
+.single-news::-moz-selection,
+.single-news::selection 
+{ 
+  color: white;
+  background-color: blue;
+
+//background: $news-text-color!important;
+//color: $background-color;
+}
 /* End news typestyles */
 
-
+::-moz-selection,
+::selection{
+  color: white;
+  background-color: blue;
+}
 
 li{
 @include li;
@@ -152,7 +177,7 @@ a.link-animation
       $param: 5;
       &:nth-child(#{$i}) {
        // margin-top:#{$i}px;
-		animation: wave 1000ms $key * 50 - 5000ms ease-in-out 5 alternate;
+		  animation: wave 1000ms $key * 50 - 5000ms ease-in-out 5 alternate;
 		//animation: wave 2000ms $key * 200 - 10000ms ease-in-out 5 alternate;
 
 		//animation-iteration-count: 1;

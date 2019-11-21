@@ -587,11 +587,15 @@ body.post-type-archive-news,
 
 	@keyframes slideDown {
 	  0% {
-	    transform: translateY(-100%);
+	    transform: translateY(-200%);
+	  //  background-color:rgba(255, 255, 255, 0);
+
 	  }
 
 	  100% {
 	    transform: translateY(0);
+	  //  background-color:rgba(255, 255, 255, 1);
+
 	  }
 	}
 
@@ -626,20 +630,53 @@ body.post-type-archive-news,
 	@keyframes slideUp {
 	  0% {
 	    transform: translateY(0);
+
 	  }
 
 	  100% {
-	    transform: translateY(-100%);
+	    transform: translateY(-200%);
+ 	//  	background-color:rgba(255, 255, 255, 0);
+
+	  }
+	}
+
+//TO DO //	 sort cross browser out on these animations
+
+	@keyframes fade-out {
+	  0% {
+ 	  	background-color:rgba(0,0,0, 1);
+ 	  	box-shadow: 1px 1px 10px rgba(0,0,0, 1);
+	  }
+	  
+	  100% {
+	    background-color:rgba(0,0,0, 0);
+	  	box-shadow: 1px 1px 10px rgba(0,0,0, 0);
+
 	  }
 	}
 
 
+	@keyframes fade-in{
+	  0% {
+	  background-color:rgba(0,0,0, 0);
+	  box-shadow: 1px 1px 10px rgba(0,0,0, 0);
+
+	  }
+	  
+	  100% {
+	  background-color:rgba(0,0,0, 1);
+	  	box-shadow: 1px 1px 10px rgba(0,0,0, 1);
+
+	  }
+	}
+
+ 
 	/* end animations*/
 
  /* TO DO - ensure this headroom doesn't intervene with my sticky players classes + design states */
  
 .sc-player {
-    will-change: transform;
+ //   will-change: transform;
    // transition: transform 200ms linear;
 }
 .headroom--pinned {
@@ -649,33 +686,62 @@ body.post-type-archive-news,
 
 
 
-.animated.slideUp, //.sc-trackslist,
-.animated.slideUp// .sc-scrubber
- {
- 	    transform: translateY(0%);
-/*
-  -webkit-animation-name: slideUp;
-  -moz-animation-name: slideUp;
-  -o-animation-name: slideUp;
-  animation-name: slideUp;
-  */
-  background: green!important;
+
+//UP:
+
+.animated.pinned{
+   animation: 0.5s forwards fade-in;
+
 
 }
 
+.animated.pinned .sc-trackslist,
+.animated.pinned .sc-scrubber
+ {
+ 	//    transform: translateY(0%);
 
-
-.animated.slideDown,// .sc-trackslist,
-.animated.slideDown// .sc-scrubber 
-{
-	    transform: translateY(-100%);
-/*
-  -webkit-animation-name: slideDown;
+ /*   -webkit-animation-name: slideDown;
   -moz-animation-name: slideDown;
   -o-animation-name: slideDown;
-  animation-name: slideDown;*/
+  animation-name: slideDown;
 
-  background: red!important;
+ */
+   animation: 0.5s forwards slideDown;
+
+ // animation-name: fade-in;
+ // animation: .4s cubic-bezier(.25, .25, .25, 1.25) forwards fade-in;
+
+ // background-color: rgba(255, 255, 255, 0.51)!important;
+}
+
+//DOWN:
+
+.animated.unpinned{
+   animation: 0.5s forwards fade-out;
+
+	.sc-minimise{
+	opacity: 0!important;
+	}
+
+}//.animated.unpinned{
+
+
+.animated.unpinned .sc-trackslist,
+.animated.unpinned .sc-scrubber 
+{
+	//    transform: translateY(-100%); 
+   // animation-name: fade-out;
+  //animation: .4s cubic-bezier(.25, .25, .25, 1.25) forwards fade-out;
+
+  /* -webkit-animation-name: slideUp;
+  -moz-animation-name: slideUp;
+  -o-animation-name: slideUp;
+  animation-name: slideUp;
+ */
+ // background: red!important;
+
+   animation: 0.5s forwards slideUp;
+
 }
 
 
@@ -701,3 +767,21 @@ body.post-type-archive-news,
 */
 
 /* End Headroom */
+
+
+
+
+/* cookies testing */
+
+.cookie-consent-preferences-dialog{
+	background-color: red;
+	height: 100vh;
+}
+
+
+.cookie-consent-preferences-overlay .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_footer{
+
+	display: none!important; // their credits
+}
+/*end cookies testing */
+

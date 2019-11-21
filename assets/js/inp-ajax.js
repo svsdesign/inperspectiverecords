@@ -26,8 +26,8 @@ jQuery(document).ready(function($) {
   var activeradio = false,
       pausedradio = false,
       stickyradio = false,
-      minimisedradio = false;
-      //hasradioblock = false;
+      minimisedradio = false
+      hasradioblock = false;
 
 
   /*$(container).find('script').each(function (i, script) {
@@ -198,6 +198,8 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, containe
 
     
        if ($(".sound-block")[0]){
+
+         hasradioblock = true;
          console.log("we have a sound-block on the page - add class to body - for the radio loader to discover")
 
          $('body').addClass('has-sound-block')

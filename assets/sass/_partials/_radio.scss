@@ -1230,6 +1230,30 @@ p {
 /* Player - different states: */
 
  
+body.pulsate-player-icon{
+
+     .toggle-icon-wrap{
+        
+          .toggle-icon{
+         //  background-color: red;
+              //@include scalelink;
+         //     @include scalelink-in-value(1.25);
+          transform:scale(1.25)!important;
+          transform-origin:center;
+          transition:400ms ease-in-out;
+
+            g{
+            //stroke:$red;
+            stroke-width:2;
+            }
+
+          }
+
+       }//.toggle-icon-wrap
+ 
+
+}// body.pulsate-player-icon{
+
  
 .radio-container{
  
@@ -1420,7 +1444,7 @@ body
 
     .sc-player{
     pointer-events:initial;
-   height: auto;
+    height: auto;
       //  @include cssvalue(height, 4);
 
     //min-height: 12.5vw;
@@ -1460,10 +1484,11 @@ body
         position: absolute;
         left: 0;
         right: 0;
-        top: 0;
+        top: 12.5%;// added
         border-radius: 0;
         background:transparent;
-
+        z-index: 2;// ensure above the hide button
+        
           .play-toggle{
           top: 50%; // review - dirty offsets
           margin-top: -50%;
@@ -1487,7 +1512,7 @@ body
 
       .sc-scrubber{
      // top: 6.25vw;
-    @include cssvalue(top,1);
+     @include cssvalue(top,1);
 
       @media (min-width: map-get($breakpoints,md)) {
     //  top: 3.125vw;
@@ -1670,8 +1695,12 @@ body{
       right: 0px;
       color:white;
       text-align: center;
+      text-transform: uppercase;
+      @include cssvalue(font-size, 0.4);
 
         &:hover{
+         @include scalelink-in-value(1.25);
+
         }
 
       }//sc-min / sc-max
@@ -1702,6 +1731,7 @@ body{
       overflow: hidden;
       box-shadow:none;
       padding-left:0px;
+      animation: 0.5s forwards fade-out;
 
         .sc-controls{ // moves top left of screen
         margin-top: 0;
@@ -1722,7 +1752,7 @@ body{
           height: 100%; 
           width: 100%;
          // padding-top: 12.5vw;  
-          min-height: 12.5vh;//  
+          min-height: 12.5vw;//  
         //  @include cssvalue(padding-top, 2);
 
           position: absolute;
@@ -1739,8 +1769,7 @@ body{
              .toggle-icon{
              height: 100%;
              position: relative;
-              @include scalelink-out-value(1);
-             
+              @include scalelink-out-value(1);          
             
              }
             
@@ -1817,10 +1846,6 @@ body{
     }//&.sc-minimised
 
   }//&.sc-minimised.post-type-archive-releases{ 
-
-
-
-
 
 
 

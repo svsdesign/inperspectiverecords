@@ -859,6 +859,7 @@ body.release-list-view{
 
 
 .view-module{
+display: none;// lets not bother having this alltogether
 position: sticky; 
 top: 0;
 width: 12.5vw;
@@ -1087,7 +1088,7 @@ transform-style: preserve-3d;
 backface-visibility: hidden;
 //  background-blend-mode: luminosity;
 // background: rgba(0, 0, 0, 0.5);
-background: rgba(0, 0, 0, .5);
+// dont use bg background: rgba(0, 0, 0, .5);
 
 
    
@@ -1176,6 +1177,39 @@ backface-visibility: hidden;
 .carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
 .carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
 
+
+
+/* start image loading states */
+
+  .scene {
+   opacity: 0; 
+   //@include opacity-in;
+
+    img{
+  //    display: none;
+    }
+   
+    .carousel__cell::after{
+   //   display: none;
+    }
+
+  }//carousel
+
+  .scene.loaded  {
+   opacity: 1;
+  @include opacity-in;
+
+    img{
+   // display: block;
+    }
+    .carousel__cell::after{
+    //display: block;
+    }
+
+  }//.carousel.loaded  
+
+
+/* end loading states */
 
 
 .carousel-options {
@@ -1272,12 +1306,27 @@ body.single-releases{
     .music-item{
     margin: auto;
     }
-    .artist-title{
-      @include sideheader;
-      @include smaller;
-      width: 40vh;// the height of the image banners
+    a{
+    overflow: hidden;
+    display: block;
+ 
+     .artist-title{
+        @include sideheader;
+        @include smaller;
+        width: 40vh;// the height of the image banners
+        animation: blurout 400ms ease-in forwards;
 
-    }
+      }
+
+    }//a
+ 
+    a:hover{
+ 
+      .artist-title{
+        animation: blurin 400ms ease-in forwards;
+      }
+
+    }//a:hover
 
   } // section#release-artists
 

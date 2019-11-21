@@ -175,8 +175,9 @@ TO DO:
 
 
           $("body").imagesLoaded(function(){ // consider a lazloadng options?
+  
 
-                //console.log("Images have loaded")
+            console.log("Images have loaded")
                   
                  function waitloading(){
 
@@ -311,17 +312,20 @@ TO DO:
 
     function recordcircle(){
 
+      console.log("each recordcircle");
+
         $(".record-circle-container").each(function() {
         //  console.log("eachrecord container")
 
           var $thiscontainer = $(this),
               $thiscircle = $(this).find(".record-circle");
-              $thiscontainer.removeClass("active");// incase its active still - seems to be some buggy behavior atm
-              console.log('active');
+              $thiscontainer.removeClass("active","rotating","rotated");// incase its active still - seems to be some buggy behavior atm
+ 
+              console.log('just remove classes');
 
           $thiscircle.hover(function() {
           
-            if( $thiscircle.hasClass("rotating")){
+            if($thiscircle.hasClass("rotating")){
 
              /* $thiscircle.removeClass("rotating"); 
               $thiscircle.toggleClass("rotate");
@@ -679,10 +683,23 @@ TO DO:
                // rotateCarousel(); //as part of prevous fucntions
   
                 carousel.style.transform = 'translateZ(-720px)' + rotateFn + '(0deg)';// initial valuse
+                // change opacity here
+
+
 
                //  carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn + '(' + angle + 'deg)';
+              console.log("Now"),
 
-                $(window).scroll(function(){ // attach docment scroll to rotating carousel 
+               setTimeout(function() {
+
+               var y = $(window).scrollTop();  //your current y position on the page
+               $(window).scrollTop(y+1); // this ensure the carousell aligns up with the current page position
+
+               $(".scene").addClass("loaded");
+               console.log("class added")
+               }, 750);
+               
+              $(window).scroll(function(){ // attach docment scroll to rotating carousel 
            
 
 /* so what we want is as follows:
@@ -904,6 +921,7 @@ so when once is active the position changes - like a paralex thing
 
 
                   function changeCarousel() { // this function  resizes everythinging
+                  
                     console.log("changeCarousel function");
 
                      /* new var for resize*/

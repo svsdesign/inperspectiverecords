@@ -1,8 +1,111 @@
 To Do:
 
+	
 
-Blocks:
-I would suggest looking into the CMS complications before code any more blocks.
+- Artists
+
+	- Disc hover state still sometimes incorrect - on news single page & artists for example
+
+- Events 
+	
+	- Review styling of events page - improvements on Mobile and Desktop?
+
+
+- Radio / Player
+
+ 
+ 	- fine tune the player on the archive page - the icons; the alligment.
+ 	- fine tune the player - click on the title should probaly take the use to that page (and not soundcloud)
+
+
+- Releases
+
+	- Add php templates for each of the releases
+	- Add all releases: i.e content for each; cover image, disc etc.
+	- create image for the white / small disc - including the sticker etc - how when it moves?
+	- Devise a design & coding solution for digital release. How do we animate them, as we can't use rolling vinyl discs.
+
+
+SEO + "rich" web search / sharing
+	- what measure / changes to ensure good meta data is supplied
+
+
+Glitches + bugs
+
+	- Transition from artist single (will miles for example) to release, the disc image are blown up; visually looks shite. probably need to constrain sizes of the dics markup or similar - 
+	- Is there a glitch with my carousel sizing on the release page? - Coming from other pages (events) it was too big & a screen resize didn't seem to resolve the issue.
+	- Should there be a more seemles transition between the artist archive archive page and artist posts, in terms of the bg image blur & remaining loading. Or is that and old design idea? 
+	- Check my whole site on a touch devices. What are the current dev issues: hover states etc? Check player!
+
+
+PAGES TO add
+
+	- GDPR & Cookies
+
+	This allows you to check: 2GDPR - https://2gdpr.com/ - not svs.design :(
+	- https://wikis.ec.europa.eu/display/WEBGUIDE/04.+Cookies#section_4 < EU "cookie kit - for info i think"
+
+	I think / wonder if i need to ensure certain cookies can be blocked based on a users' preferences. Ensure the plugin choosen does this.
+
+	WP solutions
+
+		DONT USE:
+
+		- GDPR Cookie Consent: https://en-gb.wordpress.org/plugins/cookie-law-info
+		- https://www.onetrust.com/
+		- https://www.cookiebot.com/en/ - With this we are looking at £8p/m
+		- https://wordpress.org/plugins/eu-cookie-law/ < this seems interesting 
+		- https://wordpress.org/plugins/cookie-notice/ < this has over a milliion installs. + seemingly a lot of options, but not tested on the version of WP that the local inp is running on (and probably not on the live version either)
+
+		MAYBE USE:
+
+		- Klaro Consent Manager: https://wordpress.org/plugins/klaro-consent-manager/  -  Free + Open Source
+	
+	JS solutions:
+		I reckon JS solutions is best route to down:
+
+
+		-  https://www.cookiehub.com/
+		- https://www.freeprivacypolicy.com/cookie-consent/
+		This seems the best one:
+		- https://cookieconsent.osano.com/
+
+	
+	- Terms and Conditions
+	All this to be designed (& sourced/write the copy) & Coded.
+
+
+
+
+	Check list of legal requirements
+	- https://www.hallaminternet.com/internet-marketing-and-the-law-legal-issues-affecting-you-and-your-website/
+
+
+	- Privacy Policies
+
+
+		- https://www.freeprivacypolicy.com
+			- Cookies: https://www.freeprivacypolicy.com/blog/cookie-consent-examples/
+
+		This is really free - can get t&c and privacy policies
+		- https://termsandconditionstemplate.com
+
+		Further free tools:
+		http://jamieking.co.uk/blog/cyber-security/policies/privacy-policy-generator.php
+
+
+- HomePage:
+
+	What to do?
+
+	Use of blocks only? But how. < look at the designs. Whats the best way to achieve this?
+
+
+
+
+- Blocks:
+
+	I would suggest looking into the CMS complications before code any more blocks.
 
 	- Finish off styling on blocks that I've created already
 		- Sound blocks:
@@ -10,42 +113,8 @@ I would suggest looking into the CMS complications before code any more blocks.
 	- Add additional blocks: php, js , styling etc.
 		Addition blocks:
 			- A merch block. Image & copy + link to 3rd party if required. Design > Code
-	
-
-- Events - Add banner image to fields - I think?
 
 
-- Release
-
-	- create image for the white / small disc - including the sticker etc - how when it moves?
-
-- Add php templates for each of the releases
-- Add all releases: i.e content for each; cover image, disc etc.
-- Review styling of events page - improvements on Mobile and Desktop?
-- add pulsation to player toggle icon, if the player is playing - ensure as many signifiers as possible; such as when the track changes - like a blink or something
-- Disc hover state still sometimes incorrect - on news single page for example
-- fine tune the player - the icons; the alligment.
-- fine tune the player - can we implement a head room on te black bg + the player elments only - not nav buttons.
-- fint tune the player - click on the title should probaly take the use to that page (and not soundcloud)
-- Release page: the list view: Adress this - it feel gittery because of it snap to 100vh per list itme. What improvements to make?
-- Release page vs the player - overlap of design elements. Resolve
-- Transition from artist single (will miles for example) to release, the disc image are blown up; visually looks shite. probably need to constrain sizes of the dics markup or similar - 
-- Is there a glitch with my carousel sizing on the release page? - Coming from other pages (events) it was too big & a screen resize didn't seem to resolve the issue.
-- Should there be a more seemles transition between the artist archive archive page and artist posts, in terms of the bg image blur & remaining loading. Or is that and old design idea? 
-
-- when adding headroom - could maybe the nav icon blur instead? as per some of my older design reference/ideas in Sketch 
-- Devise a design & coding solution for digital release. How do we animate them, as we can't use rolling vinyl discs.
-- Check my whole site on a touch devices. What are the current dev issues: hover states etc? Check player!
-
-- GDPR & Cookies
-- Terms and Conditions
-All this to be designed (& sourced/write the copy) & Coded.
-
-HomePage:
-
-What to do?
-
-Use of blocks only? But how. < look at the designs. Whats the best way to achieve this?
 
 
 Tidy up To Do's:
@@ -60,6 +129,19 @@ WP CMS:
 enqueing up admin styles and js basically; but how to enque + & also best practice for writing code for use within the CMS?
 -- Go through the functions & ACF CMS - ensure no reference to previious iuse of code & asign correct instructions accordingluy
 
+CROSSBROWSER
+
+	Chris' Laptop:
+
+	- fonts not rendering?
+	- check on a windows platform - Use Stu's laptop.
+	- Images were loading very slow - looked like imagesloaded not being used, or only on selected content - check this
+	-
+
+	Stus's Laptop
+	- ?
+	- ?
+ 	- more?
 
 
 SKETCH:
@@ -74,4 +156,7 @@ LIVE SITE:
 - add all the events that I've worked on in the past: artwork, artist etc.
 
 
+3rd Party Scripts:
 
+install Yoast
+intsall Google Analytics

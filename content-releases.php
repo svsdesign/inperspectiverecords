@@ -220,8 +220,7 @@ wp- embedd
 							<a href="<?php echo get_permalink( $releaseartist->ID ); ?>">
 	 
 							    <div class="banner-image" style="background-image: url('<?php echo $artistbanner;?>');">
-																   		
-																   		
+																   																	   		
 							 		<div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
 															  
 										<div class="page-titler">

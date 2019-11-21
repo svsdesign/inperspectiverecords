@@ -1011,6 +1011,7 @@ function inp_scripts()
 		false,
 		true
 	);
+    
 	  
 	wp_enqueue_script(
 		'enquire', 

@@ -6,11 +6,7 @@
  * 	http://svs.design
  *
  *   
- */
-
-
-
-   
+ */  
  get_header(); ?>
 
   

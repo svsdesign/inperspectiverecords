@@ -14,13 +14,29 @@ width: 100%;// this dirty?
 
 	.play-toggle{
 	border-radius:50%;
-	margin:0% 20%;
+	margin:10% 20%;
 	padding:20%;
 	background: $black;	
 	}
-	.play-toggle .small{
+	.play-toggle.small{
 	//padding: 25% 0;
-	
+		background: transparent;	
+		border: 1px solid $white;
+		//animation: blurout 100ms ease-in forwards;
+
+		path{
+		}
+
+		&:hover{
+		border: 1px solid $black;
+		//animation: blurin 100ms ease-in forwards;
+
+			path{	
+			fill:$black;
+			}
+
+		}
+
 	}       
 
 	.show-title{

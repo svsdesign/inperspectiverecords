@@ -107,12 +107,15 @@ get_header();?>
 						?>
 					 	<li data-tracklink="<?php echo $soundcloudlink;?>">
 
-							<a class="radio-item radio-item-<?php echo $itemno;?> outer-grid-item outer-grid-item-sm-8 <?php if ($itemno != "1"):?> outer-grid-item-md-4<?php endif;?>" href="<?php echo the_permalink();?>" title="<?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+								<a class="view-radio-item view-radio-item-<?php echo $itemno;?> outer-grid-item outer-grid-item-sm-8 <?php if ($itemno != "1"):?> outer-grid-item-md-4<?php endif;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
+								View Item
+							</a>	
+							<a class="radio-item radio-item-<?php echo $itemno;?> outer-grid-item outer-grid-item-sm-8 <?php if ($itemno != "1"):?> outer-grid-item-md-4<?php endif;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
 
 			 					<?php get_template_part( 'content-radio' );?>
 							 	
 							</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
-					 	</li>
+			 			</li>
 
 						<?php //$itemno++;
 
@@ -144,8 +147,10 @@ get_header();?>
 					<!--	<div class="container outer-grid-item outer-grid-item-sm-6 inner"> -->
 					 	<?php //endif; // endif paged ?>
 					 	<li data-tracklink="<?php echo $soundcloudlink;?>">
-
-							<a class="radio-item radio-item-<?php echo $itemno;?> outer-grid-item outer-grid-item-sm-8 <?php if ($itemno != "1"):?> outer-grid-item-md-4<?php endif;?>" href="<?php echo the_permalink();?>" title="<?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+							<a class="view-radio-item view-radio-item-<?php echo $itemno;?> outer-grid-item outer-grid-item-sm-8 <?php if ($itemno != "1"):?> outer-grid-item-md-4<?php endif;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
+								View Item
+							</a>	
+							<a class="radio-item radio-item-<?php echo $itemno;?> outer-grid-item outer-grid-item-sm-8 <?php if ($itemno != "1"):?> outer-grid-item-md-4<?php endif;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
 
 			 					<?php get_template_part( 'content-radio' );?>
 							 	

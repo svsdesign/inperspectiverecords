@@ -271,3 +271,22 @@ section{
       @include scalelink;
 
 }
+
+/* IMAGES */
+
+
+img{
+ // opacity: 0; < review this w/ image loaded
+} 
+
+/* no selection on images */
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+

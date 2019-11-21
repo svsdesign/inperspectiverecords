@@ -12,11 +12,28 @@ width: 100%;// this dirty?
 	display:block;
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;;
+	background-repeat: no-repeat;
+
+	    .page-title-positioner{
+	     animation: blurout 400ms ease-in forwards;
+	    }
+
 	}
 
 	a{
 	width: 100%;// this dirty?
+	}
+
+	&:hover{
+
+		.banner-image{
+
+			.page-title-positioner{
+			animation: blurin 400ms ease-in forwards;
+
+			}
+		}
+
 	}
 
 } //.artist-block
