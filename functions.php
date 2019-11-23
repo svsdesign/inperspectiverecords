@@ -255,9 +255,29 @@ function wpse324908_allowed_block_types( $allowed_blocks, $post ) {
 }
 //end allow only certain blocks:
 
+
+/* https://joeyfarruggio.com/wordpress/custom-gutenberg-block-advanced-custom-fields/
+<?php
+// Enqueue your block styles in wp-admin
+function your_theme_admin_styles() {
+wp_enqueue_style('admin-blocks', get_theme_file_uri('/css/admin.css'), array(), '20180820');
+}
+add_action( 'admin_enqueue_scripts', 'your_theme_admin_styles' );
 */
+
+//https://jacobmartella.com/2019/01/16/creating-gutenberg-blocks-advanced-custom-fields/
+ 
  // as per:    https://www.advancedcustomfields.com/blog/acf-5-8-introducing-acf-blocks-for-gutenberg/
 //start quote block
+
+    // Enqueue your block styles in wp-admin
+
+function your_theme_admin_styles() {
+//wp_enqueue_style('admin-artist-block',''.get_stylesheet_directory_uri().'/template-parts/blocks/inpartist/assets/css/style.css', array(), '1');
+wp_enqueue_style('admin-blocks',''.get_stylesheet_directory_uri().'/admin-style.css', array(), '1');
+
+}
+add_action( 'admin_enqueue_scripts', 'your_theme_admin_styles' );
 
 
 add_action('acf/init', 'my_acf_init');
@@ -278,12 +298,14 @@ function my_acf_init() {
             //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
             //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
             wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
+  //         admin_enqueue_scripts( 'admin-quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/style.js', array( 'jquery' ), null, true );
+//enqueue_block_editor_assets
          //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
             },
             'icon'              => 'editor-quote',
             'keywords'          => array( 'inpquote'),
         ));
-    
+
     
     // register a credit block:
     

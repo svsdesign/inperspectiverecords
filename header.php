@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
   theme_directory = "<?php echo get_template_directory_uri() ?>";
 </script>
 
-<body <?php body_class(''); // 'dev-on' - whilst working site leave dev-on by default ?>>
+<body <?php body_class('not-admin'); // 'dev-on' - whilst working site leave dev-on by default ?>>
 
 	<?php include( 'navigation.php' );?>
 

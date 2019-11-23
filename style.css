@@ -3081,93 +3081,224 @@ img {
 }
 
 /*_typography.scss*/
-/*TO - review the code in here-  usage of that  animation markup as per what I've put on Codepen */
-/* line 6, assets/sass/_partials/_typography.scss */
-body {
+/*TO do
+- @fontface add to site - check if these path are working correct;y - i.e chek on my phone. Then remove rmaining code
+- review the code in here-  usage of that  animation markup as per what I've put on Codepen */
+/*
+
+  $baseweight: 100;
+  $lightweight: 100;
+  $mediumweight: 400;
+  $boldweight: 500;
+  $heavyweight: 800;
+*/
+/*
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Black'), local('Objectivity-Black'),
+        url('Objectivity-Black.woff2') format('woff2'),
+        url('Objectivity-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Extra Bold'), local('Objectivity-ExtraBold'),
+        url('Objectivity-ExtraBold.woff2') format('woff2'),
+        url('Objectivity-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+*/
+@font-face {
+  font-family: 'Objectivity';
+  src: local("Objectivity Regular"), local("Objectivity-Regular"), url("../fonts/Objectivity-Regular.woff2") format("woff2"), url("../fonts/Objectivity-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  background: red;
+}
+@font-face {
+  font-family: 'Objectivity';
+  src: local("Objectivity Thin"), local("Objectivity-Thin"), url("../fonts/Objectivity-Thin.woff2") format("woff2"), url("../fonts/Objectivity-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Bold'), local('Objectivity-Bold'),
+        url('Objectivity-Bold.woff2') format('woff2'),
+        url('Objectivity-Bold.woff') format('woff');
+    font-weight: bold; 
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Black Slanted'), local('Objectivity-BlackSlanted'),
+        url('Objectivity-BlackSlanted.woff2') format('woff2'),
+        url('Objectivity-BlackSlanted.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Super Slanted'), local('Objectivity-SuperSlanted'),
+        url('Objectivity-SuperSlanted.woff2') format('woff2'),
+        url('Objectivity-SuperSlanted.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+  font-family: 'Objectivity';
+  src: local("Objectivity Medium Slanted"), local("Objectivity-MediumSlanted"), url("../fonts/Objectivity-MediumSlanted.woff2") format("woff2"), url("../fonts/Objectivity-MediumSlanted.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Objectivity';
+  src: local("Objectivity Thin Slanted"), local("Objectivity-ThinSlanted"), url("../fonts/Objectivity-ThinSlanted.woff2") format("woff2"), url("../fonts/Objectivity-ThinSlanted.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+/*
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Super'), local('Objectivity-Super'),
+        url('Objectivity-Super.woff2') format('woff2'),
+        url('Objectivity-Super.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Light Slanted'), local('Objectivity-LightSlanted'),
+        url('Objectivity-LightSlanted.woff2') format('woff2'),
+        url('Objectivity-LightSlanted.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+*/
+@font-face {
+  font-family: 'Objectivity';
+  src: local("Objectivity Regular Slanted"), local("Objectivity-RegularSlanted"), url("../fonts/Objectivity-RegularSlanted.woff2") format("woff2"), url("../fonts/Objectivity-RegularSlanted.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Objectivity';
+  src: local("Objectivity Medium"), local("Objectivity-Medium"), url("../fonts/Objectivity-Medium.woff2") format("woff2"), url("../fonts/Objectivity-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Extra Bold Slanted'), local('Objectivity-ExtraBoldSlanted'),
+        url('Objectivity-ExtraBoldSlanted.woff2') format('woff2'),
+        url('Objectivity-ExtraBoldSlanted.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Light'), local('Objectivity-Light'),
+        url('Objectivity-Light.woff2') format('woff2'),
+        url('Objectivity-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Bold Slanted'), local('Objectivity-BoldSlanted'),
+        url('Objectivity-BoldSlanted.woff2') format('woff2'),
+        url('Objectivity-BoldSlanted.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*/
+/*
+end fontface
+*/
+/* line 170, assets/sass/_partials/_typography.scss */
+body.not-admin,
+body.wp-admin .wp-block {
   color: white;
-  font-size: 16px;
   font-family: "Objectivity", Helvetica, Arial, sans-serif;
   font-weight: 100;
-  line-height: 24px;
+  line-height: 16;
+  font-style: normal;
   font-size: 10px;
   font-size: 12.8px;
   line-height: 18px;
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 6, assets/sass/_partials/_typography.scss */
-  body {
+  /* line 170, assets/sass/_partials/_typography.scss */
+  body.not-admin,
+  body.wp-admin .wp-block {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 6, assets/sass/_partials/_typography.scss */
-  body {
+  /* line 170, assets/sass/_partials/_typography.scss */
+  body.not-admin,
+  body.wp-admin .wp-block {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 6, assets/sass/_partials/_typography.scss */
-  body {
+  /* line 170, assets/sass/_partials/_typography.scss */
+  body.not-admin,
+  body.wp-admin .wp-block {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 6, assets/sass/_partials/_typography.scss */
-  body {
+  /* line 170, assets/sass/_partials/_typography.scss */
+  body.not-admin,
+  body.wp-admin .wp-block {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 6, assets/sass/_partials/_typography.scss */
-  body {
+  /* line 170, assets/sass/_partials/_typography.scss */
+  body.not-admin,
+  body.wp-admin .wp-block {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 6, assets/sass/_partials/_typography.scss */
-  body {
+  /* line 170, assets/sass/_partials/_typography.scss */
+  body.not-admin,
+  body.wp-admin .wp-block {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 6, assets/sass/_partials/_typography.scss */
-  body {
+  /* line 170, assets/sass/_partials/_typography.scss */
+  body.not-admin,
+  body.wp-admin .wp-block {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 6, assets/sass/_partials/_typography.scss */
-  body {
+  /* line 170, assets/sass/_partials/_typography.scss */
+  body.not-admin,
+  body.wp-admin .wp-block {
     line-height: 32px;
   }
 }
-
-/* body */
-/* line 17, assets/sass/_partials/_typography.scss */
-*::selection {
-  background-color: white;
-  /* black */
-  color: black;
-  /* white */
-}
-
-/* line 21, assets/sass/_partials/_typography.scss */
-*::-moz-selection {
-  background-color: white;
-  /* black */
-  color: black;
-  /* white */
-}
-
-/* line 26, assets/sass/_partials/_typography.scss */
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* line 33, assets/sass/_partials/_typography.scss */
-a {
+/* line 182, assets/sass/_partials/_typography.scss */
+body.not-admin a,
+body.wp-admin .wp-block a {
   color: white;
   text-decoration: none;
   font-size: 10px;
@@ -3176,68 +3307,166 @@ a {
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 33, assets/sass/_partials/_typography.scss */
-  a {
+  /* line 182, assets/sass/_partials/_typography.scss */
+  body.not-admin a,
+  body.wp-admin .wp-block a {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 33, assets/sass/_partials/_typography.scss */
-  a {
+  /* line 182, assets/sass/_partials/_typography.scss */
+  body.not-admin a,
+  body.wp-admin .wp-block a {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 33, assets/sass/_partials/_typography.scss */
-  a {
+  /* line 182, assets/sass/_partials/_typography.scss */
+  body.not-admin a,
+  body.wp-admin .wp-block a {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 33, assets/sass/_partials/_typography.scss */
-  a {
+  /* line 182, assets/sass/_partials/_typography.scss */
+  body.not-admin a,
+  body.wp-admin .wp-block a {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 33, assets/sass/_partials/_typography.scss */
-  a {
+  /* line 182, assets/sass/_partials/_typography.scss */
+  body.not-admin a,
+  body.wp-admin .wp-block a {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 33, assets/sass/_partials/_typography.scss */
-  a {
+  /* line 182, assets/sass/_partials/_typography.scss */
+  body.not-admin a,
+  body.wp-admin .wp-block a {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 33, assets/sass/_partials/_typography.scss */
-  a {
+  /* line 182, assets/sass/_partials/_typography.scss */
+  body.not-admin a,
+  body.wp-admin .wp-block a {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 33, assets/sass/_partials/_typography.scss */
-  a {
+  /* line 182, assets/sass/_partials/_typography.scss */
+  body.not-admin a,
+  body.wp-admin .wp-block a {
+    line-height: 32px;
+  }
+}
+/* line 189, assets/sass/_partials/_typography.scss */
+body.not-admin a:hover,
+body.not-admin a:visited,
+body.not-admin a:active,
+body.wp-admin .wp-block a:hover,
+body.wp-admin .wp-block a:visited,
+body.wp-admin .wp-block a:active {
+  color: white;
+}
+/* line 195, assets/sass/_partials/_typography.scss */
+body.not-admin *::selection,
+body.wp-admin .wp-block *::selection {
+  background-color: white;
+  /* black */
+  color: black;
+  /* white */
+}
+/* line 199, assets/sass/_partials/_typography.scss */
+body.not-admin *::-moz-selection,
+body.wp-admin .wp-block *::-moz-selection {
+  background-color: white;
+  /* black */
+  color: black;
+  /* white */
+}
+/* line 204, assets/sass/_partials/_typography.scss */
+body.not-admin *,
+body.wp-admin .wp-block * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 210, assets/sass/_partials/_typography.scss */
+body.not-admin li,
+body.wp-admin .wp-block li {
+  font-size: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+@media screen and (min-width: 0px) {
+  /* line 210, assets/sass/_partials/_typography.scss */
+  body.not-admin li,
+  body.wp-admin .wp-block li {
+    font-size: calc(10px + 6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 210, assets/sass/_partials/_typography.scss */
+  body.not-admin li,
+  body.wp-admin .wp-block li {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 210, assets/sass/_partials/_typography.scss */
+  body.not-admin li,
+  body.wp-admin .wp-block li {
+    font-size: calc(16px + 8 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 210, assets/sass/_partials/_typography.scss */
+  body.not-admin li,
+  body.wp-admin .wp-block li {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 210, assets/sass/_partials/_typography.scss */
+  body.not-admin li,
+  body.wp-admin .wp-block li {
+    line-height: calc(18px + 8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 210, assets/sass/_partials/_typography.scss */
+  body.not-admin li,
+  body.wp-admin .wp-block li {
+    line-height: 26px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 210, assets/sass/_partials/_typography.scss */
+  body.not-admin li,
+  body.wp-admin .wp-block li {
+    line-height: calc(26px + 6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 210, assets/sass/_partials/_typography.scss */
+  body.not-admin li,
+  body.wp-admin .wp-block li {
     line-height: 32px;
   }
 }
 
-/* line 41, assets/sass/_partials/_typography.scss */
-a:hover,
-a:visited,
-a:active {
-  color: white;
-}
-
+/* body.not-admin */
 /* Start news typestyles */
-/* line 48, assets/sass/_partials/_typography.scss */
+/* line 224, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news,
 body.single-news {
   color: black;
 }
-/* line 53, assets/sass/_partials/_typography.scss */
+/* line 229, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news a,
 body.single-news a {
   color: black;
@@ -3248,62 +3477,62 @@ body.single-news a {
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 53, assets/sass/_partials/_typography.scss */
+  /* line 229, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 53, assets/sass/_partials/_typography.scss */
+  /* line 229, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 53, assets/sass/_partials/_typography.scss */
+  /* line 229, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 53, assets/sass/_partials/_typography.scss */
+  /* line 229, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 53, assets/sass/_partials/_typography.scss */
+  /* line 229, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 53, assets/sass/_partials/_typography.scss */
+  /* line 229, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 53, assets/sass/_partials/_typography.scss */
+  /* line 229, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 53, assets/sass/_partials/_typography.scss */
+  /* line 229, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     line-height: 32px;
   }
 }
-/* line 59, assets/sass/_partials/_typography.scss */
+/* line 235, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news a:hover,
 body.post-type-archive-news a:visited,
 body.post-type-archive-news a:active,
@@ -3315,78 +3544,14 @@ body.single-news a:active {
 
 /* body.post-type-archive-news,
    body.single-news */
-/* line 68, assets/sass/_partials/_typography.scss */
-.post-type-archive-news::-moz-selection,
-.post-type-archive-news::selection,
-.single-news::-moz-selection,
-.single-news::selection {
-  color: white;
-  background-color: blue;
-}
-
 /* End news typestyles */
-/* line 81, assets/sass/_partials/_typography.scss */
-::-moz-selection,
-::selection {
-  color: white;
-  background-color: blue;
-}
-
-/* line 87, assets/sass/_partials/_typography.scss */
-li {
-  font-size: 10px;
-  font-size: 16px;
-  line-height: 18px;
-  line-height: 26px;
-  font-weight: 400;
-}
-@media screen and (min-width: 0px) {
-  /* line 87, assets/sass/_partials/_typography.scss */
-  li {
-    font-size: calc(10px + 6 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 87, assets/sass/_partials/_typography.scss */
-  li {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 87, assets/sass/_partials/_typography.scss */
-  li {
-    font-size: calc(16px + 8 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 87, assets/sass/_partials/_typography.scss */
-  li {
-    font-size: 24px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 87, assets/sass/_partials/_typography.scss */
-  li {
-    line-height: calc(18px + 8 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 87, assets/sass/_partials/_typography.scss */
-  li {
-    line-height: 26px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 87, assets/sass/_partials/_typography.scss */
-  li {
-    line-height: calc(26px + 6 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 87, assets/sass/_partials/_typography.scss */
-  li {
-    line-height: 32px;
-  }
+/* line 246, assets/sass/_partials/_typography.scss */
+body.post-type-archive-news *::-moz-selection,
+body.post-type-archive-news *::selection,
+body.single-news *::selection,
+body.single-news *::-moz-selection {
+  background: black;
+  color: black;
 }
 
 /* link animations 
@@ -3395,17 +3560,7 @@ li {
 circles https://codepen.io/YusukeNakaya/pen/KyKJBE/
 
 */
-/* line 105, assets/sass/_partials/_typography.scss */
-.room-items {
- /* overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 500px;
-*/
-}
-
-/* line 115, assets/sass/_partials/_typography.scss */
+/* line 272, assets/sass/_partials/_typography.scss */
 div.anim-text,
 span.anim-text,
 div.link-animation,
@@ -3413,7 +3568,7 @@ a.link-animation {
   will-change: transform;
 }
 
-/* line 123, assets/sass/_partials/_typography.scss */
+/* line 280, assets/sass/_partials/_typography.scss */
 .link-animation {
   transform-style: preserve-3d;
   position: relative;
@@ -3423,232 +3578,232 @@ a.link-animation {
   overflow: visible;
   color: transparent;
 }
-/* line 132, assets/sass/_partials/_typography.scss */
+/* line 289, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text {
   position: absolute;
   color: #fff;
   transform-style: preserve-3d;
   transform-origin: left;
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(1) {
   clip-path: polygon(-30% 0, -20% 0, 20% 100%, 0% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(2) {
   clip-path: polygon(-25% 0, -15% 0, 25% 100%, 5% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(3) {
   clip-path: polygon(-20% 0, -10% 0, 30% 100%, 10% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(4) {
   clip-path: polygon(-15% 0, -5% 0, 35% 100%, 15% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(5) {
   clip-path: polygon(-10% 0, 0% 0, 40% 100%, 20% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(6) {
   clip-path: polygon(-5% 0, 5% 0, 45% 100%, 25% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(7) {
   clip-path: polygon(0% 0, 10% 0, 50% 100%, 30% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(8) {
   clip-path: polygon(5% 0, 15% 0, 55% 100%, 35% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(9) {
   clip-path: polygon(10% 0, 20% 0, 60% 100%, 40% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(10) {
   clip-path: polygon(15% 0, 25% 0, 65% 100%, 45% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(11) {
   clip-path: polygon(20% 0, 30% 0, 70% 100%, 50% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(12) {
   clip-path: polygon(25% 0, 35% 0, 75% 100%, 55% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(13) {
   clip-path: polygon(30% 0, 40% 0, 80% 100%, 60% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(14) {
   clip-path: polygon(35% 0, 45% 0, 85% 100%, 65% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(15) {
   clip-path: polygon(40% 0, 50% 0, 90% 100%, 70% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(16) {
   clip-path: polygon(45% 0, 55% 0, 95% 100%, 75% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(17) {
   clip-path: polygon(50% 0, 60% 0, 100% 100%, 80% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(18) {
   clip-path: polygon(55% 0, 65% 0, 105% 100%, 85% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(19) {
   clip-path: polygon(60% 0, 70% 0, 110% 100%, 90% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(20) {
   clip-path: polygon(65% 0, 75% 0, 115% 100%, 95% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(21) {
   clip-path: polygon(70% 0, 80% 0, 120% 100%, 100% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(22) {
   clip-path: polygon(75% 0, 85% 0, 125% 100%, 105% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(23) {
   clip-path: polygon(80% 0, 90% 0, 130% 100%, 110% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(24) {
   clip-path: polygon(85% 0, 95% 0, 135% 100%, 115% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(25) {
   clip-path: polygon(90% 0, 100% 0, 140% 100%, 120% 100%);
 }
-/* line 142, assets/sass/_partials/_typography.scss */
+/* line 299, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(26) {
   clip-path: polygon(95% 0, 105% 0, 145% 100%, 125% 100%);
 }
-/* line 158, assets/sass/_partials/_typography.scss */
+/* line 315, assets/sass/_partials/_typography.scss */
 .link-animation .height-item {
   opacity: 0;
   position: relative;
 }
 
-/* line 167, assets/sass/_partials/_typography.scss */
+/* line 324, assets/sass/_partials/_typography.scss */
 .link-animation:hover {
   animation: blurring 1500ms ease-out forwards;
 }
-/* line 171, assets/sass/_partials/_typography.scss */
+/* line 328, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text {
   top: 0;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(1) {
   animation: wave 1000ms -5000ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(2) {
   animation: wave 1000ms -4950ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(3) {
   animation: wave 1000ms -4900ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(4) {
   animation: wave 1000ms -4850ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(5) {
   animation: wave 1000ms -4800ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(6) {
   animation: wave 1000ms -4750ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(7) {
   animation: wave 1000ms -4700ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(8) {
   animation: wave 1000ms -4650ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(9) {
   animation: wave 1000ms -4600ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(10) {
   animation: wave 1000ms -4550ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(11) {
   animation: wave 1000ms -4500ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(12) {
   animation: wave 1000ms -4450ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(13) {
   animation: wave 1000ms -4400ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(14) {
   animation: wave 1000ms -4350ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(15) {
   animation: wave 1000ms -4300ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(16) {
   animation: wave 1000ms -4250ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(17) {
   animation: wave 1000ms -4200ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(18) {
   animation: wave 1000ms -4150ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(19) {
   animation: wave 1000ms -4100ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(20) {
   animation: wave 1000ms -4050ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(21) {
   animation: wave 1000ms -4000ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(22) {
   animation: wave 1000ms -3950ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(23) {
   animation: wave 1000ms -3900ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(24) {
   animation: wave 1000ms -3850ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(25) {
   animation: wave 1000ms -3800ms ease-in-out 5 alternate;
 }
-/* line 178, assets/sass/_partials/_typography.scss */
+/* line 335, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(26) {
   animation: wave 1000ms -3750ms ease-in-out 5 alternate;
 }
@@ -3675,7 +3830,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(81deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(94deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -3738,43 +3893,43 @@ a.link-animation {
     opacity: 0;
   }
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 456, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span {
   color: transparent;
   animation: blurlink 10s ease-out;
   -webkit-animation: blurlink 10s ease-out;
 }
-/* line 305, assets/sass/_partials/_typography.scss */
+/* line 462, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(1) {
   animation-delay: 0.1s;
   -webkit-animation-delay: 0.1s;
 }
-/* line 309, assets/sass/_partials/_typography.scss */
+/* line 466, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(2) {
   animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
 }
-/* line 313, assets/sass/_partials/_typography.scss */
+/* line 470, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(3) {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
-/* line 317, assets/sass/_partials/_typography.scss */
+/* line 474, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(4) {
   animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
 }
-/* line 321, assets/sass/_partials/_typography.scss */
+/* line 478, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(5) {
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
 }
-/* line 325, assets/sass/_partials/_typography.scss */
+/* line 482, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(6) {
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
 }
-/* line 329, assets/sass/_partials/_typography.scss */
+/* line 486, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(7) {
   animation-delay: 0.7s;
   -webkit-animation-delay: 0.7s;

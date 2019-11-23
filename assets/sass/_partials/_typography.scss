@@ -1,48 +1,224 @@
 /*_typography.scss*/
 
 
-/*TO - review the code in here-  usage of that  animation markup as per what I've put on Codepen */
+/*TO do
+- @fontface add to site - check if these path are working correct;y - i.e chek on my phone. Then remove rmaining code
+- review the code in here-  usage of that  animation markup as per what I've put on Codepen */
 
-body {
+/*
+
+  $baseweight: 100;
+  $lightweight: 100;
+  $mediumweight: 400;
+  $boldweight: 500;
+  $heavyweight: 800;
+*/
+/*
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Black'), local('Objectivity-Black'),
+        url('Objectivity-Black.woff2') format('woff2'),
+        url('Objectivity-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Extra Bold'), local('Objectivity-ExtraBold'),
+        url('Objectivity-ExtraBold.woff2') format('woff2'),
+        url('Objectivity-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Regular'), local('Objectivity-Regular'),
+        url('../fonts/Objectivity-Regular.woff2') format('woff2'),
+        url('../fonts/Objectivity-Regular.woff') format('woff');
+    font-weight: normal; //$mediumweight: 400
+    font-style: normal;
+    background:red;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Thin'), local('Objectivity-Thin'),
+        url('../fonts/Objectivity-Thin.woff2') format('woff2'),
+        url('../fonts/Objectivity-Thin.woff') format('woff');
+    font-weight: 100; //$baseweight
+    font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Bold'), local('Objectivity-Bold'),
+        url('Objectivity-Bold.woff2') format('woff2'),
+        url('Objectivity-Bold.woff') format('woff');
+    font-weight: bold; 
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Black Slanted'), local('Objectivity-BlackSlanted'),
+        url('Objectivity-BlackSlanted.woff2') format('woff2'),
+        url('Objectivity-BlackSlanted.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Super Slanted'), local('Objectivity-SuperSlanted'),
+        url('Objectivity-SuperSlanted.woff2') format('woff2'),
+        url('Objectivity-SuperSlanted.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Medium Slanted'), local('Objectivity-MediumSlanted'),
+        url('../fonts/Objectivity-MediumSlanted.woff2') format('woff2'),
+        url('../fonts/Objectivity-MediumSlanted.woff') format('woff');
+    font-weight: 500; //$boldweight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Thin Slanted'), local('Objectivity-ThinSlanted'),
+        url('../fonts/Objectivity-ThinSlanted.woff2') format('woff2'),
+        url('../fonts/Objectivity-ThinSlanted.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+/*
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Super'), local('Objectivity-Super'),
+        url('Objectivity-Super.woff2') format('woff2'),
+        url('Objectivity-Super.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Light Slanted'), local('Objectivity-LightSlanted'),
+        url('Objectivity-LightSlanted.woff2') format('woff2'),
+        url('Objectivity-LightSlanted.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+*/
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Regular Slanted'), local('Objectivity-RegularSlanted'),
+        url('../fonts/Objectivity-RegularSlanted.woff2') format('woff2'),
+        url('../fonts/Objectivity-RegularSlanted.woff') format('woff');
+    font-weight: normal;//  $mediumweight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Medium'), local('Objectivity-Medium'),
+        url('../fonts/Objectivity-Medium.woff2') format('woff2'),
+        url('../fonts/Objectivity-Medium.woff') format('woff');
+    font-weight: 500; //$boldweight
+    font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Extra Bold Slanted'), local('Objectivity-ExtraBoldSlanted'),
+        url('Objectivity-ExtraBoldSlanted.woff2') format('woff2'),
+        url('Objectivity-ExtraBoldSlanted.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Light'), local('Objectivity-Light'),
+        url('Objectivity-Light.woff2') format('woff2'),
+        url('Objectivity-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: local('Objectivity Bold Slanted'), local('Objectivity-BoldSlanted'),
+        url('Objectivity-BoldSlanted.woff2') format('woff2'),
+        url('Objectivity-BoldSlanted.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*/
+
+/*
+end fontface
+*/
+ 
+
+body.not-admin,
+body.wp-admin .wp-block
+{
 color: $text-color;
-
-font-size: $base-font-size;
+//font-size: $base-font-size;
 font-family: "Objectivity", Helvetica, Arial, sans-serif;
 font-weight: $baseweight;
-line-height: $base-line-height;
+line-height: $base-lineheight;
+font-style: normal;
 @include body;
-} /* body */
 
 
-*::selection{
-  background-color: $text-color; /* black */
-  color: $background-color; /* white */
-}
-*::-moz-selection {
+  a{
+  color: $text-color;
+  text-decoration: none;
+  @include body;
+  }
+
+
+  a:hover,
+  a:visited,
+  a:active{
+  color: $text-color;
+  }
+
+  *::selection{
     background-color: $text-color; /* black */
-  color: $background-color; /* white */
-}
+    color: $background-color; /* white */
+  }
+  *::-moz-selection {
+      background-color: $text-color; /* black */
+    color: $background-color; /* white */
+  }
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-
-a{
-color: $text-color;
-text-decoration: none;
-@include body;
-
-}
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
 
-a:hover,
-a:visited,
-a:active{
-color: $text-color;
-}
+  li{ //consider more specific selector - review
+  @include li;
+  font-weight: $mediumweight;
+  }
+
+} /* body.not-admin */
+
+
+
+
+
+
 
 /* Start news typestyles */
 body.post-type-archive-news,
@@ -65,29 +241,19 @@ color: $news-text-color;
 } /* body.post-type-archive-news,
      body.single-news */
 
-.post-type-archive-news::-moz-selection,
-.post-type-archive-news::selection,
-.single-news::-moz-selection,
-.single-news::selection 
-{ 
-  color: white;
-  background-color: blue;
 
-//background: $news-text-color!important;
-//color: $background-color;
-}
 /* End news typestyles */
-
-::-moz-selection,
-::selection{
-  color: white;
-  background-color: blue;
+body.post-type-archive-news *::-moz-selection,
+body.post-type-archive-news *::selection,
+body.single-news *::selection,
+body.single-news *::-moz-selection
+{
+background: $news-text-color;
+color: $background-color;  
 }
 
-li{
-@include li;
-font-weight: $mediumweight;
-}
+
+
 
 
 @mixin linkanimation{
@@ -102,15 +268,6 @@ circles https://codepen.io/YusukeNakaya/pen/KyKJBE/
 // Please change your favorite font-size!
 $fontSize: 10rem;
 
-.room-items{
-  // background: rgba(10, 20, 40, 1);
-  //height: 100vh;
- /* overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 500px;
-*/}
 
 div.anim-text,
 span.anim-text,
