@@ -204,8 +204,8 @@ var radioscriptloaded, // set as undefined initially;//
 
                           SC.initialize({
                            //   client_id: '853fdb79a14a9ed748ec9fe482e859dd' // who'is this client ID? Works locally and in incognito
-                              client_id: '95f22ed54a5c297b1c41f72d713623ef' // Client id foudn here https://github.com/mediaelement/mediaelement/issues/2501 -
-                              
+                              //client_id: '95f22ed54a5c297b1c41f72d713623ef' // Client id foudn here https://github.com/mediaelement/mediaelement/issues/2501 -
+                              client_id: 'ssV1Qfh3hGcBHMcuZ3bz3xHb3aoP5KUB'
                           });
 
 
