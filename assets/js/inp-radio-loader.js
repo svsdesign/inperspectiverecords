@@ -297,7 +297,30 @@ var radioscriptloaded, // set as undefined initially;//
 
 
      } // function checkScript()
-    checkScript(); // initial run
+
+     WaitForSoundcloud();
+
+function WaitForSoundcloud() {
+    if(typeof SC == "undefined") {
+        setTimeout(WaitForSoundcloud, 500);
+    } else {
+
+       checkScript(); // initial run
+
+     /*   SC.initialize({
+          client_id: 'xxxxxxxx'
+        });
+
+        SC.oEmbed(track_url, {}).then(function(oEmbed) {
+            console.log('oEmbed response: ', oEmbed);
+        });
+
+       */ 
+    }
+
+   // https://stackoverflow.com/questions/30906134/sc-is-not-defined-when-using-soundcloud-sdk
+
+}
 
 
  }); ///  ENDS  read.QUERY
