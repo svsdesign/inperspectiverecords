@@ -1,108 +1,86 @@
-
-
-
 /* default */
 .page-title-position{
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 0px;
-  height: 0px;
-  z-index: 97;// below the sc player item and menue
-  transform:rotate(90deg);  
+position: fixed;
+right: 0;
+top: 0;
+width: 0px;
+height: 0px;
+z-index: 97;// below the sc player item and menue
+transform:rotate(90deg);  
 }
 /* used on
 /releases - becaus of the "scnee fixer"
  */
 
 .page-title-position.absolute{
-  position: absolute;
-
+position: absolute;
 }
 
-
-/* used on /events
-
-*/
+/* used on /events */
 
 .page-title-position.sticky{
-    position: -webkit-sticky;
-    position: sticky;
-    right: initial;
-    /* top: initial; */
-    width: 100vh;
-    height: 100vh;
-    z-index: 97;// below the sc player item and menue
-    transform: rotate(-90deg);
-    /* transform-origin: bottom right; */
-    overflow: visible;
-    bottom: 0px;
+position: -webkit-sticky;
+position: sticky;
+right: initial;
+/* top: initial; */
+width: 100vh;
+height: 100vh;
+z-index: 97;// below the sc player item and menue
+transform: rotate(-90deg);
+/* transform-origin: bottom right; */
+overflow: visible;
+bottom: 0px;
 
     .page-title{
-      position: absolute;
-      bottom: -12.5vw;
-      width: 100vh;
-      color: white;
-      font-weight: $heavyweight;
-
-      @include sideheader;
-       text-align:center;
-      height: 12.5vw;
-      line-height: 12.5vw!important;
-      transform:rotate(0deg);  
-
-
+    position: absolute;
+    bottom: -12.5vw;
+    width: 100vh;
+    color: white;
+    font-weight: $heavyweight;
+    @include sideheader;
+    text-align:center;
+    height: 12.5vw;
+    line-height: 12.5vw!important;
+    transform:rotate(0deg);  
     }
 
 }
 
 /* used on most pages - its requireds to be inside teh section wrap */ 
 .page-title-positioner.sticky{
-    pointer-events:none;
-    //right: initial;
-    /* top: initial; */
-    width: 100vw;
-   // height: 100vh;
-    z-index: 97;// below the sc player item and menue
-
-    position: absolute;
-    top: 0px;
-   // transform: rotate(-90deg);
-    /* transform-origin: bottom right; */
-    overflow: visible;
-    bottom: 0px;
+pointer-events:none;
+width: 100vw;
+z-index: 97;// below the sc player item and menue 
+position: absolute;
+top: 0px;
+// transform: rotate(-90deg);
+/* transform-origin: bottom right; */
+overflow: visible;
+bottom: 0px;
     
     .page-titler{
-  position: -webkit-sticky;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
-//  position: absolute;
-   //   bottom: -12.5vw;
-     // width: 100vh;
-      // @include sideheader;
-  //     text-align:center;
-      height: 100vh;
-    //  background: #c68cff2b;
-     // line-height: 12.5vw!important;
-   //   transform:rotate(0deg);  
-   overflow: hidden;
+    height: 100vh;
+    overflow: hidden;
 
-         .inner{
-          //transform:rotate(-90deg);  
-transform-origin: bottom right;
-     //    background: #c68cff2b;
-             color: white;
-      font-weight: 600;
+        .inner{
+        //transform:rotate(-90deg);  
+        transform-origin: bottom right;
+        //    background: #c68cff2b;
+        color: white;
+        font-weight: 600;
         @include sideheader;
-       text-align: center;
-       transform:rotate(-90deg); 
-       width: 100vh;
-      // position: absolute;
-       height: 12.5vw;
-      line-height: 12.5vw!important;
-    position: relative;
-    display: block;
-    float: right;
+        text-align: center;
+        transform:rotate(-90deg); 
+        width: 100vh;
+        // position: absolute;
+        height: 12.5vw;
+        line-height: 12.5vw!important;
+        position: relative;
+        display: block;
+        float: right;
         top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
       }
 

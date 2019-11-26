@@ -88,9 +88,18 @@ $thisnumber = 0; // this number to be changed based on number of blocks - or doe
    
 </div> <!-- inp-block -->     
 
-<style type="sound/css">
+<style type="text/css">
     #<?php echo $id; ?> {
     color: <?php echo $text_color; ?>;
     }
+    #<?php echo $id; ?> .play-toggle.small{
+    border-color: <?php echo $text_color; ?>;
+    }
+    #<?php echo $id; ?> path{
+    fill:<?php echo $text_color; ?>;
+    }
+
+    /* to do - consider hover states, or don't allow different colour styles? */
+
 </style>
 

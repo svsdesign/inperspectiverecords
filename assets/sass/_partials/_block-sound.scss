@@ -49,23 +49,43 @@ width: 100%;// this dirty?
 	
 	}
 
-	&.alignright .radio-item.grid{
-	flex-direction:row-reverse;
-	text-align: right;
-	}
+	&.alignright {
+	width: 100%;
+	float: none;
 	
-	&.aligncenter .radio-item.grid{
-	flex-direction:initial;
-	text-align: left;
-	
-		.play-icon-wrap{
-		@extend .push-item-left-sm-1;
-   		}
-	}
+		.radio-item.grid{
+		flex-direction:row-reverse;
+		text-align: right;
+		}
 
-	&.alignleft .radio-item.grid{
-	flex-direction:initial;
-	text-align: left;
-	}
+	}//&.alignright
+	
+	&.aligncenter{
+	float: none;
+	width: 100%;
+
+		.radio-item.grid{
+		flex-direction:initial;
+		text-align: left;
+		
+			.play-icon-wrap{
+			@extend .push-item-left-sm-1;
+	   		}
+
+   		}
+
+	}//&.aligncenter
+
+	&.alignleft{
+	float: none;
+	width: 100%;
+
+		.radio-item.grid{
+		flex-direction:initial;
+		text-align: left;
+		}
+
+	}//&.alignleft
+
 
 } //.sound-block

@@ -9,7 +9,7 @@
  */
 
 console.log("inp-base.js loaded")
-/* I need to thinkg properly how to structure my scripts
+/* I need to think properly how to structure my scripts
 
   - Ensure I'm not looading script libraries that I don't need - how does this work with wordpreses enqueu + REST API < do my research first
 

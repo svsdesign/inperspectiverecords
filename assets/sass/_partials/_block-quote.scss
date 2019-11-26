@@ -155,3 +155,20 @@ position: relative;
 	}//&.alignright
 
 } //.quote
+
+/* this is additional styling for the block; admin screen
+- consider a btter approach:
+Move this into a seperate style sheet?
+
+
+*/
+.wp-block{
+
+	&[data-type="acf/inpquote"]{
+
+
+ 
+ 
+	}//	&[data-type="acf/inpquote"]
+
+}//.wp-block

@@ -10,6 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: svsdesign, insperspective records
 Text Domain:  
 */
+/* sitewide styling */
 /* GRID */
 /* END GRID */
 /* start "measurements" & "spacing" */
@@ -3740,7 +3741,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(46deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(89deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -3845,13 +3846,514 @@ a._link-animation:hover span:nth-child(7) {
   -webkit-animation-delay: 0.7s;
 }
 
-/*blocks */
+/*  end sitewide styling */
+/* admin only side styling */
+/* line 1, assets/sass/_partials/_adminstyle-archivelist.scss */
+.wp-admin {
+  /* default */
+  /* used on
+  /releases - becaus of the "scnee fixer"
+   */
+  /* used on /events */
+  /* used on most pages - its requireds to be inside teh section wrap */
+  /*END PAGE TITLES*/
+  /* place into artist css files or summit8?
+  */
+}
+/* line 2, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-position {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  z-index: 97;
+  transform: rotate(90deg);
+}
+/* line 15, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-position.absolute {
+  position: absolute;
+}
+/* line 21, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-position.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  right: initial;
+  /* top: initial; */
+  width: 100vh;
+  height: 100vh;
+  z-index: 97;
+  transform: rotate(-90deg);
+  /* transform-origin: bottom right; */
+  overflow: visible;
+  bottom: 0px;
+}
+/* line 34, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-position.sticky .page-title {
+  position: absolute;
+  bottom: -12.5vw;
+  width: 100vh;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  font-size: 22.4px;
+  text-align: center;
+  height: 12.5vw;
+  line-height: 12.5vw !important;
+  transform: rotate(0deg);
+}
+@media screen and (min-width: 0px) {
+  /* line 34, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-position.sticky .page-title {
+    font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 34, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-position.sticky .page-title {
+    font-size: 22.4px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 34, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-position.sticky .page-title {
+    font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 34, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-position.sticky .page-title {
+    font-size: 33.6px;
+  }
+}
+/* line 50, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.sticky {
+  pointer-events: none;
+  width: 100vw;
+  z-index: 97;
+  position: absolute;
+  top: 0px;
+  /* transform-origin: bottom right; */
+  overflow: visible;
+  bottom: 0px;
+}
+/* line 61, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.sticky .page-titler {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+/* line 68, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.sticky .page-titler .inner {
+  transform-origin: bottom right;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  font-size: 22.4px;
+  text-align: center;
+  transform: rotate(-90deg);
+  width: 100vh;
+  height: 12.5vw;
+  line-height: 12.5vw !important;
+  position: relative;
+  display: block;
+  float: right;
+  top: -12.5vw;
+}
+@media screen and (min-width: 0px) {
+  /* line 68, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-positioner.sticky .page-titler .inner {
+    font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 68, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-positioner.sticky .page-titler .inner {
+    font-size: 22.4px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 68, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-positioner.sticky .page-titler .inner {
+    font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 68, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-positioner.sticky .page-titler .inner {
+    font-size: 33.6px;
+  }
+}
+/* line 89, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.sticky .page-titler.inline {
+  height: 100%;
+}
+/* line 92, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.sticky .page-titler.inline .inner {
+  width: 40vh;
+}
+/* line 102, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.left-side.sticky {
+  pointer-events: none;
+  width: 100vw;
+  z-index: 97;
+  position: absolute;
+  top: 0px;
+  overflow: visible;
+  bottom: 0px;
+}
+/* line 112, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.left-side.sticky .page-titler {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+/* line 119, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+  transform-origin: bottom left;
+  color: white;
+  font-weight: 100;
+  font-size: 14px;
+  font-size: 22.4px;
+  text-align: center;
+  transform: rotate(90deg);
+  width: 100vh;
+  height: 12.5vw;
+  line-height: 12.5vw !important;
+  position: relative;
+  display: block;
+  float: left;
+  top: -12.5vw;
+}
+@media screen and (min-width: 0px) {
+  /* line 119, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+    font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 119, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+    font-size: 22.4px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 119, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+    font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 119, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+    font-size: 33.6px;
+  }
+}
+/* line 137, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.left-side.sticky .page-titler.inline {
+  height: 100%;
+}
+/* line 140, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-positioner.left-side.sticky .page-titler.inline .inner {
+  width: 40vh;
+}
+/* line 154, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title-position.left {
+  right: 87.5%;
+  transform: rotate(90deg);
+}
+/* line 158, assets/sass/_partials/_archivelist.scss */
+.wp-admin .page-title {
+  width: 100vh;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  font-size: 22.4px;
+  position: relative;
+  text-align: center;
+  height: 12.5vw;
+  line-height: 12.5vw !important;
+  transform: rotate(180deg);
+}
+@media screen and (min-width: 0px) {
+  /* line 158, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title {
+    font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 158, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title {
+    font-size: 22.4px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 158, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title {
+    font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 158, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .page-title {
+    font-size: 33.6px;
+  }
+}
+/* line 177, assets/sass/_partials/_archivelist.scss */
+.wp-admin .list-items {
+  width: 75vw;
+  display: block;
+  margin: 10vw auto 10vw auto;
+  position: relative;
+  z-index: 1;
+}
+/* line 185, assets/sass/_partials/_archivelist.scss */
+.wp-admin div.list-item,
+.wp-admin a.list-item {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: block;
+  float: left;
+  clear: both;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  margin-top: -1px;
+  z-index: 1;
+  padding-left: 5px;
+}
+@media (min-width: 640px) {
+  /* line 207, assets/sass/_partials/_archivelist.scss */
+  .wp-admin div.list-item.list-item,
+  .wp-admin a.list-item.list-item {
+    padding-left: 10px;
+  }
+}
+@media (min-width: 960px) {
+  /* line 212, assets/sass/_partials/_archivelist.scss */
+  .wp-admin div.list-item.list-item,
+  .wp-admin a.list-item.list-item {
+    padding-left: 15px;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 217, assets/sass/_partials/_archivelist.scss */
+  .wp-admin div.list-item.list-item,
+  .wp-admin a.list-item.list-item {
+    padding-left: 20px;
+  }
+}
+/* line 222, assets/sass/_partials/_archivelist.scss */
+.wp-admin div.list-item .item-text,
+.wp-admin a.list-item .item-text {
+  animation: blurout 400ms ease-in forwards;
+}
+/* line 227, assets/sass/_partials/_archivelist.scss */
+.wp-admin .list-item:hover {
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  z-index: 2;
+}
+/* line 232, assets/sass/_partials/_archivelist.scss */
+.wp-admin .list-item:hover .item-text {
+  animation: blurin 200ms ease-in forwards;
+}
+/* line 242, assets/sass/_partials/_archivelist.scss */
+.wp-admin .image-items {
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  filter: grayscale(1);
+  top: 0px;
+  bottom: 0px;
+  position: absolute;
+}
+/* line 252, assets/sass/_partials/_archivelist.scss */
+.wp-admin .image-item {
+  width: 100%;
+  height: 0vh;
+  display: none;
+  background-size: cover;
+  opacity: 0;
+  animation: image-blur-out 400ms ease-in-out forwards;
+  filter: blur(10px);
+}
+/* line 264, assets/sass/_partials/_archivelist.scss */
+.wp-admin .image-item {
+  animation: opacityout 400ms ease-in forwards;
+}
+/* line 267, assets/sass/_partials/_archivelist.scss */
+.wp-admin .image-item.active {
+  display: block;
+  height: 100vh;
+  top: 0;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: -webkit-sticky;
+  position: sticky;
+  animation: blurin 200ms ease-in forwards;
+  animation: image-blur-in 400ms ease-in-out forwards;
+}
+/* line 281, assets/sass/_partials/_archivelist.scss */
+.wp-admin .image-item.activated {
+  opacity: 1;
+  animation: blurin 200ms ease-in forwards;
+  animation: image-blur-in 400ms ease-in-out forwards;
+}
+/* line 293, assets/sass/_partials/_archivelist.scss */
+.wp-admin .container.activated .image-items .image-item {
+  animation: image-blur-in-active 400ms ease-in forwards;
+}
+/* line 299, assets/sass/_partials/_archivelist.scss */
+.wp-admin .container.activated .list-items {
+  pointer-events: none;
+  animation: opacityout 400ms ease-in forwards;
+}
+
+/* admin styles for news items */
+/* considerations:
+
+-overal post styles; colours and typography 
+
+
+"I personally started writing an entirely separate stylesheet for Gutenberg (apart from editor-styles.css),
+ targeting elements/block/content within the .editor-visual-editor class.
+"
+TO DO:
+
+- there's some max width overflow, because negative margins are being set by wp. Why?
+And possible is due to their own media querries, that set things like max widths. I'm not sure how to approach this?
+My media querries are always going to be different to their core setup. 
+Its seems stupid - because how can I trule replicate the front < - > backend end if I have to use their media queries. Something that fundamently change my work!?
+Further reading: 	https://github.com/WordPress/gutenberg/issues/6064
+ 					https://jasonyingling.me/working-with-editor-styles-in-gutenberg/
+
+
+*/
+/* line 32, assets/sass/_partials/_adminstyle-news.scss */
+body.wp-admin.post-type-news .editor-styles-wrapper {
+  background-color: #d8d8d8;
+  color: black;
+}
+/* line 41, assets/sass/_partials/_adminstyle-news.scss */
+body.wp-admin.post-type-news .editor-styles-wrapper .wp-block {
+  color: black;
+  max-width: 100%;
+}
+/* line 51, assets/sass/_partials/_adminstyle-news.scss */
+body.wp-admin.post-type-news .editor-styles-wrapper .wp-block[data-align="wide"],
+body.wp-admin.post-type-news .editor-styles-wrapper .wp-block .alignwide {
+  max-width: 100%;
+}
+/* line 56, assets/sass/_partials/_adminstyle-news.scss */
+body.wp-admin.post-type-news .editor-styles-wrapper .wp-block[data-align="full"] {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 66, assets/sass/_partials/_adminstyle-news.scss */
+body.wp-admin.post-type-news .editor-styles-wrapper .wp-block[data-type="acf/inpquote"] .quote-blockquote {
+  margin: auto;
+}
+/* line 76, assets/sass/_partials/_adminstyle-news.scss */
+body.wp-admin.post-type-news .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+  color: black;
+  font-family: "Objectivity", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  line-height: 26px;
+}
+@media screen and (min-width: 0px) {
+  /* line 76, assets/sass/_partials/_adminstyle-news.scss */
+  body.wp-admin.post-type-news .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+    font-size: calc(10px + 10 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 76, assets/sass/_partials/_adminstyle-news.scss */
+  body.wp-admin.post-type-news .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 76, assets/sass/_partials/_adminstyle-news.scss */
+  body.wp-admin.post-type-news .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+    font-size: calc(16px + 14 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 76, assets/sass/_partials/_adminstyle-news.scss */
+  body.wp-admin.post-type-news .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 76, assets/sass/_partials/_adminstyle-news.scss */
+  body.wp-admin.post-type-news .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+    line-height: calc(18px + 8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 76, assets/sass/_partials/_adminstyle-news.scss */
+  body.wp-admin.post-type-news .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+    line-height: 26px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 76, assets/sass/_partials/_adminstyle-news.scss */
+  body.wp-admin.post-type-news .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+    line-height: calc(26px + 6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 76, assets/sass/_partials/_adminstyle-news.scss */
+  body.wp-admin.post-type-news .editor-styles-wrapper .editor-post-title__block .editor-post-title__input {
+    line-height: 32px;
+  }
+}
+
+/*body.wp-admin.post-type-news*/
+/* end admin only side styling */
+/*/ This is to remove all this shite that wordpress is adding?! - I don't understand how badly their style are assigned. 
+// AND / OR It doesn't make any sense to me atm, 
+
+
+How can I re-create my general sitelayout, when they are constraining widths? 
+Surely people design and code their layouts based on the width available, where you would not add additional padding + margins?
+
+- Also, using flexbox is fucking impossible in this!
+
+
+ - review I imagine? 
+
+Further REading:
+https://github.com/WordPress/gutenberg/issues/11888
+
+ */
+/* line 18, assets/sass/_partials/_blocks-reset.scss */
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=left] .block-editor-block-list__block-edit,
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=right] > .block-editor-block-list__block-edit,
+.edit-post-visual-editor .block-editor-block-list__block .block-editor-block-list__block-edit {
+  width: 100%;
+}
+
+/* blocks - styles applied to front and back end */
 /* Testimonial Block */
 /*
 How can ensure that there's no bad overlap - it requires the blcosk not be above each other
 i also need to ensure the z-index of other items is always more - but then would also need transparent bgs?
 */
-/* line 25, assets/sass/_partials/_block-testimonial.scss */
+/* line 25, assets/sass/_partials/_block-quote.scss */
 .quote-block {
   font-size: 10px;
   font-size: 16px;
@@ -3867,102 +4369,102 @@ i also need to ensure the z-index of other items is always more - but then would
   margin-bottom: -52px;
 }
 @media screen and (min-width: 0px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     font-size: calc(10px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     font-size: calc(16px + 14 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     font-size: 30px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     line-height: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     margin-top: calc(-36px + -16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     margin-top: -52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     margin-top: calc(-52px + -12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     margin-top: -64px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     margin-bottom: calc(-36px + -16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     margin-bottom: -52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     margin-bottom: calc(-52px + -12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 25, assets/sass/_partials/_block-testimonial.scss */
+  /* line 25, assets/sass/_partials/_block-quote.scss */
   .quote-block {
     margin-bottom: -64px;
   }
 }
-/* line 35, assets/sass/_partials/_block-testimonial.scss */
+/* line 35, assets/sass/_partials/_block-quote.scss */
 .quote-block .quote-blockquote {
   padding-top: 36px;
   padding-top: 52px;
@@ -3970,54 +4472,54 @@ i also need to ensure the z-index of other items is always more - but then would
   padding-bottom: 52px;
 }
 @media screen and (min-width: 0px) {
-  /* line 35, assets/sass/_partials/_block-testimonial.scss */
+  /* line 35, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-blockquote {
     padding-top: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 35, assets/sass/_partials/_block-testimonial.scss */
+  /* line 35, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-blockquote {
     padding-top: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 35, assets/sass/_partials/_block-testimonial.scss */
+  /* line 35, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-blockquote {
     padding-top: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 35, assets/sass/_partials/_block-testimonial.scss */
+  /* line 35, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-blockquote {
     padding-top: 64px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 35, assets/sass/_partials/_block-testimonial.scss */
+  /* line 35, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-blockquote {
     padding-bottom: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 35, assets/sass/_partials/_block-testimonial.scss */
+  /* line 35, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-blockquote {
     padding-bottom: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 35, assets/sass/_partials/_block-testimonial.scss */
+  /* line 35, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-blockquote {
     padding-bottom: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 35, assets/sass/_partials/_block-testimonial.scss */
+  /* line 35, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-blockquote {
     padding-bottom: 64px;
   }
 }
-/* line 40, assets/sass/_partials/_block-testimonial.scss */
+/* line 40, assets/sass/_partials/_block-quote.scss */
 .quote-block .quote-text-wrap {
   margin: auto;
   padding-top: 4.5px;
@@ -4030,115 +4532,115 @@ i also need to ensure the z-index of other items is always more - but then would
   margin-bottom: 6.5px;
 }
 @media screen and (min-width: 0px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     padding-top: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     padding-top: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     padding-top: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     padding-top: 8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     padding-bottom: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     padding-bottom: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     padding-bottom: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     padding-bottom: 8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     margin-top: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     margin-top: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     margin-top: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     margin-top: 8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     margin-bottom: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     margin-bottom: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     margin-bottom: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 40, assets/sass/_partials/_block-testimonial.scss */
+  /* line 40, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap {
     margin-bottom: 8px;
   }
 }
-/* line 48, assets/sass/_partials/_block-testimonial.scss */
+/* line 48, assets/sass/_partials/_block-quote.scss */
 .quote-block .quote-text-wrap .quote-inner-text-wrap {
   border-top: 1px solid;
   border-bottom: 1px solid;
   z-index: 3;
 }
-/* line 56, assets/sass/_partials/_block-testimonial.scss */
+/* line 56, assets/sass/_partials/_block-quote.scss */
 .quote-block .quote-text-wrap .quote-text {
   position: relative;
   z-index: 2;
   display: block;
   clear: both;
 }
-/* line 63, assets/sass/_partials/_block-testimonial.scss */
+/* line 63, assets/sass/_partials/_block-quote.scss */
 .quote-block .quote-text-wrap .quote-author {
   font-size: 10px;
   font-size: 12.8px;
@@ -4151,78 +4653,78 @@ i also need to ensure the z-index of other items is always more - but then would
   width: auto;
 }
 @media screen and (min-width: 0px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     line-height: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     padding-top: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     padding-top: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     padding-top: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 63, assets/sass/_partials/_block-testimonial.scss */
+  /* line 63, assets/sass/_partials/_block-quote.scss */
   .quote-block .quote-text-wrap .quote-author {
     padding-top: 8px;
   }
 }
-/* line 74, assets/sass/_partials/_block-testimonial.scss */
+/* line 74, assets/sass/_partials/_block-quote.scss */
 .quote-block .quote-image {
   position: absolute;
   background-size: cover;
@@ -4231,59 +4733,65 @@ i also need to ensure the z-index of other items is always more - but then would
   height: 100%;
   background-repeat: no-repeat;
 }
-/* line 92, assets/sass/_partials/_block-testimonial.scss */
+/* line 92, assets/sass/_partials/_block-quote.scss */
 .quote-block.alignleft {
   text-align: left;
 }
-/* line 95, assets/sass/_partials/_block-testimonial.scss */
+/* line 95, assets/sass/_partials/_block-quote.scss */
 .quote-block.alignleft .grid.align-position {
   justify-content: flex-start;
 }
-/* line 99, assets/sass/_partials/_block-testimonial.scss */
+/* line 99, assets/sass/_partials/_block-quote.scss */
 .quote-block.alignleft .quote-image {
   right: 0;
 }
-/* line 106, assets/sass/_partials/_block-testimonial.scss */
+/* line 106, assets/sass/_partials/_block-quote.scss */
 .quote-block.alignleft .quote-author {
   float: right;
 }
-/* line 114, assets/sass/_partials/_block-testimonial.scss */
+/* line 114, assets/sass/_partials/_block-quote.scss */
 .quote-block.aligncenter {
   text-align: center;
 }
-/* line 117, assets/sass/_partials/_block-testimonial.scss */
+/* line 117, assets/sass/_partials/_block-quote.scss */
 .quote-block.aligncenter .quote-image {
   left: 12.5%;
   right: 12.5%;
 }
-/* line 121, assets/sass/_partials/_block-testimonial.scss */
+/* line 121, assets/sass/_partials/_block-quote.scss */
 .quote-block.aligncenter .grid.align-position {
   justify-content: center;
 }
-/* line 128, assets/sass/_partials/_block-testimonial.scss */
+/* line 128, assets/sass/_partials/_block-quote.scss */
 .quote-block.aligncenter .quote-author {
   margin: auto;
   text-align: center;
   width: 100%;
   display: block;
 }
-/* line 137, assets/sass/_partials/_block-testimonial.scss */
+/* line 137, assets/sass/_partials/_block-quote.scss */
 .quote-block.alignright {
   text-align: right;
 }
-/* line 140, assets/sass/_partials/_block-testimonial.scss */
+/* line 140, assets/sass/_partials/_block-quote.scss */
 .quote-block.alignright .quote-image {
   left: 0;
 }
-/* line 144, assets/sass/_partials/_block-testimonial.scss */
+/* line 144, assets/sass/_partials/_block-quote.scss */
 .quote-block.alignright .grid.align-position {
   justify-content: flex-end;
 }
-/* line 151, assets/sass/_partials/_block-testimonial.scss */
+/* line 151, assets/sass/_partials/_block-quote.scss */
 .quote-block.alignright .quote-author {
   float: left;
 }
 
+/* this is additional styling for the block; admin screen
+- consider a btter approach:
+Move this into a seperate style sheet?
+
+
+*/
 /* Credit Block */
 /* line 4, assets/sass/_partials/_block-credit.scss */
 .alignleft {
@@ -4725,37 +5233,765 @@ i also need to ensure the z-index of other items is always more - but then would
   }
 }
 /* line 52, assets/sass/_partials/_block-sound.scss */
+.sound-block.alignright {
+  width: 100%;
+  float: none;
+}
+/* line 56, assets/sass/_partials/_block-sound.scss */
 .sound-block.alignright .radio-item.grid {
   flex-direction: row-reverse;
   text-align: right;
 }
-/* line 57, assets/sass/_partials/_block-sound.scss */
+/* line 63, assets/sass/_partials/_block-sound.scss */
+.sound-block.aligncenter {
+  float: none;
+  width: 100%;
+}
+/* line 67, assets/sass/_partials/_block-sound.scss */
 .sound-block.aligncenter .radio-item.grid {
   flex-direction: initial;
   text-align: left;
 }
-/* line 66, assets/sass/_partials/_block-sound.scss */
+/* line 79, assets/sass/_partials/_block-sound.scss */
+.sound-block.alignleft {
+  float: none;
+  width: 100%;
+}
+/* line 83, assets/sass/_partials/_block-sound.scss */
 .sound-block.alignleft .radio-item.grid {
   flex-direction: initial;
   text-align: left;
 }
 
-/* Release Block */
-/* line 4, assets/sass/_partials/_block-release.scss */
+/* Release Block 
+TO - tidy this up, I feel there's a lot of excess code - and not very well organised either
+
+*/
+/* line 7, assets/sass/_partials/_block-release.scss */
 .release-block {
   width: 100%;
+  /* .release-details */
+  /* start (one) record */
+  /* end (one) record */
+  /* start two records */
+  /* end two records */
+  /* start three records */
+  /* end three records */
 }
-/* line 7, assets/sass/_partials/_block-release.scss */
+/* line 10, assets/sass/_partials/_block-release.scss */
 .release-block a {
   width: 100%;
 }
-/* line 10, assets/sass/_partials/_block-release.scss */
-.release-block a .release-details {
+/* line 14, assets/sass/_partials/_block-release.scss */
+.release-block #container {
+  background: black;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: block;
+  position: relative;
+}
+/* line 23, assets/sass/_partials/_block-release.scss */
+.release-block .record-circle-container {
+  display: block;
+  height: 37.5vw;
+  padding: 0;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 6.25vw;
+  padding-bottom: 6.25vw;
+}
+/* line 35, assets/sass/_partials/_block-release.scss */
+.release-block .inner-container {
+  margin: auto;
+  position: relative;
+  width: 25vw;
+}
+/* line 41, assets/sass/_partials/_block-release.scss */
+.release-block .sleave-square {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 25vw;
+  pointer-events: none;
+  z-index: 92;
+}
+/* line 51, assets/sass/_partials/_block-release.scss */
+.release-block .sleave-square.inner-back {
+  position: absolute;
+  margin: auto;
+  display: block;
+  width: 25vw;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 25vw;
+  bottom: 0;
+  z-index: 80;
+}
+/* line 66, assets/sass/_partials/_block-release.scss */
+.release-block .sleave-square.inner-sleave {
+  position: absolute;
+  margin: auto;
+  display: block;
+  width: 25vw;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 25vw;
+  bottom: 0;
+  z-index: 91;
+  animation: moveleft 500ms ease-out forwards;
+}
+/* line 82, assets/sass/_partials/_block-release.scss */
+.release-block .active .sleave-square.inner-sleave {
+  animation-iteration-count: 1;
+  animation: moverighttwo 500ms ease-in-out forwards;
+}
+/* line 87, assets/sass/_partials/_block-release.scss */
+.release-block .record-sleave {
+  display: block;
+  width: 25vw;
+  height: 25vw;
+  position: absolute;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+/* line 96, assets/sass/_partials/_block-release.scss */
+.release-block .active.record-sleave {
+  opacity: 0;
+  animation-iteration-count: 1;
+  animation: decreaseopacity 1000ms ease-out forwards;
+}
+/* line 103, assets/sass/_partials/_block-release.scss */
+.release-block .release-details {
   color: black;
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-family: "objectivity", sans-serif;
+  font-size: 10.8px;
+  font-size: 15.6px;
+  line-height: 12.6px;
+  line-height: 18.2px;
+  margin-top: -12.6px;
+  margin-top: -18.2px;
+  top: 6.25vw;
+  left: -25vw;
+  padding-top: 6.25vw;
+  padding-bottom: 6.25vw;
+  opacity: 0;
+  animation-iteration-count: 1;
+  animation: decreaseopacity 500ms ease-out forwards;
+}
+@media screen and (min-width: 0px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    font-size: calc(10.8px + 4.8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    font-size: 15.6px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    font-size: calc(15.6px + 3.6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    font-size: 19.2px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    line-height: calc(12.6px + 5.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    line-height: 18.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    line-height: calc(18.2px + 4.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    line-height: 22.4px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    margin-top: calc(-12.6px + -5.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    margin-top: -18.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    margin-top: calc(-18.2px + -4.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    margin-top: -22.4px;
+  }
+}
+@media (min-width: 640px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    font-size: 14.4px;
+    font-size: 20.8px;
+    line-height: 16.2px;
+    line-height: 23.4px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 0px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    font-size: calc(14.4px + 6.4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    font-size: 20.8px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    font-size: calc(20.8px + 4.8 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 1440px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    font-size: 25.6px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 0px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    line-height: calc(16.2px + 7.2 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    line-height: 23.4px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 960px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    line-height: calc(23.4px + 5.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 1440px) {
+  /* line 103, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details {
+    line-height: 28.8px;
+  }
 }
 
+/* line 128, assets/sass/_partials/_block-release.scss */
+.release-block .release-details .release-code {
+  font-weight: 100;
+  padding-bottom: 5.4px;
+  padding-bottom: 7.8px;
+  font-size: 7.2px;
+  font-size: 10.4px;
+  line-height: 7.2px;
+  line-height: 10.4px;
+}
+@media screen and (min-width: 0px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    padding-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    padding-bottom: 7.8px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    padding-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    padding-bottom: 9.6px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    font-size: 10.4px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    font-size: 12.8px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    line-height: calc(7.2px + 3.2 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    line-height: 10.4px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    line-height: calc(10.4px + 2.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 128, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-code {
+    line-height: 12.8px;
+  }
+}
+/* line 135, assets/sass/_partials/_block-release.scss */
+.release-block .release-details .release-artists {
+  font-weight: 400;
+  font-style: italic;
+  padding-bottom: 3.6px;
+  padding-bottom: 5.2px;
+}
+@media screen and (min-width: 0px) {
+  /* line 135, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artists {
+    padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 135, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artists {
+    padding-bottom: 5.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 135, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artists {
+    padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 135, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artists {
+    padding-bottom: 6.4px;
+  }
+}
+/* line 142, assets/sass/_partials/_block-release.scss */
+.release-block .release-details .release-artist {
+  float: left;
+  font-weight: 400;
+  font-style: italic;
+  padding-bottom: 3.6px;
+  padding-bottom: 5.2px;
+  font-size: 10.8px;
+  font-size: 15.6px;
+  line-height: 12.6px;
+  line-height: 18.2px;
+}
+@media screen and (min-width: 0px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    padding-bottom: 5.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    padding-bottom: 6.4px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    font-size: calc(10.8px + 4.8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    font-size: 15.6px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    font-size: calc(15.6px + 3.6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    font-size: 19.2px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    line-height: calc(12.6px + 5.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    line-height: 18.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    line-height: calc(18.2px + 4.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 142, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-artist {
+    line-height: 22.4px;
+  }
+}
+/* line 153, assets/sass/_partials/_block-release.scss */
+.release-block .release-details .release-artist:after {
+  content: '';
+  white-space: pre-wrap;
+}
+/* line 158, assets/sass/_partials/_block-release.scss */
+.release-block .release-details .release-title {
+  font-weight: 600;
+  padding-bottom: 5.4px;
+  padding-bottom: 7.8px;
+}
+@media screen and (min-width: 0px) {
+  /* line 158, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-title {
+    padding-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 158, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-title {
+    padding-bottom: 7.8px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 158, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-title {
+    padding-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 158, assets/sass/_partials/_block-release.scss */
+  .release-block .release-details .release-title {
+    padding-bottom: 9.6px;
+  }
+}
+/* line 164, assets/sass/_partials/_block-release.scss */
+.release-block .release-details .release-artist:last-child:after {
+  content: '';
+}
+/* line 172, assets/sass/_partials/_block-release.scss */
+.release-block .active .release-details {
+  opacity: 1;
+  animation-iteration-count: 1;
+  animation: increaseopacity 1000ms ease-in forwards;
+  z-index: 93;
+  pointer-events: none;
+}
+/* line 181, assets/sass/_partials/_block-release.scss */
+.release-block .record-circle {
+  height: 25vw;
+  width: 100%;
+  margin: auto;
+  display: block;
+  position: relative;
+  z-index: 90;
+  overflow: hidden;
+}
+/* line 190, assets/sass/_partials/_block-release.scss */
+.release-block .record-item {
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  z-index: 1;
+}
+/* line 196, assets/sass/_partials/_block-release.scss */
+.release-block .record-label {
+  z-index: 2;
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+}
+/* line 207, assets/sass/_partials/_block-release.scss */
+.release-block .inner-container {
+  z-index: 30;
+}
+/* line 210, assets/sass/_partials/_block-release.scss */
+.release-block .inner-container.two {
+  z-index: 20;
+}
+/* line 213, assets/sass/_partials/_block-release.scss */
+.release-block .inner-container.three {
+  z-index: 10;
+}
+/* line 217, assets/sass/_partials/_block-release.scss */
+.release-block .rotated .record-item {
+  animation: moveleft 500ms ease-out forwards;
+}
+/* line 222, assets/sass/_partials/_block-release.scss */
+.release-block .rotated .record-label {
+  animation: rollingleft 500ms ease-out forwards, moveleft 500ms ease-out forwards;
+}
+/* line 227, assets/sass/_partials/_block-release.scss */
+.release-block .rotated.rotate .record-item {
+  animation-iteration-count: 1;
+  animation: moveright 500ms ease-out forwards;
+  left: 0px;
+}
+/* line 233, assets/sass/_partials/_block-release.scss */
+.release-block .rotate .record-label {
+  animation-iteration-count: 1;
+  animation: rollingright 500ms ease-out forwards, moveright 500ms ease-out forwards;
+  left: 0px;
+}
+@keyframes rollingright {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes moveright {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 12.5vw;
+  }
+}
+@keyframes rollingleft {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes moveleft {
+  0% {
+    left: 12.5vw;
+  }
+  100% {
+    left: 0px;
+  }
+}
+/* line 279, assets/sass/_partials/_block-release.scss */
+.release-block .rotated .record-item.two {
+  animation: movelefttwo 500ms ease-out forwards;
+}
+/* line 284, assets/sass/_partials/_block-release.scss */
+.release-block .rotated .record-label.two {
+  animation: rollinglefttwo 500ms ease-out forwards, movelefttwo 500ms ease-out forwards;
+}
+/* line 287, assets/sass/_partials/_block-release.scss */
+.release-block .rotated.rotate .record-item.two {
+  animation-iteration-count: 1;
+  animation: moverighttwo 500ms ease-out forwards;
+  left: 0px;
+}
+/* line 295, assets/sass/_partials/_block-release.scss */
+.release-block .rotate .record-label.two {
+  animation-iteration-count: 1;
+  animation: rollingrighttwo 500ms ease-out forwards, moverighttwo 500ms ease-out forwards;
+  left: 0px;
+}
+@keyframes rollingrighttwo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moverighttwo {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 25vw;
+  }
+}
+@keyframes rollinglefttwo {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes movelefttwo {
+  0% {
+    left: 25vw;
+  }
+  100% {
+    left: 0px;
+  }
+}
+/* line 332, assets/sass/_partials/_block-release.scss */
+.release-block .rotated .record-item.three {
+  animation: moveleftthree 500ms ease-out forwards;
+}
+/* line 337, assets/sass/_partials/_block-release.scss */
+.release-block .rotated .record-label.three {
+  animation: rollingleftthree 500ms ease-out forwards,  moveleftthree 500ms ease-out forwards;
+}
+/* line 342, assets/sass/_partials/_block-release.scss */
+.release-block .rotated.rotate .record-item.three {
+  animation-iteration-count: 1;
+  animation: moverightthree 500ms ease-out forwards;
+  left: 0px;
+}
+/* line 350, assets/sass/_partials/_block-release.scss */
+.release-block .rotate .record-label.three {
+  animation-iteration-count: 1;
+  animation: rollingrightthree 500ms ease-out forwards, moverightthree 500ms ease-out forwards;
+  left: 0px;
+}
+@keyframes rollingrightthree {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(540deg);
+  }
+}
+@keyframes moverightthree {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 37.5vw;
+  }
+}
+@keyframes rollingleftthree {
+  from {
+    transform: rotate(540deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes moveleftthree {
+  0% {
+    left: 37.5vw;
+  }
+  100% {
+    left: 0px;
+  }
+}
 /* end blocks */
 /*
 compass watch ~/sites/inp-wp/wp-content/themes/inperspectiverecords/
 cd ~/sites/inp-wp/wp-content/themes/inperspectiverecords/
+*/
+/* further reading:
+
+https://github.com/WordPress/gutenberg
+- Official Guttenberg project
+
+	A. Theme support:
+	- https://developer.wordpress.org/block-editor/developers/themes/theme-support/
+
+
+https://robinroelofsen.com/editor-styling-gutenberg
+- some insights regardign styling blocks on admin style
+
+
+https://github.com/WordPress/gutenberg/issues/9534
+- Debate on approach to admin themuing issues
+
+https://github.com/WordPress/gutenberg/issues/4001
+- further chat about styles "bleeding" across admin views
+
+https://github.com/WordPress/gutenberg/issues/5360
+- Blocks and Theme Styling Overview #5360
+
+
+https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/editor.scss
+- editor styles; 
+
+
+https://johnregan3.wordpress.com/2018/12/21/how-to-add-custom-editor-styles-to-gutenberg/
+- starting point for styling - css file included
+
+https://jasonyingling.me/working-with-editor-styles-in-gutenberg/
+- 'Working with Editor Styles in Gutenberg'
+
+
+http://jschof.com/gutenberg-blocks/tutorial/beginner-gutenberg-block-an-easy-media-block-with-media-upload-and-richtext/
+- building a guttenberg block - using react - so I guess eventually I will need to learn this :(
 */

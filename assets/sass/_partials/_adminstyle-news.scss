@@ -1,0 +1,84 @@
+/* admin styles for news items */
+
+/* considerations:
+
+-overal post styles; colours and typography 
+
+
+"I personally started writing an entirely separate stylesheet for Gutenberg (apart from editor-styles.css),
+ targeting elements/block/content within the .editor-visual-editor class.
+"
+TO DO:
+
+- there's some max width overflow, because negative margins are being set by wp. Why?
+And possible is due to their own media querries, that set things like max widths. I'm not sure how to approach this?
+My media querries are always going to be different to their core setup. 
+Its seems stupid - because how can I trule replicate the front < - > backend end if I have to use their media queries. Something that fundamently change my work!?
+Further reading: 	https://github.com/WordPress/gutenberg/issues/6064
+ 					https://jasonyingling.me/working-with-editor-styles-in-gutenberg/
+
+
+*/
+
+
+
+body.wp-admin.post-type-news{
+
+
+
+	.editor-visual-editor{
+ 	}
+
+	.editor-styles-wrapper{
+	background-color:$news-background-color;
+	color: $news-text-color;
+
+		.block-editor-block-list__layout{
+		//padding-left: 0px;  // to override existing - 46px - but these are used to ensure UI elmennts fit inside
+		//padding-right: 0px; // to override existing - 46px	 - but these are used to ensure UI elmennts fit inside
+		}
+
+		.wp-block{
+		color: $news-text-color;
+		max-width: 100%; // to override existing max width
+		//padding-left: 0px;  // to override existing - 46px - but these are used to ensure UI elmennts fit inside
+		//padding-right: 0px; // to override existing - 46px - but these are used to ensure UI elmennts fit inside
+		//overflow: hidden; // to solve the overflow issue - but fucks up my UI
+		//height: auto;
+
+			// aligmnents
+
+			&[data-align="wide"],
+			.alignwide {
+			 max-width: 100%;
+			}
+
+			&[data-align="full"]
+			{
+				max-width: 100%; // 
+				margin-left: auto;
+				margin-right: auto;
+			}
+			//end allignments
+
+			&[data-type="acf/inpquote"]{
+
+			.quote-blockquote{
+			margin: auto;
+			}
+	 
+	 
+			}//	&[data-type="acf/inpquote"]
+
+	
+ 		}//.wp-block	
+
+		.editor-post-title__block .editor-post-title__input{
+		color: $news-text-color;
+		font-family: $fontfamily;
+		@include h1;	
+		}
+
+	}
+
+} /*body.wp-admin.post-type-news*/

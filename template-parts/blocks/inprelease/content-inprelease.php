@@ -24,6 +24,7 @@ if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
 
+
 // Load values and assing defaults.
 //$sound = get_field('sound') ?: 'sc track id';
 
@@ -145,3 +146,10 @@ $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relations
       <?php endif;?>
 
 </div><!-- .block -->
+<?php//
+//    wp_enqueue_script('enquire', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inprelease/assets/js/script.js', array('jquery'), null, true );
+?>
+<script>
+
+
+</script>

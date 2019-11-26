@@ -1,6 +1,9 @@
 To Do:
 
-	
+- Home page
+
+ - Designs?
+ 
 
 - Artists
 
@@ -114,7 +117,7 @@ PAGES TO add
 		Addition blocks:
 			- A merch block. Image & copy + link to 3rd party if required. Design > Code
 
-
+	- How to disavle blocks that I don't want.https://rudrastyh.com/gutenberg/remove-default-blocks.html
 
 
 Tidy up To Do's:
@@ -133,7 +136,7 @@ CROSSBROWSER
 
 	Chris' Laptop:
 
-	- fonts not rendering?
+	- fonts not rendering? - sort @fontface
 	- check on a windows platform - Use Stu's laptop.
 	- Images were loading very slow - looked like imagesloaded not being used, or only on selected content - check this
 	-

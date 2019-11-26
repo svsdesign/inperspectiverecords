@@ -46,6 +46,12 @@ REGISTER PAGE TYPES
 - about
 - t&c
 
+
+
+- Further considerations:
+disabling some of the standard blocks - i.e especially the layout; collumns and tables etc.
+     - Related reading: https://developer.wordpress.org/block-editor/developers/themes/theme-support/
+    - Do I use block manager or just allow/confgure blocks via php? Markup exmaple below
 */
 
 
@@ -255,30 +261,24 @@ function wpse324908_allowed_block_types( $allowed_blocks, $post ) {
 }
 //end allow only certain blocks:
 
+ */
 
-/* https://joeyfarruggio.com/wordpress/custom-gutenberg-block-advanced-custom-fields/
-<?php
-// Enqueue your block styles in wp-admin
-function your_theme_admin_styles() {
-wp_enqueue_style('admin-blocks', get_theme_file_uri('/css/admin.css'), array(), '20180820');
-}
-add_action( 'admin_enqueue_scripts', 'your_theme_admin_styles' );
-*/
+function my_admin_block_assets() {
+//https://wp.zacgordon.com/2017/12/26/how-to-add-javascript-and-css-to-gutenberg-blocks-the-right-way-in-plugins-and-themes/
+//https://support.advancedcustomfields.com/forums/topic/js-fires-before-block-is-rendered/
+//https://kinsta.com/blog/critical-rendering-path/
+//https://modularwp.com/gutenberg-block-custom-styles/
 
-//https://jacobmartella.com/2019/01/16/creating-gutenberg-blocks-advanced-custom-fields/
- 
- // as per:    https://www.advancedcustomfields.com/blog/acf-5-8-introducing-acf-blocks-for-gutenberg/
-//start quote block
-
-    // Enqueue your block styles in wp-admin
-
-function your_theme_admin_styles() {
 //wp_enqueue_style('admin-artist-block',''.get_stylesheet_directory_uri().'/template-parts/blocks/inpartist/assets/css/style.css', array(), '1');
 wp_enqueue_style('admin-blocks',''.get_stylesheet_directory_uri().'/admin-style.css', array(), '1');
 
-}
-add_action( 'admin_enqueue_scripts', 'your_theme_admin_styles' );
+ 
 
+}
+add_action( 'enqueue_block_editor_assets', 'my_admin_block_assets' );
+
+
+ 
 
 add_action('acf/init', 'my_acf_init');
 function my_acf_init() {
@@ -295,14 +295,12 @@ function my_acf_init() {
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'common',
             'enqueue_assets'    => function(){
-            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
-            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
-            wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
-  //         admin_enqueue_scripts( 'admin-quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/style.js', array( 'jquery' ), null, true );
-//enqueue_block_editor_assets
-         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+                //  wp_enqueue_script('inp-quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), '', true );
             },
             'icon'              => 'editor-quote',
+          //  'mode'              => 'preview',//"auto" or "preview" This lets you control how the block is presented the Gutenberg block editor. The default is “auto” which renders the block to match the frontend until you select it, then it becomes an editor. If set to “preview” it will always look like the frontend and you can edit content in the sidebar.
+            'supports'           => array( 'mode' => false ),//If set to “Edit” it appears like a metabox in the content area. The user can switch the mode by clicking the button in the top right corner, unless you specifically disable it with 
+
             'keywords'          => array( 'inpquote'),
         ));
 
@@ -316,10 +314,7 @@ function my_acf_init() {
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
             'enqueue_assets'    => function(){
-            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
-            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
-          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
-         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+            //  wp_enqueue_script('inp-credit-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpcredit/assets/js/script.js', array( 'jquery' ), '', true );
             },
             'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
             'keywords'          => array( 'inpcredit'),
@@ -335,10 +330,7 @@ function my_acf_init() {
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
             'enqueue_assets'    => function(){
-            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
-            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
-          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
-         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+            //  wp_enqueue_script('inp-artist-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpartist/assets/js/script.js', array( 'jquery' ), '', true );
             },
             'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
             'keywords'          => array( 'inpartist'),
@@ -354,10 +346,7 @@ function my_acf_init() {
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
             'enqueue_assets'    => function(){
-            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
-            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
-          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
-         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+            //  wp_enqueue_script('inp-text-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inptext/assets/js/script.js', array( 'jquery' ), '', true );
             },
             'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
             'keywords'          => array( 'inptext'),
@@ -373,16 +362,13 @@ function my_acf_init() {
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
             'enqueue_assets'    => function(){
-            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
-            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
-          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
-         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
+           //  wp_enqueue_script('inp-sound-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpsound/assets/js/script.js', array( 'jquery' ), '', true );
+
             },
             'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
             'keywords'          => array( 'inpsound'),
         ));
-
-    
+  
     // register a release block:
     
         acf_register_block(array(
@@ -392,13 +378,27 @@ function my_acf_init() {
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
             'enqueue_assets'    => function(){
-            //not using this atm - as I'm adding any markup to the main style sheet:  wp_enqueue_style( 'quote-style', ''.get_stylesheet_directory_uri().'/template-parts/blocks/quote/assets/css/style.css', false );
-            //wp_enqueue_style( 'slick-slider-css', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, 'all');
-          //  wp_enqueue_script('quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), null, true );
-         //   wp_enqueue_script('slick-slider-init', get_template_directory_uri() . '/blocks/scripts/logo-carousel.js', array(), null, true );
-            },
+              wp_enqueue_script('inp-release-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inprelease/assets/js/script.js', array( 'jquery' ), '', true );
+           },
             'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
             'keywords'          => array( 'inprelease'),
+        ));
+
+     // register an image block:
+       
+        acf_register_block(array(
+            'name'              => 'inpimage',
+            'title'             => __('Inp Image'),
+            'description'       => __('A custom image block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',
+            'enqueue_assets'    => function(){
+                //  wp_enqueue_script('inp-quote-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpquote/assets/js/script.js', array( 'jquery' ), '', true );
+            },
+            'icon'              => 'format-image',
+          //'mode'              => 'preview',//"auto" or "preview" This lets you control how the block is presented the Gutenberg block editor. The default is “auto” which renders the block to match the frontend until you select it, then it becomes an editor. If set to “preview” it will always look like the frontend and you can edit content in the sidebar.
+            'supports'          => array( 'mode' => false ),
+            'keywords'          => array( 'inpimage'),
         ));
 
 
@@ -424,56 +424,7 @@ function my_acf_block_render_callback( $block ) {
 
 }
 
-/*
-// old:
-    function register_acf_block_types() {
-// assigning js + css?
-
-//https://www.billerickson.net/block-styles-in-gutenberg/
- //end asigning js + css - this the best approcah?
-
  
-      // enqueing syles for blcoks
-       
-       //https://jasonyingling.me/enqueueing-scripts-and-styles-for-gutenberg-blocks/
-
-       
-
-        // register a quote block.
-        acf_register_block_type(array(
-            'name'              => 'quote',
-            'title'             => __('quote'),
-            'description'       => __('A custom quote block.'),
-            'render_template'   => 'template-parts/blocks/quote/quote.php',
-            'category'          => 'formatting',
-            'icon'              => 'admin-comments',
-            'keywords'          => array( 'quote', 'quote' ),
-        ));
-    }
-
-    // Check if function exists and hook into setup.
-    if( function_exists('acf_register_block_type') ) {
-        add_action('acf/init', 'register_acf_block_types');
-    }
-
-
-function my_acf_block_render_callback( $block ) {
-    
-    // convert name ("acf/quote") into path friendly slug ("quote")
-    $slug = str_replace('acf/', '', $block['name']);
-    
-    // include a template part from within the "template-parts/block" folder
-    if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
-        include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
-    }
-}
-
-
-//end quote block
-end old blcok markup
-*/
-    /* NEWS */
-
 
 	/* RELEASES */
 
