@@ -9,17 +9,38 @@ width: 100%;// this dirty?
 
 		
 	.play-icon-wrap{
-	width: 12.5vw;
+		/* using viewports values is not going to work 
+		- because I don't get 100vw to layout content; 
+		meaning thigns are basically enlongated if usaing vw for heigth values
+
+		*/
+	// width: 12.5vw;
+	 //	@extend .grid-item-xs-1;
+	// width: 12.5%;
+	 @include cssvalue(width, 2); // this for vertical measuring 
+	 @include cssvalue(height, 2); // this for vertical measuring 
+
+	//height: 12.5vw;
 	overflow: hidden;
 	float: left;
 	@extend .grid-item;
+	//position: absolute;//review
 	}
 
 	.play-toggle{
+
+	height: 100%;
+    width: 100%;
+	//max-width: 80px;
 	border-radius:50%;
-	margin:10% 20%;
-	padding:20%;
+	margin:auto;// was10% 20%;
+	padding:30%;
 	background: $black;	
+
+	 	@media (min-width: map-get($breakpoints,lg)) {
+		//padding:40%;
+		}
+
 	}
 	.play-toggle.small{
 	//padding: 25% 0;
@@ -60,6 +81,9 @@ width: 100%;// this dirty?
 		flex-direction:row-reverse;
 		text-align: right;
 		}
+		.details-wrap{
+		@extend .push-item-right-xs-1;
+		}
 
 	}//&.alignright
 	
@@ -87,8 +111,14 @@ width: 100%;// this dirty?
 		flex-direction:initial;
 		text-align: left;
 		}
+		.details-wrap{
+		@extend .push-item-left-xs-1;
+		}
 
 	}//&.alignleft
 
+	.details-wrap{
+	min-height: 12.5vw;//ensure visbilty
+	}
 
 } //.sound-block
