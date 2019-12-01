@@ -81,8 +81,8 @@
 @font-face {
     font-family: 'Objectivity';
     src: local('Objectivity Medium Slanted'), local('Objectivity-MediumSlanted'),
-        url('../fonts/Objectivity-MediumSlanted.woff2') format('woff2'),
-        url('../fonts/Objectivity-MediumSlanted.woff') format('woff');
+        url('./assets/fonts/Objectivity-MediumSlanted.woff2') format('woff2'),
+        url('./assets/fonts/Objectivity-MediumSlanted.woff') format('woff');
     font-weight: 500; //$boldweight: 500;
     font-style: italic;
 }
@@ -90,8 +90,8 @@
 @font-face {
     font-family: 'Objectivity';
     src: local('Objectivity Thin Slanted'), local('Objectivity-ThinSlanted'),
-        url('../fonts/Objectivity-ThinSlanted.woff2') format('woff2'),
-        url('../fonts/Objectivity-ThinSlanted.woff') format('woff');
+        url('./assets/fonts/Objectivity-ThinSlanted.woff2') format('woff2'),
+        url('./assets/fonts/Objectivity-ThinSlanted.woff') format('woff');
     font-weight: 100;
     font-style: italic;
 }
@@ -118,8 +118,8 @@
 @font-face {
     font-family: 'Objectivity';
     src: local('Objectivity Regular Slanted'), local('Objectivity-RegularSlanted'),
-        url('../fonts/Objectivity-RegularSlanted.woff2') format('woff2'),
-        url('../fonts/Objectivity-RegularSlanted.woff') format('woff');
+        url('./assets/fonts/Objectivity-RegularSlanted.woff2') format('woff2'),
+        url('./assets/fonts/Objectivity-RegularSlanted.woff') format('woff');
     font-weight: normal;//  $mediumweight: 400;
     font-style: italic;
 }
@@ -127,8 +127,8 @@
 @font-face {
     font-family: 'Objectivity';
     src: local('Objectivity Medium'), local('Objectivity-Medium'),
-        url('../fonts/Objectivity-Medium.woff2') format('woff2'),
-        url('../fonts/Objectivity-Medium.woff') format('woff');
+        url('./assets/fonts/Objectivity-Medium.woff2') format('woff2'),
+        url('./assets/fonts/Objectivity-Medium.woff') format('woff');
     font-weight: 500; //$boldweight
     font-style: normal;
 }

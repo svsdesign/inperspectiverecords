@@ -207,8 +207,10 @@ var radioscriptloaded, // set as undefined initially;//
                               //client_id: '95f22ed54a5c297b1c41f72d713623ef' // Client id foudn here https://github.com/mediaelement/mediaelement/issues/2501 -
                               client_id: 'ssV1Qfh3hGcBHMcuZ3bz3xHb3aoP5KUB'
                           });
+                          //Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause().
+                          //https://developers.google.com/web/updates/2017/06/play-request-was-interrupted < review
 
-
+                          console.log("SC"+ SC +"");
 
                           var myCustomFunction = function (track) {
 
@@ -319,6 +321,7 @@ function WaitForSoundcloud() {
     }
 
    // https://stackoverflow.com/questions/30906134/sc-is-not-defined-when-using-soundcloud-sdk
+   // talk about thi https://jshint.com/docs/
 
 }
 
