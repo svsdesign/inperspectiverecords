@@ -3741,7 +3741,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(41deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(66deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -4111,7 +4111,7 @@ a._link-animation:hover span:nth-child(7) {
   position: relative;
   z-index: 1;
 }
-/* line 185, assets/sass/_partials/_archivelist.scss */
+/* line 186, assets/sass/_partials/_archivelist.scss */
 .wp-admin div.list-item,
 .wp-admin a.list-item {
   text-decoration: none;
@@ -4120,9 +4120,10 @@ a._link-animation:hover span:nth-child(7) {
   display: block;
   float: left;
   clear: both;
-  height: 60px;
-  line-height: 60px;
+  height: 60px !important;
+  line-height: 60px !important;
   width: 100%;
+  font-weight: 400;
   overflow: hidden;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -4131,42 +4132,42 @@ a._link-animation:hover span:nth-child(7) {
   padding-left: 5px;
 }
 @media (min-width: 640px) {
-  /* line 207, assets/sass/_partials/_archivelist.scss */
+  /* line 209, assets/sass/_partials/_archivelist.scss */
   .wp-admin div.list-item.list-item,
   .wp-admin a.list-item.list-item {
     padding-left: 10px;
   }
 }
 @media (min-width: 960px) {
-  /* line 212, assets/sass/_partials/_archivelist.scss */
+  /* line 214, assets/sass/_partials/_archivelist.scss */
   .wp-admin div.list-item.list-item,
   .wp-admin a.list-item.list-item {
     padding-left: 15px;
   }
 }
 @media (min-width: 1280px) {
-  /* line 217, assets/sass/_partials/_archivelist.scss */
+  /* line 219, assets/sass/_partials/_archivelist.scss */
   .wp-admin div.list-item.list-item,
   .wp-admin a.list-item.list-item {
     padding-left: 20px;
   }
 }
-/* line 222, assets/sass/_partials/_archivelist.scss */
+/* line 224, assets/sass/_partials/_archivelist.scss */
 .wp-admin div.list-item .item-text,
 .wp-admin a.list-item .item-text {
   animation: blurout 400ms ease-in forwards;
 }
-/* line 227, assets/sass/_partials/_archivelist.scss */
+/* line 229, assets/sass/_partials/_archivelist.scss */
 .wp-admin .list-item:hover {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
   z-index: 2;
 }
-/* line 232, assets/sass/_partials/_archivelist.scss */
+/* line 234, assets/sass/_partials/_archivelist.scss */
 .wp-admin .list-item:hover .item-text {
   animation: blurin 200ms ease-in forwards;
 }
-/* line 242, assets/sass/_partials/_archivelist.scss */
+/* line 244, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-items {
   width: 100%;
   height: auto;
@@ -4176,7 +4177,7 @@ a._link-animation:hover span:nth-child(7) {
   bottom: 0px;
   position: absolute;
 }
-/* line 252, assets/sass/_partials/_archivelist.scss */
+/* line 254, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-item {
   width: 100%;
   height: 0vh;
@@ -4186,11 +4187,11 @@ a._link-animation:hover span:nth-child(7) {
   animation: image-blur-out 400ms ease-in-out forwards;
   filter: blur(10px);
 }
-/* line 264, assets/sass/_partials/_archivelist.scss */
+/* line 266, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-item {
   animation: opacityout 400ms ease-in forwards;
 }
-/* line 267, assets/sass/_partials/_archivelist.scss */
+/* line 269, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-item.active {
   display: block;
   height: 100vh;
@@ -4203,17 +4204,17 @@ a._link-animation:hover span:nth-child(7) {
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 281, assets/sass/_partials/_archivelist.scss */
+/* line 283, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-item.activated {
   opacity: 1;
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 293, assets/sass/_partials/_archivelist.scss */
+/* line 295, assets/sass/_partials/_archivelist.scss */
 .wp-admin .container.activated .image-items .image-item {
   animation: image-blur-in-active 400ms ease-in forwards;
 }
-/* line 299, assets/sass/_partials/_archivelist.scss */
+/* line 301, assets/sass/_partials/_archivelist.scss */
 .wp-admin .container.activated .list-items {
   pointer-events: none;
   animation: opacityout 400ms ease-in forwards;

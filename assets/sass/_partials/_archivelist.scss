@@ -180,6 +180,7 @@ bottom: 0px;
   margin:10vw auto 10vw auto;
   position: relative;
   z-index: 1 ;
+
 }
 
 div.list-item,
@@ -192,9 +193,10 @@ a.list-item{
   display:block;
   float:left;
   clear:both;
-  height: 60px;
-  line-height:60px;
+  height: 60px!important; // dirty
+  line-height:60px!important; // dirty
   width: 100%;
+  font-weight: $mediumweight;
  // border-bottom:1px solid white;
   overflow:hidden;
   border-top:1px solid transparent;
