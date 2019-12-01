@@ -3024,14 +3024,14 @@ img {
 */
 @font-face {
   font-family: 'Objectivity';
-  src: local("Objectivity Regular"), local("Objectivity-Regular"), url("../fonts/Objectivity-Regular.woff2") format("woff2"), url("../fonts/Objectivity-Regular.woff") format("woff");
+  src: url("./assets/fonts/Objectivity-Regular.woff2") format("woff2"), url("./assets/fonts/Objectivity-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   background: red;
 }
 @font-face {
   font-family: 'Objectivity';
-  src: local("Objectivity Thin"), local("Objectivity-Thin"), url("../fonts/Objectivity-Thin.woff2") format("woff2"), url("../fonts/Objectivity-Thin.woff") format("woff");
+  src: url("./assets/fonts/Objectivity-Thin.woff2") format("woff2"), url("./assets/fonts/Objectivity-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
@@ -3741,7 +3741,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(51deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(79deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
