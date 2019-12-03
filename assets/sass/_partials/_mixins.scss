@@ -117,8 +117,8 @@
 @include fluid-type(font-size, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($fontsize, xs)*1, map-get($fontsize, lg)*1); // fixed sizing 
 @include fluid-type(font-size, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($fontsize, lg)*1, map-get($fontsize, xxl)*1); // fixed sizing 
 
-@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*0.75); // fixed sizing 
-@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*0.75); // viewport sizing
+@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*0.85); //was 0.75 // fixed sizing 
+@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*0.85); //was 0.75// viewport sizing
 
 }
 
@@ -232,7 +232,8 @@ $grey:rgba(255,255,255,0.25);
   to { filter: blur(0px); }
 } 
 
-/*@keyframes opacity-in{
+// start opactiy key frames
+ @keyframes opacity-in{
   from { opacity: 0; }
   to { opacity: 1; }
 } 
@@ -240,7 +241,17 @@ $grey:rgba(255,255,255,0.25);
   from { opacity: 1; }
   to { opacity: 0; }
 } 
-*/
+
+ @keyframes opacity-in-0_5{
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+} 
+@keyframes opacity-out-0_5{
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+} 
+// end opactiy key frames
+
 
 @mixin blur{
  //filter: blur(5px); 
@@ -248,14 +259,26 @@ $grey:rgba(255,255,255,0.25);
  animation: blurout 400ms ease-in forwards;
 }
 
-
+// start opacity
 @mixin opacity-in{
-transition: opacity 1s ease-in;
+animation: opacity-in 200ms ease-in forwards;
 }
 
 @mixin opacity-out{
-transition: opacity-out 100ms ease-in-out forwards;
+animation: opacity-out 200ms ease-out forwards;
 }
+//https://stackoverflow.com/questions/50005273/scss-passing-variable-to-keyframe-inside-a-mixin
+// have to create unique mixins because key frames not able to pass variable
+
+@mixin opacity-in-0_5{
+animation: opacity-in-0_5 200ms ease-in forwards;
+}
+
+@mixin opacity-out-0_5{
+animation: opacity-out-0_5 200ms ease-out forwards;
+}
+
+// end opacity
 
 @mixin image-blur{
  animation: image-blur-in 400ms ease-in-out forwards;

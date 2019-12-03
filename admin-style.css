@@ -55,15 +55,38 @@ Text Domain:
     filter: blur(0px);
   }
 }
-/*@keyframes opacity-in{
-  from { opacity: 0; }
-  to { opacity: 1; }
-} 
-@keyframes opacity-out{
-  from { opacity: 1; }
-  to { opacity: 0; }
-} 
-*/
+@keyframes opacity-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacity-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes opacity-in-0_5 {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacity-out-0_5 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
 /* GRID */
 /* COLORS */
 /* SIZES */
@@ -3741,7 +3764,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(66deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(57deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -3851,17 +3874,20 @@ a._link-animation:hover span:nth-child(7) {
 /* line 1, assets/sass/_partials/_adminstyle-archivelist.scss */
 .wp-admin {
   /* default */
+  /* place into artist css files or summit8?
+  */
+}
+/* line 3, assets/sass/_partials/_archivelist.scss */
+.wp-admin body {
   /* used on
   /releases - becaus of the "scnee fixer"
    */
   /* used on /events */
   /* used on most pages - its requireds to be inside teh section wrap */
   /*END PAGE TITLES*/
-  /* place into artist css files or summit8?
-  */
 }
-/* line 2, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-position {
+/* line 5, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-position {
   position: fixed;
   right: 0;
   top: 0;
@@ -3870,12 +3896,12 @@ a._link-animation:hover span:nth-child(7) {
   z-index: 97;
   transform: rotate(90deg);
 }
-/* line 15, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-position.absolute {
+/* line 18, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-position.absolute {
   position: absolute;
 }
-/* line 21, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-position.sticky {
+/* line 24, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-position.sticky {
   position: -webkit-sticky;
   position: sticky;
   right: initial;
@@ -3888,8 +3914,8 @@ a._link-animation:hover span:nth-child(7) {
   overflow: visible;
   bottom: 0px;
 }
-/* line 34, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-position.sticky .page-title {
+/* line 37, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-position.sticky .page-title {
   position: absolute;
   bottom: -12.5vw;
   width: 100vh;
@@ -3903,31 +3929,31 @@ a._link-animation:hover span:nth-child(7) {
   transform: rotate(0deg);
 }
 @media screen and (min-width: 0px) {
-  /* line 34, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-position.sticky .page-title {
+  /* line 37, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-position.sticky .page-title {
     font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 34, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-position.sticky .page-title {
+  /* line 37, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-position.sticky .page-title {
     font-size: 22.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 34, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-position.sticky .page-title {
+  /* line 37, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-position.sticky .page-title {
     font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 34, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-position.sticky .page-title {
+  /* line 37, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-position.sticky .page-title {
     font-size: 33.6px;
   }
 }
-/* line 50, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.sticky {
+/* line 53, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.sticky {
   pointer-events: none;
   width: 100vw;
   z-index: 97;
@@ -3937,16 +3963,16 @@ a._link-animation:hover span:nth-child(7) {
   overflow: visible;
   bottom: 0px;
 }
-/* line 61, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.sticky .page-titler {
+/* line 64, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.sticky .page-titler {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 100vh;
   overflow: hidden;
 }
-/* line 68, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.sticky .page-titler .inner {
+/* line 71, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.sticky .page-titler .inner {
   transform-origin: bottom right;
   color: white;
   font-weight: 600;
@@ -3963,39 +3989,39 @@ a._link-animation:hover span:nth-child(7) {
   top: -12.5vw;
 }
 @media screen and (min-width: 0px) {
-  /* line 68, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-positioner.sticky .page-titler .inner {
+  /* line 71, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-positioner.sticky .page-titler .inner {
     font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 68, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-positioner.sticky .page-titler .inner {
+  /* line 71, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-positioner.sticky .page-titler .inner {
     font-size: 22.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 68, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-positioner.sticky .page-titler .inner {
+  /* line 71, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-positioner.sticky .page-titler .inner {
     font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 68, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-positioner.sticky .page-titler .inner {
+  /* line 71, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-positioner.sticky .page-titler .inner {
     font-size: 33.6px;
   }
 }
-/* line 89, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.sticky .page-titler.inline {
+/* line 92, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.sticky .page-titler.inline {
   height: 100%;
 }
-/* line 92, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.sticky .page-titler.inline .inner {
+/* line 95, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.sticky .page-titler.inline .inner {
   width: 40vh;
 }
-/* line 102, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.left-side.sticky {
+/* line 105, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.left-side.sticky {
   pointer-events: none;
   width: 100vw;
   z-index: 97;
@@ -4004,16 +4030,16 @@ a._link-animation:hover span:nth-child(7) {
   overflow: visible;
   bottom: 0px;
 }
-/* line 112, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.left-side.sticky .page-titler {
+/* line 115, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.left-side.sticky .page-titler {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 100vh;
   overflow: hidden;
 }
-/* line 119, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+/* line 122, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.left-side.sticky .page-titler .inner {
   transform-origin: bottom left;
   color: white;
   font-weight: 100;
@@ -4030,44 +4056,44 @@ a._link-animation:hover span:nth-child(7) {
   top: -12.5vw;
 }
 @media screen and (min-width: 0px) {
-  /* line 119, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+  /* line 122, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-positioner.left-side.sticky .page-titler .inner {
     font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 119, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+  /* line 122, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-positioner.left-side.sticky .page-titler .inner {
     font-size: 22.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 119, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+  /* line 122, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-positioner.left-side.sticky .page-titler .inner {
     font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 119, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title-positioner.left-side.sticky .page-titler .inner {
+  /* line 122, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title-positioner.left-side.sticky .page-titler .inner {
     font-size: 33.6px;
   }
 }
-/* line 137, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.left-side.sticky .page-titler.inline {
+/* line 140, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.left-side.sticky .page-titler.inline {
   height: 100%;
 }
-/* line 140, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-positioner.left-side.sticky .page-titler.inline .inner {
+/* line 143, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-positioner.left-side.sticky .page-titler.inline .inner {
   width: 40vh;
 }
-/* line 154, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title-position.left {
+/* line 157, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title-position.left {
   right: 87.5%;
   transform: rotate(90deg);
 }
-/* line 158, assets/sass/_partials/_archivelist.scss */
-.wp-admin .page-title {
+/* line 161, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .page-title {
   width: 100vh;
   color: white;
   font-weight: 600;
@@ -4080,48 +4106,51 @@ a._link-animation:hover span:nth-child(7) {
   transform: rotate(180deg);
 }
 @media screen and (min-width: 0px) {
-  /* line 158, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title {
+  /* line 161, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title {
     font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 158, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title {
+  /* line 161, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title {
     font-size: 22.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 158, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title {
+  /* line 161, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title {
     font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 158, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .page-title {
+  /* line 161, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body .page-title {
     font-size: 33.6px;
   }
 }
-/* line 177, assets/sass/_partials/_archivelist.scss */
-.wp-admin .list-items {
+/* line 178, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .list-items {
   width: 75vw;
   display: block;
   margin: 10vw auto 10vw auto;
   position: relative;
   z-index: 1;
 }
-/* line 186, assets/sass/_partials/_archivelist.scss */
-.wp-admin div.list-item,
-.wp-admin a.list-item {
+/* line 187, assets/sass/_partials/_archivelist.scss */
+.wp-admin body div.list-item,
+.wp-admin body a.list-item {
+  cursor: pointer;
   text-decoration: none;
   color: white;
   position: relative;
   display: block;
   float: left;
   clear: both;
-  height: 60px !important;
-  line-height: 60px !important;
+  height: 54px;
+  height: 78px;
+  line-height: 54px;
+  line-height: 78px;
   width: 100%;
   font-weight: 400;
   overflow: hidden;
@@ -4131,44 +4160,102 @@ a._link-animation:hover span:nth-child(7) {
   z-index: 1;
   padding-left: 5px;
 }
+@media screen and (min-width: 0px) {
+  /* line 187, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item,
+  .wp-admin body a.list-item {
+    height: calc(54px + 24 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 187, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item,
+  .wp-admin body a.list-item {
+    height: 78px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 187, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item,
+  .wp-admin body a.list-item {
+    height: calc(78px + 18 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 187, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item,
+  .wp-admin body a.list-item {
+    height: 96px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 187, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item,
+  .wp-admin body a.list-item {
+    line-height: calc(54px + 24 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 187, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item,
+  .wp-admin body a.list-item {
+    line-height: 78px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 187, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item,
+  .wp-admin body a.list-item {
+    line-height: calc(78px + 18 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 187, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item,
+  .wp-admin body a.list-item {
+    line-height: 96px;
+  }
+}
 @media (min-width: 640px) {
-  /* line 209, assets/sass/_partials/_archivelist.scss */
-  .wp-admin div.list-item.list-item,
-  .wp-admin a.list-item.list-item {
+  /* line 212, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item.list-item,
+  .wp-admin body a.list-item.list-item {
     padding-left: 10px;
   }
 }
 @media (min-width: 960px) {
-  /* line 214, assets/sass/_partials/_archivelist.scss */
-  .wp-admin div.list-item.list-item,
-  .wp-admin a.list-item.list-item {
+  /* line 217, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item.list-item,
+  .wp-admin body a.list-item.list-item {
     padding-left: 15px;
   }
 }
 @media (min-width: 1280px) {
-  /* line 219, assets/sass/_partials/_archivelist.scss */
-  .wp-admin div.list-item.list-item,
-  .wp-admin a.list-item.list-item {
+  /* line 222, assets/sass/_partials/_archivelist.scss */
+  .wp-admin body div.list-item.list-item,
+  .wp-admin body a.list-item.list-item {
     padding-left: 20px;
   }
 }
-/* line 224, assets/sass/_partials/_archivelist.scss */
-.wp-admin div.list-item .item-text,
-.wp-admin a.list-item .item-text {
+/* line 227, assets/sass/_partials/_archivelist.scss */
+.wp-admin body div.list-item .item-text,
+.wp-admin body a.list-item .item-text {
   animation: blurout 400ms ease-in forwards;
+  height: inherit;
+  line-height: inherit;
 }
-/* line 229, assets/sass/_partials/_archivelist.scss */
-.wp-admin .list-item:hover {
+/* line 238, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .list-item:hover {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
   z-index: 2;
 }
-/* line 234, assets/sass/_partials/_archivelist.scss */
-.wp-admin .list-item:hover .item-text {
+/* line 243, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .list-item:hover .item-text {
   animation: blurin 200ms ease-in forwards;
 }
-/* line 244, assets/sass/_partials/_archivelist.scss */
-.wp-admin .image-items {
+/* line 253, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .image-items {
   width: 100%;
   height: auto;
   z-index: 0;
@@ -4177,8 +4264,8 @@ a._link-animation:hover span:nth-child(7) {
   bottom: 0px;
   position: absolute;
 }
-/* line 254, assets/sass/_partials/_archivelist.scss */
-.wp-admin .image-item {
+/* line 263, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .image-item {
   width: 100%;
   height: 0vh;
   display: none;
@@ -4187,12 +4274,12 @@ a._link-animation:hover span:nth-child(7) {
   animation: image-blur-out 400ms ease-in-out forwards;
   filter: blur(10px);
 }
-/* line 266, assets/sass/_partials/_archivelist.scss */
-.wp-admin .image-item {
+/* line 275, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .image-item {
   animation: opacityout 400ms ease-in forwards;
 }
-/* line 269, assets/sass/_partials/_archivelist.scss */
-.wp-admin .image-item.active {
+/* line 278, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .image-item.active {
   display: block;
   height: 100vh;
   top: 0;
@@ -4204,18 +4291,18 @@ a._link-animation:hover span:nth-child(7) {
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 283, assets/sass/_partials/_archivelist.scss */
-.wp-admin .image-item.activated {
+/* line 292, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .image-item.activated {
   opacity: 1;
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 295, assets/sass/_partials/_archivelist.scss */
-.wp-admin .container.activated .image-items .image-item {
+/* line 304, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .container.activated .image-items .image-item {
   animation: image-blur-in-active 400ms ease-in forwards;
 }
-/* line 301, assets/sass/_partials/_archivelist.scss */
-.wp-admin .container.activated .list-items {
+/* line 310, assets/sass/_partials/_archivelist.scss */
+.wp-admin body .container.activated .list-items {
   pointer-events: none;
   animation: opacityout 400ms ease-in forwards;
 }

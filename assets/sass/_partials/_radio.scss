@@ -6,6 +6,7 @@
 
 body.single-radio{
  
+
   .details-wrap.outer-grid-item{
   @include padding(padding-top, 2);
   @include padding(padding-bottom, 2);
@@ -13,16 +14,72 @@ body.single-radio{
   
   .cover-image-item{
   width: 100%;
-  height: 100vh;
+  height: 75vh;// same as archive page
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   }
 
-  .radio-name{
-  @include h1;
-  font-weight: $boldweight;
-  }
+  li{
+  display: block;
+  list-style:none;
+
+    .wrapping{
+
+      a.single-radio-item{
+  //    position: absolute;
+        
+         .play-icon-wrap{
+        //  width: 100%; 
+         // float: left;
+        //  position: absolute;
+          height: 50%;
+          bottom: 0px;
+          top: 50%;
+
+              .play-toggle.small{
+              @include padding(padding,1.5);
+              margin-top: -50%;
+              }
+      
+          }
+
+      
+
+      }//a.single-radio-item
+
+      .details-wrap{
+      display: block;
+      position: relative;
+      overflow: hidden;
+      margin:auto;
+
+          .radio-name{
+          @include h2;
+          font-weight: $boldweight;
+          clear: both;
+          display: block;
+          } 
+          .radio-date{
+          font-weight: $lightweight;
+          @include smaller;
+           display: block;
+           float: left;
+          }
+          .radio-view-item{
+            float: right;
+            @include smaller;
+            font-weight: $mediumweight;
+            opacity: 0.5;
+            @include opacity-out-0_5;
+
+          }
+
+        }//.details-wrap
+
+    }//.wrapping
+
+  }//li
 
   section#upcoming-radios{
   width: 100%;
@@ -31,16 +88,13 @@ body.single-radio{
     min-height: 50vh;
     @include padding(padding, 2);
 
-
       .radio-name{
-     // @include h2;
       font-weight: $boldweight;
       } 
 
     }
     
   } /*section#upcoming-radios*/
-
 
 } /* body.single-radio */
 
@@ -209,7 +263,7 @@ section.view.container{
 }//section#upcoming-radios
 
 
-section#past-radios{
+section#past-radio .bottom-container{// added bottom container - review + delete this commetn if oka
 width: 100%;
   
   .past-radio-title{
@@ -246,83 +300,128 @@ overflow: visible; /* this because of sticky can't be hidden? */
 
 body.post-type-archive-radio{
 
-    li{
-    display: block;
-    }
-
-   .radio-item{
-    height: auto;
-    display: block;
-    width: 100%;
-    position: relative;
-    @include padding(padding, 2);
-
-
-      .wrapping{
+      .cover-image-item{
       width: 100%;
-      position: relative;
-      display: block;
-      overflow: hidden;
-      padding-bottom: 25vw; // half of image height
-   
-        @media (min-width: map-get($breakpoints,md)) {  
-        padding-bottom: 12.5vw;
-        }
-
+      height: 25vw;// thumb size
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
       }
 
-      .radio-name{
-      @include h2;
-      font-weight: $boldweight;
-      clear: both;
+      li{
       display: block;
-      } 
-      .radio-date{
-      font-weight: $lightweight;
-      @include smaller;
+      list-style:none;
 
-       display: block;
-
-      }
-
-    } /*radio-item */
-
-
-    section#past-radios{
-    //@include padding(padding-top, 2);
-    //@include padding(padding-bottom, 2);
-
-        .top-container{
+        .wrapping{
         width: 100%;
-        }
 
-    } /*section#past-radios */
+          a.radio-item{
+      //    position: absolute;
+            width: 100%;
+
+             .play-icon-wrap{
+            //  width: 100%; 
+             // float: left;
+            //  position: absolute;
+             // height: 50%;
+             // bottom: 0px;
+             // top: 50%;
+
+                  .play-toggle.small{
+                 // @include padding(padding,1.5);
+                 // margin-top: -50%;
+                  }
+          
+              }
+
+          }//a.single-radio-item
+
+          a.view-radio-item{
+
+              .details-wrap{
+              display: block;
+              position: relative;
+              overflow: hidden;
+
+                  .radio-name{
+                  @include h2;
+                  font-weight: $boldweight;
+                  clear: both;
+                  display: block;
+                  } 
+                  .radio-date{
+                  font-weight: $lightweight;
+                   @include smaller;
+                   display: block;
+                   float: left;
+                  }
+                  .radio-view-item{
+                    float: right;
+                    @include smaller;
+                    font-weight: $mediumweight;
+                    opacity: 0.5;
+                    @include opacity-out-0_5;
+
+                  }
 
 
-    .first-page{
+                &:hover{
+                  
+                  .radio-view-item{
+                    opacity: 1;
+                    @include opacity-in-0_5;
+                  }
 
-        .radio-item{
-        width: 100%;    
-        float: left;
+                }//:hover    
+
+              }//details-wrap
+
+          }// a.view-radio-item
+
+        }//.wrapping
+
+      }//li
+
+ 
+
+      section#past-radios{
+      //@include padding(padding-top, 2);
+      //@include padding(padding-bottom, 2);
+
+            .top-container{
+            width: 100%;
+
+              .cover-image-item{ // first top image
+              height: 75vh;// same as archive page
+              }
+
+            }
+
+
+      } /*section#past-radios */
+
+
+     .first-page{
+
+        .radio-item-li{
+       // width: 100%;    
+        //float: left;
 
             .details-wrap{
-            width: 75%;
-            margin: auto;
-            @extend .grid-item; // for padding reasons
+           // width: 75%;
+           // margin: auto;
+           // @extend .grid-item; // for padding reasons
             }
 
             .cover-image-item{
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-   
+            height: 25vw;
+
                 .play-toggle.inline-small{
-                padding: 15% 45% 30% 45%;
+                padding: 20% 45% 25% 45%;
+                height: 100%;
 
                   @media (min-width: map-get($breakpoints,md)) {  
-                  padding: 30% 45% 30% 45%;
+                  //padding: 30% 45% 30% 45%; // no need to change it?
                   }
 
                 }
@@ -340,26 +439,31 @@ body.post-type-archive-radio{
 
         }//.radio-item
 
-        .radio-item.radio-item-1{
-        padding:0px;
-
-       
-        
-
+        .radio-item-li.radio-item-li-1{
+     //   padding:0px;       
 
           .wrapping{
-          padding-bottom:0px;
-          @include padding(padding-bottom, 2);
+       //   padding-bottom:0px;
+       //   @include padding(padding-bottom, 2);
           }
-
+/*
           .cover-image-item{
 
               .play-icon-wrap{
-                display: none;// don't display the inine play icon for the first item
+               // height:100%;
+                display: none;// if 1st radio  itme. not active; don't display 
+                position: absolute;
+                @include padding(padding-bottom, 2);// ensure (atleast the) same as the .wrapping class
+                height: auto;
+                left: 0;
+                bottom:0px;
+                width: 37.5%;// 3 cols
+                display:block;// if radio item active; display this icon
+
               }
-         
+
               .play-toggle.inline-small{
-              padding: 45vh 45% 30% 45%;
+              padding: 0 45% 0 45%;//' 45vh 45% 30% 45%;
 
                 @media (min-width: map-get($breakpoints,md)) {  
                // padding: 30% 45% 30% 45%;
@@ -368,26 +472,62 @@ body.post-type-archive-radio{
               }
           
           } //.cover-image-item
-
+*/
           .details-wrap{
-          margin:auto;
+        //  margin:auto;
+      //    margin-left: 25%;
+       //   width: 62.5%
           }
 
           @media (min-width: map-get($breakpoints,md)) {  
             .details-wrap{
-            width: 75%;
+//            width: 75%;
+
             }
 
           }
 
+          &.first-item-active{ // if we need to show thefirst item play icon
+
+              .wrapping{
+              }
+
+              .cover-image-item{
+
+                 
+                  .play-icon-wrap{
+                  } 
+
+                  .play-toggle.inline-small{
+ 
+                    @media (min-width: map-get($breakpoints,md)) {  
+                     }
+
+                  }
+              
+              } //.cover-image-item
+
+              .details-wrap{
+                @extend .push-item-left-xs-1;
+               }
+
+              @media (min-width: map-get($breakpoints,md)) {  
+                .details-wrap{
+                 }
+
+              }
+
+          }// &.show-play-icon - if we need to show thefirst item play icon
+
+
         }// .radio-item.radio-item-1
 
-        .radio-item.radio-item-2,
-        .radio-item.radio-item-3,
-        .radio-item.radio-item-4,
-        .radio-item.radio-item-5,
-        .radio-item.radio-item-6,
-        .radio-item.radio-item-7
+        .radio-item-li.radio-item-li-2,
+        .radio-item-li.radio-item-li-3,
+        .radio-item-li.radio-item-li-4,
+        .radio-item-li.radio-item-li-5,
+        .radio-item-li.radio-item-li-6,
+        .radio-item-li.radio-item-li-7
         {
         @extend .grid-item;
         display: flex;
@@ -399,7 +539,6 @@ body.post-type-archive-radio{
             background-size: cover;
             position: relative;
 
-
                 .play-icon-wrap{
                 position: absolute;
                 top: 0px;
@@ -408,29 +547,28 @@ body.post-type-archive-radio{
                 }
 
                 .play-toggle.inline-small{
-                padding: 15% 45% 30% 45%;
+               // padding: 15% 45% 30% 45%;//30% 45% 30% 45%; review - values set above 
                 }
-
 
             }
 
-
             .details-wrap{
-            position: absolute;
+            @include padding(margin-top, 0.5);
+            position: relative;// was absolute; - but changed since adding view
             top: 37.5vw;
             background:black;
             }
 
-        }
+        }//.radio-item-li.radio-item-li-7
 
         @media (min-width: map-get($breakpoints,sm)) {   
           
-        .radio-item.radio-item-2,
-        .radio-item.radio-item-3,
-        .radio-item.radio-item-4,
-        .radio-item.radio-item-5,
-        .radio-item.radio-item-6,
-        .radio-item.radio-item-7
+        .radio-item-li.radio-item-li-2,
+        .radio-item-li.radio-item-li-3,
+        .radio-item-li.radio-item-li-4,
+        .radio-item-li.radio-item-li-5,
+        .radio-item-li.radio-item-li-6,
+        .radio-item-li.radio-item-li-7
         {
              
               .cover-image-item{
@@ -447,12 +585,12 @@ body.post-type-archive-radio{
         
         @media (min-width: map-get($breakpoints,md)) {   
 
-            .radio-item.radio-item-2,
-            .radio-item.radio-item-3,
-            .radio-item.radio-item-4,
-            .radio-item.radio-item-5,
-            .radio-item.radio-item-6,
-            .radio-item.radio-item-7
+            .radio-item-li.radio-item-li-2,
+            .radio-item-li.radio-item-li-3,
+            .radio-item-li.radio-item-li-4,
+            .radio-item-li.radio-item-li-5,
+            .radio-item-li.radio-item-li-6,
+            .radio-item-li.radio-item-li-7
             {
             width: 50%;
             padding:map-get($gutter,md);
@@ -461,7 +599,7 @@ body.post-type-archive-radio{
                 height: 25vw;
 
                   .play-toggle.inline-small{
-                  padding: 30% 45% 30% 45%;
+                  //padding: 30% 45% 30% 45%;
                   }         
 
                 }
@@ -502,9 +640,6 @@ body.post-type-archive-radio{
           width: 100%;
           padding:0px;
 
-              .wrapping{
-               padding-bottom: 0; 
-              }
               .cover-image-item{
               background-image: none!important;
               height: inherit;
@@ -514,7 +649,6 @@ body.post-type-archive-radio{
                   overflow: hidden;
                   float: left;
                   @extend .grid-item;
-
                   }
 
                   .play-toggle.inline-small{
@@ -527,12 +661,7 @@ body.post-type-archive-radio{
                   }         
 
               }
-              .details-wrap{
-              width: 87.5vw;
-              float: left;
-
-              }
-
+             
               @media (min-width: map-get($breakpoints,sm)) {   
                 
                   .cover-image-item{
@@ -546,10 +675,7 @@ body.post-type-archive-radio{
                       }         
 
                   }
-                  .details-wrap{
-                   width: 62.5vw;
-
-                  }               
+                      
 
               }/* @media (min-width: map-get($breakpoints,sm)) */
 
@@ -577,9 +703,9 @@ body.post-type-archive-radio{
 
           } /*.radio-item*/
 
-     
-
-
+          .view-radio-item{
+          // position: absolute;
+          }
 
         }/*  .bottom-container */
 
@@ -810,7 +936,7 @@ a.sc-player,
     margin-top:37.5vh;//43.75vh;///37.5vw;
     position: absolute;
     left: 43.75vw;///37.5vw;
-    width: 12.5vw;//25vw;
+    width: 25vw;//25vw;
     pointer-events:none;
 
 
@@ -824,6 +950,8 @@ a.sc-player,
    // height: 12.5vw;//12.5vw;//25vw
   //  margin-top:37.5vh;//43.75vh;///37.5vw;
  // background: red;
+     width: 12.5vw;//25vw;
+
     }
  
     @media (min-width: map-get($breakpoints,xl)) {  
@@ -1057,101 +1185,132 @@ a.sc-player,
 }// eventualy this will be hidden
 
 
-
+//the row list
 #other-shows .radio-items{
-  position: relative;
-  width: 100%;
-  //height: 20vh;
-  //top: 80vh;
-  height: auto;
-  overflow: auto;
-  display: block;
-//  z-index: 999;//temp
-  z-index: 2;//
-  //background: black;
-
-  li {
-    width: 100%;
-    cursor: pointer;
-    //margin-bottom: 0.5em;
-    //padding: 4%;
-   // background: $black;
-   // background: rgba(19, 19, 19, 0.12);
-    color: white;
-   // border-radius: 4px;
-    //transition: background 0.3s ease-in;
-    text-align: left;
-    display: block;
-    border-bottom: 1px solid white;
-    overflow: hidden;
-
-    &:last-child {
-    margin-bottom: 0;
-    border-bottom: 0px;
-    }
-
-    a {
-      //font-size: 1.125em;
-       display: block;
-       position: relative;
-        overflow: hidden;
-
-      .play-icon-wrap{
-      width: 12.5vh; 
-      float: left;
-      position: absolute;
-      height: 50%;
-      bottom: 0px;
-      top: 50%;
-
-        .play-toggle.small{
-        @include padding(padding, 1);
-        margin-top: -50%;
-
-        }
-
-      }
-
-      .details-wrap{
+position: relative;
+width: 100%;
+height: auto;
+overflow: auto;
+display: block;
+z-index: 2;
+    
+      li {
+      width: 100%;
+      cursor: pointer;
+      color: white;
+      text-align: left;
       display: block;
-      float: left;
-      min-height: 12.5vh;
-      margin-left: 12.5vh;
+      border-bottom: 1px solid white;
+      overflow: hidden;
 
-        @include padding(padding, 1);
+        .wrapping{
+        position: relative;
+         
+            a.radio-item {
+            display: block;
+            width: 16.6667%;// review - dirty
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            z-index: 3;// above other link 
 
-        .show-title{
-         @include cssvalue(font-size, 0.6);
-        font-weight: $mediumweight;
+                .play-icon-wrap{
+                width: 100%; 
+                float: left;
+                position: absolute;
+                height: 50%;
+                bottom: 0px;
+                top: 50%;
 
-        }
-        .show-start{
-        font-weight: $lightweight;
-        @include cssvalue(font-size, 0.5);
+                  .play-toggle.small{
+                  @include padding(padding,1.5);
+                  margin-top: -50%;
+                  }
 
-        }
- 
-      } 
+                }
 
-    }
+            }//a.view-radio-item
 
-    &:hover {  
-      background: $black;
-     // background: rgba(19, 19, 19, 0.22);
-    }
+            a.view-radio-item{
+            display: block;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;// below other link 
 
-    &.active{  
-      background: $black;
-     // background: rgba(19, 19, 19, 0.32);
-     //-moz-border-radius: 4px;
-     //-webkit-border-radius: 4px;
+                .details-wrap{
+                display: block;
+                float: left;
+                margin-left: 12.5vw;
+                width: 62.5vw;
+                @include cssvalue(padding-top, 0.25);
+                @include cssvalue(padding-left, 1);
+                @include cssvalue(padding-right, 1);
+                @include cssvalue(padding-bottom, 0.25);
 
-       a {
-        color: #fff;
-      }
-    }
-  }
-}
+                      .radio-name{
+                      @include h2;
+                      max-width: 60%;
+                      font-weight: $boldweight;
+                      clear: both;
+                      display: block;
+                      } 
+
+                      .radio-date{
+                      font-weight: $lightweight;
+                      @include smaller;
+                      display: block;
+                      float: left;
+                      }
+                      .radio-view-item{
+                      float: right;
+                      @include smaller;
+                      font-weight: $mediumweight;
+                      opacity: 0.5;
+                      @include opacity-out-0_5;
+
+                      }
+
+                  &:hover{
+                      
+                      .radio-view-item{
+                      opacity: 1;
+                      @include opacity-in-0_5;
+                      }
+
+                  }//:hover    
+                      
+                } //.details-wrap
+
+            }///a.view-radio-item
+
+            &:hover {  
+              background: $black;
+             // background: rgba(19, 19, 19, 0.22);
+            }
+
+            &.active{  
+              background: $black;
+             // background: rgba(19, 19, 19, 0.32);
+             //-moz-border-radius: 4px;
+             //-webkit-border-radius: 4px;
+
+               a {
+                color: #fff;
+              }
+
+            }// &.active
+
+            &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0px;
+            }
+
+         }//wrapping
+
+      }//li
+
+}//#other-shows .radio-items
+
 
 .sc-track-duration {
   float: right;
@@ -1270,7 +1429,7 @@ body.pulsate-player-icon{
 
 }
 
-body.single-radio,
+//body.single-radio,
 body.sc-player-playing,  // if radio is playing sc-player-playing
 body.sc-player-paused// this so that when paused its still visible
   { 
@@ -1283,6 +1442,7 @@ body.sc-player-paused// this so that when paused its still visible
 
 }//body.radio-active
 
+ 
 body.sc-player-paused{ // this so that when paused its still visible
   //background: red;
 }
@@ -1364,36 +1524,43 @@ body.post-type-archive-radio
 
     .radio-container{
     pointer-events:initial;
-    display: block;
+    //display: block;
     position: absolute;
     z-index: initial;
    
        .sc-player{
-          padding-left: 0px;
-          position: absolute;
-          height: 100vh;
-          width: 100%;
-         // padding-left:12.5%;
-          top: 0px;
-
+      /*  padding-left: 0px;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+       // padding-left:12.5%;
+        top: 0px;
+*/
             .sc-controls{
+  /*
             display: block;
             height: 12.5vw;//25vw
-            margin-top:37.5vh;//43.75vh;///37.5vw;
+           // margin-top:37.5vh;//43.75vh;///37.5vw;
             position: absolute;
             left: 43.75vw;///37.5vw;
             width: 12.5vw;//25vw;
             pointer-events:none;
+    */
             }
 
             .sc-scrubber{
             width: 100%;
             position: absolute;
             bottom: 12.5vw;
-           // width: 87.5%;
-            padding-left: 12.5vw;
-            padding-right: 12.5vw;
+            padding-left: 25vw;
+            padding-right: 25vw;
             z-index: 1;
+
+                @media (min-width: map-get($breakpoints,md)) {
+                padding-left: 12.5vw;
+                padding-right: 12.5vw;
+                }
+
             }
 
             .sc-time-indicators{
@@ -1503,8 +1670,11 @@ body
         left: 0;
         right: 0;
         width: 100%;
-        //@include cssvalue(line-height,1);
-        line-height: 6.25vw;// does this work
+        line-height:12.5vw;
+
+          @media (min-width: map-get($breakpoints,md)) {
+          line-height:6.25vw;
+          }
 
         }
 
@@ -1571,8 +1741,13 @@ body
       pointer-events:none;// don't allow the click of item to pause on text
       height: auto;
       padding-right: 12.5vw;
-      padding-left: 12.5vw;
+      padding-left: 25vw;
       @include padding(padding-bottom, 0.5);
+
+       @media (min-width: map-get($breakpoints,md)) {
+        padding-left: 12.5vw;
+        }
+
       }
 
     }/* .sc-container */
@@ -1697,8 +1872,11 @@ body{
       text-align: center;
       text-transform: uppercase;
       @include cssvalue(font-size, 0.4);
+      font-weight: $boldweight;
+      line-height: inherit; // from .player-toggle
 
         &:hover{
+
          @include scalelink-in-value(1.25);
 
         }

@@ -1122,13 +1122,34 @@ var $track = $(this),
   });
 
 
-  // selecting tracks in the bottom list
+  // selecting tracks outside the "radio container":
   // from the list find the associated item in the above list and peform a click event on this.  
   // also do the same for blocks
-  $(document).on('click','.radio-items li, .sound-block .radio-item', function(event) {
+  //.radio-items li .radio-item, // archive itmes + single other shows - reivew this?
+  //.sound-block .radio-item' // blocks
+  // body.single  li .radio-item // single item (targetting thefirst one)
+  $(document).on('click','.radio-items li .radio-item, .sound-block .radio-item, body.single .single-radio-item ', function(event) {
+
+// I need to allow the click of view - how to do this?
+  console.log("click > .radio-items li .radio-item");
+
     var $radioitem = $(this),
-        radioitemUrl = $radioitem.data('tracklink'); // sc permalink of the track
-       
+        radioitemUrl = $radioitem.closest('li').data('tracklink'); // sc permalink of the track
+        
+        if (!($radioitem.closest('li').hasClass('first-item-active'))) {
+          // is the first item
+          console.log("is NOT first");
+          //$('li.radio-item-li-1').addClass('show-play-icon');
+
+        } // if is 1st item at the tope
+        else if($radioitem.closest('li').hasClass('radio-item-li-1')) {
+          // is not the first item
+          console.log("is first");
+          //$('li.radio-item-li-1').removeClass('first-item-active');
+
+        }
+  
+
         console.log("clicked radioitemUrl" +radioitemUrl+"");
   
    //  var $tracklistitem = $('.sc-trackslist li').find('a').attr("href", radioitemUrl);

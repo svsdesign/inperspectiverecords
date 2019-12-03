@@ -1,4 +1,7 @@
 /* default */
+
+body{
+
 .page-title-position{
 position: fixed;
 right: 0;
@@ -165,8 +168,6 @@ bottom: 0px;
   height: 12.5vw;
   line-height: 12.5vw!important;
   transform:rotate(180deg);  
-
-
 }
 
 
@@ -186,15 +187,17 @@ bottom: 0px;
 div.list-item,
 a.list-item{
     //@include h1;
-
+  cursor: pointer;
   text-decoration: none;
   color: white;
   position:relative;
   display:block;
   float:left;
   clear:both;
-  height: 60px!important; // dirty
-  line-height:60px!important; // dirty
+   @include cssvalue(height, 3);//!important; //60px!important; // dirty
+  @include cssvalue(line-height, 3); //60px!important; // dirty
+
+//  line-height:60px!important; // dirty
   width: 100%;
   font-weight: $mediumweight;
  // border-bottom:1px solid white;
@@ -223,17 +226,23 @@ a.list-item{
 
   .item-text{
   @include blur;
+  height: inherit;
+  line-height: inherit;
   }
-}
+
+
+}//div.list-item,
+ //a.list-item
+
 
 .list-item:hover{
-  border-top:1px solid $grey;
-  border-bottom: 1px solid $grey;
-  z-index:2;
+border-top:1px solid $grey;
+border-bottom: 1px solid $grey;
+z-index:2;
 
-  .item-text{
-  @include focus;
-  }
+    .item-text{
+    @include focus;
+    }
    
 } //.list-item:hover
  
@@ -242,39 +251,39 @@ a.list-item{
 }
 
 .image-items{
-  width: 100%;
-  height: auto;
-   z-index: 0;
-  filter: grayscale(1);
-  top:0px;
-  bottom:0px;
-  position: absolute;
+width: 100%;
+height: auto;
+z-index: 0;
+filter: grayscale(1);
+top:0px;
+bottom:0px;
+position: absolute;
 //  overflow: auto;
 }
 .image-item{
-  width: 100%;
-  height:0vh;
-  display: none;
- background-size: cover;  
- //   position:absolute;
-  //top: 0;
-  opacity: 0;
-   @include image-blur-out;
-  filter: blur(10px);
-  }
+width: 100%;
+height:0vh;
+display: none;
+background-size: cover;  
+//   position:absolute;
+//top: 0;
+opacity: 0;
+@include image-blur-out;
+filter: blur(10px);
+}
 
 .image-item{
    animation: opacityout 400ms ease-in forwards;
 }
 .image-item.active{
 display: block;
-  height: 100vh;
-  top: 0;
-  opacity: 1;
-   background-repeat: no-repeat;
-  background-position: center center;
-    position: -webkit-sticky;
-    position: sticky;
+height: 100vh;
+top: 0;
+opacity: 1;
+background-repeat: no-repeat;
+background-position: center center;
+position: -webkit-sticky;
+position: sticky;
 
   @include focus;
  @include image-blur;
@@ -307,7 +316,7 @@ display: block;
 
 
 
-
+}//body
 
 /* place into artist css files or summit8?
 */

@@ -289,10 +289,14 @@ body{
  			
  			.navigation-toggle{
 	 		float: right;
-	 		width: 12.5%;
+	 		width: 25%;
  			pointer-events:initial;
  			cursor: pointer;
 			@include scalelink-out-value(1);
+
+			@media (min-width: map-get($breakpoints,md)) {
+			width: 12.5%;
+			}
 
 				svg {
 				width: 100%;
@@ -352,6 +356,7 @@ body{
 		 } /* .navigation-wrapper */
 
 		#ajax-wrapper{
+		position: fixed;
 		pointer-events:none;// don't allow content to be clicked behind nav
 		-webkit-filter: saturate(0) blur(4px); /* Safari 6.0 - 9.0 */
 		filter: saturate(0) blur(4px);

@@ -479,36 +479,15 @@ TO DO:
                 //END DEV GRID - TOGGLE
 
 
-
-
-
-
-
-
-
-
-
       if ($('.radio-container').length > 0) 
       {
 
        console.log(".radio-container")
 
-          if ($('body').hasClass("single-radio") || $('body').hasClass("post-type-archive-radio")){  // if single radio & archive aswell 
-            // review this - I'm not sure this is the best way of sorting this out?
-
-
-           /*         function removeandadd_js(src) {    // added in functions for now
-
-                       $('<script>').attr('src', src).remove();
-                       console.log("script removed" +src +"");
-                       $('<script>').attr('src', src).appendTo('head'); // append the script for the first time?
-
-                      }
-                   // removeandadd_js('https://connect.soundcloud.com/sdk/sdk-3.3.0.js'); 
-                    removeandadd_js('http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-radio-loader.js'); 
-             */   
-
-          //console.log("body ahs single radio class=");
+          if ($('body').hasClass("_single-radio") || $('body').hasClass("_post-type-archive-radio")){  // if single radio & archive aswell 
+            
+            // review this do we need different rules for single and archive? - atm just addng sticky radio player to everything
+        
 
               $(window).scroll(function(){ // attach docment scroll, for "sticky player"
          
