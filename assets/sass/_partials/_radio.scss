@@ -314,6 +314,7 @@ body.post-type-archive-radio{
 
         .wrapping{
         width: 100%;
+        @include padding(padding-bottom, 1);
 
           a.radio-item{
       //    position: absolute;
@@ -408,23 +409,29 @@ body.post-type-archive-radio{
         //float: left;
 
             .details-wrap{
-           // width: 75%;
-           // margin: auto;
-           // @extend .grid-item; // for padding reasons
+            @include cssvalue(padding-top, 0.5);
             }
 
             .cover-image-item{
-            height: 25vw;
+            height: 50vw;
 
-                .play-toggle.inline-small{
-                padding: 20% 45% 25% 45%;
-                height: 100%;
+              @media (min-width: map-get($breakpoints,md)) {  
+              height: 25vw
+              }
 
-                  @media (min-width: map-get($breakpoints,md)) {  
-                  //padding: 30% 45% 30% 45%; // no need to change it?
-                  }
+              .play-icon-wrap{
+              height: 100%;
+              } 
 
+              .play-toggle.inline-small{
+              padding: 20% 45% 25% 45%;
+              height: 100%;
+
+                @media (min-width: map-get($breakpoints,md)) {  
+                //padding: 30% 45% 30% 45%; // no need to change it?
                 }
+
+              }
             
             } //.cover-image-item
           
@@ -436,15 +443,16 @@ body.post-type-archive-radio{
             @include cssvalue(padding-top, 0.2);
             
             }
+            .radio-view-item{
+            @include cssvalue(font-size, 0.4);
+            }
 
         }//.radio-item
 
         .radio-item-li.radio-item-li-1{
-     //   padding:0px;       
-
+   
           .wrapping{
-       //   padding-bottom:0px;
-       //   @include padding(padding-bottom, 2);
+           @include padding(padding-bottom, 1);// diff to other items
           }
 /*
           .cover-image-item{
@@ -479,13 +487,13 @@ body.post-type-archive-radio{
        //   width: 62.5%
           }
 
-          @media (min-width: map-get($breakpoints,md)) {  
+            @media (min-width: map-get($breakpoints,md)) {  
             .details-wrap{
 //            width: 75%;
-
             }
 
-          }
+          }//.radio-item-li.radio-item-li-1
+
 
           &.first-item-active{ // if we need to show thefirst item play icon
 
@@ -616,7 +624,7 @@ body.post-type-archive-radio{
         }//@media (min-width: map-get($breakpoints,md))  
 
 
-      /* bottom containe r*/
+      /* bottom container items */
 
         .bottom-container{
 
@@ -641,8 +649,9 @@ body.post-type-archive-radio{
           padding:0px;
 
               .cover-image-item{
-              background-image: none!important;
-              height: inherit;
+              background-image: none!important; // don't display images on the list itmes
+              height: 100%;
+               width: 100%;
 
                   .play-icon-wrap{
                   width: 12.5vw;
@@ -686,6 +695,8 @@ body.post-type-archive-radio{
 
                       .play-icon-wrap{
                       width: 6.25vw;
+                      margin: auto;
+                      float: none;
                       }
 
                       .play-toggle.inline-small{

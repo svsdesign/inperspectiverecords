@@ -128,8 +128,7 @@
 
 		<?php 		
 		$now = current_time( 'timestamp' );
-		// prepare to get a list of events sorted by the event date
-	    $argsradiopage = array(
+ 	    $argsradiopage = array(
 	        
 		'post_type'              => 'radio', // your event post type slug
 		//'post__not_in' => array($post->ID), // exclude the current post < doing this probably mean we're creating an issue with my unique IDs
@@ -137,21 +136,30 @@
 	 	'order'                  => 'DESC', // Show earlier events last < this order might be cause problems with muy php ID's
 		'showposts' 			 => 999,
 	//	'posts_per_page'         => 1, // only want to get the next event
-		//'orderby' =>  'meta_value',
-		//'meta_key' =>  'show_start_date',
-		/*'meta_query' => array(			 		
-		        'relation' => 'AND',
-		        array(
-		            'key'       => 'show_end_date',
-		            'compare'   => '>=', // starts after or equal
-		            'value'     => $now
-		        ),
+
+		'orderby' 				=>  'meta_value',
+		'meta_key' 				=>  'show_start_date',
+		'meta_query'			=> array(			 		
+		'relation'				=> 'AND',
 		        array(
 		            'key'       => 'show_start_date',
+		            'compare'   => '>=', // starts after or equal
+		            'value'     => '0000000000' //$now //'0000000000
+		        ),
+		        array(
+		            'key'       => 'show_end_date',
 		            'compare'   => '<=', // starts before or equal
-		            'value'     => '9999999999'
-		        )
-		    ),*/
+		            'value'     => $now//'9999999999'
+		        ),
+		        array(
+		        'key'	  		=> 'is_item_public', // only allow items that are "public"
+		        'value'	  		=> 'true',
+		        'compare' 		=> 'NOT EXISTS'
+			    )
+
+		    ),
+		
+
 		); 
 
 		$argsradiopage_query = new WP_Query( $argsradiopage ); 

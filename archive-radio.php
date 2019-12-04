@@ -38,8 +38,16 @@ get_header();?>
 			            'key'       => 'show_end_date',
 			            'compare'   => '<=', // starts before or equal
 			            'value'     => $now//'9999999999'
-			        )
-			    ),
+			        ),
+			        array(
+			        'key'	  	=> 'is_item_public', // only allow items that are "public" - by default value either not set or 0 (if set)
+			        //'value'	  	=> 'true',
+			        //'compare' 	=> 'NOT EXISTS'
+			        'value' => '1',
+    				'compare' => '==' // not really needed, this is the default
+			    	)
+
+			    )
  
 			);
 			// the query
@@ -99,7 +107,7 @@ get_header();?>
 					$itemno = 1;
 					while ( $radio_query->have_posts() ) : $radio_query->the_post(); 
 
-					$showid = get_the_ID();	
+							$showid = get_the_ID();	
 							$showtitle = get_the_title();// title						
 						 	$showstart = get_field('show_start_date'); // date and time picker
 						    $showend = get_field('show_end_date');  // date and time picker
@@ -108,7 +116,9 @@ get_header();?>
 						 	$description =  get_field('show_description');  // text area							 
 						 	$soundcloudlink =  get_field('soundcloud_link'); //text
 							$soundcloudembed =  get_field('soundcloud_embed'); // iframe / file?
+							$public =  get_field('is_item_public'); // iframe / file?
 							
+//var_dump($public);
 
 					 // initial counter if we have post
 					if(1 == $paged): // page one: 
@@ -182,17 +192,17 @@ get_header();?>
 			 			//else if ($itemno == 1){ // NOt the first item
 			 			?>
 
-			 				<li data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li grid-item grid-item-xs-6 <?php if ($itemno != "1"):?>grid-item-md-3<?php endif;?>">
+			 				<li data-tracklink="<?php echo $soundcloudlink;?>" class="test radio-item-li  <?php if ($itemno != "1"):?><?php if ($itemno > "7"):?> outer-grid-item outer-grid-item-xs-6 <?php else:?> grid-item grid-item-xs-6 grid-item-md-3 <?php endif;?> <?php else:?> grid-item grid-item-xs-6 <?php endif;?>">
 
 								<div class="wrapping <?php if ($itemno > "7")://if items on rows?>grid<?php endif;?>">	
 								
-									<a class="radio-item radio-item-<?php echo $itemno;?> <?php if ($itemno > "7")://if items on rows?>grid-item-xs-1<?php endif;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+									<a class="radio-item radio-item-<?php echo $itemno;?> <?php if ($itemno > "7")://if items on rows?>grid-item grid-item-xs-1<?php endif;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
 
 					 					<?php get_template_part( 'content-radio' );?>
 									 	
 									</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
 								
-									<a class="view-radio-item view-radio-item-<?php echo $itemno;?> <?php if ($itemno > "7")://if items on rows?>grid-item-xs-5<?php endif;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
+									<a class="view-radio-item view-radio-item-<?php echo $itemno;?> <?php if ($itemno > "7")://if items on rows?>grid-item grid-item-xs-5<?php endif;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
 										
 										<div class="details-wrap"><!-- classes - delete? outer-grid-item inner outer-grid-item-sm-6"-->
 	 											
@@ -299,13 +309,12 @@ get_header();?>
 				
 		 			</div><!-- .container added this assuming we have atleast 2 items and .container div exists -->
 
-				<div class="page-nav">
 							
 					<?php global $radio_query;
 
-					    $big = 999999999; // need an unlikely integer
+					   $big = 999999999; // need an unlikely integer
 
-					    echo paginate_links( array(
+					   $paginate = paginate_links( array(
 					        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 					        'format' => '?paged=%#%',
 					        'current' => max( 1, get_query_var('paged') ),
@@ -319,9 +328,21 @@ get_header();?>
 							'prev_text' => '<div class="small nav-previous align-left"><svg class="svg-icon previous-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div>Newer Shows',
 							'next_text' => '<div class="small nav-next align-right"><svg class="svg-icon next-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div>Older Shows',
 				    		));
-					?>
+					
+						if ($paginate):?>
+					
+						<div class="page-nav outer-grid-item-xs-6 inner">
 
-				</div>	<!-- ".page-nav-->		 
+							<div class="grid page-nav-wrapper">
+
+							<?php echo $paginate;?>
+
+							</div>
+						
+						</div>	<!-- ".page-nav-->		 
+
+						<?php endif;  // if we have paginated links ?>
+
 
 			</section><!-- .past-radios-->
 
