@@ -132,27 +132,31 @@ get_header();?>
 
 							<?php endif; //$featureimage  ?>
 
-						 	<li data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> outer-grid-item inner outer-grid-item-xs-6 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
+						 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> outer-grid-item inner outer-grid-item-xs-6 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
 
 								<div class="wrapping grid">	
 								
 									<a class="radio-item radio-item-<?php echo $itemno;?> grid-item grid-item-xs-1" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
 
 					 					<div class="play-icon-wrap">
-				
-											 <div class="play-toggle small"> 
-											 	<svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
-											 		<path d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-											 		<path d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-											 		<path d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-											 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-											 		<path opacity="0" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
-											 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-											 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-											 		<path style="display:none;" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-											 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-											 	</svg> 
-											 </div> 
+
+										 	<div class="play-toggle">
+
+												<svg id="playertoggle_<?php echo $showid?>" class="playertoggle"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+													
+													<path class="play-inline" id="play_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+													<path class="play-left-inline"id="play-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+													<path class="play-right-inline" id="play-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+													<path opacity="0" id="pause_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+													<path opacity="0" id="pause-left_<?php echo $showid?>" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+													<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+													<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+													<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
+													<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+												
+												</svg> 
+
+											</div>
 
 									    </div>
 														 	
@@ -191,7 +195,7 @@ get_header();?>
 			 			//else if ($itemno == 1){ // NOt the first item
 			 			?>
 
-			 				<li data-tracklink="<?php echo $soundcloudlink;?>" class="test radio-item-li  <?php if ($itemno != "1"):?><?php if ($itemno > "7"):?> outer-grid-item outer-grid-item-xs-6 <?php else:?> grid-item grid-item-xs-6 grid-item-md-3 <?php endif;?> <?php else:?> grid-item grid-item-xs-6 <?php endif;?>">
+			 				<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="test radio-item-li  <?php if ($itemno != "1"):?><?php if ($itemno > "7"):?> outer-grid-item outer-grid-item-xs-6 <?php else:?> grid-item grid-item-xs-6 grid-item-md-3 <?php endif;?> <?php else:?> grid-item grid-item-xs-6 <?php endif;?>">
 
 								<div class="wrapping <?php if ($itemno > "7")://if items on rows?>grid<?php endif;?>">	
 								

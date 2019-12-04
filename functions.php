@@ -492,10 +492,62 @@ function my_acf_block_render_callback( $block ) {
 	// START CUSTOM POST TYPE: Radio
 
 
+
+
+
+    // START CUSTOM POST TYPE: Radio
+
+
+    function post_type_radio() {
+
+     $labels = array(
+        'name' => _x('Radio', 'post type general name'),
+        'singular_name' => _x('Radio', 'post type singular name'),
+        'add_new' => _x('Add New', 'radio'),
+        'add_new_item' => __('Add New Radio'),
+        'edit_item' => __('Edit Radio'),
+        'new_item' => __('New Radio'),
+        'view_item' => __('View Radio'),
+        'search_items' => __('Search Radio'),
+        'not_found' =>  __('Nothing found'),
+        'not_found_in_trash' => __('Nothing found in Trash'),
+        'parent_item_colon' => ''
+    );
+ 
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        '_builtin' => false, // It's a custom post type, not built in
+        '_edit_link' => 'post.php?post=%d',
+        'capability_type' => 'post',
+       // 'rewrite' => array("slug" => "radio"), // Permalinks
+        'query_var' => true,
+        'menu_position' => null
+      );
+ 
+        //   flush_rewrite_rules( false );
+
+
+    register_post_type( 'radio' , $args );
+
+
+    }
+
+    add_action('init', 'post_type_radio', 0);
+
+    /*
+    // END CUSTOMPOST TYPE: Radio
+    */
+
+
+
+/* Deletet this whole comment blow - we are registering post type above iwth. the label
+
 	function post_type_radio() {
 
-// not sure why There are not variable and values for the labels - as per the other posts? Revise this maybe, so we have consistent labelling etc.
-
+ 
 	    register_post_type( 'radio', array(
 	        'label' => __('Radio'),
 	        'singular_label' => __('Radio Item'),
@@ -516,6 +568,7 @@ function my_acf_block_render_callback( $block ) {
 
 	 add_action('init', 'post_type_radio');
 
+*/
 /*
 // END CUSTOMPOST TYPE: Radio
 
@@ -591,15 +644,15 @@ function my_page_columns($columns)
       //  'date'      =>  'Date',
         'event_start_date'    =>  'Start',
         'event_end_date'      =>  'End',
-        'author'    =>  'Author',
+       // 'author'    =>  'Author',
         'venue' => 'Venue'
     );
     return $columns;
 }
 
-function my_custom_columns($column)
-{
-    global $post;
+function my_custom_columns($column) {
+
+global $post;
  
 /* events */
 
@@ -607,33 +660,24 @@ function my_custom_columns($column)
     {
     
         if(get_field('event_start_date')){
-           $start = get_field('event_start_date'); echo date_i18n('d M Y g:i a', $start);
-         //   echo 'start';
+        $start = get_field('event_start_date'); echo date_i18n('d M Y g:i a', $start);
         }
-     //   echo wp_get_attachment_image( get_field('page_image', $post->ID), array(200,200) );
-    }
-    elseif($column == 'event_end_date')
-    {
-           if(get_field('event_end_date')){
-     //     echo 'end';
 
-       $end = get_field('event_end_date'); echo date_i18n('d M Y g:i a', $end);
+    }elseif($column == 'event_end_date'){
 
-            }
-    }elseif($column == 'venue')
-    {
-           if(get_field('venue')){
-     //     echo 'end';
+        if(get_field('event_end_date')){
+        $end = get_field('event_end_date'); echo date_i18n('d M Y g:i a', $end);
+        }
 
-       $venue = get_field('venue'); echo $venue;
+    }elseif($column == 'venue'){
 
-            }
+        if(get_field('venue')){
+        $venue = get_field('venue'); echo $venue;
+        }
+    
     } 
-
     
 /* events */
-
-
 
 };
  
@@ -642,10 +686,14 @@ function my_custom_columns($column)
 // Add the custom columns to the releases post type:
 add_filter( 'manage_releases_posts_columns', 'set_custom_edit_releases_columns' );
 function set_custom_edit_releases_columns($columns) {
+    
+    
     unset( $columns['code'] );
     $columns['release_code'] = __( 'Code', 'code' );
  
     return $columns;
+
+
 }
 
 // Add the data to the custom columns for the releases post type:
@@ -655,21 +703,72 @@ function custom_releases_column( $column, $post_id ) {
 
         case 'release_code' :
 
-
-       // echo get_post_meta( $post_id , 'release_code' , true ); 
+        $code = get_field('release_code'); echo $code;
  
-     //     echo 'end';
+    break;
 
-       $code = get_field('release_code'); echo $code;
-
-       //     }
-
-     //  case 'publisher' :
-        //    echo get_post_meta( $post_id , 'publisher' , true ); 
-            break;
 
     }
 }
+
+
+
+
+// Add the custom columns to the radio post type:
+add_filter( 'manage_radio_posts_columns', 'set_custom_edit_radio_columns' );
+function set_custom_edit_radio_columns($columns) {
+ 
+     $columns = array(
+        'title'     => 'Title',
+      //  'date'      =>  'Date',
+        'show_start_date'    =>  'Start',
+        'show_end_date'      =>  'End', // this retunring 01 Jan 1970 12:00 am  
+        //'author'    =>  'Author',
+        'is_item_public' => 'List on Archive'
+    );
+    return $columns;
+}
+
+// Add the data to the custom columns for the releases post type:
+add_action( 'manage_radio_posts_custom_column' , 'custom_radio_column', 10, 2 );
+function custom_radio_column( $column, $post_id ) {
+    global $post;
+ 
+/* events */
+
+    if($column == 'show_start_date')
+    {
+    
+        if(get_field('show_start_date')){
+        $start = get_field('show_start_date'); echo date_i18n('d M Y g:i a', $start);
+        }
+
+    }elseif($column == 'show_end_date'){
+
+        if(get_field('show_end_date')){
+            
+        $end = get_field('show_end_date');
+       // echo $end;
+        //echo date_i18n('d M Y g:i a', $end); // this retunring 01 Jan 1970 12:00 am  
+        echo date_i18n('d M Y g:i a', $end);
+        }
+
+    }elseif($column == 'is_item_public'){
+
+        if(get_field('is_item_public')){
+        $public = get_field('is_item_public');
+
+            if ($public == '1'){
+                echo 'true';
+            }
+        }
+    
+    } 
+
+}
+//END - Add the custom columns to the radio post type:
+
+
 
  /*
 add_action("manage_posts_releases_column", "my_custom_release_columns");

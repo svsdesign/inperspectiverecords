@@ -23,7 +23,9 @@
 
 
 /* TO do
-If the player js hasn't loaded yet - but we allow teh UI elements to be visible, people will click but it won't work
+
+
+- If the player js hasn't loaded yet - but we allow teh UI elements to be visible, people will click but it won't work
 So I need to maybe create loading states (or just don't display any of the UI elements) untill we can allow for interaction
 This was happening because the Internet was slow.
 
@@ -142,6 +144,171 @@ This was happening because the Internet was slow.
         play_right.animate({ d: playpathPoints_right }, 100, mina.easin);  
        // console.log("toPause")
 
+
+      };
+
+
+
+
+  var toInlinePause = function(activeurl){
+        console.log("to Inline Pause ");
+
+        console.log(activeurl);
+// i need to ensure the other items go to play icon again, through the use of classes?
+
+//
+
+        var thisactiveurl = activeurl,
+            $thisactiveobject = $("li[data-tracklink='" + thisactiveurl +"']"), //$(document).find("[data-tracklink='${thisactiveurl}']");
+            thisid = $thisactiveobject.data('trackid');
+          
+            $thissvg = $('#playertoggle_'+thisid+'');
+
+             console.log(thisid);
+
+         //   $thisactiveobject.addClass("hello-what");
+          //  $thisactiveobject.css("background-color","red");
+
+      // var svg = $thissvg;
+
+
+        var svg = document.getElementById('playertoggle_'+thisid+'');
+        var s = new Snap(svg);
+
+        var play = Snap.select('#play_'+thisid+''); // assigne to unique id
+        var playpath = Snap.select('#play-path_'+thisid+''); // assigne to unique id
+
+        var pause = Snap.select('#pause_'+thisid+''); // assigne to unique id
+
+        var playPoints = play.node.getAttribute('d');
+        var pausePoints = pause.node.getAttribute('d');
+        var playpathPoints = playpath.node.getAttribute('d'); // this added
+
+  //left
+        var play_left = Snap.select('#play-left_'+thisid+''); // assigne to unique id
+        var playpath_left = Snap.select('#play-path-left_'+thisid+''); // assigne to unique id
+
+        var pause_left = Snap.select('#pause-left_'+thisid+''); // assigne to unique id
+
+        var playPoints_left = play_left.node.getAttribute('d');
+        var pausePoints_left = pause_left.node.getAttribute('d');
+        var playpathPoints_left = playpath_left.node.getAttribute('d'); // this added
+  //right
+      
+        var play_right = Snap.select('#play-right_'+thisid+''); // assigne to unique id
+        var playpath_right = Snap.select('#play-path-right_'+thisid+''); // assigne to unique id
+
+        var pause_right = Snap.select('#pause-right_'+thisid+''); // assigne to unique id
+
+        var playPoints_right = play_right.node.getAttribute('d');
+        var pausePoints_right = pause_right.node.getAttribute('d');
+        var playpathPoints_right = playpath_right.node.getAttribute('d'); // this added
+
+       // reset others
+
+// this isnt working at the momement - consider different approach?
+
+      //  $('.play-inline').css("background-color","green");
+       // console.log()
+ //Snap.select
+       // $('.play-inline').each(function() {
+              console.log('playinline')
+
+        // $(this).css("background-color","green");
+        //$(this).animate({ d: playpathPoints }, 100, mina.easin); 
+
+       // });
+          Snap.selectAll('.play-inline').animate({ d: playpathPoints }, 100, mina.easin); 
+
+                       // Snap.select('.play-inline').animate({ d: playpathPoints }, 100, mina.easin); 
+         Snap.selectAll('.play-left-inline').animate({ d: playpathPoints_left }, 100, mina.easin); 
+         Snap.selectAll('.play-right-inline').animate({ d: playpathPoints_right }, 100, mina.easin); 
+
+
+      // $('.play-left-inline').animate({ d: playpathPoints_left }, 100, mina.easin);  
+     //   console.log("toPause")
+
+      // $('.play-right-inline').animate({ d: playpathPoints_right }, 100, mina.easin);  
+       // console.log("toPause")
+// this isnt working at the momement - consider different approach?
+
+        //end reset others
+      
+
+
+
+        play.animate({ d: pausePoints }, 100, mina.easin);  
+ 
+        play_left.animate({ d: pausePoints_left }, 100, mina.easin);  
+       // console.log("toPause")
+
+        play_right.animate({ d: pausePoints_right }, 100, mina.easin);  
+        //console.log("toPause")
+
+ 
+      };//toInlinePause
+
+
+      var toInlinePlay = function(activeurl){
+
+
+        var thisactiveurl = activeurl,
+            $thisactiveobject = $("li[data-tracklink='" + thisactiveurl +"']"), //$(document).find("[data-tracklink='${thisactiveurl}']");
+            thisid = $thisactiveobject.data('trackid');
+          
+            $thissvg = $('#playertoggle_'+thisid+'');
+
+            // console.log(thisid);
+
+           // $thisactiveobject.addClass("hello-what");
+            $thisactiveobject.css("background-color","transparent");
+
+            // issue here is that we also need to clear other items that have been click prior to this;
+            // restore them totheir initial pause state
+    
+
+        var svg = document.getElementById('playertoggle_'+thisid+'');
+        var s = new Snap(svg);
+
+              var play = Snap.select('#play_'+thisid+''); // assigne to unique id
+        var playpath = Snap.select('#play-path_'+thisid+'');// assigne to unique id
+
+        var pause = Snap.select('#pause_'+thisid+''); // assigne to unique id
+
+        var playPoints = play.node.getAttribute('d');
+        var pausePoints = pause.node.getAttribute('d');
+        var playpathPoints = playpath.node.getAttribute('d'); // this added
+
+  //left
+        var play_left = Snap.select('#play-left_'+thisid+''); // assigne to unique id
+        var playpath_left = Snap.select('#play-path-left_'+thisid+''); // assigne to unique id
+
+        var pause_left = Snap.select('#pause-left_'+thisid+''); // assigne to unique id
+
+        var playPoints_left = play_left.node.getAttribute('d');
+        var pausePoints_left = pause_left.node.getAttribute('d');
+        var playpathPoints_left = playpath_left.node.getAttribute('d'); // this added
+  //right
+      
+        var play_right = Snap.select('#play-right_'+thisid+''); // assigne to unique id
+        var playpath_right = Snap.select('#play-path-right_'+thisid+''); // assigne to unique id
+
+        var pause_right = Snap.select('#pause-right_'+thisid+''); // assigne to unique id
+
+        var playPoints_right = play_right.node.getAttribute('d');
+        var pausePoints_right = pause_right.node.getAttribute('d');
+        var playpathPoints_right = playpath_right.node.getAttribute('d'); // this added
+  
+
+
+        play.animate({ d: playpathPoints }, 100, mina.easin); 
+              console.log("play should animate - how many times?");
+
+        play_left.animate({ d: playpathPoints_left }, 100, mina.easin);  
+     //   console.log("toPause")
+
+        play_right.animate({ d: playpathPoints_right }, 100, mina.easin);  
+       // console.log("toPause")
 
       };
 
@@ -675,10 +842,13 @@ console.log("track" + track);
           .toggleClass('playing', status)
           .trigger((status ? 'onPlayerPlay' : 'onPlayerPause'));
       },
-      onPlay = function(player, id) {
+      onPlay = function(player, id, activeurl) {
 
 
-        var track = getPlayerData(player).tracks[id || 0];
+        var track = getPlayerData(player).tracks[id || 0],
+            thisurl = activeurl;
+         
+         console.log("thisurl" + thisurl+"");
         updateTrackInfo(player, track);
         // cache the references to most updated DOM nodes in the progress bar
         updates = {
@@ -691,8 +861,8 @@ console.log("track" + track);
         $('body').addClass("sc-player-playing");
         $('body').removeClass("sc-player-paused"); // if this existed remove it
 
-        toPause();
-
+        toPause();// Main toggle at the top animation
+        toInlinePause(thisurl); // particular toggle in the page
        // console.log("onPlay")
        // console.log(player)
         //console.log("id = " + id +"")
@@ -765,11 +935,12 @@ console.log("track" + track);
     */
 
       },
-      onPause = function(player) {
+      onPause = function(player, id, activeurl) {
         updatePlayStatus(player, false);
         audioEngine.pause();
      //   playtoggle();
-        toPlay();
+        toPlay();// Main toggle at the top animation
+        toInlinePlay(activeurl)
         $('body').removeClass("sc-player-playing");
         $('body').addClass("sc-player-paused");
 
@@ -1084,17 +1255,30 @@ var $track = $(this),
 
   // selecting tracks in the playlist
   $(document).on('click','.sc-trackslist li', function(event) {
+    // this is generally a click triggered from the below lists
+
     var $track = $(this),
         $player = $track.closest('.sc-player'),
         trackId = $track.data('sc-track').id,
         play = $player.is(':not(.playing)') || $track.is(':not(.active)');
+
+    var activeurl = $track.find('a').attr('href');
+
+            // console.log("currently active url" + activeurl +'')
+
+             //console.log("click trackID" + $track +"");
+           //  console.log("my object: %o", $track)
+            // console.log("my object: %o", activeurl)
+
+
     if (play) {
-      onPlay($player, trackId);
+      onPlay($player, trackId, activeurl);
+
     }else{
-      onPause($player);
+      onPause($player, trackId, activeurl);
     }
 
-  console.log("click trackID" + trackId+"");
+   // console.log("click trackID" + trackId+"");
 
     $track.addClass('active').siblings('li').removeClass('active');
     $('.artworks li', $player).each(function(index) {
@@ -1106,12 +1290,12 @@ var $track = $(this),
     // if hidden - assign a class and remove it again after a few seconds - signifying the change
 
       $("body").addClass("pulsate-player-icon");
-            console.log("forcing pulstate")
+           // console.log("forcing pulstate")
     
         setTimeout(function() {
 
             $("body").removeClass("pulsate-player-icon");
-            console.log("removeng pulstate")
+           // console.log("removeng pulstate")
 
 
       }, 1000);

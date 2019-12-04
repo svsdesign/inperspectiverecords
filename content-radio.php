@@ -59,7 +59,7 @@
 
 		<?php endif; //$featureimage  ?>
 
-		<li data-tracklink="<?php echo $soundcloudlink;?>" class="outer-grid-item inner outer-grid-item-sm-6">
+		<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="outer-grid-item inner outer-grid-item-sm-6">
 
 			<div class="wrapping grid">	
 			
@@ -71,20 +71,20 @@
 
 						<div class="play-toggle small"> 
 						
-						 	<svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
-						 		<path d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-						 		<path d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-						 		<path d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-						 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-						 		<path opacity="0" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
-						 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-						 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-						 		<path style="display:none;" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-						 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-						 	</svg> 
+							<svg id="playertoggle_<?php echo $showid?>" class="playertoggle-inline"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+								<path id="play_<?php echo $showid?>" class="play-inline" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+								<path id="play-left_<?php echo $showid?>" class="play-left-inline" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+								<path id="play-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+								<path opacity="0" id="pause_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+								<path opacity="0" id="pause-left_<?php echo $showid?>" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+								<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+								<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+								<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
+								<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+							</svg> 
 						
-						</div> 
-
+						</div>
+	
 				    </div>
 				 	
 				</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
@@ -131,7 +131,7 @@
  	    $argsradiopage = array(
 	        
 		'post_type'              => 'radio', // your event post type slug
-		//'post__not_in' => array($post->ID), // exclude the current post < doing this probably mean we're creating an issue with my unique IDs
+		//'post__not_in'			 => array($post->ID), // exclude the current post < doing this mean we're creating an issue with my unique IDs
 		'post_status'            => 'publish', // only show published events
 	 	'order'                  => 'DESC', // Show earlier events last < this order might be cause problems with muy php ID's
 		'showposts' 			 => 999,
@@ -164,7 +164,8 @@
 
 		$argsradiopage_query = new WP_Query( $argsradiopage ); 
 		$radio_found = false;  			 
- 	    
+ 	    $excludedshow = $showid;// current post item	
+
  	    if ( $argsradiopage_query->have_posts() ) :
 	 	$thisnumber = 0;
  		?>
@@ -172,7 +173,7 @@
 			<section id="other-shows" class="outer-grid-item inner outer-grid-item-sm-6">
 
 				<div class="upcoming-events-title">	
-				Other Shows
+				Latest Shows:
 				</div><!--.event-items-title-->	
 
 					<div class="radio-items grid post-total-<?php echo $argseventspage_query->post_count; ?>">	
@@ -186,78 +187,118 @@
 							$showstart = get_field('show_start_date'); // date and time picker
 							$showend = get_field('show_end_date');  // date and time picker
 							$soundcloudlink = get_field('soundcloud_link');
-							?>
-							<!-- start new -->
+ 
+  							if ($excludedshow == $showid):
+  							//exlcued items
+  							else:?>
+						
+								<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $thisnumber;?> grid-item grid-item-sm-8 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
 
-							<li data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $thisnumber;?> grid-item grid-item-sm-8 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
-
-								<div class="wrapping">	
-								
-									<a class="radio-item radio-item-<?php echo $thisnumber;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
-
-											
-										<div class="play-icon-wrap">
-
- 										<!-- changes thesed IDs to classes + making sure clikcing them doesn't intefere with current script(s)
-	<path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-										 		<path id="play-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-										 		<path id="play-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-										 		<path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-										 		<path opacity="0" id="pause-left" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
-										 		<path opacity="0" id="pause-right" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-										 		<path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-										 		<path style="display:none;" id="play-path-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-										 		<path style="display:none;" id="play-path-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-										 	
-
- 										 -->
-
-										 <div class="play-toggle inline-small"> 
-										 	<svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
-										 		<path d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-										 		<path d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-										 		<path d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-										 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-										 		<path opacity="0" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
-										 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-										 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-										 		<path style="display:none;" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-										 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-										 	</svg> 
-										 </div> 
-
- 								    </div>
-									 	
-									</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
-								
-									<a class="view-radio-item view-radio-item-<?php echo $thisnumber;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
-										
-										<div class="details-wrap">
-	 											
-											<div class="radio-date">
-												<?php $showstart = get_field('show_start_date'); echo date_i18n('dS F Y', $showstart);  ?>
-											 </div><!-- .date -->
-											
-											<div class="radio-view-item">
-												View Item
-											</div><!--view-item-->
-											
-
-											<?php if($showtitle): ?>
-
-												<div class="radio-name">	
-												<?php echo $showtitle; ?>
-							 					</div><!-- .event-name -->
-										
-											<?php endif; //$name ?>	
-
-										</div><!--.outer-grid-item inner -->
-
-									</a>
+									<div class="wrapping">	
 									
-								</div><!-- wrapping -->
+										<a class="radio-item radio-item-<?php echo $thisnumber;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
 
-				 			</li>
+												
+											<div class="play-icon-wrap">
+
+	 										<!-- changes thesed IDs to classes + making sure clikcing them doesn't intefere with current script(s)
+		<path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+											 		<path id="play-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+											 		<path id="play-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+											 		<path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+											 		<path opacity="0" id="pause-left" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+											 		<path opacity="0" id="pause-right" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+											 		<path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+											 		<path style="display:none;" id="play-path-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+											 		<path style="display:none;" id="play-path-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+											 	
+
+	 										 -->
+
+	<!-- from js append:
+
+	<a class="sc-play"> 
+		<div class="play-toggle"> 
+			<svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+				<path id="play" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+				<path id="play-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+				<path id="play-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+				<path opacity="0" id="pause" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+				<path opacity="0" id="pause-left" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+				<path opacity="0" id="pause-right" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+				<path style="display:none;" id="play-path" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+				<path style="display:none;" id="play-path-left" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
+				 <path style="display:none;" id="play-path-right" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+			</svg> 
+		</div>
+	</a>
+		end from js append
+
+	-->
+	 									
+	 											<div class="play-toggle"> 
+													<svg id="playertoggle_<?php echo $showid?>" class="playertoggle"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+														<path class="play-inline" id="play_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+														<path class="play-left-inline"id="play-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+														<path class="play-right-inline" id="play-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+														<path opacity="0" id="pause_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+														<path opacity="0" id="pause-left_<?php echo $showid?>" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+														<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+														<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+														<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
+														<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+													</svg> 
+												</div>
+	 
+												 <!--
+												 <div class="play-toggle inline-small"> 
+												 	<svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+												 		<path d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+												 		<path d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+												 		<path d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+												 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+												 		<path opacity="0" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+												 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+												 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+												 		<path style="display:none;" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+												 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+												 	</svg> 
+												 </div> -->
+
+	 								   		 </div>
+										 	
+										</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
+									
+										<a class="view-radio-item view-radio-item-<?php echo $thisnumber;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
+											
+											<div class="details-wrap">
+		 											
+												<div class="radio-date">
+													<?php $showstart = get_field('show_start_date'); echo date_i18n('dS F Y', $showstart);  ?>
+												 </div><!-- .date -->
+												
+												<div class="radio-view-item">
+													View Item
+												</div><!--view-item-->
+												
+
+												<?php if($showtitle): ?>
+
+													<div class="radio-name">	
+													<?php echo $showtitle; ?>
+								 					</div><!-- .event-name -->
+											
+												<?php endif; //$name ?>	
+
+											</div><!--.outer-grid-item inner -->
+
+										</a>
+										
+									</div><!-- wrapping -->
+
+					 			</li>
+							
+							<?php endif; //excludedid ?>
 
 							<!-- end new -->
 	 						<!-- I need to write a script that triggers a click  accordingly, but will that work if the script is only loaded once?
@@ -293,6 +334,17 @@
 
 <?php if ( is_archive() ) : //is archive content 
 
+
+/* to do:
+
+- review the play toggle svg markup
+its out of date and needs replacing with the one as per the "single other shows"
+
++ review JS accordingly
+
+
+*/
+
 	$showid = get_the_ID();	
 	$showtitle = get_the_title();// title						
  	$showstart = get_field('show_start_date'); // date and time picker
@@ -312,18 +364,21 @@
 			
 					 <div class="play-toggle inline-small"> 
 					
-					 	<svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
-					 		<path d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-					 		<path d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-					 		<path d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-					 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-					 		<path opacity="0" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
-					 		<path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-					 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-					 		<path style="display:none;" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-					 		<path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-					 	</svg> 
-					
+					 	
+						<svg id="playertoggle_<?php echo $showid?>" class="playertoggle"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+							
+							<path class="play-inline" id="play_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+							<path class="play-left-inline"id="play-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+							<path class="play-right-inline" id="play-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+							<path opacity="0" id="pause_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+							<path opacity="0" id="pause-left_<?php echo $showid?>" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+							<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+							<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+							<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
+							<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+						
+						</svg> 
+
 					 </div> 
 
 			    </div>

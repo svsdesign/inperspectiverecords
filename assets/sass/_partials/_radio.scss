@@ -661,6 +661,9 @@ body.post-type-archive-radio{
       /* bottom container items */
 
         .bottom-container{
+        @include padding(padding-top,1); 
+        @include padding(padding-bottom,1); 
+
 
           .bottom-title{
           text-align: center;
@@ -749,7 +752,7 @@ body.post-type-archive-radio{
     position: relative;
     clear:both;
     text-align: center;
-    @include padding(padding-bottom,4);
+    @include padding(padding-bottom,2);
     @include padding(padding-top,1);
 
       .page-nav-wrapper{
@@ -1224,6 +1227,7 @@ a.sc-player,
       }
     }
   }
+  
 }// eventualy this will be hidden
 
 
@@ -1235,15 +1239,16 @@ height: auto;
 overflow: auto;
 display: block;
 z-index: 2;
-    
-      li {
-      width: 100%;
-      cursor: pointer;
-      color: white;
-      text-align: left;
-      display: block;
-      border-bottom: 1px solid $white_0-25;
-      overflow: hidden;
+@include padding(padding-bottom,2); // same as archive nav
+  
+    li {
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    text-align: left;
+    display: block;
+    border-bottom: 1px solid $white_0-25;
+    overflow: hidden;
 
         .wrapping{
         position: relative;
@@ -1257,21 +1262,16 @@ z-index: 2;
             position: absolute;
             overflow: hidden;
             z-index: 3;// above other link 
+            top:0px;
+            bottom: 0px;
 
                 .play-icon-wrap{
-                 /* 
-                width: 100%; 
-                float: left;
-                position: absolute;
-                height: 50%;
-                bottom: 0px;
-                top: 50%;
-                */
                 width: 12.5vw;
                 overflow: hidden;
                 float: left;
-             //   @extend .grid-item;
-
+                position: relative;
+                height: 100%;
+ 
                 @media (min-width: map-get($breakpoints,md)) {   
                 width: 6.25vw;
                 margin: auto;
@@ -1279,8 +1279,6 @@ z-index: 2;
                 }
 
                     .play-toggle.small{
-                   // @include padding(padding,1.5);
-                   // margin-top: -50%;
                     }
                        
                     .play-toggle.inline-small{
@@ -1290,16 +1288,10 @@ z-index: 2;
                     position: relative;
                     width: 50%;
                     margin: auto;
+                    height: 100%;
                     }         
 
                 }// .play-icon-wrap
-
-
-
-
- 
-
-
 
             }//a.view-radio-item
 
