@@ -103,23 +103,23 @@
 	 					</div><!-- .event-name -->
 				
 					<?php endif; //$name ?>	
-					
-					<?php if($description): ?>
-
-						<div class="show-description-wrap grid-item grid-item-xs-6 grid-item-md-3">
-		
-							<div class="description">
-
-								<span><?php echo $description; ?></span>   
-							
-							</div><!-- .description -->
-
-						</div><!-- .show-description-wrap -->
-					
-					<?php endif; //$description ?>	 
 
 				</div><!--.details-wrap -->
 				
+				<?php if($description): ?>
+
+					<div class="show-description-wrap grid-item push-item-left-xs-1 grid-item-xs-4">
+	
+						<div class="description">
+
+							<span><?php echo $description; ?></span>   
+						
+						</div><!-- .description -->
+
+					</div><!-- .show-description-wrap -->
+				
+				<?php endif; //$description ?>	 
+
 			</div><!-- wrapping -->
 
 		</li>
@@ -136,7 +136,6 @@
 	 	'order'                  => 'DESC', // Show earlier events last < this order might be cause problems with muy php ID's
 		'showposts' 			 => 999,
 	//	'posts_per_page'         => 1, // only want to get the next event
-
 		'orderby' 				=>  'meta_value',
 		'meta_key' 				=>  'show_start_date',
 		'meta_query'			=> array(			 		
@@ -151,24 +150,23 @@
 		            'compare'   => '<=', // starts before or equal
 		            'value'     => $now//'9999999999'
 		        ),
-		        array(
-		        'key'	  		=> 'is_item_public', // only allow items that are "public"
-		        'value'	  		=> 'true',
-		        'compare' 		=> 'NOT EXISTS'
+		      	array(
+			        'key'	  	=> 'is_item_public', // only allow items that are "public" - by default value either not set or 0 (if set)
+			        //'value'	  	=> 'true',
+			        //'compare' 	=> 'NOT EXISTS'
+			        'value' => '1',
+    				'compare' => '==' // not really needed, this is the default
 			    )
 
-		    ),
-		
+		    ),	
 
 		); 
 
 		$argsradiopage_query = new WP_Query( $argsradiopage ); 
 		$radio_found = false;  			 
- 	    ?>
-			
-		<?php if ( $argsradiopage_query->have_posts() ) :
+ 	    
+ 	    if ( $argsradiopage_query->have_posts() ) :
 	 	$thisnumber = 0;
-
  		?>
 
 			<section id="other-shows" class="outer-grid-item inner outer-grid-item-sm-6">
@@ -183,13 +181,11 @@
 						// Start the Loop.
 						while ( $argsradiopage_query->have_posts() ) : $argsradiopage_query->the_post(); 						 
 
-							//start get fields - sort these out
-						 	$showid = get_the_ID();		// this is the post id	
+ 						 	$showid = get_the_ID();// this is the post id	
 						 	$showtitle = get_the_title();// title		
 							$showstart = get_field('show_start_date'); // date and time picker
 							$showend = get_field('show_end_date');  // date and time picker
 							$soundcloudlink = get_field('soundcloud_link');
-
 							?>
 							<!-- start new -->
 
@@ -216,7 +212,7 @@
 
  										 -->
 
-										 <div class="play-toggle small"> 
+										 <div class="play-toggle inline-small"> 
 										 	<svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
 										 		<path d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
 										 		<path d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 

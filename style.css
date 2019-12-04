@@ -2930,7 +2930,7 @@ body.dev-on #dev-grid.container .dev-grid-item {
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-5,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-6,
-  body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item .play-icon-wrap, .sound-block .play-icon-wrap,
+  body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, .sound-block .play-icon-wrap,
   .inp-bg,
   .navigation-toggle,
   .toggle-icon {
@@ -2951,7 +2951,7 @@ body.dev-on #dev-grid.container .dev-grid-item {
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-5,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-6,
-  body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item .play-icon-wrap, .sound-block .play-icon-wrap,
+  body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, .sound-block .play-icon-wrap,
   .inp-bg,
   .navigation-toggle,
   .toggle-icon {
@@ -2965,7 +2965,7 @@ body.dev-on #dev-grid.container .dev-grid-item {
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-5,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-6,
-  body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item .play-icon-wrap, .sound-block .play-icon-wrap,
+  body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, .sound-block .play-icon-wrap,
   .inp-bg,
   .navigation-toggle,
   .toggle-icon {
@@ -2979,7 +2979,7 @@ body.dev-on #dev-grid.container .dev-grid-item {
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-5,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-6,
-  body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item .play-icon-wrap, .sound-block .play-icon-wrap,
+  body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, .sound-block .play-icon-wrap,
   .inp-bg,
   .navigation-toggle,
   .toggle-icon {
@@ -3017,7 +3017,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-5,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-6,
-body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item .play-icon-wrap, .sound-block .play-icon-wrap {
+body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7, .sound-block .play-icon-wrap {
   overflow: hidden;
   /* issues with items exceeding their size based on child elements */
 }
@@ -3853,7 +3853,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(14deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(97deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -12292,7 +12292,7 @@ section#past-events .event-items a:first-child:last-child {
 body.single-radio {
   /*section#upcoming-radios*/
 }
-/* line 10, assets/sass/_partials/_radio.scss */
+/* line 9, assets/sass/_partials/_radio.scss */
 body.single-radio .details-wrap.outer-grid-item {
   padding-top: 36px;
   padding-top: 52px;
@@ -12300,54 +12300,54 @@ body.single-radio .details-wrap.outer-grid-item {
   padding-bottom: 52px;
 }
 @media screen and (min-width: 0px) {
-  /* line 10, assets/sass/_partials/_radio.scss */
+  /* line 9, assets/sass/_partials/_radio.scss */
   body.single-radio .details-wrap.outer-grid-item {
     padding-top: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 10, assets/sass/_partials/_radio.scss */
+  /* line 9, assets/sass/_partials/_radio.scss */
   body.single-radio .details-wrap.outer-grid-item {
     padding-top: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 10, assets/sass/_partials/_radio.scss */
+  /* line 9, assets/sass/_partials/_radio.scss */
   body.single-radio .details-wrap.outer-grid-item {
     padding-top: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 10, assets/sass/_partials/_radio.scss */
+  /* line 9, assets/sass/_partials/_radio.scss */
   body.single-radio .details-wrap.outer-grid-item {
     padding-top: 64px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 10, assets/sass/_partials/_radio.scss */
+  /* line 9, assets/sass/_partials/_radio.scss */
   body.single-radio .details-wrap.outer-grid-item {
     padding-bottom: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 10, assets/sass/_partials/_radio.scss */
+  /* line 9, assets/sass/_partials/_radio.scss */
   body.single-radio .details-wrap.outer-grid-item {
     padding-bottom: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 10, assets/sass/_partials/_radio.scss */
+  /* line 9, assets/sass/_partials/_radio.scss */
   body.single-radio .details-wrap.outer-grid-item {
     padding-bottom: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 10, assets/sass/_partials/_radio.scss */
+  /* line 9, assets/sass/_partials/_radio.scss */
   body.single-radio .details-wrap.outer-grid-item {
     padding-bottom: 64px;
   }
 }
-/* line 15, assets/sass/_partials/_radio.scss */
+/* line 14, assets/sass/_partials/_radio.scss */
 body.single-radio .cover-image-item {
   width: 100%;
   height: 75vh;
@@ -12355,55 +12355,19 @@ body.single-radio .cover-image-item {
   background-position: center center;
   background-repeat: no-repeat;
 }
-/* line 23, assets/sass/_partials/_radio.scss */
+/* line 22, assets/sass/_partials/_radio.scss */
 body.single-radio li {
   display: block;
   list-style: none;
 }
-/* line 32, assets/sass/_partials/_radio.scss */
-body.single-radio li .wrapping a.single-radio-item .play-icon-wrap {
-  height: 50%;
-  bottom: 0px;
-  top: 50%;
-}
-/* line 40, assets/sass/_partials/_radio.scss */
-body.single-radio li .wrapping a.single-radio-item .play-icon-wrap .play-toggle.small {
-  padding: 27px;
-  padding: 39px;
-  margin-top: -50%;
-}
-@media screen and (min-width: 0px) {
-  /* line 40, assets/sass/_partials/_radio.scss */
-  body.single-radio li .wrapping a.single-radio-item .play-icon-wrap .play-toggle.small {
-    padding: calc(27px + 12 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_radio.scss */
-  body.single-radio li .wrapping a.single-radio-item .play-icon-wrap .play-toggle.small {
-    padding: 39px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 40, assets/sass/_partials/_radio.scss */
-  body.single-radio li .wrapping a.single-radio-item .play-icon-wrap .play-toggle.small {
-    padding: calc(39px + 9 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 40, assets/sass/_partials/_radio.scss */
-  body.single-radio li .wrapping a.single-radio-item .play-icon-wrap .play-toggle.small {
-    padding: 48px;
-  }
-}
-/* line 51, assets/sass/_partials/_radio.scss */
+/* line 50, assets/sass/_partials/_radio.scss */
 body.single-radio li .wrapping .details-wrap {
   display: block;
   position: relative;
   overflow: hidden;
   margin: auto;
 }
-/* line 57, assets/sass/_partials/_radio.scss */
+/* line 56, assets/sass/_partials/_radio.scss */
 body.single-radio li .wrapping .details-wrap .radio-name {
   font-size: 10px;
   font-size: 16px;
@@ -12414,54 +12378,54 @@ body.single-radio li .wrapping .details-wrap .radio-name {
   display: block;
 }
 @media screen and (min-width: 0px) {
-  /* line 57, assets/sass/_partials/_radio.scss */
+  /* line 56, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-name {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 57, assets/sass/_partials/_radio.scss */
+  /* line 56, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-name {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 57, assets/sass/_partials/_radio.scss */
+  /* line 56, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-name {
     font-size: calc(16px + 8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 57, assets/sass/_partials/_radio.scss */
+  /* line 56, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-name {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 57, assets/sass/_partials/_radio.scss */
+  /* line 56, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-name {
     line-height: calc(18px + 4.1 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 57, assets/sass/_partials/_radio.scss */
+  /* line 56, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-name {
     line-height: 22.1px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 57, assets/sass/_partials/_radio.scss */
+  /* line 56, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-name {
     line-height: calc(26px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 57, assets/sass/_partials/_radio.scss */
+  /* line 56, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-name {
     line-height: 27.2px;
   }
 }
-/* line 63, assets/sass/_partials/_radio.scss */
+/* line 62, assets/sass/_partials/_radio.scss */
 body.single-radio li .wrapping .details-wrap .radio-date {
   font-weight: 100;
   font-size: 10px;
@@ -12472,54 +12436,54 @@ body.single-radio li .wrapping .details-wrap .radio-date {
   float: left;
 }
 @media screen and (min-width: 0px) {
-  /* line 63, assets/sass/_partials/_radio.scss */
+  /* line 62, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-date {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_radio.scss */
+  /* line 62, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-date {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_radio.scss */
+  /* line 62, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-date {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 63, assets/sass/_partials/_radio.scss */
+  /* line 62, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-date {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 63, assets/sass/_partials/_radio.scss */
+  /* line 62, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-date {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_radio.scss */
+  /* line 62, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-date {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 63, assets/sass/_partials/_radio.scss */
+  /* line 62, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-date {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 63, assets/sass/_partials/_radio.scss */
+  /* line 62, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-date {
     line-height: 25.6px;
   }
 }
-/* line 69, assets/sass/_partials/_radio.scss */
+/* line 68, assets/sass/_partials/_radio.scss */
 body.single-radio li .wrapping .details-wrap .radio-view-item {
   float: right;
   font-size: 10px;
@@ -12531,99 +12495,155 @@ body.single-radio li .wrapping .details-wrap .radio-view-item {
   animation: opacity-out-0_5 200ms ease-out forwards;
 }
 @media screen and (min-width: 0px) {
-  /* line 69, assets/sass/_partials/_radio.scss */
+  /* line 68, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-view-item {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 69, assets/sass/_partials/_radio.scss */
+  /* line 68, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-view-item {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 69, assets/sass/_partials/_radio.scss */
+  /* line 68, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-view-item {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 69, assets/sass/_partials/_radio.scss */
+  /* line 68, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-view-item {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 69, assets/sass/_partials/_radio.scss */
+  /* line 68, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-view-item {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 69, assets/sass/_partials/_radio.scss */
+  /* line 68, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-view-item {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 69, assets/sass/_partials/_radio.scss */
+  /* line 68, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-view-item {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 69, assets/sass/_partials/_radio.scss */
+  /* line 68, assets/sass/_partials/_radio.scss */
   body.single-radio li .wrapping .details-wrap .radio-view-item {
     line-height: 25.6px;
   }
 }
-/* line 84, assets/sass/_partials/_radio.scss */
+/* line 78, assets/sass/_partials/_radio.scss */
+body.single-radio li .wrapping .show-description-wrap {
+  font-weight: 100;
+  font-size: 10px;
+  font-size: 12.8px;
+  line-height: 18px;
+  line-height: 26px;
+}
+@media screen and (min-width: 0px) {
+  /* line 78, assets/sass/_partials/_radio.scss */
+  body.single-radio li .wrapping .show-description-wrap {
+    font-size: calc(10px + 6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 78, assets/sass/_partials/_radio.scss */
+  body.single-radio li .wrapping .show-description-wrap {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 78, assets/sass/_partials/_radio.scss */
+  body.single-radio li .wrapping .show-description-wrap {
+    font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 78, assets/sass/_partials/_radio.scss */
+  body.single-radio li .wrapping .show-description-wrap {
+    font-size: 19.2px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 78, assets/sass/_partials/_radio.scss */
+  body.single-radio li .wrapping .show-description-wrap {
+    line-height: calc(18px + 8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 78, assets/sass/_partials/_radio.scss */
+  body.single-radio li .wrapping .show-description-wrap {
+    line-height: 26px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 78, assets/sass/_partials/_radio.scss */
+  body.single-radio li .wrapping .show-description-wrap {
+    line-height: calc(26px + 6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 78, assets/sass/_partials/_radio.scss */
+  body.single-radio li .wrapping .show-description-wrap {
+    line-height: 32px;
+  }
+}
+/* line 87, assets/sass/_partials/_radio.scss */
 body.single-radio section#upcoming-radios {
   width: 100%;
 }
-/* line 87, assets/sass/_partials/_radio.scss */
+/* line 90, assets/sass/_partials/_radio.scss */
 body.single-radio section#upcoming-radios .radio-item {
   min-height: 50vh;
   padding: 36px;
   padding: 52px;
 }
 @media screen and (min-width: 0px) {
-  /* line 87, assets/sass/_partials/_radio.scss */
+  /* line 90, assets/sass/_partials/_radio.scss */
   body.single-radio section#upcoming-radios .radio-item {
     padding: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 87, assets/sass/_partials/_radio.scss */
+  /* line 90, assets/sass/_partials/_radio.scss */
   body.single-radio section#upcoming-radios .radio-item {
     padding: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 87, assets/sass/_partials/_radio.scss */
+  /* line 90, assets/sass/_partials/_radio.scss */
   body.single-radio section#upcoming-radios .radio-item {
     padding: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 87, assets/sass/_partials/_radio.scss */
+  /* line 90, assets/sass/_partials/_radio.scss */
   body.single-radio section#upcoming-radios .radio-item {
     padding: 64px;
   }
 }
-/* line 91, assets/sass/_partials/_radio.scss */
+/* line 94, assets/sass/_partials/_radio.scss */
 body.single-radio section#upcoming-radios .radio-item .radio-name {
   font-weight: 500;
 }
 
 /* body.single-radio */
-/* line 104, assets/sass/_partials/_radio.scss */
+/* line 107, assets/sass/_partials/_radio.scss */
 .radio-summary {
   overflow: visible;
   /* div.summary-item */
 }
-/* line 108, assets/sass/_partials/_radio.scss */
+/* line 111, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item {
   border-bottom: 1px solid white;
   padding-top: 3.6px;
@@ -12636,102 +12656,102 @@ body.single-radio section#upcoming-radios .radio-item .radio-name {
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     padding-top: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     padding-top: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     padding-top: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     padding-top: 6.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     padding-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     padding-bottom: 6.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 108, assets/sass/_partials/_radio.scss */
+  /* line 111, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item {
     line-height: 25.6px;
   }
 }
-/* line 114, assets/sass/_partials/_radio.scss */
+/* line 117, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item a {
   font-size: inherit;
   line-height: inherit;
@@ -12740,7 +12760,7 @@ body.single-radio section#upcoming-radios .radio-item .radio-name {
   overflow: hidden;
   display: block;
 }
-/* line 123, assets/sass/_partials/_radio.scss */
+/* line 126, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item span {
   display: flex;
   justify-content: center;
@@ -12748,7 +12768,7 @@ body.single-radio section#upcoming-radios .radio-item .radio-name {
   text-align: center;
   float: left;
 }
-/* line 131, assets/sass/_partials/_radio.scss */
+/* line 134, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item .svg-icon.inline-icon {
   height: 14.4px;
   height: 20.8px;
@@ -12756,82 +12776,82 @@ body.single-radio section#upcoming-radios .radio-item .radio-name {
   padding: 2.6px;
 }
 @media screen and (min-width: 0px) {
-  /* line 131, assets/sass/_partials/_radio.scss */
+  /* line 134, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item .svg-icon.inline-icon {
     height: calc(14.4px + 6.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 131, assets/sass/_partials/_radio.scss */
+  /* line 134, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item .svg-icon.inline-icon {
     height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 131, assets/sass/_partials/_radio.scss */
+  /* line 134, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item .svg-icon.inline-icon {
     height: calc(20.8px + 4.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 131, assets/sass/_partials/_radio.scss */
+  /* line 134, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item .svg-icon.inline-icon {
     height: 25.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 131, assets/sass/_partials/_radio.scss */
+  /* line 134, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item .svg-icon.inline-icon {
     padding: calc(1.8px + 0.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 131, assets/sass/_partials/_radio.scss */
+  /* line 134, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item .svg-icon.inline-icon {
     padding: 2.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 131, assets/sass/_partials/_radio.scss */
+  /* line 134, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item .svg-icon.inline-icon {
     padding: calc(2.6px + 0.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 131, assets/sass/_partials/_radio.scss */
+  /* line 134, assets/sass/_partials/_radio.scss */
   .radio-summary div.summary-item .svg-icon.inline-icon {
     padding: 3.2px;
   }
 }
-/* line 139, assets/sass/_partials/_radio.scss */
+/* line 142, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item:hover .scale-me {
   transform: scale(1.025);
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 145, assets/sass/_partials/_radio.scss */
+/* line 148, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item:hover a .right {
   font-weight: 500;
 }
-/* line 156, assets/sass/_partials/_radio.scss */
+/* line 159, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item:last-child {
   border-bottom: none;
 }
-/* line 164, assets/sass/_partials/_radio.scss */
+/* line 167, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item:first-child:last-child {
   border: none;
 }
-/* line 171, assets/sass/_partials/_radio.scss */
+/* line 174, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item.past span {
   float: left;
 }
-/* line 175, assets/sass/_partials/_radio.scss */
+/* line 178, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item.past a {
   width: 100%;
   float: left;
   display: block;
 }
-/* line 181, assets/sass/_partials/_radio.scss */
+/* line 184, assets/sass/_partials/_radio.scss */
 .radio-summary div.summary-item.past a .right {
   float: right;
   font-weight: 400;
@@ -12893,63 +12913,68 @@ body.single-radio section#upcoming-radios .radio-item .radio-name {
 
 } */
 /*#lineup-wrap*/
-/* line 255, assets/sass/_partials/_radio.scss */
+/* line 258, assets/sass/_partials/_radio.scss */
 section.view.container {
   padding: 36px;
   padding: 52px;
 }
 @media screen and (min-width: 0px) {
-  /* line 255, assets/sass/_partials/_radio.scss */
+  /* line 258, assets/sass/_partials/_radio.scss */
   section.view.container {
     padding: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 255, assets/sass/_partials/_radio.scss */
+  /* line 258, assets/sass/_partials/_radio.scss */
   section.view.container {
     padding: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 255, assets/sass/_partials/_radio.scss */
+  /* line 258, assets/sass/_partials/_radio.scss */
   section.view.container {
     padding: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 255, assets/sass/_partials/_radio.scss */
+  /* line 258, assets/sass/_partials/_radio.scss */
   section.view.container {
     padding: 64px;
   }
 }
-/* line 258, assets/sass/_partials/_radio.scss */
+/* line 261, assets/sass/_partials/_radio.scss */
 section.view.container .row {
   text-align: center;
 }
 
-/* line 266, assets/sass/_partials/_radio.scss */
-section#past-radio .bottom-container {
-  width: 100%;
-  /* .radio-items */
-}
-/* line 269, assets/sass/_partials/_radio.scss */
-section#past-radio .bottom-container .past-radio-title {
+/*
+section#past-radio .bottom-container{// added bottom container - review + delete this commetn if oka
+width: 100%;
+  
+  .past-radio-title{
   text-align: center;
-}
-/* line 275, assets/sass/_partials/_radio.scss */
-section#past-radio .bottom-container .radio-items a {
-  border-bottom: 1px solid white;
-}
-/* line 280, assets/sass/_partials/_radio.scss */
-section#past-radio .bottom-container .radio-items a:last-child {
-  border-bottom: none;
-}
-/* line 283, assets/sass/_partials/_radio.scss */
-section#past-radio .bottom-container .radio-items a:first-child:last-child {
-  border: none;
-}
+  }
 
-/* line 293, assets/sass/_partials/_radio.scss */
+  .radio-items{
+
+    a{
+    border-bottom: 1px solid white;   
+    }
+    a:first-child{
+    }
+    a:last-child{
+    border-bottom: none;   
+    }
+    a:first-child:last-child{
+      border: none;
+    }
+
+  } //.radio-items 
+
+
+} //section#past-radios
+*/
+/* line 297, assets/sass/_partials/_radio.scss */
 .radio-items {
   position: relative;
   overflow: visible;
@@ -12957,11 +12982,11 @@ section#past-radio .bottom-container .radio-items a:first-child:last-child {
 }
 
 /* archive */
-/* line 301, assets/sass/_partials/_radio.scss */
+/* line 305, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio {
   /*section#past-radios */
 }
-/* line 303, assets/sass/_partials/_radio.scss */
+/* line 307, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .cover-image-item {
   width: 100%;
   height: 25vw;
@@ -12969,110 +12994,251 @@ body.post-type-archive-radio .cover-image-item {
   background-position: center center;
   background-repeat: no-repeat;
 }
-/* line 311, assets/sass/_partials/_radio.scss */
+/* line 315, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio li {
   display: block;
   list-style: none;
 }
-/* line 315, assets/sass/_partials/_radio.scss */
+/* line 319, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio li .wrapping {
   width: 100%;
   padding-bottom: 18px;
   padding-bottom: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 315, assets/sass/_partials/_radio.scss */
+  /* line 319, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping {
     padding-bottom: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 315, assets/sass/_partials/_radio.scss */
+  /* line 319, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping {
     padding-bottom: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 315, assets/sass/_partials/_radio.scss */
+  /* line 319, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping {
     padding-bottom: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 315, assets/sass/_partials/_radio.scss */
+  /* line 319, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping {
     padding-bottom: 32px;
   }
 }
-/* line 319, assets/sass/_partials/_radio.scss */
+/* line 323, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio li .wrapping a.radio-item {
   width: 100%;
 }
-/* line 342, assets/sass/_partials/_radio.scss */
+/* line 326, assets/sass/_partials/_radio.scss */
+body.post-type-archive-radio li .wrapping a.radio-item .play-icon-wrap {
+  height: 100%;
+}
+/* line 329, assets/sass/_partials/_radio.scss */
+body.post-type-archive-radio li .wrapping a.radio-item .play-icon-wrap .play-toggle.inline-small {
+  padding: 20% 45% 25% 45%;
+  height: 100%;
+}
+/* line 343, assets/sass/_partials/_radio.scss */
+body.post-type-archive-radio li .wrapping a.view-radio-item {
+           /*   .cover-image-item{
+               height: 50vw;
+               background: red;
+
+                  @media (min-width: map-get($breakpoints,md)) {  
+                  height: 25vw
+                  }
+
+                .play-icon-wrap{
+                height: 100%;
+                } 
+
+                .play-toggle.inline-small{
+                padding: 20% 45% 25% 45%;
+                height: 100%;
+
+                    @media (min-width: map-get($breakpoints,md)) {  
+                    //padding: 30% 45% 30% 45%; // no need to change it?
+                    }
+
+                }
+            
+              } //.cover-image-item
+
+            */
+}
+/* line 345, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap {
   display: block;
   position: relative;
   overflow: hidden;
+  padding-top: 9px;
+  padding-top: 13px;
 }
-/* line 347, assets/sass/_partials/_radio.scss */
+@media screen and (min-width: 0px) {
+  /* line 345, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap {
+    padding-top: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 345, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap {
+    padding-top: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 345, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap {
+    padding-top: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 345, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap {
+    padding-top: 16px;
+  }
+}
+/* line 351, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
   font-size: 10px;
   font-size: 16px;
   line-height: 18px;
   line-height: 26px;
   font-weight: 500;
+  font-size: 10.8px;
+  font-size: 15.6px;
+  line-height: 14.4px;
+  line-height: 20.8px;
+  padding-top: 3.6px;
+  padding-top: 5.2px;
   clear: both;
   display: block;
 }
 @media screen and (min-width: 0px) {
-  /* line 347, assets/sass/_partials/_radio.scss */
+  /* line 351, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 347, assets/sass/_partials/_radio.scss */
+  /* line 351, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 347, assets/sass/_partials/_radio.scss */
+  /* line 351, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: calc(16px + 8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 347, assets/sass/_partials/_radio.scss */
+  /* line 351, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 347, assets/sass/_partials/_radio.scss */
+  /* line 351, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: calc(18px + 4.1 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 347, assets/sass/_partials/_radio.scss */
+  /* line 351, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: 22.1px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 347, assets/sass/_partials/_radio.scss */
+  /* line 351, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: calc(26px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 347, assets/sass/_partials/_radio.scss */
+  /* line 351, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: 27.2px;
   }
 }
-/* line 353, assets/sass/_partials/_radio.scss */
+@media screen and (min-width: 0px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    font-size: calc(10.8px + 4.8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    font-size: 15.6px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    font-size: calc(15.6px + 3.6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    font-size: 19.2px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    line-height: calc(14.4px + 6.4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    line-height: 20.8px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    line-height: calc(20.8px + 4.8 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    line-height: 25.6px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    padding-top: calc(3.6px + 1.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    padding-top: 5.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    padding-top: calc(5.2px + 1.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 351, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-name {
+    padding-top: 6.4px;
+  }
+}
+/* line 361, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-date {
   font-weight: 100;
   font-size: 10px;
@@ -13083,180 +13249,206 @@ body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio
   float: left;
 }
 @media screen and (min-width: 0px) {
-  /* line 353, assets/sass/_partials/_radio.scss */
+  /* line 361, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 353, assets/sass/_partials/_radio.scss */
+  /* line 361, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 353, assets/sass/_partials/_radio.scss */
+  /* line 361, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 353, assets/sass/_partials/_radio.scss */
+  /* line 361, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 353, assets/sass/_partials/_radio.scss */
+  /* line 361, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 353, assets/sass/_partials/_radio.scss */
+  /* line 361, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 353, assets/sass/_partials/_radio.scss */
+  /* line 361, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 353, assets/sass/_partials/_radio.scss */
+  /* line 361, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: 25.6px;
   }
 }
-/* line 359, assets/sass/_partials/_radio.scss */
+/* line 367, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
   float: right;
   font-size: 10px;
   font-size: 12.8px;
   line-height: 18px;
   line-height: 26px;
+  font-size: 7.2px;
+  font-size: 10.4px;
   font-weight: 400;
   opacity: 0.5;
   animation: opacity-out-0_5 200ms ease-out forwards;
 }
 @media screen and (min-width: 0px) {
-  /* line 359, assets/sass/_partials/_radio.scss */
+  /* line 367, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 359, assets/sass/_partials/_radio.scss */
+  /* line 367, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 359, assets/sass/_partials/_radio.scss */
+  /* line 367, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 359, assets/sass/_partials/_radio.scss */
+  /* line 367, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 359, assets/sass/_partials/_radio.scss */
+  /* line 367, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 359, assets/sass/_partials/_radio.scss */
+  /* line 367, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 359, assets/sass/_partials/_radio.scss */
+  /* line 367, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 359, assets/sass/_partials/_radio.scss */
+  /* line 367, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: 25.6px;
   }
 }
-/* line 371, assets/sass/_partials/_radio.scss */
+@media screen and (min-width: 0px) {
+  /* line 367, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
+    font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 367, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
+    font-size: 10.4px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 367, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
+    font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 367, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap .radio-view-item {
+    font-size: 12.8px;
+  }
+}
+/* line 379, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio li .wrapping a.view-radio-item .details-wrap:hover .radio-view-item {
   opacity: 1;
   animation: opacity-in-0_5 200ms ease-in forwards;
 }
-/* line 392, assets/sass/_partials/_radio.scss */
+/* line 426, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio section#past-radios .top-container {
   width: 100%;
 }
-/* line 395, assets/sass/_partials/_radio.scss */
+/* line 429, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio section#past-radios .top-container .cover-image-item {
   height: 75vh;
 }
-/* line 405, assets/sass/_partials/_radio.scss */
+/* line 439, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page {
   /* bottom container items */
   /*  .bottom-container */
   /* End bottom container */
 }
-/* line 411, assets/sass/_partials/_radio.scss */
+/* line 445, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li .details-wrap {
   padding-top: 9px;
   padding-top: 13px;
 }
 @media screen and (min-width: 0px) {
-  /* line 411, assets/sass/_partials/_radio.scss */
+  /* line 445, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .details-wrap {
     padding-top: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 411, assets/sass/_partials/_radio.scss */
+  /* line 445, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .details-wrap {
     padding-top: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 411, assets/sass/_partials/_radio.scss */
+  /* line 445, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .details-wrap {
     padding-top: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 411, assets/sass/_partials/_radio.scss */
+  /* line 445, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .details-wrap {
     padding-top: 16px;
   }
 }
-/* line 415, assets/sass/_partials/_radio.scss */
+/* line 449, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li .cover-image-item {
   height: 50vw;
 }
 @media (min-width: 640px) {
-  /* line 415, assets/sass/_partials/_radio.scss */
+  /* line 449, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .cover-image-item {
     height: 25vw;
   }
 }
-/* line 422, assets/sass/_partials/_radio.scss */
+/* line 456, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li .cover-image-item .play-icon-wrap {
   height: 100%;
 }
-/* line 426, assets/sass/_partials/_radio.scss */
+/* line 460, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li .cover-image-item .play-toggle.inline-small {
   padding: 20% 45% 25% 45%;
   height: 100%;
 }
-/* line 438, assets/sass/_partials/_radio.scss */
+/* line 472, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li .radio-name {
   font-size: 10px;
   font-size: 16px;
@@ -13271,155 +13463,155 @@ body.post-type-archive-radio .first-page .radio-item-li .radio-name {
   padding-top: 5.2px;
 }
 @media screen and (min-width: 0px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     font-size: calc(10px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     font-size: calc(16px + 14 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     font-size: 30px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     line-height: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     font-size: calc(10.8px + 4.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     font-size: 15.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     font-size: calc(15.6px + 3.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     line-height: calc(14.4px + 6.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     line-height: calc(20.8px + 4.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     line-height: 25.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     padding-top: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     padding-top: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     padding-top: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 438, assets/sass/_partials/_radio.scss */
+  /* line 472, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-name {
     padding-top: 6.4px;
   }
 }
-/* line 446, assets/sass/_partials/_radio.scss */
+/* line 480, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li .radio-view-item {
   font-size: 7.2px;
   font-size: 10.4px;
 }
 @media screen and (min-width: 0px) {
-  /* line 446, assets/sass/_partials/_radio.scss */
+  /* line 480, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-view-item {
     font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 446, assets/sass/_partials/_radio.scss */
+  /* line 480, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-view-item {
     font-size: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 446, assets/sass/_partials/_radio.scss */
+  /* line 480, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-view-item {
     font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 446, assets/sass/_partials/_radio.scss */
+  /* line 480, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li .radio-view-item {
     font-size: 12.8px;
   }
 }
-/* line 452, assets/sass/_partials/_radio.scss */
+/* line 486, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-1 {
   /*
             .cover-image-item{
@@ -13449,36 +13641,36 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-1 {
             } //.cover-image-item
   */
 }
-/* line 454, assets/sass/_partials/_radio.scss */
+/* line 488, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-1 .wrapping {
   padding-bottom: 18px;
   padding-bottom: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 454, assets/sass/_partials/_radio.scss */
+  /* line 488, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-1 .wrapping {
     padding-bottom: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 454, assets/sass/_partials/_radio.scss */
+  /* line 488, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-1 .wrapping {
     padding-bottom: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 454, assets/sass/_partials/_radio.scss */
+  /* line 488, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-1 .wrapping {
     padding-bottom: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 454, assets/sass/_partials/_radio.scss */
+  /* line 488, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-1 .wrapping {
     padding-bottom: 32px;
   }
 }
-/* line 533, assets/sass/_partials/_radio.scss */
+/* line 567, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4,
@@ -13487,7 +13679,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-6,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 {
   display: flex;
 }
-/* line 544, assets/sass/_partials/_radio.scss */
+/* line 578, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .cover-image-item,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .cover-image-item,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .cover-image-item,
@@ -13499,7 +13691,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .cover-i
   background-size: cover;
   position: relative;
 }
-/* line 550, assets/sass/_partials/_radio.scss */
+/* line 584, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .cover-image-item .play-icon-wrap,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .cover-image-item .play-icon-wrap,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .cover-image-item .play-icon-wrap,
@@ -13511,7 +13703,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .cover-i
   width: 100%;
   bottom: 0px;
 }
-/* line 563, assets/sass/_partials/_radio.scss */
+/* line 597, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
 body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13525,7 +13717,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   background: black;
 }
 @media screen and (min-width: 0px) {
-  /* line 563, assets/sass/_partials/_radio.scss */
+  /* line 597, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13536,7 +13728,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 563, assets/sass/_partials/_radio.scss */
+  /* line 597, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13547,7 +13739,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 563, assets/sass/_partials/_radio.scss */
+  /* line 597, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13558,7 +13750,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 563, assets/sass/_partials/_radio.scss */
+  /* line 597, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13569,7 +13761,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 @media (min-width: 320px) {
-  /* line 585, assets/sass/_partials/_radio.scss */
+  /* line 619, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13582,7 +13774,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 @media (min-width: 640px) {
-  /* line 596, assets/sass/_partials/_radio.scss */
+  /* line 630, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4,
@@ -13592,7 +13784,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
     width: 50%;
     padding: 10px;
   }
-  /* line 606, assets/sass/_partials/_radio.scss */
+  /* line 640, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .cover-image-item,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .cover-image-item,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .cover-image-item,
@@ -13601,7 +13793,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .cover-image-item {
     height: 25vw;
   }
-  /* line 615, assets/sass/_partials/_radio.scss */
+  /* line 649, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13615,7 +13807,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 615, assets/sass/_partials/_radio.scss */
+  /* line 649, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13626,7 +13818,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 615, assets/sass/_partials/_radio.scss */
+  /* line 649, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13637,7 +13829,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 615, assets/sass/_partials/_radio.scss */
+  /* line 649, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13648,7 +13840,7 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 615, assets/sass/_partials/_radio.scss */
+  /* line 649, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-2 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-3 .details-wrap,
   body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-4 .details-wrap,
@@ -13659,11 +13851,11 @@ body.post-type-archive-radio .first-page .radio-item-li.radio-item-li-7 .details
   }
 }
 
-/* line 629, assets/sass/_partials/_radio.scss */
+/* line 663, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .bottom-container {
   /*.radio-item*/
 }
-/* line 632, assets/sass/_partials/_radio.scss */
+/* line 665, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .bottom-container .bottom-title {
   text-align: center;
   width: 100%;
@@ -13673,82 +13865,142 @@ body.post-type-archive-radio .first-page .bottom-container .bottom-title {
   padding-bottom: 13px;
 }
 @media screen and (min-width: 0px) {
-  /* line 632, assets/sass/_partials/_radio.scss */
+  /* line 665, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .bottom-container .bottom-title {
     padding-top: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 632, assets/sass/_partials/_radio.scss */
+  /* line 665, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .bottom-container .bottom-title {
     padding-top: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 632, assets/sass/_partials/_radio.scss */
+  /* line 665, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .bottom-container .bottom-title {
     padding-top: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 632, assets/sass/_partials/_radio.scss */
+  /* line 665, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .bottom-container .bottom-title {
     padding-top: 16px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 632, assets/sass/_partials/_radio.scss */
+  /* line 665, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .bottom-container .bottom-title {
     padding-bottom: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 632, assets/sass/_partials/_radio.scss */
+  /* line 665, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .bottom-container .bottom-title {
     padding-bottom: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 632, assets/sass/_partials/_radio.scss */
+  /* line 665, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .bottom-container .bottom-title {
     padding-bottom: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 632, assets/sass/_partials/_radio.scss */
+  /* line 665, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio .first-page .bottom-container .bottom-title {
     padding-bottom: 16px;
   }
 }
-/* line 639, assets/sass/_partials/_radio.scss */
+/* line 672, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .bottom-container li {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   overflow: hidden;
 }
-/* line 643, assets/sass/_partials/_radio.scss */
-body.post-type-archive-radio .first-page .bottom-container li:last-child {
-  border-bottom: 0px solid white;
+/* line 676, assets/sass/_partials/_radio.scss */
+body.post-type-archive-radio .first-page .bottom-container li .wrapping {
+  padding-top: 9px;
+  padding-top: 13px;
+  padding-bottom: 9px;
+  padding-bottom: 13px;
 }
-/* line 647, assets/sass/_partials/_radio.scss */
+@media screen and (min-width: 0px) {
+  /* line 676, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio .first-page .bottom-container li .wrapping {
+    padding-top: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 676, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio .first-page .bottom-container li .wrapping {
+    padding-top: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 676, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio .first-page .bottom-container li .wrapping {
+    padding-top: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 676, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio .first-page .bottom-container li .wrapping {
+    padding-top: 16px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 676, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio .first-page .bottom-container li .wrapping {
+    padding-bottom: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 676, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio .first-page .bottom-container li .wrapping {
+    padding-bottom: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 676, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio .first-page .bottom-container li .wrapping {
+    padding-bottom: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 676, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio .first-page .bottom-container li .wrapping {
+    padding-bottom: 16px;
+  }
+}
+/* line 683, assets/sass/_partials/_radio.scss */
+body.post-type-archive-radio .first-page .bottom-container li:last-child {
+  border-bottom: 0px solid rgba(255, 255, 255, 0.25);
+}
+/* line 687, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .bottom-container .radio-item {
   width: 100%;
   padding: 0px;
-  /* @media (min-width: map-get($breakpoints,sm)) */
-  /* @media (min-width: map-get($breakpoints,md)) */
 }
-/* line 651, assets/sass/_partials/_radio.scss */
+/* line 691, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item {
   background-image: none !important;
   height: 100%;
   width: 100%;
 }
-/* line 656, assets/sass/_partials/_radio.scss */
+/* line 696, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item .play-icon-wrap {
   width: 12.5vw;
   overflow: hidden;
-  float: left;
+  margin: auto;
+  float: none;
 }
-/* line 663, assets/sass/_partials/_radio.scss */
+@media (min-width: 640px) {
+  /* line 696, assets/sass/_partials/_radio.scss */
+  body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item .play-icon-wrap {
+    width: 6.25vw;
+  }
+}
+/* line 708, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item .play-toggle.inline-small {
   padding: 25% 0;
   display: block;
@@ -13757,18 +14009,10 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
   width: 50%;
   margin: auto;
 }
-@media (min-width: 640px) {
-  /* line 696, assets/sass/_partials/_radio.scss */
-  body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-image-item .play-icon-wrap {
-    width: 6.25vw;
-    margin: auto;
-    float: none;
-  }
-}
 
 /*  archive */
 /* archive navigation */
-/* line 741, assets/sass/_partials/_radio.scss */
+/* line 745, assets/sass/_partials/_radio.scss */
 .post-type-archive-radio .page-nav {
   margin: auto;
   width: 100%;
@@ -13782,55 +14026,60 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
   padding-top: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 741, assets/sass/_partials/_radio.scss */
+  /* line 745, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav {
     padding-bottom: calc(72px + 32 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 741, assets/sass/_partials/_radio.scss */
+  /* line 745, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav {
     padding-bottom: 104px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 741, assets/sass/_partials/_radio.scss */
+  /* line 745, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav {
     padding-bottom: calc(104px + 24 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 741, assets/sass/_partials/_radio.scss */
+  /* line 745, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav {
     padding-bottom: 128px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 741, assets/sass/_partials/_radio.scss */
+  /* line 745, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav {
     padding-top: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 741, assets/sass/_partials/_radio.scss */
+  /* line 745, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav {
     padding-top: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 741, assets/sass/_partials/_radio.scss */
+  /* line 745, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav {
     padding-top: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 741, assets/sass/_partials/_radio.scss */
+  /* line 745, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav {
     padding-top: 32px;
   }
 }
-/* line 751, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .page-numbers {
+/* line 755, assets/sass/_partials/_radio.scss */
+.post-type-archive-radio .page-nav .page-nav-wrapper {
+  position: relative;
+  margin: auto;
+}
+/* line 760, assets/sass/_partials/_radio.scss */
+.post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
   margin: auto;
   width: auto;
   padding-left: 9px;
@@ -13840,136 +14089,298 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
   position: relative;
   display: inline-block;
   float: none;
+  font-weight: 400;
+  font-size: 9px;
+  font-size: 13px;
+  height: 18px;
+  height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 751, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-numbers {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
     padding-left: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 751, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-numbers {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
     padding-left: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 751, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-numbers {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
     padding-left: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 751, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-numbers {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
     padding-left: 16px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 751, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-numbers {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
     padding-right: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 751, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-numbers {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
     padding-right: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 751, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-numbers {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
     padding-right: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 751, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-numbers {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
     padding-right: 16px;
   }
 }
-/* line 761, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .prev {
-  position: absolute;
-  left: 0px;
-}
-/* line 766, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-  transform: rotate(180deg);
-  height: 100%;
-  width: 100%;
-  width: 18px;
-  width: 26px;
-}
 @media screen and (min-width: 0px) {
-  /* line 766, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    width: calc(18px + 8 * (100vw - 0px) / 960);
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
+    font-size: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 766, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    width: 26px;
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
+    font-size: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 766, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    width: calc(26px + 6 * (100vw - 960px) / 480);
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
+    font-size: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 766, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    width: 32px;
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
+    font-size: 16px;
   }
 }
-/* line 773, assets/sass/_partials/_radio.scss */
+@media screen and (min-width: 0px) {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
+    height: calc(18px + 8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
+    height: 26px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
+    height: calc(26px + 6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 760, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
+    height: 32px;
+  }
+}
+/* line 776, assets/sass/_partials/_radio.scss */
+.post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.current {
+  opacity: 0.6;
+  font-weight: 100;
+}
+/* line 781, assets/sass/_partials/_radio.scss */
+.post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.next, .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.prev {
+  position: absolute;
+}
+/* line 794, assets/sass/_partials/_radio.scss */
+.post-type-archive-radio .page-nav .prev {
+  left: 0px;
+}
+/* line 797, assets/sass/_partials/_radio.scss */
+.post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+  transform: rotate(180deg);
+  height: 100%;
+  width: 9px;
+  width: 13px;
+  padding-bottom: 3.6px;
+  padding-bottom: 5.2px;
+  margin-right: 9px;
+  margin-right: 13px;
+}
+@media screen and (min-width: 0px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    width: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    width: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    width: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    width: 16px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    padding-bottom: 5.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    padding-bottom: 6.4px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    margin-right: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    margin-right: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    margin-right: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 797, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
+    margin-right: 16px;
+  }
+}
+/* line 805, assets/sass/_partials/_radio.scss */
 .post-type-archive-radio .page-nav .prev .nav-previous {
   position: relative;
   display: inline-block;
   text-align: right;
   float: left;
 }
-/* line 782, assets/sass/_partials/_radio.scss */
+/* line 814, assets/sass/_partials/_radio.scss */
 .post-type-archive-radio .page-nav .next {
-  position: absolute;
   right: 0px;
 }
-/* line 787, assets/sass/_partials/_radio.scss */
+/* line 817, assets/sass/_partials/_radio.scss */
 .post-type-archive-radio .page-nav .next .next-arrow-icon {
   height: 100%;
-  width: 100%;
-  width: 18px;
-  width: 26px;
+  width: 9px;
+  width: 13px;
+  padding-top: 3.6px;
+  padding-top: 5.2px;
+  margin-left: 9px;
+  margin-left: 13px;
 }
 @media screen and (min-width: 0px) {
-  /* line 787, assets/sass/_partials/_radio.scss */
+  /* line 817, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    width: calc(18px + 8 * (100vw - 0px) / 960);
+    width: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 787, assets/sass/_partials/_radio.scss */
+  /* line 817, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    width: 26px;
+    width: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 787, assets/sass/_partials/_radio.scss */
+  /* line 817, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    width: calc(26px + 6 * (100vw - 960px) / 480);
+    width: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 787, assets/sass/_partials/_radio.scss */
+  /* line 817, assets/sass/_partials/_radio.scss */
   .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    width: 32px;
+    width: 16px;
   }
 }
-/* line 793, assets/sass/_partials/_radio.scss */
+@media screen and (min-width: 0px) {
+  /* line 817, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon {
+    padding-top: calc(3.6px + 1.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 817, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon {
+    padding-top: 5.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 817, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon {
+    padding-top: calc(5.2px + 1.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 817, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon {
+    padding-top: 6.4px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 817, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon {
+    margin-left: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 817, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon {
+    margin-left: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 817, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon {
+    margin-left: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 817, assets/sass/_partials/_radio.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon {
+    margin-left: 16px;
+  }
+}
+/* line 824, assets/sass/_partials/_radio.scss */
 .post-type-archive-radio .page-nav .next .nav-next {
   position: relative;
   display: inline-block;
@@ -13982,7 +14393,7 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
 /* Player */
 /* LAYOUT *
 -----------------------------------------------*/
-/* line 817, assets/sass/_partials/_radio.scss */
+/* line 848, assets/sass/_partials/_radio.scss */
 .cf:before,
 .cf:after {
   content: " ";
@@ -13991,17 +14402,17 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
   /* 2 */
 }
 
-/* line 823, assets/sass/_partials/_radio.scss */
+/* line 854, assets/sass/_partials/_radio.scss */
 .cf:after {
   clear: both;
 }
 
-/* line 827, assets/sass/_partials/_radio.scss */
+/* line 858, assets/sass/_partials/_radio.scss */
 .cf {
   *zoom: 1;
 }
 
-/* line 831, assets/sass/_partials/_radio.scss */
+/* line 862, assets/sass/_partials/_radio.scss */
 * {
   box-sizing: border-box;
 }
@@ -14010,30 +14421,30 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
 -----------------------------------------------*/
 /* PLAYER ICON *
 -----------------------------------------------*/
-/* line 849, assets/sass/_partials/_radio.scss */
+/* line 880, assets/sass/_partials/_radio.scss */
 .play-toggle {
   padding: 30%;
   cursor: pointer;
 }
-/* line 853, assets/sass/_partials/_radio.scss */
+/* line 884, assets/sass/_partials/_radio.scss */
 .play-toggle svg {
   width: 100%;
   height: 100%;
   display: block;
   cursor: inherit;
 }
-/* line 860, assets/sass/_partials/_radio.scss */
+/* line 891, assets/sass/_partials/_radio.scss */
 .play-toggle path {
   fill: white;
 }
-/* line 864, assets/sass/_partials/_radio.scss */
+/* line 895, assets/sass/_partials/_radio.scss */
 .play-toggle #play,
 .play-toggle #pause {
   display: none !important;
 }
 
 /* .play-toggle */
-/* line 878, assets/sass/_partials/_radio.scss */
+/* line 909, assets/sass/_partials/_radio.scss */
 a.sc-player,
 .button {
   display: inline-block;
@@ -14044,7 +14455,7 @@ a.sc-player,
 
 /* SOUNDCLOUD PLAYER *
 -----------------------------------------------*/
-/* line 904, assets/sass/_partials/_radio.scss */
+/* line 935, assets/sass/_partials/_radio.scss */
 .sc-player {
   position: absolute;
   height: 100vh;
@@ -14054,7 +14465,7 @@ a.sc-player,
 }
 
 /* Artworks */
-/* line 915, assets/sass/_partials/_radio.scss */
+/* line 946, assets/sass/_partials/_radio.scss */
 .sc-player .sc-artwork-list {
   display: none;
   float: left;
@@ -14064,18 +14475,18 @@ a.sc-player,
   position: relative;
   height: 100%;
 }
-/* line 925, assets/sass/_partials/_radio.scss */
+/* line 956, assets/sass/_partials/_radio.scss */
 .sc-player .sc-artwork-list li {
   list-style-type: none;
   display: none;
 }
-/* line 930, assets/sass/_partials/_radio.scss */
+/* line 961, assets/sass/_partials/_radio.scss */
 .sc-player .sc-artwork-list li.active {
   list-style-type: none;
   display: block;
 }
 
-/* line 936, assets/sass/_partials/_radio.scss */
+/* line 967, assets/sass/_partials/_radio.scss */
 .sc-player .sc-artwork-list li img,
 .sc-player .sc-artwork-list li div {
   list-style-type: none;
@@ -14084,7 +14495,7 @@ a.sc-player,
 }
 
 /* controls */
-/* line 944, assets/sass/_partials/_radio.scss */
+/* line 975, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls {
   display: block;
   height: 25vw;
@@ -14095,7 +14506,7 @@ a.sc-player,
   pointer-events: none;
 }
 @media (min-width: 640px) {
-  /* line 944, assets/sass/_partials/_radio.scss */
+  /* line 975, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: 72px;
     height: 104px;
@@ -14104,31 +14515,31 @@ a.sc-player,
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 944, assets/sass/_partials/_radio.scss */
+  /* line 975, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: calc(72px + 32 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 944, assets/sass/_partials/_radio.scss */
+  /* line 975, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: 104px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 944, assets/sass/_partials/_radio.scss */
+  /* line 975, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: calc(104px + 24 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 944, assets/sass/_partials/_radio.scss */
+  /* line 975, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: 128px;
   }
 }
 
-/* line 975, assets/sass/_partials/_radio.scss */
+/* line 1006, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a {
   pointer-events: initial;
   content: '';
@@ -14140,11 +14551,11 @@ a.sc-player,
   transition: all 0.3s ease-out;
   cursor: pointer;
 }
-/* line 991, assets/sass/_partials/_radio.scss */
+/* line 1022, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a:hover {
   background: black;
 }
-/* line 996, assets/sass/_partials/_radio.scss */
+/* line 1027, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a:after {
   /*
   content: '';
@@ -14165,24 +14576,24 @@ a.sc-player,
   */
 }
 
-/* line 1018, assets/sass/_partials/_radio.scss */
+/* line 1049, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a.sc-pause:after {
   background-position: bottom;
 }
 
-/* line 1022, assets/sass/_partials/_radio.scss */
+/* line 1053, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-time-indicators {
   color: white;
   text-align: right;
 }
 
-/* line 1029, assets/sass/_partials/_radio.scss */
+/* line 1060, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a {
   height: 50%;
 }
 
 /* scrubber */
-/* line 1048, assets/sass/_partials/_radio.scss */
+/* line 1079, assets/sass/_partials/_radio.scss */
 .sc-scrubber {
   position: absolute;
   bottom: 12.5vw;
@@ -14191,11 +14602,11 @@ a.sc-player,
   padding-right: 12.5vw;
   z-index: 1;
 }
-/* line 1057, assets/sass/_partials/_radio.scss */
+/* line 1088, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-buffer {
   cursor: pointer;
 }
-/* line 1063, assets/sass/_partials/_radio.scss */
+/* line 1094, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-buffer,
 .sc-scrubber .sc-played {
   height: 10px;
@@ -14203,13 +14614,13 @@ a.sc-player,
   top: 0;
   border-radius: 5px;
 }
-/* line 1072, assets/sass/_partials/_radio.scss */
+/* line 1103, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-time-indicators {
   position: absolute;
   right: 12.5vw;
   bottom: -6.25vw;
 }
-/* line 1078, assets/sass/_partials/_radio.scss */
+/* line 1109, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-time-span {
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 5px;
@@ -14217,17 +14628,17 @@ a.sc-player,
   overflow: hidden;
   height: 10px;
 }
-/* line 1087, assets/sass/_partials/_radio.scss */
+/* line 1118, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-volume-slider {
   background-color: white;
   border-radius: 2px;
   display: none;
 }
-/* line 1093, assets/sass/_partials/_radio.scss */
+/* line 1124, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-volume-slider .sc-volume-status {
   border-right: 1px solid white;
 }
-/* line 1097, assets/sass/_partials/_radio.scss */
+/* line 1128, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-waveform-container {
   z-index: 800;
   width: 100%;
@@ -14235,21 +14646,21 @@ a.sc-player,
   margin-top: -50px;
   pointer-events: none;
 }
-/* line 1106, assets/sass/_partials/_radio.scss */
+/* line 1137, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-time-span img {
   height: 100px;
   width: 100%;
   display: block;
   opacity: 0;
 }
-/* line 1113, assets/sass/_partials/_radio.scss */
+/* line 1144, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-buffer {
   background: white;
   z-index: 1;
   position: absolute;
   opacity: 0.25;
 }
-/* line 1121, assets/sass/_partials/_radio.scss */
+/* line 1152, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-played {
   cursor: pointer;
   background: white;
@@ -14258,7 +14669,7 @@ a.sc-player,
 }
 
 /* volume control */
-/* line 1131, assets/sass/_partials/_radio.scss */
+/* line 1162, assets/sass/_partials/_radio.scss */
 .sc-volume-slider {
   top: -35px;
   left: 0px;
@@ -14267,7 +14678,7 @@ a.sc-player,
   height: 20px;
   background-color: white;
 }
-/* line 1139, assets/sass/_partials/_radio.scss */
+/* line 1170, assets/sass/_partials/_radio.scss */
 .sc-volume-slider .sc-volume-status {
   position: absolute;
   width: 0%;
@@ -14278,41 +14689,41 @@ a.sc-player,
 
 /* tracks */
 /* Track listings*/
-/* line 1151, assets/sass/_partials/_radio.scss */
+/* line 1182, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist {
   opacity: 0;
   pointer-events: none;
   display: block;
   width: 100%;
 }
-/* line 1157, assets/sass/_partials/_radio.scss */
+/* line 1188, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li {
   width: 100%;
   cursor: pointer;
   background: black;
 }
-/* line 1170, assets/sass/_partials/_radio.scss */
+/* line 1201, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li:last-child {
   margin-bottom: 0;
 }
-/* line 1174, assets/sass/_partials/_radio.scss */
+/* line 1205, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li a {
   display: block;
 }
-/* line 1180, assets/sass/_partials/_radio.scss */
+/* line 1211, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li:hover {
   background: black;
 }
-/* line 1185, assets/sass/_partials/_radio.scss */
+/* line 1216, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li.active {
   background: black;
 }
-/* line 1191, assets/sass/_partials/_radio.scss */
+/* line 1222, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li.active a {
   color: #fff;
 }
 
-/* line 1200, assets/sass/_partials/_radio.scss */
+/* line 1231, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items {
   position: relative;
   width: 100%;
@@ -14321,21 +14732,73 @@ a.sc-player,
   display: block;
   z-index: 2;
 }
-/* line 1208, assets/sass/_partials/_radio.scss */
+/* line 1239, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li {
   width: 100%;
   cursor: pointer;
   color: white;
   text-align: left;
   display: block;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   overflow: hidden;
 }
-/* line 1217, assets/sass/_partials/_radio.scss */
+/* line 1248, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping {
   position: relative;
+  padding-top: 9px;
+  padding-top: 13px;
+  padding-bottom: 9px;
+  padding-bottom: 13px;
 }
-/* line 1220, assets/sass/_partials/_radio.scss */
+@media screen and (min-width: 0px) {
+  /* line 1248, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping {
+    padding-top: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 1248, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping {
+    padding-top: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 1248, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping {
+    padding-top: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 1248, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping {
+    padding-top: 16px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 1248, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping {
+    padding-bottom: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 1248, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping {
+    padding-bottom: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 1248, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping {
+    padding-bottom: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 1248, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping {
+    padding-bottom: 16px;
+  }
+}
+/* line 1253, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.radio-item {
   display: block;
   width: 16.6667%;
@@ -14344,53 +14807,45 @@ a.sc-player,
   overflow: hidden;
   z-index: 3;
 }
-/* line 1228, assets/sass/_partials/_radio.scss */
+/* line 1261, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap {
-  width: 100%;
+ /* 
+width: 100%; 
+float: left;
+position: absolute;
+height: 50%;
+bottom: 0px;
+top: 50%;
+*/
+  width: 12.5vw;
+  overflow: hidden;
   float: left;
-  position: absolute;
-  height: 50%;
-  bottom: 0px;
-  top: 50%;
 }
-/* line 1236, assets/sass/_partials/_radio.scss */
-#other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap .play-toggle.small {
-  padding: 27px;
-  padding: 39px;
-  margin-top: -50%;
-}
-@media screen and (min-width: 0px) {
-  /* line 1236, assets/sass/_partials/_radio.scss */
-  #other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap .play-toggle.small {
-    padding: calc(27px + 12 * (100vw - 0px) / 960);
+@media (min-width: 640px) {
+  /* line 1261, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap {
+    width: 6.25vw;
+    margin: auto;
+    float: none;
   }
 }
-@media screen and (min-width: 960px) {
-  /* line 1236, assets/sass/_partials/_radio.scss */
-  #other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap .play-toggle.small {
-    padding: 39px;
-  }
+/* line 1286, assets/sass/_partials/_radio.scss */
+#other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap .play-toggle.inline-small {
+  padding: 25% 0;
+  display: block;
+  float: none;
+  position: relative;
+  width: 50%;
+  margin: auto;
 }
-@media screen and (min-width: 960px) {
-  /* line 1236, assets/sass/_partials/_radio.scss */
-  #other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap .play-toggle.small {
-    padding: calc(39px + 9 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 1236, assets/sass/_partials/_radio.scss */
-  #other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap .play-toggle.small {
-    padding: 48px;
-  }
-}
-/* line 1245, assets/sass/_partials/_radio.scss */
+/* line 1306, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item {
   display: block;
   position: relative;
   overflow: hidden;
   z-index: 2;
 }
-/* line 1251, assets/sass/_partials/_radio.scss */
+/* line 1312, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
   display: block;
   float: left;
@@ -14406,102 +14861,102 @@ a.sc-player,
   padding-bottom: 6.5px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-top: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-top: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-top: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-top: 8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-left: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-left: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-left: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-left: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-right: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-right: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-right: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-right: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-bottom: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-bottom: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-bottom: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1251, assets/sass/_partials/_radio.scss */
+  /* line 1312, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-bottom: 8px;
   }
 }
-/* line 1261, assets/sass/_partials/_radio.scss */
+/* line 1322, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
   font-size: 10px;
   font-size: 16px;
@@ -14513,54 +14968,54 @@ a.sc-player,
   display: block;
 }
 @media screen and (min-width: 0px) {
-  /* line 1261, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1261, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1261, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: calc(16px + 8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1261, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1261, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: calc(18px + 4.1 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1261, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: 22.1px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1261, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: calc(26px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1261, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: 27.2px;
   }
 }
-/* line 1269, assets/sass/_partials/_radio.scss */
+/* line 1330, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
   font-weight: 100;
   font-size: 10px;
@@ -14571,151 +15026,181 @@ a.sc-player,
   float: left;
 }
 @media screen and (min-width: 0px) {
-  /* line 1269, assets/sass/_partials/_radio.scss */
+  /* line 1330, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1269, assets/sass/_partials/_radio.scss */
+  /* line 1330, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1269, assets/sass/_partials/_radio.scss */
+  /* line 1330, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1269, assets/sass/_partials/_radio.scss */
+  /* line 1330, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1269, assets/sass/_partials/_radio.scss */
+  /* line 1330, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1269, assets/sass/_partials/_radio.scss */
+  /* line 1330, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1269, assets/sass/_partials/_radio.scss */
+  /* line 1330, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1269, assets/sass/_partials/_radio.scss */
+  /* line 1330, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: 25.6px;
   }
 }
-/* line 1275, assets/sass/_partials/_radio.scss */
+/* line 1336, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
   float: right;
   font-size: 10px;
   font-size: 12.8px;
   line-height: 18px;
   line-height: 26px;
+  font-size: 7.2px;
+  font-size: 10.4px;
   font-weight: 400;
   opacity: 0.5;
   animation: opacity-out-0_5 200ms ease-out forwards;
 }
 @media screen and (min-width: 0px) {
-  /* line 1275, assets/sass/_partials/_radio.scss */
+  /* line 1336, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1275, assets/sass/_partials/_radio.scss */
+  /* line 1336, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1275, assets/sass/_partials/_radio.scss */
+  /* line 1336, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1275, assets/sass/_partials/_radio.scss */
+  /* line 1336, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1275, assets/sass/_partials/_radio.scss */
+  /* line 1336, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1275, assets/sass/_partials/_radio.scss */
+  /* line 1336, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1275, assets/sass/_partials/_radio.scss */
+  /* line 1336, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1275, assets/sass/_partials/_radio.scss */
+  /* line 1336, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: 25.6px;
   }
 }
-/* line 1286, assets/sass/_partials/_radio.scss */
+@media screen and (min-width: 0px) {
+  /* line 1336, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
+    font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 1336, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
+    font-size: 10.4px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 1336, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
+    font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 1336, assets/sass/_partials/_radio.scss */
+  #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
+    font-size: 12.8px;
+  }
+}
+/* line 1347, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap:hover .radio-view-item {
   opacity: 1;
   animation: opacity-in-0_5 200ms ease-in forwards;
 }
-/* line 1297, assets/sass/_partials/_radio.scss */
+/* line 1358, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping:hover {
   background: black;
 }
-/* line 1302, assets/sass/_partials/_radio.scss */
+/* line 1363, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping.active {
   background: black;
 }
-/* line 1308, assets/sass/_partials/_radio.scss */
+/* line 1369, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping.active a {
   color: #fff;
 }
-/* line 1314, assets/sass/_partials/_radio.scss */
+/* line 1375, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping:last-child {
   margin-bottom: 0;
   border-bottom: 0px;
 }
+/* line 1384, assets/sass/_partials/_radio.scss */
+#other-shows .radio-items li:last-child {
+  border-bottom: 0px solid white;
+}
 
-/* line 1326, assets/sass/_partials/_radio.scss */
+/* line 1391, assets/sass/_partials/_radio.scss */
 .sc-track-duration {
   float: right;
 }
 
 /* Track info*/
-/* line 1334, assets/sass/_partials/_radio.scss */
+/* line 1399, assets/sass/_partials/_radio.scss */
 .sc-player .sc-info {
   display: none;
 }
-/* line 1344, assets/sass/_partials/_radio.scss */
+/* line 1409, assets/sass/_partials/_radio.scss */
 .sc-player .sc-info h4 {
   display: none;
 }
 
-/* line 1352, assets/sass/_partials/_radio.scss */
+/* line 1417, assets/sass/_partials/_radio.scss */
 p {
   /* max-width: 38em;
    max-width: 38rem;
@@ -14724,14 +15209,14 @@ p {
    text-align: left;*/
 }
 
-/* line 1360, assets/sass/_partials/_radio.scss */
+/* line 1425, assets/sass/_partials/_radio.scss */
 .sc-player .sc-info-toggle,
 .sc-player .sc-info-close {
   display: none;
 }
 
 /* utilities */
-/* line 1371, assets/sass/_partials/_radio.scss */
+/* line 1436, assets/sass/_partials/_radio.scss */
 .sc-player-engine-container {
   width: 1px;
   height: 1px;
@@ -14741,18 +15226,18 @@ p {
 }
 
 /* Player - different states: */
-/* line 1407, assets/sass/_partials/_radio.scss */
+/* line 1472, assets/sass/_partials/_radio.scss */
 body.pulsate-player-icon .toggle-icon-wrap .toggle-icon {
   transform: scale(1.25) !important;
   transform-origin: center;
   transition: 400ms ease-in-out;
 }
-/* line 1415, assets/sass/_partials/_radio.scss */
+/* line 1480, assets/sass/_partials/_radio.scss */
 body.pulsate-player-icon .toggle-icon-wrap .toggle-icon g {
   stroke-width: 2;
 }
 
-/* line 1428, assets/sass/_partials/_radio.scss */
+/* line 1493, assets/sass/_partials/_radio.scss */
 .radio-container {
   overflow: hidden;
   height: 100vh;
@@ -14765,24 +15250,24 @@ body.pulsate-player-icon .toggle-icon-wrap .toggle-icon g {
   pointer-events: none;
 }
 
-/* line 1448, assets/sass/_partials/_radio.scss */
+/* line 1513, assets/sass/_partials/_radio.scss */
 body.sc-player-playing .radio-container,
 body.sc-player-paused .radio-container {
   pointer-events: none;
   display: block;
 }
 
-/* line 1461, assets/sass/_partials/_radio.scss */
+/* line 1526, assets/sass/_partials/_radio.scss */
 body.single-radio {
   /*.radio-container */
 }
-/* line 1463, assets/sass/_partials/_radio.scss */
+/* line 1528, assets/sass/_partials/_radio.scss */
 body.single-radio .radio-container {
   position: absolute;
   z-index: 9;
   /* .sc-player */
 }
-/* line 1467, assets/sass/_partials/_radio.scss */
+/* line 1532, assets/sass/_partials/_radio.scss */
 body.single-radio .radio-container .sc-player {
   padding-left: 0px;
   position: absolute;
@@ -14793,7 +15278,7 @@ body.single-radio .radio-container .sc-player {
   background: transparent;
   min-height: initial;
 }
-/* line 1478, assets/sass/_partials/_radio.scss */
+/* line 1543, assets/sass/_partials/_radio.scss */
 body.single-radio .radio-container .sc-player .sc-controls {
   display: block;
   height: 12.5vw;
@@ -14803,7 +15288,7 @@ body.single-radio .radio-container .sc-player .sc-controls {
   width: 12.5vw;
   pointer-events: none;
 }
-/* line 1488, assets/sass/_partials/_radio.scss */
+/* line 1553, assets/sass/_partials/_radio.scss */
 body.single-radio .radio-container .sc-player .sc-scrubber {
   width: 100%;
   position: absolute;
@@ -14817,12 +15302,12 @@ body.single-radio .radio-container .sc-player .sc-scrubber {
   left: 0;
 }
 
-/* line 1531, assets/sass/_partials/_radio.scss */
+/* line 1596, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
  {
   /*.radio-container */
 }
-/* line 1536, assets/sass/_partials/_radio.scss */
+/* line 1601, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
 .radio-container {
   pointer-events: initial;
@@ -14830,7 +15315,7 @@ body.post-type-archive-radio
   z-index: initial;
   /* .sc-player */
 }
-/* line 1542, assets/sass/_partials/_radio.scss */
+/* line 1607, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
 .radio-container .sc-player {
       /*  padding-left: 0px;
@@ -14841,7 +15326,7 @@ body.post-type-archive-radio
         top: 0px;
 */
 }
-/* line 1550, assets/sass/_partials/_radio.scss */
+/* line 1615, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
 .radio-container .sc-player .sc-controls {
   /*
@@ -14854,7 +15339,7 @@ body.post-type-archive-radio
             pointer-events:none;
     */
 }
-/* line 1562, assets/sass/_partials/_radio.scss */
+/* line 1627, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
 .radio-container .sc-player .sc-scrubber {
   width: 100%;
@@ -14865,7 +15350,7 @@ body.post-type-archive-radio
   z-index: 1;
 }
 @media (min-width: 640px) {
-  /* line 1562, assets/sass/_partials/_radio.scss */
+  /* line 1627, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio
   .radio-container .sc-player .sc-scrubber {
     padding-left: 12.5vw;
@@ -14878,14 +15363,14 @@ body.post-type-archive-radio
 height: 10vh; // this used?
 }
 */
-/* line 1610, assets/sass/_partials/_radio.scss */
+/* line 1675, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player,
 body.post-type-archive-releases,
 body
  {
   /*.radio-container */
 }
-/* line 1617, assets/sass/_partials/_radio.scss */
+/* line 1682, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container,
 body.post-type-archive-releases .radio-container,
 body
@@ -14895,7 +15380,7 @@ body
   z-index: 98;
   /* .sc-container */
 }
-/* line 1623, assets/sass/_partials/_radio.scss */
+/* line 1688, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player,
 body.post-type-archive-releases .radio-container .sc-player,
 body
@@ -14910,7 +15395,7 @@ body
   padding-left: 0px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1623, assets/sass/_partials/_radio.scss */
+  /* line 1688, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player,
   body.post-type-archive-releases .radio-container .sc-player,
   body
@@ -14919,7 +15404,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1623, assets/sass/_partials/_radio.scss */
+  /* line 1688, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player,
   body.post-type-archive-releases .radio-container .sc-player,
   body
@@ -14928,7 +15413,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1623, assets/sass/_partials/_radio.scss */
+  /* line 1688, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player,
   body.post-type-archive-releases .radio-container .sc-player,
   body
@@ -14937,7 +15422,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1623, assets/sass/_partials/_radio.scss */
+  /* line 1688, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player,
   body.post-type-archive-releases .radio-container .sc-player,
   body
@@ -14946,7 +15431,7 @@ body
   }
 }
 @media (min-width: 960px) {
-  /* line 1623, assets/sass/_partials/_radio.scss */
+  /* line 1688, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player,
   body.post-type-archive-releases .radio-container .sc-player,
   body
@@ -14954,7 +15439,7 @@ body
     min-height: 12.5vw;
   }
 }
-/* line 1650, assets/sass/_partials/_radio.scss */
+/* line 1715, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-controls,
 body.post-type-archive-releases .radio-container .sc-player .sc-controls,
 body
@@ -14968,7 +15453,7 @@ body
   float: left;
   height: inherit;
 }
-/* line 1660, assets/sass/_partials/_radio.scss */
+/* line 1725, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-controls a.sc-play,
 body.post-type-archive-releases .radio-container .sc-player .sc-controls a.sc-play,
 body
@@ -14982,7 +15467,7 @@ body
   background: transparent;
   z-index: 2;
 }
-/* line 1670, assets/sass/_partials/_radio.scss */
+/* line 1735, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-controls a.sc-play .play-toggle,
 body.post-type-archive-releases .radio-container .sc-player .sc-controls a.sc-play .play-toggle,
 body
@@ -14991,7 +15476,7 @@ body
   margin-top: -50%;
   position: relative;
 }
-/* line 1678, assets/sass/_partials/_radio.scss */
+/* line 1743, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-controls .player-toggle,
 body.post-type-archive-releases .radio-container .sc-player .sc-controls .player-toggle,
 body
@@ -15004,7 +15489,7 @@ body
   line-height: 12.5vw;
 }
 @media (min-width: 640px) {
-  /* line 1678, assets/sass/_partials/_radio.scss */
+  /* line 1743, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-controls .player-toggle,
   body.post-type-archive-releases .radio-container .sc-player .sc-controls .player-toggle,
   body
@@ -15012,7 +15497,7 @@ body
     line-height: 6.25vw;
   }
 }
-/* line 1694, assets/sass/_partials/_radio.scss */
+/* line 1759, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
 body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
 body
@@ -15024,7 +15509,7 @@ body
   width: 100%;
 }
 @media screen and (min-width: 0px) {
-  /* line 1694, assets/sass/_partials/_radio.scss */
+  /* line 1759, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
   body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
   body
@@ -15033,7 +15518,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1694, assets/sass/_partials/_radio.scss */
+  /* line 1759, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
   body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
   body
@@ -15042,7 +15527,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1694, assets/sass/_partials/_radio.scss */
+  /* line 1759, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
   body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
   body
@@ -15051,7 +15536,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1694, assets/sass/_partials/_radio.scss */
+  /* line 1759, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
   body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
   body
@@ -15059,7 +15544,7 @@ body
     top: 32px;
   }
 }
-/* line 1710, assets/sass/_partials/_radio.scss */
+/* line 1775, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
 body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
 body
@@ -15073,7 +15558,7 @@ body
   margin-top: 6.5px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1710, assets/sass/_partials/_radio.scss */
+  /* line 1775, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -15082,7 +15567,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1710, assets/sass/_partials/_radio.scss */
+  /* line 1775, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -15091,7 +15576,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1710, assets/sass/_partials/_radio.scss */
+  /* line 1775, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -15100,7 +15585,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1710, assets/sass/_partials/_radio.scss */
+  /* line 1775, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -15109,7 +15594,7 @@ body
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1710, assets/sass/_partials/_radio.scss */
+  /* line 1775, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -15118,7 +15603,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1710, assets/sass/_partials/_radio.scss */
+  /* line 1775, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -15127,7 +15612,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1710, assets/sass/_partials/_radio.scss */
+  /* line 1775, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -15136,7 +15621,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1710, assets/sass/_partials/_radio.scss */
+  /* line 1775, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -15144,7 +15629,7 @@ body
     margin-top: 8px;
   }
 }
-/* line 1718, assets/sass/_partials/_radio.scss */
+/* line 1783, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
 body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
 body
@@ -15157,7 +15642,7 @@ body
   float: left;
 }
 @media screen and (min-width: 0px) {
-  /* line 1718, assets/sass/_partials/_radio.scss */
+  /* line 1783, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
   body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
   body
@@ -15166,7 +15651,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1718, assets/sass/_partials/_radio.scss */
+  /* line 1783, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
   body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
   body
@@ -15175,7 +15660,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1718, assets/sass/_partials/_radio.scss */
+  /* line 1783, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
   body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
   body
@@ -15184,7 +15669,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1718, assets/sass/_partials/_radio.scss */
+  /* line 1783, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
   body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
   body
@@ -15192,7 +15677,7 @@ body
     margin-top: 64px;
   }
 }
-/* line 1736, assets/sass/_partials/_radio.scss */
+/* line 1801, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-trackslist li,
 body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li,
 body
@@ -15203,14 +15688,14 @@ body
   background: transparent;
   width: 80%;
 }
-/* line 1744, assets/sass/_partials/_radio.scss */
+/* line 1809, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-trackslist li .sc-track-duration,
 body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li .sc-track-duration,
 body
 .radio-container .sc-player .sc-trackslist li .sc-track-duration {
   display: none;
 }
-/* line 1750, assets/sass/_partials/_radio.scss */
+/* line 1815, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
 body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
 body
@@ -15224,7 +15709,7 @@ body
   padding-bottom: 13px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1750, assets/sass/_partials/_radio.scss */
+  /* line 1815, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -15233,7 +15718,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1750, assets/sass/_partials/_radio.scss */
+  /* line 1815, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -15242,7 +15727,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1750, assets/sass/_partials/_radio.scss */
+  /* line 1815, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -15251,7 +15736,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1750, assets/sass/_partials/_radio.scss */
+  /* line 1815, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -15260,7 +15745,7 @@ body
   }
 }
 @media (min-width: 640px) {
-  /* line 1750, assets/sass/_partials/_radio.scss */
+  /* line 1815, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -15271,7 +15756,7 @@ body
 
 /* body.sticky-radio-player
    body:not(.single-radio) */
-/* line 1771, assets/sass/_partials/_radio.scss */
+/* line 1836, assets/sass/_partials/_radio.scss */
 body.post-type-archive-releases {
   /*.radio-container */
   /*
@@ -15279,18 +15764,18 @@ body.post-type-archive-releases {
 &.sticky-radio-player
 */
 }
-/* line 1773, assets/sass/_partials/_radio.scss */
+/* line 1838, assets/sass/_partials/_radio.scss */
 body.post-type-archive-releases .radio-container {
   /* .sc-container */
 }
-/* line 1817, assets/sass/_partials/_radio.scss */
+/* line 1882, assets/sass/_partials/_radio.scss */
 body.post-type-archive-releases.sc-minimised .view-module, body.post-type-archive-releases.sc-player-playing .view-module, body.post-type-archive-releases.sc-player-paused .view-module {
   top: 12.5vw;
 }
 
 /* body.post-type-archive-release */
 /* markup for the min / max toggle: */
-/* line 1836, assets/sass/_partials/_radio.scss */
+/* line 1901, assets/sass/_partials/_radio.scss */
 body {
   /*sc-player.*/
   /*end player specifics */
@@ -15301,11 +15786,11 @@ body {
   }//&.sc-maximised
   */
 }
-/* line 1838, assets/sass/_partials/_radio.scss */
+/* line 1903, assets/sass/_partials/_radio.scss */
 body .sc-player {
   /* .player-toggle */
 }
-/* line 1840, assets/sass/_partials/_radio.scss */
+/* line 1905, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle {
   height: 50%;
   display: block;
@@ -15313,22 +15798,22 @@ body .sc-player .player-toggle {
   pointer-events: initial;
 }
 @media (min-width: 640px) {
-  /* line 1840, assets/sass/_partials/_radio.scss */
+  /* line 1905, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle {
     width: 50%;
   }
 }
 @media (min-width: 1280px) {
-  /* line 1840, assets/sass/_partials/_radio.scss */
+  /* line 1905, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle {
     width: 50%;
   }
 }
-/* line 1854, assets/sass/_partials/_radio.scss */
+/* line 1919, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .toggle-icon-wrap {
   display: none;
 }
-/* line 1859, assets/sass/_partials/_radio.scss */
+/* line 1924, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .toggle-icon-wrap .toggle-icon svg {
   width: 100%;
   height: 100%;
@@ -15337,7 +15822,7 @@ body .sc-player .player-toggle .toggle-icon-wrap .toggle-icon svg {
   margin: 0 auto;
   overflow: visible;
 }
-/* line 1872, assets/sass/_partials/_radio.scss */
+/* line 1937, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .sc-maximise,
 body .sc-player .player-toggle .sc-minimise {
   position: relative;
@@ -15356,53 +15841,53 @@ body .sc-player .player-toggle .sc-minimise {
   line-height: inherit;
 }
 @media screen and (min-width: 0px) {
-  /* line 1872, assets/sass/_partials/_radio.scss */
+  /* line 1937, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1872, assets/sass/_partials/_radio.scss */
+  /* line 1937, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     font-size: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1872, assets/sass/_partials/_radio.scss */
+  /* line 1937, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1872, assets/sass/_partials/_radio.scss */
+  /* line 1937, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     font-size: 12.8px;
   }
 }
-/* line 1889, assets/sass/_partials/_radio.scss */
+/* line 1954, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .sc-maximise:hover,
 body .sc-player .player-toggle .sc-minimise:hover {
   transform: scale(1.25);
   transform-origin: center;
   transition: all 200ms ease-in;
 }
-/* line 1897, assets/sass/_partials/_radio.scss */
+/* line 1962, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .sc-maximise {
   opacity: 0;
 }
-/* line 1901, assets/sass/_partials/_radio.scss */
+/* line 1966, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .sc-minimise {
   opacity: 1;
 }
-/* line 1909, assets/sass/_partials/_radio.scss */
+/* line 1974, assets/sass/_partials/_radio.scss */
 body.sc-minimised {
   /* player specifics*/
 }
-/* line 1915, assets/sass/_partials/_radio.scss */
+/* line 1980, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player {
   pointer-events: none;
   height: auto;
@@ -15413,7 +15898,7 @@ body.sc-minimised .radio-container .sc-player {
   padding-left: 0px;
   animation: 0.5s forwards fade-out;
 }
-/* line 1925, assets/sass/_partials/_radio.scss */
+/* line 1990, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls {
   margin-top: 0;
   z-index: 2;
@@ -15421,13 +15906,13 @@ body.sc-minimised .radio-container .sc-player .sc-controls {
   left: 0;
   float: left;
 }
-/* line 1933, assets/sass/_partials/_radio.scss */
+/* line 1998, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls a.sc-play {
   display: none;
   pointer-events: none !important;
   height: 50%;
 }
-/* line 1940, assets/sass/_partials/_radio.scss */
+/* line 2005, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle {
   height: 100%;
   width: 100%;
@@ -15436,7 +15921,7 @@ body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle {
   bottom: 0;
   top: 0;
 }
-/* line 1951, assets/sass/_partials/_radio.scss */
+/* line 2016, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .toggle-icon-wrap {
   display: block;
   position: absolute;
@@ -15444,7 +15929,7 @@ body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .toggl
   bottom: 0px;
   width: 100%;
 }
-/* line 1958, assets/sass/_partials/_radio.scss */
+/* line 2023, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .toggle-icon-wrap .toggle-icon {
   height: 100%;
   position: relative;
@@ -15452,42 +15937,42 @@ body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .toggl
   transform-origin: center;
   transition: all 200ms ease-out;
 }
-/* line 1967, assets/sass/_partials/_radio.scss */
+/* line 2032, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .sc-maximise {
   position: relative;
   width: 100%;
   opacity: 1;
 }
-/* line 1973, assets/sass/_partials/_radio.scss */
+/* line 2038, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .sc-minimise {
   position: absolute;
   width: 100%;
   opacity: 0;
 }
-/* line 1984, assets/sass/_partials/_radio.scss */
+/* line 2049, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle:hover .toggle-icon-wrap .toggle-icon {
   transform: scale(1.25);
   transform-origin: center;
   transition: all 200ms ease-in;
 }
-/* line 1998, assets/sass/_partials/_radio.scss */
+/* line 2063, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-scrubber {
   display: none;
 }
-/* line 2002, assets/sass/_partials/_radio.scss */
+/* line 2067, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-time-indicators {
   display: none;
 }
-/* line 2006, assets/sass/_partials/_radio.scss */
+/* line 2071, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player ol.sc-trackslist {
   display: none;
 }
-/* line 2010, assets/sass/_partials/_radio.scss */
+/* line 2075, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-trackslist li {
   display: none;
   height: 0px;
 }
-/* line 2014, assets/sass/_partials/_radio.scss */
+/* line 2079, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-trackslist li .sc-track-duration {
   display: none;
 }

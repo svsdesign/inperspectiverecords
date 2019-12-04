@@ -80,8 +80,8 @@ get_header();?>
 			 			<div class="container top-container radio-items grid">		
 			
 				<?php else : // not page 1 :
-					 $pageno = 'not-first';
-					 ?>
+			 	$pageno = 'not-first';
+				?>
 		
 					<section id="past-radios" class="archive show-items grid <?php echo $pageno;?>-page">
 							
@@ -97,7 +97,7 @@ get_header();?>
 
 						</div><!-- .page-title-position -->
 
-			 			<div class="container radio-items grid">		
+			 			<div class="container radio-items outer-grid-item outer-grid-item-sm-6 inner grid">		
 
 				<?php endif;  //  are we on page 1 ?>
 
@@ -124,8 +124,7 @@ get_header();?>
 					if(1 == $paged): // page one: 
 
 						if ($itemno == 1): // of first item of archive :?>
-
-							
+					
 							<?php if($featureimage): ?>
 
 								<div class="cover-image-item outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo $featureimage;?>');">
@@ -141,7 +140,7 @@ get_header();?>
 
 					 					<div class="play-icon-wrap">
 				
-											 <div class="play-toggle inline-small"> 
+											 <div class="play-toggle small"> 
 											 	<svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
 											 		<path d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
 											 		<path d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
@@ -248,19 +247,15 @@ get_header();?>
 
 					 	<?php endif; //item no == 7  
 
-					else: // not page 1 :
+					else: // not page 1:
 					 
-						$showid = get_the_ID();	
-						$showtitle = get_the_title();// title						
-		 				$soundcloudlink = get_field('soundcloud_link');
+					$showid = get_the_ID();	
+					$showtitle = get_the_title();// title						
+	 				$soundcloudlink = get_field('soundcloud_link');
+					?>
 
-						?>
 
-						<?php // are we on page one?
-						//if($itemno == 2):?>
-					<!--	<div class="container outer-grid-item outer-grid-item-sm-6 inner"> -->
-					 	<?php //endif; // endif paged ?>
-					 	<li data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li grid-item grid-item-sm-8 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
+					 	<li data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> grid-item grid-item-xs-6 grid-item-md-3">
 
 							<div class="wrapping">	
 							
@@ -317,13 +312,15 @@ get_header();?>
 					   $paginate = paginate_links( array(
 					        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 					        'format' => '?paged=%#%',
-					        'current' => max( 1, get_query_var('paged') ),
+					        'current' => max( 1, get_query_var('paged')),
 					        'total' => $radio_query->max_num_pages,
 					        'prev_next' =>true,
+					       // 'before_page_number' =>'<div class="test">',
+					       // 'after_page_number' =>'</div>',
 					//	      'format' => '/page/%#%',  
 					//	      'current' => $current_page,  
 					//	      'total' => $total_pages,
-					//	      'type' => 'list',
+				 		      'type' =>  'plain',//list',//array',//list',
 					//     'prev_text' => '<div class="next">' . get_template_part('svg/inline', 'dm_arrow_left.svg') .'</div>',
 							'prev_text' => '<div class="small nav-previous align-left"><svg class="svg-icon previous-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div>Newer Shows',
 							'next_text' => '<div class="small nav-next align-right"><svg class="svg-icon next-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div>Older Shows',
@@ -331,17 +328,22 @@ get_header();?>
 					
 						if ($paginate):?>
 					
-						<div class="page-nav outer-grid-item-xs-6 inner">
+						<div class="page-nav outer-grid-item outer-grid-item-xs-6 inner">
 
-							<div class="grid page-nav-wrapper">
+							<div class="grid">
 
-							<?php echo $paginate;?>
+								<div class="page-nav-wrapper grid-item grid-item-sm-6">
 
-							</div>
-						
+								<?php echo $paginate;?>
+
+								</div>
+							
+ 							</div>
+
 						</div>	<!-- ".page-nav-->		 
 
 						<?php endif;  // if we have paginated links ?>
+
 
 
 			</section><!-- .past-radios-->
@@ -354,7 +356,8 @@ get_header();?>
 
 			<?php else:  ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-				<?php get_template_part( 'content', 'none' );  				// I should pull in the ;404??>
+				
+			<?php //get_template_part( 'content', 'none' );  				// I should pull in the ;404??>
 
 			<?php endif; ?>
 											 
