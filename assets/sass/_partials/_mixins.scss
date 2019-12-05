@@ -305,14 +305,14 @@ transition: all 200ms ease-in-out;
 @mixin scalelink-in-value($scalesize){
 transform:scale($scalesize);
 transform-origin:center;
-transition: all 200ms ease-in;
+transition: all 200ms ease-in-out;
 }
 
 
 @mixin scalelink-out-value($scalesize){
 transform:scale($scalesize);
 transform-origin:center;
-transition: all 200ms ease-out;
+transition: all 200ms ease-in-out;
 }
 
 

@@ -196,6 +196,13 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, containe
 
       $(this.oldContainer).hide();
 
+/* TO DO:
+- if I have an active radio show item li (on radio archive, sigle ) - I'll need to re-run the snap svg animation, because it will have gone back to the play icon
+- this will be need to be done in the below sound blocks as well
+
+
+*/
+
     
        if ($(".sound-block")[0]){
 

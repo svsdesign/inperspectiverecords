@@ -245,9 +245,8 @@ get_header();?>
 						</div>  <!-- container--> 
 				 		<div class="container radio-items bottom-container outer-grid-item outer-grid-item-sm-6 inner">  
 				 
-				 			<div class="bottom-title">
-				 				Other Shows
-					 		</div>
+				 			<div class="bottom-title"><!-- review the usages of this, was 'Other shows' -->
+ 					 		</div>
 
 					 	<?php endif; //item no == 7  
 
