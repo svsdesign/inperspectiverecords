@@ -42,30 +42,32 @@ var radioscriptloaded, // set as undefined initially;//
                             // permalink to a track
                             var track_url = itemurl;//feedsclink;
                           
-                            console.log('body.singleradio')
-                            console.log('itemurl on single radio page ='+itemurl+'')
+                            //console.log('body.singleradio')
+                            //console.log('itemurl on single radio page ='+itemurl+'')
 
                             reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
 
                           } else if ($('body').hasClass('post-type-archive-radio')) {
-                            
+                          //Archive pages
+                           //  console.log('body.post-type-archive-radio.paged')
+ 
                             radioscriptloaded = true;  // now defined
 
-
-// ISSUES - when coming from somwhere else the archive page needs to have a link for people to play the top one.
-// it currently just pauses the existing track if you click the play
+                            if ($('body').hasClass('paged')) { // not on the first page
+                              console.log("paged")
+                            itemurl = $('.container.radio-items li:first').data("tracklink");  
+                            } else { // on the first page
+                            itemurl = $('.top-container li:first').data("tracklink");  
+                            }
 
                             // console.log("else iunnit? ")
-                            console.log('body.post-type-archive-radio')
 
-                            itemurl = $('.top-container li:first').data("tracklink"); //so on archive we just pull the first item
                             console.log("itemurl = " +itemurl +"");
 
-                     
                           // permalink to a track
                           var track_url = itemurl;//feedsclink;
-                          //reload_js('http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-radio_v4.js'); 
-                            reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
+                             reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
+
 
                           } else if ($('_.radio-item li').length > 0){ // we want to detect if there's a link to a sc url?
                              // I'm not sure this is ever used? not on the archve page

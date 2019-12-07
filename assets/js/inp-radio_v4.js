@@ -151,12 +151,11 @@ This was happening because the Internet was slow.
 
 
   var toInlinePause = function(activeurl){
-        console.log("to Inline Pause ");
+      
+       // console.log("to Inline Pause ");
 
-        console.log(activeurl);
-// i need to ensure the other items go to play icon again, through the use of classes?
-
-//
+        //console.log("we have an activeurl ="+activeurl+"");
+ 
 
         var thisactiveurl = activeurl,
             $thisactiveobject = $("li[data-tracklink='" + thisactiveurl +"']"), //$(document).find("[data-tracklink='${thisactiveurl}']");
@@ -164,88 +163,137 @@ This was happening because the Internet was slow.
           
             $thissvg = $('#playertoggle_'+thisid+'');
 
-             console.log(thisid);
-
+          //   console.log(thisid);
+ 
          //   $thisactiveobject.addClass("hello-what");
           //  $thisactiveobject.css("background-color","red");
 
       // var svg = $thissvg;
+       // console.log(' thisid ='+thisid+'');
 
+//      I need to ensure that there is not active item on the page anymore that I don't do anything?
+       
+        if(typeof thisid !== "undefined") {
 
-        var svg = document.getElementById('playertoggle_'+thisid+'');
-        var s = new Snap(svg);
+         console.log("this id is defined")
 
-        var play = Snap.select('#play_'+thisid+''); // assigne to unique id
-        var playpath = Snap.select('#play-path_'+thisid+''); // assigne to unique id
+              var svg = document.getElementById('playertoggle_'+thisid+'');
+              var s = new Snap(svg);
 
-        var pause = Snap.select('#pause_'+thisid+''); // assigne to unique id
+              var play = Snap.select('#play_'+thisid+''); // assigne to unique id
+              var playpath = Snap.select('#play-path_'+thisid+''); // assigne to unique id
 
-        var playPoints = play.node.getAttribute('d');
-        var pausePoints = pause.node.getAttribute('d');
-        var playpathPoints = playpath.node.getAttribute('d'); // this added
+              var pause = Snap.select('#pause_'+thisid+''); // assigne to unique id
 
-  //left
-        var play_left = Snap.select('#play-left_'+thisid+''); // assigne to unique id
-        var playpath_left = Snap.select('#play-path-left_'+thisid+''); // assigne to unique id
+              var playPoints = play.node.getAttribute('d');
+              var pausePoints = pause.node.getAttribute('d');
+              var playpathPoints = playpath.node.getAttribute('d'); // this added
 
-        var pause_left = Snap.select('#pause-left_'+thisid+''); // assigne to unique id
+        //left
+              var play_left = Snap.select('#play-left_'+thisid+''); // assigne to unique id
+              var playpath_left = Snap.select('#play-path-left_'+thisid+''); // assigne to unique id
 
-        var playPoints_left = play_left.node.getAttribute('d');
-        var pausePoints_left = pause_left.node.getAttribute('d');
-        var playpathPoints_left = playpath_left.node.getAttribute('d'); // this added
-  //right
-      
-        var play_right = Snap.select('#play-right_'+thisid+''); // assigne to unique id
-        var playpath_right = Snap.select('#play-path-right_'+thisid+''); // assigne to unique id
+              var pause_left = Snap.select('#pause-left_'+thisid+''); // assigne to unique id
 
-        var pause_right = Snap.select('#pause-right_'+thisid+''); // assigne to unique id
+              var playPoints_left = play_left.node.getAttribute('d');
+              var pausePoints_left = pause_left.node.getAttribute('d');
+              var playpathPoints_left = playpath_left.node.getAttribute('d'); // this added
+        //right
+            
+              var play_right = Snap.select('#play-right_'+thisid+''); // assigne to unique id
+              var playpath_right = Snap.select('#play-path-right_'+thisid+''); // assigne to unique id
 
-        var playPoints_right = play_right.node.getAttribute('d');
-        var pausePoints_right = pause_right.node.getAttribute('d');
-        var playpathPoints_right = playpath_right.node.getAttribute('d'); // this added
+              var pause_right = Snap.select('#pause-right_'+thisid+''); // assigne to unique id
 
-       // reset others
+              var playPoints_right = play_right.node.getAttribute('d');
+              var pausePoints_right = pause_right.node.getAttribute('d');
+              var playpathPoints_right = playpath_right.node.getAttribute('d'); // this added
 
-// this isnt working at the momement - consider different approach?
+              //end reset            
+               Snap.selectAll('.play-inline').animate({ d: playpathPoints }, 100, mina.easin); 
 
-      //  $('.play-inline').css("background-color","green");
-       // console.log()
- //Snap.select
-       // $('.play-inline').each(function() {
-              console.log('playinline')
-
-        // $(this).css("background-color","green");
-        //$(this).animate({ d: playpathPoints }, 100, mina.easin); 
-
-       // });
-          Snap.selectAll('.play-inline').animate({ d: playpathPoints }, 100, mina.easin); 
-
-                       // Snap.select('.play-inline').animate({ d: playpathPoints }, 100, mina.easin); 
-         Snap.selectAll('.play-left-inline').animate({ d: playpathPoints_left }, 100, mina.easin); 
-         Snap.selectAll('.play-right-inline').animate({ d: playpathPoints_right }, 100, mina.easin); 
-
-
-      // $('.play-left-inline').animate({ d: playpathPoints_left }, 100, mina.easin);  
-     //   console.log("toPause")
-
-      // $('.play-right-inline').animate({ d: playpathPoints_right }, 100, mina.easin);  
-       // console.log("toPause")
-// this isnt working at the momement - consider different approach?
-
-        //end reset others
-      
+                             // Snap.select('.play-inline').animate({ d: playpathPoints }, 100, mina.easin); 
+               Snap.selectAll('.play-left-inline').animate({ d: playpathPoints_left }, 100, mina.easin); 
+               Snap.selectAll('.play-right-inline').animate({ d: playpathPoints_right }, 100, mina.easin); 
 
 
 
-        play.animate({ d: pausePoints }, 100, mina.easin);  
- 
-        play_left.animate({ d: pausePoints_left }, 100, mina.easin);  
-       // console.log("toPause")
+              play.animate({ d: pausePoints }, 100, mina.easin);  
+       
+              play_left.animate({ d: pausePoints_left }, 100, mina.easin);  
+             // console.log("toPause")
 
-        play_right.animate({ d: pausePoints_right }, 100, mina.easin);  
-        //console.log("toPause")
+              play_right.animate({ d: pausePoints_right }, 100, mina.easin);  
+              //console.log("toPause")
 
- 
+           }
+           /* else {
+          console.log(thisid);
+
+          console.log("this id is NOT defined - review the use of this else statment all together - delete it?");
+          // but have only just loaded the
+
+            // the following "playpathPoint" paths are not defined - so I need to get them from the main toggle
+
+
+              var svg = document.getElementById('playertoggle');
+              var s = new Snap(svg);
+
+              var play = Snap.select('#play'); // assigne to unique id
+              var playpath = Snap.select('#play-path'); // assigne to unique id
+
+              var pause = Snap.select('#pause'); // assigne to unique id
+
+              var playPoints = play.node.getAttribute('d');
+              var pausePoints = pause.node.getAttribute('d');
+              var playpathPoints = playpath.node.getAttribute('d'); // this added
+
+        //left
+              var play_left = Snap.select('#play-left'); // assigne to unique id
+              var playpath_left = Snap.select('#play-path-left'); // assigne to unique id
+
+              var pause_left = Snap.select('#pause-left'); // assigne to unique id
+
+              var playPoints_left = play_left.node.getAttribute('d');
+              var pausePoints_left = pause_left.node.getAttribute('d');
+              var playpathPoints_left = playpath_left.node.getAttribute('d'); // this added
+        //right
+            
+              var play_right = Snap.select('#play-right'); // assigne to unique id
+              var playpath_right = Snap.select('#play-path-right'); // assigne to unique id
+
+              var pause_right = Snap.select('#pause-right'); // assigne to unique id
+
+              var playPoints_right = play_right.node.getAttribute('d');
+              var pausePoints_right = pause_right.node.getAttribute('d');
+              var playpathPoints_right = playpath_right.node.getAttribute('d'); // this added
+
+            
+
+               Snap.selectAll('.play-inline').animate({ d: playpathPoints }, 100, mina.easin); 
+
+                             // Snap.select('.play-inline').animate({ d: playpathPoints }, 100, mina.easin); 
+               Snap.selectAll('.play-left-inline').animate({ d: playpathPoints_left }, 100, mina.easin); 
+               Snap.selectAll('.play-right-inline').animate({ d: playpathPoints_right }, 100, mina.easin); 
+
+
+              play.animate({ d: pausePoints }, 100, mina.easin);  
+       
+              play_left.animate({ d: pausePoints_left }, 100, mina.easin);  
+             // console.log("toPause")
+
+              play_right.animate({ d: pausePoints_right }, 100, mina.easin);  
+              //console.log("toPause")
+
+            
+           }// 
+
+           */
+
+
+        
+     
+
       };//toInlinePause
 
 
@@ -258,10 +306,10 @@ This was happening because the Internet was slow.
           
             $thissvg = $('#playertoggle_'+thisid+'');
 
-            // console.log(thisid);
+       console.log("ToInline Play" + thisid +"");
 
            // $thisactiveobject.addClass("hello-what");
-            $thisactiveobject.css("background-color","transparent");
+          //  $thisactiveobject.css("background-color","transparent");
 
             // issue here is that we also need to clear other items that have been click prior to this;
             // restore them totheir initial pause state
@@ -542,6 +590,7 @@ var headroom = new Headroom(element, options);
       },
       onBuffer: function(percent) {
         $doc.trigger({type: 'scPlayer:onMediaBuffering', percent: percent});
+        //console.log("onBuffer"+percent+"")
       }
     };
 
@@ -637,6 +686,7 @@ var headroom = new Headroom(element, options);
       soundcloud.addEventListener('onPlayerReady', function(flashId, data) {
         player = soundcloud.getPlayer(engineId);
         callbacks.onReady();
+        console.log("player ready")
       });
 
       // when the loaded track finished playing
@@ -645,6 +695,7 @@ var headroom = new Headroom(element, options);
       // when the loaded track is still buffering
       soundcloud.addEventListener('onMediaBuffering', function(flashId, data) {
         callbacks.onBuffer(data.percent);
+        console.log("onMediaBuffering" +data.percent+"")
       });
 
       // when the loaded track started to play
@@ -1134,8 +1185,10 @@ console.log("track" + track);
 
           // announce the succesful initialization
           $player
-            .removeClass('loading')
+            .removeClass('loading')// hook into this
             .trigger('onPlayerInit');
+
+          $('body').addClass('sc-loaded');
 
           // if auto play is enabled and it's the first player, start playing
           if(opts.autoPlay && !didAutoPlay){
@@ -1322,19 +1375,19 @@ var $track = $(this),
         
         if (!($radioitem.closest('li').hasClass('first-item-active'))) {
           // is the first item
-          console.log("is NOT first");
+         // console.log("is NOT first");
           //$('li.radio-item-li-1').addClass('show-play-icon');
 
         } // if is 1st item at the tope
         else if($radioitem.closest('li').hasClass('radio-item-li-1')) {
           // is not the first item
-          console.log("is first");
+          //console.log("is first");
           //$('li.radio-item-li-1').removeClass('first-item-active');
 
         }
   
 
-        console.log("clicked radioitemUrl" +radioitemUrl+"");
+       //console.log("clicked radioitemUrl" +radioitemUrl+"");
   
    //  var $tracklistitem = $('.sc-trackslist li').find('a').attr("href", radioitemUrl);
       

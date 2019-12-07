@@ -8,7 +8,7 @@
  * inp-base.js - handles the serving up of scripts for the entire website
  */
 
-console.log("inp-base.js loaded")
+//console.log("inp-base.js loaded")
 /* I need to think properly how to structure my scripts
 
   - Ensure I'm not looading script libraries that I don't need - how does this work with wordpreses enqueu + REST API < do my research first
@@ -120,6 +120,23 @@ TO DO:
           $("body").removeClass('is-not-touch');      
           $("body").addClass('is-touch');      
           // run("touch");
+          
+           //https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+          try { // prevent exception on browsers not supporting DOM styleSheets properly
+                for (var si in document.styleSheets) {
+                    var styleSheet = document.styleSheets[si];
+                    if (!styleSheet.rules) continue;
+
+                    for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                        if (!styleSheet.rules[ri].selectorText) continue;
+
+                        if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                            styleSheet.deleteRule(ri);
+                        }
+                    }
+                }
+            } catch (ex) {}
+        
         }
         else
         {
@@ -177,7 +194,7 @@ TO DO:
           $("body").imagesLoaded(function(){ // consider a lazloadng options?
   
 
-            console.log("Images have loaded")
+            //console.log("Images have loaded")
                   
                  function waitloading(){
 
@@ -312,7 +329,7 @@ TO DO:
 
     function recordcircle(){
 
-      console.log("each recordcircle");
+      //console.log("each recordcircle");
 
         $(".record-circle-container").each(function() {
         //  console.log("eachrecord container")
@@ -321,7 +338,7 @@ TO DO:
               $thiscircle = $(this).find(".record-circle");
               $thiscontainer.removeClass("active","rotating","rotated");// incase its active still - seems to be some buggy behavior atm
  
-              console.log('just remove classes');
+              //console.log('just remove classes');
 
           $thiscircle.hover(function() {
           
@@ -482,7 +499,7 @@ TO DO:
       if ($('.radio-container').length > 0) 
       {
 
-       console.log(".radio-container")
+      // console.log(".radio-container")
 
           if ($('body').hasClass("_single-radio") || $('body').hasClass("_post-type-archive-radio")){  // if single radio & archive aswell 
             
@@ -551,7 +568,7 @@ TO DO:
                  if ($('#artist-releases, .release-block').length > 0) 
                   {
             
-                     console.log('recordcircle');
+                   //  console.log('recordcircle');
 
                      recordcircle();// this needs to trigger other stuff like resiae as well I guess?
 
@@ -667,7 +684,7 @@ TO DO:
 
 
                //  carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn + '(' + angle + 'deg)';
-              console.log("Now"),
+            //  console.log("Now"),
 
                setTimeout(function() {
 
@@ -675,7 +692,7 @@ TO DO:
                $(window).scrollTop(y+1); // this ensure the carousell aligns up with the current page position
 
                $(".scene").addClass("loaded");
-               console.log("class added")
+             //  console.log("class added")
                }, 750);
                
               $(window).scroll(function(){ // attach docment scroll to rotating carousel 
@@ -901,7 +918,7 @@ so when once is active the position changes - like a paralex thing
 
                   function changeCarousel() { // this function  resizes everythinging
                   
-                    console.log("changeCarousel function");
+                 //   console.log("changeCarousel function");
 
                      /* new var for resize*/
                     carousel = document.querySelector('.carousel'),

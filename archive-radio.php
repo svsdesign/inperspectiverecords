@@ -132,7 +132,7 @@ get_header();?>
 
 							<?php endif; //$featureimage  ?>
 
-						 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> outer-grid-item inner outer-grid-item-xs-6 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
+						 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> outer-grid-item inner outer-grid-item-xs-8 outer-grid-item-md-6 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
 
 								<div class="wrapping grid">	
 								
@@ -162,7 +162,7 @@ get_header();?>
 														 	
 									</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
 								
-									<a class="view-radio-item view-radio-item-<?php echo $itemno;?> grid-item grid-item-sm-5" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
+									<a class="view-radio-item view-radio-item-<?php echo $itemno;?> grid-item grid-item-xs-5 grid-item-sm-4 grid-item-md-5" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
 										
 										<div class="details-wrap">
 	 											
@@ -171,7 +171,7 @@ get_header();?>
 											 </div><!-- .date -->
 											
 											<div class="radio-view-item">
-												View Item
+												View Show
 											</div><!--view-item-->
 											
 
@@ -214,7 +214,7 @@ get_header();?>
 											 </div><!-- .date -->
 											
 											<div class="radio-view-item">
-												View Item
+												View Show
 											</div><!--view-item-->
 											
 
@@ -258,7 +258,7 @@ get_header();?>
 					?>
 
 
-					 	<li data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> grid-item grid-item-xs-6 grid-item-md-3">
+					 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> grid-item grid-item-xs-6 grid-item-md-3">
 
 							<div class="wrapping">	
 							
@@ -277,7 +277,7 @@ get_header();?>
 										 </div><!-- .date -->
 										
 										<div class="radio-view-item">
-											View Item
+											View Show
 										</div><!--view-item-->
 										
 
@@ -309,6 +309,7 @@ get_header();?>
 
 							
 					<?php global $radio_query;
+					//https://kriesi.at/archives/how-to-build-a-wordpress-post-pagination-without-plugin < maybe better solution in terms of genering html
 
 					   $big = 999999999; // need an unlikely integer
 
@@ -325,8 +326,8 @@ get_header();?>
 					//	      'total' => $total_pages,
 				 		      'type' =>  'plain',//list',//array',//list',
 					//     'prev_text' => '<div class="next">' . get_template_part('svg/inline', 'dm_arrow_left.svg') .'</div>',
-							'prev_text' => '<div class="small nav-previous align-left"><svg class="svg-icon previous-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div>Newer Shows',
-							'next_text' => '<div class="small nav-next align-right"><svg class="svg-icon next-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div>Older Shows',
+							'prev_text' => '<div class="small nav-previous align-left"><svg class="svg-icon previous-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div><div class="text">Newer Shows</div>',
+							'next_text' => '<div class="small nav-next align-right"><svg class="svg-icon next-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div><div class="text">Older Shows</div>',
 				    		));
 					
 						if ($paginate):?>
@@ -335,7 +336,7 @@ get_header();?>
 
 							<div class="grid">
 
-								<div class="page-nav-wrapper grid-item grid-item-sm-6">
+								<div class="page-nav-wrapper grid-item grid-item-xs-6">
 
 								<?php echo $paginate;?>
 

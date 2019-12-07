@@ -306,10 +306,16 @@ body.post-type-archive-radio{
 
       .cover-image-item{
       width: 100%;
-      height: 25vw;// thumb size
+      height: 50vw;// thumb size
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
+
+
+        @media (min-width: map-get($breakpoints,md)) {  
+        height: 25vw;// thumb size
+        }
+      
       }
 
       li{ // styles across page-1 , 2 etc.
@@ -348,22 +354,33 @@ body.post-type-archive-radio{
               overflow: hidden;
               @include cssvalue(padding-top, 0.5);
 
+                  .radio-date{
+                  font-weight: $lightweight;
+                  @include smaller;
+                  display: block;
+                  float: left;
+                  clear: both;
+                  width: 100%;
+                  }
+
                   .radio-name{
                   @include h2;
                   font-weight: $boldweight;
                   @include cssvalue(font-size, 0.6);
                   @include cssvalue(line-height, 0.8);
                   @include cssvalue(padding-top, 0.2);
-                  clear: both;
                   display: block;
+                  width: 75%;
+                  padding-right: 5%;
+                  clear:none;
+
+                    @media (min-width: map-get($breakpoints,md)) {  
+                     width: 80%;
+                    }
+
                   } 
 
-                  .radio-date{
-                  font-weight: $lightweight;
-                   @include smaller;
-                   display: block;
-                   float: left;
-                  }
+   
                   .radio-view-item{
                   float: right;
                   @include smaller;
@@ -371,6 +388,15 @@ body.post-type-archive-radio{
                   font-weight: $mediumweight;
                   opacity: 0.5;
                   @include opacity-out-0_5;
+                  width: 25%;
+                  clear:none;
+                  display: block;
+                  text-align: right;
+
+                     @media (min-width: map-get($breakpoints,md)) {  
+                     width: 20%;
+                    }
+
                   }
 
 
@@ -769,16 +795,22 @@ body.post-type-archive-radio{
           display: inline-block;
           float: none;
           font-weight: $mediumweight;
+          text-align: center;
           @include cssvalue(font-size,0.5);
-          @include cssvalue(height,1);
-        //  height: 100%;
-     //line-height: inherit;
-   // position: absolute;
-   // top: 0;
+          @include cssvalue(height,1.5);
+          @include cssvalue(width,1.5);
+          @include cssvalue(line-height,1.5);
+          // height: 100%;
+          // line-height: inherit;
+          // position: absolute;
+          // top: 0;
 
             &.current{
             opacity: 0.6;
             font-weight: $lightweight;
+            border-radius: 50%;
+            border: 1px solid $white_0-5;
+            opacity: 0.5;
             }
 
             &.next,
@@ -786,8 +818,11 @@ body.post-type-archive-radio{
             {
             position: absolute;
 
-           //font-weight: $mediumweight;
+            @media (min-width: map-get($breakpoints,md)) {  
+            width: 33.33%;
             }
+           //font-weight: $mediumweight;
+          }
 
         }//.page-nav-wrapper
 
@@ -804,12 +839,21 @@ body.post-type-archive-radio{
         @include cssvalue(padding-bottom,0.2);
         @include cssvalue(margin-right,0.5);
         }
+      
+       .text{
+        display: none;
+        text-align: left;
+   
+             @media (min-width: map-get($breakpoints,md)) {  
+             display:block;
+             }
+
+          }
 
         .nav-previous{
         position: relative;
         display: inline-block;
-        text-align: right;
-        float: left;
+        float: left;         
         }
   
     } //.prev
@@ -824,12 +868,27 @@ body.post-type-archive-radio{
         @include cssvalue(margin-left,0.5);
         }
 
+       .text{
+        display: none;
+        text-align: right;
+
+          @media (min-width: map-get($breakpoints,md)) {  
+          display: inline-block;
+          float: right;
+          }
+
+        }
+
         .nav-next{
         position: relative;
         display: inline-block;
-        text-align: left;
         float: right;
-        }
+
+          svg{
+
+          }
+        
+        }//nav-next
 
      } //.next
 
@@ -884,14 +943,16 @@ $grey: #4d4d4d;
 padding:30%;
 cursor: pointer;
 height: 100%;
+opacity: 0.6;
+cursor: wait;
+@include scalelink-in-value(0.2);
 
       svg{
       width: 100%;
       height: 100%;
       display: block;
       cursor: inherit;
-              @include scalelink-in-value(1);
-
+      @include scalelink-in-value(1);
       }
 
       path{
@@ -904,6 +965,7 @@ height: 100%;
       }
 
    &:hover {
+   pointer-events:none;// allow no clicking untill sc-loaded
 
       svg{
         @include scalelink-in-value(1.25);
@@ -912,6 +974,22 @@ height: 100%;
 
 } /* .play-toggle */
 
+body.sc-loaded{
+
+  .play-toggle{
+  pointer-events:initial;// allow clicking: sc-loaded add to body
+  opacity: 1;
+  cursor:pointer;
+  @include scalelink-in-value(1);
+
+  &:hover{
+    pointer-events:initial;// allow no clicking untill sc-loaded
+
+  }
+
+  }
+
+}//body.sc-loaded
 
 a {
  
@@ -1314,14 +1392,19 @@ z-index: 2;
                 .details-wrap{
                 display: block;
                 float: left;
-                margin-left: 12.5vw;
-                width: 62.5vw;
+                margin-left: 12.5%;
+                width: 87.5%;
                 @include cssvalue(padding-top, 0.25);
                // @include cssvalue(padding-left, 1);
                // @mixin cssvaluegutter($type, $size){ // this for horizontal meassuring - based on gutter
                 @include cssvaluegutter(padding-left, 1);
                 @include cssvaluegutter(padding-right, 1);
                 @include cssvalue(padding-bottom, 0.25);
+
+                @media (min-width: map-get($breakpoints,md)) {   
+                width: 62.5%;
+                }
+
 
                       .radio-name{
                       @include h2;
@@ -1346,8 +1429,13 @@ z-index: 2;
                       @include opacity-out-0_5;
                       // review this - bit dirty
                       top: 35%;
-                      position: absolute;
+                      position: relative;
                       right: 0;
+
+                          @media (min-width: map-get($breakpoints,md)) {   
+                          position: absolute;
+                          }
+                      
                       }
 
                   &:hover{
@@ -1386,6 +1474,13 @@ z-index: 2;
             }
 
          }//wrapping
+
+         &:hover{ // li:hover
+         border-top: 1px solid $white;
+         border-bottom: 1px solid $white;
+         margin-top: -1px;
+         }
+
 
       }//li
 
@@ -1696,24 +1791,19 @@ body
     .sc-player{
     pointer-events:initial;
     height: auto;
-      //  @include cssvalue(height, 4);
-
-    //min-height: 12.5vw;
-    @include cssvalue(min-height, 4);
-//    max-height: 37.5vw;
-
+    min-height: 25vw;
+ 
     @media (min-width: map-get($breakpoints,md)) {
-    //min-height: 12.5vw;
-     //   max-height: 12.5vw;
+ 
+    min-height: 12.5vw;
 
     }
 
     @media (min-width: map-get($breakpoints,lg)) {
-    min-height: 12.5vw;
+    min-height: 12.5vw; // should this 6.26?
     }
     @media (min-width: map-get($breakpoints,xl)) {
-   // min-height: 6.25vw; // the height should be based on 
-    }
+     }
 
     background: black;
     overflow: hidden;
@@ -1731,30 +1821,52 @@ body
       height: inherit;// overrides the vw values
 
         a.sc-play{
-        width: 50%;
+        width: 100%;
         position: absolute;
         left: 0;
         right: 0;
-        top: 12.5%;// added
+       // top: 12.5%;// added - but why? - review + delete
         border-radius: 0;
         background:transparent;
-        z-index: 2;// ensure above the hide button
-        
+        z-index: 2;
+        height: 25vw;
+        @extend .grid-item;
+
+           @media (min-width: map-get($breakpoints,sm)) {
+            }
+           @media (min-width: map-get($breakpoints,md)) {
+            height: 12.5vw;
+            }
+
           .play-toggle{
-          top: 50%; // review - dirty offsets
-          margin-top: -50%;
+         // top: 50%; // review - dirty offsets
+         // margin-top: -50%;
           position: relative;
+          padding: 30%;
+
+             @media (min-width: map-get($breakpoints,sm)) {
+             //padding: 15% 30% 50% 30%;
+             }
+        
           }
 
         }
 
         .player-toggle{
         position: absolute;
-        bottom: 0px;
+       // bottom: 0px;
+        top: 18.75vw;
         left: 0;
         right: 0;
         width: 100%;
-        line-height:12.5vw;
+        line-height:25vw;
+        z-index: 3; // 1 above from play
+
+          @media (min-width: map-get($breakpoints,sm)) {
+          line-height:12.5vw;
+          bottom: 0;
+          top: initial;
+          }
 
           @media (min-width: map-get($breakpoints,md)) {
           line-height:6.25vw;
@@ -1827,6 +1939,7 @@ body
       padding-right: 12.5vw;
       padding-left: 25vw;
       @include padding(padding-bottom, 0.5);
+      @include padding(padding-top, 0.5);
 
        @media (min-width: map-get($breakpoints,md)) {
         padding-left: 12.5vw;
@@ -1932,7 +2045,7 @@ body{
           svg{
           width: 100%;
           height: 100%;
-          padding: 25%; // This needs to be adjusted inorder to achive same size as nav toggle
+          padding: 20%;// was -25%; - but: // This needs to be adjusted inorder to achive same size as nav toggle
           display: block;
           margin: 0 auto;
           overflow: visible;
@@ -1957,8 +2070,18 @@ body{
       text-transform: uppercase;
       @include cssvalue(font-size, 0.4);
       font-weight: $boldweight;
-      line-height: inherit; // from .player-toggle
+    //  line-height: inherit; // from .player-toggle
+      line-height: 25vw;
 
+          @media (min-width: map-get($breakpoints,sm)) {
+        line-height: 25vw;
+
+         }
+
+          @media (min-width: map-get($breakpoints,md)) {
+        line-height: 12.5vw;
+
+         }
         &:hover{
 
          @include scalelink-in-value(1.25);
@@ -1988,12 +2111,17 @@ body{
       .sc-player{
       pointer-events:none;// was initial; - but block content
       height: auto;
-      min-height: 12.5vw;
+      min-height: 25vw;
       background: transparent;
       overflow: hidden;
       box-shadow:none;
       padding-left:0px;
       animation: 0.5s forwards fade-out;
+
+      @media (min-width: map-get($breakpoints,md)) {
+      min-height: 12.5vw;
+      }
+        
 
         .sc-controls{ // moves top left of screen
         margin-top: 0;
@@ -2014,12 +2142,16 @@ body{
           height: 100%; 
           width: 100%;
          // padding-top: 12.5vw;  
-          min-height: 12.5vw;//  
+          min-height: 25vw;//  
         //  @include cssvalue(padding-top, 2);
 
           position: absolute;
           bottom: 0;
           top: 0;    
+    
+          @media (min-width: map-get($breakpoints,md)) {
+          min-height: 12.5vw;
+          }
 
             .toggle-icon-wrap{
             display: block;

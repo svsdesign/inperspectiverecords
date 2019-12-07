@@ -63,7 +63,7 @@
 
 			<div class="wrapping grid">	
 			
-				<a class="single-radio-item single-radio-item-<?php echo $itemno;?> grid-item grid-item-sm-1" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+				<a class="single-radio-item single-radio-item-<?php echo $itemno;?> grid-item grid-item-xs-1" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
 
  					<?php// get_template_part( 'content-radio' );?>
 
@@ -90,7 +90,7 @@
 				</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
 		
 						
-				<div class="details-wrap grid-item grid-item-sm-5">
+				<div class="details-wrap grid-item grid-item-xs-5">
 							
 					<div class="radio-date">
 						<?php $showstart = get_field('show_start_date'); echo date_i18n('dS F Y', $showstart);  ?>
@@ -278,7 +278,7 @@
 												 </div><!-- .date -->
 												
 												<div class="radio-view-item">
-													View Item
+													View Show
 												</div><!--view-item-->
 												
 
@@ -363,8 +363,7 @@ its out of date and needs replacing with the one as per the "single other shows"
 				<div class="play-icon-wrap">
 			
 					 <div class="play-toggle inline-small"> 
-					
-					 	
+									 	
 						<svg id="playertoggle_<?php echo $showid?>" class="playertoggle"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
 							
 							<path class="play-inline" id="play_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 

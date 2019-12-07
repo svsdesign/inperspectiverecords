@@ -137,6 +137,19 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, containe
 
 // see what radio classes we need to retain:
 
+
+       if($('body').hasClass('sc-loaded')){
+
+        console.log("player loaded")
+        loadedradio = true;
+
+       } else {
+      
+        loadedradio = false;
+
+       };// if($('body').hasClass('sc-loaded')
+
+
        if($('body').hasClass('sc-player-playing')){
 
         console.log("player is playing - apply class sc-player-playing")
@@ -212,6 +225,11 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, containe
          $('body').addClass('has-sound-block')
 
        }
+        if (loadedradio == true) {
+         $('body').addClass('sc-loaded')
+       }/// if radio was active
+
+
 
        if (activeradio == true) {
         console.log("player is playing - apply class sc-player-playing")
