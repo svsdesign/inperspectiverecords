@@ -62,8 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <!-- <noscript>GDPR Cookie Consent by <a href="https://www.freeprivacypolicy.com/">FreePrivacyPolicy</a></noscript> -->
 <!-- End Cookie Consent -->
-
-
+<!-- caching issues on safari during dev:https://stackoverflow.com/questions/11754305/why-my-mobile-safari-cache-wont-clear -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<!-- eventually remove this I think? -->
 
 </head>
 

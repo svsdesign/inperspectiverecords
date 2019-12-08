@@ -3,13 +3,12 @@
 article.scene-wrapper{
 display: block;
 position: relative;
-   background: red;
 
   .scene-fixer {
   top: 0px;
   //position:sticky;// fixed;//sticky; // chec this eveywherE!
   //https://stackoverflow.com/questions/54646939/why-is-my-positionsticky-not-working-on-ios
-  // 
+  // review - but I think this is now resolved 
   //
   @include prefix(position, sticky);
 //  bottom: 0px;
@@ -70,7 +69,9 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
 
         .code-wrap{
         display: block;
-        position: sticky; 
+       // position: sticky; 
+        @include prefix(position, sticky);
+
         @include blur;
         opacity: 0.8;
         top: 10vh;
@@ -110,7 +111,14 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
         text-align: center;
         /* Rectangle 5: */
         background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 71%);
-                 
+         
+
+          @media (min-width: map-get($breakpoints,md)) {
+         // top: 70vh;
+         // height: 30vh;
+          }
+
+        
             .release-title{
             position: relative;
             color: white;
@@ -118,7 +126,7 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
             height: auto;
             @include padding(padding-top, 0.4);
             @include padding(padding-bottom, 0.2);
-            font-weight:600;
+            font-weight:$boldweight;
             z-index: 9;
             }
 
@@ -230,7 +238,8 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
    .height-item.active.last-end{
 
     a{
-      position: sticky;
+     // position: sticky;
+      @include prefix(position, sticky);
       top: 0  
     }
     .code-wrap{
@@ -272,19 +281,20 @@ body.vertical{
                
           .description-wrap{
           @include padding(padding-top, 0.4);
-          top: 70vh;
-          height: 30vh;
+          top: 80vh;
+          height: 20vh;
           width: 100%;
           text-align: center;
           /* Rectangle 5: */
           background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 71%);
           @include cssvalue(font-size, 0.9);
-          @include cssvalue(line-height,1.1);        
+          @include cssvalue(line-height,1.1);    
+
 
 
               @media (min-width: map-get($breakpoints,md)) {
-            //  @include cssvalue(font-size, 1);
-             // @include cssvalue(line-height,1.2);
+              //top: 70vh;
+              //height: 30vh;
               }
 
               .release-title{
@@ -333,7 +343,8 @@ body.vertical{
                }
 
               .details-wrap{
-                 padding-top: 10vh;
+              @include cssvalue(padding-top, 0.2);
+              padding-bottom: 10vh;
 
                }
 
@@ -457,8 +468,8 @@ body.release-list-view{
 
           .code-wrap{
           display: block;
-          position: sticky; 
-          @include blur;
+          @include prefix(position, sticky);
+           @include blur;
           opacity: 0;//don't show
           top: 50vh;
           width: 100%;
@@ -634,8 +645,7 @@ body.release-list-view{
       display: block;
       opacity: 1;
       @include focus;
-      position: -webkit-sticky;
-      position: sticky;
+      @include prefix(position, sticky);
       top: 5vh;
       padding-top: 0;
       height: 90vh; 
@@ -869,7 +879,7 @@ body.release-list-view{
 
 .view-module{
 display: none;// lets not bother having this alltogether
-position: sticky; 
+@include prefix(position, sticky);
 top: 0;
 width: 12.5vw;
 margin-top: -100vh; // too ofset carousel
