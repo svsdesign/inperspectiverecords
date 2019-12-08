@@ -11,7 +11,7 @@
 get_header(); ?>
 
   
-	<article class="container grid">
+	<article class="container grid scene-wrapper">
 				 
 <!--
 			<div class="carousel-options" style="display:none;">
