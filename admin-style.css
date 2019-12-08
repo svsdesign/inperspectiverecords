@@ -13,6 +13,16 @@ Text Domain:
 /* sitewide styling */
 /* GRID */
 /* END GRID */
+/* usage
+block { 
+  @include prefix(test, comma, separated, values);
+};
+
+block { 
+  @include prefix(filter, grayscale(100%) sepia(25%));
+}
+
+*/
 /* start "measurements" & "spacing" */
 /* TO DO - tidy up  + sort cross browser previxes out */
 @keyframes blurout {
@@ -3764,7 +3774,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(85deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(71deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);

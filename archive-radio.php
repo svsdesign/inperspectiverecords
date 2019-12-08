@@ -167,7 +167,7 @@ get_header();?>
 										<div class="details-wrap">
 	 											
 											<div class="radio-date">
-												<?php $showstart = get_field('show_start_date'); echo date_i18n('dS F Y', $showstart);  ?>
+												<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
 											 </div><!-- .date -->
 											
 											<div class="radio-view-item">
@@ -210,7 +210,7 @@ get_header();?>
 										<div class="details-wrap"><!-- classes - delete? outer-grid-item inner outer-grid-item-sm-6"-->
 	 											
 											<div class="radio-date">
-												<?php $showstart = get_field('show_start_date'); echo date_i18n('dS F Y', $showstart);  ?>
+												<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
 											 </div><!-- .date -->
 											
 											<div class="radio-view-item">
@@ -257,7 +257,6 @@ get_header();?>
 	 				$soundcloudlink = get_field('soundcloud_link');
 					?>
 
-
 					 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> grid-item grid-item-xs-6 grid-item-md-3">
 
 							<div class="wrapping">	
@@ -273,7 +272,7 @@ get_header();?>
 									<div class="details-wrap"><!-- classes - delete? outer-grid-item inner outer-grid-item-sm-6"-->
  											
 										<div class="radio-date">
-											<?php $showstart = get_field('show_start_date'); echo date_i18n('dS F Y', $showstart);  ?>
+											<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
 										 </div><!-- .date -->
 										
 										<div class="radio-view-item">

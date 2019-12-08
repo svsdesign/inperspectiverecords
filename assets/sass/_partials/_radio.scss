@@ -1660,12 +1660,20 @@ body.single-radio{
       height: 6.25vw;
       bottom: 0px;
      // width: 87.5%;
-      padding-left: 12.5vw;
-      padding-right: 12.5vw;
+      padding-left: 25vw;
+      padding-right: 25vw;
       z-index: 1;
       top: initial;
       margin-top: initial;
       left: 0;
+      
+          @media (min-width: map-get($breakpoints,md)) {
+          padding-left: 12.5vw;
+          padding-right: 12.5vw;
+           //     height: 6.25vw;
+
+          }
+
       }
 
       .sc-time-indicators{

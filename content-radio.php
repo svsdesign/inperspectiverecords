@@ -93,7 +93,7 @@
 				<div class="details-wrap grid-item grid-item-xs-5">
 							
 					<div class="radio-date">
-						<?php $showstart = get_field('show_start_date'); echo date_i18n('dS F Y', $showstart);  ?>
+						<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
 					 </div><!-- .date -->
 					
 					<?php if($showtitle): ?>
@@ -274,7 +274,7 @@
 											<div class="details-wrap">
 		 											
 												<div class="radio-date">
-													<?php $showstart = get_field('show_start_date'); echo date_i18n('dS F Y', $showstart);  ?>
+													<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
 												 </div><!-- .date -->
 												
 												<div class="radio-view-item">

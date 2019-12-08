@@ -74,6 +74,26 @@
 
 ////////////////////////////////////////////////////////////////////////////
 
+//https://gist.github.com/juliocesar/8105794
+
+@mixin prefix($property, $parameters) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
+    #{$prefix}#{$property}: $parameters;
+  }
+}
+
+/* usage
+block { 
+  @include prefix(test, comma, separated, values);
+};
+
+block { 
+  @include prefix(filter, grayscale(100%) sepia(25%));
+}
+
+*/
+// it's not perfect, but it's small.
+//end https://gist.github.com/juliocesar/8105794
 
 
 // media query mixin

@@ -49,7 +49,9 @@ text-align: center;
   font-weight: $boldweight;
   }
 
-
+  section#event-details{
+  overflow: hidden;// fixed the overflow on safari - review + delete comments
+  }
 
   section#upcoming-events{
   width: 100%;
