@@ -30,6 +30,8 @@ width: 100%;// this dirty?
     overflow:hidden;
     padding-top: 6.25vw;
     padding-bottom: 6.25vw;
+    pointer-events:none;// untill js loaded - don't allow user interaction; causes glitches on hover states occastionaly
+
     }
 
     .inner-container{

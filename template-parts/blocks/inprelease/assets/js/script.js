@@ -18,32 +18,42 @@
               
         //$block.find('img').doSomething();
 
-        var $thiscontainer = $block,
+        var $thiscontainer = $block.find(".record-circle-container"),
           //  $thiscontainer = $(this),
             $thiscircle = $block.find(".record-circle");
             $thiscontainer.removeClass("active","rotating","rotated");// incase its active still - seems to be some buggy behavior atm
+            $thiscontainer.css("pointer-events","initial");// allow pointer events now that the js is ready
+            //$thiscontainer.css("background","red");
+      //console.log('just remove classes');
+    //    setTimeout(function(){
+          circlehover();
+    //    }, 1000);
 
-           // console.log('just remove classes');
+        function circlehover(){
 
-        $thiscircle.hover(function() {
-        
-          //console.log("thiscircle.hover function");
+                $thiscircle.hover(function() {
+            
+            console.log("thiscircle.hover function");
 
-          if($thiscircle.hasClass("rotating")){
+              if($thiscircle.hasClass("rotating")){
 
-            $thiscircle.removeClass("rotating"); 
-            $thiscircle.removeClass("rotate");
-            $thiscontainer.removeClass("active");
+                $thiscircle.removeClass("rotating"); 
+                $thiscircle.removeClass("rotate");
+                $thiscontainer.removeClass("active");
 
-          } else {
+              } else {
 
-             $thiscircle.addClass("rotating");
-             $thiscircle.addClass("rotate");
-             $thiscontainer.addClass("active");
+                 $thiscircle.addClass("rotating");
+                 $thiscircle.addClass("rotate");
+                 $thiscontainer.addClass("active");
 
-          } // if
+              } // if
 
-        }); // hover
+            }); // hover
+
+           }//        function circlehover(){
+
+
 
     }//var initializeBlock = function( $block ) 
 
@@ -56,6 +66,7 @@
             //console.log("is admin")
 
             $(".record-circle-container").each(function() {
+
                 initializeBlock( $(this) );
             });
 

@@ -222,18 +222,20 @@ Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, containe
          hasradioblock = true;
          console.log("we have a sound-block on the page - add class to body - for the radio loader to discover")
 
-         $('body').addClass('has-sound-block')
+         $('body').addClass('has-sound-block');
 
        }
+
+
         if (loadedradio == true) {
          $('body').addClass('sc-loaded')
-       }/// if radio was active
+       }/// if radio was loaded
 
 
 
        if (activeradio == true) {
         console.log("player is playing - apply class sc-player-playing")
-        $('body').addClass('sc-player-playing')
+        $('body').addClass('sc-player-playing');
        }/// if radio was active
 
 

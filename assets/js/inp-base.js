@@ -28,6 +28,7 @@
   
 
 */
+// not sure wwe need all the radio variable in here?
 var radioscriptloaded, // set as undefined initially;//
     scsjsonobject, // new track
     activescsjsonobject, // active track
@@ -329,7 +330,7 @@ TO DO:
 
     function recordcircle(){
 
-      //console.log("each recordcircle");
+      console.log("each recordcircle");
 
         $(".record-circle-container").each(function() {
         //  console.log("eachrecord container")
@@ -337,12 +338,16 @@ TO DO:
           var $thiscontainer = $(this),
               $thiscircle = $(this).find(".record-circle");
               $thiscontainer.removeClass("active","rotating","rotated");// incase its active still - seems to be some buggy behavior atm
- 
+              $thiscircle.removeClass("rotating");// in an effort to reset?
+
+              $thiscontainer.css("pointer-events","initial");// allow pointer events now that the js is ready
+
               //console.log('just remove classes');
 
-          $thiscircle.hover(function() {
-          
-            if($thiscircle.hasClass("rotating")){
+            $thiscircle.hover(function() {
+          //$thiscircle.mouseover(function() {
+              if($thiscircle.hasClass("rotating")){
+            console.log("has class rotatting")
 
              /* $thiscircle.removeClass("rotating"); 
               $thiscircle.toggleClass("rotate");
@@ -353,6 +358,7 @@ TO DO:
               $thiscontainer.removeClass("active");
 
             } else {
+            console.log("DOES NOT have class rotatting")
 
                $thiscircle.addClass("rotating");
                $thiscircle.addClass("rotate");
@@ -569,10 +575,14 @@ TO DO:
                   {
             
                    //  console.log('recordcircle');
+                 //setTimeout(function(){
 
-                     recordcircle();// this needs to trigger other stuff like resiae as well I guess?
+                  // takes to long to reach the js - so do we just ensure the items have no pointer events initially?
 
-                  };  /*  #artist-releases  */
+                             recordcircle();// this needs to trigger other stuff like resiae as well I guess?
+                //}, 2000);
+
+                };  /*  #artist-releases  */
              
 
              /*

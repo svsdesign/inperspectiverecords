@@ -395,6 +395,12 @@ body.post-type-archive-radio{
 
                      @media (min-width: map-get($breakpoints,md)) {  
                      width: 20%;
+                    @include cssvalue(font-size, 0.3);
+
+                    }
+                     @media (min-width: map-get($breakpoints,lg)) {  
+                     @include cssvalue(font-size, 0.4);
+
                     }
 
                   }

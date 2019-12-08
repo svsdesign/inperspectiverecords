@@ -166,21 +166,21 @@ body.dev-on #dev-grid.container .dev-grid-item {
 /* item sizes */
 @media (min-width: 0px) {
   /* line 78, assets/sass/_partials/_gridsystem.scss */
-  .grid-item-xs-1 {
+  .grid-item-xs-1, .sound-block .play-icon-wrap {
     flex: 0 0 16.66667%;
   }
 }
 
 @media (min-width: 0px) {
   /* line 86, assets/sass/_partials/_gridsystem.scss */
-  .push-item-left-xs-1, .sound-block.alignleft .details-wrap {
+  .push-item-left-xs-1 {
     margin-left: 16.66667%;
   }
 }
 
 @media (min-width: 0px) {
   /* line 91, assets/sass/_partials/_gridsystem.scss */
-  .push-item-right-xs-1, .sound-block.alignright .details-wrap {
+  .push-item-right-xs-1 {
     margin-right: 16.66667%;
   }
 }
@@ -615,7 +615,7 @@ body.dev-on #dev-grid.container .dev-grid-item {
 
 @media (min-width: 320px) {
   /* line 86, assets/sass/_partials/_gridsystem.scss */
-  .push-item-left-sm-1, .sound-block.aligncenter .radio-item.grid .play-icon-wrap {
+  .push-item-left-sm-1 {
     margin-left: 16.66667%;
   }
 }
@@ -3774,7 +3774,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(71deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(90deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -5163,95 +5163,43 @@ Move this into a seperate style sheet?
 }
 
 /* Sound Block */
-/* line 7, assets/sass/_partials/_block-sound.scss */
+/* line 4, assets/sass/_partials/_block-sound.scss */
 .sound-block {
   width: 100%;
 }
-/* line 11, assets/sass/_partials/_block-sound.scss */
+/* line 8, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-icon-wrap {
   		/* using viewports values is not going to work 
   		- because I don't get 100vw to layout content; 
   		meaning thigns are basically enlongated if usaing vw for heigth values
   
   		*/
-  width: 36px;
-  width: 52px;
-  height: 36px;
-  height: 52px;
   overflow: hidden;
   float: left;
 }
-@media screen and (min-width: 0px) {
-  /* line 11, assets/sass/_partials/_block-sound.scss */
-  .sound-block .play-icon-wrap {
-    width: calc(36px + 16 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 11, assets/sass/_partials/_block-sound.scss */
-  .sound-block .play-icon-wrap {
-    width: 52px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 11, assets/sass/_partials/_block-sound.scss */
-  .sound-block .play-icon-wrap {
-    width: calc(52px + 12 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 11, assets/sass/_partials/_block-sound.scss */
-  .sound-block .play-icon-wrap {
-    width: 64px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 11, assets/sass/_partials/_block-sound.scss */
-  .sound-block .play-icon-wrap {
-    height: calc(36px + 16 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 11, assets/sass/_partials/_block-sound.scss */
-  .sound-block .play-icon-wrap {
-    height: 52px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 11, assets/sass/_partials/_block-sound.scss */
-  .sound-block .play-icon-wrap {
-    height: calc(52px + 12 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 11, assets/sass/_partials/_block-sound.scss */
-  .sound-block .play-icon-wrap {
-    height: 64px;
-  }
-}
-/* line 30, assets/sass/_partials/_block-sound.scss */
+/* line 32, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-toggle {
-  height: 100%;
+  height: inherit;
   width: 100%;
   border-radius: 50%;
   margin: auto;
   padding: 30%;
   background: black;
 }
-/* line 45, assets/sass/_partials/_block-sound.scss */
+/* line 47, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-toggle.small {
   background: transparent;
   border: 1px solid white;
 }
-/* line 54, assets/sass/_partials/_block-sound.scss */
+/* line 56, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-toggle.small:hover {
   border: 1px solid black;
 }
-/* line 58, assets/sass/_partials/_block-sound.scss */
+/* line 60, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-toggle.small:hover path {
   fill: black;
 }
-/* line 66, assets/sass/_partials/_block-sound.scss */
+/* line 68, assets/sass/_partials/_block-sound.scss */
 .sound-block .show-title {
   padding-top: 4.5px;
   padding-top: 6.5px;
@@ -5262,78 +5210,78 @@ Move this into a seperate style sheet?
   font-weight: 500;
 }
 @media screen and (min-width: 0px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     padding-top: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     padding-top: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     padding-top: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     padding-top: 8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     font-size: calc(10px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     font-size: calc(16px + 14 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     font-size: 30px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 66, assets/sass/_partials/_block-sound.scss */
+  /* line 68, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     line-height: 32px;
   }
 }
-/* line 71, assets/sass/_partials/_block-sound.scss */
+/* line 73, assets/sass/_partials/_block-sound.scss */
 .sound-block .show-start {
   font-size: 10px;
   font-size: 12.8px;
@@ -5341,84 +5289,84 @@ Move this into a seperate style sheet?
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 71, assets/sass/_partials/_block-sound.scss */
+  /* line 73, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 71, assets/sass/_partials/_block-sound.scss */
+  /* line 73, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 71, assets/sass/_partials/_block-sound.scss */
+  /* line 73, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 71, assets/sass/_partials/_block-sound.scss */
+  /* line 73, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 71, assets/sass/_partials/_block-sound.scss */
+  /* line 73, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 71, assets/sass/_partials/_block-sound.scss */
+  /* line 73, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 71, assets/sass/_partials/_block-sound.scss */
+  /* line 73, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 71, assets/sass/_partials/_block-sound.scss */
+  /* line 73, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     line-height: 25.6px;
   }
 }
-/* line 76, assets/sass/_partials/_block-sound.scss */
+/* line 78, assets/sass/_partials/_block-sound.scss */
 .sound-block.alignright {
   width: 100%;
   float: none;
 }
-/* line 80, assets/sass/_partials/_block-sound.scss */
+/* line 82, assets/sass/_partials/_block-sound.scss */
 .sound-block.alignright .radio-item.grid {
   flex-direction: row-reverse;
   text-align: right;
 }
-/* line 90, assets/sass/_partials/_block-sound.scss */
+/* line 92, assets/sass/_partials/_block-sound.scss */
 .sound-block.aligncenter {
   float: none;
   width: 100%;
 }
-/* line 94, assets/sass/_partials/_block-sound.scss */
+/* line 96, assets/sass/_partials/_block-sound.scss */
 .sound-block.aligncenter .radio-item.grid {
   flex-direction: initial;
   text-align: left;
 }
-/* line 106, assets/sass/_partials/_block-sound.scss */
+/* line 108, assets/sass/_partials/_block-sound.scss */
 .sound-block.alignleft {
   float: none;
   width: 100%;
 }
-/* line 110, assets/sass/_partials/_block-sound.scss */
+/* line 112, assets/sass/_partials/_block-sound.scss */
 .sound-block.alignleft .radio-item.grid {
   flex-direction: initial;
   text-align: left;
 }
-/* line 120, assets/sass/_partials/_block-sound.scss */
+/* line 122, assets/sass/_partials/_block-sound.scss */
 .sound-block .details-wrap {
   min-height: 12.5vw;
 }
@@ -5462,14 +5410,15 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   overflow: hidden;
   padding-top: 6.25vw;
   padding-bottom: 6.25vw;
+  pointer-events: none;
 }
-/* line 35, assets/sass/_partials/_block-release.scss */
+/* line 37, assets/sass/_partials/_block-release.scss */
 .release-block .inner-container {
   margin: auto;
   position: relative;
   width: 25vw;
 }
-/* line 41, assets/sass/_partials/_block-release.scss */
+/* line 43, assets/sass/_partials/_block-release.scss */
 .release-block .sleave-square {
   position: relative;
   margin: auto;
@@ -5478,7 +5427,7 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   pointer-events: none;
   z-index: 92;
 }
-/* line 51, assets/sass/_partials/_block-release.scss */
+/* line 53, assets/sass/_partials/_block-release.scss */
 .release-block .sleave-square.inner-back {
   position: absolute;
   margin: auto;
@@ -5492,7 +5441,7 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   bottom: 0;
   z-index: 80;
 }
-/* line 66, assets/sass/_partials/_block-release.scss */
+/* line 68, assets/sass/_partials/_block-release.scss */
 .release-block .sleave-square.inner-sleave {
   position: absolute;
   margin: auto;
@@ -5507,12 +5456,12 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   z-index: 91;
   animation: moveleft 500ms ease-out forwards;
 }
-/* line 82, assets/sass/_partials/_block-release.scss */
+/* line 84, assets/sass/_partials/_block-release.scss */
 .release-block .active .sleave-square.inner-sleave {
   animation-iteration-count: 1;
   animation: moverighttwo 500ms ease-in-out forwards;
 }
-/* line 87, assets/sass/_partials/_block-release.scss */
+/* line 89, assets/sass/_partials/_block-release.scss */
 .release-block .record-sleave {
   display: block;
   width: 25vw;
@@ -5520,13 +5469,13 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   position: absolute;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-/* line 96, assets/sass/_partials/_block-release.scss */
+/* line 98, assets/sass/_partials/_block-release.scss */
 .release-block .active.record-sleave {
   opacity: 0;
   animation-iteration-count: 1;
   animation: decreaseopacity 1000ms ease-out forwards;
 }
-/* line 103, assets/sass/_partials/_block-release.scss */
+/* line 105, assets/sass/_partials/_block-release.scss */
 .release-block .release-details {
   color: black;
   position: absolute;
@@ -5548,79 +5497,79 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   animation: decreaseopacity 500ms ease-out forwards;
 }
 @media screen and (min-width: 0px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     font-size: calc(10.8px + 4.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     font-size: 15.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     font-size: calc(15.6px + 3.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     line-height: calc(12.6px + 5.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     line-height: 18.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     line-height: calc(18.2px + 4.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     line-height: 22.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     margin-top: calc(-12.6px + -5.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     margin-top: -18.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     margin-top: calc(-18.2px + -4.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     margin-top: -22.4px;
   }
 }
 @media (min-width: 640px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     font-size: 14.4px;
     font-size: 20.8px;
@@ -5629,55 +5578,55 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     font-size: calc(14.4px + 6.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     font-size: 20.8px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     font-size: calc(20.8px + 4.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     font-size: 25.6px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     line-height: calc(16.2px + 7.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     line-height: 23.4px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     line-height: calc(23.4px + 5.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 103, assets/sass/_partials/_block-release.scss */
+  /* line 105, assets/sass/_partials/_block-release.scss */
   .release-block .release-details {
     line-height: 28.8px;
   }
 }
 
-/* line 128, assets/sass/_partials/_block-release.scss */
+/* line 130, assets/sass/_partials/_block-release.scss */
 .release-block .release-details .release-code {
   font-weight: 100;
   padding-bottom: 5.4px;
@@ -5688,78 +5637,78 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   line-height: 10.4px;
 }
 @media screen and (min-width: 0px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     padding-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     padding-bottom: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     padding-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     padding-bottom: 9.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     font-size: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     line-height: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     line-height: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     line-height: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 128, assets/sass/_partials/_block-release.scss */
+  /* line 130, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-code {
     line-height: 12.8px;
   }
 }
-/* line 135, assets/sass/_partials/_block-release.scss */
+/* line 137, assets/sass/_partials/_block-release.scss */
 .release-block .release-details .release-artists {
   font-weight: 400;
   font-style: italic;
@@ -5767,30 +5716,30 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   padding-bottom: 5.2px;
 }
 @media screen and (min-width: 0px) {
-  /* line 135, assets/sass/_partials/_block-release.scss */
+  /* line 137, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artists {
     padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 135, assets/sass/_partials/_block-release.scss */
+  /* line 137, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artists {
     padding-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 135, assets/sass/_partials/_block-release.scss */
+  /* line 137, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artists {
     padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 135, assets/sass/_partials/_block-release.scss */
+  /* line 137, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artists {
     padding-bottom: 6.4px;
   }
 }
-/* line 142, assets/sass/_partials/_block-release.scss */
+/* line 144, assets/sass/_partials/_block-release.scss */
 .release-block .release-details .release-artist {
   float: left;
   font-weight: 400;
@@ -5803,117 +5752,117 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   line-height: 18.2px;
 }
 @media screen and (min-width: 0px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     padding-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     padding-bottom: 6.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     font-size: calc(10.8px + 4.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     font-size: 15.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     font-size: calc(15.6px + 3.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     line-height: calc(12.6px + 5.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     line-height: 18.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     line-height: calc(18.2px + 4.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 142, assets/sass/_partials/_block-release.scss */
+  /* line 144, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-artist {
     line-height: 22.4px;
   }
 }
-/* line 153, assets/sass/_partials/_block-release.scss */
+/* line 155, assets/sass/_partials/_block-release.scss */
 .release-block .release-details .release-artist:after {
   content: '';
   white-space: pre-wrap;
 }
-/* line 158, assets/sass/_partials/_block-release.scss */
+/* line 160, assets/sass/_partials/_block-release.scss */
 .release-block .release-details .release-title {
   font-weight: 600;
   padding-bottom: 5.4px;
   padding-bottom: 7.8px;
 }
 @media screen and (min-width: 0px) {
-  /* line 158, assets/sass/_partials/_block-release.scss */
+  /* line 160, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-title {
     padding-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 158, assets/sass/_partials/_block-release.scss */
+  /* line 160, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-title {
     padding-bottom: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 158, assets/sass/_partials/_block-release.scss */
+  /* line 160, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-title {
     padding-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 158, assets/sass/_partials/_block-release.scss */
+  /* line 160, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-title {
     padding-bottom: 9.6px;
   }
 }
-/* line 164, assets/sass/_partials/_block-release.scss */
+/* line 166, assets/sass/_partials/_block-release.scss */
 .release-block .release-details .release-artist:last-child:after {
   content: '';
 }
-/* line 172, assets/sass/_partials/_block-release.scss */
+/* line 174, assets/sass/_partials/_block-release.scss */
 .release-block .active .release-details {
   opacity: 1;
   animation-iteration-count: 1;
@@ -5921,7 +5870,7 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   z-index: 93;
   pointer-events: none;
 }
-/* line 181, assets/sass/_partials/_block-release.scss */
+/* line 183, assets/sass/_partials/_block-release.scss */
 .release-block .record-circle {
   height: 25vw;
   width: 100%;
@@ -5931,47 +5880,47 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   z-index: 90;
   overflow: hidden;
 }
-/* line 190, assets/sass/_partials/_block-release.scss */
+/* line 192, assets/sass/_partials/_block-release.scss */
 .release-block .record-item {
   position: absolute;
   width: 25vw;
   height: 25vw;
   z-index: 1;
 }
-/* line 196, assets/sass/_partials/_block-release.scss */
+/* line 198, assets/sass/_partials/_block-release.scss */
 .release-block .record-label {
   z-index: 2;
   position: absolute;
   width: 25vw;
   height: 25vw;
 }
-/* line 207, assets/sass/_partials/_block-release.scss */
+/* line 209, assets/sass/_partials/_block-release.scss */
 .release-block .inner-container {
   z-index: 30;
 }
-/* line 210, assets/sass/_partials/_block-release.scss */
+/* line 212, assets/sass/_partials/_block-release.scss */
 .release-block .inner-container.two {
   z-index: 20;
 }
-/* line 213, assets/sass/_partials/_block-release.scss */
+/* line 215, assets/sass/_partials/_block-release.scss */
 .release-block .inner-container.three {
   z-index: 10;
 }
-/* line 217, assets/sass/_partials/_block-release.scss */
+/* line 219, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-item {
   animation: moveleft 500ms ease-out forwards;
 }
-/* line 222, assets/sass/_partials/_block-release.scss */
+/* line 224, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-label {
   animation: rollingleft 500ms ease-out forwards, moveleft 500ms ease-out forwards;
 }
-/* line 227, assets/sass/_partials/_block-release.scss */
+/* line 229, assets/sass/_partials/_block-release.scss */
 .release-block .rotated.rotate .record-item {
   animation-iteration-count: 1;
   animation: moveright 500ms ease-out forwards;
   left: 0px;
 }
-/* line 233, assets/sass/_partials/_block-release.scss */
+/* line 235, assets/sass/_partials/_block-release.scss */
 .release-block .rotate .record-label {
   animation-iteration-count: 1;
   animation: rollingright 500ms ease-out forwards, moveright 500ms ease-out forwards;
@@ -6009,21 +5958,21 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
     left: 0px;
   }
 }
-/* line 279, assets/sass/_partials/_block-release.scss */
+/* line 281, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-item.two {
   animation: movelefttwo 500ms ease-out forwards;
 }
-/* line 284, assets/sass/_partials/_block-release.scss */
+/* line 286, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-label.two {
   animation: rollinglefttwo 500ms ease-out forwards, movelefttwo 500ms ease-out forwards;
 }
-/* line 287, assets/sass/_partials/_block-release.scss */
+/* line 289, assets/sass/_partials/_block-release.scss */
 .release-block .rotated.rotate .record-item.two {
   animation-iteration-count: 1;
   animation: moverighttwo 500ms ease-out forwards;
   left: 0px;
 }
-/* line 295, assets/sass/_partials/_block-release.scss */
+/* line 297, assets/sass/_partials/_block-release.scss */
 .release-block .rotate .record-label.two {
   animation-iteration-count: 1;
   animation: rollingrighttwo 500ms ease-out forwards, moverighttwo 500ms ease-out forwards;
@@ -6061,21 +6010,21 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
     left: 0px;
   }
 }
-/* line 332, assets/sass/_partials/_block-release.scss */
+/* line 334, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-item.three {
   animation: moveleftthree 500ms ease-out forwards;
 }
-/* line 337, assets/sass/_partials/_block-release.scss */
+/* line 339, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-label.three {
   animation: rollingleftthree 500ms ease-out forwards,  moveleftthree 500ms ease-out forwards;
 }
-/* line 342, assets/sass/_partials/_block-release.scss */
+/* line 344, assets/sass/_partials/_block-release.scss */
 .release-block .rotated.rotate .record-item.three {
   animation-iteration-count: 1;
   animation: moverightthree 500ms ease-out forwards;
   left: 0px;
 }
-/* line 350, assets/sass/_partials/_block-release.scss */
+/* line 352, assets/sass/_partials/_block-release.scss */
 .release-block .rotate .record-label.three {
   animation-iteration-count: 1;
   animation: rollingrightthree 500ms ease-out forwards, moverightthree 500ms ease-out forwards;

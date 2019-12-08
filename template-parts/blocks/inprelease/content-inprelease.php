@@ -47,11 +47,15 @@ $releaseproductcover = get_field('release_product_image_front', $releaseid); // 
 $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS
 ?>
 
+<?php //if no release id selected it will give the id of the current post
+//echo get_permalink( $releaseid); 
+// see DEc 2019 post - seba relase one with and one withouth the rlease - what to do? just provide the seba id, which is what the latest?
+?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> inp-block block-z-index-2 grid">
          
       <?php if ($phptemplate):// has template?>
             
-          <a href="<?php echo get_permalink( $artistsrelease->ID ); ?>">
+          <a href="<?php echo get_permalink( $releaseid); ?>">
 
           <?php include ('releases/'.$phptemplate.'.php');?>
 
@@ -60,7 +64,7 @@ $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relations
 
       <?php else: //does not have template: ?>
 
-          <a href="<?php echo get_permalink( $artistsrelease->ID ); ?>">
+          <a href="<?php echo get_permalink( $releaseid); ?>">
 
             <div class="record-circle-container">
                

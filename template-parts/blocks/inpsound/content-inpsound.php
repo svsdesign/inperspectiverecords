@@ -37,54 +37,62 @@ $soundblockid = get_field('sound'); //post object - IDS
 $soundcloudlink = get_field('soundcloud_link', $soundblockid);
 $thisnumber = 0; // this number to be changed based on number of blocks - or does it not matter?
 ?>
- 
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> inp-block block-z-index-2 grid">
+ <div class="<?php echo esc_attr($className); ?> inp-block block-z-index-2">
+    
+    <li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> grid"> 
 
-    <div class="outer-grid-item inner outer-grid-item-xs-6">            
+        <div class="outer-grid-item inner outer-grid-item-xs-6">            
 
-        <div class="align-position sound-sound-wrap">
-     
-            <div class="sound-inner-sound-wrap">
-                    
-                <div class="radio-item grid" id="<?php echo $thisnumber?>" data-tracklink="<?php echo $soundcloudlink;?>">
+            <div class="align-position sound-sound-wrap">
+         
+                <div class="sound-inner-sound-wrap">
+                        
+                    <div class="radio-item grid" id="<?php echo $thisnumber?>" data-tracklink="<?php echo $soundcloudlink;?>">
 
-                    <div class="play-icon-wrap grid-item grid-item-xs-1 grid-item-md-1">
+                        
+                        <div class="play-icon-wrap">
 
-                         <div class="play-toggle small"> 
-                            <svg id="playertoggle" class=""  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
-                                <path d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-                                <path d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-                                <path d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-                                <path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-                                <path opacity="0" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
-                                <path opacity="0" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-                                <path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-                                <path style="display:none;" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-                                <path style="display:none;" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-                            </svg> 
-                         </div> 
-
-                    </div><!-- .play-icon-wrap -->
-
-                    <div class="details-wrap grid-item grid-item-xs-4 grid-item-md-3">
-
-                        <div class="show-title">
-                        <?php echo get_the_title($soundblockid); ?>
+                            <div class="play-toggle small"> 
+                            
+                                <svg id="playertoggle_<?php echo $showid?>" class="playertoggle-inline"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+                                    <path id="play_<?php echo $showid?>" class="play-inline" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+                                    <path id="play-left_<?php echo $showid?>" class="play-left-inline" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+                                    <path id="play-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+                                    <path opacity="0" id="pause_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+                                    <path opacity="0" id="pause-left_<?php echo $showid?>" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+                                    <path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+                                    <path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+                                    <path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
+                                    <path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+                                </svg> 
+                            
+                            </div>
+        
                         </div>
 
-                        <div class="show-start">
-                        <?php $showstart = get_field('show_start_date', $soundblockid); echo date_i18n('dS F Y', $showstart);  ?>
-                        </div>
-                     
-                    </div><!-- .details-wrap -->  
+                        <div class="details-wrap grid-item grid-item-xs-4 grid-item-md-3">
 
-                </div><!-- .radio-item.grid -->  
+                            <div class="show-title">
+                            <?php echo get_the_title($soundblockid); ?>
+                            </div>
 
-            </div><!-- .sound-inner-sound-wrap-->  
+                            <div class="show-start">
+                            <?php $showstart = get_field('show_start_date', $soundblockid); echo date_i18n('dS F Y', $showstart);  ?>
+                            </div>
+                         
+if view itme allow link here
 
-        </div><!-- class="radio-item -->  
+                        </div><!-- .details-wrap -->  
 
-    </div> 
+                    </div><!-- .radio-item.grid -->  
+
+                </div><!-- .sound-inner-sound-wrap-->  
+
+            </div><!-- class="radio-item -->  
+
+        </div> 
+
+    <li>
    
 </div> <!-- inp-block -->     
 

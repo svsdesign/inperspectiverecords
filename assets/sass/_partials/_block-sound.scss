@@ -1,9 +1,6 @@
 /* Sound Block */
 
 
-
-
-
 .sound-block{
 width: 100%;// this dirty?
 
@@ -17,19 +14,24 @@ width: 100%;// this dirty?
 	// width: 12.5vw;
 	 //	@extend .grid-item-xs-1;
 	// width: 12.5%;
-	 @include cssvalue(width, 2); // this for vertical measuring 
-	 @include cssvalue(height, 2); // this for vertical measuring 
+	 //@include cssvalue(width, 2); // doesnt work
+	 //@include cssvalue(height, 2);// doesnt work
 
 	//height: 12.5vw;
 	overflow: hidden;
 	float: left;
 	@extend .grid-item;
+	@extend .grid-item-xs-1;
+	//padding:30%;
+
+	// i need to implement a  max heigh/ height; i.e the height of th grid itme - this flex things works
+	// but needs to be say % of the gird item; i.e too big atm
 	//position: absolute;//review
 	}
 
 	.play-toggle{
 
-	height: 100%;
+	height: inherit;// 100%;
     width: 100%;
 	//max-width: 80px;
 	border-radius:50%;
@@ -82,7 +84,7 @@ width: 100%;// this dirty?
 		text-align: right;
 		}
 		.details-wrap{
-		@extend .push-item-right-xs-1;
+		//@extend .push-item-right-xs-1;
 		}
 
 	}//&.alignright
@@ -96,7 +98,7 @@ width: 100%;// this dirty?
 		text-align: left;
 		
 			.play-icon-wrap{
-			@extend .push-item-left-sm-1;
+		//	@extend .push-item-left-sm-1;
 	   		}
 
    		}
@@ -112,7 +114,7 @@ width: 100%;// this dirty?
 		text-align: left;
 		}
 		.details-wrap{
-		@extend .push-item-left-xs-1;
+		//@extend .push-item-left-xs-1;
 		}
 
 	}//&.alignleft

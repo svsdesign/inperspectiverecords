@@ -1,0 +1,48 @@
+/* Image Block */
+
+
+.image-block{
+width: 100%;
+
+	img{
+	width: 100%;
+	}
+
+	&.align-right {
+	width: 100%;
+	float: none;
+
+		.grid{
+		flex-flow:row-reverse;
+		}
+
+	}//&.alignright
+	
+	&.align-center{
+	float: none;
+	width: 100%;
+	
+		.grid{
+		//flex-align:flex-start;
+		//margin:auto;
+		flex-flow:initial;
+
+			.grid-item{
+			margin:auto
+			}
+		}
+ 
+
+	}//&.aligncenter
+
+	&.align-left{
+	float: none;
+	width: 100%;
+
+		.grid{
+		flex-flow:row;
+		}
+
+	}//&.alignleft
+	 
+} //.image-block

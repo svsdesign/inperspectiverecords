@@ -1074,7 +1074,7 @@ function inp_scripts()
 
 // go trough my code and remove any traces of system
 
-    wp_enqueue_style( 'system-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'inp-style', get_stylesheet_uri() );
   
 
 	wp_enqueue_script(
