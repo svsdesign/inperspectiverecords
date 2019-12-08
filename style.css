@@ -3878,7 +3878,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(32deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(13deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -6115,8 +6115,9 @@ body.single-artists .rotate .record-label.three,
 article.scene-wrapper {
   display: block;
   position: relative;
+  background: red;
 }
-/* line 7, assets/sass/_partials/_releases.scss */
+/* line 8, assets/sass/_partials/_releases.scss */
 article.scene-wrapper .scene-fixer {
   top: 0px;
   -webkit-position: sticky;

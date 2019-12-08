@@ -3,13 +3,13 @@
 article.scene-wrapper{
 display: block;
 position: relative;
+   background: red;
 
   .scene-fixer {
   top: 0px;
-  //background: red;
   //position:sticky;// fixed;//sticky; // chec this eveywherE!
   //https://stackoverflow.com/questions/54646939/why-is-my-positionsticky-not-working-on-ios
-  //
+  // 
   //
   @include prefix(position, sticky);
 //  bottom: 0px;
@@ -33,7 +33,7 @@ position: relative;
 
 
   }
-  
+
 }//.scene-wrapper
 
 /*horizonalt default value */
