@@ -21,7 +21,7 @@ if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
 if( !empty($block['align']) ) {
-    $className .= ' align' . $block['align'];
+    $className .= ' align-' . $block['align'];
 }
 
 // Load values and assing defaults.
@@ -35,6 +35,9 @@ if( !empty($block['align']) ) {
 $text_color = get_field('text_color');
 $soundblockid = get_field('sound'); //post object - IDS
 $soundcloudlink = get_field('soundcloud_link', $soundblockid);
+$postlink = get_permalink( $soundblockid);
+// figure out if this item is public & display link accordingly
+$publicid = get_field('is_item_public', $soundblockid);
 $thisnumber = 0; // this number to be changed based on number of blocks - or does it not matter?
 ?>
  <div class="<?php echo esc_attr($className); ?> inp-block block-z-index-2">
@@ -48,8 +51,7 @@ $thisnumber = 0; // this number to be changed based on number of blocks - or doe
                 <div class="sound-inner-sound-wrap">
                         
                     <div class="radio-item grid" id="<?php echo $thisnumber?>" data-tracklink="<?php echo $soundcloudlink;?>">
-
-                        
+                
                         <div class="play-icon-wrap">
 
                             <div class="play-toggle small"> 
@@ -79,8 +81,13 @@ $thisnumber = 0; // this number to be changed based on number of blocks - or doe
                             <div class="show-start">
                             <?php $showstart = get_field('show_start_date', $soundblockid); echo date_i18n('dS F Y', $showstart);  ?>
                             </div>
-                         
-if view itme allow link here
+                            <?php if ($publicid == "1"):?>
+
+                                <a href="<?php echo $postlink;?>" class="radio-view-item">
+                                View Show <?php echo $public;?>
+                                </a>
+        
+                            <?php endif;?>
 
                         </div><!-- .details-wrap -->  
 

@@ -24,7 +24,7 @@
  	//$newsimage = get_field('news_featured_image'); // image
  	//$newsdescription = get_field('news_summary_description');// text area - 200 characters limit
  	//$newscontent = get_field('news_content'); // wysiwig
-	$date = get_the_date('d F Y');
+	$date = get_the_date('jS F Y');
 	$featureimage = get_field('feature_image'); // image
 	$categories = get_the_category( $post->ID );
  	?>
@@ -75,7 +75,7 @@
 <?php if (is_archive()): 
 	$featureimage = get_field('feature_image'); // image
 	//$featureimagecredit =  get_field('feature_image_credit');  // text
-	$date = get_the_date('d F Y');
+	$date = get_the_date('jS F Y');
 	$categories = get_the_category( $post->ID )
 	?>
 			

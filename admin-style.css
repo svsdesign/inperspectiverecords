@@ -3774,7 +3774,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(90deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(32deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -5336,39 +5336,142 @@ Move this into a seperate style sheet?
     line-height: 25.6px;
   }
 }
-/* line 78, assets/sass/_partials/_block-sound.scss */
-.sound-block.alignright {
+/* line 77, assets/sass/_partials/_block-sound.scss */
+.sound-block .details-wrap {
+  min-height: 12.5vw;
+}
+/* line 81, assets/sass/_partials/_block-sound.scss */
+.sound-block .details-wrap .radio-view-item {
+  font-size: 10px;
+  font-size: 12.8px;
+  line-height: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  opacity: 0.5;
+  animation: opacity-out-0_5 200ms ease-out forwards;
+  width: 100%;
+  clear: none;
+  display: block;
+  cursor: pointer;
+  padding-top: 9px;
+  padding-top: 13px;
+}
+@media screen and (min-width: 0px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    font-size: 12.8px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    font-size: 19.2px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    line-height: 20.8px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    line-height: 25.6px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    padding-top: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    padding-top: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    padding-top: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 81, assets/sass/_partials/_block-sound.scss */
+  .sound-block .details-wrap .radio-view-item {
+    padding-top: 16px;
+  }
+}
+/* line 104, assets/sass/_partials/_block-sound.scss */
+.sound-block .details-wrap:hover .radio-view-item {
+  opacity: 1;
+  animation: opacity-in-0_5 200ms ease-in forwards;
+}
+/* line 113, assets/sass/_partials/_block-sound.scss */
+.sound-block.align-right {
   width: 100%;
   float: none;
 }
-/* line 82, assets/sass/_partials/_block-sound.scss */
-.sound-block.alignright .radio-item.grid {
+/* line 117, assets/sass/_partials/_block-sound.scss */
+.sound-block.align-right .radio-item.grid {
   flex-direction: row-reverse;
   text-align: right;
 }
-/* line 92, assets/sass/_partials/_block-sound.scss */
-.sound-block.aligncenter {
-  float: none;
-  width: 100%;
-}
-/* line 96, assets/sass/_partials/_block-sound.scss */
-.sound-block.aligncenter .radio-item.grid {
-  flex-direction: initial;
-  text-align: left;
-}
-/* line 108, assets/sass/_partials/_block-sound.scss */
-.sound-block.alignleft {
-  float: none;
-  width: 100%;
-}
-/* line 112, assets/sass/_partials/_block-sound.scss */
-.sound-block.alignleft .radio-item.grid {
-  flex-direction: initial;
-  text-align: left;
-}
 /* line 122, assets/sass/_partials/_block-sound.scss */
-.sound-block .details-wrap {
-  min-height: 12.5vw;
+.sound-block.align-right .radio-view-item {
+  float: right;
+  text-align: right;
+}
+/* line 137, assets/sass/_partials/_block-sound.scss */
+.sound-block.align-center {
+  float: none;
+  width: 100%;
+}
+/* line 141, assets/sass/_partials/_block-sound.scss */
+.sound-block.align-center .radio-item.grid {
+  flex-direction: initial;
+  text-align: left;
+}
+/* line 163, assets/sass/_partials/_block-sound.scss */
+.sound-block.align-left {
+  float: none;
+  width: 100%;
+}
+/* line 167, assets/sass/_partials/_block-sound.scss */
+.sound-block.align-left .radio-item.grid {
+  flex-direction: initial;
+  text-align: left;
+}
+/* line 175, assets/sass/_partials/_block-sound.scss */
+.sound-block.align-left .radio-view-item {
+  float: left;
+  text-align: left;
 }
 
 /* Release Block 

@@ -74,8 +74,43 @@ width: 100%;// this dirty?
 	@include smaller;
 	
 	}
+	.details-wrap{
+		//@extend .push-item-right-xs-1;
+		min-height: 12.5vw; // ensure visibility
 
-	&.alignright {
+		.radio-view-item{
+		@include smaller;
+ 		//@include cssvalue(font-size, 0.4);
+		font-weight: $mediumweight;
+		opacity: 0.5;
+		@include opacity-out-0_5;
+		width: 100%;
+		clear:none;
+		display: block;
+		cursor: pointer;  
+	    @include cssvalue(padding-top, 0.5);
+
+            @media (min-width: map-get($breakpoints,md)) {  
+	            }
+
+            @media (min-width: map-get($breakpoints,lg)) {  
+	            }
+
+        }
+
+
+        &:hover{
+          
+          .radio-view-item{
+          opacity: 1;
+          @include opacity-in-0_5;
+          }
+
+        }//:hover    
+
+	}//details-wrap
+
+	&.align-right {
 	width: 100%;
 	float: none;
 
@@ -83,13 +118,23 @@ width: 100%;// this dirty?
 		flex-direction:row-reverse;
 		text-align: right;
 		}
-		.details-wrap{
-		//@extend .push-item-right-xs-1;
-		}
+
+		.radio-view-item{
+		float: right;
+		text-align: right;
+
+
+			@media (min-width: map-get($breakpoints,md)) {  
+			}
+
+			@media (min-width: map-get($breakpoints,lg)) {  
+			}
+
+        }
 
 	}//&.alignright
 	
-	&.aligncenter{
+	&.align-center{
 	float: none;
 	width: 100%;
 
@@ -102,10 +147,20 @@ width: 100%;// this dirty?
 	   		}
 
    		}
+   		.radio-view-item{
+ 
+
+			@media (min-width: map-get($breakpoints,md)) {  
+			}
+
+			@media (min-width: map-get($breakpoints,lg)) {  
+			}
+
+        }
 
 	}//&.aligncenter
 
-	&.alignleft{
+	&.align-left{
 	float: none;
 	width: 100%;
 
@@ -117,10 +172,19 @@ width: 100%;// this dirty?
 		//@extend .push-item-left-xs-1;
 		}
 
-	}//&.alignleft
+		.radio-view-item{
+		float: left;
+		text-align: left;
 
-	.details-wrap{
-	min-height: 12.5vw;//ensure visbilty
-	}
+
+			@media (min-width: map-get($breakpoints,md)) {  
+			}
+
+			@media (min-width: map-get($breakpoints,lg)) {  
+			}
+
+        }
+
+	}//&.alignleft
 
 } //.sound-block
