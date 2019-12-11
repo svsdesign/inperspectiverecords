@@ -1122,6 +1122,19 @@ backface-visibility: hidden;
  // background-color: black;
   }
 
+
+  &#release-404{ // white disc
+
+   img.front{
+    top: 16.25%;
+    left: 16.25%;
+    width: 67.5%; // 12" > 9" = 75% of the normal size
+   // background-color: black;
+    }
+
+  }//&#release-404
+
+
 } //.carousel__cell
 
 .vertical{
@@ -1158,11 +1171,16 @@ transform: rotateY( 180deg );
 transform-style: preserve-3d;
 backface-visibility: hidden;
     z-index: 2;
- //   opacity: 1!important;// this set via js at the mo :(
 
-   //    background-blend-mode: luminosity;
-    //background: rgba(0, 0, 0, 0.5);
 }//.carousel__cell:after
+
+
+#release-404.carousel__cell:after{ // white disc
+background-size:67.5%;
+}// &#release-404.carousel__cell:after{ // white disc
+
+
+
 
 .carousel__cell.active{
 //opacity: 1!important;// this set via js at the mo :(

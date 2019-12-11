@@ -168,13 +168,9 @@ TO DO IN THIS FILE:
 								      	
 								      	<?php if ($releaseproductcover):?>
 								    		
-								    		<img class="record-sleave" src="<?php echo $releaseproductcover;?>">
+								    		<img class="record-sleave" src="<?php echo $releaseproductcover;?>"/>
 
-										<?php else: // if not image use placholder - make the placeholder?>
-								    		
-								    		<img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/seba_cover_600px.jpg"/>
-
-								        <?php endif; // if $releaseproductcover?>
+										<?php endif; // if $releaseproductcover?>
 
 								    </div>  
 								    
@@ -184,7 +180,6 @@ TO DO IN THIS FILE:
 
 								        <div class="release-code">
 								     	<?php echo get_the_title( $artistsrelease->ID ); ?>
-
 								        </div>
 
 								        <?php if ($releasetitle):?>
@@ -203,7 +198,7 @@ TO DO IN THIS FILE:
 												   	       
 													 <div class="release-artist">
 
-														<?php echo get_the_title( $releaseartist->ID );  ?>
+														<?php echo get_the_title( $releaseartist->ID ); ?>
 		 
 											        </div>
 
@@ -224,7 +219,7 @@ TO DO IN THIS FILE:
 
     									<?php if ($releaselabel):?>
 								    		
-								    		<img class="record-label" src="<?php echo $releaselabel;?>">
+								    		<img class="record-label" src="<?php echo $releaselabel;?>"/>
 
 										<?php else: // if not image use placholder - make the placeholder?>
 								    		

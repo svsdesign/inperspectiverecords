@@ -36,6 +36,7 @@ $text_color = get_field('text_color');
 $soundblockid = get_field('sound'); //post object - IDS
 $soundcloudlink = get_field('soundcloud_link', $soundblockid);
 $postlink = get_permalink( $soundblockid);
+$showid = $soundblockid;// id of the post
 // figure out if this item is public & display link accordingly
 $publicid = get_field('is_item_public', $soundblockid);
 $thisnumber = 0; // this number to be changed based on number of blocks - or does it not matter?
@@ -99,22 +100,31 @@ $thisnumber = 0; // this number to be changed based on number of blocks - or doe
 
         </div> 
 
-    <li>
+    </li>
    
 </div> <!-- inp-block -->     
 
 <style type="text/css">
-    #<?php echo $id; ?> {
+    #<?php echo $id; ?>,
+    #<?php echo $id; ?> .details-wrap,
+    #<?php echo $id; ?> a {
     color: <?php echo $text_color; ?>;
     }
     #<?php echo $id; ?> .play-toggle.small{
     border-color: <?php echo $text_color; ?>;
     }
+
     #<?php echo $id; ?> path{
     fill:<?php echo $text_color; ?>;
     }
 
-    /* to do - consider hover states, or don't allow different colour styles? */
+    #<?php echo $id; ?> .play-toggle.small:hover{
+    border-color: <?php echo $text_color; ?>;
+    }
 
+    #<?php echo $id; ?> .play-toggle.small:hover path {
+    fill: <?php echo $text_color; ?>;
+    }
+ 
 </style>
 

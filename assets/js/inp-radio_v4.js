@@ -152,18 +152,21 @@ This was happening because the Internet was slow.
 
   var toInlinePause = function(activeurl){
       
-       // console.log("to Inline Pause ");
-
-        //console.log("we have an activeurl ="+activeurl+"");
+       
+        console.log("we have an activeurl ="+activeurl+"");
  
 
         var thisactiveurl = activeurl,
+
             $thisactiveobject = $("li[data-tracklink='" + thisactiveurl +"']"), //$(document).find("[data-tracklink='${thisactiveurl}']");
             thisid = $thisactiveobject.data('trackid');
           
             $thissvg = $('#playertoggle_'+thisid+'');
 
-          //   console.log(thisid);
+
+              console.log("thisactiveurl" + thisactiveurl+"");
+
+            console.log("This ID" +thisid+"");
  
          //   $thisactiveobject.addClass("hello-what");
           //  $thisactiveobject.css("background-color","red");
@@ -182,6 +185,8 @@ This was happening because the Internet was slow.
 
               var play = Snap.select('#play_'+thisid+''); // assigne to unique id
               var playpath = Snap.select('#play-path_'+thisid+''); // assigne to unique id
+
+              console.log("play" + play +"");
 
               var pause = Snap.select('#pause_'+thisid+''); // assigne to unique id
 

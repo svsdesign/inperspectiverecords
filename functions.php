@@ -53,8 +53,36 @@ disabling some of the standard blocks - i.e especially the layout; collumns and 
      - Related reading: https://developer.wordpress.org/block-editor/developers/themes/theme-support/
     - Do I use block manager or just allow/confgure blocks via php? Markup exmaple below
 */
+   /* 
+    START set up re-directs - if need to maybe re-direct "non public" radtio items? 
+
+    function wpse_45164_redirect_press()
+    {
+        if ( ! is_singular( 'project' ) )
+            return;
+
+       // wp_redirect( get_post_type_archive_link( 'project' ), 301 ); // this send to post archive
+         $page = get_page_by_title('projects');
+         wp_redirect(get_permalink($page->ID), 301 ); // redirect single projects to the projects page.
+        exit;
+    }
+    add_action( 'template_redirect', 'wpse_45164_redirect_press' );
+
+     
+    END set up re-directs
+    */
 
 
+//determine if wer're local or nott
+
+$root = get_stylesheet_directory_uri();
+//http://localhost:8888/; 
+if (strpos($root, 'local') !== false) {
+$sitelocation = 'local';
+}else{
+$sitelocation = 'live';
+}
+//end determine if wer're local or nott
 
 /* create custom post types */
 
@@ -485,13 +513,6 @@ function my_acf_block_render_callback( $block ) {
 	add_action( 'init', 'post_type_releases', 0 );
 
 	/* RELEASES */
-
-
-
-	/* RADIO - I need to design this - so lets register at a later date? */
-	// START CUSTOM POST TYPE: Radio
-
-
 
 
 
@@ -996,6 +1017,7 @@ function get_meta_sql_date( $pieces, $queries ) {
 // END - add meta value if event is upcoming
 
 
+
 /*
  // this function added because by default dates are now save as  // text - this now  ‘Y-m-d H:i:s’. not Unix
 add_filter('acf/update_value/type=date_time_picker', 'my_update_value_date_time_picker', 10, 3);
@@ -1026,18 +1048,306 @@ END event
 *
 */
 
+/* Bi-directional - not sure this is going to work becuase the fileds are differently names? */
+/*
+function bidirectional_acf_update_value( $value, $post_id, $field  ) {
+    
+    // vars
+    $field_name = $field['name'];
+    $field_key = $field['key'];
+    $global_name = 'is_updating_' . $field_name;
+    
+    
+    // bail early if this filter was triggered from the update_field() function called within the loop below
+    // - this prevents an inifinte loop
+    if( !empty($GLOBALS[ $global_name ]) ) return $value;
+    
+    
+    // set global variable to avoid inifite loop
+    // - could also remove_filter() then add_filter() again, but this is simpler
+    $GLOBALS[ $global_name ] = 1;
+    
+    
+    // loop over selected posts and add this $post_id
+    if( is_array($value) ) {
+    
+        foreach( $value as $post_id2 ) {
+            
+            // load existing related posts
+            $value2 = get_field($field_name, $post_id2, false);
+            
+            
+            // allow for selected posts to not contain a value
+            if( empty($value2) ) {
+                
+                $value2 = array();
+                
+            }
+            
+            
+            // bail early if the current $post_id is already found in selected post's $value2
+            if( in_array($post_id, $value2) ) continue;
+            
+            
+            // append the current $post_id to the selected post's 'related_posts' value
+            $value2[] = $post_id;
+            
+            
+            // update the selected post's value (use field's key for performance)
+            update_field($field_key, $value2, $post_id2);
+            
+        }
+    
+    }
+    
+    
+    // find posts which have been removed
+    $old_value = get_field($field_name, $post_id, false);
+    
+    if( is_array($old_value) ) {
+        
+        foreach( $old_value as $post_id2 ) {
+            
+            // bail early if this value has not been removed
+            if( is_array($value) && in_array($post_id2, $value) ) continue;
+            
+            
+            // load existing related posts
+            $value2 = get_field($field_name, $post_id2, false);
+            
+            
+            // bail early if no value
+            if( empty($value2) ) continue;
+            
+            
+            // find the position of $post_id within $value2 so we can remove it
+            $pos = array_search($post_id, $value2);
+            
+            
+            // remove
+            unset( $value2[ $pos] );
+            
+            
+            // update the un-selected post's value (use field's key for performance)
+            update_field($field_key, $value2, $post_id2);
+            
+        }
+        
+    }
+    
+    
+    // reset global varibale to allow this filter to function as per normal
+    $GLOBALS[ $global_name ] = 0;
+    
+    
+    // return
+    return $value;
+    
+}
+
+add_filter('acf/update_value/name=related_posts', 'bidirectional_acf_update_value', 10, 3);
+
+*/
+
+
+/* end Bi-directional */
+
+/* fields: in CPT: releases. releases_artists - field key: field_5c44546ed39be 
+
+*/
+
+/* 
+        this function shows how to create a simple two way relationship field
+        the example assumes that you are using either a single relationship field
+        where posts of the same type are related or you can have 2 relationship
+        fields on two different post types. this example also assumes that
+        the relationship field(s) do not impose any limits on the number
+        of selections
+        
+        The concept covered in this file has also been coverent on the ACF site
+        on this page https://www.advancedcustomfields.com/resources/bidirectional-relationships/
+        The example shown there is very similar, but requires but is created to work
+        where the field name is the same, similar to my plugin that does this.
+        This example will let you have fields of different names
+    */
+    
+  
+    if ($sitelocation = "local"){ // if local: different field keys (although not in this case)
+ 
+       // add the filter for your relationship field
+        add_filter('acf/update_value/key=field_5c44546ed39be', 'acf_reciprocal_relationship', 10, 3);
+        // if you are using 2 relationship fields on different post types
+        // add second filter for that fields as well
+        add_filter('acf/update_value/key=field_5c44564c6a48d', 'acf_reciprocal_relationship', 10, 3);
+
+
+    } else {// live site:
+
+          // add the filter for your relationship field
+        add_filter('acf/update_value/key=field_5c44546ed39be', 'acf_reciprocal_relationship', 10, 3);
+        // if you are using 2 relationship fields on different post types
+        // add second filter for that fields as well
+        add_filter('acf/update_value/key=field_5c44564c6a48d', 'acf_reciprocal_relationship', 10, 3);
 
 
 
-	/* EVENTS - will require different post type options */
-	
-	/* NEWS - use existing post type ? */
+    }// if $sitelocation = ""
 
-	/* NEWS - use existing post type ? */
+    function acf_reciprocal_relationship($value, $post_id, $field) {
+        
+        // set the two fields that you want to create
+        // a two way relationship for
+        // these values can be the same field key
+        // if you are using a single relationship field
+        // on a single post type
+        
+        // the field key of one side of the relationship
+    
+        if ($sitelocation = "local"){ // if local: different field keys
+
+            $key_a = 'field_5c44546ed39be'; //"artist content": field name releases_artists // local site
+            // the field key of the other side of the relationship
+            // as noted above, this can be the same as $key_a
+            $key_b = 'field_5c44564c6a48d'; //:"Release Content": field name releases_artists //local site
+     
+        } else{ //live:
+
+           $key_a = 'field_5c44546ed39be'; //"artist content": field name releases_artists // local site
+            // the field key of the other side of the relationship
+            // as noted above, this can be the same as $key_a
+            $key_b = 'field_5c44564c6a48d'; //:"Release Content": field name releases_artists //local site
 
 
-/* end create custom post types */
+        } 
+          //if local or live     
+        // figure out wich side we're doing and set up variables
+        // if the keys are the same above then this won't matter
+        // $key_a represents the field for the current posts
+        // and $key_b represents the field on related posts
+        if ($key_a != $field['key']) {
+            // this is side b, swap the value
+            $temp = $key_a;
+            $key_a = $key_b;
+            $key_b = $temp;
+        }
+        
+        // get both fields
+        // this gets them by using an acf function
+        // that can gets field objects based on field keys
+        // we may be getting the same field, but we don't care
+        $field_a = acf_get_field($key_a);
+        $field_b = acf_get_field($key_b);
+        
+        // set the field names to check
+        // for each post
+        $name_a = $field_a['name'];
+        $name_b = $field_b['name'];
+        
+        // get the old value from the current post
+        // compare it to the new value to see
+        // if anything needs to be updated
+        // use get_post_meta() to a avoid conflicts
+        $old_values = get_post_meta($post_id, $name_a, true);
+        // make sure that the value is an array
+        if (!is_array($old_values)) {
+            if (empty($old_values)) {
+                $old_values = array();
+            } else {
+                $old_values = array($old_values);
+            }
+        }
+        // set new values to $value
+        // we don't want to mess with $value
+        $new_values = $value;
+        // make sure that the value is an array
+        if (!is_array($new_values)) {
+            if (empty($new_values)) {
+                $new_values = array();
+            } else {
+                $new_values = array($new_values);
+            }
+        }
+        
+        // get differences
+        // array_diff returns an array of values from the first
+        // array that are not in the second array
+        // this gives us lists that need to be added
+        // or removed depending on which order we give
+        // the arrays in
+        
+        // this line is commented out, this line should be used when setting
+        // up this filter on a new site. getting values and updating values
+        // on every relationship will cause a performance issue you should
+        // only use the second line "$add = $new_values" when adding this
+        // filter to an existing site and then you should switch to the
+        // first line as soon as you get everything updated
+        // in either case if you have too many existing relationships
+        // checking end updated every one of them will more then likely
+        // cause your updates to time out.
+        //$add = array_diff($new_values, $old_values);
+        $add = $new_values;
+        $delete = array_diff($old_values, $new_values);
+        
+        // reorder the arrays to prevent possible invalid index errors
+        $add = array_values($add);
+        $delete = array_values($delete);
+        
+        if (!count($add) && !count($delete)) {
+            // there are no changes
+            // so there's nothing to do
+            return $value;
+        }
+        
+        // do deletes first
+        // loop through all of the posts that need to have
+        // the recipricol relationship removed
+        for ($i=0; $i<count($delete); $i++) {
+            $related_values = get_post_meta($delete[$i], $name_b, true);
+            if (!is_array($related_values)) {
+                if (empty($related_values)) {
+                    $related_values = array();
+                } else {
+                    $related_values = array($related_values);
+                }
+            }
+            // we use array_diff again
+            // this will remove the value without needing to loop
+            // through the array and find it
+            $related_values = array_diff($related_values, array($post_id));
+            // insert the new value
+            update_post_meta($delete[$i], $name_b, $related_values);
+            // insert the acf key reference, just in case
+            update_post_meta($delete[$i], '_'.$name_b, $key_b);
+        }
+        
+        // do additions, to add $post_id
+        for ($i=0; $i<count($add); $i++) {
+            $related_values = get_post_meta($add[$i], $name_b, true);
+            if (!is_array($related_values)) {
+                if (empty($related_values)) {
+                    $related_values = array();
+                } else {
+                    $related_values = array($related_values);
+                }
+            }
+            if (!in_array($post_id, $related_values)) {
+                // add new relationship if it does not exist
+                $related_values[] = $post_id;
+            }
+            // update value
+            update_post_meta($add[$i], $name_b, $related_values);
+            // insert the acf key reference, just in case
+            update_post_meta($add[$i], '_'.$name_b, $key_b);
+        }
+        
+        return $value;
+        
+    } // end function acf_reciprocal_relationship
 
+
+/* end acf_reciprocal_relationship fields functions */
+
+ 
 
 function inp_scripts()
 {
@@ -1286,6 +1596,24 @@ add_action( 'pre_get_posts', 'set_posts_per_page_for_news' );
  /* end setting pagination */
 
 /* setting pagination number */
+
+/*admin favicons */
+ function add_favicon() {
+    $favicon_url = get_stylesheet_directory_uri();
+    echo'<link rel="apple-touch-icon" sizes="180x180" href="'. $favicon_url .'/assets/site-icons/back-end/apple-touch-icon.png">';
+    echo'<link rel="icon" type="image/png" sizes="32x32" href="'. $favicon_url .'/assets//site-icons/back-end/favicon-32x32.png">';
+        '<link rel="icon" type="image/png" sizes="16x16" href="'. $favicon_url .'/assets/site-icons/back-end/favicon-16x16.png">';
+        '<link rel="manifest" href="'. $favicon_url .'/assets/site-icons/back-end/site.webmanifest">';
+        '<link rel="mask-icon" href="'. $favicon_url .'/assets/site-icons/back-end/safari-pinned-tab.svg" color="#f0523b">';
+        '<link rel="shortcut icon" href="'. $favicon_url .'./assets/site-icons/back-end/favicon.ico">';
+        '<meta name="msapplication-TileColor" content="#ffffff">';
+        '<meta name="msapplication-config" content="'. $favicon_url .'/assets/site-icons/back-end/browserconfig.xml">';
+        '<meta name="theme-color" content="#ffffff">';
+
+}
+add_action('login_head', 'add_favicon');
+add_action('admin_head', 'add_favicon');
+/* end admin favicons */
 
 
 ?>

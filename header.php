@@ -18,24 +18,17 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 
- <?php /* to do - consider type use + font loading
- 	<link rel="preload" href="<?php echo bloginfo('template_directory'); ?>/assets/fonts/HelveticaNeue.woff" as="font" crossorigin><!-- added to speed up load -->
-	<link rel="preload" href="<?php echo bloginfo('template_directory'); ?>/assets/fonts/HelveticaNeue-Medium.woff" as="font" crossorigin>
-	<link rel="preload" href="<?php echo bloginfo('template_directory'); ?>/assets/fonts/HelveticaNeue-Bold.woff" as="font" crossorigin>
-	 */?>
-
-	<!-- site icons -->	 		
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/favicon-16x16.png">
-	<link rel="manifest" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/site.webmanifest">
-	<link rel="mask-icon" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/safari-pinned-tab.svg" color="#000000">
-	<link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/favicon.ico">
+<!-- site icons -->	 		
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/site.webmanifest">
+	<link rel="mask-icon" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/safari-pinned-tab.svg" color="#000000">
+	<link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/favicon.ico">
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-config" content="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/browserconfig.xml">
+	<meta name="msapplication-config" content="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<!-- end site icons -->
-
 
 	<meta property="og:title" content="<?php the_title(); ?>"/>
 	<meta property="og:type" content="website" />

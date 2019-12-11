@@ -11,19 +11,11 @@ width: 100%;// this dirty?
 		meaning thigns are basically enlongated if usaing vw for heigth values
 
 		*/
-	// width: 12.5vw;
-	 //	@extend .grid-item-xs-1;
-	// width: 12.5%;
-	 //@include cssvalue(width, 2); // doesnt work
-	 //@include cssvalue(height, 2);// doesnt work
-
-	//height: 12.5vw;
 	overflow: hidden;
 	float: left;
 	@extend .grid-item;
 	@extend .grid-item-xs-1;
-	//padding:30%;
-
+	margin-top: -4%;// review this - its messy!
 	// i need to implement a  max heigh/ height; i.e the height of th grid itme - this flex things works
 	// but needs to be say % of the gird item; i.e too big atm
 	//position: absolute;//review
@@ -33,8 +25,7 @@ width: 100%;// this dirty?
 
 	height: inherit;// 100%;
     width: 100%;
-	//max-width: 80px;
-	border-radius:50%;
+ 	border-radius:50%;
 	margin:auto;// was10% 20%;
 	padding:30%;
 	background: $black;	
@@ -88,7 +79,7 @@ width: 100%;// this dirty?
 		clear:none;
 		display: block;
 		cursor: pointer;  
-	    @include cssvalue(padding-top, 0.5);
+	    @include cssvalue(padding-top, 0.25);
 
             @media (min-width: map-get($breakpoints,md)) {  
 	            }
@@ -149,7 +140,6 @@ width: 100%;// this dirty?
    		}
    		.radio-view-item{
  
-
 			@media (min-width: map-get($breakpoints,md)) {  
 			}
 
@@ -176,14 +166,13 @@ width: 100%;// this dirty?
 		float: left;
 		text-align: left;
 
-
 			@media (min-width: map-get($breakpoints,md)) {  
 			}
 
 			@media (min-width: map-get($breakpoints,lg)) {  
 			}
 
-        }
+        }//.radio-view-item
 
 	}//&.alignleft
 

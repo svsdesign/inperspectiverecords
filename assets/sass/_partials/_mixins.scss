@@ -329,6 +329,17 @@ transition: all 200ms ease-in-out;
 }
 
 
+@mixin rotate($rotatevalue){
+//transform:rotate(1.025);
+//transform-origin:center;
+//transition: all 200ms ease-in-out;
+
+@include prefix(transform, rotate($rotatevalue)) 
+
+}
+
+
+
 @mixin scalelink-out-value($scalesize){
 transform:scale($scalesize);
 transform-origin:center;

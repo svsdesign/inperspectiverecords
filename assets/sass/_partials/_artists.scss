@@ -188,6 +188,11 @@ body.single-artists,
     position: absolute; 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10); // review this.
 
+
+    &.rotate-90-deg{// for inp018 for example
+      @include rotate(90deg);
+    }
+
   }
   .active.record-sleave{
 
