@@ -176,39 +176,39 @@ TO DO IN THIS FILE:
 								    
 								    <div class="release-details">
 
-								      <div class="inner-container">  
+									    <div class="inner-container">  
 
-								        <div class="release-code">
-								     	<?php echo get_the_title( $artistsrelease->ID ); ?>
-								        </div>
-
-								        <?php if ($releasetitle):?>
-
-									        <div class="release-title">
-									     	<?php echo $releasetitle; ?>
+									        <div class="release-code">
+									     	<?php echo get_the_title( $artistsrelease->ID ); ?>
 									        </div>
-									     
-								        <?php endif; // if $releasetitle?>
 
-								        <?php if ($releaseartists):?>
-											 
-											 <div class="release-artists">
+									        <?php if ($releasetitle):?>
 
-												<?php foreach($releaseartists as $releaseartist):?>
-												   	       
-													 <div class="release-artist">
+										        <div class="release-title">
+										     	<?php echo $releasetitle; ?>
+										        </div>
+										     
+									        <?php endif; // if $releasetitle?>
 
-														<?php echo get_the_title( $releaseartist->ID ); ?>
-		 
-											        </div>
+									        <?php if ($releaseartists):?>
+												 
+												 <div class="release-artists">
 
-										      	<?php endforeach; // if releaseartists?>
-											      
-										     </div>
+													<?php foreach($releaseartists as $releaseartist):?>
+													   	       
+														 <div class="release-artist">
 
-								        <?php endif; // if releaseartists?>
-			      
-								      </div><!-- .inner-container -->
+															<?php echo get_the_title( $releaseartist->ID ); ?>
+			 
+												        </div>
+
+											      	<?php endforeach; // if releaseartists?>
+												      
+											     </div>
+
+									        <?php endif; // if releaseartists?>
+				      
+									     </div><!-- .inner-container -->
 
 								    </div><!-- .release-details -->
 								 

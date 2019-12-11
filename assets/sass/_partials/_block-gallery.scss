@@ -1,0 +1,33 @@
+/* Artist Block */
+
+
+.gallery-block{
+width: 100%;// this dirty?
+height: 90vh;
+
+	* { box-sizing: border-box; } // this already the case? delete if so
+ 
+	.outer-grid-item.inner{
+	height: inherit;
+
+	 
+		.carousel {
+		height: inherit;
+
+			.flickity-viewport{
+			width: 100%;
+			
+				img {
+				display: block;
+				height:100%;
+				width: auto;
+				}
+
+			}
+
+
+	 	}//	.carousel 
+
+	}//	.outer-grid-item.inner
+
+} //.gallery-block

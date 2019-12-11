@@ -32,45 +32,47 @@ $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relations
 	    
 	    <div class="release-details">
 
-	      <div class="inner-container">  
+	     	<div class="inner-container">  
 
-	       <div class="release-code">
+				<div class="release-code">
 
-		     	<?php echo $releasecode;?>
+				<?php echo $releasecode;?>
 
-	        </div>
+				</div>
 
-	        <?php if ($releasetitle):?>
+	        	<?php if ($releasetitle):?>
 
-		        <div class="release-title">
-		     	<?php echo $releasetitle; ?>
-		        </div>
-		     
-	        <?php endif; // if $releasetitle?>
+			        <div class="release-title">
+			     	<?php echo $releasetitle; ?>
+			        </div>
+			     
+		        <?php endif; // if $releasetitle?>
 
-	        <?php if ($releaseartists):?>
-				 
-				 <div class="release-artists">
+		        <?php if ($releaseartists):?>
+					 
+					 <div class="release-artists">
 
-					<?php foreach($releaseartists as $releaseartist):?>
-					   	       
-						 <div class="release-artist">
+						<?php foreach($releaseartists as $releaseartist):?>
+						   	       
+							 <div class="release-artist">
 
-							<?php echo get_the_title( $releaseartist->ID );  ?>
+								<?php echo get_the_title( $releaseartist->ID );  ?>
 
-				        </div>
+					        </div>
 
-			      	<?php endforeach; // if releaseartists?>
-				      
-			     </div>
+				      	<?php endforeach; // if releaseartists?>
+					      
+				     </div>
 
-	        <?php endif; // if releaseartists?>
+		        <?php endif; // if releaseartists?>
+
+		    </div><!--.inner-container-->  
 
 	    </div><!-- .release-details -->
 	 
 	    <div class="record-circle rotated">
 	    
-	      <div class="inner-container"> 
+	      	<div class="inner-container"> 
 	     
 	     	     	<img class="record-label" src="<?php echo $releaseimage;?>">
 
@@ -78,7 +80,7 @@ $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relations
 	      
 	        <img class="record-item" src="<?php //echo $releaseassetslocation ;?>/web_records_blank_black.png"/> -->
 	        
-	      </div><!-- .inner-container-->
+	      	</div><!-- .inner-container-->
 	      
 	   <!--   <div class="inner-container two"> 
 	     

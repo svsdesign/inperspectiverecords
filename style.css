@@ -3878,7 +3878,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(44deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(39deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -20310,13 +20310,42 @@ body
   flex-flow: row;
 }
 
+/* Artist Block */
+/* line 4, assets/sass/_partials/_block-gallery.scss */
+.gallery-block {
+  width: 100%;
+  height: 90vh;
+}
+/* line 8, assets/sass/_partials/_block-gallery.scss */
+.gallery-block * {
+  box-sizing: border-box;
+}
+/* line 10, assets/sass/_partials/_block-gallery.scss */
+.gallery-block .outer-grid-item.inner {
+  height: inherit;
+}
+/* line 14, assets/sass/_partials/_block-gallery.scss */
+.gallery-block .outer-grid-item.inner .carousel {
+  height: inherit;
+}
+/* line 17, assets/sass/_partials/_block-gallery.scss */
+.gallery-block .outer-grid-item.inner .carousel .flickity-viewport {
+  width: 100%;
+}
+/* line 20, assets/sass/_partials/_block-gallery.scss */
+.gallery-block .outer-grid-item.inner .carousel .flickity-viewport img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
 /* end blocks */
 /*
 compass watch ~/sites/inp-wp/wp-content/themes/inperspectiverecords/
 cd ~/sites/inp-wp/wp-content/themes/inperspectiverecords/
 */
 /* START */
-/* line 49, assets/sass/style.scss */
+/* line 50, assets/sass/style.scss */
 body {
   background: black;
 }

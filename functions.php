@@ -12,6 +12,10 @@
 
 /*
 TO DO:
+
+
+- // go trough my code and remove any traces of system
+
 -finishin this list - refer to sketch file + finish the planning document designs; sitemap and content for each box + signup designs with chris first?
 REGISTER POSTTYPES:
 
@@ -429,6 +433,22 @@ function my_acf_init() {
             'keywords'          => array( 'inpimage'),
         ));
 
+  // register an gallery block:
+       
+        acf_register_block(array(
+            'name'              => 'inpgallery',
+            'title'             => __('Inp Gallery'),
+            'description'       => __('A custom gallery block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',
+            'enqueue_assets'    => function(){
+              wp_enqueue_script('inp-gallery-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpgallery/assets/js/script.js', array( 'jquery' ), '', true );
+            },
+            'icon'              => 'format-gallery',
+          //'mode'              => 'preview',//"auto" or "preview" This lets you control how the block is presented the Gutenberg block editor. The default is “auto” which renders the block to match the frontend until you select it, then it becomes an editor. If set to “preview” it will always look like the frontend and you can edit content in the sidebar.
+            'supports'          => array( 'mode' => false ),
+            'keywords'          => array( 'inpgallery'),
+        ));
 
 
 
@@ -757,14 +777,13 @@ function custom_radio_column( $column, $post_id ) {
  
 /* events */
 
-    if($column == 'show_start_date')
-    {
+    if($column == 'show_start_date') {
     
         if(get_field('show_start_date')){
         $start = get_field('show_start_date'); echo date_i18n('d M Y g:i a', $start);
         }
 
-    }elseif($column == 'show_end_date'){
+    } elseif($column == 'show_end_date'){
 
         if(get_field('show_end_date')){
             
@@ -774,7 +793,7 @@ function custom_radio_column( $column, $post_id ) {
         echo date_i18n('d M Y g:i a', $end);
         }
 
-    }elseif($column == 'is_item_public'){
+    } elseif($column == 'is_item_public'){
 
         if(get_field('is_item_public')){
         $public = get_field('is_item_public');
@@ -1382,7 +1401,11 @@ function inp_scripts()
         true
     );
 
-// go trough my code and remove any traces of system
+
+    //wp_enqueue_style( 'flickity-style', get_stylesheet_directory_uri().'/assets/j/enquire.js',);
+
+    wp_enqueue_style( 'flickity-style', 'https://npmcdn.com/flickity@2.2.1/dist/flickity.css'); // keep on CDN?
+    // also though - do I want to enque this if the gallery blcocks not used?
 
     wp_enqueue_style( 'inp-style', get_stylesheet_uri() );
   
@@ -1464,6 +1487,15 @@ function inp_scripts()
     wp_enqueue_script(
         'headroom-jquery',
         'https://cdnjs.cloudflare.com/ajax/libs/headroom/0.10.3/jQuery.headroom.min.js',
+        array('jquery'),
+        false,
+        true
+    );
+
+
+    wp_enqueue_script(
+        'flickity-pgkd',
+        'https://npmcdn.com/flickity@2/dist/flickity.pkgd.js',
         array('jquery'),
         false,
         true
