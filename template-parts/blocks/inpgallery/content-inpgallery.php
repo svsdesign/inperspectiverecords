@@ -51,7 +51,7 @@ if( $images ): ?>
 
         <div class="outer-grid-item inner outer-grid-item-xs-8">            
 
-            <div class="grid align-position gallery-wrap carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+            <div class="grid align-position gallery-wrap carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "freeScroll": true, "wrapAround": true }'>
 
                      <?php foreach( $images as $image ): ?>
                        
