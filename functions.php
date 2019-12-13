@@ -1404,9 +1404,8 @@ function inp_scripts()
 
     //wp_enqueue_style( 'flickity-style', get_stylesheet_directory_uri().'/assets/j/enquire.js',);
 
-    wp_enqueue_style( 'flickity-style', 'https://npmcdn.com/flickity@2.2.1/dist/flickity.css'); // keep on CDN?
-    // also though - do I want to enque this if the gallery blcocks not used?
-
+  //  wp_enqueue_style( 'flickity-style', 'https://npmcdn.com/flickity@2.2.1/dist/flickity.css'); // Styles moved into "block-gallery.scss"
+ 
     wp_enqueue_style( 'inp-style', get_stylesheet_uri() );
   
 

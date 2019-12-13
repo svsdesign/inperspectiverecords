@@ -35,9 +35,9 @@ if( !empty($block['align']) ) {
 if($width) {
 
     $BlockClassName .= '' . $width; // class names for width atm
-                                // I nnee dto craete a grid based option system on acf I rekcon? or similar
 
-} else{
+
+} else {
 
    // $className .= ' width' . $block['width'];
    
@@ -51,18 +51,20 @@ if( $images ): ?>
 
         <div class="outer-grid-item inner outer-grid-item-xs-8">            
 
-            <div class="grid align-position gallery-wrap carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "freeScroll": true, "wrapAround": true }'>
+            <div class="grid align-position gallery-wrap gallery-carousel">
 
-                     <?php foreach( $images as $image ): ?>
-                       
-                         <img src="<?php echo $image?>" alt="image" />
- 
-                    <?php endforeach; ?>
+<!--            <div class="grid align-position gallery-wrap gallery-carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "freeScroll": true, "wrapAround": true }'> -->
 
+                 <?php foreach( $images as $image ): ?>
+                   
+                     <img src="<?php echo $image?>" alt="image" />
+
+                <?php endforeach; ?>
  
             </div> 
 
         </div> 
         
     </div> <!-- inp-block -->
+
 <?php endif; ?>

@@ -373,6 +373,46 @@ TO DO:
     } // function recordscircle
 
 
+    function gallery($block){
+      //https://flickity.metafizzy.co/options.html
+    console.log("gallery function");
+
+      var $thisgallery = $block.find(".gallery-carousel");      
+
+       $thisgallery.flickity({
+            imagesLoaded: true, 
+            setGallerySize: false, //if you prefer to size the carousel with CSS, rather than using the size of cells.
+       // default cellAlign: 'center'
+            percentPosition: false, 
+            freeScroll: true, 
+            wrapAround: true, 
+            arrowShape: { 
+              x0: 15,
+              x1: 65, y1: 50,
+              x2: 75, y2: 40,
+              x3: 35
+            }
+//            arrowShape: '82.9312793 24.4501626 86.9653917 27.5504528 49.7576146 75.9653917 12.5498374 27.5504528 16.5839498 24.4501626 49.7576146 67.615895',
+
+         });
+
+    } // function gallery($block)
+
+/*
+
+
+<svg width="52px" height="75px" viewBox="0 0 52 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Back-Arrow" transform="translate(-24.000000, -13.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <polygon id="Path-2" transform="translate(49.757615, 50.207777) rotate(-270.000000) translate(-49.757615, -50.207777) " points="82.9312793 24.4501626 86.9653917 27.5504528 49.7576146 75.9653917 12.5498374 27.5504528 16.5839498 24.4501626 49.7576146 67.615895"></polygon>
+        </g>
+    </g>
+</svg>
+*/
+
 /* - moved to radio script
     function initheadroom(){
 
@@ -583,6 +623,17 @@ TO DO:
                 //}, 2000);
 
                 };  /*  #artist-releases  */
+                  
+                if ($('.gallery-block').length > 0) 
+                {
+                  console.log("if gallery-block");
+
+                  var $thisblock = $(this);  
+                  console.log($thisblock);
+
+                  gallery($thisblock);// run js if gallery item exist
+
+                };// .gallery-block
              
 
              /*
