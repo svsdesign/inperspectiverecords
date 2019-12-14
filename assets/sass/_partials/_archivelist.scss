@@ -100,12 +100,65 @@ bottom: 0px;
 
 }//.page-title-positioner.sticky
 
+.page-title-positioner.sticky{
+pointer-events:none;
+width: 100vw;
+z-index: 97;// below the sc player item and menue 
+position: absolute;
+top: 0px;
+// transform: rotate(-90deg);
+/* transform-origin: bottom right; */
+overflow: visible;
+bottom: 0px;
+    
+    .page-titler{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
 
+        .inner{
+        //transform:rotate(-90deg);  
+        transform-origin: bottom right;
+        //    background: #c68cff2b;
+        color: white;
+        font-weight: 600;
+        @include sideheader;
+        text-align: center;
+        transform:rotate(-90deg); 
+        width: 100vh;
+        // position: absolute;
+        height: 12.5vw;
+        line-height: 12.5vw!important;
+        position: relative;
+        display: block;
+        float: right;
+        top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
+      }
 
+    } // .page-titler
+    
+    .page-titler.inline{ // used on single news items for artist blocks
+    height: 100%;
+
+      .inner{
+      width: 40vh; // height of the banners for these block
+      }
+
+    }//.page-titler.inline{
+
+}//.page-title-positioner.sticky
+
+/* used for:
+- artists-block
+- anywhere else?
+
+*/
 .page-title-positioner.left-side.sticky{
     pointer-events:none;
-       width: 100vw;
-      z-index: 97;// below the sc player item and menue
+    width: 100vw;
+    z-index: 97;// below the sc player item and menue
 
     position: absolute;
     top: 0px;
@@ -122,8 +175,11 @@ bottom: 0px;
       .inner{
       transform-origin: bottom left;
       color: white;
-      font-weight: $lightweight;
+ //     font-weight: $mediumweight;// was $lightweight;
       @include sideheader;
+      @include smaller;
+
+  //    @include sideheader;
       text-align: center;
       transform:rotate(90deg); 
       width: 100vh;

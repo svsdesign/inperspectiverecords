@@ -3878,7 +3878,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(32deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(75deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -4549,6 +4549,11 @@ body {
    */
   /* used on /events */
   /* used on most pages - its requireds to be inside teh section wrap */
+  /* used for:
+  - artists-block
+  - anywhere else?
+  
+  */
   /*END PAGE TITLES*/
 }
 /* line 5, assets/sass/_partials/_archivelist.scss */
@@ -4685,7 +4690,75 @@ body .page-title-positioner.sticky .page-titler.inline {
 body .page-title-positioner.sticky .page-titler.inline .inner {
   width: 40vh;
 }
-/* line 105, assets/sass/_partials/_archivelist.scss */
+/* line 103, assets/sass/_partials/_archivelist.scss */
+body .page-title-positioner.sticky {
+  pointer-events: none;
+  width: 100vw;
+  z-index: 97;
+  position: absolute;
+  top: 0px;
+  /* transform-origin: bottom right; */
+  overflow: visible;
+  bottom: 0px;
+}
+/* line 114, assets/sass/_partials/_archivelist.scss */
+body .page-title-positioner.sticky .page-titler {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+/* line 121, assets/sass/_partials/_archivelist.scss */
+body .page-title-positioner.sticky .page-titler .inner {
+  transform-origin: bottom right;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  font-size: 22.4px;
+  text-align: center;
+  transform: rotate(-90deg);
+  width: 100vh;
+  height: 12.5vw;
+  line-height: 12.5vw !important;
+  position: relative;
+  display: block;
+  float: right;
+  top: -12.5vw;
+}
+@media screen and (min-width: 0px) {
+  /* line 121, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.sticky .page-titler .inner {
+    font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 121, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.sticky .page-titler .inner {
+    font-size: 22.4px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 121, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.sticky .page-titler .inner {
+    font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 121, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.sticky .page-titler .inner {
+    font-size: 33.6px;
+  }
+}
+/* line 142, assets/sass/_partials/_archivelist.scss */
+body .page-title-positioner.sticky .page-titler.inline {
+  height: 100%;
+}
+/* line 145, assets/sass/_partials/_archivelist.scss */
+body .page-title-positioner.sticky .page-titler.inline .inner {
+  width: 40vh;
+}
+/* line 158, assets/sass/_partials/_archivelist.scss */
 body .page-title-positioner.left-side.sticky {
   pointer-events: none;
   width: 100vw;
@@ -4695,7 +4768,7 @@ body .page-title-positioner.left-side.sticky {
   overflow: visible;
   bottom: 0px;
 }
-/* line 115, assets/sass/_partials/_archivelist.scss */
+/* line 168, assets/sass/_partials/_archivelist.scss */
 body .page-title-positioner.left-side.sticky .page-titler {
   position: -webkit-sticky;
   position: sticky;
@@ -4703,13 +4776,16 @@ body .page-title-positioner.left-side.sticky .page-titler {
   height: 100vh;
   overflow: hidden;
 }
-/* line 122, assets/sass/_partials/_archivelist.scss */
+/* line 175, assets/sass/_partials/_archivelist.scss */
 body .page-title-positioner.left-side.sticky .page-titler .inner {
   transform-origin: bottom left;
   color: white;
-  font-weight: 100;
   font-size: 14px;
   font-size: 22.4px;
+  font-size: 10px;
+  font-size: 12.8px;
+  line-height: 18px;
+  line-height: 26px;
   text-align: center;
   transform: rotate(90deg);
   width: 100vh;
@@ -4721,43 +4797,91 @@ body .page-title-positioner.left-side.sticky .page-titler .inner {
   top: -12.5vw;
 }
 @media screen and (min-width: 0px) {
-  /* line 122, assets/sass/_partials/_archivelist.scss */
+  /* line 175, assets/sass/_partials/_archivelist.scss */
   body .page-title-positioner.left-side.sticky .page-titler .inner {
     font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 122, assets/sass/_partials/_archivelist.scss */
+  /* line 175, assets/sass/_partials/_archivelist.scss */
   body .page-title-positioner.left-side.sticky .page-titler .inner {
     font-size: 22.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 122, assets/sass/_partials/_archivelist.scss */
+  /* line 175, assets/sass/_partials/_archivelist.scss */
   body .page-title-positioner.left-side.sticky .page-titler .inner {
     font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 122, assets/sass/_partials/_archivelist.scss */
+  /* line 175, assets/sass/_partials/_archivelist.scss */
   body .page-title-positioner.left-side.sticky .page-titler .inner {
     font-size: 33.6px;
   }
 }
-/* line 140, assets/sass/_partials/_archivelist.scss */
+@media screen and (min-width: 0px) {
+  /* line 175, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.left-side.sticky .page-titler .inner {
+    font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 175, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.left-side.sticky .page-titler .inner {
+    font-size: 12.8px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 175, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.left-side.sticky .page-titler .inner {
+    font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 175, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.left-side.sticky .page-titler .inner {
+    font-size: 19.2px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 175, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.left-side.sticky .page-titler .inner {
+    line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 175, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.left-side.sticky .page-titler .inner {
+    line-height: 20.8px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 175, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.left-side.sticky .page-titler .inner {
+    line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 175, assets/sass/_partials/_archivelist.scss */
+  body .page-title-positioner.left-side.sticky .page-titler .inner {
+    line-height: 25.6px;
+  }
+}
+/* line 196, assets/sass/_partials/_archivelist.scss */
 body .page-title-positioner.left-side.sticky .page-titler.inline {
   height: 100%;
 }
-/* line 143, assets/sass/_partials/_archivelist.scss */
+/* line 199, assets/sass/_partials/_archivelist.scss */
 body .page-title-positioner.left-side.sticky .page-titler.inline .inner {
   width: 40vh;
 }
-/* line 157, assets/sass/_partials/_archivelist.scss */
+/* line 213, assets/sass/_partials/_archivelist.scss */
 body .page-title-position.left {
   right: 87.5%;
   transform: rotate(90deg);
 }
-/* line 161, assets/sass/_partials/_archivelist.scss */
+/* line 217, assets/sass/_partials/_archivelist.scss */
 body .page-title {
   width: 100vh;
   color: white;
@@ -4771,30 +4895,30 @@ body .page-title {
   transform: rotate(180deg);
 }
 @media screen and (min-width: 0px) {
-  /* line 161, assets/sass/_partials/_archivelist.scss */
+  /* line 217, assets/sass/_partials/_archivelist.scss */
   body .page-title {
     font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 161, assets/sass/_partials/_archivelist.scss */
+  /* line 217, assets/sass/_partials/_archivelist.scss */
   body .page-title {
     font-size: 22.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 161, assets/sass/_partials/_archivelist.scss */
+  /* line 217, assets/sass/_partials/_archivelist.scss */
   body .page-title {
     font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 161, assets/sass/_partials/_archivelist.scss */
+  /* line 217, assets/sass/_partials/_archivelist.scss */
   body .page-title {
     font-size: 33.6px;
   }
 }
-/* line 178, assets/sass/_partials/_archivelist.scss */
+/* line 234, assets/sass/_partials/_archivelist.scss */
 body .list-items {
   width: 75vw;
   display: block;
@@ -4802,7 +4926,7 @@ body .list-items {
   position: relative;
   z-index: 1;
 }
-/* line 187, assets/sass/_partials/_archivelist.scss */
+/* line 243, assets/sass/_partials/_archivelist.scss */
 body div.list-item,
 body a.list-item {
   cursor: pointer;
@@ -4826,100 +4950,100 @@ body a.list-item {
   padding-left: 5px;
 }
 @media screen and (min-width: 0px) {
-  /* line 187, assets/sass/_partials/_archivelist.scss */
+  /* line 243, assets/sass/_partials/_archivelist.scss */
   body div.list-item,
   body a.list-item {
     height: calc(54px + 24 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 187, assets/sass/_partials/_archivelist.scss */
+  /* line 243, assets/sass/_partials/_archivelist.scss */
   body div.list-item,
   body a.list-item {
     height: 78px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 187, assets/sass/_partials/_archivelist.scss */
+  /* line 243, assets/sass/_partials/_archivelist.scss */
   body div.list-item,
   body a.list-item {
     height: calc(78px + 18 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 187, assets/sass/_partials/_archivelist.scss */
+  /* line 243, assets/sass/_partials/_archivelist.scss */
   body div.list-item,
   body a.list-item {
     height: 96px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 187, assets/sass/_partials/_archivelist.scss */
+  /* line 243, assets/sass/_partials/_archivelist.scss */
   body div.list-item,
   body a.list-item {
     line-height: calc(54px + 24 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 187, assets/sass/_partials/_archivelist.scss */
+  /* line 243, assets/sass/_partials/_archivelist.scss */
   body div.list-item,
   body a.list-item {
     line-height: 78px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 187, assets/sass/_partials/_archivelist.scss */
+  /* line 243, assets/sass/_partials/_archivelist.scss */
   body div.list-item,
   body a.list-item {
     line-height: calc(78px + 18 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 187, assets/sass/_partials/_archivelist.scss */
+  /* line 243, assets/sass/_partials/_archivelist.scss */
   body div.list-item,
   body a.list-item {
     line-height: 96px;
   }
 }
 @media (min-width: 640px) {
-  /* line 212, assets/sass/_partials/_archivelist.scss */
+  /* line 268, assets/sass/_partials/_archivelist.scss */
   body div.list-item.list-item,
   body a.list-item.list-item {
     padding-left: 10px;
   }
 }
 @media (min-width: 960px) {
-  /* line 217, assets/sass/_partials/_archivelist.scss */
+  /* line 273, assets/sass/_partials/_archivelist.scss */
   body div.list-item.list-item,
   body a.list-item.list-item {
     padding-left: 15px;
   }
 }
 @media (min-width: 1280px) {
-  /* line 222, assets/sass/_partials/_archivelist.scss */
+  /* line 278, assets/sass/_partials/_archivelist.scss */
   body div.list-item.list-item,
   body a.list-item.list-item {
     padding-left: 20px;
   }
 }
-/* line 227, assets/sass/_partials/_archivelist.scss */
+/* line 283, assets/sass/_partials/_archivelist.scss */
 body div.list-item .item-text,
 body a.list-item .item-text {
   animation: blurout 400ms ease-in forwards;
   height: inherit;
   line-height: inherit;
 }
-/* line 238, assets/sass/_partials/_archivelist.scss */
+/* line 294, assets/sass/_partials/_archivelist.scss */
 body .list-item:hover {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
   z-index: 2;
 }
-/* line 243, assets/sass/_partials/_archivelist.scss */
+/* line 299, assets/sass/_partials/_archivelist.scss */
 body .list-item:hover .item-text {
   animation: blurin 200ms ease-in forwards;
 }
-/* line 253, assets/sass/_partials/_archivelist.scss */
+/* line 309, assets/sass/_partials/_archivelist.scss */
 body .image-items {
   width: 100%;
   height: auto;
@@ -4929,7 +5053,7 @@ body .image-items {
   bottom: 0px;
   position: absolute;
 }
-/* line 263, assets/sass/_partials/_archivelist.scss */
+/* line 319, assets/sass/_partials/_archivelist.scss */
 body .image-item {
   width: 100%;
   height: 0vh;
@@ -4939,11 +5063,11 @@ body .image-item {
   animation: image-blur-out 400ms ease-in-out forwards;
   filter: blur(10px);
 }
-/* line 275, assets/sass/_partials/_archivelist.scss */
+/* line 331, assets/sass/_partials/_archivelist.scss */
 body .image-item {
   animation: opacityout 400ms ease-in forwards;
 }
-/* line 278, assets/sass/_partials/_archivelist.scss */
+/* line 334, assets/sass/_partials/_archivelist.scss */
 body .image-item.active {
   display: block;
   height: 100vh;
@@ -4956,17 +5080,17 @@ body .image-item.active {
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 292, assets/sass/_partials/_archivelist.scss */
+/* line 348, assets/sass/_partials/_archivelist.scss */
 body .image-item.activated {
   opacity: 1;
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 304, assets/sass/_partials/_archivelist.scss */
+/* line 360, assets/sass/_partials/_archivelist.scss */
 body .container.activated .image-items .image-item {
   animation: image-blur-in-active 400ms ease-in forwards;
 }
-/* line 310, assets/sass/_partials/_archivelist.scss */
+/* line 366, assets/sass/_partials/_archivelist.scss */
 body .container.activated .list-items {
   pointer-events: none;
   animation: opacityout 400ms ease-in forwards;
@@ -8278,12 +8402,12 @@ body.single-releases div#release-music .music-item {
 body.single-releases section#release-artists .music-item {
   margin: auto;
 }
-/* line 1346, assets/sass/_partials/_releases.scss */
+/* line 1347, assets/sass/_partials/_releases.scss */
 body.single-releases section#release-artists a {
   overflow: hidden;
   display: block;
 }
-/* line 1350, assets/sass/_partials/_releases.scss */
+/* line 1351, assets/sass/_partials/_releases.scss */
 body.single-releases section#release-artists a .artist-title {
   font-size: 14px;
   font-size: 22.4px;
@@ -8295,78 +8419,78 @@ body.single-releases section#release-artists a .artist-title {
   animation: blurout 400ms ease-in forwards;
 }
 @media screen and (min-width: 0px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: 22.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: 33.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1350, assets/sass/_partials/_releases.scss */
+  /* line 1351, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     line-height: 25.6px;
   }
 }
-/* line 1362, assets/sass/_partials/_releases.scss */
+/* line 1363, assets/sass/_partials/_releases.scss */
 body.single-releases section#release-artists a:hover .artist-title {
   animation: blurin 400ms ease-in forwards;
 }
@@ -21360,13 +21484,23 @@ https://flickity.metafizzy.co
   justify-content: flex-end;
 }
 
+/* line 1, assets/sass/_partials/_block-event.scss */
+.event-block {
+  width: 100%;
+}
+/* line 6, assets/sass/_partials/_block-event.scss */
+.event-block a {
+  width: 100%;
+}
+
+/*.event-block */
 /* end blocks */
 /*
 compass watch ~/sites/inp-wp/wp-content/themes/inperspectiverecords/
 cd ~/sites/inp-wp/wp-content/themes/inperspectiverecords/
 */
 /* START */
-/* line 52, assets/sass/style.scss */
+/* line 53, assets/sass/style.scss */
 body {
   background: black;
 }

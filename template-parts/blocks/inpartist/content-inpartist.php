@@ -48,38 +48,34 @@ $artistblockid = get_field('artist'); //post object - IDS
  
  		 
 						
-								<?php //foreach( $artists as $artist ): 
-								//	$artistid = $artist->ID;
-									$artistblockbanner = get_field('artist_banner_image', $artistblockid);
-									//$artistid;?>
+		<?php //foreach( $artists as $artist ): 
+		//	$artistid = $artist->ID;
+		$artistblockbanner = get_field('artist_banner_image', $artistblockid);
+		//$artistid;?>
 
- 
-										<a href="<?php echo get_permalink( $artistblockid ); ?>">
-				 
-										   		<div class="banner-image" style="background-image: url('<?php echo $artistblockbanner;?>');">
-																			   		
-																			   		
-										 		<div class="page-title-positioner left-side outer-grid-item outer-grid-item-sm-8 sticky">
-																		  
-													<div class="page-titler inline">
-																    
-														 <span class="inner artist-title">
-														<?php echo get_the_title( $artistblockid ); ?>
-														</span><!-- .artist-title -->
 
-												    </div> <!--.page-title -->
-														    
-												</div><!-- .page-title-position --> 
-			 
-										    </div><!-- banner-image -->
+			<a href="<?php echo get_permalink( $artistblockid ); ?>">
 
-										</a>
+			   		<div class="banner-image" style="background-image: url('<?php echo $artistblockbanner;?>');">
+												   		
+												   		
+			 		<div class="page-title-positioner left-side outer-grid-item outer-grid-item-sm-8 sticky">
+											  
+						<div class="page-titler inline">
+									    
+							 <span class="inner artist-title">
+							<?php echo get_the_title( $artistblockid ); ?>
+							</span><!-- .artist-title -->
 
- 
-								<?php//endforeach; ?>
-			 
-                     
-    
+					    </div> <!--.page-title -->
+							    
+					</div><!-- .page-title-position --> 
+
+			    </div><!-- banner-image -->
+
+			</a>
+
+		<?php//endforeach; ?>
 
     </div> 
    
