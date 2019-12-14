@@ -136,7 +136,7 @@ This was happening because the Internet was slow.
    
 
         play.animate({ d: playpathPoints }, 100, mina.easin); 
-              console.log("play should animate - how many times?");
+        
 
         play_left.animate({ d: playpathPoints_left }, 100, mina.easin);  
      //   console.log("toPause")
@@ -153,7 +153,7 @@ This was happening because the Internet was slow.
   var toInlinePause = function(activeurl){
       
        
-        console.log("we have an activeurl ="+activeurl+"");
+      //  console.log("we have an activeurl ="+activeurl+"");
  
 
         var thisactiveurl = activeurl,
@@ -164,9 +164,9 @@ This was happening because the Internet was slow.
             $thissvg = $('#playertoggle_'+thisid+'');
 
 
-              console.log("thisactiveurl" + thisactiveurl+"");
+       // console.log("thisactiveurl" + thisactiveurl+"");
 
-            console.log("This ID" +thisid+"");
+        //   console.log("This ID" +thisid+"");
  
          //   $thisactiveobject.addClass("hello-what");
           //  $thisactiveobject.css("background-color","red");
@@ -175,10 +175,15 @@ This was happening because the Internet was slow.
        // console.log(' thisid ='+thisid+'');
 
 //      I need to ensure that there is not active item on the page anymore that I don't do anything?
-       
+              
+        // remnove active-paused if it exist from other items:
+        $(".play-toggle").removeClass("active-pause");// ensure to remove this class on in 
+
+
+
         if(typeof thisid !== "undefined") {
 
-         console.log("this id is defined")
+         //console.log("this id is defined")
 
               var svg = document.getElementById('playertoggle_'+thisid+'');
               var s = new Snap(svg);
@@ -308,10 +313,11 @@ This was happening because the Internet was slow.
         var thisactiveurl = activeurl,
             $thisactiveobject = $("li[data-tracklink='" + thisactiveurl +"']"), //$(document).find("[data-tracklink='${thisactiveurl}']");
             thisid = $thisactiveobject.data('trackid');
-          
+           
+
             $thissvg = $('#playertoggle_'+thisid+'');
 
-       console.log("ToInline Play" + thisid +"");
+          //  console.log("ToInline Play" + thisid +"");
 
            // $thisactiveobject.addClass("hello-what");
           //  $thisactiveobject.css("background-color","transparent");
@@ -355,13 +361,22 @@ This was happening because the Internet was slow.
 
 
         play.animate({ d: playpathPoints }, 100, mina.easin); 
-              console.log("play should animate - how many times?");
+        //      console.log("play should animate - how many times?");
 
         play_left.animate({ d: playpathPoints_left }, 100, mina.easin);  
      //   console.log("toPause")
 
         play_right.animate({ d: playpathPoints_right }, 100, mina.easin);  
        // console.log("toPause")
+//
+      // $thissvg.css("border","1px solid red");
+
+
+          // remove existing classes, if they exist.
+         $(".play-toggle").removeClass("active-pause");// ensure to remove this class on in 
+         // add class to this object
+         $thisactiveobject.find(".play-toggle").addClass("active-pause"); 
+
 
       };
 
@@ -829,7 +844,7 @@ var headroom = new Headroom(element, options);
           $('p', this).html(track.description || 'no Description');
         });
         // update the artwork
-        $('.sc-artwork-list li', $player).each(function(index) {
+        $('.sc-artwork-list li', $player).each(function(index) { // not sure we use this functiona - maybe comment it out if not.
           var $item = $(this),
               itemTrack = $item.data('sc-track');
 
@@ -995,6 +1010,8 @@ console.log("track" + track);
         updatePlayStatus(player, false);
         audioEngine.pause();
      //   playtoggle();
+
+
         toPlay();// Main toggle at the top animation
         toInlinePlay(activeurl)
         $('body').removeClass("sc-player-playing");

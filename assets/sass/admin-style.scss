@@ -32,6 +32,7 @@ Text Domain:
 
 @import "_partials/blocks-reset"; // This is to remove all this shite that wordpress is adding?! - I don't understand how badly their style are assigned. 
 // It doesn't make any sense atm - review I imagine?
+//@import "_partials/404"; // proibably not needed
 
 
 /* blocks - styles applied to front and back end */
@@ -42,6 +43,7 @@ Text Domain:
 @import "_partials/block-sound"; // do I really want to import block styles if they not being used?
 @import "_partials/block-release"; // do I really want to import block styles if they not being used?
 @import "_partials/block-gallery"; // do I really want to import block styles if they not being used?
+@import "_partials/block-merch"; // do I really want to import block styles if they not being used?
 
 /* end blocks */
 

@@ -26,6 +26,7 @@ Text Domain:
 @import "_partials/events"; // needs tidying
 @import "_partials/radio"; // needs tidying
 @import "_partials/about"; // needs tidying
+@import "_partials/404"; // needs tidying
 @import "_partials/footer"; // needs tidying
 
 /*blocks */
@@ -37,6 +38,7 @@ Text Domain:
 @import "_partials/block-release"; // do I really want to import block styles if they not being used?
 @import "_partials/block-image"; // do I really want to import block styles if they not being used?
 @import "_partials/block-gallery"; // do I really want to import block styles if they not being used?
+@import "_partials/block-merch"; // do I really want to import block styles if they not being used?
 
 /* end blocks */
 

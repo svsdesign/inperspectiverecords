@@ -519,7 +519,18 @@ body.post-type-archive-radio{
    
           .wrapping{
            @include padding(padding-bottom, 1);// diff to other items
-          }
+      
+            .radio-view-item{
+
+              @media (min-width: map-get($breakpoints,md)) {   
+            //  position: absolute;
+              width: 16.6667%;
+              text-align: center;
+              }
+
+            }
+
+          }//.wrapping
 /*
           .cover-image-item{
 
@@ -980,6 +991,20 @@ cursor: wait;
 
 } /* .play-toggle */
 
+.play-toggle.active-pause{
+
+    svg{
+
+      path{
+      fill:$red;
+      }
+    
+    }
+
+} //.play-toggle.active-paused
+
+
+
 body.sc-loaded{
 
   .play-toggle{
@@ -1174,13 +1199,13 @@ a.sc-player,
 /* scrubber */
 
 .sc-scrubber {
-  position: absolute;
-  bottom:  12.5vw;
-  // float: right;
-  width: 87.5%;// was 100%;
-  padding-left: 12.5vw;
-  padding-right: 12.5vw;
-  z-index: 1;// ensur aboute the copy
+position: absolute;
+bottom:  12.5vw;
+// float: right;
+width: 87.5%;// was 100%;
+padding-left: 12.5vw;
+padding-right: 12.5vw;
+z-index: 1;// ensur aboute the copy
  
   .sc-buffer{
     cursor: pointer; // so you can see where to click on the playable area
@@ -1408,7 +1433,7 @@ z-index: 2;
                 @include cssvalue(padding-bottom, 0.25);
 
                 @media (min-width: map-get($breakpoints,md)) {   
-                width: 62.5%;
+              //  width: 62.5%;
                 }
 
 
@@ -1440,6 +1465,8 @@ z-index: 2;
 
                           @media (min-width: map-get($breakpoints,md)) {   
                           position: absolute;
+                          width: 16.6667%;
+                          text-align: center;
                           }
                       
                       }

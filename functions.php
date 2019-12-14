@@ -450,6 +450,21 @@ function my_acf_init() {
             'keywords'          => array( 'inpgallery'),
         ));
 
+        
+        acf_register_block(array(
+            'name'              => 'inpmerch',
+            'title'             => __('Inp Merch'),
+            'description'       => __('A custom merch block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',
+            'enqueue_assets'    => function(){
+         //     wp_enqueue_script('inp-merch-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpmerch/assets/js/script.js', array( 'jquery' ), '', true );
+            },
+            'icon'              => 'format-merch',
+          //'mode'              => 'preview',//"auto" or "preview" This lets you control how the block is presented the Gutenberg block editor. The default is “auto” which renders the block to match the frontend until you select it, then it becomes an editor. If set to “preview” it will always look like the frontend and you can edit content in the sidebar.
+            'supports'          => array( 'mode' => false ),
+            'keywords'          => array( 'inpmerch'),
+        ));
 
 
 

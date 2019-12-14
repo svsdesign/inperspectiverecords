@@ -91,6 +91,12 @@
 	z-index: 5;// ensure above the dots
 	@include cssvaluegutter(margin-top,2.5); 
 
+	@media (min-width: map-get($breakpoints,lg)) {
+	@include cssvaluegutter(width,3); 
+	@include cssvaluegutter(height,3); 
+	@include cssvaluegutter(margin-top,1.5); 
+	}
+
 	  	svg{
 	  	fill:$white;
 	  	}
@@ -125,37 +131,55 @@
 	/* ---- page dots ---- */
 
 	.flickity-page-dots {
-	  position: absolute;
-	  width: 100%;
-	  @include cssvaluegutter(bottom,-5); 
-	  @include cssvaluegutter(height,5); 
-	  @include cssvaluegutter(padding-top, 2); 
-	  @include cssvaluegutter(padding-bottom, 2); 
+	position: absolute;
+	width: 100%;
+	@include cssvaluegutter(bottom,-5); 
+	@include cssvaluegutter(height,5); 
+	@include cssvaluegutter(padding-top, 2); 
+	@include cssvaluegutter(padding-bottom, 2); 
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	line-height: 1;
 
-	//  padding: 0;
-	  margin: 0;
-	  list-style: none;
-	  text-align: center;
-	  line-height: 1;
+		@media (min-width: map-get($breakpoints,lg)) {
+		@include cssvaluegutter(bottom,-3); 
+		@include cssvaluegutter(height,3); 
+		@include cssvaluegutter(padding-top, 1); 
+		@include cssvaluegutter(padding-bottom, 1); 
+		}
+	
 	}
 
-	.flickity-rtl .flickity-page-dots { direction: rtl; }
+	.flickity-rtl .flickity-page-dots { 
+	direction: rtl; 
+	}
 
 	.flickity-page-dots .dot {
-	 display: inline-block;
-	 @include cssvaluegutter(width,1); 
- 	 @include cssvaluegutter(height,1); 
-	 @include cssvaluegutter(margin-left, 0.25); 
-	 @include cssvaluegutter(margin-right, 0.25);
- 	  //height: 10px;
-	 // margin: 0 8px;
-	  background: $white;
-	  border-radius: 50%;
-	 // opacity: 0.25;
-	  cursor: pointer;
-	    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+	display: inline-block;
+	@include cssvaluegutter(width,1); 
+	@include cssvaluegutter(height,1); 
+	@include cssvaluegutter(margin-left, 0.25); 
+	@include cssvaluegutter(margin-right, 0.25);
+	//height: 10px;
+	// margin: 0 8px;
+	background: $white;
+	border-radius: 50%;
+	// opacity: 0.25;
+	cursor: pointer;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+    	@media (min-width: map-get($breakpoints,lg)) {
+		@include cssvaluegutter(width,0.5); 
+ 	 	@include cssvaluegutter(height,0.5); 
+	 	@include cssvaluegutter(padding-top, 0.25); 
+	 	@include cssvaluegutter(margin-top, 0.25);
+	 	@include cssvaluegutter(margin-left, 0.5); 
+		@include cssvaluegutter(margin-right, 0.5);
+		}
+
 	}
 
 	.flickity-page-dots .dot.is-selected {
@@ -173,8 +197,10 @@ width: 100%;// this dirty?
 height: 90vh;
 @include cssvaluegutter(margin-bottom, 5);  // for the dots area
 
-//	* { box-sizing: border-box; } // this already the case? delete if so
- 
+@media (min-width: map-get($breakpoints,lg)) {
+@include cssvaluegutter(margin-bottom, 3); 
+}
+
 	.outer-grid-item.inner{
 	height: inherit;
 
