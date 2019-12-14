@@ -53,7 +53,13 @@ text-align: center;
   overflow: hidden;// fixed the overflow on safari - review + delete comments
   }
 
-  section#upcoming-events{
+  
+
+
+} /* single */
+
+
+section#upcoming-events{
   width: 100%;
 
     .event-item{
@@ -70,12 +76,6 @@ text-align: center;
     }
     
   } /*section#upcoming-events*/
-
-
-} /* single */
-
-
-
 
 .event-summary{
 overflow: visible; // for transforms

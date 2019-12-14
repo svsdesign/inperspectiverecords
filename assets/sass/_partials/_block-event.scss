@@ -1,13 +1,18 @@
 .event-block{
 width: 100%;// this dirty?
 
+    .event-item{
+    min-height: 50vh;
+    @include padding(padding, 2);
+    background-size: cover;
+    background-position: center;
+    
 
+      .event-name{
+      @include h2;
+      font-weight: $boldweight;
+      } 
 
-	a{
-	width: 100%;// this dirty?
-	}//a
-
-
-
-
+    }
+    
 }/*.event-block */

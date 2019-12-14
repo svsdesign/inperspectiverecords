@@ -10,7 +10,6 @@
 
    
 get_header(); ?>
-
   
 	<div class="container grid">
 			
@@ -26,13 +25,34 @@ get_header(); ?>
 
 
 		</div><!-- .page-title-position -->
+	
+		<?php
+		// set the "paged" parameter (use 'page' if the query is on a static front page)
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		$newsargs = array(
+			'posts_per_page' => 9,
+			'post_type' => 'news',
+			'paged'          => $paged
+		);
+		// the query
+		$news_query = new WP_Query( $newsargs ); 
+	  	
+	  		if ( $news_query->have_posts() ) :?>
 
- 	<?php if ( have_posts() ) : ?>
- 
+
+			<?php // are we on page one- so we can include the first item
+			//if(1 == $paged):
+			//$pageno = 'first';?>
+			<?php //endif;  //  are we on page 1 ?>
+
+
 	
 			<div class="grid inner outer-grid-item outer-grid-item-xs-6">
 
-			<?php while ( have_posts() ) : the_post(); 			
+			<?php
+			// the loop
+			$itemno = 1;
+			while ( $news_query->have_posts() ) : $news_query->the_post(); 
 
 				$newsid = get_the_ID();	
 				$itemnumber++;			
@@ -57,86 +77,54 @@ get_header(); ?>
 			// End the loop.
 			endwhile;?>
 
-				<div class="grid post-navigation-wrap">	
-				
-				<?php
-				/** Stop execution if there's only 1 page */
-			    if( $wp_query->max_num_pages <= 1 )
-			        return;
 
-				// 	c&p from get_template_part('/assets/svg/inline-inp_arrow-right.svg') - so review if changed.
-				$arrowright = '<div class="svg-icon inline-icon"><svg class="svg-icon arrow-right-icon" width="27px" height="40px" viewBox="0 0 27 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="0.573,40 0,39.264 24.766,20 0,0.738 0.573,0 26.288,20"/></svg></div>';    
-			    // 	c&p from get_template_part('/assets/svg/inline-inp_arrow-right.svg') - so review if changed.
-			    $arrowleft 	= '<div class="svg-icon inline-icon"><svg class="svg-icon arrow-left-icon" width="27px" height="40px" viewBox="0 0 27 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="25.715,0 26.288,0.736 1.522,20 26.288,39.262 25.715,40 0,20 "/></svg></div>';
-			    $paged 		= get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-			    $max   		= intval( $wp_query->max_num_pages );
-			 
-			    /** Add current page to the array */
-			    if ( $paged >= 1 )
-			        $links[] = $paged;
-			 
-			    /** Add the pages around the current page to the array */
-			    if ( $paged >= 3 ) {
-			        $links[] = $paged - 1;
-			        $links[] = $paged - 2;
-			    }
-			 
-			    if ( ( $paged + 2 ) <= $max ) {
-			        $links[] = $paged + 2;
-			        $links[] = $paged + 1;
-			    }
-			 
-			    echo '<div class="post-navigation">' . "\n";
-			 
-			    /** Previous Post Link */
-			    if ( get_previous_posts_link() )
-			      
-			     printf( '<div class="previous">%s </div>' . "\n", get_previous_posts_link(''.$arrowleft.'<span>Newer News</span>'));
-			    
-			     echo '<ul class="paginate-number">'; // this problematic - is in in if statement?
+ 				
+		 	</div><!-- .container added this assuming we have atleast 2 items and .container div exists -->
 
-			    /** Link to first page, plus ellipses if necessary */
-			    if ( ! in_array( 1, $links ) ) {
-			        $class = 1 == $paged ? ' class="active"' : '';
-			 
-			        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-			 
-			        if ( ! in_array( 2, $links ) )
-			            echo '<li>…</li>';
-			    }
-			 
-			    /** Link to current page, plus 2 pages in either direction if necessary */
-			    sort( $links );
-			    foreach ( (array) $links as $link ) {
-			        $class = $paged == $link ? ' class="active"' : '';
-			        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
-			    }
-			 
-			    /** Link to last page, plus ellipses if necessary */
-			    if ( ! in_array( $max, $links ) ) {
-			        if ( ! in_array( $max - 1, $links ) )
-			            echo '<li>…</li>' . "\n";
-			 
-			        $class = $paged == $max ? ' class="active"' : '';
-			        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
-			    }
-			 
-			     echo '</ul>';
+							
+			<?php global $news_query;
+			//https://kriesi.at/archives/how-to-build-a-wordpress-post-pagination-without-plugin < maybe better solution in terms of genering html
 
-			    /** Next Post Link */
-			    if ( get_next_posts_link() )
-			  			
-		 		printf( '<div class="next">%s </div>' . "\n", get_next_posts_link(''.$arrowright.'<span>Older News</span>'));
-			    echo '</div>' . "\n"; ?>
+			   $big = 999999999; // need an unlikely integer
 
-				</div><!-- .grid-->	
+			   $paginate = paginate_links( array(
+			        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			        'format' => '?paged=%#%',
+			        'current' => max( 1, get_query_var('paged')),
+			        'total' => $news_query->max_num_pages,
+			        'prev_next' =>true,
+			       // 'before_page_number' =>'<div class="test">',
+			       // 'after_page_number' =>'</div>',
+			//	      'format' => '/page/%#%',  
+			//	      'current' => $current_page,  
+			//	      'total' => $total_pages,
+		 		      'type' =>  'plain',//list',//array',//list',
+			//     'prev_text' => '<div class="next">' . get_template_part('svg/inline', 'dm_arrow_left.svg') .'</div>',
+					'prev_text' => '<div class="small nav-previous align-left"><svg class="svg-icon previous-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div><div class="text">Newer Shows</div>',
+					'next_text' => '<div class="small nav-next align-right"><svg class="svg-icon next-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div><div class="text">Older Shows</div>',
+		    		));
+			
+				if ($paginate):?>
+			
+					<div class="page-nav outer-grid-item outer-grid-item-xs-6 inner">
 
-		<?php else:  ?>
-		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>	
+						<div class="grid">
 
-		</div>  <!-- container (for articles)-->
+							<div class="page-nav-wrapper grid-item grid-item-xs-6">
+
+							<?php echo $paginate;?>
+
+							</div>
+						
+							</div>
+
+					</div>	<!-- ".page-nav-->		 
+
+				<?php endif;  // if we have paginated links ?>
+
+
+			<?php endif;  // if ( $news_query->have_posts?>
+
 
 
 	</div>  <!-- container -->

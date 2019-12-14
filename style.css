@@ -3513,8 +3513,9 @@ body.wp-admin .wp-block li {
 body.post-type-archive-news,
 body.single-news {
   color: black;
+  background: #d8d8d8;
 }
-/* line 229, assets/sass/_partials/_typography.scss */
+/* line 230, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news a,
 body.single-news a {
   color: black;
@@ -3525,62 +3526,62 @@ body.single-news a {
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 229, assets/sass/_partials/_typography.scss */
+  /* line 230, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 229, assets/sass/_partials/_typography.scss */
+  /* line 230, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 229, assets/sass/_partials/_typography.scss */
+  /* line 230, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 229, assets/sass/_partials/_typography.scss */
+  /* line 230, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 229, assets/sass/_partials/_typography.scss */
+  /* line 230, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 229, assets/sass/_partials/_typography.scss */
+  /* line 230, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 229, assets/sass/_partials/_typography.scss */
+  /* line 230, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 229, assets/sass/_partials/_typography.scss */
+  /* line 230, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
   body.single-news a {
     line-height: 32px;
   }
 }
-/* line 235, assets/sass/_partials/_typography.scss */
+/* line 236, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news a:hover,
 body.post-type-archive-news a:visited,
 body.post-type-archive-news a:active,
@@ -3593,7 +3594,7 @@ body.single-news a:active {
 /* body.post-type-archive-news,
    body.single-news */
 /* End news typestyles */
-/* line 246, assets/sass/_partials/_typography.scss */
+/* line 247, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news *::-moz-selection,
 body.post-type-archive-news *::selection,
 body.single-news *::selection,
@@ -3608,7 +3609,7 @@ body.single-news *::-moz-selection {
 circles https://codepen.io/YusukeNakaya/pen/KyKJBE/
 
 */
-/* line 272, assets/sass/_partials/_typography.scss */
+/* line 273, assets/sass/_partials/_typography.scss */
 div.anim-text,
 span.anim-text,
 div.link-animation,
@@ -3616,7 +3617,7 @@ a.link-animation {
   will-change: transform;
 }
 
-/* line 280, assets/sass/_partials/_typography.scss */
+/* line 281, assets/sass/_partials/_typography.scss */
 .link-animation {
   transform-style: preserve-3d;
   position: relative;
@@ -3626,232 +3627,232 @@ a.link-animation {
   overflow: visible;
   color: transparent;
 }
-/* line 289, assets/sass/_partials/_typography.scss */
+/* line 290, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text {
   position: absolute;
   color: #fff;
   transform-style: preserve-3d;
   transform-origin: left;
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(1) {
   clip-path: polygon(-30% 0, -20% 0, 20% 100%, 0% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(2) {
   clip-path: polygon(-25% 0, -15% 0, 25% 100%, 5% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(3) {
   clip-path: polygon(-20% 0, -10% 0, 30% 100%, 10% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(4) {
   clip-path: polygon(-15% 0, -5% 0, 35% 100%, 15% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(5) {
   clip-path: polygon(-10% 0, 0% 0, 40% 100%, 20% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(6) {
   clip-path: polygon(-5% 0, 5% 0, 45% 100%, 25% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(7) {
   clip-path: polygon(0% 0, 10% 0, 50% 100%, 30% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(8) {
   clip-path: polygon(5% 0, 15% 0, 55% 100%, 35% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(9) {
   clip-path: polygon(10% 0, 20% 0, 60% 100%, 40% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(10) {
   clip-path: polygon(15% 0, 25% 0, 65% 100%, 45% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(11) {
   clip-path: polygon(20% 0, 30% 0, 70% 100%, 50% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(12) {
   clip-path: polygon(25% 0, 35% 0, 75% 100%, 55% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(13) {
   clip-path: polygon(30% 0, 40% 0, 80% 100%, 60% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(14) {
   clip-path: polygon(35% 0, 45% 0, 85% 100%, 65% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(15) {
   clip-path: polygon(40% 0, 50% 0, 90% 100%, 70% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(16) {
   clip-path: polygon(45% 0, 55% 0, 95% 100%, 75% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(17) {
   clip-path: polygon(50% 0, 60% 0, 100% 100%, 80% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(18) {
   clip-path: polygon(55% 0, 65% 0, 105% 100%, 85% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(19) {
   clip-path: polygon(60% 0, 70% 0, 110% 100%, 90% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(20) {
   clip-path: polygon(65% 0, 75% 0, 115% 100%, 95% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(21) {
   clip-path: polygon(70% 0, 80% 0, 120% 100%, 100% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(22) {
   clip-path: polygon(75% 0, 85% 0, 125% 100%, 105% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(23) {
   clip-path: polygon(80% 0, 90% 0, 130% 100%, 110% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(24) {
   clip-path: polygon(85% 0, 95% 0, 135% 100%, 115% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(25) {
   clip-path: polygon(90% 0, 100% 0, 140% 100%, 120% 100%);
 }
-/* line 299, assets/sass/_partials/_typography.scss */
+/* line 300, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(26) {
   clip-path: polygon(95% 0, 105% 0, 145% 100%, 125% 100%);
 }
-/* line 315, assets/sass/_partials/_typography.scss */
+/* line 316, assets/sass/_partials/_typography.scss */
 .link-animation .height-item {
   opacity: 0;
   position: relative;
 }
 
-/* line 324, assets/sass/_partials/_typography.scss */
+/* line 325, assets/sass/_partials/_typography.scss */
 .link-animation:hover {
   animation: blurring 1500ms ease-out forwards;
 }
-/* line 328, assets/sass/_partials/_typography.scss */
+/* line 329, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text {
   top: 0;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(1) {
   animation: wave 1000ms -5000ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(2) {
   animation: wave 1000ms -4950ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(3) {
   animation: wave 1000ms -4900ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(4) {
   animation: wave 1000ms -4850ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(5) {
   animation: wave 1000ms -4800ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(6) {
   animation: wave 1000ms -4750ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(7) {
   animation: wave 1000ms -4700ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(8) {
   animation: wave 1000ms -4650ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(9) {
   animation: wave 1000ms -4600ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(10) {
   animation: wave 1000ms -4550ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(11) {
   animation: wave 1000ms -4500ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(12) {
   animation: wave 1000ms -4450ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(13) {
   animation: wave 1000ms -4400ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(14) {
   animation: wave 1000ms -4350ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(15) {
   animation: wave 1000ms -4300ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(16) {
   animation: wave 1000ms -4250ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(17) {
   animation: wave 1000ms -4200ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(18) {
   animation: wave 1000ms -4150ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(19) {
   animation: wave 1000ms -4100ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(20) {
   animation: wave 1000ms -4050ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(21) {
   animation: wave 1000ms -4000ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(22) {
   animation: wave 1000ms -3950ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(23) {
   animation: wave 1000ms -3900ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(24) {
   animation: wave 1000ms -3850ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(25) {
   animation: wave 1000ms -3800ms ease-in-out 5 alternate;
 }
-/* line 335, assets/sass/_partials/_typography.scss */
+/* line 336, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(26) {
   animation: wave 1000ms -3750ms ease-in-out 5 alternate;
 }
@@ -3878,7 +3879,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(75deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(58deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -3941,43 +3942,43 @@ a.link-animation {
     opacity: 0;
   }
 }
-/* line 456, assets/sass/_partials/_typography.scss */
+/* line 457, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span {
   color: transparent;
   animation: blurlink 10s ease-out;
   -webkit-animation: blurlink 10s ease-out;
 }
-/* line 462, assets/sass/_partials/_typography.scss */
+/* line 463, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(1) {
   animation-delay: 0.1s;
   -webkit-animation-delay: 0.1s;
 }
-/* line 466, assets/sass/_partials/_typography.scss */
+/* line 467, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(2) {
   animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
 }
-/* line 470, assets/sass/_partials/_typography.scss */
+/* line 471, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(3) {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
-/* line 474, assets/sass/_partials/_typography.scss */
+/* line 475, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(4) {
   animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
 }
-/* line 478, assets/sass/_partials/_typography.scss */
+/* line 479, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(5) {
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
 }
-/* line 482, assets/sass/_partials/_typography.scss */
+/* line 483, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(6) {
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
 }
-/* line 486, assets/sass/_partials/_typography.scss */
+/* line 487, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(7) {
   animation-delay: 0.7s;
   -webkit-animation-delay: 0.7s;
@@ -4541,6 +4542,545 @@ body.vertical .navigation-wrapper .bg .inp-bg svg {
 }
 
 /*end cookies testing */
+/*_post-navigation.scss*/
+/* line 7, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav,
+.post-type-archive-news .page-nav {
+  margin: auto;
+  width: 100%;
+  display: block;
+  position: relative;
+  clear: both;
+  text-align: center;
+  padding-bottom: 36px;
+  padding-bottom: 52px;
+  padding-top: 18px;
+  padding-top: 26px;
+}
+@media screen and (min-width: 0px) {
+  /* line 7, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav,
+  .post-type-archive-news .page-nav {
+    padding-bottom: calc(36px + 16 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 7, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav,
+  .post-type-archive-news .page-nav {
+    padding-bottom: 52px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 7, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav,
+  .post-type-archive-news .page-nav {
+    padding-bottom: calc(52px + 12 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 7, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav,
+  .post-type-archive-news .page-nav {
+    padding-bottom: 64px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 7, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav,
+  .post-type-archive-news .page-nav {
+    padding-top: calc(18px + 8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 7, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav,
+  .post-type-archive-news .page-nav {
+    padding-top: 26px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 7, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav,
+  .post-type-archive-news .page-nav {
+    padding-top: calc(26px + 6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 7, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav,
+  .post-type-archive-news .page-nav {
+    padding-top: 32px;
+  }
+}
+/* line 17, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .page-nav-wrapper,
+.post-type-archive-news .page-nav .page-nav-wrapper {
+  position: relative;
+  margin: auto;
+}
+/* line 22, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+.post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+  margin: auto;
+  width: auto;
+  padding-left: 9px;
+  padding-left: 13px;
+  padding-right: 9px;
+  padding-right: 13px;
+  position: relative;
+  display: inline-block;
+  float: none;
+  font-weight: 400;
+  text-align: center;
+  font-size: 9px;
+  font-size: 13px;
+  height: 27px;
+  height: 39px;
+  width: 27px;
+  width: 39px;
+  line-height: 27px;
+  line-height: 39px;
+}
+@media screen and (min-width: 0px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    padding-left: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    padding-left: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    padding-left: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    padding-left: 16px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    padding-right: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    padding-right: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    padding-right: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    padding-right: 16px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    font-size: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    font-size: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    height: calc(27px + 12 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    height: 39px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    height: calc(39px + 9 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    height: 48px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    width: calc(27px + 12 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    width: 39px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    width: calc(39px + 9 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    width: 48px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    line-height: calc(27px + 12 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    line-height: 39px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    line-height: calc(39px + 9 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 22, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers {
+    line-height: 48px;
+  }
+}
+/* line 41, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.current,
+.post-type-archive-news .page-nav .page-nav-wrapper .page-numbers.current {
+  opacity: 0.6;
+  font-weight: 100;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
+}
+/* line 49, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.next, .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.prev,
+.post-type-archive-news .page-nav .page-nav-wrapper .page-numbers.next,
+.post-type-archive-news .page-nav .page-nav-wrapper .page-numbers.prev {
+  position: absolute;
+}
+@media (min-width: 640px) {
+  /* line 49, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.next, .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.prev,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers.next,
+  .post-type-archive-news .page-nav .page-nav-wrapper .page-numbers.prev {
+    width: 33.33%;
+  }
+}
+/* line 65, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .prev,
+.post-type-archive-news .page-nav .prev {
+  left: 0px;
+}
+/* line 68, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+.post-type-archive-news .page-nav .prev .previous-arrow-icon {
+  transform: rotate(180deg);
+  height: 100%;
+  width: 9px;
+  width: 13px;
+  padding-bottom: 3.6px;
+  padding-bottom: 5.2px;
+  margin-right: 9px;
+  margin-right: 13px;
+}
+@media screen and (min-width: 0px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    width: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    width: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    width: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    width: 16px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    padding-bottom: 5.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    padding-bottom: 6.4px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    margin-right: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    margin-right: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    margin-right: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 68, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .previous-arrow-icon,
+  .post-type-archive-news .page-nav .prev .previous-arrow-icon {
+    margin-right: 16px;
+  }
+}
+/* line 76, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .prev .text,
+.post-type-archive-news .page-nav .prev .text {
+  display: none;
+  text-align: left;
+}
+@media (min-width: 640px) {
+  /* line 76, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .prev .text,
+  .post-type-archive-news .page-nav .prev .text {
+    display: block;
+  }
+}
+/* line 86, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .prev .nav-previous,
+.post-type-archive-news .page-nav .prev .nav-previous {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+/* line 94, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .next,
+.post-type-archive-news .page-nav .next {
+  right: 0px;
+}
+/* line 97, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .next .next-arrow-icon,
+.post-type-archive-news .page-nav .next .next-arrow-icon {
+  height: 100%;
+  width: 9px;
+  width: 13px;
+  padding-top: 3.6px;
+  padding-top: 5.2px;
+  margin-left: 9px;
+  margin-left: 13px;
+}
+@media screen and (min-width: 0px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    width: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    width: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    width: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    width: 16px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    padding-top: calc(3.6px + 1.6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    padding-top: 5.2px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    padding-top: calc(5.2px + 1.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    padding-top: 6.4px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    margin-left: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    margin-left: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    margin-left: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 97, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .next-arrow-icon,
+  .post-type-archive-news .page-nav .next .next-arrow-icon {
+    margin-left: 16px;
+  }
+}
+/* line 104, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .next .text,
+.post-type-archive-news .page-nav .next .text {
+  display: none;
+  text-align: right;
+}
+@media (min-width: 640px) {
+  /* line 104, assets/sass/_partials/_post-navigation.scss */
+  .post-type-archive-radio .page-nav .next .text,
+  .post-type-archive-news .page-nav .next .text {
+    display: inline-block;
+    float: right;
+  }
+}
+/* line 115, assets/sass/_partials/_post-navigation.scss */
+.post-type-archive-radio .page-nav .next .nav-next,
+.post-type-archive-news .page-nav .next .nav-next {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+/*  
+.post-type-archive-radio,
+.post-type-archive-news
+*/
+/* end archive navigation */
 /* default */
 /* line 3, assets/sass/_partials/_archivelist.scss */
 body {
@@ -10966,10 +11506,6 @@ body.post-type-archive-news.paged article a .news-item-title {
 
 /* .date-item */
 /* single */
-/* line 33, assets/sass/_partials/_events.scss */
-.single-events {
-  /*section#upcoming-events*/
-}
 /* line 35, assets/sass/_partials/_events.scss */
 .single-events .details-wrap.outer-grid-item {
   padding-top: 36px;
@@ -11092,12 +11628,14 @@ body.post-type-archive-news.paged article a .news-item-title {
 .single-events section#event-details {
   overflow: hidden;
 }
-/* line 56, assets/sass/_partials/_events.scss */
-.single-events section#upcoming-events {
+
+/* single */
+/* line 62, assets/sass/_partials/_events.scss */
+section#upcoming-events {
   width: 100%;
 }
-/* line 59, assets/sass/_partials/_events.scss */
-.single-events section#upcoming-events .event-item {
+/* line 65, assets/sass/_partials/_events.scss */
+section#upcoming-events .event-item {
   min-height: 50vh;
   padding: 36px;
   padding: 52px;
@@ -11105,31 +11643,31 @@ body.post-type-archive-news.paged article a .news-item-title {
   background-position: center;
 }
 @media screen and (min-width: 0px) {
-  /* line 59, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item {
+  /* line 65, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item {
     padding: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 59, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item {
+  /* line 65, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item {
     padding: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 59, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item {
+  /* line 65, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item {
     padding: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 59, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item {
+  /* line 65, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item {
     padding: 64px;
   }
 }
-/* line 65, assets/sass/_partials/_events.scss */
-.single-events section#upcoming-events .event-item .event-name {
+/* line 71, assets/sass/_partials/_events.scss */
+section#upcoming-events .event-item .event-name {
   font-size: 10px;
   font-size: 16px;
   line-height: 18px;
@@ -11137,55 +11675,55 @@ body.post-type-archive-news.paged article a .news-item-title {
   font-weight: 500;
 }
 @media screen and (min-width: 0px) {
-  /* line 65, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item .event-name {
+  /* line 71, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item .event-name {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 65, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item .event-name {
+  /* line 71, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item .event-name {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 65, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item .event-name {
+  /* line 71, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item .event-name {
     font-size: calc(16px + 8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 65, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item .event-name {
+  /* line 71, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item .event-name {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 65, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item .event-name {
+  /* line 71, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item .event-name {
     line-height: calc(18px + 4.1 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 65, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item .event-name {
+  /* line 71, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item .event-name {
     line-height: 22.1px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 65, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item .event-name {
+  /* line 71, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item .event-name {
     line-height: calc(26px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 65, assets/sass/_partials/_events.scss */
-  .single-events section#upcoming-events .event-item .event-name {
+  /* line 71, assets/sass/_partials/_events.scss */
+  section#upcoming-events .event-item .event-name {
     line-height: 27.2px;
   }
 }
 
-/* single */
+/*section#upcoming-events*/
 /* line 80, assets/sass/_partials/_events.scss */
 .event-summary {
   overflow: visible;
@@ -14384,472 +14922,10 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
 }
 
 /*  archive */
-/* archive navigation */
-/* line 791, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav {
-  margin: auto;
-  width: 100%;
-  display: block;
-  position: relative;
-  clear: both;
-  text-align: center;
-  padding-bottom: 36px;
-  padding-bottom: 52px;
-  padding-top: 18px;
-  padding-top: 26px;
-}
-@media screen and (min-width: 0px) {
-  /* line 791, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav {
-    padding-bottom: calc(36px + 16 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 791, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav {
-    padding-bottom: 52px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 791, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav {
-    padding-bottom: calc(52px + 12 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 791, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav {
-    padding-bottom: 64px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 791, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav {
-    padding-top: calc(18px + 8 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 791, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav {
-    padding-top: 26px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 791, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav {
-    padding-top: calc(26px + 6 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 791, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav {
-    padding-top: 32px;
-  }
-}
-/* line 801, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .page-nav-wrapper {
-  position: relative;
-  margin: auto;
-}
-/* line 806, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-  margin: auto;
-  width: auto;
-  padding-left: 9px;
-  padding-left: 13px;
-  padding-right: 9px;
-  padding-right: 13px;
-  position: relative;
-  display: inline-block;
-  float: none;
-  font-weight: 400;
-  text-align: center;
-  font-size: 9px;
-  font-size: 13px;
-  height: 27px;
-  height: 39px;
-  width: 27px;
-  width: 39px;
-  line-height: 27px;
-  line-height: 39px;
-}
-@media screen and (min-width: 0px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    padding-left: calc(9px + 4 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    padding-left: 13px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    padding-left: calc(13px + 3 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    padding-left: 16px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    padding-right: calc(9px + 4 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    padding-right: 13px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    padding-right: calc(13px + 3 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    padding-right: 16px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    font-size: calc(9px + 4 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    font-size: 13px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    font-size: calc(13px + 3 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    height: calc(27px + 12 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    height: 39px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    height: calc(39px + 9 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    height: 48px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    width: calc(27px + 12 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    width: 39px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    width: calc(39px + 9 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    width: 48px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    line-height: calc(27px + 12 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    line-height: 39px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    line-height: calc(39px + 9 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 806, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers {
-    line-height: 48px;
-  }
-}
-/* line 825, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.current {
-  opacity: 0.6;
-  font-weight: 100;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  opacity: 0.5;
-}
-/* line 833, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.next, .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.prev {
-  position: absolute;
-}
-@media (min-width: 640px) {
-  /* line 833, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.next, .post-type-archive-radio .page-nav .page-nav-wrapper .page-numbers.prev {
-    width: 33.33%;
-  }
-}
-/* line 849, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .prev {
-  left: 0px;
-}
-/* line 852, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-  transform: rotate(180deg);
-  height: 100%;
-  width: 9px;
-  width: 13px;
-  padding-bottom: 3.6px;
-  padding-bottom: 5.2px;
-  margin-right: 9px;
-  margin-right: 13px;
-}
-@media screen and (min-width: 0px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    width: calc(9px + 4 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    width: 13px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    width: calc(13px + 3 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    width: 16px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    padding-bottom: 5.2px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    padding-bottom: 6.4px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    margin-right: calc(9px + 4 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    margin-right: 13px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    margin-right: calc(13px + 3 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 852, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .previous-arrow-icon {
-    margin-right: 16px;
-  }
-}
-/* line 860, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .prev .text {
-  display: none;
-  text-align: left;
-}
-@media (min-width: 640px) {
-  /* line 860, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .prev .text {
-    display: block;
-  }
-}
-/* line 870, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .prev .nav-previous {
-  position: relative;
-  display: inline-block;
-  float: left;
-}
-/* line 878, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .next {
-  right: 0px;
-}
-/* line 881, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .next .next-arrow-icon {
-  height: 100%;
-  width: 9px;
-  width: 13px;
-  padding-top: 3.6px;
-  padding-top: 5.2px;
-  margin-left: 9px;
-  margin-left: 13px;
-}
-@media screen and (min-width: 0px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    width: calc(9px + 4 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    width: 13px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    width: calc(13px + 3 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    width: 16px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    padding-top: calc(3.6px + 1.6 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    padding-top: 5.2px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    padding-top: calc(5.2px + 1.2 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    padding-top: 6.4px;
-  }
-}
-@media screen and (min-width: 0px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    margin-left: calc(9px + 4 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    margin-left: 13px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    margin-left: calc(13px + 3 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 881, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .next-arrow-icon {
-    margin-left: 16px;
-  }
-}
-/* line 888, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .next .text {
-  display: none;
-  text-align: right;
-}
-@media (min-width: 640px) {
-  /* line 888, assets/sass/_partials/_radio.scss */
-  .post-type-archive-radio .page-nav .next .text {
-    display: inline-block;
-    float: right;
-  }
-}
-/* line 899, assets/sass/_partials/_radio.scss */
-.post-type-archive-radio .page-nav .next .nav-next {
-  position: relative;
-  display: inline-block;
-  float: right;
-}
-
-/*  post-type-archive-radio */
-/* end archive navigation */
 /* Player */
 /* LAYOUT *
 -----------------------------------------------*/
-/* line 927, assets/sass/_partials/_radio.scss */
+/* line 795, assets/sass/_partials/_radio.scss */
 .cf:before,
 .cf:after {
   content: " ";
@@ -14858,17 +14934,17 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
   /* 2 */
 }
 
-/* line 933, assets/sass/_partials/_radio.scss */
+/* line 801, assets/sass/_partials/_radio.scss */
 .cf:after {
   clear: both;
 }
 
-/* line 937, assets/sass/_partials/_radio.scss */
+/* line 805, assets/sass/_partials/_radio.scss */
 .cf {
   *zoom: 1;
 }
 
-/* line 941, assets/sass/_partials/_radio.scss */
+/* line 809, assets/sass/_partials/_radio.scss */
 * {
   box-sizing: border-box;
 }
@@ -14877,7 +14953,7 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
 -----------------------------------------------*/
 /* PLAYER ICON *
 -----------------------------------------------*/
-/* line 959, assets/sass/_partials/_radio.scss */
+/* line 827, assets/sass/_partials/_radio.scss */
 .play-toggle {
   padding: 30%;
   cursor: pointer;
@@ -14888,7 +14964,7 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 967, assets/sass/_partials/_radio.scss */
+/* line 835, assets/sass/_partials/_radio.scss */
 .play-toggle svg {
   width: 100%;
   height: 100%;
@@ -14898,20 +14974,20 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 975, assets/sass/_partials/_radio.scss */
+/* line 843, assets/sass/_partials/_radio.scss */
 .play-toggle path {
   fill: white;
 }
-/* line 979, assets/sass/_partials/_radio.scss */
+/* line 847, assets/sass/_partials/_radio.scss */
 .play-toggle #play,
 .play-toggle #pause {
   display: none !important;
 }
-/* line 984, assets/sass/_partials/_radio.scss */
+/* line 852, assets/sass/_partials/_radio.scss */
 .play-toggle:hover {
   pointer-events: none;
 }
-/* line 987, assets/sass/_partials/_radio.scss */
+/* line 855, assets/sass/_partials/_radio.scss */
 .play-toggle:hover svg {
   transform: scale(1.25);
   transform-origin: center;
@@ -14919,12 +14995,12 @@ body.post-type-archive-radio .first-page .bottom-container .radio-item .cover-im
 }
 
 /* .play-toggle */
-/* line 998, assets/sass/_partials/_radio.scss */
+/* line 866, assets/sass/_partials/_radio.scss */
 .play-toggle.active-pause svg path {
   fill: #dd4444;
 }
 
-/* line 1010, assets/sass/_partials/_radio.scss */
+/* line 878, assets/sass/_partials/_radio.scss */
 body.sc-loaded .play-toggle {
   pointer-events: initial;
   opacity: 1;
@@ -14933,12 +15009,12 @@ body.sc-loaded .play-toggle {
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 1016, assets/sass/_partials/_radio.scss */
+/* line 884, assets/sass/_partials/_radio.scss */
 body.sc-loaded .play-toggle:hover {
   pointer-events: initial;
 }
 
-/* line 1031, assets/sass/_partials/_radio.scss */
+/* line 899, assets/sass/_partials/_radio.scss */
 a.sc-player,
 .button {
   display: inline-block;
@@ -14949,7 +15025,7 @@ a.sc-player,
 
 /* SOUNDCLOUD PLAYER *
 -----------------------------------------------*/
-/* line 1057, assets/sass/_partials/_radio.scss */
+/* line 925, assets/sass/_partials/_radio.scss */
 .sc-player {
   position: absolute;
   height: 100vh;
@@ -14959,7 +15035,7 @@ a.sc-player,
 }
 
 /* Artworks */
-/* line 1068, assets/sass/_partials/_radio.scss */
+/* line 936, assets/sass/_partials/_radio.scss */
 .sc-player .sc-artwork-list {
   display: none;
   float: left;
@@ -14969,18 +15045,18 @@ a.sc-player,
   position: relative;
   height: 100%;
 }
-/* line 1078, assets/sass/_partials/_radio.scss */
+/* line 946, assets/sass/_partials/_radio.scss */
 .sc-player .sc-artwork-list li {
   list-style-type: none;
   display: none;
 }
-/* line 1083, assets/sass/_partials/_radio.scss */
+/* line 951, assets/sass/_partials/_radio.scss */
 .sc-player .sc-artwork-list li.active {
   list-style-type: none;
   display: block;
 }
 
-/* line 1089, assets/sass/_partials/_radio.scss */
+/* line 957, assets/sass/_partials/_radio.scss */
 .sc-player .sc-artwork-list li img,
 .sc-player .sc-artwork-list li div {
   list-style-type: none;
@@ -14989,7 +15065,7 @@ a.sc-player,
 }
 
 /* controls */
-/* line 1097, assets/sass/_partials/_radio.scss */
+/* line 965, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls {
   display: block;
   height: 25vw;
@@ -15000,7 +15076,7 @@ a.sc-player,
   pointer-events: none;
 }
 @media (min-width: 640px) {
-  /* line 1097, assets/sass/_partials/_radio.scss */
+  /* line 965, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: 72px;
     height: 104px;
@@ -15009,31 +15085,31 @@ a.sc-player,
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 1097, assets/sass/_partials/_radio.scss */
+  /* line 965, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: calc(72px + 32 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 1097, assets/sass/_partials/_radio.scss */
+  /* line 965, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: 104px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 1097, assets/sass/_partials/_radio.scss */
+  /* line 965, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: calc(104px + 24 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 1097, assets/sass/_partials/_radio.scss */
+  /* line 965, assets/sass/_partials/_radio.scss */
   .sc-player .sc-controls {
     height: 128px;
   }
 }
 
-/* line 1128, assets/sass/_partials/_radio.scss */
+/* line 996, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a {
   pointer-events: initial;
   content: '';
@@ -15045,11 +15121,11 @@ a.sc-player,
   transition: all 0.3s ease-out;
   cursor: pointer;
 }
-/* line 1144, assets/sass/_partials/_radio.scss */
+/* line 1012, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a:hover {
   background: black;
 }
-/* line 1149, assets/sass/_partials/_radio.scss */
+/* line 1017, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a:after {
   /*
   content: '';
@@ -15070,24 +15146,24 @@ a.sc-player,
   */
 }
 
-/* line 1171, assets/sass/_partials/_radio.scss */
+/* line 1039, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a.sc-pause:after {
   background-position: bottom;
 }
 
-/* line 1175, assets/sass/_partials/_radio.scss */
+/* line 1043, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-time-indicators {
   color: white;
   text-align: right;
 }
 
-/* line 1182, assets/sass/_partials/_radio.scss */
+/* line 1050, assets/sass/_partials/_radio.scss */
 .sc-player .sc-controls a {
   height: 50%;
 }
 
 /* scrubber */
-/* line 1201, assets/sass/_partials/_radio.scss */
+/* line 1069, assets/sass/_partials/_radio.scss */
 .sc-scrubber {
   position: absolute;
   bottom: 12.5vw;
@@ -15096,11 +15172,11 @@ a.sc-player,
   padding-right: 12.5vw;
   z-index: 1;
 }
-/* line 1210, assets/sass/_partials/_radio.scss */
+/* line 1078, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-buffer {
   cursor: pointer;
 }
-/* line 1216, assets/sass/_partials/_radio.scss */
+/* line 1084, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-buffer,
 .sc-scrubber .sc-played {
   height: 10px;
@@ -15108,13 +15184,13 @@ a.sc-player,
   top: 0;
   border-radius: 5px;
 }
-/* line 1225, assets/sass/_partials/_radio.scss */
+/* line 1093, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-time-indicators {
   position: absolute;
   right: 12.5vw;
   bottom: -6.25vw;
 }
-/* line 1231, assets/sass/_partials/_radio.scss */
+/* line 1099, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-time-span {
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 5px;
@@ -15122,17 +15198,17 @@ a.sc-player,
   overflow: hidden;
   height: 10px;
 }
-/* line 1240, assets/sass/_partials/_radio.scss */
+/* line 1108, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-volume-slider {
   background-color: white;
   border-radius: 2px;
   display: none;
 }
-/* line 1246, assets/sass/_partials/_radio.scss */
+/* line 1114, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-volume-slider .sc-volume-status {
   border-right: 1px solid white;
 }
-/* line 1250, assets/sass/_partials/_radio.scss */
+/* line 1118, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-waveform-container {
   z-index: 800;
   width: 100%;
@@ -15140,21 +15216,21 @@ a.sc-player,
   margin-top: -50px;
   pointer-events: none;
 }
-/* line 1259, assets/sass/_partials/_radio.scss */
+/* line 1127, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-time-span img {
   height: 100px;
   width: 100%;
   display: block;
   opacity: 0;
 }
-/* line 1266, assets/sass/_partials/_radio.scss */
+/* line 1134, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-buffer {
   background: white;
   z-index: 1;
   position: absolute;
   opacity: 0.25;
 }
-/* line 1274, assets/sass/_partials/_radio.scss */
+/* line 1142, assets/sass/_partials/_radio.scss */
 .sc-scrubber .sc-played {
   cursor: pointer;
   background: white;
@@ -15163,7 +15239,7 @@ a.sc-player,
 }
 
 /* volume control */
-/* line 1284, assets/sass/_partials/_radio.scss */
+/* line 1152, assets/sass/_partials/_radio.scss */
 .sc-volume-slider {
   top: -35px;
   left: 0px;
@@ -15172,7 +15248,7 @@ a.sc-player,
   height: 20px;
   background-color: white;
 }
-/* line 1292, assets/sass/_partials/_radio.scss */
+/* line 1160, assets/sass/_partials/_radio.scss */
 .sc-volume-slider .sc-volume-status {
   position: absolute;
   width: 0%;
@@ -15183,41 +15259,41 @@ a.sc-player,
 
 /* tracks */
 /* Track listings*/
-/* line 1304, assets/sass/_partials/_radio.scss */
+/* line 1172, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist {
   opacity: 0;
   pointer-events: none;
   display: block;
   width: 100%;
 }
-/* line 1310, assets/sass/_partials/_radio.scss */
+/* line 1178, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li {
   width: 100%;
   cursor: pointer;
   background: black;
 }
-/* line 1323, assets/sass/_partials/_radio.scss */
+/* line 1191, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li:last-child {
   margin-bottom: 0;
 }
-/* line 1327, assets/sass/_partials/_radio.scss */
+/* line 1195, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li a {
   display: block;
 }
-/* line 1333, assets/sass/_partials/_radio.scss */
+/* line 1201, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li:hover {
   background: black;
 }
-/* line 1338, assets/sass/_partials/_radio.scss */
+/* line 1206, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li.active {
   background: black;
 }
-/* line 1344, assets/sass/_partials/_radio.scss */
+/* line 1212, assets/sass/_partials/_radio.scss */
 .sc-player ol.sc-trackslist li.active a {
   color: #fff;
 }
 
-/* line 1354, assets/sass/_partials/_radio.scss */
+/* line 1222, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items {
   position: relative;
   width: 100%;
@@ -15229,30 +15305,30 @@ a.sc-player,
   padding-bottom: 52px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1354, assets/sass/_partials/_radio.scss */
+  /* line 1222, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items {
     padding-bottom: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1354, assets/sass/_partials/_radio.scss */
+  /* line 1222, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items {
     padding-bottom: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1354, assets/sass/_partials/_radio.scss */
+  /* line 1222, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items {
     padding-bottom: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1354, assets/sass/_partials/_radio.scss */
+  /* line 1222, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items {
     padding-bottom: 64px;
   }
 }
-/* line 1363, assets/sass/_partials/_radio.scss */
+/* line 1231, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li {
   width: 100%;
   cursor: pointer;
@@ -15262,7 +15338,7 @@ a.sc-player,
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   overflow: hidden;
 }
-/* line 1372, assets/sass/_partials/_radio.scss */
+/* line 1240, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping {
   position: relative;
   padding-top: 9px;
@@ -15271,54 +15347,54 @@ a.sc-player,
   padding-bottom: 13px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1372, assets/sass/_partials/_radio.scss */
+  /* line 1240, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping {
     padding-top: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1372, assets/sass/_partials/_radio.scss */
+  /* line 1240, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping {
     padding-top: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1372, assets/sass/_partials/_radio.scss */
+  /* line 1240, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping {
     padding-top: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1372, assets/sass/_partials/_radio.scss */
+  /* line 1240, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping {
     padding-top: 16px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1372, assets/sass/_partials/_radio.scss */
+  /* line 1240, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping {
     padding-bottom: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1372, assets/sass/_partials/_radio.scss */
+  /* line 1240, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping {
     padding-bottom: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1372, assets/sass/_partials/_radio.scss */
+  /* line 1240, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping {
     padding-bottom: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1372, assets/sass/_partials/_radio.scss */
+  /* line 1240, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping {
     padding-bottom: 16px;
   }
 }
-/* line 1377, assets/sass/_partials/_radio.scss */
+/* line 1245, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.radio-item {
   display: block;
   width: 16.6667%;
@@ -15329,7 +15405,7 @@ a.sc-player,
   top: 0px;
   bottom: 0px;
 }
-/* line 1387, assets/sass/_partials/_radio.scss */
+/* line 1255, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap {
   width: 12.5vw;
   overflow: hidden;
@@ -15338,14 +15414,14 @@ a.sc-player,
   height: 100%;
 }
 @media (min-width: 640px) {
-  /* line 1387, assets/sass/_partials/_radio.scss */
+  /* line 1255, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap {
     width: 6.25vw;
     margin: auto;
     float: none;
   }
 }
-/* line 1403, assets/sass/_partials/_radio.scss */
+/* line 1271, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.radio-item .play-icon-wrap .play-toggle.inline-small {
   padding: 25% 0;
   display: block;
@@ -15355,14 +15431,14 @@ a.sc-player,
   margin: auto;
   height: 100%;
 }
-/* line 1417, assets/sass/_partials/_radio.scss */
+/* line 1285, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item {
   display: block;
   position: relative;
   overflow: hidden;
   z-index: 2;
 }
-/* line 1423, assets/sass/_partials/_radio.scss */
+/* line 1291, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
   display: block;
   float: left;
@@ -15378,102 +15454,102 @@ a.sc-player,
   padding-bottom: 6.5px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-top: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-top: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-top: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-top: 8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-left: calc(5px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-left: 15px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-left: calc(15px + 5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-left: 20px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-right: calc(5px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-right: 15px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-right: calc(15px + 5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-right: 20px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-bottom: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-bottom: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-bottom: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1423, assets/sass/_partials/_radio.scss */
+  /* line 1291, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap {
     padding-bottom: 8px;
   }
 }
-/* line 1440, assets/sass/_partials/_radio.scss */
+/* line 1308, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
   font-size: 10px;
   font-size: 16px;
@@ -15485,54 +15561,54 @@ a.sc-player,
   display: block;
 }
 @media screen and (min-width: 0px) {
-  /* line 1440, assets/sass/_partials/_radio.scss */
+  /* line 1308, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1440, assets/sass/_partials/_radio.scss */
+  /* line 1308, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1440, assets/sass/_partials/_radio.scss */
+  /* line 1308, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: calc(16px + 8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1440, assets/sass/_partials/_radio.scss */
+  /* line 1308, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1440, assets/sass/_partials/_radio.scss */
+  /* line 1308, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: calc(18px + 4.1 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1440, assets/sass/_partials/_radio.scss */
+  /* line 1308, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: 22.1px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1440, assets/sass/_partials/_radio.scss */
+  /* line 1308, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: calc(26px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1440, assets/sass/_partials/_radio.scss */
+  /* line 1308, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-name {
     line-height: 27.2px;
   }
 }
-/* line 1448, assets/sass/_partials/_radio.scss */
+/* line 1316, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
   font-weight: 100;
   font-size: 10px;
@@ -15543,54 +15619,54 @@ a.sc-player,
   float: left;
 }
 @media screen and (min-width: 0px) {
-  /* line 1448, assets/sass/_partials/_radio.scss */
+  /* line 1316, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1448, assets/sass/_partials/_radio.scss */
+  /* line 1316, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1448, assets/sass/_partials/_radio.scss */
+  /* line 1316, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1448, assets/sass/_partials/_radio.scss */
+  /* line 1316, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1448, assets/sass/_partials/_radio.scss */
+  /* line 1316, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1448, assets/sass/_partials/_radio.scss */
+  /* line 1316, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1448, assets/sass/_partials/_radio.scss */
+  /* line 1316, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1448, assets/sass/_partials/_radio.scss */
+  /* line 1316, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-date {
     line-height: 25.6px;
   }
 }
-/* line 1454, assets/sass/_partials/_radio.scss */
+/* line 1322, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
   font-size: 10px;
   font-size: 12.8px;
@@ -15606,134 +15682,134 @@ a.sc-player,
   right: 0;
 }
 @media screen and (min-width: 0px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     line-height: 25.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     font-size: 12.8px;
   }
 }
 @media (min-width: 640px) {
-  /* line 1454, assets/sass/_partials/_radio.scss */
+  /* line 1322, assets/sass/_partials/_radio.scss */
   #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap .radio-view-item {
     position: absolute;
     width: 16.6667%;
     text-align: center;
   }
 }
-/* line 1476, assets/sass/_partials/_radio.scss */
+/* line 1344, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping a.view-radio-item .details-wrap:hover .radio-view-item {
   opacity: 1;
   animation: opacity-in-0_5 200ms ease-in forwards;
 }
-/* line 1487, assets/sass/_partials/_radio.scss */
+/* line 1355, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping:hover {
   background: black;
 }
-/* line 1492, assets/sass/_partials/_radio.scss */
+/* line 1360, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping.active {
   background: black;
 }
-/* line 1498, assets/sass/_partials/_radio.scss */
+/* line 1366, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping.active a {
   color: #fff;
 }
-/* line 1504, assets/sass/_partials/_radio.scss */
+/* line 1372, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li .wrapping:last-child {
   margin-bottom: 0;
   border-bottom: 0px;
 }
-/* line 1511, assets/sass/_partials/_radio.scss */
+/* line 1379, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li:hover {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   margin-top: -1px;
 }
-/* line 1520, assets/sass/_partials/_radio.scss */
+/* line 1388, assets/sass/_partials/_radio.scss */
 #other-shows .radio-items li:last-child {
   border-bottom: 0px solid white;
 }
 
-/* line 1527, assets/sass/_partials/_radio.scss */
+/* line 1395, assets/sass/_partials/_radio.scss */
 .sc-track-duration {
   float: right;
 }
 
 /* Track info*/
-/* line 1535, assets/sass/_partials/_radio.scss */
+/* line 1403, assets/sass/_partials/_radio.scss */
 .sc-player .sc-info {
   display: none;
 }
-/* line 1545, assets/sass/_partials/_radio.scss */
+/* line 1413, assets/sass/_partials/_radio.scss */
 .sc-player .sc-info h4 {
   display: none;
 }
 
-/* line 1553, assets/sass/_partials/_radio.scss */
+/* line 1421, assets/sass/_partials/_radio.scss */
 p {
   /* max-width: 38em;
    max-width: 38rem;
@@ -15742,14 +15818,14 @@ p {
    text-align: left;*/
 }
 
-/* line 1561, assets/sass/_partials/_radio.scss */
+/* line 1429, assets/sass/_partials/_radio.scss */
 .sc-player .sc-info-toggle,
 .sc-player .sc-info-close {
   display: none;
 }
 
 /* utilities */
-/* line 1572, assets/sass/_partials/_radio.scss */
+/* line 1440, assets/sass/_partials/_radio.scss */
 .sc-player-engine-container {
   width: 1px;
   height: 1px;
@@ -15759,18 +15835,18 @@ p {
 }
 
 /* Player - different states: */
-/* line 1608, assets/sass/_partials/_radio.scss */
+/* line 1476, assets/sass/_partials/_radio.scss */
 body.pulsate-player-icon .toggle-icon-wrap .toggle-icon {
   transform: scale(1.25) !important;
   transform-origin: center;
   transition: 400ms ease-in-out;
 }
-/* line 1616, assets/sass/_partials/_radio.scss */
+/* line 1484, assets/sass/_partials/_radio.scss */
 body.pulsate-player-icon .toggle-icon-wrap .toggle-icon g {
   stroke-width: 2;
 }
 
-/* line 1629, assets/sass/_partials/_radio.scss */
+/* line 1497, assets/sass/_partials/_radio.scss */
 .radio-container {
   overflow: hidden;
   height: 100vh;
@@ -15783,24 +15859,24 @@ body.pulsate-player-icon .toggle-icon-wrap .toggle-icon g {
   pointer-events: none;
 }
 
-/* line 1649, assets/sass/_partials/_radio.scss */
+/* line 1517, assets/sass/_partials/_radio.scss */
 body.sc-player-playing .radio-container,
 body.sc-player-paused .radio-container {
   pointer-events: none;
   display: block;
 }
 
-/* line 1662, assets/sass/_partials/_radio.scss */
+/* line 1530, assets/sass/_partials/_radio.scss */
 body.single-radio {
   /*.radio-container */
 }
-/* line 1664, assets/sass/_partials/_radio.scss */
+/* line 1532, assets/sass/_partials/_radio.scss */
 body.single-radio .radio-container {
   position: absolute;
   z-index: 9;
   /* .sc-player */
 }
-/* line 1668, assets/sass/_partials/_radio.scss */
+/* line 1536, assets/sass/_partials/_radio.scss */
 body.single-radio .radio-container .sc-player {
   padding-left: 0px;
   position: absolute;
@@ -15811,7 +15887,7 @@ body.single-radio .radio-container .sc-player {
   background: transparent;
   min-height: initial;
 }
-/* line 1679, assets/sass/_partials/_radio.scss */
+/* line 1547, assets/sass/_partials/_radio.scss */
 body.single-radio .radio-container .sc-player .sc-controls {
   display: block;
   height: 12.5vw;
@@ -15821,7 +15897,7 @@ body.single-radio .radio-container .sc-player .sc-controls {
   width: 12.5vw;
   pointer-events: none;
 }
-/* line 1689, assets/sass/_partials/_radio.scss */
+/* line 1557, assets/sass/_partials/_radio.scss */
 body.single-radio .radio-container .sc-player .sc-scrubber {
   width: 100%;
   position: absolute;
@@ -15835,19 +15911,19 @@ body.single-radio .radio-container .sc-player .sc-scrubber {
   left: 0;
 }
 @media (min-width: 640px) {
-  /* line 1689, assets/sass/_partials/_radio.scss */
+  /* line 1557, assets/sass/_partials/_radio.scss */
   body.single-radio .radio-container .sc-player .sc-scrubber {
     padding-left: 12.5vw;
     padding-right: 12.5vw;
   }
 }
 
-/* line 1740, assets/sass/_partials/_radio.scss */
+/* line 1608, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
  {
   /*.radio-container */
 }
-/* line 1745, assets/sass/_partials/_radio.scss */
+/* line 1613, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
 .radio-container {
   pointer-events: initial;
@@ -15855,7 +15931,7 @@ body.post-type-archive-radio
   z-index: initial;
   /* .sc-player */
 }
-/* line 1751, assets/sass/_partials/_radio.scss */
+/* line 1619, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
 .radio-container .sc-player {
       /*  padding-left: 0px;
@@ -15866,7 +15942,7 @@ body.post-type-archive-radio
         top: 0px;
 */
 }
-/* line 1759, assets/sass/_partials/_radio.scss */
+/* line 1627, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
 .radio-container .sc-player .sc-controls {
   /*
@@ -15879,7 +15955,7 @@ body.post-type-archive-radio
             pointer-events:none;
     */
 }
-/* line 1771, assets/sass/_partials/_radio.scss */
+/* line 1639, assets/sass/_partials/_radio.scss */
 body.post-type-archive-radio
 .radio-container .sc-player .sc-scrubber {
   width: 100%;
@@ -15890,7 +15966,7 @@ body.post-type-archive-radio
   z-index: 1;
 }
 @media (min-width: 640px) {
-  /* line 1771, assets/sass/_partials/_radio.scss */
+  /* line 1639, assets/sass/_partials/_radio.scss */
   body.post-type-archive-radio
   .radio-container .sc-player .sc-scrubber {
     padding-left: 12.5vw;
@@ -15903,14 +15979,14 @@ body.post-type-archive-radio
 height: 10vh; // this used?
 }
 */
-/* line 1819, assets/sass/_partials/_radio.scss */
+/* line 1687, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player,
 body.post-type-archive-releases,
 body
  {
   /*.radio-container */
 }
-/* line 1826, assets/sass/_partials/_radio.scss */
+/* line 1694, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container,
 body.post-type-archive-releases .radio-container,
 body
@@ -15920,7 +15996,7 @@ body
   z-index: 98;
   /* .sc-container */
 }
-/* line 1832, assets/sass/_partials/_radio.scss */
+/* line 1700, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player,
 body.post-type-archive-releases .radio-container .sc-player,
 body
@@ -15934,7 +16010,7 @@ body
   padding-left: 0px;
 }
 @media (min-width: 640px) {
-  /* line 1832, assets/sass/_partials/_radio.scss */
+  /* line 1700, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player,
   body.post-type-archive-releases .radio-container .sc-player,
   body
@@ -15943,7 +16019,7 @@ body
   }
 }
 @media (min-width: 960px) {
-  /* line 1832, assets/sass/_partials/_radio.scss */
+  /* line 1700, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player,
   body.post-type-archive-releases .radio-container .sc-player,
   body
@@ -15951,7 +16027,7 @@ body
     min-height: 12.5vw;
   }
 }
-/* line 1854, assets/sass/_partials/_radio.scss */
+/* line 1722, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-controls,
 body.post-type-archive-releases .radio-container .sc-player .sc-controls,
 body
@@ -15965,7 +16041,7 @@ body
   float: left;
   height: inherit;
 }
-/* line 1864, assets/sass/_partials/_radio.scss */
+/* line 1732, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-controls a.sc-play,
 body.post-type-archive-releases .radio-container .sc-player .sc-controls a.sc-play,
 body
@@ -15980,7 +16056,7 @@ body
   height: 25vw;
 }
 @media (min-width: 640px) {
-  /* line 1864, assets/sass/_partials/_radio.scss */
+  /* line 1732, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-controls a.sc-play,
   body.post-type-archive-releases .radio-container .sc-player .sc-controls a.sc-play,
   body
@@ -15988,7 +16064,7 @@ body
     height: 12.5vw;
   }
 }
-/* line 1882, assets/sass/_partials/_radio.scss */
+/* line 1750, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-controls a.sc-play .play-toggle,
 body.post-type-archive-releases .radio-container .sc-player .sc-controls a.sc-play .play-toggle,
 body
@@ -15996,7 +16072,7 @@ body
   position: relative;
   padding: 30%;
 }
-/* line 1896, assets/sass/_partials/_radio.scss */
+/* line 1764, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-controls .player-toggle,
 body.post-type-archive-releases .radio-container .sc-player .sc-controls .player-toggle,
 body
@@ -16010,7 +16086,7 @@ body
   z-index: 3;
 }
 @media (min-width: 320px) {
-  /* line 1896, assets/sass/_partials/_radio.scss */
+  /* line 1764, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-controls .player-toggle,
   body.post-type-archive-releases .radio-container .sc-player .sc-controls .player-toggle,
   body
@@ -16021,7 +16097,7 @@ body
   }
 }
 @media (min-width: 640px) {
-  /* line 1896, assets/sass/_partials/_radio.scss */
+  /* line 1764, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-controls .player-toggle,
   body.post-type-archive-releases .radio-container .sc-player .sc-controls .player-toggle,
   body
@@ -16029,7 +16105,7 @@ body
     line-height: 6.25vw;
   }
 }
-/* line 1920, assets/sass/_partials/_radio.scss */
+/* line 1788, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
 body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
 body
@@ -16041,7 +16117,7 @@ body
   width: 100%;
 }
 @media screen and (min-width: 0px) {
-  /* line 1920, assets/sass/_partials/_radio.scss */
+  /* line 1788, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
   body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
   body
@@ -16050,7 +16126,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1920, assets/sass/_partials/_radio.scss */
+  /* line 1788, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
   body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
   body
@@ -16059,7 +16135,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1920, assets/sass/_partials/_radio.scss */
+  /* line 1788, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
   body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
   body
@@ -16068,7 +16144,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1920, assets/sass/_partials/_radio.scss */
+  /* line 1788, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-scrubber,
   body.post-type-archive-releases .radio-container .sc-player .sc-scrubber,
   body
@@ -16076,7 +16152,7 @@ body
     top: 32px;
   }
 }
-/* line 1936, assets/sass/_partials/_radio.scss */
+/* line 1804, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
 body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
 body
@@ -16090,7 +16166,7 @@ body
   margin-top: 6.5px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1936, assets/sass/_partials/_radio.scss */
+  /* line 1804, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -16099,7 +16175,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1936, assets/sass/_partials/_radio.scss */
+  /* line 1804, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -16108,7 +16184,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1936, assets/sass/_partials/_radio.scss */
+  /* line 1804, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -16117,7 +16193,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1936, assets/sass/_partials/_radio.scss */
+  /* line 1804, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -16126,7 +16202,7 @@ body
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1936, assets/sass/_partials/_radio.scss */
+  /* line 1804, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -16135,7 +16211,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1936, assets/sass/_partials/_radio.scss */
+  /* line 1804, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -16144,7 +16220,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1936, assets/sass/_partials/_radio.scss */
+  /* line 1804, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -16153,7 +16229,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1936, assets/sass/_partials/_radio.scss */
+  /* line 1804, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-time-indicators,
   body.post-type-archive-releases .radio-container .sc-player .sc-time-indicators,
   body
@@ -16161,7 +16237,7 @@ body
     margin-top: 8px;
   }
 }
-/* line 1944, assets/sass/_partials/_radio.scss */
+/* line 1812, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
 body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
 body
@@ -16174,7 +16250,7 @@ body
   float: left;
 }
 @media screen and (min-width: 0px) {
-  /* line 1944, assets/sass/_partials/_radio.scss */
+  /* line 1812, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
   body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
   body
@@ -16183,7 +16259,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1944, assets/sass/_partials/_radio.scss */
+  /* line 1812, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
   body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
   body
@@ -16192,7 +16268,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1944, assets/sass/_partials/_radio.scss */
+  /* line 1812, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
   body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
   body
@@ -16201,7 +16277,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1944, assets/sass/_partials/_radio.scss */
+  /* line 1812, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player ol.sc-trackslist,
   body.post-type-archive-releases .radio-container .sc-player ol.sc-trackslist,
   body
@@ -16209,7 +16285,7 @@ body
     margin-top: 64px;
   }
 }
-/* line 1962, assets/sass/_partials/_radio.scss */
+/* line 1830, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-trackslist li,
 body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li,
 body
@@ -16220,14 +16296,14 @@ body
   background: transparent;
   width: 80%;
 }
-/* line 1970, assets/sass/_partials/_radio.scss */
+/* line 1838, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-trackslist li .sc-track-duration,
 body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li .sc-track-duration,
 body
 .radio-container .sc-player .sc-trackslist li .sc-track-duration {
   display: none;
 }
-/* line 1976, assets/sass/_partials/_radio.scss */
+/* line 1844, assets/sass/_partials/_radio.scss */
 body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
 body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
 body
@@ -16243,7 +16319,7 @@ body
   padding-top: 13px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1976, assets/sass/_partials/_radio.scss */
+  /* line 1844, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -16252,7 +16328,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1976, assets/sass/_partials/_radio.scss */
+  /* line 1844, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -16261,7 +16337,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1976, assets/sass/_partials/_radio.scss */
+  /* line 1844, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -16270,7 +16346,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1976, assets/sass/_partials/_radio.scss */
+  /* line 1844, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -16279,7 +16355,7 @@ body
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1976, assets/sass/_partials/_radio.scss */
+  /* line 1844, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -16288,7 +16364,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1976, assets/sass/_partials/_radio.scss */
+  /* line 1844, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -16297,7 +16373,7 @@ body
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1976, assets/sass/_partials/_radio.scss */
+  /* line 1844, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -16306,7 +16382,7 @@ body
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1976, assets/sass/_partials/_radio.scss */
+  /* line 1844, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -16315,7 +16391,7 @@ body
   }
 }
 @media (min-width: 640px) {
-  /* line 1976, assets/sass/_partials/_radio.scss */
+  /* line 1844, assets/sass/_partials/_radio.scss */
   body.sticky-radio-player .radio-container .sc-player .sc-trackslist li.active,
   body.post-type-archive-releases .radio-container .sc-player .sc-trackslist li.active,
   body
@@ -16326,7 +16402,7 @@ body
 
 /* body.sticky-radio-player
    body:not(.single-radio) */
-/* line 1998, assets/sass/_partials/_radio.scss */
+/* line 1866, assets/sass/_partials/_radio.scss */
 body.post-type-archive-releases {
   /*.radio-container */
   /*
@@ -16334,18 +16410,18 @@ body.post-type-archive-releases {
 &.sticky-radio-player
 */
 }
-/* line 2000, assets/sass/_partials/_radio.scss */
+/* line 1868, assets/sass/_partials/_radio.scss */
 body.post-type-archive-releases .radio-container {
   /* .sc-container */
 }
-/* line 2044, assets/sass/_partials/_radio.scss */
+/* line 1912, assets/sass/_partials/_radio.scss */
 body.post-type-archive-releases.sc-minimised .view-module, body.post-type-archive-releases.sc-player-playing .view-module, body.post-type-archive-releases.sc-player-paused .view-module {
   top: 12.5vw;
 }
 
 /* body.post-type-archive-release */
 /* markup for the min / max toggle: */
-/* line 2063, assets/sass/_partials/_radio.scss */
+/* line 1931, assets/sass/_partials/_radio.scss */
 body {
   /*sc-player.*/
   /*end player specifics */
@@ -16356,11 +16432,11 @@ body {
   }//&.sc-maximised
   */
 }
-/* line 2065, assets/sass/_partials/_radio.scss */
+/* line 1933, assets/sass/_partials/_radio.scss */
 body .sc-player {
   /* .player-toggle */
 }
-/* line 2067, assets/sass/_partials/_radio.scss */
+/* line 1935, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle {
   height: 50%;
   display: block;
@@ -16368,22 +16444,22 @@ body .sc-player .player-toggle {
   pointer-events: initial;
 }
 @media (min-width: 640px) {
-  /* line 2067, assets/sass/_partials/_radio.scss */
+  /* line 1935, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle {
     width: 50%;
   }
 }
 @media (min-width: 1280px) {
-  /* line 2067, assets/sass/_partials/_radio.scss */
+  /* line 1935, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle {
     width: 50%;
   }
 }
-/* line 2081, assets/sass/_partials/_radio.scss */
+/* line 1949, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .toggle-icon-wrap {
   display: none;
 }
-/* line 2086, assets/sass/_partials/_radio.scss */
+/* line 1954, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .toggle-icon-wrap .toggle-icon svg {
   width: 100%;
   height: 100%;
@@ -16392,7 +16468,7 @@ body .sc-player .player-toggle .toggle-icon-wrap .toggle-icon svg {
   margin: 0 auto;
   overflow: visible;
 }
-/* line 2099, assets/sass/_partials/_radio.scss */
+/* line 1967, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .sc-maximise,
 body .sc-player .player-toggle .sc-minimise {
   position: relative;
@@ -16411,67 +16487,67 @@ body .sc-player .player-toggle .sc-minimise {
   line-height: 25vw;
 }
 @media screen and (min-width: 0px) {
-  /* line 2099, assets/sass/_partials/_radio.scss */
+  /* line 1967, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 2099, assets/sass/_partials/_radio.scss */
+  /* line 1967, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     font-size: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 2099, assets/sass/_partials/_radio.scss */
+  /* line 1967, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 2099, assets/sass/_partials/_radio.scss */
+  /* line 1967, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     font-size: 12.8px;
   }
 }
 @media (min-width: 320px) {
-  /* line 2099, assets/sass/_partials/_radio.scss */
+  /* line 1967, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     line-height: 25vw;
   }
 }
 @media (min-width: 640px) {
-  /* line 2099, assets/sass/_partials/_radio.scss */
+  /* line 1967, assets/sass/_partials/_radio.scss */
   body .sc-player .player-toggle .sc-maximise,
   body .sc-player .player-toggle .sc-minimise {
     line-height: 12.5vw;
   }
 }
-/* line 2126, assets/sass/_partials/_radio.scss */
+/* line 1994, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .sc-maximise:hover,
 body .sc-player .player-toggle .sc-minimise:hover {
   transform: scale(1.25);
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 2134, assets/sass/_partials/_radio.scss */
+/* line 2002, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .sc-maximise {
   opacity: 0;
 }
-/* line 2138, assets/sass/_partials/_radio.scss */
+/* line 2006, assets/sass/_partials/_radio.scss */
 body .sc-player .player-toggle .sc-minimise {
   opacity: 1;
 }
-/* line 2146, assets/sass/_partials/_radio.scss */
+/* line 2014, assets/sass/_partials/_radio.scss */
 body.sc-minimised {
   /* player specifics*/
 }
-/* line 2152, assets/sass/_partials/_radio.scss */
+/* line 2020, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player {
   pointer-events: none;
   height: auto;
@@ -16483,12 +16559,12 @@ body.sc-minimised .radio-container .sc-player {
   animation: 0.5s forwards fade-out;
 }
 @media (min-width: 640px) {
-  /* line 2152, assets/sass/_partials/_radio.scss */
+  /* line 2020, assets/sass/_partials/_radio.scss */
   body.sc-minimised .radio-container .sc-player {
     min-height: 12.5vw;
   }
 }
-/* line 2167, assets/sass/_partials/_radio.scss */
+/* line 2035, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls {
   margin-top: 0;
   z-index: 2;
@@ -16496,13 +16572,13 @@ body.sc-minimised .radio-container .sc-player .sc-controls {
   left: 0;
   float: left;
 }
-/* line 2175, assets/sass/_partials/_radio.scss */
+/* line 2043, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls a.sc-play {
   display: none;
   pointer-events: none !important;
   height: 50%;
 }
-/* line 2182, assets/sass/_partials/_radio.scss */
+/* line 2050, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle {
   height: 100%;
   width: 100%;
@@ -16512,12 +16588,12 @@ body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle {
   top: 0;
 }
 @media (min-width: 640px) {
-  /* line 2182, assets/sass/_partials/_radio.scss */
+  /* line 2050, assets/sass/_partials/_radio.scss */
   body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle {
     min-height: 12.5vw;
   }
 }
-/* line 2197, assets/sass/_partials/_radio.scss */
+/* line 2065, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .toggle-icon-wrap {
   display: block;
   position: absolute;
@@ -16525,7 +16601,7 @@ body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .toggl
   bottom: 0px;
   width: 100%;
 }
-/* line 2204, assets/sass/_partials/_radio.scss */
+/* line 2072, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .toggle-icon-wrap .toggle-icon {
   height: 100%;
   position: relative;
@@ -16533,42 +16609,42 @@ body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .toggl
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 2213, assets/sass/_partials/_radio.scss */
+/* line 2081, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .sc-maximise {
   position: relative;
   width: 100%;
   opacity: 1;
 }
-/* line 2219, assets/sass/_partials/_radio.scss */
+/* line 2087, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle .sc-minimise {
   position: absolute;
   width: 100%;
   opacity: 0;
 }
-/* line 2230, assets/sass/_partials/_radio.scss */
+/* line 2098, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-controls .player-toggle:hover .toggle-icon-wrap .toggle-icon {
   transform: scale(1.25);
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 2244, assets/sass/_partials/_radio.scss */
+/* line 2112, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-scrubber {
   display: none;
 }
-/* line 2248, assets/sass/_partials/_radio.scss */
+/* line 2116, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-time-indicators {
   display: none;
 }
-/* line 2252, assets/sass/_partials/_radio.scss */
+/* line 2120, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player ol.sc-trackslist {
   display: none;
 }
-/* line 2256, assets/sass/_partials/_radio.scss */
+/* line 2124, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-trackslist li {
   display: none;
   height: 0px;
 }
-/* line 2260, assets/sass/_partials/_radio.scss */
+/* line 2128, assets/sass/_partials/_radio.scss */
 body.sc-minimised .radio-container .sc-player .sc-trackslist li .sc-track-duration {
   display: none;
 }
@@ -21488,9 +21564,93 @@ https://flickity.metafizzy.co
 .event-block {
   width: 100%;
 }
-/* line 6, assets/sass/_partials/_block-event.scss */
-.event-block a {
-  width: 100%;
+/* line 4, assets/sass/_partials/_block-event.scss */
+.event-block .event-item {
+  min-height: 50vh;
+  padding: 36px;
+  padding: 52px;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 0px) {
+  /* line 4, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item {
+    padding: calc(36px + 16 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 4, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item {
+    padding: 52px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 4, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item {
+    padding: calc(52px + 12 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 4, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item {
+    padding: 64px;
+  }
+}
+/* line 11, assets/sass/_partials/_block-event.scss */
+.event-block .event-item .event-name {
+  font-size: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  line-height: 26px;
+  font-weight: 500;
+}
+@media screen and (min-width: 0px) {
+  /* line 11, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item .event-name {
+    font-size: calc(10px + 6 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 11, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item .event-name {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 11, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item .event-name {
+    font-size: calc(16px + 8 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 11, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item .event-name {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 11, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item .event-name {
+    line-height: calc(18px + 4.1 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 11, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item .event-name {
+    line-height: 22.1px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 11, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item .event-name {
+    line-height: calc(26px + 1.2 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 11, assets/sass/_partials/_block-event.scss */
+  .event-block .event-item .event-name {
+    line-height: 27.2px;
+  }
 }
 
 /*.event-block */
@@ -21500,7 +21660,7 @@ compass watch ~/sites/inp-wp/wp-content/themes/inperspectiverecords/
 cd ~/sites/inp-wp/wp-content/themes/inperspectiverecords/
 */
 /* START */
-/* line 53, assets/sass/style.scss */
+/* line 55, assets/sass/style.scss */
 body {
   background: black;
 }

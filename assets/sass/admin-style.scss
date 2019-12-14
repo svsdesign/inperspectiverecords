@@ -23,6 +23,7 @@ Text Domain:
 @import "_partials/typography";
  /*  end sitewide styling */
 
+//@import "_partials/post-navigation"; Don't think we need this
 
 /* admin only side styling */
 @import "_partials/adminstyle-archivelist"; //  for example use for page title positioner (artist block) - but this fucks up my WP UI

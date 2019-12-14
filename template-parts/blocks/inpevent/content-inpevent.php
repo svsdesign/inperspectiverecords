@@ -10,13 +10,13 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'release-' . $block['id'];
+$id = 'event-' . $block['id'];
 if( !empty($block['anchor']) ) {
     $id = $block['anchor'];
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'release-block';
+$className = 'event-block';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }
@@ -46,7 +46,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
    
       <?php if($bannerart): ?>
 
-        <div class="event-item event-image-item outer-grid-item inner-padded outer-grid-item-sm-6 <?php if (in_array("true", $isupcomingnextevent)): ?>next-event<?php endif; //$isupcomingnextevent ?>" style="background-image: url('<?php echo $bannerart;?>');">
+        <div class="event-item event-image-item outer-grid-item inner-padded outer-grid-item-sm-6 <?php if (in_array("true", $isupcomingnextevent)): ?>next-event<?php endif; //$isupcomingnextevent ?>" style="background-size:cover; background-image: url('<?php echo $bannerart;?>');">
       
         <?php else:?>
 
@@ -68,7 +68,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
 
           <div class="date grid-item grid-item-xs-6 grid-item-md-3">
                 
-            <?php $startdate = get_field('event_start_date'); echo date_i18n('dS F Y', $startdate);  ?>
+            <?php $startdate = get_field('event_start_date', $eventid); echo date_i18n('dS F Y', $startdate);  ?>
             <?php// $starttime = get_field('event_start_date'); echo date_i18n('h:i', $starttime);  ?>
             <?php //$endtime = get_field('event_end_date'); echo date_i18n('h:i', $endtime);  ?>
 
@@ -86,7 +86,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
                 
                 <a class="scale-link" target="_blank" href="<?php echo $venuelink;?>">
 
-                <span><?php the_field('venue'); ?></span>   
+                <span><?php echo $venue ;?></span>   
                 <div class="svg-icon inline-icon right white-icon">
                 <?php get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
                 </div><!-- svg-icon inline-icon --> 
@@ -133,7 +133,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
         
             <div class="summary-item event-link">
 
-              <a class="scale-link" href="<?php the_permalink();?>">
+              <a class="scale-link" href="<?php the_permalink($eventid);?>">
                 
                 <span class="">More Information</span>
                 <div class="svg-icon inline-icon right white-icon">

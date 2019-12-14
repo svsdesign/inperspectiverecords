@@ -64,11 +64,15 @@
 			</div><!--.grid-item-->
 
 	 	</div><!--.post-entry-details -->
-
-			<?php the_content(); ?>
+		
+		<div class="post-content grid inner outer-grid-item outer-grid-item-xs-6">
+ 		<?php the_content(); ?>
+	 	</div><!--.post-content -->
 
  	</div><!--.post-entry-content -->
 
+<?php /*we current don use any of the "related releasse" custom fields that are being added if category is release & news is single 
+*/?>
 
 <?php endif; // is single ?>
 
