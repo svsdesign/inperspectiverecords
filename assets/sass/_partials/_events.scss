@@ -47,19 +47,18 @@ text-align: center;
   .event-name{
   @include h1;
   font-weight: $boldweight;
+
+    @media (min-width: map-get($breakpoints,md)) {
+    padding-right: 50%;
+    }
+
   }
 
   section#event-details{
   overflow: hidden;// fixed the overflow on safari - review + delete comments
   }
 
-  
-
-
-} /* single */
-
-
-section#upcoming-events{
+  section#upcoming-events{
   width: 100%;
 
     .event-item{
@@ -76,6 +75,12 @@ section#upcoming-events{
     }
     
   } /*section#upcoming-events*/
+
+
+} /* single */
+
+
+
 
 .event-summary{
 overflow: visible; // for transforms
