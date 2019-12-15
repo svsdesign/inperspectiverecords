@@ -2,379 +2,401 @@
 
 body{
 
-.page-title-position{
-position: fixed;
-right: 0;
-top: 0;
-width: 0px;
-height: 0px;
-z-index: 97;// below the sc player item and menue
-transform:rotate(90deg);  
-}
-/* used on
-/releases - becaus of the "scnee fixer"
- */
+    .page-title-position{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    z-index: 97;// below the sc player item and menue
+    transform:rotate(90deg);  
+    }
+    /* used on
+    /releases - becaus of the "scnee fixer"
+     */
 
-.page-title-position.absolute{
-position: absolute;
-}
+    .page-title-position.absolute{
+    position: absolute;
+    }
 
-/* used on /events */
+    /* used on /events */
 
-.page-title-position.sticky{
-position: -webkit-sticky;
-position: sticky;
-right: initial;
-/* top: initial; */
-width: 100vh;
-height: 100vh;
-z-index: 97;// below the sc player item and menue
-transform: rotate(-90deg);
-/* transform-origin: bottom right; */
-overflow: visible;
-bottom: 0px;
+    .page-title-position.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    right: initial;
+    /* top: initial; */
+    width: 100vh;
+    height: 100vh;
+    z-index: 97;// below the sc player item and menue
+    transform: rotate(-90deg);
+    /* transform-origin: bottom right; */
+    overflow: visible;
+    bottom: 0px;
+
+        .page-title{
+        position: absolute;
+        bottom: -12.5vw;
+        width: 100vh;
+        color: white;
+        font-weight: $heavyweight;
+        @include sideheader;
+        text-align:center;
+        height: 12.5vw;
+        line-height: 12.5vw!important;
+        transform:rotate(0deg);  
+        }
+
+    }
+
+    /* used on most pages - its requireds to be inside teh section wrap */ 
+    .page-title-positioner.sticky{
+    pointer-events:none;
+    width: 100vw;
+    z-index: 97;// below the sc player item and menue 
+    position: absolute;
+    top: 0px;
+    right: 0;// adding this fixed overflow issues - review
+    // transform: rotate(-90deg);
+    /* transform-origin: bottom right; */
+    overflow: visible;
+    bottom: 0px;
+        
+        .page-titler{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
+
+            .inner{
+            //transform:rotate(-90deg);  
+            transform-origin: bottom right;
+            //    background: #c68cff2b;
+            color: white;
+            font-weight: 600;
+            @include sideheader;
+            text-align: center;
+            transform:rotate(-90deg); 
+            width: 100vh;
+            // position: absolute;
+            height: 12.5vw;
+            line-height: 12.5vw!important;
+            position: relative;
+            display: block;
+            float: right;
+            top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
+          }
+
+        } // .page-titler
+        
+        .page-titler.inline{ // used on single news items for artist blocks
+        height: 100%;
+
+          .inner{
+          width: 40vh; // height of the banners for these block
+          }
+
+        }//.page-titler.inline{
+
+    }//.page-title-positioner.sticky
+
+/*
+
+// duplication of rules - review + delete
+    .page-title-positioner.sticky{
+    pointer-events:none;
+    width: 100vw;
+    z-index: 97;// below the sc player item and menue 
+    position: absolute;
+    top: 0px;
+    right: 0;// adding this fixed overflow issues -
+  
+    overflow: visible;
+    bottom: 0px;
+        
+        .page-titler{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
+
+            .inner{
+            //transform:rotate(-90deg);  
+            transform-origin: bottom right;
+            //    background: #c68cff2b;
+            color: white;
+            font-weight: 600;
+            @include sideheader;
+            text-align: center;
+            transform:rotate(-90deg); 
+            width: 100vh;
+            // position: absolute;
+            height: 12.5vw;
+            line-height: 12.5vw!important;
+            position: relative;
+            display: block;
+            float: right;
+            top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
+          }
+
+        } // .page-titler
+        
+        .page-titler.inline{ // used on single news items for artist blocks
+        height: 100%;
+
+          .inner{
+          width: 40vh; // height of the banners for these block
+          }
+
+        }//.page-titler.inline{
+
+    }//.page-title-positioner.sticky
+*/
+    /* used for:
+    - artists-block
+    - anywhere else?
+
+    */
+
+    .page-title-positioner.left-side.sticky{
+        pointer-events:none;
+        width: 100vw;
+        z-index: 97;// below the sc player item and menue
+
+        position: absolute;
+        top: 0px;
+         overflow: visible;
+        bottom: 0px;
+        
+        .page-titler{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
+
+          .inner{
+          transform-origin: bottom left;
+          color: white;
+     //     font-weight: $mediumweight;// was $lightweight;
+          @include sideheader;
+          @include smaller;
+
+      //    @include sideheader;
+          text-align: center;
+          transform:rotate(90deg); 
+          width: 100vh;
+          height: 12.5vw;
+          line-height: 12.5vw!important;
+          position: relative;
+          display: block;
+          float: left;
+          top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
+          }
+
+        }//.page-titler
+
+        .page-titler.inline{ // used on single news items for artist blocks
+           height: 100%;
+
+          .inner{
+          width: 40vh; // height of the banners for these block
+          }
+
+        }//.page-titler.inline
+
+    }//.page-title-positioner.left-side.sticky
+
+    .page-title-position.left{
+    right: 87.5%;
+    transform:rotate(90deg);  
+    }
 
     .page-title{
-    position: absolute;
-    bottom: -12.5vw;
     width: 100vh;
     color: white;
-    font-weight: $heavyweight;
+    font-weight: 600;
     @include sideheader;
+    position: relative;
     text-align:center;
     height: 12.5vw;
     line-height: 12.5vw!important;
-    transform:rotate(0deg);  
+    transform:rotate(180deg);  
     }
 
-}
-
-/* used on most pages - its requireds to be inside teh section wrap */ 
-.page-title-positioner.sticky{
-pointer-events:none;
-width: 100vw;
-z-index: 97;// below the sc player item and menue 
-position: absolute;
-top: 0px;
-// transform: rotate(-90deg);
-/* transform-origin: bottom right; */
-overflow: visible;
-bottom: 0px;
-    
-    .page-titler{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
-
-        .inner{
-        //transform:rotate(-90deg);  
-        transform-origin: bottom right;
-        //    background: #c68cff2b;
-        color: white;
-        font-weight: 600;
-        @include sideheader;
-        text-align: center;
-        transform:rotate(-90deg); 
-        width: 100vh;
-        // position: absolute;
-        height: 12.5vw;
-        line-height: 12.5vw!important;
-        position: relative;
-        display: block;
-        float: right;
-        top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
-      }
-
-    } // .page-titler
-    
-    .page-titler.inline{ // used on single news items for artist blocks
-    height: 100%;
-
-      .inner{
-      width: 40vh; // height of the banners for these block
-      }
-
-    }//.page-titler.inline{
-
-}//.page-title-positioner.sticky
-
-.page-title-positioner.sticky{
-pointer-events:none;
-width: 100vw;
-z-index: 97;// below the sc player item and menue 
-position: absolute;
-top: 0px;
-// transform: rotate(-90deg);
-/* transform-origin: bottom right; */
-overflow: visible;
-bottom: 0px;
-    
-    .page-titler{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
-
-        .inner{
-        //transform:rotate(-90deg);  
-        transform-origin: bottom right;
-        //    background: #c68cff2b;
-        color: white;
-        font-weight: 600;
-        @include sideheader;
-        text-align: center;
-        transform:rotate(-90deg); 
-        width: 100vh;
-        // position: absolute;
-        height: 12.5vw;
-        line-height: 12.5vw!important;
-        position: relative;
-        display: block;
-        float: right;
-        top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
-      }
-
-    } // .page-titler
-    
-    .page-titler.inline{ // used on single news items for artist blocks
-    height: 100%;
-
-      .inner{
-      width: 40vh; // height of the banners for these block
-      }
-
-    }//.page-titler.inline{
-
-}//.page-title-positioner.sticky
-
-/* used for:
-- artists-block
-- anywhere else?
-
-*/
-.page-title-positioner.left-side.sticky{
-    pointer-events:none;
-    width: 100vw;
-    z-index: 97;// below the sc player item and menue
-
-    position: absolute;
-    top: 0px;
-     overflow: visible;
-    bottom: 0px;
-    
-    .page-titler{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
-
-      .inner{
-      transform-origin: bottom left;
-      color: white;
- //     font-weight: $mediumweight;// was $lightweight;
-      @include sideheader;
-      @include smaller;
-
-  //    @include sideheader;
-      text-align: center;
-      transform:rotate(90deg); 
-      width: 100vh;
-      height: 12.5vw;
-      line-height: 12.5vw!important;
-      position: relative;
-      display: block;
-      float: left;
-      top: -12.5vw; // this offset the top bits - based on heigh of item- fuck knows why 
-      }
-
-    }//.page-titler
-
-    .page-titler.inline{ // used on single news items for artist blocks
-       height: 100%;
-
-      .inner{
-      width: 40vh; // height of the banners for these block
-      }
-
-    }//.page-titler.inline
-
-}//.page-title-positioner.left-side.sticky
-
-
-
-
- 
-
-
-.page-title-position.left{
-  right: 87.5%;
-  transform:rotate(90deg);  
-}
-.page-title{
-  width: 100vh;
-  color: white;
-  font-weight: 600;
-  @include sideheader;
-  position: relative;
-  text-align:center;
-  height: 12.5vw;
-  line-height: 12.5vw!important;
-  transform:rotate(180deg);  
-}
-
+}//body
 
 
 /*END PAGE TITLES*/
 
 
-.list-items{
-  width:75vw;
-  display: block;
-  margin:10vw auto 10vw auto;
-  position: relative;
-  z-index: 1 ;
+/* START ARCHIVE LIST:
+ - artist
 
-}
+*/
 
-div.list-item,
-a.list-item{
-    //@include h1;
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-  position:relative;
-  display:block;
-  float:left;
-  clear:both;
-   @include cssvalue(height, 3);//!important; //60px!important; // dirty
-  @include cssvalue(line-height, 3); //60px!important; // dirty
-
-//  line-height:60px!important; // dirty
-  width: 100%;
-  font-weight: $mediumweight;
- // border-bottom:1px solid white;
-  overflow:hidden;
-  border-top:1px solid transparent;
-  border-bottom: 1px solid transparent;
-  margin-top: -1px;  
-  z-index:1;
-  padding-left:map-get($gutter,xs);
-
-  @media (min-width: map-get($breakpoints,md)) {
-    &.list-item{
-        padding-left:map-get($gutter,md);
-      }
-  }
-  @media (min-width: map-get($breakpoints,lg)) {
-    &.list-item{
-        padding-left:map-get($gutter,lg);
-      }
-  }
-  @media (min-width: map-get($breakpoints,xl)) {
-    &.list-item{
-        padding-left:map-get($gutter,xl);
-      }
-  }
-
-  .item-text{
-  @include blur;
-  height: inherit;
-  line-height: inherit;
-  }
+body{ 
 
 
-}//div.list-item,
- //a.list-item
-
-
-.list-item:hover{
-border-top:1px solid $grey;
-border-bottom: 1px solid $grey;
-z-index:2;
-
-    .item-text{
-    @include focus;
+    .list-items{
+    width:75vw;
+    display: block;
+    margin:10vw auto 10vw auto;
+    position: relative;
+    z-index: 1;
     }
-   
-} //.list-item:hover
- 
-.image-items-wrap{
 
-}
+    div.list-item,
+    a.list-item{
+     cursor: pointer;
+    text-decoration: none;
+    color: white;
+    position:relative;
+    display:block;
+    float:left;
+    clear:both;
+    @include cssvalue(height, 3);
+    @include cssvalue(line-height, 3);
+    width: 100%;
+    font-weight: $mediumweight;
+     overflow:hidden;
+    border-top:1px solid transparent;
+    border-bottom: 1px solid transparent;
+    margin-top: -1px;  
+    z-index:1;
+    padding-left:map-get($gutter,xs);
 
-.image-items{
-width: 100%;
-height: auto;
-z-index: 0;
-filter: grayscale(1);
-top:0px;
-bottom:0px;
-position: absolute;
-//  overflow: auto;
-}
-.image-item{
-width: 100%;
-height:0vh;
-display: none;
-background-size: cover;  
-//   position:absolute;
-//top: 0;
-opacity: 0;
-@include image-blur-out;
-filter: blur(10px);
-}
+      @media (min-width: map-get($breakpoints,md)) {
+        &.list-item{
+          padding-left:map-get($gutter,md);
+        }
+      }
+      @media (min-width: map-get($breakpoints,lg)) {
+        &.list-item{
+          padding-left:map-get($gutter,lg);
+        }
+      }
+      @media (min-width: map-get($breakpoints,xl)) {
+        &.list-item{
+          padding-left:map-get($gutter,xl);
+        }
+      }
 
-.image-item{
-   animation: opacityout 400ms ease-in forwards;
-}
-.image-item.active{
-display: block;
-height: 100vh;
-top: 0;
-opacity: 1;
-background-repeat: no-repeat;
-background-position: center center;
-position: -webkit-sticky;
-position: sticky;
-
-  @include focus;
- @include image-blur;
- }
-
-.image-item.activated{
-  opacity: 1;
-  @include focus;
- @include image-blur;
-
-}
+      .item-text{
+      @include blur;
+      height: inherit;
+      line-height: inherit;
+      }
 
 
-.container.activated{
- 
-  .image-items{
-    
+    }//div.list-item,
+    //a.list-item
+
+
+    .image-items-wrap{
+    }
+
+    .image-items{
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    filter: grayscale(1);
+    top:0px;
+    bottom:0px;
+    position: absolute;
+    }
+
     .image-item{
-    animation: image-blur-in-active 400ms ease-in forwards; 
+    width: 100%;
+    height:0vh;
+    display: none;
+    background-size: cover; 
+    opacity: 0;
+    @include image-blur-out;
+    filter: blur(10px);
     }
 
-  }
-  
-  .list-items{
-  pointer-events:none;
-  animation: opacityout 400ms ease-in forwards;    
-  }
-  
-}
+    .image-item{
+    animation: opacityout 400ms ease-in forwards;
+    }
+    .image-item.active{
+    display: block;
+    height: 100vh;
+    top: 0;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: -webkit-sticky;
+    position: sticky;
+
+    @include focus;
+    @include image-blur;
+    }
+
+    .image-item.activated{
+    opacity: 1;
+    @include focus;
+    @include image-blur;
+
+    }
 
 
+    .container.activated{
+     
+      .image-items{
+        
+        .image-item{
+        animation: image-blur-in-active 400ms ease-in forwards; 
+        }
+
+      }
+      
+      .list-items{
+      pointer-events:none;
+      animation: opacityout 400ms ease-in forwards;    
+      }
+      
+    }
 
 }//body
 
-/* place into artist css files or summit8?
-*/
+
+// touch or mouse specifics
+
+body.is-touch{ // no hover states
+
+  .list-item{
+  border-top:1px solid $grey;
+  border-bottom: 1px solid $grey;
+  z-index:2;
+
+      .item-text{
+      @include focus;
+      }
+     
+  } //.list-item:hover
+
+}//body.is-touch
+
+
+
+body.is-not-touch{
+
+  .list-item:hover{
+  border-top:1px solid $grey;
+  border-bottom: 1px solid $grey;
+  z-index:2;
+
+      .item-text{
+      @include focus;
+      }
+     
+  } //.list-item:hover
+
+}//body.is-not-touch
+
+
 
 

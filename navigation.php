@@ -53,6 +53,7 @@
 					C1204.181,16.107,1191.781,0,1171.287,0z" fill-rule="nonzero"/>
 
 	 			</svg>
+ 	 			<div class="inp-bg-close"></div>
 
  			</div>
 

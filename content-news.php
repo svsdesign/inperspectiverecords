@@ -65,7 +65,7 @@
 
 	 	</div><!--.post-entry-details -->
 		
-		<div class="post-content grid inner outer-grid-item outer-grid-item-xs-6">
+		<div class="post-content grid inner outer-grid-item outer-grid-item-xs-8"><!-- was outer-grid-item-xs-6 - review + delete comment -->
  		<?php the_content(); ?>
 	 	</div><!--.post-content -->
 

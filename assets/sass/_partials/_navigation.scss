@@ -256,26 +256,50 @@ body{
 	    	pointer-events:none;
 	    	z-index: -1;
 
+	    	
+	    	
 	    		.inp-bg{
 	    		position: relative;
 	    		width: 100%;
 	    		height: auto;
 	    		float: right;
+	    		pointer-events:none;
+
 
 	    			svg{
 	    			float: right;
 	    			height: 125vw; // or if height = larger then set as vh instead?
 	    			width: auto;
+		    		z-index: 2;
+		    		pointer-events:none;
+		    		position: relative;
 		    		}
 
 					path{
+	    			pointer-events: visiblefill;
 					stroke: none;
 					fill: rgba(128, 128, 128, 0.25);
 				    mix-blend-mode: luminosity;
-
+				    //cursor: move;// delete
 					}
 
 	    		}
+
+	    		.inp-bg-close{
+	    		z-index: 1;
+	    		pointer-events:initial;
+	    		position: absolute;
+	    		top: 0;
+	    		bottom: 0px;
+	    		right:0px;
+	    		left: 0px;
+	    		cursor:pointer;//review
+
+					&:hover{
+	    			//background: red;
+	    			}
+
+		    	}
 
 	    	}
 

@@ -270,7 +270,11 @@ TO DO:
         var nav = document.getElementById( 'head-nav' ), button, menu;
         if ( ! nav )
           return;
-        button = nav.getElementsByClassName( 'navigation-toggle' )[0];
+       button = nav.getElementsByClassName( 'navigation-toggle')[0];
+       bgclose = nav.getElementsByClassName( 'inp-bg-close')[0]; 
+ 
+
+      //  button = nav.querySelectorAll(".navigation-toggle, .inp-bg-close")
         menu   = nav.getElementsByTagName( 'ul' )[0];
         
 
@@ -285,6 +289,30 @@ TO DO:
           button.style.display = 'none';
           return;
         }
+
+        
+        bgclose.onclick = function toggler() {
+          if ( -1 == menu.className.indexOf( 'navigation-item' ) )
+            menu.className = 'navigation-item';
+
+          if ( -1 != button.className.indexOf( ' toggled-on' ) ) {
+              body.className = body.className.replace( ' toggled-on', '' );
+              button.className = button.className.replace( ' toggled-on', '' );
+              menu.className = menu.className.replace( ' toggled-on', '' );
+
+              toIdot();          
+            
+          } else {
+
+              body.className += ' toggled-on';
+              button.className += ' toggled-on';
+              menu.className += ' toggled-on';
+
+              toMinus();
+                                 
+          } // if
+
+        }; // we're essetnially repeating two functions - not very neat
 
         button.onclick = function toggler() {
           if ( -1 == menu.className.indexOf( 'navigation-item' ) )
