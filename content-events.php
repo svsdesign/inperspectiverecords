@@ -94,8 +94,8 @@
 					</span> 
 
 					<span class="time">
-					<?php $starttime = get_field('event_start_date'); echo date_i18n('h:i', $starttime);  ?> -
-					<?php $endtime = get_field('event_end_date'); echo date_i18n('h:i', $endtime);  ?>
+					<?php $starttime = get_field('event_start_date'); echo date_i18n('H:i', $starttime);  ?> -
+					<?php $endtime = get_field('event_end_date'); echo date_i18n('H:i', $endtime);  ?>
 					</span> 
 
 				</div><!-- .date -->
@@ -351,8 +351,6 @@
 		</div><!--.outer-grid-item inner -->
 
 	</section><!-- event-details outer-grid-item inner -->
-
-
  
 		<?php 		
 		$now = current_time( 'timestamp' );
@@ -392,7 +390,7 @@
 				<section id="upcoming-events" class="">
 
 					<div class="upcoming-events-title grid">	
-						<span class="outer-grid-item-sm-4">
+						<span class="grid-item-xs-6 grid-item-md-3 grid-item-lg-2">
 						Upcoming Events:	
 						</span>
 
@@ -722,7 +720,7 @@
  
  		 
 			
-			<div class="date grid-item grid-item-xs-2 grid-item-md-1">
+			<div class="date grid-item grid-item-xs-2 grid-item-sm-1 grid-item-md-1">
 						
 				<?php $startdate = get_field('event_start_date'); echo date_i18n('d.m.Y', $startdate);  ?>
 				<?php// $starttime = get_field('event_start_date'); echo date_i18n('h:i', $starttime);  ?>
@@ -730,7 +728,7 @@
 
 			</div><!-- .date -->
 
-			<div class="event-name grid-item grid-item-xs-2 grid-item-md-3">
+			<div class="event-name grid-item grid-item-xs-2 grid-item-sm-3 grid-item-md-3">
 						
 				<?php $name = the_title(); echo $name;  ?>
 							

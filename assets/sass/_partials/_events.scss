@@ -367,30 +367,38 @@ overflow: visible; /* this because of sticky can't be hidden? */
         }
 
         .past-event-item{
-//          @include lineheight;
-
+ 
             .date{
-             @include smaller;
-                       @include lineheight;
+           //  @include smaller;
+           //  @include lineheight;
+            border-right: 1px solid $white_0-25;
+            font-weight: $mediumweight;
+            @include cssvalue(font-size, 0.3);
+            text-align: right;
+            overflow: hidden;
 
-            //  font-weight: $boldweight;
+              @media (min-width: map-get($breakpoints,sm)) {
+              }
+
+              @media (min-width: map-get($breakpoints,md)) {
+              overflow: visible;//review this
+              border-right: none;
+              @include cssvalue(font-size, 0.4);
+              text-align: left;
+              }
+
             }
 
             .event-name{
-                        @include lineheight;
-
-          //   text-align: center;
+            @include lineheight;
             }
 
             .venue{
-              text-align: right;
-                        @include lineheight;
-
-              @include smaller;
-              font-weight: $mediumweight;
+            text-align: right;
+            @include lineheight;
+            @include smaller;
+            font-weight: $mediumweight;
             }
-
-
 
         }/*event-item */
 
