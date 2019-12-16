@@ -2976,8 +2976,13 @@ section {
 }
 
 /* IMAGES */
+/* line 278, assets/sass/_partials/_gridsystem.scss */
+img {
+  opacity: 0;
+}
+
 /* no selection on images */
-/* line 283, assets/sass/_partials/_gridsystem.scss */
+/* line 285, assets/sass/_partials/_gridsystem.scss */
 img {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2985,6 +2990,21 @@ img {
   user-select: none;
 }
 
+/* line 295, assets/sass/_partials/_gridsystem.scss */
+body #ajax-wrapper {
+  opacity: 0;
+}
+
+/* line 303, assets/sass/_partials/_gridsystem.scss */
+body.loaded #ajax-wrapper {
+  animation: opacity-in 200ms ease-in forwards;
+}
+/* line 306, assets/sass/_partials/_gridsystem.scss */
+body.loaded #ajax-wrapper img {
+  opacity: 1;
+}
+
+/* end IMAGES */
 /*_icons.scss*/
 /* line 7, assets/sass/_partials/_icons.scss */
 .svg-icon svg {
@@ -3775,7 +3795,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(27deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(23deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -7096,7 +7116,6 @@ https://flickity.metafizzy.co
 /* line 195, assets/sass/_partials/_block-gallery.scss */
 .gallery-block {
   width: 100%;
-  height: 90vh;
   margin-bottom: 25px;
   margin-bottom: 75px;
 }
@@ -7159,16 +7178,18 @@ https://flickity.metafizzy.co
 /* line 204, assets/sass/_partials/_block-gallery.scss */
 .gallery-block .outer-grid-item.inner {
   height: inherit;
+  max-height: inherit;
 }
-/* line 208, assets/sass/_partials/_block-gallery.scss */
+/* line 209, assets/sass/_partials/_block-gallery.scss */
 .gallery-block .outer-grid-item.inner .gallery-carousel {
   height: inherit;
+  max-height: inherit;
 }
-/* line 211, assets/sass/_partials/_block-gallery.scss */
+/* line 213, assets/sass/_partials/_block-gallery.scss */
 .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport {
   width: 100%;
 }
-/* line 214, assets/sass/_partials/_block-gallery.scss */
+/* line 216, assets/sass/_partials/_block-gallery.scss */
 .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
   display: block;
   height: 100%;
@@ -7179,52 +7200,69 @@ https://flickity.metafizzy.co
   margin-left: 7.5px;
 }
 @media screen and (min-width: 0px) {
-  /* line 214, assets/sass/_partials/_block-gallery.scss */
+  /* line 216, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-right: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 214, assets/sass/_partials/_block-gallery.scss */
+  /* line 216, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-right: 7.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 214, assets/sass/_partials/_block-gallery.scss */
+  /* line 216, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-right: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 214, assets/sass/_partials/_block-gallery.scss */
+  /* line 216, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-right: 10px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 214, assets/sass/_partials/_block-gallery.scss */
+  /* line 216, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-left: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 214, assets/sass/_partials/_block-gallery.scss */
+  /* line 216, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-left: 7.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 214, assets/sass/_partials/_block-gallery.scss */
+  /* line 216, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-left: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 214, assets/sass/_partials/_block-gallery.scss */
+  /* line 216, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-left: 10px;
   }
+}
+
+/* line 237, assets/sass/_partials/_block-gallery.scss */
+body.horizontal .gallery-block {
+  height: 80vh;
+  max-height: 60vh;
+}
+@media (min-width: 960px) {
+  /* line 237, assets/sass/_partials/_block-gallery.scss */
+  body.horizontal .gallery-block {
+    max-height: 75vh;
+  }
+}
+
+/* line 254, assets/sass/_partials/_block-gallery.scss */
+body.vertical .gallery-block {
+  height: 60vw;
 }
 
 /* Merch Block */

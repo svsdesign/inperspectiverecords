@@ -276,8 +276,10 @@ section{
 
 
 img{
- // opacity: 0; < review this w/ image loaded
+ opacity: 0; 
 } 
+
+
 
 /* no selection on images */
 img {
@@ -287,6 +289,30 @@ img {
     user-select: none;
 }
 
+// images loaded
+body{ // images loaded:
+
+  #ajax-wrapper{
+  opacity: 0;
+  }
+
+}
+
+body.loaded{ // images loaded:
+
+  #ajax-wrapper{
+
+  @include opacity-in;
+     img{
+     opacity: 1;
+    }
+ 
+  }
+
+}//body.loaded
+//end images loaded
+
+/* end IMAGES */
 
 
 

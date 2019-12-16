@@ -108,7 +108,7 @@
 				
 				<?php if($description): ?>
 
-					<div class="show-description-wrap grid-item push-item-left-xs-1 grid-item-xs-4">
+					<div class="show-description-wrap grid-item grid-item-xs-6 grid-item-md-4 push-item-left-md-1">
 	
 						<div class="description">
 
