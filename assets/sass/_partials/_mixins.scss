@@ -115,10 +115,10 @@ block {
   }
 }
 
- 
+
 
 @mixin body{
- 
+
 @include fluid-type(font-size, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($fontsize, xs)*1, map-get($fontsize, lg)*1); // fixed sizing 
 @include fluid-type(font-size, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($fontsize, lg)*0.8, map-get($fontsize, xxl)*0.8); // fixed sizing 
 
@@ -154,6 +154,16 @@ block {
 
 }
 
+@mixin h3{
+//font-family: $medium-font-family;
+
+@include fluid-type(font-size, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($fontsize, xs)*1, map-get($fontsize, lg)*1); // fixed sizing 
+@include fluid-type(font-size, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($fontsize, lg)*1, map-get($fontsize, xxl)*1); // fixed sizing 
+
+@include fluid-type(line-height, map-get($breakpoints, xs), map-get($breakpoints, lg), map-get($lineheight, xs)*1, map-get($lineheight, lg)*0.85); //was 0.75 // fixed sizing 
+@include fluid-type(line-height, map-get($breakpoints, lg), map-get($breakpoints, xxl), map-get($lineheight, lg)*1, map-get($lineheight, xxl)*0.85); //was 0.75// viewport sizing
+font-weight:  $lightweight;
+}
 
 @mixin sideheader{
  

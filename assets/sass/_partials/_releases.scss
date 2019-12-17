@@ -6,11 +6,12 @@ position: relative;
 
   .scene-fixer {
    //https://stackoverflow.com/questions/54646939/why-is-my-positionsticky-not-working-on-ios
-  position: sticky;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: -ms-sticky;
   position: -o-sticky;
+  position: sticky;
+
 // @include prefixparameters(position, sticky); // doesn't work - consider fixing mixin
  //bottom: 0px;
   top: 0px;
@@ -84,7 +85,12 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
         .code-wrap{
         display: block;
        // position: sticky; 
-        @include prefix(position, sticky);
+        //@include prefix(position, sticky);
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        position: sticky;
 
         @include blur;
         opacity: 0.8;
@@ -253,7 +259,13 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
 
     a{
      // position: sticky;
-      @include prefix(position, sticky);
+     // @include prefix(position, sticky);
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
+      position: sticky;
+
       top: 0  
     }
     .code-wrap{
@@ -480,10 +492,16 @@ body.release-list-view{
           top: 0px;
           }
 
-          .code-wrap{
+          .code-wrap{ //- REVIEW - I have a feeling that h jitteryness is due to the codewrap
           display: block;
-          @include prefix(position, sticky);
-           @include blur;
+         // @include prefix(position, sticky);
+         position: -webkit-sticky;
+          position: -moz-sticky;
+          position: -ms-sticky;
+          position: -o-sticky;
+          position: sticky;
+         // position: fixed;
+          @include blur;
           opacity: 0;//don't show
           top: 50vh;
           width: 100%;
@@ -514,22 +532,18 @@ body.release-list-view{
          
           .description-wrap{
           display: block;
-           @include blur;
+          @include blur;
         //  position:fixed; // make the last item sticky instead so it moves acordingly
        //   opacity: 1;// temp
-                 opacity: 1;
-                 height: 40vh;
+          opacity: 1;
+          height: 40vh;
           top: -5vh;
           width: 100%;
           text-align: center;
           position: relative;
           background-image: none;
-        //  height: auto;
-
-      
            
              .inline{
-
               float: left;
               width: inherit;
               @include padding(padding-top, 0.4);
@@ -560,7 +574,7 @@ body.release-list-view{
 
               }
               ul.artists{
-                display: none;
+              display: none;
               }
               ul.artists li{
               font-style: italic;
@@ -659,56 +673,53 @@ body.release-list-view{
       display: block;
       opacity: 1;
       @include focus;
-      @include prefix(position, sticky);
+   //   @include prefix(position, sticky);
+       position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
+      position: sticky;
       top: 5vh;
       padding-top: 0;
       height: 90vh; 
 
-       @media (min-width: map-get($breakpoints,sm)) {
-      //  top:30vh;
-            top:20vh;
-
-         height: 60vh; 
-
-        }
-        @media (min-width: map-get($breakpoints,md)) {
-      top:20vh;
-         height: 60vh; 
-
-        }
-
-       @media (min-width: map-get($breakpoints,lg)) {
-       top:10vh;
-         height: 80vh; 
-
-
-        }
-
-          .grid{
-       //     margin-top:-15vh;
-           align-items: center;
-    height: inherit;
+          @media (min-width: map-get($breakpoints,sm)) {
+          top:20vh;
+          height: 60vh; 
           }
 
-         .release-code.inline{
-          display: none;
+          @media (min-width: map-get($breakpoints,md)) {
+          top:20vh;
+          height: 60vh; 
+          }
 
-         }
-                
-         .release-title{
+          @media (min-width: map-get($breakpoints,lg)) {
+          top:10vh;
+          height: 80vh; 
+          }
+
+        .grid{
+        align-items: center;
+        height: inherit;
+        }
+
+        .release-code.inline{
+        display: none;
+        }
+
+        .release-title{
         width: auto;
+        }
 
-         }
-          ul.artists{
-          display: flex;
-          width: 100%;
+        ul.artists{
+        display: flex;
+        width: 100%;
+        }
 
-          }
+        ul.artists li:first-of-type{
+        @include padding(padding-left, 0);
 
-          ul.artists li:first-of-type{
-          @include padding(padding-left, 0);
-
-          } 
+        } 
 
  
 
@@ -827,13 +838,12 @@ body.release-list-view{
             }
 
             @media (min-width: map-get($breakpoints,md)) {
-                   top: 90vh;
+            top: 90vh;
             height: 10vh;
-
             }
 
             @media (min-width: map-get($breakpoints,lg)) {
-   top: 95vh;
+            top: 95vh;
             height: 5vh;
             }
 
@@ -1096,7 +1106,7 @@ height: 100%;
 position: absolute;
 // transform: translateZ(-288px); // where did this value come from?
 transform-style: preserve-3d;
-transition: transform 0.1s;
+//transition: transform 0.1s; // temporarly removed this because looking to get rid of the jitter // seems to make a bit of difference - especially less jitter on safari
 }
 
 
@@ -1184,7 +1194,7 @@ background-position: center;
 transform: rotateY( 180deg );
 transform-style: preserve-3d;
 backface-visibility: hidden;
-    z-index: 2;
+z-index: 2;
 
 }//.carousel__cell:after
 
@@ -1214,10 +1224,11 @@ background-size:67.5%;
 }//.carousel__cell.active
 
 
- .carousel__cell:hover a{ // this needs to be wrapped better - ie. so we can transform elements in side a swll
-   transform: rotateY(180deg)!important;
+ .carousel__cell:hover a{ 
+//   transform: rotateY(180deg)!important; // This is not used?
  }
 
+/* - don't use these - delete
 .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
 .carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(288px); }
 .carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(288px); }
@@ -1227,7 +1238,7 @@ background-size:67.5%;
 .carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(288px); }
 .carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
 .carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
-
+*/
 
 
 /* start image loading states */

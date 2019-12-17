@@ -316,14 +316,49 @@ $contactintro = get_field( 'contact_intro' ); // text area
 
   			</div><!-- .grid -->
 
- 		</div> <!-- id="privacy-page-content-->
+ 		</div> <!-- #privacy-page-content-->
 
 
- 	</section><!-- #rivacy-page-details -->
+ 	</section><!-- #privacy-page-details -->
+
+<?php elseif ( is_page( array( 343, 0000, 'terms-conditions') ) ): // ensure to target the correct id's or permalinks on the live site as well
+?>
+
+	<section id="tc-page-details" class="grid">
+ 
+		<div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
+								  
+			<div class="page-titler">
+						    
+				 <span class="inner">
+    			  <?php the_title();?>
+				</span><!-- inner -->
+
+		    </div> <!--.page-title -->
+				    
+		</div><!-- .page-title-position -->
+
+		
+		<div id="tc-page-content" class="outer-grid-item outer-grid-item-xs-6 inner">
+			
+			<div class="grid">
+
+				<div class="grid-item grid-item-xs-8 grid-item-md-4">
+    			  <?php the_content();?>		
+				</div><!-- .grid-item -->
+
+  			</div><!-- .grid -->
+
+ 		</div> <!-- #tc-page-content-->
 
 
+ 	</section><!-- #tc-page-details -->
+
+
+ 
 <?php else: // other pages: ?>
-else - page
+
+
 <!-- non of the above pages - review this design + markup; its not complete or needed at all? -->
 
 <div class="container">

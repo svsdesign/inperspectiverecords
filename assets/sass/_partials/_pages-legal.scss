@@ -1,0 +1,81 @@
+/*_pages-legal.scss*/
+
+// common styles; various legal pages; t&c + privacy
+body.privacy-policy,// local site id
+body.privacy-policy// live site id
+body.page-id-343/// t&c - local
+{	
+
+	
+	background: $black;
+	color: $white;
+
+		h1,h2,h3,p,a{
+		color: $white;
+		}
+
+		h1{
+		@include h1;
+		@include cssvalue(margin-bottom, 0.5);
+		}
+
+		h2{
+		@include h2;
+		font-weight:$mediumweight;
+		@include cssvalue(margin-bottom, 0.3);
+		}
+
+		h3{
+		@include h3;
+		//    @include cssvalue(margin-bottom, 1);
+		//font-weight:$mediumweight;
+		@include cssvalue(margin-bottom, 0.2);
+
+		}
+
+		p{
+	    @include cssvalue(margin-bottom, 1);
+	    @include smaller;
+		}
+
+		 a{
+	    //color: $news-text-color;
+	    text-decoration: none;
+	  //  @include body;
+	    }
+
+	    a:hover,
+	    a:visited,
+	    a:active{
+	   // color: $news-text-color;
+	    }
+
+}
+//body.privacy-policy,// local site id
+//body.privacy-policy// live site id
+
+//end common styles 
+
+
+body.privacy-policy,// local site id
+body.privacy-policy,// live site id
+body.page-id-343/// t&c - local
+{	
+
+
+	#privacy-page-content,
+	#tc-page-content{
+    padding-top: 12.5vw;
+    padding-bottom: 12.5vw;
+
+		.grid-item{
+		margin: auto;
+		}//.grid-item
+
+
+	}//#privacy-page-content
+
+}
+//body.privacy-policy,// local site id
+//body.privacy-policy// live site id
+

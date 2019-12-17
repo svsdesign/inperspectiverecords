@@ -88,6 +88,48 @@ $sitelocation = 'live';
 }
 //end determine if wer're local or nott
 
+// add further classes to the admin menu
+
+
+
+function wpse_320244_admin_body_class($classes) {
+//https://wordpress.stackexchange.com/questions/320244/how-do-i-add-a-custom-body-class-to-the-admin-area-of-a-page
+    global $post;
+    // get_current_screen() returns object with current admin screen
+    // @link https://codex.wordpress.org/Function_Reference/get_current_screen
+    $current_screen = get_current_screen();
+
+    if ($sitelocation = 'local'){
+
+        if($current_screen->base === "post" && absint($post->ID) === 3) {
+         $classes .= ' admin-page-id-3';
+        } 
+        elseif($current_screen->base === "post" && absint($post->ID) === 343) {
+         $classes .= ' admin-page-id-343';
+        }
+
+        return $classes;
+
+    } else {//live site:
+
+        if($current_screen->base === "post" && absint($post->ID) === 3) {
+         $classes .= ' admin-page-id-3';
+        } 
+        elseif($current_screen->base === "post" && absint($post->ID) === 343) { // review this - it probably be diff id
+         $classes .= ' admin-page-id-343';
+        }
+
+        return $classes;
+
+    }//if ($sitelocation = 'local'
+
+}
+
+add_filter('admin_body_class', 'wpse_320244_admin_body_class');
+
+// END add further classes to the admin menu
+
+
 
 
 /* "Un-register" the normal post + associated functions and options

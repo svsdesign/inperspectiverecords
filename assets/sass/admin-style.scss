@@ -30,10 +30,12 @@ Text Domain:
 @import "_partials/adminstyle-news";// - review. includs admin styles such as assigning background and general type styles
 //@import "_partials/news";  // review - this is the front end style sheet for news - ensure a clear seperation + possible stylesheet that can overlap into the two
 /* end admin only side styling */
-
 @import "_partials/blocks-reset"; // This is to remove all this shite that wordpress is adding?! - I don't understand how badly their style are assigned. 
 // It doesn't make any sense atm - review I imagine?
 //@import "_partials/404"; // proibably not needed
+// pages:
+
+@import "_partials/adminstyle-pages-legal";
 
 
 /* blocks - styles applied to front and back end */

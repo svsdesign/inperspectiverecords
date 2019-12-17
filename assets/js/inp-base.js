@@ -781,7 +781,6 @@ TO DO:
              //  console.log("class added")
                }, 750);
                
-              $(window).scroll(function(){ // attach docment scroll to rotating carousel 
            
 
 /* so what we want is as follows:
@@ -800,11 +799,15 @@ each 100vh scrolling space
 so when once is active the position changes - like a paralex thing
 
 */
-
+                  //removed vars from scroll function:
                   var halfheight = ($('.height-item').height()/2),
                   sceneheight = $('.scene-height').height(),
-
                   calcheight = sceneheight - (2* halfheight);
+                      
+                  // set rotateFn
+                  //carousel.style.transform = ''+ rotateFn + '';
+
+              $(window).scroll(function(){ // attach docment scroll to rotating carousel 
 
                   if ($(window).scrollTop() > calcheight){
 
@@ -846,14 +849,16 @@ so when once is active the position changes - like a paralex thing
 
 
                         var angle = - wS;////+ anglesegment);
+                        var thisangle = angle;//Math.round(angle * 100) / 100; //2 decimal places - trying to make the transition smoother; but makes no difference dont think
+
+
+                     // console.log("thisangle" + thisangle);
 
                        //                                 console.log("angle" + angle + "");
                      //  console.log("(totalangle - anglesegment)" + (totalangle - anglesegment) + "");
 
                         if ( angle > ((totalangle - anglesegment)*-1) ) { // only roate as far as the total angle - one segment -- currently a negative value
-                        
-                        carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn + '(' + angle + 'deg)';
-                       //$(".description-wrap").css("margin-top",-wS);
+                         carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn + '(' + thisangle + 'deg)';
 
                         }
                              
