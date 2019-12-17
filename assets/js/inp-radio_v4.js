@@ -611,7 +611,7 @@ var headroom = new Headroom(element, options);
       onBuffer: function(percent) {
         $doc.trigger({type: 'scPlayer:onMediaBuffering', percent: percent});
         //console.log("onBuffer"+percent+"")
-        console.log("buffer" + percent+'');
+        //console.log("buffer" + percent+''); < review this use of value to determine the buffer animation - maybe add in other areas as well
         $("body").addClass("sc-buffering");
 
        /* if (percent > 5){ // this means only working if at the beginng of buffer - uptill 5
@@ -620,7 +620,7 @@ var headroom = new Headroom(element, options);
         
         }*/
 
-        if (percent > 5){ // less than 5%
+        if (percent > 2){ //less that 2%  - still too much :( // less than 5% - which still too much on 2 hours set - need to device a better %based approach>?
 
           $("body").removeClass("sc-buffering");
         }
@@ -731,7 +731,7 @@ var headroom = new Headroom(element, options);
       // when the loaded track is still buffering
       soundcloud.addEventListener('onMediaBuffering', function(flashId, data) {
         callbacks.onBuffer(data.percent);
-        console.log("onMediaBuffering" +data.percent+"")
+        console.log("onMediaBuffering" +data.percent+"");//
       });
 
       // when the loaded track started to play

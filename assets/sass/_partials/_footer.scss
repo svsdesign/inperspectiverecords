@@ -723,8 +723,120 @@ body{
 
  	} /* vertical */
 
+	&.is-touch{
 
+
+		#signup{
+ 
+
+			.title{
+			}		
+
+			.form{
+ 	 		@include focus;// review- might have broken over state
+
+			//@include blur;
+
+	 			form {
+	 
+				}
+		
+				 input {
+	 
+				 }
+				
+				 input:focus {
+			 
+	 			 @include focus;
+
+	 			 }
+
+	 			  input.email{
+	 			
+				 }
+	 	
+
+				.button {
+	 			opacity: 1;
+				}
+		 
+				 .button:hover {
+				//	opacity: 0.4; doenst exist
+				 }
+					input.email {
+				
+				}
+				 input.button {
+					 }
+
+				 .mc-status {
+				 
+			 
+
+				 }
+				
+				.mc-status.error-message{
+ 				}
+
+				.error-message{
+		 
+				}
+
+				.success-message {
+			 
+				}
+
+			
+			} /* .form */
+
+			@media (min-width: map-get($breakpoints,md)) {
+			//height: 20vh;
+
+				.title{
+		   
+		   		}
+
+				.form{
+ 
+
+
+				}	
+			
+
+			}	/*  @media (min-width: map-get($breakpoints,md))*/
+
+
+
+
+		}/*#signup:hover */
+
+		#signup:hover{ 		// doen exit	
+
+		//opacity: 0.95;
+		//transition: opacity 0.23s ease-in-out 0s;
+
+			.form{
+		  //  @include focus;
+
+				 input.email{
+
+				 }
+
+				 .button{
+	 
+				 }
+
+
+			}
+
+
+		
+		} /* #signup:hover */
+
+
+	}/*&.is-touch*/
   
+
 } /* body */
 
  

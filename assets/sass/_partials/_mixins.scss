@@ -295,6 +295,18 @@ $grey:rgba(255,255,255,0.25);
 // end opactiy key frames
 
 
+
+//loader keyframes
+
+
+  @keyframes loadergradient { 
+  0%   { background-position: 0 0; }
+  100% { background-position: -200% 0; }
+  } 
+
+//endloader keyframes
+
+
 @mixin blur{
  //filter: blur(5px); 
 // animation-iteration-count: 1;

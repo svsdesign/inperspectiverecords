@@ -328,6 +328,71 @@
 
     }//.post-navigation-wrap
 
+    &.is-touch{ // no hover states
+
+       article.news-item{
+
+      a{
+
+        .date-wrap{
+     
+
+          .date{
+  
+          }
+
+          .line{
+           }
+
+        }//.date-wrap
+
+        img.thumb-image-item{
+         
+        animation:none;
+
+        }
+        img.thumb-image-item.place-holder{
+        }
+
+        .news-item-title{
+       
+        }
+
+      }//a
+
+    }//article.news-item
+
+    article.news-item:hover{
+  
+      a{
+           
+          .date-wrap{
+  
+            .date{
+            }
+
+            .line{
+            }
+
+          }//.date-wrap
+
+          img.thumb-image-item{
+          animation: none;
+          }
+
+          img.thumb-image-item.place-holder{
+          }
+
+          .news-item-title{
+          }
+
+      }//a
+
+    }//article.news-item:hover
+
+    }//& //body.is-touch
+
+
 
   }//body.post-type-archive-news
   

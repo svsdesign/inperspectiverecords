@@ -169,13 +169,19 @@ wp- embedd
 				<div class="grid-item music-item item-sm-6 item-md-4">
 				
 					<?php //the_content();?>
-				<?php //echo do_shortcode( '[bandcamp width="100%" height="274" album="4198295769" size="large" bgcol="333333" linkcol="ffffff" artwork="none"]' );?>
+					<?php //echo do_shortcode( '[bandcamp width="100%" height="274" album="4198295769" size="large" bgcol="333333" linkcol="ffffff" artwork="none"]' );?>
 	 
-				<iframe style="border: 0; width: 100%; height: 200px;" src="https://bandcamp.com/EmbeddedPlayer/album=<?php echo $bcembedid?>/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless></iframe>
+					<iframe style="border: 0; width: 100%; height: 200px;" src="https://bandcamp.com/EmbeddedPlayer/album=<?php echo $bcembedid?>/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless></iframe>
 				
-				</div>
+					<div class="gradient-loader-wrapper">
+						
+						<div class="gradient-loader"></div>
 
-			</div>
+					</div><!-- .gradient-loader-wrapper -->
+				
+				</div><!--.grid-item -->
+
+			</div><!--.grid -->
 
 		</div><!-- #release-music .outer-grid-item -->
 

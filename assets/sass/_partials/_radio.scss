@@ -873,14 +873,9 @@ body.sc-buffering{
   width: 100%;
   background-size: 200% auto;
   background-position: 0 100%;
-  animation: gradient 2s infinite;
+  animation: loadergradient 2s infinite;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  }
-
-  @keyframes gradient { 
-  0%   { background-position: 0 0; }
-  100% { background-position: -200% 0; }
   }
 
 }//body.sc-buffering

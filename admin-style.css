@@ -97,6 +97,14 @@ block {
     opacity: 0.5;
   }
 }
+@keyframes loadergradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
 /* GRID */
 /* COLORS */
 /* SIZES */
@@ -3795,7 +3803,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(54deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(29deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -4441,8 +4449,8 @@ a._link-animation:hover span:nth-child(7) {
 }
 /* line 370, assets/sass/_partials/_archivelist.scss */
 .wp-admin body.is-touch .list-item {
-  border-top: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 2;
 }
 /* line 375, assets/sass/_partials/_archivelist.scss */

@@ -54,11 +54,20 @@ position: relative;
 
 .scene {
 position: relative;
-width: 60vh;
-height: 60vh;
-margin: 20vh auto 20vh auto;
+width: 40vh;
+height: 40vh;
+margin: 30vh auto 30vh auto;
 perspective: 1000px;
-}
+  
+    // because to small on my mobile
+
+    @media (min-width: map-get($breakpoints,md)) {
+    width: 60vh;
+    height: 60vh;
+    margin: 20vh auto 20vh auto;
+    }     
+
+}//.scene
 
 .scene-height{
 height: auto;
@@ -1353,13 +1362,54 @@ body.single-releases{
 
 
   div#release-music{
+  @include cssvalue(padding-bottom, 1);
  
+    iframe{
+    float: left;  
+    } 
+
     .music-item{
     margin: auto;
-    }
+    background: $white_0-1;// temp - find a way to remove this once bc loaded - review - not sure if posisble. No way to get loading response from iFrame?
+    overflow: hidden;
+    position: relative;
+    min-height: 200px;
+    max-width: 100%;
+    min-width: 200px;
+    padding:0px;// this over-rides grid-item classes
 
+      .gradient-loader-wrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 20%;
+        top: 0%;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
 
-  } // section#release-music
+          .gradient-loader{
+          @include cssvalue(margin-top, -0.125);
+          @include cssvalue(height, 1);
+          top: 50%; // this crossbrowser - review?
+          position: relative;
+          background: repeating-linear-gradient(to right, $black_zero_p 0% $white_0-1 50%, $black_zero_p 100%);
+          width: inherit;
+          background-size: 200% auto;
+          background-position: 0 100%;
+          animation: loadergradient 2s infinite;
+          animation-fill-mode: forwards;
+          animation-timing-function: linear;
+          @include cssvalue(height,0.25);
+          z-index: -1;
+         // border-radius: 50%;//review - cross browser
+          }
+
+      }///gradient-loader-wrap
+    
+     }//.music-item
+ 
+  } // #release-music
 
 
   
