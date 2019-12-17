@@ -5,29 +5,43 @@ display: block;
 position: relative;
 
   .scene-fixer {
+   //https://stackoverflow.com/questions/54646939/why-is-my-positionsticky-not-working-on-ios
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+// @include prefixparameters(position, sticky); // doesn't work - consider fixing mixin
+ //bottom: 0px;
   top: 0px;
-  //position:sticky;// fixed;//sticky; // chec this eveywherE!
-  //https://stackoverflow.com/questions/54646939/why-is-my-positionsticky-not-working-on-ios
-  // review - but I think this is now resolved 
-  //
-  @include prefix(position, sticky);
-//  bottom: 0px;
   width: 100%;
-  height: 100vh;
+  height: inherit;// 100vh;
   left: 0;
   right: 0;
   overflow: hidden;
-  //pointer-events:none;// tmpe
 
 
-     transform: translate(0%, 0%) ;//scale(0.8);  
-    -webkit-transition: all 200ms ease-in;
+     transform: translate(0%, 0%) ;//scale(0.8);  // this overriden by js
+  /*  -webkit-transition: all 200ms ease-in;
       //  -webkit-transform: scale(0.1); 
         -ms-transition: all 200ms ease-in;
         //-ms-transform: scale(0.1); 
         -moz-transition: all 200ms ease-in;
         //-moz-transform: scale(0.1);
         transition: all 200ms ease-in;
+*/
+
+/* only apply trasitions to the rotation */
+/* trasitions removed:
+    -webkit-transition: rotate 10ms ease-in-out;
+    -ms-transition: rotate 10ms ease-in-out;
+    -moz-transition: rotate 10ms ease-in-out;
+    transition: rotate 10ms ease-in-out;
+*/
+
+
+
+
   // apply transition the other way as well?
 
 
@@ -1343,7 +1357,7 @@ body.single-releases{
     .music-item{
     margin: auto;
     }
-    
+
     a{
     overflow: hidden;
     display: block;

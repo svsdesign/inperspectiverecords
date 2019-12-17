@@ -278,9 +278,6 @@ TO DO:
         menu   = nav.getElementsByTagName( 'ul' )[0];
         
 
-
-
-
         if ( ! button )
           return;
 
@@ -1007,7 +1004,7 @@ so when once is active the position changes - like a paralex thing
 
                   function changeCarousel() { // this function  resizes everythinging
                   
-                 //   console.log("changeCarousel function");
+                   console.log("changeCarousel function");
 
                      /* new var for resize*/
                     carousel = document.querySelector('.carousel'),
