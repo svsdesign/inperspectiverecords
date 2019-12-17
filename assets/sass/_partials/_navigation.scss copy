@@ -1,0 +1,137 @@
+/*_post-navigation.scss*/
+
+.post-type-archive-radio,
+.post-type-archive-news
+{
+
+    .page-nav{
+    margin:auto;
+    width: 100%;
+    display: block;
+    position: relative;
+    clear:both;
+    text-align: center;
+    @include padding(padding-bottom,2);
+    @include padding(padding-top,1);
+
+      .page-nav-wrapper{
+      // @include cssvalue(height,0.5);
+       position: relative;
+       margin:auto;
+
+          .page-numbers{
+          margin: auto;
+          width: auto;
+          @include padding(padding-left,0.5);
+          @include padding(padding-right,0.5);
+          position: relative;
+          display: inline-block;
+          float: none;
+          font-weight: $mediumweight;
+          text-align: center;
+          @include cssvalue(font-size,0.5);
+          @include cssvalue(height,1.5);
+          @include cssvalue(width,1.5);
+          @include cssvalue(line-height,1.5);
+          // height: 100%;
+          // line-height: inherit;
+          // position: absolute;
+          // top: 0;
+
+            &.current{
+            opacity: 0.6;
+            font-weight: $lightweight;
+            border-radius: 50%;
+            border: 1px solid $white_0-5;
+            opacity: 0.5;
+            }
+
+            &.next,
+            &.prev
+            {
+            position: absolute;
+
+            @media (min-width: map-get($breakpoints,md)) {  
+            width: 33.33%;
+            }
+           //font-weight: $mediumweight;
+          }
+
+        }//.page-nav-wrapper
+
+    }//.page-nav 
+
+
+   .prev{
+    left: 0px;
+      
+        .previous-arrow-icon{
+        transform:rotate(180deg); // rotate this icon
+        height: 100%;
+        @include cssvalue(width,0.5);
+        @include cssvalue(padding-bottom,0.2);
+        @include cssvalue(margin-right,0.5);
+        }
+      
+       .text{
+        display: none;
+        text-align: left;
+   
+             @media (min-width: map-get($breakpoints,md)) {  
+             display:block;
+             }
+
+          }
+
+        .nav-previous{
+        position: relative;
+        display: inline-block;
+        float: left;         
+        }
+  
+    } //.prev
+
+    .next{
+     right: 0px;
+
+        .next-arrow-icon{
+        height: 100%;
+        @include cssvalue(width,0.5);
+        @include cssvalue(padding-top,0.2);
+        @include cssvalue(margin-left,0.5);
+        }
+
+       .text{
+        display: none;
+        text-align: right;
+
+          @media (min-width: map-get($breakpoints,md)) {  
+          display: inline-block;
+          float: right;
+          }
+
+        }
+
+        .nav-next{
+        position: relative;
+        display: inline-block;
+        float: right;
+
+          svg{
+
+          }
+        
+        }//nav-next
+
+     } //.next
+
+  }//.page-nav
+
+} 
+/*  
+.post-type-archive-radio,
+.post-type-archive-news
+*/
+
+
+/* end archive navigation */

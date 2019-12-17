@@ -866,6 +866,26 @@ cursor: wait;
 } //.play-toggle.active-paused
 
 
+body.sc-buffering{
+
+  .sc-time-span{
+  background: repeating-linear-gradient(to right, $white 0%, $black 50%, $white 100%);
+  width: 100%;
+  background-size: 200% auto;
+  background-position: 0 100%;
+  animation: gradient 2s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  }
+
+  @keyframes gradient { 
+  0%   { background-position: 0 0; }
+  100% { background-position: -200% 0; }
+  }
+
+}//body.sc-buffering
+
+
 
 body.sc-loaded{
 

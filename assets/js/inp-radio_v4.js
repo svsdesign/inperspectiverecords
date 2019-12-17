@@ -611,8 +611,22 @@ var headroom = new Headroom(element, options);
       onBuffer: function(percent) {
         $doc.trigger({type: 'scPlayer:onMediaBuffering', percent: percent});
         //console.log("onBuffer"+percent+"")
-      }
-    };
+        console.log("buffer" + percent+'');
+
+        if (percent = 0){ // this means only working if at the beginng of buffer
+          // what I probably want is to check current buffer percentage and compare with  play % status?
+
+          $("body").addClass("sc-buffering");
+
+        } else{
+
+          $("body").removeClass("sc-buffering");
+
+        }//percent == 0
+
+      } //onlBuffer
+
+    };//callbacks
 
     var html5Driver = function() {
       var player = new Audio(),

@@ -88,6 +88,35 @@ $sitelocation = 'live';
 }
 //end determine if wer're local or nott
 
+
+
+/* "Un-register" the normal post + associated functions and options
+https://www.mitostudios.com/blog/how-to-remove-posts-blog-post-type-from-wordpress/ */
+
+// Remove side menu
+add_action( 'admin_menu', 'remove_default_post_type' );
+
+function remove_default_post_type() {
+    remove_menu_page( 'edit.php' );
+}
+
+// Remove +New post in top Admin Menu Bar
+add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
+
+function remove_default_post_type_menu_bar( $wp_admin_bar ) {
+    $wp_admin_bar->remove_node( 'new-post' );
+}
+
+// Remove Quick Draft Dashboard Widget
+add_action( 'wp_dashboard_setup', 'remove_draft_widget', 999 );
+
+function remove_draft_widget(){
+    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+}
+
+// End remove normal post type
+
+
 /* create custom post types */
 
 	/* ARTISTS */
@@ -698,13 +727,11 @@ function event_register() {
 }
 
 
- 
 // END - http://tatiyants.com/how-to-use-wordpress-custom-post-types-to-add-events-to-your-site/
 
 
 
-add_action("manage_posts_custom_column", "my_custom_columns");
-add_filter("manage_edit-events_columns", "my_page_columns");
+/* EVENT COLUMNS START */
 
 
 function my_page_columns($columns)
@@ -750,19 +777,47 @@ global $post;
 /* events */
 
 };
- 
+add_action("manage_posts_custom_column", "my_custom_columns");
+add_filter("manage_edit-events_columns", "my_page_columns");
 
+
+
+function my_set_sortable_columns( $columns )
+{
+    $columns['event_start_date'] = 'event_start_date';
+    return $columns;
+}
+   // make columns sortable
+add_filter( 'manage_edit-events_sortable_columns', 'my_set_sortable_columns' );
+
+
+ 
+function event_date_column_orderby( $vars ) {
+if ( isset( $vars['orderby'] ) && 'event_start_date' == $vars['orderby'] ) {
+    $vars = array_merge( $vars, array(
+        'meta_key' => 'event_start_date',
+        'orderby' => 'meta_value'
+    ) );
+}
+
+return $vars;
+}
+add_filter( 'request', 'event_date_column_orderby' );
+ 
+/* EVENT COLUMNS END */
+
+
+
+/* RELEASE COLUMNS START */
 
 // Add the custom columns to the releases post type:
 add_filter( 'manage_releases_posts_columns', 'set_custom_edit_releases_columns' );
-function set_custom_edit_releases_columns($columns) {
-    
+function set_custom_edit_releases_columns($columns) {   
     
     unset( $columns['code'] );
     $columns['release_code'] = __( 'Code', 'code' );
  
     return $columns;
-
 
 }
 
@@ -781,7 +836,9 @@ function custom_releases_column( $column, $post_id ) {
     }
 }
 
+/* RELEASE COLUMNS END */
 
+/* RADIO COLUMNS START*/
 
 
 // Add the custom columns to the radio post type:
@@ -836,6 +893,64 @@ function custom_radio_column( $column, $post_id ) {
 
 }
 //END - Add the custom columns to the radio post type:
+
+
+ 
+//add_action( 'pre_get_posts', 'events_custom_orderby' );
+//add_action( 'pre_get_posts', 'radio_custom_orderby' );
+/*
+function events_custom_orderby( $query ) {
+  if ( ! is_admin() )
+    return;
+
+  $orderby = $query->get('orderby');
+
+    if ( 'event_start_date' == $orderby ) {
+    $query->set( 'meta_key', 'event_start_date' );
+    $query->set( 'orderby', 'meta_value' );
+  }
+
+}
+
+function radio_custom_orderby( $query ) {
+ if ( ! is_admin() )
+    return;
+
+  $orderby = $query->get('orderby');
+
+  if ( 'show_start_date' == $orderby ) {
+    $query->set( 'meta_key', 'show_start_date' );
+    $query->set( 'orderby', 'meta_value' );
+  }
+
+}
+
+*/
+  
+
+function my_radio_sortable_columns( $columns )
+{
+    $columns['show_start_date'] = 'show_start_date';
+    return $columns;
+}
+   // make columns sortable
+add_filter( 'manage_edit-radio_sortable_columns', 'my_radio_sortable_columns' );
+
+function radio_date_column_orderby( $vars ) {
+   
+    if ( isset( $vars['orderby'] ) && 'show_start_date' == $vars['orderby'] ) {
+        $vars = array_merge( $vars, array(
+            'meta_key' => 'show_start_date',
+            'orderby' => 'meta_value'
+        ) );
+    }
+    return $vars;
+
+}
+add_filter( 'request', 'radio_date_column_orderby' );
+ 
+ 
+/* RADIO COLUMNS END */
 
 
 
