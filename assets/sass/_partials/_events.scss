@@ -371,13 +371,14 @@ overflow: visible; /* this because of sticky can't be hidden? */
             .date{
            //  @include smaller;
            //  @include lineheight;
-            border-right: 1px solid $white_0-25;
             font-weight: $mediumweight;
             @include cssvalue(font-size, 0.3);
-            text-align: right;
             overflow: hidden;
+            text-align: center;
 
               @media (min-width: map-get($breakpoints,sm)) {
+              text-align: right;
+              border-right: 1px solid $white_0-25;
               }
 
               @media (min-width: map-get($breakpoints,md)) {
@@ -387,25 +388,49 @@ overflow: visible; /* this because of sticky can't be hidden? */
               text-align: left;
               }
 
-            }
+            }//.date
 
             .event-name{
             @include lineheight;
-            }
+            text-align: center;
+
+              @media (min-width: map-get($breakpoints,sm)) {
+             text-align:left;
+
+              }
+
+            }//.event-name
 
             .venue{
-            text-align: right;
             @include lineheight;
             @include smaller;
             font-weight: $mediumweight;
-            }
+            text-align:center;
+
+              @media (min-width: map-get($breakpoints,sm)) {
+              text-align: right;
+              }
+
+            }//.venue
+
 
         }/*event-item */
 
         .event-items{
 
             .past-event-item{
-            border-bottom: 1px solid white;   
+            @include padding(padding-bottom, 0.5);
+            @include padding(padding-top, 0.5);
+            border-bottom: 1px solid $white_0-25;   
+
+
+             @media (min-width: map-get($breakpoints,sm)) {
+             @include padding(padding-bottom, 0);
+             @include padding(padding-top, 0);
+          //   border-bottom: 1px solid white;   
+             border-bottom: 1px solid $white_0-5;   
+
+              }
            
               &:hover{
                  

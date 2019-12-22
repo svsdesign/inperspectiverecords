@@ -51,7 +51,9 @@ $lineheight: (
 	$black:rgba(0,0,0,1);
 	$black_zero_p:rgba(0,0,0,0);
 	$black_ten_p:rgba(0,0,0,0.1);
-  $grey:rgba(216,216,216,1);
+  $grey:rgba(216,216,216,1); // review grey usage
+//  $grey:rgba(255,255,255,0.25); // do I need to keep both + which one is the desired?
+
 	$white:rgba(255,255,255,1);
     $white_0-1:rgba(255,255,255,0.1);
     $white_0-25:rgba(255,255,255,0.25);

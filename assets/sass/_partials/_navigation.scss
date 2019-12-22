@@ -582,6 +582,46 @@ body.post-type-archive-news,
 
 }//body.post-type-archive-news*/
 
+// if page still loading:
+
+body.loading
+{
+
+	.navigation-toggle-wrap{
+
+
+			
+		.navigation-toggle{
+ 		
+ 			svg {
+			@include pulse-opacity;
+
+				path{
+				//fill:$red;
+				}
+
+			}
+		
+			&.toggled-on{
+
+				svg {
+			 
+				path{
+			//	fill:none;
+				}
+
+				}
+
+			}//&.toggled-on
+
+		}
+	}
+
+}//body.loadings*/
+
+//end if loading still
+
+
 /* end colours for toggle filss */
 
 /* Start Headroom */

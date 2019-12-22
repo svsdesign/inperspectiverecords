@@ -1709,16 +1709,18 @@ body
     .sc-player{
     pointer-events:initial;
     height: auto;
-    min-height: 25vw;
+    min-height: 31.25vw;//25vw;
  
     @media (min-width: map-get($breakpoints,md)) {
  
-    min-height: 12.5vw;
+    min-height: 18.75vw;//12.5vw;
 
     }
 
     @media (min-width: map-get($breakpoints,lg)) {
-    min-height: 12.5vw; // should this 6.26?
+    //min-height: 12.5vw; // should this 6.26?
+    min-height: 15.625vw;//3.125////18.75vw;//12.5vw;
+
     }
     @media (min-width: map-get($breakpoints,xl)) {
      }
@@ -1781,13 +1783,23 @@ body
         z-index: 3; // 1 above from play
 
           @media (min-width: map-get($breakpoints,sm)) {
-          line-height:12.5vw;
-          bottom: 0;
-          top: initial;
+          line-height:6.25vw;
+          bottom: 0; 
+          top: 25vw;
+
+          //top: initial;
           }
 
           @media (min-width: map-get($breakpoints,md)) {
-          line-height:6.25vw;
+ 
+          top: 12.5vw;
+
+          }
+
+            @media (min-width: map-get($breakpoints,lg)) {
+ 
+          top: 9.375vw;//6.25vw;//3.125
+
           }
 
         }
@@ -1942,8 +1954,12 @@ body{
   .sc-player{
 
     .player-toggle{
-    height: 50%;
-
+  //  height: 50%;
+    height: 50%; // review
+  
+    @media (min-width: map-get($breakpoints,sm)) {
+    height:6.25vw;
+    }
     @media (min-width: map-get($breakpoints,md)) {
     width: 50%;
     }
@@ -1988,16 +2004,16 @@ body{
       text-transform: uppercase;
       @include cssvalue(font-size, 0.4);
       font-weight: $boldweight;
-    //  line-height: inherit; // from .player-toggle
-      line-height: 25vw;
+     line-height: inherit; // from .player-toggle
+     // line-height: 25vw;
 
           @media (min-width: map-get($breakpoints,sm)) {
-        line-height: 25vw;
+       // line-height: 25vw;
 
          }
 
           @media (min-width: map-get($breakpoints,md)) {
-        line-height: 12.5vw;
+        //line-height: 12.5vw;
 
          }
         &:hover{

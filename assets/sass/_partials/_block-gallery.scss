@@ -141,6 +141,11 @@
 	list-style: none;
 	text-align: center;
 	line-height: 1;
+	display: none;
+
+		@media (min-width: map-get($breakpoints,md)) {
+		display: block;
+		}
 
 		@media (min-width: map-get($breakpoints,lg)) {
 		@include cssvaluegutter(bottom,-3); 
@@ -170,6 +175,15 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+
+		@media (min-width: map-get($breakpoints,md)) {
+		//display: block;
+
+			@include cssvaluegutter(width,0.75); 
+	@include cssvaluegutter(height,0.75); 
+	@include cssvaluegutter(margin-left, 0.5); 
+	@include cssvaluegutter(margin-right, 0.5);
+		}
 
     	@media (min-width: map-get($breakpoints,lg)) {
 		@include cssvaluegutter(width,0.5); 

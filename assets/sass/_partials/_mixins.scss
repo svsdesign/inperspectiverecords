@@ -247,7 +247,6 @@ font-weight:  $lightweight;
 
 /* TO DO - tidy up  + sort cross browser previxes out */
 
-$grey:rgba(255,255,255,0.25);
 
 
 @keyframes blurout{
@@ -305,6 +304,22 @@ $grey:rgba(255,255,255,0.25);
   } 
 
 //endloader keyframes
+// stare opacity pulse key frames
+
+
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(0.9); opacity: 0.2; }
+    50% { -webkit-transform: scale(1); opacity: 1; }
+    100% { -webkit-transform: scale(0.9); opacity: 0.2; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.2; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.2; }
+}
+// end opacity pulse key frames
 
 
 @mixin blur{
@@ -393,3 +408,15 @@ transform:scale(1);
 transform-origin:center;
 transition: all 200ms ease-in-out;
 }
+
+
+@mixin pulse-opacity{
+    -webkit-animation: pulse 3s infinite ease-in-out;
+    -o-animation: pulse 3s infinite ease-in-out;
+    -ms-animation: pulse 3s infinite ease-in-out; 
+    -moz-animation: pulse 3s infinite ease-in-out; 
+    animation: pulse 3s infinite ease-in-out;
+}
+
+
+

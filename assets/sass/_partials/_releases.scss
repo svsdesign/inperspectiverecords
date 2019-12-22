@@ -1393,7 +1393,7 @@ body.single-releases{
           @include cssvalue(height, 1);
           top: 50%; // this crossbrowser - review?
           position: relative;
-          background: repeating-linear-gradient(to right, $black_zero_p 0% $white_0-1 50%, $black_zero_p 100%);
+          background: repeating-linear-gradient(to right, $black_zero_p 0%, $white_0-1 50%, $black_zero_p 100%);
           width: inherit;
           background-size: 200% auto;
           background-position: 0 100%;
@@ -1443,6 +1443,34 @@ body.single-releases{
 
   } // section#release-artists
 
+  &.is-touch{
+
+    section#release-artists{
+ 
+        .music-item{
+         }
+
+        a{
+           .artist-title{
+            animation: none;
+
+          }
+
+        }//a
+     
+        a:hover{
+     
+          .artist-title{
+            animation:none;
+           }
+
+        }//a:hover
+
+      } // section#release-artists
+
+
+
+  } //&.is-touch
 
 } /* body.single-releases */
 

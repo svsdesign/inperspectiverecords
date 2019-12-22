@@ -612,15 +612,19 @@ var headroom = new Headroom(element, options);
         $doc.trigger({type: 'scPlayer:onMediaBuffering', percent: percent});
         //console.log("onBuffer"+percent+"")
         //console.log("buffer" + percent+''); < review this use of value to determine the buffer animation - maybe add in other areas as well
-        $("body").addClass("sc-buffering");
+       // $("body").addClass("sc-buffering");
 
+        if (percent < 2){ //less that 2%  - still too much :( // less than 5% - which still too much on 2 hours set - need to device a better %based approach>?
+
+        $("body").addClass("sc-buffering");
+        }
        /* if (percent > 5){ // this means only working if at the beginng of buffer - uptill 5
           // what I probably want is to check current buffer percentage and compare with  play % status?
 
         
         }*/
 
-        if (percent > 2){ //less that 2%  - still too much :( // less than 5% - which still too much on 2 hours set - need to device a better %based approach>?
+        else if (percent > 2){ //less that 2%  - still too much :( // less than 5% - which still too much on 2 hours set - need to device a better %based approach>?
 
           $("body").removeClass("sc-buffering");
         }
