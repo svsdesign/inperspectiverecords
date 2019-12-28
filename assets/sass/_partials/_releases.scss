@@ -1184,7 +1184,36 @@ backface-visibility: hidden;
 
 }//.vertical
 
+body.is-touch{
+// probably don't need this? - revies + delete
+    .carousel__cell { 
 
+      a{    
+     // opacity: 0.4;
+      } 
+      img.front{
+     
+      }
+
+    } //.carousel__cell
+
+    .carousel__cell.active {  
+
+    a{   
+   //   opacity: 1; // images loaded overrides the 
+    }
+      img.front{
+     //  opacity: 1; // images loaded overrides this value so apply to cell instaed
+
+      }
+
+    } //.carousel__cell
+
+  .carousel__cell:after{
+   // opacity: 
+  }// .carousel__cell:after
+
+}//body.is-touch
 
 .carousel__cell:after {
 // content: url(); // this added via php & inline css
@@ -1473,11 +1502,5 @@ body.single-releases{
   } //&.is-touch
 
 } /* body.single-releases */
-
-
-
-
-
-
 
 

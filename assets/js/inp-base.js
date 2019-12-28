@@ -353,11 +353,13 @@ TO DO:
     navigation();
 
 
-    function recordcircle(){
+    function recordanimation(){
 
-      console.log("each recordcircle");
+      console.log("each record animation");
 
-        $(".record-circle-container").each(function() {
+        // vinyl:
+
+        $(".record-circle-container").each(function() {  
         //  console.log("eachrecord container")
 
           var $thiscontainer = $(this),
@@ -394,6 +396,47 @@ TO DO:
           }); // hover
 
         }); // each $(".record-circle")
+
+     // digital:
+
+      $(".record-square-container").each(function() {
+            console.log("each square container");
+
+
+          var $thiscontainer = $(this),
+              $thissquare = $(this).find(".flip-card");// was: .record-square
+              $thiscontainer.removeClass("active","flipping","flipped");// incase its active still - seems to be some buggy behavior atm
+              $thissquare.removeClass("flipping");// in an effort to reset?
+
+              $thiscontainer.css("pointer-events","initial");// allow pointer events now that the js is ready
+
+              //console.log('just remove classes');
+
+            $thissquare.hover(function() {
+              console.log("this square hover")
+
+
+          //$thiscircle.mouseover(function() {
+              if($thissquare.hasClass("flipping")){
+              console.log("has class flipping")
+
+            
+              $thissquare.removeClass("flipping"); 
+              $thissquare.removeClass("flip");
+              $thiscontainer.removeClass("active");
+
+            } else {
+            console.log("DOES NOT have class flipping")
+
+               $thissquare.addClass("flipping");
+               $thissquare.addClass("flip");
+               $thiscontainer.addClass("active");
+
+            } // if
+
+          }); // hover
+
+       }); //$(".record-square-container").each(function()
 
     } // function recordscircle
 
@@ -639,12 +682,12 @@ TO DO:
                  if ($('#artist-releases, .release-block').length > 0) 
                   {
             
-                   //  console.log('recordcircle');
+                   //  console.log('recordanimation');
                  //setTimeout(function(){
 
                   // takes to long to reach the js - so do we just ensure the items have no pointer events initially?
 
-                             recordcircle();// this needs to trigger other stuff like resiae as well I guess?
+                    recordanimation();// this needs to trigger other stuff like resiae as well I guess?
                 //}, 2000);
 
                 };  /*  #artist-releases  */

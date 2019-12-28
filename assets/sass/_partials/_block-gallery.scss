@@ -81,7 +81,7 @@
 	/* ---- previous/next buttons ---- */
 
 	.flickity-prev-next-button {
-	top: 100%; // align to bottom of gallery
+	//top: 100%; // align to bottom of gallery
 	@include cssvaluegutter(width,5); 
 	@include cssvaluegutter(height,5); 
 	border-radius: 50%;
@@ -89,9 +89,16 @@
 	transform: translateY(-50%);
 	background: transparent;
 	z-index: 5;// ensure above the dots
-	@include cssvaluegutter(margin-top,2.5); 
+	//@include cssvaluegutter(margin-top,2.5); 
+
+
+	@media (min-width: map-get($breakpoints,xs)) {
+	top:50%;// mid alligned.
+	height: 100%
+	}
 
 	@media (min-width: map-get($breakpoints,lg)) {
+	top: 100%; // align to bottom of gallery
 	@include cssvaluegutter(width,3); 
 	@include cssvaluegutter(height,3); 
 	@include cssvaluegutter(margin-top,1.5); 
@@ -144,10 +151,11 @@
 	display: none;
 
 		@media (min-width: map-get($breakpoints,md)) {
-		display: block;
 		}
 
 		@media (min-width: map-get($breakpoints,lg)) {
+				display: block;
+	
 		@include cssvaluegutter(bottom,-3); 
 		@include cssvaluegutter(height,3); 
 		@include cssvaluegutter(padding-top, 1); 

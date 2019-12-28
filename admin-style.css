@@ -7135,7 +7135,6 @@ https://flickity.metafizzy.co
 /* ---- previous/next buttons ---- */
 /* line 83, assets/sass/_partials/_block-gallery.scss */
 .flickity-prev-next-button {
-  top: 100%;
   width: 25px;
   width: 75px;
   height: 25px;
@@ -7145,8 +7144,6 @@ https://flickity.metafizzy.co
   transform: translateY(-50%);
   background: transparent;
   z-index: 5;
-  margin-top: 12.5px;
-  margin-top: 37.5px;
 }
 @media screen and (min-width: 0px) {
   /* line 83, assets/sass/_partials/_block-gallery.scss */
@@ -7196,33 +7193,17 @@ https://flickity.metafizzy.co
     height: 100px;
   }
 }
-@media screen and (min-width: 0px) {
+@media (min-width: 0px) {
   /* line 83, assets/sass/_partials/_block-gallery.scss */
   .flickity-prev-next-button {
-    margin-top: calc(12.5px + 25 * (100vw - 0px) / 960);
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 83, assets/sass/_partials/_block-gallery.scss */
-  .flickity-prev-next-button {
-    margin-top: 37.5px;
-  }
-}
-@media screen and (min-width: 960px) {
-  /* line 83, assets/sass/_partials/_block-gallery.scss */
-  .flickity-prev-next-button {
-    margin-top: calc(37.5px + 12.5 * (100vw - 960px) / 480);
-  }
-}
-@media screen and (min-width: 1440px) {
-  /* line 83, assets/sass/_partials/_block-gallery.scss */
-  .flickity-prev-next-button {
-    margin-top: 50px;
+    top: 50%;
+    height: 100%;
   }
 }
 @media (min-width: 960px) {
   /* line 83, assets/sass/_partials/_block-gallery.scss */
   .flickity-prev-next-button {
+    top: 100%;
     width: 15px;
     width: 45px;
     height: 15px;
@@ -7304,35 +7285,35 @@ https://flickity.metafizzy.co
   }
 }
 
-/* line 100, assets/sass/_partials/_block-gallery.scss */
+/* line 107, assets/sass/_partials/_block-gallery.scss */
 .flickity-prev-next-button svg {
   fill: white;
 }
 
-/* line 106, assets/sass/_partials/_block-gallery.scss */
+/* line 113, assets/sass/_partials/_block-gallery.scss */
 .flickity-prev-next-button.previous {
   left: 12.5%;
 }
 
-/* line 109, assets/sass/_partials/_block-gallery.scss */
+/* line 116, assets/sass/_partials/_block-gallery.scss */
 .flickity-prev-next-button.next {
   right: 12.5%;
 }
 
 /* right to left */
-/* line 113, assets/sass/_partials/_block-gallery.scss */
+/* line 120, assets/sass/_partials/_block-gallery.scss */
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;
   right: 12.5%;
 }
 
-/* line 117, assets/sass/_partials/_block-gallery.scss */
+/* line 124, assets/sass/_partials/_block-gallery.scss */
 .flickity-rtl .flickity-prev-next-button.next {
   right: auto;
   left: 12.5%;
 }
 
-/* line 122, assets/sass/_partials/_block-gallery.scss */
+/* line 129, assets/sass/_partials/_block-gallery.scss */
 .flickity-prev-next-button .flickity-button-icon {
   position: absolute;
   left: 0;
@@ -7343,7 +7324,7 @@ https://flickity.metafizzy.co
 }
 
 /* ---- page dots ---- */
-/* line 133, assets/sass/_partials/_block-gallery.scss */
+/* line 140, assets/sass/_partials/_block-gallery.scss */
 .flickity-page-dots {
   position: absolute;
   width: 100%;
@@ -7362,110 +7343,105 @@ https://flickity.metafizzy.co
   display: none;
 }
 @media screen and (min-width: 0px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     bottom: calc(-25px + -50 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     bottom: -75px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     bottom: calc(-75px + -25 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     bottom: -100px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     height: calc(25px + 50 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     height: 75px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     height: calc(75px + 25 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     height: 100px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-top: calc(10px + 20 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-top: 30px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-top: calc(30px + 10 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-top: 40px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-bottom: calc(10px + 20 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-bottom: 30px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-bottom: calc(30px + 10 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-bottom: 40px;
   }
 }
-@media (min-width: 640px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+@media (min-width: 960px) {
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     display: block;
-  }
-}
-@media (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
-  .flickity-page-dots {
     bottom: -15px;
     bottom: -45px;
     height: 15px;
@@ -7477,108 +7453,108 @@ https://flickity.metafizzy.co
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     bottom: calc(-15px + -30 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     bottom: -45px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     bottom: calc(-45px + -15 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     bottom: -60px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     height: calc(15px + 30 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     height: 45px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     height: calc(45px + 15 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     height: 60px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-top: calc(5px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-top: 15px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-top: calc(15px + 5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-top: 20px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-bottom: calc(5px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-bottom: 15px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-bottom: calc(15px + 5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 133, assets/sass/_partials/_block-gallery.scss */
+  /* line 140, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots {
     padding-bottom: 20px;
   }
 }
 
-/* line 159, assets/sass/_partials/_block-gallery.scss */
+/* line 167, assets/sass/_partials/_block-gallery.scss */
 .flickity-rtl .flickity-page-dots {
   direction: rtl;
 }
 
-/* line 163, assets/sass/_partials/_block-gallery.scss */
+/* line 171, assets/sass/_partials/_block-gallery.scss */
 .flickity-page-dots .dot {
   display: inline-block;
   width: 5px;
@@ -7597,103 +7573,103 @@ https://flickity.metafizzy.co
   -webkit-box-sizing: border-box;
 }
 @media screen and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: calc(5px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: 15px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: calc(15px + 5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: 20px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: calc(5px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: 15px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: calc(15px + 5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: 20px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: calc(1.25px + 2.5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: 3.75px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: calc(3.75px + 1.25 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: 5px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: calc(1.25px + 2.5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: 3.75px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: calc(3.75px + 1.25 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: 5px;
   }
 }
 @media (min-width: 640px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: 3.75px;
     width: 11.25px;
@@ -7706,104 +7682,104 @@ https://flickity.metafizzy.co
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: calc(3.75px + 7.5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: 11.25px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: calc(11.25px + 3.75 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: 15px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: calc(3.75px + 7.5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: 11.25px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: calc(11.25px + 3.75 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: 15px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: 7.5px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: 10px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: 7.5px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: 10px;
   }
 }
 
 @media (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: 2.5px;
     width: 7.5px;
@@ -7820,234 +7796,234 @@ https://flickity.metafizzy.co
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: 7.5px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     width: 10px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: 7.5px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     height: 10px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     padding-top: calc(1.25px + 2.5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     padding-top: 3.75px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     padding-top: calc(3.75px + 1.25 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     padding-top: 5px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-top: calc(1.25px + 2.5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-top: 3.75px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-top: calc(3.75px + 1.25 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-top: 5px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: 7.5px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-left: 10px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: 7.5px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 163, assets/sass/_partials/_block-gallery.scss */
+  /* line 171, assets/sass/_partials/_block-gallery.scss */
   .flickity-page-dots .dot {
     margin-right: 10px;
   }
 }
 
-/* line 199, assets/sass/_partials/_block-gallery.scss */
+/* line 207, assets/sass/_partials/_block-gallery.scss */
 .flickity-page-dots .dot.is-selected {
   background: transparent;
   border: 1px solid White;
 }
 
 /* additional styles */
-/* line 209, assets/sass/_partials/_block-gallery.scss */
+/* line 217, assets/sass/_partials/_block-gallery.scss */
 .gallery-block {
   width: 100%;
   margin-bottom: 25px;
   margin-bottom: 75px;
 }
 @media screen and (min-width: 0px) {
-  /* line 209, assets/sass/_partials/_block-gallery.scss */
+  /* line 217, assets/sass/_partials/_block-gallery.scss */
   .gallery-block {
     margin-bottom: calc(25px + 50 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 209, assets/sass/_partials/_block-gallery.scss */
+  /* line 217, assets/sass/_partials/_block-gallery.scss */
   .gallery-block {
     margin-bottom: 75px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 209, assets/sass/_partials/_block-gallery.scss */
+  /* line 217, assets/sass/_partials/_block-gallery.scss */
   .gallery-block {
     margin-bottom: calc(75px + 25 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 209, assets/sass/_partials/_block-gallery.scss */
+  /* line 217, assets/sass/_partials/_block-gallery.scss */
   .gallery-block {
     margin-bottom: 100px;
   }
 }
 @media (min-width: 960px) {
-  /* line 209, assets/sass/_partials/_block-gallery.scss */
+  /* line 217, assets/sass/_partials/_block-gallery.scss */
   .gallery-block {
     margin-bottom: 15px;
     margin-bottom: 45px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 0px) {
-  /* line 209, assets/sass/_partials/_block-gallery.scss */
+  /* line 217, assets/sass/_partials/_block-gallery.scss */
   .gallery-block {
     margin-bottom: calc(15px + 30 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 209, assets/sass/_partials/_block-gallery.scss */
+  /* line 217, assets/sass/_partials/_block-gallery.scss */
   .gallery-block {
     margin-bottom: 45px;
   }
 }
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  /* line 209, assets/sass/_partials/_block-gallery.scss */
+  /* line 217, assets/sass/_partials/_block-gallery.scss */
   .gallery-block {
     margin-bottom: calc(45px + 15 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  /* line 209, assets/sass/_partials/_block-gallery.scss */
+  /* line 217, assets/sass/_partials/_block-gallery.scss */
   .gallery-block {
     margin-bottom: 60px;
   }
 }
 
-/* line 218, assets/sass/_partials/_block-gallery.scss */
+/* line 226, assets/sass/_partials/_block-gallery.scss */
 .gallery-block .outer-grid-item.inner {
   height: inherit;
   max-height: inherit;
 }
-/* line 223, assets/sass/_partials/_block-gallery.scss */
+/* line 231, assets/sass/_partials/_block-gallery.scss */
 .gallery-block .outer-grid-item.inner .gallery-carousel {
   height: inherit;
   max-height: inherit;
 }
-/* line 227, assets/sass/_partials/_block-gallery.scss */
+/* line 235, assets/sass/_partials/_block-gallery.scss */
 .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport {
   width: 100%;
 }
-/* line 230, assets/sass/_partials/_block-gallery.scss */
+/* line 238, assets/sass/_partials/_block-gallery.scss */
 .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
   display: block;
   height: 100%;
@@ -8058,67 +8034,67 @@ https://flickity.metafizzy.co
   margin-left: 7.5px;
 }
 @media screen and (min-width: 0px) {
-  /* line 230, assets/sass/_partials/_block-gallery.scss */
+  /* line 238, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-right: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_block-gallery.scss */
+  /* line 238, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-right: 7.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_block-gallery.scss */
+  /* line 238, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-right: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 230, assets/sass/_partials/_block-gallery.scss */
+  /* line 238, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-right: 10px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 230, assets/sass/_partials/_block-gallery.scss */
+  /* line 238, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-left: calc(2.5px + 5 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_block-gallery.scss */
+  /* line 238, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-left: 7.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_block-gallery.scss */
+  /* line 238, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-left: calc(7.5px + 2.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 230, assets/sass/_partials/_block-gallery.scss */
+  /* line 238, assets/sass/_partials/_block-gallery.scss */
   .gallery-block .outer-grid-item.inner .gallery-carousel .flickity-viewport img {
     margin-left: 10px;
   }
 }
 
-/* line 251, assets/sass/_partials/_block-gallery.scss */
+/* line 259, assets/sass/_partials/_block-gallery.scss */
 body.horizontal .gallery-block {
   height: 80vh;
   max-height: 60vh;
 }
 @media (min-width: 960px) {
-  /* line 251, assets/sass/_partials/_block-gallery.scss */
+  /* line 259, assets/sass/_partials/_block-gallery.scss */
   body.horizontal .gallery-block {
     max-height: 75vh;
   }
 }
 
-/* line 268, assets/sass/_partials/_block-gallery.scss */
+/* line 276, assets/sass/_partials/_block-gallery.scss */
 body.vertical .gallery-block {
   height: 60vw;
 }

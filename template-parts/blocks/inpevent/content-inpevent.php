@@ -29,6 +29,8 @@ $eventid = get_field('event'); //post object - IDS
 $upcomingeventid = $eventid;          
 $eventstart = get_field('event_start_date', $eventid); // date and time picker
 $eventend = get_field('event_end_date', $eventid); // date and time picker
+$eventcolor =  get_field('event_colour');
+
 $posterart =  get_field('poster_art', $eventid); // image
 $bannerart =  get_field('banner_art', $eventid); // image - banner
 $venue =  get_field('venue', $eventid);  // text
@@ -46,7 +48,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
    
       <?php if($bannerart): ?>
 
-        <div class="event-item event-image-item outer-grid-item inner-padded outer-grid-item-sm-6 <?php if (in_array("true", $isupcomingnextevent)): ?>next-event<?php endif; //$isupcomingnextevent ?>" style="background-size:cover; background-image: url('<?php echo $bannerart;?>');">
+        <div class="event-item event-image-item outer-grid-item inner-padded outer-grid-item-sm-6 <?php if (in_array("true", $isupcomingnextevent)): ?>next-event<?php endif; //$isupcomingnextevent ?>" style="background-image: url('<?php echo $bannerart;?>');">
       
         <?php else:?>
 
@@ -58,7 +60,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
     
           <?php if($name): ?>
 
-            <div class="event-name grid-item grid-item-xs-6 grid-item-md-3">
+            <div class="event-name grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
                   
               <?php echo $name; ?>
                     
@@ -66,9 +68,9 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
         
           <?php endif; //$name ?>
 
-          <div class="date grid-item grid-item-xs-6 grid-item-md-3">
+          <div class="date grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
                 
-            <?php $startdate = get_field('event_start_date', $eventid); echo date_i18n('dS F Y', $startdate);  ?>
+            <?php $startdate = get_field('event_start_date', $eventid); echo date_i18n('jS F Y', $startdate);  //date not correct? ?>
             <?php// $starttime = get_field('event_start_date'); echo date_i18n('h:i', $starttime);  ?>
             <?php //$endtime = get_field('event_end_date'); echo date_i18n('h:i', $endtime);  ?>
 
@@ -82,13 +84,16 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
 
             <?php if($venue): ?>
 
-              <div class="summary-item venue">
+              <div class="summary-item venue" style="border-color:<?php echo $eventcolor;?>">
                 
-                <a class="scale-link" target="_blank" href="<?php echo $venuelink;?>">
+                <a class="scale-link" target="_blank" href="<?php echo $venuelink;?>" style="color:<?php echo $eventcolor;?>">
 
                 <span><?php echo $venue ;?></span>   
                 <div class="svg-icon inline-icon right white-icon">
-                <?php get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
+                <?php
+                $value_to_sent = $eventcolor;
+                set_query_var( 'event_color', $value_to_sent );
+                 get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
                 </div><!-- svg-icon inline-icon --> 
               
                 </a> 
@@ -99,13 +104,16 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
 
             <?php if($ralink): ?>
 
-              <div class="summary-item price">
+              <div class="summary-item price" style="border-color:<?php echo $eventcolor;?>">
                 
-                <a class="scale-link" target="_blank" href="<?php echo $ralink;?>">
+                <a class="scale-link" target="_blank" href="<?php echo $ralink;?>" style="color:<?php echo $eventcolor;?>">
                   
                   <span class="">Buy Tickets</span>
                   <div class="svg-icon inline-icon right white-icon">
-                  <?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+                  <?php 
+                  $value_to_sent = $eventcolor;
+                  set_query_var( 'event_color', $value_to_sent );
+                  get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
                   </div><!-- svg-icon inline-icon --> 
                 
                 </a> 
@@ -116,13 +124,16 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
 
             <?php if($fblink): ?>
 
-              <div class="summary-item fb-details">
+              <div class="summary-item fb-details" style="border-color:<?php echo $eventcolor;?>">
                   
-                <a class="scale-link" href="<?php echo $fblink ;?>">
+                <a class="scale-link" href="<?php echo $fblink ;?>" style="color:<?php echo $eventcolor;?>">
                 
                   <span>Facebook Event</span>
                   <div class="svg-icon inline-icon right white-icon">
-                  <?php get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
+                  <?php
+                  $value_to_sent = $eventcolor;
+                  set_query_var( 'event_color', $value_to_sent );
+                   get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
                   </div><!-- svg-icon inline-icon --> 
         
                 </a>
@@ -131,13 +142,17 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
 
             <?php endif; //$fblink ?>
         
-            <div class="summary-item event-link">
+            <div class="summary-item event-link" style="border-color:<?php echo $eventcolor;?>">
 
-              <a class="scale-link" href="<?php the_permalink($eventid);?>">
+              <a class="scale-link" href="<?php the_permalink($eventid);?>" style="color:<?php echo $eventcolor;?>">
                 
                 <span class="">More Information</span>
                 <div class="svg-icon inline-icon right white-icon">
-                <?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+                <?php
+                $value_to_sent = $eventcolor;
+                set_query_var( 'event_color', $value_to_sent );
+                get_template_part('/assets/svg/inline-inp_arrow-right.svg');
+                 ?>
                 </div><!-- svg-icon inline-icon --> 
                                         
               </a>

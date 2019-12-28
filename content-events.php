@@ -14,6 +14,7 @@
 	$eventid = get_the_ID();	
 	$name =  get_field('event_name');						
  	$eventstart = get_field('event_start_date'); // date and time picker
+
 //	$eventend = get_field('event_end_date');  // date and time picker
 	$posterart =  get_field('poster_art'); // image - large bg
 	$bannerart =  get_field('banner_art'); // image - banner
@@ -31,8 +32,7 @@
 
 	//end get fields
 
-
-
+ 
 	/*	//	 echo $isupcomingevent;
 
 	foreach($isupcomingevent as $isupcomingeven){
@@ -90,7 +90,7 @@
 				<div class="date-item grid-item grid-item-xs-6 grid-item-md-3">
 							
 					<span class="date">
-					<?php $startdate = get_field('event_start_date'); echo date_i18n('dS F Y', $startdate);  ?>
+					<?php $startdate = get_field('event_start_date'); echo date_i18n('jS F Y', $startdate);  ?>
 					</span> 
 
 					<span class="time">
@@ -406,6 +406,10 @@
 							$upcomingeventid = get_the_ID();							
 							$eventstart = get_field('event_start_date'); // date and time picker
 							$eventend = get_field('event_end_date');  // date and time picker
+							$eventcolor =  get_field('event_colour');
+							//	$value_to_sent = $eventcolor;
+							//	set_query_var( 'event_color', $value_to_sent );
+						
 							$posterart =  get_field('poster_art'); // image
 							$bannerart =  get_field('banner_art'); // image - banner
 
@@ -434,7 +438,7 @@
 							
 										<?php if($name): ?>
 
-											<div class="event-name grid-item grid-item-xs-6 grid-item-md-3">
+											<div class="event-name grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
 														
 												<?php echo $name; ?>
 															
@@ -442,9 +446,9 @@
 									
 										<?php endif; //$name ?>
 
-										<div class="date grid-item grid-item-xs-6 grid-item-md-3">
+										<div class="date grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
 													
-											<?php $startdate = get_field('event_start_date'); echo date_i18n('dS F Y', $startdate);  ?>
+											<?php $startdate = get_field('event_start_date'); echo date_i18n('jS F Y', $startdate);  ?>
 											<?php// $starttime = get_field('event_start_date'); echo date_i18n('h:i', $starttime);  ?>
 											<?php //$endtime = get_field('event_end_date'); echo date_i18n('h:i', $endtime);  ?>
 
@@ -458,13 +462,17 @@
 
 											<?php if($venue): ?>
 
-												<div class="summary-item venue">
+												<div class="summary-item venue" style="border-color:<?php echo $eventcolor;?>">
 													
-													<a class="scale-link" target="_blank" href="<?php echo $venuelink;?>">
+													<a class="scale-link" target="_blank" href="<?php echo $venuelink;?>" style="color:<?php echo $eventcolor;?>">
 
 													<span><?php the_field('venue'); ?></span>   
 													<div class="svg-icon inline-icon right white-icon">
-													<?php get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
+													<?php 			
+													$value_to_sent = $eventcolor;
+													set_query_var( 'event_color', $value_to_sent );
+													get_template_part('/assets/svg/inline-inp_location-marker.svg');
+													?>
 											 		</div><!-- svg-icon inline-icon -->	
 												
 													</a> 
@@ -475,13 +483,16 @@
 
 											<?php if($ralink): ?>
 
-												<div class="summary-item price">
+												<div class="summary-item price" style="border-color:<?php echo $eventcolor;?>">
 													
-													<a class="scale-link" target="_blank" href="<?php echo $ralink;?>">
+													<a class="scale-link" target="_blank" href="<?php echo $ralink;?>" style="color:<?php echo $eventcolor;?>">
 														
 														<span class="">Buy Tickets</span>
 														<div class="svg-icon inline-icon right white-icon">
-														<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+														<?php
+														$value_to_sent = $eventcolor;
+														set_query_var( 'event_color', $value_to_sent );
+														get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
 											 			</div><!-- svg-icon inline-icon -->	
 											 		
 											 		</a> 
@@ -492,13 +503,16 @@
 
 											<?php if($fblink): ?>
 
-												<div class="summary-item fb-details">
+												<div class="summary-item fb-details" style="border-color:<?php echo $eventcolor;?>">
 														
-													<a class="scale-link" href="<?php echo $fblink ;?>">
+													<a class="scale-link" href="<?php echo $fblink ;?>" style="color:<?php echo $eventcolor;?>">
 													
 														<span>Facebook Event</span>
 														<div class="svg-icon inline-icon right white-icon">
-														<?php get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
+														<?php
+															$value_to_sent = $eventcolor;
+															set_query_var( 'event_color', $value_to_sent );
+														 get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
 									 					</div><!-- svg-icon inline-icon -->	
 									
 													</a>
@@ -507,13 +521,16 @@
 
 											<?php endif; //$fblink ?>
 									
-											<div class="summary-item event-link">
+											<div class="summary-item event-link" style="border-color:<?php echo $eventcolor;?>">
 
-												<a class="scale-link" href="<?php the_permalink();?>">
+												<a class="scale-link" href="<?php the_permalink();?>"  style="color:<?php echo $eventcolor;?>">
 													
 													<span class="">More Information</span>
 													<div class="svg-icon inline-icon right white-icon">
-													<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+													<?php 
+													$value_to_sent = $eventcolor;
+													set_query_var( 'event_color', $value_to_sent );
+													get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
 										 			</div><!-- svg-icon inline-icon -->	
 										 													 		
 												</a>
@@ -577,6 +594,8 @@
 	//$upcomingeventid = get_the_ID();							
 	$eventstart = get_field('event_start_date'); // date and time picker
 	$eventend = get_field('event_end_date');  // date and time picker
+	$eventcolor = get_field('event_colour'); // colour picker
+
 	$posterart =  get_field('poster_art'); // image
 	$venue =  get_field('venue');  // text
 	$venuelink =  get_field('venue_url');  // text
@@ -613,7 +632,7 @@
 
 				<?php if($name): ?>
 
-					<div class="event-name grid-item grid-item-xs-6 grid-item-md-3">
+					<div class="event-name grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
 								
 						<?php echo $name; ?>
 									
@@ -621,9 +640,9 @@
 
 				<?php endif; //$name ?>
 
-				<div class="date grid-item grid-item-xs-6 grid-item-md-3">
+				<div class="date grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
 							
-					<?php $startdate = get_field('event_start_date'); echo date_i18n('dS F Y', $startdate);?>
+					<?php $startdate = get_field('event_start_date'); echo date_i18n('jS F Y', $startdate);?>
 					<?php //$starttime = get_field('event_start_date'); echo date_i18n('h:i', $starttime);?>
 					<?php //$endtime = get_field('event_end_date'); echo date_i18n('h:i', $endtime);  ?>
 
@@ -633,13 +652,21 @@
 
 					<?php if($venue): ?>
 
-						<div class="venue summary-item">
+						<div class="venue summary-item" style="border-color:<?php echo $eventcolor;?>">
 							
-							<a class="scale-link" target="_blank" href="<?php echo $venuelink;?>">
+							<a class="scale-link" target="_blank" href="<?php echo $venuelink;?>" style="color:<?php echo $eventcolor;?>">
 
 							<span><?php the_field('venue'); ?></span>   
 							<div class="svg-icon inline-icon right">
-							<?php get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
+
+							<?php
+							// set_query_var( 'event_color', $eventcolor );
+
+								$value_to_sent = $eventcolor;
+								set_query_var( 'event_color', $value_to_sent );
+
+
+							 get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
 					 		</div><!-- svg-icon inline-icon -->	
 						
 							</a> 
@@ -650,13 +677,17 @@
 
 					<?php if($ralink): ?>
 
-						<div class="price summary-item">
+						<div class="price summary-item" style="border-color:<?php echo $eventcolor;?>">
 							
-							<a class="scale-link" target="_blank" href="<?php echo $ralink;?>">
+							<a class="scale-link" target="_blank" href="<?php echo $ralink;?>" style="color:<?php echo $eventcolor;?>">
 								
 								<span class="">Buy Tickets</span>
-								<div class="svg-icon inline-icon right white-icon">
-								<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+								<div class="svg-icon inline-icon right white-icon"><!-- remove this white class if not white - or just override with css?-->
+								<?php 
+
+								$value_to_sent = $eventcolor;
+								set_query_var( 'event_color', $value_to_sent );
+								get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
 					 			</div><!-- svg-icon inline-icon -->	
 					 	
 				 			</a> 
@@ -668,9 +699,9 @@
 					<?php if($fblink): ?>
 
 				 
-						<div class="fb-details summary-item">
+						<div class="fb-details summary-item" style="border-color:<?php echo $eventcolor;?>">
 							
-							<a class="scale-link" href="<?php echo $fblink ;?>">
+							<a class="scale-link" href="<?php echo $fblink ;?>" style="color:<?php echo $eventcolor;?>">
 								
 								<span>Facebook Event</span>	
 								<div class="svg-icon inline-icon right">
@@ -684,9 +715,9 @@
 					<?php endif; //$fblink ?>
 
 
-					<div class="event-link summary-item">
+					<div class="event-link summary-item" style="border-color:<?php echo $eventcolor;?>">
 							
-							<a class="scale-link" href="<?php the_permalink();?>">
+							<a class="scale-link" href="<?php the_permalink();?>" style="color:<?php echo $eventcolor;?>">
 							
 							<span class="">More Information</span>
 							<div class="svg-icon inline-icon right white-icon">

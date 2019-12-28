@@ -319,9 +319,6 @@ body{
 			@include scalelink-out-value(1);
 			height: 25vw;
 
-			@media (min-width: map-get($breakpoints,sm)) {
- 			}
-
 			@media (min-width: map-get($breakpoints,md)) {
 			width: 12.5%;
 			height: 12.5vw;
@@ -386,8 +383,8 @@ body{
 		 } /* .navigation-wrapper */
 
 		#ajax-wrapper{
-		position: fixed;
-		pointer-events:none;// don't allow content to be clicked behind nav
+	//	position: fixed; // removed "fixed" : causing page to go to top
+		pointer-events:none;
 		-webkit-filter: saturate(0) blur(4px); /* Safari 6.0 - 9.0 */
 		filter: saturate(0) blur(4px);
 		-moz-filter: saturate(0) blur(4px);
@@ -428,6 +425,7 @@ body{
 			    	li{
 				    flex: 0 0 100%;
  					text-align: center;
+
 			    		a{
 			    		color:$text-color;
 					    text-decoration: none;
@@ -457,9 +455,19 @@ body{
 			    /* social nav */
 
 		    	#menu-social-navigation{
-			 		    	
+			 	display: flex;
+			 	padding-top: 2vh;
+			 	padding-bottom: 2vh;
+				max-width: 80vw;
+    			margin: auto;
+			    
 			    	li{
-			   
+			   		flex: auto;
+			   		padding-top: 1vh;
+			   		//padding-bottom: 1vh;
+			   		padding-left: 1vh;
+					padding-right: 1vh;
+
 			    		a{
 			    	 	font-size: 2.5vh;
  					    line-height: 3vh;
@@ -474,7 +482,8 @@ body{
 			    	}
 				    
 				    @media (min-width: map-get($breakpoints,md)) {
-						
+					//display: inherit;;
+
 						li{
 					    
 						    a{
@@ -487,9 +496,15 @@ body{
 		    	}/*#menu-social-navigation */			
 
 				#menu-header-second-navigation{
-				    	
+				display: flex;
+			 	//padding-top: 2vh;
+			 	//padding-bottom: 2vh;
+				max-width: 80vw;
+    			margin: auto;
+
 			    	li{
-				 		//margin-right: 1vh;
+			    	flex:auto;
+				 	//margin-right: 1vh;
 
 		    			a{
 						font-size: 1.5vh;
@@ -502,6 +517,11 @@ body{
 			    		}
 			    	
 			    	}
+			    	li:after{
+			    	content: "";// don't want dots
+
+			    	}
+
 			    	li:last-of-child{
  			    	}
 			    
@@ -525,6 +545,13 @@ body{
 	    			float: right;
 	    			height: 147vh;
 	    			width: auto;
+	    			right:	-20vh;
+
+	    				@media (min-width: map-get($breakpoints,md)) {
+ 						right:	0vh;
+ 						}
+		    	
+
 		    		}
 
 					path{
@@ -584,8 +611,7 @@ body.post-type-archive-news,
 
 // if page still loading:
 
-body.loading
-{
+body{
 
 	.navigation-toggle-wrap{
 
@@ -617,7 +643,40 @@ body.loading
 		}
 	}
 
-}//body.loadings*/
+}//bodys*/
+
+body.loaded{
+
+	.navigation-toggle-wrap{
+			
+		.navigation-toggle{
+ 		
+ 			svg {
+ 			animation:none;
+			//@include pulse-opacity;
+
+				path{
+				//fill:$red;
+				}
+
+			}
+		
+			&.toggled-on{
+
+				svg {
+			 
+				path{
+			//	fill:none;
+				}
+
+				}
+
+			}//&.toggled-on
+
+		}
+	}
+
+}//body.loaded*/
 
 //end if loading still
 
