@@ -581,8 +581,9 @@ padding-bottom: 6.25vw;
 
            .flip-card-back {
             transform: rotateY(180deg);
-            background: $black;
- 
+           // background: $black;
+              background-size: contain;
+
              img{
              // opacity: 0.5
               

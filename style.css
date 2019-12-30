@@ -3935,7 +3935,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(31deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(54deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -5202,12 +5202,281 @@ body.loaded .navigation-toggle-wrap .navigation-toggle svg {
 .post-type-archive-news
 */
 /* end archive navigation */
-/* Cookie Banner */
-/* line 3, assets/sass/_partials/_cookie-banner.scss */
+/* Cookie Banner 
+
+
+
+
+*/
+/* start styling 
+
+TO DO:"
+
+- apply my responsive messareuments
+- remove unccesary styleing such as afont sizes,lineheight etc
+
+"
+
+*/
+/* line 29, assets/sass/_partials/_cookie-banner.scss */
 #cookie-notice {
-  display: none !important;
+  display: block;
+  visibility: hidden;
+  position: fixed;
+  min-width: 100%;
+  height: auto;
+  z-index: 100000;
+  font-size: 13px;
+  line-height: 20px;
+  left: 0;
+  text-align: center;
 }
 
+/* line 42, assets/sass/_partials/_cookie-banner.scss */
+.cn-top {
+  top: 0;
+}
+
+/* line 46, assets/sass/_partials/_cookie-banner.scss */
+.cn-bottom {
+  bottom: 0;
+}
+
+/* line 50, assets/sass/_partials/_cookie-banner.scss */
+.cookie-notice-container {
+  padding-left: 2.5px;
+  padding-left: 7.5px;
+  padding-right: 2.5px;
+  padding-right: 7.5px;
+  padding-left: 18px;
+  padding-left: 26px;
+  padding-right: 18px;
+  padding-right: 26px;
+  text-align: left;
+  width: 100%;
+  font-weight: 400;
+  border-top: 1px solid white;
+ /*   -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+*/
+}
+@media screen and (min-width: 0px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-left: calc(2.5px + 5 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-left: 7.5px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-left: calc(7.5px + 2.5 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-right: calc(2.5px + 5 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-right: 7.5px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-right: calc(7.5px + 2.5 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-right: 10px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-left: calc(18px + 8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-left: 26px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-left: calc(26px + 6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-left: 32px;
+  }
+}
+@media screen and (min-width: 0px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-right: calc(18px + 8 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-right: 26px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-right: calc(26px + 6 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 50, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container {
+    padding-right: 32px;
+  }
+}
+
+/* line 66, assets/sass/_partials/_cookie-banner.scss */
+.cookie-notice-revoke-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  visibility: hidden;
+ /*   -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+*/
+}
+
+/* line 78, assets/sass/_partials/_cookie-banner.scss */
+.cn-top .cookie-notice-revoke-container {
+  top: 0;
+  bottom: auto;
+}
+
+/* line 83, assets/sass/_partials/_cookie-banner.scss */
+#cookie-notice .cn-revoke-cookie {
+  margin: 0;
+}
+
+/* line 87, assets/sass/_partials/_cookie-banner.scss */
+.cn-button.wp-default,
+.cn-button.wp-default:hover,
+.cn-button.bootstrap,
+.cn-button.bootstrap:hover {
+  box-shadow: none;
+  text-decoration: none;
+}
+
+/* line 95, assets/sass/_partials/_cookie-banner.scss */
+#cookie-notice .cn-button {
+  margin-left: 10px;
+}
+
+/* line 99, assets/sass/_partials/_cookie-banner.scss */
+.cn-button.wp-default {
+  line-height: 18px;
+  padding: 2px 12px;
+  -moz-box-sizing: border-box;
+  border-radius: 3px 3px 3px 3px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-style: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  outline: none;
+}
+
+/* line 120, assets/sass/_partials/_cookie-banner.scss */
+.cn-button.wp-default:hover {
+  background: linear-gradient(to bottom, #ffffff, #f3f3f3) repeat scroll 0 0 #F3F3F3;
+  border-color: #999;
+  color: #222;
+}
+
+/* line 126, assets/sass/_partials/_cookie-banner.scss */
+.cn-button.bootstrap {
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 4px 12px;
+  margin-right: .3em;
+  margin-bottom: 0;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  font-style: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: white;
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #04c #04c #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 2px 10px;
+  font-size: 12px;
+  text-decoration: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  outline: none;
+}
+
+/* line 167, assets/sass/_partials/_cookie-banner.scss */
+.cn-button.bootstrap:hover {
+  color: #fff;
+  background-color: #04c;
+  *background-color: #003bb3;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+@media all and (max-width: 900px) {
+  /* line 179, assets/sass/_partials/_cookie-banner.scss */
+  .cookie-notice-container #cn-notice-text {
+    display: block;
+  }
+}
+/* end styling */
+/*body.wp-admin.admin-page-id-3, //privacy policy - local */
 /* default */
 /* line 3, assets/sass/_partials/_archivelist.scss */
 body {
@@ -6982,14 +7251,14 @@ body.single-artists .record-square-container .flip-card .flip-card-back img,
 body.single-artists .record-square-container .flip-card .flip-card-back,
 .release-block .record-square-container .flip-card .flip-card-back {
   transform: rotateY(180deg);
-  background: black;
+  background-size: contain;
 }
-/* line 601, assets/sass/_partials/_artists.scss */
+/* line 602, assets/sass/_partials/_artists.scss */
 body.single-artists .record-square-container.active,
 .release-block .record-square-container.active {
   pointer-events: none;
 }
-/* line 604, assets/sass/_partials/_artists.scss */
+/* line 605, assets/sass/_partials/_artists.scss */
 body.single-artists .record-square-container.active .flip-card-inner,
 .release-block .record-square-container.active .flip-card-inner {
   transform: rotateY(180deg);
@@ -13505,21 +13774,32 @@ section#past-events .event-items a:first-child:last-child {
   }
 }
 
-/* line 437, assets/sass/_partials/_events.scss */
+/* line 435, assets/sass/_partials/_events.scss */
+.post-type-archive-events section#past-events .event-items .past-event-item:hover {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin-top: -1px;
+}
+/* line 441, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .event-items .past-event-item:hover .scale-me {
   transform: scale(1.025);
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
-/* line 447, assets/sass/_partials/_events.scss */
+/* line 449, assets/sass/_partials/_events.scss */
+.post-type-archive-events section#past-events .event-items .past-event-item:first-child {
+  margin-top: 0px;
+  border-top: none;
+}
+/* line 454, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .event-items .past-event-item:last-child {
   border-bottom: none;
 }
-/* line 450, assets/sass/_partials/_events.scss */
+/* line 457, assets/sass/_partials/_events.scss */
 .post-type-archive-events section#past-events .event-items .past-event-item:first-child:last-child {
   border: none;
 }
-/* line 463, assets/sass/_partials/_events.scss */
+/* line 470, assets/sass/_partials/_events.scss */
 .post-type-archive-events #random-event-details .cover-image-item {
   width: 100%;
   height: 100vh;

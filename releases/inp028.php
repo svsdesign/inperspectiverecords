@@ -40,7 +40,7 @@
 		  
 		    <div class="flip-card-back" style="background-image:url('<?php echo $releaseassetslocation ;?>/INP028-digital-cover-back.jpg')">		
 
-		    	<img class="record-sleave back" src="<?php echo $releaseassetslocation ;?>/INP028-digital-icon.png">
+		    	<img class="record-sleave back" src="<?php echo $releaseassetslocation ;?>/INP028-digital-icon_v2.png">
 
 		    </div>
 

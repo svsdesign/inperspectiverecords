@@ -291,6 +291,10 @@ $contactintro = get_field( 'contact_intro' ); // text area
 //- add live host id; replace the 0000
 ?>
 
+I need to sort something out for cooke revoking - I guess?
+
+<?php echo do_shortcode('[cookies_revoke]');?> 
+
 	<section id="privacy-page-details" class="grid">
  
 		<div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
