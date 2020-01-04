@@ -626,7 +626,8 @@ TO DO:"
 }
 
 #cn-accept-cookie{
-     @extend .grid-item-xs-6;
+
+    @extend .grid-item-xs-6;
     display: block;
     float: left;
     background: $white;
