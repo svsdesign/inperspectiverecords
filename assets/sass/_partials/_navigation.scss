@@ -385,7 +385,7 @@ body{
 		#ajax-wrapper{
 	//	position: fixed; // removed "fixed" : causing page to go to top
 		pointer-events:none;
-		-webkit-filter: saturate(0) blur(4px); /* Safari 6.0 - 9.0 */
+		-webkit-filter: saturate(0) blur(4px)!important; /* Safari 6.0 - 9.0 */
 		filter: saturate(0) blur(4px);
 		-moz-filter: saturate(0) blur(4px);
 		-o-filter: saturate(0) blur(4px);

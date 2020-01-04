@@ -132,7 +132,7 @@ get_header();?>
 
 							<?php endif; //$featureimage  ?>
 
-						 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> outer-grid-item inner outer-grid-item-xs-8 outer-grid-item-md-6 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
+						 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> outer-grid-item inner outer-grid-item-xs-8 outer-grid-item-sm-6 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
 
 								<div class="wrapping grid">	
 								

@@ -154,7 +154,7 @@ var radioscriptloaded, // set as undefined initially;//
                                     trackValues: true, // set to true so that the event object is updated with old & new values
                                     callback: function(evnt) {
                                         if(evnt.attributeName == "class") { // which attribute you want to watch for changes
-                                            console.log("a class changes existed");
+                                           // console.log("a class changes existed");
 
                                             // var bodyclass = $("body").attr("class"); 
                                             /// console.log(bodyclass); 
@@ -165,11 +165,11 @@ var radioscriptloaded, // set as undefined initially;//
 
                                                if (evnt.newValue.search(/has-sound-block/i) == -1){
                                                  
-                                                 console.log("we dont have a sound block class - do nothing");
+                                                 //console.log("we dont have a sound block class - do nothing");
 
                                                } else {
                                                  
-                                                 console.log("we DO have a block class - run script again");
+                                                 //console.log("we DO have a block class - run script again");
                                                  checkScript(); // initial run 
 
                                                }
@@ -179,13 +179,13 @@ var radioscriptloaded, // set as undefined initially;//
                                                 if (evnt.newValue.search(/post-type-archive-radio/i) == -1)
                                                 //if((evnt.newValue.search(/post-type-archive-radio/i) == -1) || (evnt.newValue.search(/single-radio/i) == -1))
                                                 { // "open" is the class name you search for inside "class" attribute
-                                                 console.log("we dont have archive radio class OR sound block class");
+                                                // console.log("we dont have archive radio class OR sound block class");
                                                  // yeah but this would also be true mean that if the radio wone did exist, but the archive didn't 
 
                                                 } else {
                                                  
                                                 //  console.log("else - so we might have the archive or soundblock class ");
-                                                 console.log("we DO have post-type-archive-radio - run script again");
+                                                // console.log("we DO have post-type-archive-radio - run script again");
 
                                                  checkScript(); // initial run 
 

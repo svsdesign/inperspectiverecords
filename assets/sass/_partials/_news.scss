@@ -42,8 +42,9 @@
     article{
     background: $news-background-color;
     @include padding(padding-bottom, 1);
-    
-     
+    overflow: hidden; // added to solve the overflow issues - review + deletet this comment
+    width: 100%;
+
       .post-entry-details{
       
         .date-wrap{

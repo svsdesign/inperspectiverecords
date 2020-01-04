@@ -208,7 +208,116 @@ TO DO:
 
       }; //opacity
      
-  
+    function previewsite(){
+    // preview site - if cookies diables or not on
+    console.log("previewsite function");
+
+
+          $("body").attrchange({
+            trackValues: true, // set to true so that the event object is updated with old & new values
+            callback: function(evnt) {
+                if(evnt.attributeName == "class") { // which attribute you want to watch for changes
+                    
+                        var $nobutton = $("#cn-refuse-cookie"),
+                            $yesbutton = $("#cn-accept-cookie"),
+                            $dotbutton = $(".cn-revoke-cookie")
+
+
+                      if ($('body').hasClass('cookies-accepted')){
+                         
+
+                            $nobutton.hover(function(){ // was #cn-accept-cookie /#cookie-notice
+
+                                $("body").addClass("preview-site g-scale");  //Add the active class to the area is hovered
+                            }, function () {
+
+                                $("body").removeClass("preview-site g-scale");
+                            });
+                          
+                           $yesbutton.hover(function(){
+
+                             //   console.log("has class cookies-accepted ")
+                                $("body").addClass("preview-site");  //Add the active class to the area is hovered
+                            }, function () {
+
+                                $("body").removeClass("preview-site");
+                            });
+
+                      } else if ($('body').hasClass('cookies-refused')){
+
+                            $nobutton.hover(function(){
+
+                                $("body").addClass("preview-site g-scale");  //Add the active class to the area is hovered
+                            }, function () {
+
+                                $("body").removeClass("preview-site g-scale");
+                            });
+
+                            $yesbutton.hover(function(){ 
+                              //  console.log("has class cookies-refused ")
+                                $("body").addClass("preview-site");  //Add the active class to the area is hovered
+                            }, function () {
+
+                                $("body").removeClass("preview-site");
+                            });
+
+                            // preview on the dot:
+
+                           $dotbutton.hover(function(){ 
+
+                                $("body").addClass("preview-site");  //Add the active class to the area is hovered
+                            }, function () {
+
+                                $("body").removeClass("preview-site");
+                            });
+
+                      } else if ($('body').hasClass('cookies-not-set')){
+              
+                         
+                           $yesbutton.hover(function(){ // was #cn-accept-cookie /#cookie-notice
+
+                                $("body").addClass("preview-site");  //Add the active class to the area is hovered
+                            }, function () {
+
+                                $("body").removeClass("preview-site");
+                            });
+
+                            $nobutton.hover(function(){ // was #cn-accept-cookie /#cookie-notice
+
+                              $("body").addClass("preview-site g-scale");  //Add the active class to the area is hovered
+                          }, function () {
+
+                              $("body").removeClass("preview-site g-scale");
+                          });
+
+
+                      }
+
+                  }//== "class"
+
+              }
+
+            });
+
+/*
+      if ($('body').hasClass('cookies-accepted')){
+            var $button = $("#cn-refuse-cookie");
+
+      } else if ($('body').hasClass('cookies-refused')){
+            var $button = $("#cn-accept-cookie");
+
+      }
+
+
+        $button.hover(function(){ // was #cn-accept-cookie /#cookie-notice
+
+            $("body").addClass("preview-site");  //Add the active class to the area is hovered
+        }, function () {
+
+            $("body").removeClass("preview-site");
+        });
+*/
+    }//previewsite();
 
     function orientation(){
     
@@ -608,6 +717,22 @@ TO DO:
 
 
                 //END DEV GRID - TOGGLE
+
+// cookies
+
+//cookies-set cookies-revoke cookies-accepted
+      if ($('body.cookies-refused, body.cookies-revoke, body.cookies-set, body.cookies-not-set, body.cookies-accepted').length > 0) 
+      {
+//// I got a feeling this is buggy?
+
+          previewsite();
+      /* 
+      body 
+      */
+      };  
+
+// end cookies
+
 
 
       if ($('.radio-container').length > 0) 

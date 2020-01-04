@@ -48,6 +48,8 @@ $lineheight: (
 	$svsgold:rgba(223, 163, 45,1); // gold
 	$green:rgba(45, 175, 57,1); // green
   $red:rgba(240, 82, 59, 1); // red = #f0523b
+    $red_0:rgba(240, 82, 59, 0); // red = #f0523b
+
 	$black:rgba(0,0,0,1);
 	$black_zero_p:rgba(0,0,0,0);
 	$black_ten_p:rgba(0,0,0,0.1);
@@ -92,6 +94,6 @@ $lineheight: (
 
 /* FONTS */
 
-$fontfamily: "Objectivity", Helvetica, Arial, sans-serif;
+  $fontfamily: "Objectivity", Helvetica, Arial, sans-serif;
 
 

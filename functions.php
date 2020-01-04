@@ -159,6 +159,24 @@ function remove_draft_widget(){
 // End remove normal post type
 
 
+/* de-register/enqueue the cookie notice css scripts 
+"cookie-notice-front"
+        wp_enqueue_style( 'cookie-notice-front', plugins_url( 'css/front' . ( ! ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '.min' : '' ) . '.css', __FILE__ ) );
+
+*/
+
+add_action( 'wp_enqueue_scripts', 'remove_default_stylesheet', 20 );
+function remove_default_stylesheet() {
+      wp_dequeue_style( 'cookie-notice-front' ); // cookie notice plugin
+  //  wp_deregister_style( 'original-register-stylesheet-handle' );
+ 
+   // wp_register_style( 'new-style', get_stylesheet_directory_uri() . '/new.css', false, '1.0.0' ); 
+    //wp_enqueue_style( 'new-style' );
+}
+
+//
+
+
 /* create custom post types */
 
 	/* ARTISTS */

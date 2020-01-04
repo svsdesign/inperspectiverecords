@@ -874,11 +874,12 @@ cursor: wait;
 } /* .play-toggle */
 
 .play-toggle.active-pause{
+border-color:$red!important;// this only for blocks - and overriding the default or chosen colour
 
     svg{
 
       path{
-      fill:$red;
+      fill:$red!important;
       }
     
     }
@@ -1100,9 +1101,15 @@ position: absolute;
 bottom:  12.5vw;
 // float: right;
 width: 87.5%;// was 100%;
-padding-left: 12.5vw;
-padding-right: 12.5vw;
+padding-left: 25vw;
+padding-right: 25vw;
 z-index: 1;// ensur aboute the copy
+
+   @media (min-width: map-get($breakpoints,md)) {   
+    padding-left: 12.5vw;
+    padding-right: 12.5vw;
+   }
+
  
   .sc-buffer{
     cursor: pointer; // so you can see where to click on the playable area
@@ -1175,7 +1182,7 @@ z-index: 1;// ensur aboute the copy
     z-index: 799;
   }
 
-}
+}//.sc-scrubber
 
 /* volume control */
 .sc-volume-slider {
@@ -1579,9 +1586,14 @@ body.single-radio{
       margin-top: 37.5vh;
       position: absolute;
       left: 43.75vw;
-      width: 12.5vw;
+      width: 25vw;// was 12.5vw;
       pointer-events: none;
-      }
+
+          @media (min-width: map-get($breakpoints,md)) {
+          width: 12.5vw;
+          }
+
+      }//.sc-controls
 
       .sc-scrubber{
       width: 100%;
