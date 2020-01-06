@@ -4000,7 +4000,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(46deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(93deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -4556,12 +4556,12 @@ body.toggled-on {
   	}
   */
 }
-/* line 525, assets/sass/_partials/_navigation.scss */
+/* line 528, assets/sass/_partials/_navigation.scss */
 body.toggled-on .navigation-wrapper {
   pointer-events: initial;
   touch-action: initial;
 }
-/* line 529, assets/sass/_partials/_navigation.scss */
+/* line 532, assets/sass/_partials/_navigation.scss */
 body.toggled-on .navigation-wrapper .navigation {
   min-height: 100%;
   z-index: 2;
@@ -4575,11 +4575,11 @@ body.toggled-on .navigation-wrapper .navigation {
   transform: scale(1);
   opacity: 1;
 }
-/* line 548, assets/sass/_partials/_navigation.scss */
+/* line 551, assets/sass/_partials/_navigation.scss */
 body.toggled-on .navigation-wrapper .navigation-cross {
   display: none;
 }
-/* line 554, assets/sass/_partials/_navigation.scss */
+/* line 557, assets/sass/_partials/_navigation.scss */
 body.toggled-on #ajax-wrapper {
   pointer-events: none;
   touch-action: none;
@@ -4595,7 +4595,7 @@ body.toggled-on #ajax-wrapper {
   -moz-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
-/* line 581, assets/sass/_partials/_navigation.scss */
+/* line 584, assets/sass/_partials/_navigation.scss */
 body.toggled-on .radio-container {
   pointer-events: none;
   opacity: 0.6;
@@ -4606,11 +4606,11 @@ body.toggled-on .radio-container {
   -o-filter: blur(4px);
   -ms-filter: blur(4px);
 }
-/* line 594, assets/sass/_partials/_navigation.scss */
+/* line 597, assets/sass/_partials/_navigation.scss */
 body.vertical {
   /* .navigation-wrapper */
 }
-/* line 598, assets/sass/_partials/_navigation.scss */
+/* line 601, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation {
   /* Menu nav */
   /*#menu-header-navigation */
@@ -4618,47 +4618,47 @@ body.vertical .navigation-wrapper .navigation {
   /*#menu-social-navigation */
   /*#menu-header-second-navigation */
 }
-/* line 605, assets/sass/_partials/_navigation.scss */
+/* line 608, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #logo-wrap .inner-logo-wrap {
   padding-top: 0px;
   padding-top: 0px;
 }
 @media screen and (min-width: 0px) {
-  /* line 605, assets/sass/_partials/_navigation.scss */
+  /* line 608, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .navigation #logo-wrap .inner-logo-wrap {
     padding-top: calc(0px + 0 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 605, assets/sass/_partials/_navigation.scss */
+  /* line 608, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .navigation #logo-wrap .inner-logo-wrap {
     padding-top: 0px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 605, assets/sass/_partials/_navigation.scss */
+  /* line 608, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .navigation #logo-wrap .inner-logo-wrap {
     padding-top: calc(0px + 0 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 605, assets/sass/_partials/_navigation.scss */
+  /* line 608, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .navigation #logo-wrap .inner-logo-wrap {
     padding-top: 0px;
   }
 }
-/* line 679, assets/sass/_partials/_navigation.scss */
+/* line 682, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-header-navigation {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
-/* line 685, assets/sass/_partials/_navigation.scss */
+/* line 688, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-header-navigation li {
   flex: 0 0 100%;
   text-align: center;
 }
-/* line 689, assets/sass/_partials/_navigation.scss */
+/* line 692, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-header-navigation li a {
   color: white;
   text-decoration: none;
@@ -4666,18 +4666,18 @@ body.vertical .navigation-wrapper .navigation #menu-header-navigation li a {
   text-decoration: none;
   line-height: 5vh;
 }
-/* line 697, assets/sass/_partials/_navigation.scss */
+/* line 700, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-header-navigation li a:visited {
   color: white;
 }
 @media (min-width: 640px) {
-  /* line 707, assets/sass/_partials/_navigation.scss */
+  /* line 710, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .navigation #menu-header-navigation li {
     flex: 0 0 50%;
     text-align: left;
   }
 }
-/* line 717, assets/sass/_partials/_navigation.scss */
+/* line 720, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-social-navigation {
   display: flex;
   padding-top: 2vh;
@@ -4685,61 +4685,61 @@ body.vertical .navigation-wrapper .navigation #menu-social-navigation {
   max-width: 80vw;
   margin: auto;
 }
-/* line 724, assets/sass/_partials/_navigation.scss */
+/* line 727, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-social-navigation li {
   flex: auto;
   padding-top: 1vh;
   padding-left: 1vh;
   padding-right: 1vh;
 }
-/* line 731, assets/sass/_partials/_navigation.scss */
+/* line 734, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-social-navigation li a {
   font-size: 2.5vh;
   line-height: 3vh;
 }
 @media (min-width: 640px) {
-  /* line 749, assets/sass/_partials/_navigation.scss */
+  /* line 752, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .navigation #menu-social-navigation li a {
     font-size: 1.25vh;
     line-height: 1.5vh;
   }
 }
-/* line 758, assets/sass/_partials/_navigation.scss */
+/* line 761, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-header-second-navigation {
   display: flex;
   max-width: 80vw;
   margin: auto;
   flex-flow: column;
 }
-/* line 766, assets/sass/_partials/_navigation.scss */
+/* line 769, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-header-second-navigation li {
   flex-flow: column;
 }
-/* line 771, assets/sass/_partials/_navigation.scss */
+/* line 774, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-header-second-navigation li a {
   font-size: 1.5vh;
   line-height: 2vh;
 }
-/* line 782, assets/sass/_partials/_navigation.scss */
+/* line 785, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .navigation #menu-header-second-navigation li:after {
   content: "";
 }
 @media (min-width: 640px) {
-  /* line 758, assets/sass/_partials/_navigation.scss */
+  /* line 761, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .navigation #menu-header-second-navigation {
     flex-flow: row;
   }
-  /* line 797, assets/sass/_partials/_navigation.scss */
+  /* line 800, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .navigation #menu-header-second-navigation li a {
     font-size: 1.5vh;
     line-height: 2vh;
   }
-  /* line 808, assets/sass/_partials/_navigation.scss */
+  /* line 811, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .navigation #menu-header-second-navigation li:after {
     content: "";
   }
 }
-/* line 827, assets/sass/_partials/_navigation.scss */
+/* line 830, assets/sass/_partials/_navigation.scss */
 body.vertical .navigation-wrapper .bg .inp-bg svg {
   float: right;
   height: 147vh;
@@ -4747,7 +4747,7 @@ body.vertical .navigation-wrapper .bg .inp-bg svg {
   right: -20vh;
 }
 @media (min-width: 640px) {
-  /* line 827, assets/sass/_partials/_navigation.scss */
+  /* line 830, assets/sass/_partials/_navigation.scss */
   body.vertical .navigation-wrapper .bg .inp-bg svg {
     right: 0vh;
   }
@@ -4755,7 +4755,7 @@ body.vertical .navigation-wrapper .bg .inp-bg svg {
 
 /* start colours for toggle files - REVIEW - this maybe not used */
 /* white */
-/* line 905, assets/sass/_partials/_navigation.scss */
+/* line 908, assets/sass/_partials/_navigation.scss */
 body .navigation-toggle-wrap .navigation-toggle svg {
   -webkit-animation: pulse 3s infinite ease-in-out;
   -o-animation: pulse 3s infinite ease-in-out;
@@ -4764,7 +4764,7 @@ body .navigation-toggle-wrap .navigation-toggle svg {
   animation: pulse 3s infinite ease-in-out;
 }
 
-/* line 937, assets/sass/_partials/_navigation.scss */
+/* line 940, assets/sass/_partials/_navigation.scss */
 body.loaded .navigation-toggle-wrap .navigation-toggle svg {
   animation: none;
 }
@@ -4858,12 +4858,12 @@ body.loaded .navigation-toggle-wrap .navigation-toggle svg {
 }
 /* end animations*/
 /* TO DO - ensure this headroom doesn't intervene with my sticky players classes + design states */
-/* line 1108, assets/sass/_partials/_navigation.scss */
+/* line 1111, assets/sass/_partials/_navigation.scss */
 .animated.pinned {
   animation: 0.5s forwards fade-in;
 }
 
-/* line 1114, assets/sass/_partials/_navigation.scss */
+/* line 1117, assets/sass/_partials/_navigation.scss */
 .animated.pinned .sc-trackslist,
 .animated.pinned .sc-scrubber {
  /*   -webkit-animation-name: slideDown;
@@ -4875,16 +4875,16 @@ body.loaded .navigation-toggle-wrap .navigation-toggle svg {
   animation: 0.5s forwards slideDown;
 }
 
-/* line 1135, assets/sass/_partials/_navigation.scss */
+/* line 1138, assets/sass/_partials/_navigation.scss */
 .animated.unpinned {
   animation: 0.5s forwards fade-out;
 }
-/* line 1138, assets/sass/_partials/_navigation.scss */
+/* line 1141, assets/sass/_partials/_navigation.scss */
 .animated.unpinned .sc-minimise {
   opacity: 0 !important;
 }
 
-/* line 1145, assets/sass/_partials/_navigation.scss */
+/* line 1148, assets/sass/_partials/_navigation.scss */
 .animated.unpinned .sc-trackslist,
 .animated.unpinned .sc-scrubber {
  /* -webkit-animation-name: slideUp;
@@ -4913,13 +4913,13 @@ body.loaded .navigation-toggle-wrap .navigation-toggle svg {
 */
 /* End Headroom */
 /* cookies testing */
-/* line 1192, assets/sass/_partials/_navigation.scss */
+/* line 1195, assets/sass/_partials/_navigation.scss */
 .cookie-consent-preferences-dialog {
   background-color: red;
   height: 100vh;
 }
 
-/* line 1198, assets/sass/_partials/_navigation.scss */
+/* line 1201, assets/sass/_partials/_navigation.scss */
 .cookie-consent-preferences-overlay .cookie-consent-preferences-dialog .cc_cp_container .cc_cp_footer {
   display: none !important;
 }
@@ -8262,8 +8262,8 @@ article.scene-wrapper .scene-fixer {
   display: block;
   position: fixed;
   opacity: 0;
-  top: 80vh;
-  height: 20vh;
+  top: 80%;
+  height: 20%;
   width: 100%;
   text-align: center;
   /* Rectangle 5: */
@@ -8419,7 +8419,7 @@ article.scene-wrapper .scene-fixer {
   opacity: 1;
   position: fixed;
   animation: blurin 200ms ease-in forwards;
-  top: 50vh;
+  top: 50%;
 }
 /* line 243, assets/sass/_partials/_releases.scss */
 .scene-height .height-item.active .description-wrap {
@@ -8471,8 +8471,8 @@ body.vertical .scene-height .height-item {
 body.vertical .scene-height .height-item .description-wrap {
   padding-top: 7.2px;
   padding-top: 10.4px;
-  top: 80vh;
-  height: 20vh;
+  top: 80%;
+  height: 20%;
   width: 100%;
   text-align: center;
   /* Rectangle 5: */
@@ -9065,31 +9065,31 @@ body.release-list-view .scene-height .height-item.active .description-wrap {
   position: -ms-sticky;
   position: -o-sticky;
   position: sticky;
-  top: 5vh;
+  top: 5%;
   padding-top: 0;
-  height: 90vh;
+  height: 90%;
   /*image-wrap*/
   /* .details-wrap */
 }
 @media (min-width: 320px) {
   /* line 681, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap {
-    top: 20vh;
-    height: 60vh;
+    top: 20%;
+    height: 60%;
   }
 }
 @media (min-width: 640px) {
   /* line 681, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap {
-    top: 20vh;
-    height: 60vh;
+    top: 20%;
+    height: 60%;
   }
 }
 @media (min-width: 960px) {
   /* line 681, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap {
-    top: 10vh;
-    height: 80vh;
+    top: 10%;
+    height: 80%;
   }
 }
 /* line 710, assets/sass/_partials/_releases.scss */

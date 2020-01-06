@@ -429,7 +429,11 @@ TO DO:
               button.className = button.className.replace( ' toggled-on', '' );
               menu.className = menu.className.replace( ' toggled-on', '' );
 
-              toIdot();          
+              toIdot();    
+      
+              body.removeEventListener( 'touchmove', function(event) {
+               // event.preventDefault();
+              }, true );    
             
           } else {
 
@@ -438,10 +442,31 @@ TO DO:
               menu.className += ' toggled-on';
 
               toMinus();
+
+                // disable scroll
+              body.addEventListener( 'touchmove', function(event) {
+                event.preventDefault();
+              }, false );    
                                  
           } // if
 
         };
+
+
+/* delete this
+
+        element.addEventListener("mousedown", handleMouseDown, true);
+Now consider each of these two calls to removeEventListener():
+
+element.removeEventListener("mousedown", handleMouseDown, false);     // Fails
+element.removeEventListener("mousedown", handleMouseDown, true);      // Succeeds
+The first 
+
+*/
+
+
+
+
 
 
         if  ($('.navigation-toggle').hasClass('toggled-on')){

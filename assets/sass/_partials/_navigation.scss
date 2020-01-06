@@ -518,7 +518,10 @@ body{
 
 	&.toggled-on{
 	overflow: hidden;
-	//position: fixed;// for mobile - but force to page to the top; so not really good solutiom
+	//position: fixed;// for mobile - but force to page to the top; so not really good solutiom various chat here:
+	//https://stackoverflow.com/questions/9280258/prevent-body-scrolling-but-allow-overlay-scrolling
+	//https://stackoverflow.com/questions/37713970/ios-css-js-overlay-scroll-but-prevent-body-scroll
+
  	pointer-events:none;
 	touch-action:none;
 

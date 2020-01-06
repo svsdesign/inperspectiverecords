@@ -134,8 +134,8 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
         display: block;
         position:fixed; // make the last item sticky instead so it moves acordingly
         opacity: 0;
-        top: 80vh;
-        height: 20vh;
+        top: 80%;// was 80vh;
+        height: 20%;// was 20vh;
          width: 100%;
         text-align: center;
         /* Rectangle 5: */
@@ -237,7 +237,7 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
       opacity: 1;
       position: fixed; 
       @include focus;
-      top: 50vh;   
+      top: 50%;//waas 50vh;   
       }
 
       .description-wrap{
@@ -316,8 +316,8 @@ body.vertical{
                
           .description-wrap{
           @include padding(padding-top, 0.4);
-          top: 80vh;
-          height: 20vh;
+          top: 80%;// was 80vh;
+          height: 20%;// was 20vh;
           width: 100%;
           text-align: center;
           /* Rectangle 5: */
@@ -688,23 +688,23 @@ body.release-list-view{
       position: -ms-sticky;
       position: -o-sticky;
       position: sticky;
-      top: 5vh;
+      top:5%;// was 5vh;
       padding-top: 0;
-      height: 90vh; 
+      height: 90%;// was 90vh; 
 
           @media (min-width: map-get($breakpoints,sm)) {
-          top:20vh;
-          height: 60vh; 
+          top: 20%;// was 20vh;
+          height: 60%;// was 60vh; 
           }
 
           @media (min-width: map-get($breakpoints,md)) {
-          top:20vh;
-          height: 60vh; 
+          top:20%;// was 20vh;
+          height: 60%;// was 60vh; 
           }
 
           @media (min-width: map-get($breakpoints,lg)) {
-          top:10vh;
-          height: 80vh; 
+          top:10%;// was 10vh;
+          height:80%;// 80vh; 
           }
 
         .grid{
