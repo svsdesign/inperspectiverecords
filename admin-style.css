@@ -3046,30 +3046,30 @@ body.dev-on #dev-grid.container .dev-grid-item {
 
 /* line 245, assets/sass/_partials/_gridsystem.scss */
 article.container {
-  min-height: 100vh;
+  min-height: 100%;
   position: relative;
 }
 
-/* line 250, assets/sass/_partials/_gridsystem.scss */
+/* line 252, assets/sass/_partials/_gridsystem.scss */
 .center-item {
   margin: auto;
 }
 
-/* line 255, assets/sass/_partials/_gridsystem.scss */
+/* line 257, assets/sass/_partials/_gridsystem.scss */
 section {
   width: 100%;
   position: relative;
 }
 
 /* scaling */
-/* line 265, assets/sass/_partials/_gridsystem.scss */
+/* line 267, assets/sass/_partials/_gridsystem.scss */
 .scale-me {
   transform: scale(1.025);
   transform-origin: center;
   transition: all 200ms ease-in-out;
 }
 
-/* line 270, assets/sass/_partials/_gridsystem.scss */
+/* line 272, assets/sass/_partials/_gridsystem.scss */
 .scale-me.scale- {
   transform: scale(1.025);
   transform-origin: center;
@@ -3077,13 +3077,13 @@ section {
 }
 
 /* IMAGES */
-/* line 278, assets/sass/_partials/_gridsystem.scss */
+/* line 280, assets/sass/_partials/_gridsystem.scss */
 img {
   opacity: 0;
 }
 
 /* no selection on images */
-/* line 285, assets/sass/_partials/_gridsystem.scss */
+/* line 287, assets/sass/_partials/_gridsystem.scss */
 img {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3091,16 +3091,16 @@ img {
   user-select: none;
 }
 
-/* line 295, assets/sass/_partials/_gridsystem.scss */
+/* line 297, assets/sass/_partials/_gridsystem.scss */
 body #ajax-wrapper {
   opacity: 0;
 }
 
-/* line 303, assets/sass/_partials/_gridsystem.scss */
+/* line 305, assets/sass/_partials/_gridsystem.scss */
 body.loaded #ajax-wrapper {
   animation: opacity-in 200ms ease-in forwards;
 }
-/* line 306, assets/sass/_partials/_gridsystem.scss */
+/* line 308, assets/sass/_partials/_gridsystem.scss */
 body.loaded #ajax-wrapper img {
   opacity: 1;
 }
@@ -3896,7 +3896,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(42deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(98deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);

@@ -518,9 +518,14 @@ body{
 
 	&.toggled-on{
 	overflow: hidden;
+	//position: fixed;// for mobile - but force to page to the top; so not really good solutiom
+ 	pointer-events:none;
+	touch-action:none;
 
 		.navigation-wrapper{
- 	
+ 		pointer-events:initial;
+		touch-action:initial;
+
 			.navigation{
 		//	display: block;
 			min-height: 100%;// was - 100vh; - but trying to resolve mobile overflow
@@ -547,8 +552,10 @@ body{
 		 } /* .navigation-wrapper */
 
 		#ajax-wrapper{
-	//	position: fixed; // removed "fixed" : causing page to go to top
 		pointer-events:none;
+		touch-action:none;
+
+	//	position: fixed; // removed "fixed" : causing page to go to top
 		-webkit-filter: saturate(0) blur(4px)!important; /* Safari 6.0 - 9.0 */
 		filter: saturate(0) blur(4px);
 		-moz-filter: saturate(0) blur(4px);
