@@ -465,11 +465,7 @@ TO DO:"
     bottom: 0;
     width: 100%;
     z-index: 1;
-    visibility: hidden;
- /*   -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box
-*/
+    visibility: hidden;// - review + delete if okay? or needed?
 }
 
 .cn-top .cookie-notice-revoke-container {

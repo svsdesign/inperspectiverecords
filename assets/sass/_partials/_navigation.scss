@@ -47,9 +47,16 @@ body{
 	    opacity: 0;
 
 		.nav{
-    	margin: auto;	
+
+		margin: 12.5vw auto auto 0;
 		padding:0px;
-		}
+		overflow: visible;// so we can see the logo
+	
+			@media (min-width: map-get($breakpoints,sm)) {
+			margin: auto;	
+	  		}
+
+		}//.nav
 
    // 	.menu-wrap{
 
@@ -57,6 +64,126 @@ body{
 			
 				/* Menu nav */
 	
+				#logo-wrap{
+				display: flex;
+				flex-wrap: wrap;
+				 // justify-content: space-between;
+				flex-direction: row;// why the fuck this not collumn?	
+				overflow: visible;
+			   // position: absolute;
+			    height: 25vh;
+			   // bottom: initial;
+			   // top: -15%;
+
+
+					.inner-logo-wrap{
+					position: relative;
+					height: 100%;
+					width: 25vw;// review
+  					margin-left: 5vw;	
+  					@include cssvalue(padding-top,1);
+
+  					//margin-top:-25vw;// height of toggle area
+				   // position: absolute;
+    				//bottom: 0;
+
+						a.home-logo-link{
+						display: block;
+					    pointer-events:initial;
+
+						    svg{
+						    width: 100%;
+						    height: 100%;		 					  
+
+		 					  path{
+						      fill:$white;// review this - because I might want to change
+						      }
+
+						    }//svg
+						    
+						}//a.home-logo-link
+					}
+
+					@media (min-width: map-get($breakpoints,sm)) {
+					//width: 37.5vw;// review
+					margin-left: -8vw;// this is rough - aim to align the text (not the I dot)
+  					//margin-top:-25vw;// height of toggle area
+			    	//top: -20%;
+
+
+						.inner-logo-wrap{
+				
+							a.home-logo-link{
+						 
+							    svg{
+
+			 					  path{
+							      }
+
+							    }//svg
+							    
+							}//a.home-logo-link
+
+						}
+						
+					}//	@media (min-width: map-get($breakpoints,sm)) 
+
+
+				    @media (min-width: map-get($breakpoints,md)) {
+					//width: 25vw;// review
+					margin-left: 0;// this is rough - aim to align the text (not the I dot)
+ 					margin-top:0;
+					//position: relative;
+					//bottom: 0;
+				    @include cssvalue(padding-bottom,1);
+				    flex: 100%;
+   					height: auto;
+
+						.inner-logo-wrap{
+   						margin-left: -3vw;	
+						width: 20vw;
+
+							a.home-logo-link{
+						 
+							    svg{
+
+			 					  path{
+							      }
+
+							    }//svg
+							    
+							}//a.home-logo-link
+
+						}
+						
+					}//	@media (min-width: map-get($breakpoints,md)) 	
+
+ 					@media (min-width: map-get($breakpoints,lg)) {
+					//width: 12.5vw;// review
+					//margin-left: -2.5vw;// this is rough - aim to align the text (not the I dot)
+			
+						.inner-logo-wrap{
+						margin-left: -1.5vw;	
+						width: 15vw;
+
+
+							a.home-logo-link{
+						 
+							    svg{
+
+			 					  path{
+							      }
+
+							    }//svg
+							    
+							}//a.home-logo-link
+
+						}
+						
+					}//	@media (min-width: map-get($breakpoints,lg)) 					
+
+				}//#logo-wrap
+
 				#menu-header-navigation{
 				pointer-events:initial;
 			  	display: flex;
@@ -230,21 +357,58 @@ body{
 			    	}
 
 				    @media (min-width: map-get($breakpoints,md)) {
-						 li{
- 					  	  text-align: left;
- 					  	  display: inline-block; // this correct?
+						
+					    
+						ul{
+		
+						}
 
-	 					 }
-					}
+				    	li{
+	 					  	  text-align: left;
+	 					  	  display: inline-block; // this correct?
+		 				
+			    			
+			    			a{
+				    			 
+					
+							}
+							
+							a:visited{
+	 			    		}
+				    		a:hover{
+
+				    		}
+				    	
+				    	}//li
+
+				    	li:last-of-child{
+				    	//margin-right: 0vw;
+				    	}
+
+				    	li:before{
+	 			      	content:"  ";
+						white-space: pre;
+				    	}
+
+	 			    	li:after{
+	 			    	content:" \25CF";
+	 			    	 }
+
+				    	li:first-child:before{
+	 			    	content:"";
+				    	}
+	 
+				    	li:last-child:after{
+	 			    	content:"";
+				    	}
+
+					}// @media - md
 
 		    	}/*#menu-header-second-navigation */	 
 	    
 	 //   	} 
 
     //	}
-
-
-
 
 
 	    	.bg{
@@ -415,7 +579,85 @@ body{
 
 			.navigation{
 
+
 /* Menu nav */
+
+				#logo-wrap{
+
+					.inner-logo-wrap{
+  					@include cssvalue(padding-top,0);
+
+						a.home-logo-link{
+				 		    svg{
+				 		
+				 			  path{
+ 						      }
+
+						    }//svg
+						    
+						}//a.home-logo-link
+					}
+
+					@media (min-width: map-get($breakpoints,sm)) {
+
+						.inner-logo-wrap{
+				
+							a.home-logo-link{
+						 
+							    svg{
+
+			 					  path{
+							      }
+
+							    }//svg
+							    
+							}//a.home-logo-link
+
+						}
+						
+					}//	@media (min-width: map-get($breakpoints,sm)) 
+
+
+				    @media (min-width: map-get($breakpoints,md)) {
+
+						.inner-logo-wrap{
+   				 			a.home-logo-link{
+						 
+							    svg{
+
+			 					  path{
+							      }
+
+							    }//svg
+							    
+							}//a.home-logo-link
+
+						}
+						
+					}//	@media (min-width: map-get($breakpoints,md)) 	
+
+ 					@media (min-width: map-get($breakpoints,lg)) {
+			 
+						.inner-logo-wrap{
+					 
+							a.home-logo-link{
+						 
+							    svg{
+
+			 					  path{
+							      }
+
+							    }//svg
+							    
+							}//a.home-logo-link
+
+						}
+						
+					}//	@media (min-width: map-get($breakpoints,lg)) 					
+
+				}//#logo-wrap
+
+
 				#menu-header-navigation{
 			  	display: flex;
 				flex-wrap: wrap;
@@ -501,10 +743,12 @@ body{
 			 	//padding-bottom: 2vh;
 				max-width: 80vw;
     			margin: auto;
+    			flex-flow: column;
 
 			    	li{
-			    	flex:auto;
+			    	//flex:auto;
 				 	//margin-right: 1vh;
+				 	flex-flow:column;
 
 		    			a{
 						font-size: 1.5vh;
@@ -525,17 +769,38 @@ body{
 			    	li:last-of-child{
  			    	}
 			    
-				    @media (min-width: map-get($breakpoints,md)) {
-						 li{
- 	 					 }
-					}
+					@media (min-width: map-get($breakpoints,md)) {
+	 				flex-flow:row;
+				 
+		    			li{
+				    	//flex:auto;
+					 	//margin-right: 1vh;
+					 	
+			    			a{
+							font-size: 1.5vh;
+	 					    line-height: 2vh;
+							}
+							
+							a:visited{
+	 			    		}
+				    		a:hover{
+				    		}
+				    	
+				    	}
+				    	li:after{
+				    	content: "";// don't want dots
+
+				    	}
+
+				    	li:last-of-child{
+	 			    	}
+
+					}// @media (min-width: map-get($breakpoints,md)) 
 
 		    	}/*#menu-header-second-navigation */	 
 	    
 
 	 		}
-
-
 
 	    	.bg{
   

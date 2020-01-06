@@ -22,6 +22,19 @@
 
 			<div class="menu-wrap grid">
 
+
+				<div id="logo-wrap" class="">
+
+					<div class="inner-logo-wrap">
+				
+						<a class="home-logo-link" alt="home" href="<?php echo get_home_url(); ?>">
+							<?php get_template_part('/assets/svg/inline-inp_logo.svg');?>
+						</a>
+
+					</div>
+				
+				</div><!-- #logo-wrap -->
+
 				<?php wp_nav_menu( array(
 				    'menu' => 'Header Navigation',
 				    'container_class' =>'menu-header grid-item grid-item-xs-6 grid-item-sm-6 grid-item-md-4',

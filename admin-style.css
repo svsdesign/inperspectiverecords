@@ -3896,7 +3896,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(53deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(51deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -4708,50 +4708,50 @@ body.wp-admin.admin-page-id-343 .editor-styles-wrapper a {
 }
 /* line 4, assets/sass/_partials/_pages-legal.scss */
 body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 {
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 {
   background: black;
   color: white;
 }
 /* line 13, assets/sass/_partials/_pages-legal.scss */
 body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1, body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2, body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3, body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p, body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy a,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h1,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h2,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h3,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 p,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 a,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy a,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 a,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy a,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h1,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h2,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h3,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 p,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 a {
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy a,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 a {
   color: white;
 }
 /* line 17, assets/sass/_partials/_pages-legal.scss */
 body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h1,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h1 {
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
   font-size: 10px;
   font-size: 16px;
   line-height: 18px;
@@ -4762,142 +4762,142 @@ body.page-id-343 h1 {
 @media screen and (min-width: 0px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     font-size: calc(10px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     font-size: calc(16px + 14 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     font-size: 30px;
   }
 }
 @media screen and (min-width: 0px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     line-height: 32px;
   }
 }
 @media screen and (min-width: 0px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     margin-bottom: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     margin-bottom: 13px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     margin-bottom: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 17, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h1,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h1 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h1,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h1 {
     margin-bottom: 16px;
   }
 }
 /* line 22, assets/sass/_partials/_pages-legal.scss */
 body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h2,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h2 {
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
   font-size: 10px;
   font-size: 16px;
   line-height: 18px;
@@ -4909,142 +4909,142 @@ body.page-id-343 h2 {
 @media screen and (min-width: 0px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     font-size: calc(16px + 8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     line-height: calc(18px + 4.1 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     line-height: 22.1px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     line-height: calc(26px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     line-height: 27.2px;
   }
 }
 @media screen and (min-width: 0px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     margin-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     margin-bottom: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     margin-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 22, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h2,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h2 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h2,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h2 {
     margin-bottom: 9.6px;
   }
 }
 /* line 28, assets/sass/_partials/_pages-legal.scss */
 body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h3,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 h3 {
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
   font-size: 10px;
   font-size: 16px;
   line-height: 18px;
@@ -5056,142 +5056,142 @@ body.page-id-343 h3 {
 @media screen and (min-width: 0px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     font-size: calc(16px + 8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     font-size: 24px;
   }
 }
 @media screen and (min-width: 0px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     line-height: calc(18px + 4.1 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     line-height: 22.1px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     line-height: calc(26px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     line-height: 27.2px;
   }
 }
 @media screen and (min-width: 0px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     margin-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     margin-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     margin-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 28, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 h3,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 h3 {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy h3,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 h3 {
     margin-bottom: 6.4px;
   }
 }
 /* line 36, assets/sass/_partials/_pages-legal.scss */
 body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 p,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 p {
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
   margin-bottom: 18px;
   margin-bottom: 26px;
   font-size: 10px;
@@ -5202,142 +5202,142 @@ body.page-id-343 p {
 @media screen and (min-width: 0px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     margin-bottom: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     margin-bottom: 26px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     margin-bottom: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 0px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
   /* line 36, assets/sass/_partials/_pages-legal.scss */
   body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 p,
   body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
-  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-  body.page-id-343 p {
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy p,
+  body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 p {
     line-height: 25.6px;
   }
 }
 /* line 41, assets/sass/_partials/_pages-legal.scss */
 body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy a,
-body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 a,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.privacy-policy a,
+body.wp-admin.admin-page-id-3 .editor-styles-wrapper body.page-id-343 a,
 body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy a,
-body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy
-body.page-id-343 a {
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.privacy-policy a,
+body.wp-admin.admin-page-id-343 .editor-styles-wrapper body.page-id-343 a {
   text-decoration: none;
 }
 /* line 66, assets/sass/_partials/_pages-legal.scss */
