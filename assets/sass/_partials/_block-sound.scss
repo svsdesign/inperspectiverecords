@@ -23,15 +23,26 @@ width: 100%;// this dirty?
 
 	.play-toggle{
 
-	height: inherit;// 100%;
+	height: fit-content;//inherit;// 100%;
     width: 100%;
  	border-radius:50%;
 	margin:auto;// was10% 20%;
 	padding:30%;
 	background: $black;	
+    display: block;
+    position: relative;
+    overflow: hidden;
 
 	 	@media (min-width: map-get($breakpoints,lg)) {
 		//padding:40%;
+		}
+
+		svg{
+	    display: block;
+	    float: left;
+	    position: relative;
+	    height: 100%;
+	    width: 100%;
 		}
 
 	}

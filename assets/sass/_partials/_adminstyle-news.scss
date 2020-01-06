@@ -19,6 +19,13 @@ Further reading: 	https://github.com/WordPress/gutenberg/issues/6064
 
 
 */
+body.wp-admin{
+	// temp? i.e should this be set with js - add "imgloaded class to body?"
+	img{
+	opacity: 1
+	}
+
+}/*body.wp-admin*/
 
 
 
@@ -43,7 +50,8 @@ body.wp-admin.post-type-news{
 		//padding-right: 0px; // to override existing - 46px - but these are used to ensure UI elmennts fit inside
 		//overflow: hidden; // to solve the overflow issue - but fucks up my UI
 		//height: auto;
-
+		clear:both; // only 1 block per row.
+		
 			// aligmnents
 
 			&[data-align="wide"],

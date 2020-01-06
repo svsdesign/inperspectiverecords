@@ -31,7 +31,7 @@ body{
 
 		.navigation{
 		//display: block;
- 		min-height: 100vh;
+			min-height: 100%;// was - 100vh; - but trying to resolve mobile overflow
      	border:0;
 //    	background: rgba(0, 0, 0, 0.35);
 	    position: relative;
@@ -523,7 +523,7 @@ body{
  	
 			.navigation{
 		//	display: block;
-			min-height: 100vh;
+			min-height: 100%;// was - 100vh; - but trying to resolve mobile overflow
 		     z-index: 2;
 		    -webkit-transition: all 200ms ease-in;
 		    -webkit-transform: scale(1);
@@ -565,9 +565,20 @@ body{
 	//  	transform: scale(1.001);
 		}
 
-		#side-nav{
-		-webkit-filter: blur(10px); /* Safari 6.0 - 9.0 */
+	/*	#side-nav{ <! what this? when do we have this div?- removed
+		-webkit-filter: blur(10px); 
 		filter: saturate(10px);
+		}
+	*/
+
+		.radio-container{ // don't display 
+		pointer-events:none;
+		opacity: 0.6;
+		-webkit-filter:blur(4px)!important; /* Safari 6.0 - 9.0 */
+		filter: blur(2px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);	 
 		}
 
 

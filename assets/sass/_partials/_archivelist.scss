@@ -1,6 +1,6 @@
 /* default */
 
-body{
+//body{ // these remoeve because of using in archive aswell - this okay - review + delete if so
 
     .page-title-position{
     position: fixed;
@@ -52,7 +52,7 @@ body{
     /* used on most pages - its requireds to be inside teh section wrap */ 
     .page-title-positioner.sticky{
     pointer-events:none;
-    width: 100vw;
+    width: 100%;//was 100vw;
     z-index: 97;// below the sc player item and menue 
     position: absolute;
     top: 0px;
@@ -226,7 +226,7 @@ body{
     transform:rotate(180deg);  
     }
 
-}//body
+//}//body
 
 
 /*END PAGE TITLES*/
@@ -237,7 +237,7 @@ body{
 
 */
 
-body{ 
+//body{ 
 
 
     .list-items{
@@ -246,53 +246,54 @@ body{
     margin:10vw auto 10vw auto;
     position: relative;
     z-index: 1;
-    }
 
-    div.list-item,
-    a.list-item{
-     cursor: pointer;
-    text-decoration: none;
-    color: white;
-    position:relative;
-    display:block;
-    float:left;
-    clear:both;
-    @include cssvalue(height, 3);
-    @include cssvalue(line-height, 3);
-    width: 100%;
-    font-weight: $mediumweight;
-     overflow:hidden;
-    border-top:1px solid transparent;
-    border-bottom: 1px solid transparent;
-    margin-top: -1px;  
-    z-index:1;
-    padding-left:map-get($gutter,xs);
+      div.list-item,
+      a.list-item{
+       cursor: pointer;
+      text-decoration: none;
+      color: white;
+      position:relative;
+      display:block;
+      float:left;
+      clear:both;
+      @include cssvalue(height, 3);
+      @include cssvalue(line-height, 3);
+      width: 100%;
+      font-weight: $mediumweight;
+       overflow:hidden;
+      border-top:1px solid transparent;
+      border-bottom: 1px solid transparent;
+      margin-top: -1px;  
+      z-index:1;
+      padding-left:map-get($gutter,xs);
 
-      @media (min-width: map-get($breakpoints,md)) {
-        &.list-item{
-          padding-left:map-get($gutter,md);
+        @media (min-width: map-get($breakpoints,md)) {
+          &.list-item{
+            padding-left:map-get($gutter,md);
+          }
         }
-      }
-      @media (min-width: map-get($breakpoints,lg)) {
-        &.list-item{
-          padding-left:map-get($gutter,lg);
+        @media (min-width: map-get($breakpoints,lg)) {
+          &.list-item{
+            padding-left:map-get($gutter,lg);
+          }
         }
-      }
-      @media (min-width: map-get($breakpoints,xl)) {
-        &.list-item{
-          padding-left:map-get($gutter,xl);
+        @media (min-width: map-get($breakpoints,xl)) {
+          &.list-item{
+            padding-left:map-get($gutter,xl);
+          }
         }
-      }
 
-      .item-text{
-      @include blur;
-      height: inherit;
-      line-height: inherit;
-      }
+        .item-text{
+        @include blur;
+        height: inherit;
+        line-height: inherit;
+        }
 
 
-    }//div.list-item,
-    //a.list-item
+      }//div.list-item,
+      //a.list-item
+
+    }//.list-items
 
 
     .image-items-wrap{
@@ -306,41 +307,40 @@ body{
     top:0px;
     bottom:0px;
     position: absolute;
-    }
 
-    .image-item{
-    width: 100%;
-    height:0vh;
-    display: none;
-    background-size: cover; 
-    opacity: 0;
-    @include image-blur-out;
-    filter: blur(10px);
-    }
+        .image-item{
+        width: 100%;
+        height:0vh;
+        display: none;
+        background-size: cover; 
+        opacity: 0;
+        @include image-blur-out;
+        filter: blur(10px);
+        animation: opacityout 400ms ease-in forwards;
+        }
 
-    .image-item{
-    animation: opacityout 400ms ease-in forwards;
-    }
-    .image-item.active{
-    display: block;
-    height: 100vh;
-    top: 0;
-    opacity: 1;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: -webkit-sticky;
-    position: sticky;
+        .image-item.active{
+        display: block;
+        height: 100vh;
+        top: 0;
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: -webkit-sticky;
+        position: sticky;
 
-    @include focus;
-    @include image-blur;
-    }
+        @include focus;
+        @include image-blur;
+        }
 
-    .image-item.activated{
-    opacity: 1;
-    @include focus;
-    @include image-blur;
+        .image-item.activated{
+        opacity: 1;
+        @include focus;
+        @include image-blur;
 
-    }
+        }
+  
+    }//-image-items
 
 
     .container.activated{
@@ -360,11 +360,12 @@ body{
       
     }
 
-}//body
+//}//body
 
 
 // touch or mouse specifics
 
+//body - remove so we can use admin aswell?
 body.is-touch{ // no hover states
 
   .list-item{
@@ -382,6 +383,7 @@ body.is-touch{ // no hover states
 
 
 
+//body
 body.is-not-touch{
 
   .list-item:hover{
