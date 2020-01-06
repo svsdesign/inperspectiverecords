@@ -269,13 +269,30 @@ wp- embedd
 
 			<a href="<?php echo the_permalink();?>" class="">
 
+				<?php if ($releaseimagefront):?>
 				<img class="front" src="<?php echo $releaseimagefront;?>"/>
+				<?php else:?>
+				<img class="front" src="<?php echo bloginfo('template_directory'); ?>/assets/img/release_placeholder_square.png"/>
+
+				<?php endif; // endif is_single() ?>
 
 			</a><!-- list-item --> 		 	
+			
 
-			<style>
-				#release-<?php echo $releaseid?>.carousel__cell:after {content:''; background-image: url('<?php echo $releaseimageback;?>');}
-			</style>
+			<?php if ($releaseimagefront):?>
+
+				<style>
+					#release-<?php echo $releaseid?>.carousel__cell:after {content:''; background-image: url('<?php echo $releaseimageback;?>');}
+				</style>
+			
+			<?php else:?>
+				 
+				<style>
+					#release-<?php echo $releaseid?>.carousel__cell:after {content:''; background-image: url('<?php echo bloginfo('template_directory'); ?>/assets/img/release_placeholder_square.png');}
+				</style>
+			
+			<?php endif; // endif is_single() ?>
+
 
 	</div>
  	

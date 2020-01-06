@@ -431,10 +431,12 @@ TO DO:
 
               toIdot();    
       
-              body.removeEventListener( 'touchmove', function(event) {
-               // event.preventDefault();
-              }, true );    
-            
+              
+              /*
+              body.addEventListener( 'touchmove', function(event) {
+                event.preventDefault();
+              }, false );    
+            */
           } else {
 
               body.className += ' toggled-on';
@@ -443,10 +445,11 @@ TO DO:
 
               toMinus();
 
-                // disable scroll
-              body.addEventListener( 'touchmove', function(event) {
-                event.preventDefault();
-              }, false );    
+              // disable scroll
+              
+              document.addEventListener('touchmove', function(e) {e.preventDefault()}, false);
+
+              
                                  
           } // if
 
