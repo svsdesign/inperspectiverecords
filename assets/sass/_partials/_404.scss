@@ -21,6 +21,7 @@ body.error404{
 	width: 100%;
 	text-align: center;
 	flex-flow: column;
+	min-height: 80vh;// review; delete if enough content avail
 	}//section#404-content
 
 }//body.error404

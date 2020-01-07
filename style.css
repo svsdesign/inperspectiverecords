@@ -3150,7 +3150,7 @@ body
 
 /* line 245, assets/sass/_partials/_gridsystem.scss */
 article.container {
-  min-height: 100%;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -4000,7 +4000,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(93deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(29deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -8262,8 +8262,8 @@ article.scene-wrapper .scene-fixer {
   display: block;
   position: fixed;
   opacity: 0;
-  top: 80%;
-  height: 20%;
+  top: 80vh;
+  height: 20vh;
   width: 100%;
   text-align: center;
   /* Rectangle 5: */
@@ -8419,7 +8419,7 @@ article.scene-wrapper .scene-fixer {
   opacity: 1;
   position: fixed;
   animation: blurin 200ms ease-in forwards;
-  top: 50%;
+  top: 50vh;
 }
 /* line 243, assets/sass/_partials/_releases.scss */
 .scene-height .height-item.active .description-wrap {
@@ -8455,24 +8455,24 @@ body.vertical {
 }
 /* line 298, assets/sass/_partials/_releases.scss */
 body.vertical .scene {
-  margin: 10vh auto 40vh auto;
+  margin: 30vh auto 40vh auto;
 }
-/* line 302, assets/sass/_partials/_releases.scss */
+/* line 304, assets/sass/_partials/_releases.scss */
 body.vertical .scene-height {
   /*.height-item */
   /* .height-item.active */
   /*.height-item.active */
 }
-/* line 304, assets/sass/_partials/_releases.scss */
+/* line 306, assets/sass/_partials/_releases.scss */
 body.vertical .scene-height .height-item {
   /* .description-wrap */
 }
-/* line 317, assets/sass/_partials/_releases.scss */
+/* line 319, assets/sass/_partials/_releases.scss */
 body.vertical .scene-height .height-item .description-wrap {
   padding-top: 7.2px;
   padding-top: 10.4px;
-  top: 80%;
-  height: 20%;
+  top: 80vh;
+  height: 20vh;
   width: 100%;
   text-align: center;
   /* Rectangle 5: */
@@ -8483,78 +8483,78 @@ body.vertical .scene-height .height-item .description-wrap {
   line-height: 28.6px;
 }
 @media screen and (min-width: 0px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     padding-top: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     padding-top: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     padding-top: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     padding-top: 12.8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     font-size: calc(16.2px + 7.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     font-size: 23.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     font-size: calc(23.4px + 5.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     font-size: 28.8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     line-height: calc(19.8px + 8.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     line-height: 28.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     line-height: calc(28.6px + 6.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 317, assets/sass/_partials/_releases.scss */
+  /* line 319, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap {
     line-height: 35.2px;
   }
 }
-/* line 339, assets/sass/_partials/_releases.scss */
+/* line 341, assets/sass/_partials/_releases.scss */
 body.vertical .scene-height .height-item .description-wrap ul.artists li {
   font-weight: 400;
   font-style: italic;
@@ -8566,114 +8566,114 @@ body.vertical .scene-height .height-item .description-wrap ul.artists li {
   line-height: 28.6px;
 }
 @media screen and (min-width: 0px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     padding-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     padding-bottom: 6.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     font-size: calc(16.2px + 7.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     font-size: 23.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     font-size: calc(23.4px + 5.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     font-size: 28.8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     line-height: calc(19.8px + 8.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     line-height: 28.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     line-height: calc(28.6px + 6.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 339, assets/sass/_partials/_releases.scss */
+  /* line 341, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap ul.artists li {
     line-height: 35.2px;
   }
 }
-/* line 380, assets/sass/_partials/_releases.scss */
+/* line 382, assets/sass/_partials/_releases.scss */
 body.vertical .scene-height .height-item .description-wrap .details-wrap {
   padding-top: 3.6px;
   padding-top: 5.2px;
   padding-bottom: 10vh;
 }
 @media screen and (min-width: 0px) {
-  /* line 380, assets/sass/_partials/_releases.scss */
+  /* line 382, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap .details-wrap {
     padding-top: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 380, assets/sass/_partials/_releases.scss */
+  /* line 382, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap .details-wrap {
     padding-top: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 380, assets/sass/_partials/_releases.scss */
+  /* line 382, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap .details-wrap {
     padding-top: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 380, assets/sass/_partials/_releases.scss */
+  /* line 382, assets/sass/_partials/_releases.scss */
   body.vertical .scene-height .height-item .description-wrap .details-wrap {
     padding-top: 6.4px;
   }
 }
 
 /* body.vertical */
-/* line 448, assets/sass/_partials/_releases.scss */
+/* line 450, assets/sass/_partials/_releases.scss */
 body.release-list-view {
   /* .scene-height */
 }
-/* line 451, assets/sass/_partials/_releases.scss */
+/* line 453, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-fixer {
   transform: translate(0%, -100%);
   -webkit-transition: all 200ms ease-in;
@@ -8681,7 +8681,7 @@ body.release-list-view .scene-fixer {
   -moz-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
-/* line 465, assets/sass/_partials/_releases.scss */
+/* line 467, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height {
   -webkit-transition: all 200ms ease-in;
   -ms-transition: all 200ms ease-in;
@@ -8696,12 +8696,12 @@ body.release-list-view .scene-height {
   /* .height-item:hover */
   /*.height-item.active */
 }
-/* line 487, assets/sass/_partials/_releases.scss */
+/* line 489, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item {
   overflow: visible;
   /* .description-wrap */
 }
-/* line 493, assets/sass/_partials/_releases.scss */
+/* line 495, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item a {
   overflow: visible;
   width: 100%;
@@ -8710,7 +8710,7 @@ body.release-list-view .scene-height .height-item a {
   position: absolute;
   top: 0px;
 }
-/* line 504, assets/sass/_partials/_releases.scss */
+/* line 506, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .code-wrap {
   display: block;
   position: -webkit-sticky;
@@ -8735,30 +8735,30 @@ body.release-list-view .scene-height .height-item .code-wrap {
   transform-origin: 0 0;
 }
 @media screen and (min-width: 0px) {
-  /* line 504, assets/sass/_partials/_releases.scss */
+  /* line 506, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .code-wrap {
     font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 504, assets/sass/_partials/_releases.scss */
+  /* line 506, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .code-wrap {
     font-size: 22.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 504, assets/sass/_partials/_releases.scss */
+  /* line 506, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .code-wrap {
     font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 504, assets/sass/_partials/_releases.scss */
+  /* line 506, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .code-wrap {
     font-size: 33.6px;
   }
 }
-/* line 528, assets/sass/_partials/_releases.scss */
+/* line 530, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .code-wrap .release-code {
   position: relative;
   color: white;
@@ -8770,7 +8770,7 @@ body.release-list-view .scene-height .height-item .code-wrap .release-code {
   text-align: center;
   margin-left: -50%;
 }
-/* line 542, assets/sass/_partials/_releases.scss */
+/* line 544, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap {
   display: block;
   animation: blurout 400ms ease-in forwards;
@@ -8782,7 +8782,7 @@ body.release-list-view .scene-height .height-item .description-wrap {
   position: relative;
   background-image: none;
 }
-/* line 555, assets/sass/_partials/_releases.scss */
+/* line 557, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap .inline {
   float: left;
   width: inherit;
@@ -8793,54 +8793,54 @@ body.release-list-view .scene-height .height-item .description-wrap .inline {
   font-weight: 100;
 }
 @media screen and (min-width: 0px) {
-  /* line 555, assets/sass/_partials/_releases.scss */
+  /* line 557, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .inline {
     padding-top: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 555, assets/sass/_partials/_releases.scss */
+  /* line 557, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .inline {
     padding-top: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 555, assets/sass/_partials/_releases.scss */
+  /* line 557, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .inline {
     padding-top: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 555, assets/sass/_partials/_releases.scss */
+  /* line 557, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .inline {
     padding-top: 12.8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 555, assets/sass/_partials/_releases.scss */
+  /* line 557, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .inline {
     padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 555, assets/sass/_partials/_releases.scss */
+  /* line 557, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .inline {
     padding-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 555, assets/sass/_partials/_releases.scss */
+  /* line 557, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .inline {
     padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 555, assets/sass/_partials/_releases.scss */
+  /* line 557, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .inline {
     padding-bottom: 6.4px;
   }
 }
-/* line 565, assets/sass/_partials/_releases.scss */
+/* line 567, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap .release-title {
   position: relative;
   color: white;
@@ -8855,65 +8855,65 @@ body.release-list-view .scene-height .height-item .description-wrap .release-tit
   text-align: center;
 }
 @media screen and (min-width: 0px) {
-  /* line 565, assets/sass/_partials/_releases.scss */
+  /* line 567, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-title {
     padding-top: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 565, assets/sass/_partials/_releases.scss */
+  /* line 567, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-title {
     padding-top: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 565, assets/sass/_partials/_releases.scss */
+  /* line 567, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-title {
     padding-top: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 565, assets/sass/_partials/_releases.scss */
+  /* line 567, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-title {
     padding-top: 12.8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 565, assets/sass/_partials/_releases.scss */
+  /* line 567, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-title {
     padding-bottom: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 565, assets/sass/_partials/_releases.scss */
+  /* line 567, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-title {
     padding-bottom: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 565, assets/sass/_partials/_releases.scss */
+  /* line 567, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-title {
     padding-bottom: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 565, assets/sass/_partials/_releases.scss */
+  /* line 567, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-title {
     padding-bottom: 6.4px;
   }
 }
 @media (min-width: 320px) {
-  /* line 565, assets/sass/_partials/_releases.scss */
+  /* line 567, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-title {
     width: 75%;
     text-align: left;
   }
 }
-/* line 585, assets/sass/_partials/_releases.scss */
+/* line 587, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap ul.artists {
   display: none;
 }
-/* line 588, assets/sass/_partials/_releases.scss */
+/* line 590, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap ul.artists li {
   font-style: italic;
   width: auto;
@@ -8924,62 +8924,62 @@ body.release-list-view .scene-height .height-item .description-wrap ul.artists l
   padding-right: 5.2px;
 }
 @media screen and (min-width: 0px) {
-  /* line 588, assets/sass/_partials/_releases.scss */
+  /* line 590, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap ul.artists li {
     padding-left: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 588, assets/sass/_partials/_releases.scss */
+  /* line 590, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap ul.artists li {
     padding-left: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 588, assets/sass/_partials/_releases.scss */
+  /* line 590, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap ul.artists li {
     padding-left: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 588, assets/sass/_partials/_releases.scss */
+  /* line 590, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap ul.artists li {
     padding-left: 6.4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 588, assets/sass/_partials/_releases.scss */
+  /* line 590, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap ul.artists li {
     padding-right: calc(3.6px + 1.6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 588, assets/sass/_partials/_releases.scss */
+  /* line 590, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap ul.artists li {
     padding-right: 5.2px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 588, assets/sass/_partials/_releases.scss */
+  /* line 590, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap ul.artists li {
     padding-right: calc(5.2px + 1.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 588, assets/sass/_partials/_releases.scss */
+  /* line 590, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap ul.artists li {
     padding-right: 6.4px;
   }
 }
-/* line 596, assets/sass/_partials/_releases.scss */
+/* line 598, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap .fade-border {
   opacity: 0;
 }
-/* line 599, assets/sass/_partials/_releases.scss */
+/* line 601, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap .fade-border.bottom {
   opacity: 0;
 }
-/* line 603, assets/sass/_partials/_releases.scss */
+/* line 605, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap .image-wrap {
   display: none;
   -webkit-transition: opacity 200ms ease-in;
@@ -8987,22 +8987,22 @@ body.release-list-view .scene-height .height-item .description-wrap .image-wrap 
   -moz-transition: opacity 200ms ease-in;
   transition: opacity 200ms ease-in;
 }
-/* line 615, assets/sass/_partials/_releases.scss */
+/* line 617, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap .image-wrap .images {
   display: none;
 }
-/* line 619, assets/sass/_partials/_releases.scss */
+/* line 621, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap .image-wrap img {
   width: auto;
   height: 100%;
 }
-/* line 626, assets/sass/_partials/_releases.scss */
+/* line 628, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap .release-code.inline {
   display: block;
   width: 100%;
 }
 @media (min-width: 320px) {
-  /* line 626, assets/sass/_partials/_releases.scss */
+  /* line 628, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-code.inline {
     margin-right: 9px;
     margin-right: 13px;
@@ -9011,51 +9011,51 @@ body.release-list-view .scene-height .height-item .description-wrap .release-cod
   }
 }
 @media screen and (min-width: 320px) and (min-width: 0px) {
-  /* line 626, assets/sass/_partials/_releases.scss */
+  /* line 628, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-code.inline {
     margin-right: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 320px) and (min-width: 960px) {
-  /* line 626, assets/sass/_partials/_releases.scss */
+  /* line 628, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-code.inline {
     margin-right: 13px;
   }
 }
 @media screen and (min-width: 320px) and (min-width: 960px) {
-  /* line 626, assets/sass/_partials/_releases.scss */
+  /* line 628, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-code.inline {
     margin-right: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 320px) and (min-width: 1440px) {
-  /* line 626, assets/sass/_partials/_releases.scss */
+  /* line 628, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item .description-wrap .release-code.inline {
     margin-right: 16px;
   }
 }
 
-/* line 644, assets/sass/_partials/_releases.scss */
+/* line 646, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item .description-wrap .details-wrap {
   width: 100%;
   padding-top: 0;
 }
-/* line 654, assets/sass/_partials/_releases.scss */
+/* line 656, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active {
   overflow: initial;
   /* .description-wrap */
 }
-/* line 667, assets/sass/_partials/_releases.scss */
+/* line 669, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active a {
   position: relative;
 }
-/* line 672, assets/sass/_partials/_releases.scss */
+/* line 674, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .code-wrap {
   opacity: 1;
   position: fixed;
   animation: blurin 200ms ease-in forwards;
 }
-/* line 681, assets/sass/_partials/_releases.scss */
+/* line 683, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap {
   display: block;
   opacity: 1;
@@ -9065,81 +9065,81 @@ body.release-list-view .scene-height .height-item.active .description-wrap {
   position: -ms-sticky;
   position: -o-sticky;
   position: sticky;
-  top: 5%;
+  top: 5vh;
   padding-top: 0;
-  height: 90%;
+  height: 90vh;
   /*image-wrap*/
   /* .details-wrap */
 }
 @media (min-width: 320px) {
-  /* line 681, assets/sass/_partials/_releases.scss */
+  /* line 683, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap {
-    top: 20%;
-    height: 60%;
+    top: 20vh;
+    height: 60vh;
   }
 }
 @media (min-width: 640px) {
-  /* line 681, assets/sass/_partials/_releases.scss */
+  /* line 683, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap {
-    top: 20%;
-    height: 60%;
+    top: 20vh;
+    height: 60vh;
   }
 }
 @media (min-width: 960px) {
-  /* line 681, assets/sass/_partials/_releases.scss */
+  /* line 683, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap {
-    top: 10%;
-    height: 80%;
+    top: 10vh;
+    height: 80vh;
   }
 }
-/* line 710, assets/sass/_partials/_releases.scss */
+/* line 712, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap .grid, body.release-list-view .scene-height .height-item.active .description-wrap .cookie-notice-container {
   align-items: center;
   height: inherit;
 }
-/* line 715, assets/sass/_partials/_releases.scss */
+/* line 717, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap .release-code.inline {
   display: none;
 }
-/* line 719, assets/sass/_partials/_releases.scss */
+/* line 721, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap .release-title {
   width: auto;
 }
-/* line 723, assets/sass/_partials/_releases.scss */
+/* line 725, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap ul.artists {
   display: flex;
   width: 100%;
 }
-/* line 728, assets/sass/_partials/_releases.scss */
+/* line 730, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap ul.artists li:first-of-type {
   padding-left: 0px;
   padding-left: 0px;
 }
 @media screen and (min-width: 0px) {
-  /* line 728, assets/sass/_partials/_releases.scss */
+  /* line 730, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap ul.artists li:first-of-type {
     padding-left: calc(0px + 0 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 728, assets/sass/_partials/_releases.scss */
+  /* line 730, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap ul.artists li:first-of-type {
     padding-left: 0px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 728, assets/sass/_partials/_releases.scss */
+  /* line 730, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap ul.artists li:first-of-type {
     padding-left: calc(0px + 0 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 728, assets/sass/_partials/_releases.scss */
+  /* line 730, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap ul.artists li:first-of-type {
     padding-left: 0px;
   }
 }
-/* line 735, assets/sass/_partials/_releases.scss */
+/* line 737, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
   opacity: 1;
   margin-top: 18px;
@@ -9148,90 +9148,90 @@ body.release-list-view .scene-height .height-item.active .description-wrap .fade
   margin-bottom: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 735, assets/sass/_partials/_releases.scss */
+  /* line 737, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
     margin-top: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 735, assets/sass/_partials/_releases.scss */
+  /* line 737, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
     margin-top: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 735, assets/sass/_partials/_releases.scss */
+  /* line 737, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
     margin-top: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 735, assets/sass/_partials/_releases.scss */
+  /* line 737, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
     margin-top: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 735, assets/sass/_partials/_releases.scss */
+  /* line 737, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
     margin-bottom: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 735, assets/sass/_partials/_releases.scss */
+  /* line 737, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
     margin-bottom: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 735, assets/sass/_partials/_releases.scss */
+  /* line 737, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
     margin-bottom: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 735, assets/sass/_partials/_releases.scss */
+  /* line 737, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
     margin-bottom: 32px;
   }
 }
 @media (min-width: 640px) {
-  /* line 735, assets/sass/_partials/_releases.scss */
+  /* line 737, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .fade-border {
     width: 75%;
   }
 }
-/* line 745, assets/sass/_partials/_releases.scss */
+/* line 747, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap .fade-border.bottom {
   opacity: 1;
   display: block;
 }
-/* line 755, assets/sass/_partials/_releases.scss */
+/* line 757, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap {
   opacity: 1;
   display: flex;
   height: auto;
 }
 @media (min-width: 640px) {
-  /* line 755, assets/sass/_partials/_releases.scss */
+  /* line 757, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap {
     text-align: left;
   }
 }
-/* line 766, assets/sass/_partials/_releases.scss */
+/* line 768, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap .images {
   display: block;
   float: left;
   width: 100%;
   height: inherit;
 }
-/* line 779, assets/sass/_partials/_releases.scss */
+/* line 781, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
   width: 80%;
   height: auto;
 }
 @media (min-width: 320px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     width: 50%;
     float: left;
@@ -9240,32 +9240,32 @@ body.release-list-view .scene-height .height-item.active .description-wrap .imag
   }
 }
 @media screen and (min-width: 320px) and (min-width: 0px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     padding-right: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 320px) and (min-width: 960px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     padding-right: 26px;
   }
 }
 @media screen and (min-width: 320px) and (min-width: 960px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     padding-right: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 320px) and (min-width: 1440px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     padding-right: 32px;
   }
 }
 
 @media (min-width: 640px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     width: 50%;
     float: left;
@@ -9274,61 +9274,61 @@ body.release-list-view .scene-height .height-item.active .description-wrap .imag
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     padding-right: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     padding-right: 26px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     padding-right: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 779, assets/sass/_partials/_releases.scss */
+  /* line 781, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .image-wrap img {
     padding-right: 32px;
   }
 }
 
-/* line 809, assets/sass/_partials/_releases.scss */
+/* line 811, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.active .description-wrap .details-wrap {
   top: 30vh;
 }
 @media (min-width: 640px) {
-  /* line 809, assets/sass/_partials/_releases.scss */
+  /* line 811, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.active .description-wrap .details-wrap {
     width: 25%;
   }
 }
-/* line 838, assets/sass/_partials/_releases.scss */
+/* line 840, assets/sass/_partials/_releases.scss */
 body.release-list-view .scene-height .height-item.prev-active .description-wrap {
   top: 80vh;
   height: 20vh;
 }
 @media (min-width: 320px) {
-  /* line 838, assets/sass/_partials/_releases.scss */
+  /* line 840, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.prev-active .description-wrap {
     top: 85vh;
     height: 15vh;
   }
 }
 @media (min-width: 640px) {
-  /* line 838, assets/sass/_partials/_releases.scss */
+  /* line 840, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.prev-active .description-wrap {
     top: 90vh;
     height: 10vh;
   }
 }
 @media (min-width: 960px) {
-  /* line 838, assets/sass/_partials/_releases.scss */
+  /* line 840, assets/sass/_partials/_releases.scss */
   body.release-list-view .scene-height .height-item.prev-active .description-wrap {
     top: 95vh;
     height: 5vh;
@@ -9337,7 +9337,7 @@ body.release-list-view .scene-height .height-item.prev-active .description-wrap 
 
 /* body.release-list-view */
 /* view module */
-/* line 913, assets/sass/_partials/_releases.scss */
+/* line 915, assets/sass/_partials/_releases.scss */
 .view-module {
   display: none;
   -webkit-position: sticky;
@@ -9351,14 +9351,14 @@ body.release-list-view .scene-height .height-item.prev-active .description-wrap 
   z-index: 99;
   /* view-module-wrap */
 }
-/* line 921, assets/sass/_partials/_releases.scss */
+/* line 923, assets/sass/_partials/_releases.scss */
 .view-module .view-module-wrap {
   position: relative;
   margin: auto;
   width: auto;
   margin-top: 2.5vw;
 }
-/* line 930, assets/sass/_partials/_releases.scss */
+/* line 932, assets/sass/_partials/_releases.scss */
 .view-module .view-module-wrap .view-title {
   width: 100%;
   text-align: center;
@@ -9373,83 +9373,83 @@ body.release-list-view .scene-height .height-item.prev-active .description-wrap 
   display: block;
 }
 @media screen and (min-width: 0px) {
-  /* line 930, assets/sass/_partials/_releases.scss */
+  /* line 932, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .view-title {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 930, assets/sass/_partials/_releases.scss */
+  /* line 932, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .view-title {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 930, assets/sass/_partials/_releases.scss */
+  /* line 932, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .view-title {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 930, assets/sass/_partials/_releases.scss */
+  /* line 932, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .view-title {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 930, assets/sass/_partials/_releases.scss */
+  /* line 932, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .view-title {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 930, assets/sass/_partials/_releases.scss */
+  /* line 932, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .view-title {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 930, assets/sass/_partials/_releases.scss */
+  /* line 932, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .view-title {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 930, assets/sass/_partials/_releases.scss */
+  /* line 932, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .view-title {
     line-height: 25.6px;
   }
 }
-/* line 941, assets/sass/_partials/_releases.scss */
+/* line 943, assets/sass/_partials/_releases.scss */
 .view-module .view-module-wrap .fade-border {
   margin-bottom: 5.4px;
   margin-bottom: 7.8px;
 }
 @media screen and (min-width: 0px) {
-  /* line 941, assets/sass/_partials/_releases.scss */
+  /* line 943, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .fade-border {
     margin-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 941, assets/sass/_partials/_releases.scss */
+  /* line 943, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .fade-border {
     margin-bottom: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 941, assets/sass/_partials/_releases.scss */
+  /* line 943, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .fade-border {
     margin-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 941, assets/sass/_partials/_releases.scss */
+  /* line 943, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .fade-border {
     margin-bottom: 9.6px;
   }
 }
-/* line 946, assets/sass/_partials/_releases.scss */
+/* line 948, assets/sass/_partials/_releases.scss */
 .view-module .view-module-wrap .release-view {
   position: relative;
   width: 100%;
@@ -9464,85 +9464,85 @@ body.release-list-view .scene-height .height-item.prev-active .description-wrap 
   margin: auto;
 }
 @media screen and (min-width: 0px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     padding-left: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     padding-left: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     padding-left: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     padding-left: 8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     padding-right: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     padding-right: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     padding-right: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     padding-right: 8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     max-width: calc(36px + 16 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     max-width: 52px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     max-width: calc(52px + 12 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 946, assets/sass/_partials/_releases.scss */
+  /* line 948, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view {
     max-width: 64px;
   }
 }
-/* line 994, assets/sass/_partials/_releases.scss */
+/* line 996, assets/sass/_partials/_releases.scss */
 .view-module .view-module-wrap .release-view .release-option {
   width: 100%;
   position: relative;
   display: block;
   float: left;
 }
-/* line 1000, assets/sass/_partials/_releases.scss */
+/* line 1002, assets/sass/_partials/_releases.scss */
 .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
   display: block;
   position: relative;
@@ -9553,62 +9553,62 @@ body.release-list-view .scene-height .height-item.prev-active .description-wrap 
   padding: 2.6px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1000, assets/sass/_partials/_releases.scss */
+  /* line 1002, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
     padding: calc(1.8px + 0.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1000, assets/sass/_partials/_releases.scss */
+  /* line 1002, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
     padding: 2.6px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1000, assets/sass/_partials/_releases.scss */
+  /* line 1002, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
     padding: calc(2.6px + 0.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1000, assets/sass/_partials/_releases.scss */
+  /* line 1002, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
     padding: 3.2px;
   }
 }
 @media (min-width: 640px) {
-  /* line 1000, assets/sass/_partials/_releases.scss */
+  /* line 1002, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
     padding: 1.8px;
     padding: 2.6px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 1000, assets/sass/_partials/_releases.scss */
+  /* line 1002, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
     padding: calc(1.8px + 0.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 1000, assets/sass/_partials/_releases.scss */
+  /* line 1002, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
     padding: 2.6px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 1000, assets/sass/_partials/_releases.scss */
+  /* line 1002, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
     padding: calc(2.6px + 0.6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 1000, assets/sass/_partials/_releases.scss */
+  /* line 1002, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-option .svg-icon.inline-icon {
     padding: 3.2px;
   }
 }
 
-/* line 1018, assets/sass/_partials/_releases.scss */
+/* line 1020, assets/sass/_partials/_releases.scss */
 .view-module .view-module-wrap .release-view .release-pointer {
   right: 0;
   position: absolute;
@@ -9616,7 +9616,7 @@ body.release-list-view .scene-height .height-item.prev-active .description-wrap 
   bottom: 0;
   left: 80%;
 }
-/* line 1025, assets/sass/_partials/_releases.scss */
+/* line 1027, assets/sass/_partials/_releases.scss */
 .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
   position: relative;
   width: 27px;
@@ -9635,206 +9635,206 @@ body.release-list-view .scene-height .height-item.prev-active .description-wrap 
   padding-bottom: 7.8px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     width: calc(27px + 12 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     width: 39px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     width: calc(39px + 9 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     width: 48px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     height: calc(27px + 12 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     height: 39px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     height: calc(39px + 9 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     height: 48px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     max-width: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     max-width: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     max-width: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     max-width: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-top: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-top: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-top: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-top: 9.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-left: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-left: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-left: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-left: 9.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-right: calc(0px + 0 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-right: 0px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-right: calc(0px + 0 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-right: 0px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-bottom: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1025, assets/sass/_partials/_releases.scss */
+  /* line 1027, assets/sass/_partials/_releases.scss */
   .view-module .view-module-wrap .release-view .release-pointer .svg-icon.inline-icon {
     padding-bottom: 9.6px;
   }
 }
 
 /* view mode options */
-/* line 1052, assets/sass/_partials/_releases.scss */
+/* line 1054, assets/sass/_partials/_releases.scss */
 body {
   /* .release-option */
 }
-/* line 1057, assets/sass/_partials/_releases.scss */
+/* line 1059, assets/sass/_partials/_releases.scss */
 body .release-option .svg-icon.inline-icon:first-of-type {
   opacity: 1;
 }
-/* line 1060, assets/sass/_partials/_releases.scss */
+/* line 1062, assets/sass/_partials/_releases.scss */
 body .release-option .svg-icon.inline-icon {
   opacity: 0.5;
 }
 
 /*body */
-/* line 1068, assets/sass/_partials/_releases.scss */
+/* line 1070, assets/sass/_partials/_releases.scss */
 body.release-list-view {
   /* .release-option */
 }
-/* line 1073, assets/sass/_partials/_releases.scss */
+/* line 1075, assets/sass/_partials/_releases.scss */
 body.release-list-view .release-option .svg-icon.inline-icon:first-of-type {
   opacity: 0.5;
 }
-/* line 1076, assets/sass/_partials/_releases.scss */
+/* line 1078, assets/sass/_partials/_releases.scss */
 body.release-list-view .release-option .svg-icon.inline-icon {
   opacity: 1;
 }
-/* line 1085, assets/sass/_partials/_releases.scss */
+/* line 1087, assets/sass/_partials/_releases.scss */
 body.release-list-view .release-pointer .svg-icon.inline-icon {
   position: relative;
 }
-/* line 1088, assets/sass/_partials/_releases.scss */
+/* line 1090, assets/sass/_partials/_releases.scss */
 body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
   top: 27px;
   top: 39px;
@@ -9844,25 +9844,25 @@ body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
   transition: all 200ms ease-in;
 }
 @media screen and (min-width: 0px) {
-  /* line 1088, assets/sass/_partials/_releases.scss */
+  /* line 1090, assets/sass/_partials/_releases.scss */
   body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
     top: calc(27px + 12 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1088, assets/sass/_partials/_releases.scss */
+  /* line 1090, assets/sass/_partials/_releases.scss */
   body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
     top: 39px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1088, assets/sass/_partials/_releases.scss */
+  /* line 1090, assets/sass/_partials/_releases.scss */
   body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
     top: calc(39px + 9 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1088, assets/sass/_partials/_releases.scss */
+  /* line 1090, assets/sass/_partials/_releases.scss */
   body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
     top: 48px;
   }
@@ -9871,7 +9871,7 @@ body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
 /* body.release-list-view */
 /* view mode options */
 /* end view module */
-/* line 1112, assets/sass/_partials/_releases.scss */
+/* line 1114, assets/sass/_partials/_releases.scss */
 .carousel {
   width: 100%;
   height: 100%;
@@ -9879,7 +9879,7 @@ body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
   transform-style: preserve-3d;
 }
 
-/* line 1122, assets/sass/_partials/_releases.scss */
+/* line 1124, assets/sass/_partials/_releases.scss */
 .carousel__cell:before {
   content: '';
   display: block;
@@ -9888,7 +9888,7 @@ body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
   height: 100%;
 }
 
-/* line 1131, assets/sass/_partials/_releases.scss */
+/* line 1133, assets/sass/_partials/_releases.scss */
 .carousel__cell {
   position: absolute;
   width: 100%;
@@ -9899,7 +9899,7 @@ body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
-/* line 1148, assets/sass/_partials/_releases.scss */
+/* line 1150, assets/sass/_partials/_releases.scss */
 .carousel__cell img.front {
   opacity: 0.6;
   position: absolute;
@@ -9908,19 +9908,19 @@ body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
   z-index: 2;
   width: 90%;
 }
-/* line 1161, assets/sass/_partials/_releases.scss */
+/* line 1163, assets/sass/_partials/_releases.scss */
 .carousel__cell#release-404 img.front {
   top: 16.25%;
   left: 16.25%;
   width: 67.5%;
 }
 
-/* line 1177, assets/sass/_partials/_releases.scss */
+/* line 1179, assets/sass/_partials/_releases.scss */
 .vertical .carousel__cell img.front {
   opacity: 0.2;
 }
 
-/* line 1218, assets/sass/_partials/_releases.scss */
+/* line 1220, assets/sass/_partials/_releases.scss */
 .carousel__cell:after {
   right: 0%;
   bottom: 0%;
@@ -9940,17 +9940,17 @@ body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
   z-index: 2;
 }
 
-/* line 1240, assets/sass/_partials/_releases.scss */
+/* line 1242, assets/sass/_partials/_releases.scss */
 #release-404.carousel__cell:after {
   background-size: 67.5%;
 }
 
-/* line 1252, assets/sass/_partials/_releases.scss */
+/* line 1254, assets/sass/_partials/_releases.scss */
 .carousel__cell.active .description-wrap {
   opacity: 1;
   font-weight: 400;
 }
-/* line 1258, assets/sass/_partials/_releases.scss */
+/* line 1260, assets/sass/_partials/_releases.scss */
 .carousel__cell.active img.front {
   opacity: 1;
 }
@@ -9967,19 +9967,19 @@ body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
 .carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
 */
 /* start image loading states */
-/* line 1284, assets/sass/_partials/_releases.scss */
+/* line 1286, assets/sass/_partials/_releases.scss */
 .scene {
   opacity: 0;
 }
 
-/* line 1298, assets/sass/_partials/_releases.scss */
+/* line 1300, assets/sass/_partials/_releases.scss */
 .scene.loaded {
   opacity: 1;
   animation: opacity-in 200ms ease-in forwards;
 }
 
 /* end loading states */
-/* line 1315, assets/sass/_partials/_releases.scss */
+/* line 1317, assets/sass/_partials/_releases.scss */
 .carousel-options {
   text-align: center;
   position: absolute;
@@ -9987,36 +9987,36 @@ body.release-list-view .release-pointer .svg-icon.inline-icon:first-of-type {
 }
 
 /* single */
-/* line 1329, assets/sass/_partials/_releases.scss */
+/* line 1331, assets/sass/_partials/_releases.scss */
 body.single-releases #artist-details {
   padding-bottom: 72px;
   padding-bottom: 104px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1329, assets/sass/_partials/_releases.scss */
+  /* line 1331, assets/sass/_partials/_releases.scss */
   body.single-releases #artist-details {
     padding-bottom: calc(72px + 32 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1329, assets/sass/_partials/_releases.scss */
+  /* line 1331, assets/sass/_partials/_releases.scss */
   body.single-releases #artist-details {
     padding-bottom: 104px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1329, assets/sass/_partials/_releases.scss */
+  /* line 1331, assets/sass/_partials/_releases.scss */
   body.single-releases #artist-details {
     padding-bottom: calc(104px + 24 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1329, assets/sass/_partials/_releases.scss */
+  /* line 1331, assets/sass/_partials/_releases.scss */
   body.single-releases #artist-details {
     padding-bottom: 128px;
   }
 }
-/* line 1333, assets/sass/_partials/_releases.scss */
+/* line 1335, assets/sass/_partials/_releases.scss */
 body.single-releases .cover-image {
   height: 100vh;
   position: relative;
@@ -10025,7 +10025,7 @@ body.single-releases .cover-image {
   background-size: cover;
   background-position: center;
 }
-/* line 1343, assets/sass/_partials/_releases.scss */
+/* line 1345, assets/sass/_partials/_releases.scss */
 body.single-releases .banner-image {
   height: 40vh;
   position: relative;
@@ -10035,7 +10035,7 @@ body.single-releases .banner-image {
   background-position: center;
   background-repeat: no-repeat;
 }
-/* line 1353, assets/sass/_partials/_releases.scss */
+/* line 1355, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-links {
   text-align: center;
   padding-top: 18px;
@@ -10044,54 +10044,54 @@ body.single-releases div#release-links {
   padding-bottom: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1353, assets/sass/_partials/_releases.scss */
+  /* line 1355, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links {
     padding-top: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1353, assets/sass/_partials/_releases.scss */
+  /* line 1355, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links {
     padding-top: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1353, assets/sass/_partials/_releases.scss */
+  /* line 1355, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links {
     padding-top: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1353, assets/sass/_partials/_releases.scss */
+  /* line 1355, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links {
     padding-top: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1353, assets/sass/_partials/_releases.scss */
+  /* line 1355, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links {
     padding-bottom: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1353, assets/sass/_partials/_releases.scss */
+  /* line 1355, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links {
     padding-bottom: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1353, assets/sass/_partials/_releases.scss */
+  /* line 1355, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links {
     padding-bottom: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1353, assets/sass/_partials/_releases.scss */
+  /* line 1355, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links {
     padding-bottom: 32px;
   }
 }
-/* line 1358, assets/sass/_partials/_releases.scss */
+/* line 1360, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-links .buy-description {
   margin: auto;
   width: 100%;
@@ -10104,78 +10104,78 @@ body.single-releases div#release-links .buy-description {
   padding-bottom: 13px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     line-height: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     padding-top: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     padding-top: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     padding-top: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     padding-top: 16px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     padding-bottom: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     padding-bottom: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     padding-bottom: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1358, assets/sass/_partials/_releases.scss */
+  /* line 1360, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links .buy-description {
     padding-bottom: 16px;
   }
 }
-/* line 1368, assets/sass/_partials/_releases.scss */
+/* line 1370, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-links ul {
   width: 100%;
   padding-top: 9px;
@@ -10184,100 +10184,100 @@ body.single-releases div#release-links ul {
   padding-bottom: 13px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1368, assets/sass/_partials/_releases.scss */
+  /* line 1370, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links ul {
     padding-top: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1368, assets/sass/_partials/_releases.scss */
+  /* line 1370, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links ul {
     padding-top: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1368, assets/sass/_partials/_releases.scss */
+  /* line 1370, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links ul {
     padding-top: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1368, assets/sass/_partials/_releases.scss */
+  /* line 1370, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links ul {
     padding-top: 16px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1368, assets/sass/_partials/_releases.scss */
+  /* line 1370, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links ul {
     padding-bottom: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1368, assets/sass/_partials/_releases.scss */
+  /* line 1370, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links ul {
     padding-bottom: 13px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1368, assets/sass/_partials/_releases.scss */
+  /* line 1370, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links ul {
     padding-bottom: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1368, assets/sass/_partials/_releases.scss */
+  /* line 1370, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-links ul {
     padding-bottom: 16px;
   }
 }
-/* line 1374, assets/sass/_partials/_releases.scss */
+/* line 1376, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-links li {
   float: none;
   position: relative;
 }
-/* line 1382, assets/sass/_partials/_releases.scss */
+/* line 1384, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-description {
   text-align: center;
 }
-/* line 1385, assets/sass/_partials/_releases.scss */
+/* line 1387, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-description .description {
   margin: auto;
 }
-/* line 1393, assets/sass/_partials/_releases.scss */
+/* line 1395, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-music {
   padding-bottom: 18px;
   padding-bottom: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 1393, assets/sass/_partials/_releases.scss */
+  /* line 1395, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music {
     padding-bottom: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1393, assets/sass/_partials/_releases.scss */
+  /* line 1395, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music {
     padding-bottom: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1393, assets/sass/_partials/_releases.scss */
+  /* line 1395, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music {
     padding-bottom: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1393, assets/sass/_partials/_releases.scss */
+  /* line 1395, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music {
     padding-bottom: 32px;
   }
 }
-/* line 1396, assets/sass/_partials/_releases.scss */
+/* line 1398, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-music iframe {
   float: left;
 }
-/* line 1400, assets/sass/_partials/_releases.scss */
+/* line 1402, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-music .music-item {
   margin: auto;
   background: rgba(255, 255, 255, 0.1);
@@ -10288,7 +10288,7 @@ body.single-releases div#release-music .music-item {
   min-width: 200px;
   padding: 0px;
 }
-/* line 1410, assets/sass/_partials/_releases.scss */
+/* line 1412, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-music .music-item .gradient-loader-wrapper {
   position: absolute;
   width: 100%;
@@ -10300,7 +10300,7 @@ body.single-releases div#release-music .music-item .gradient-loader-wrapper {
   left: 0px;
   pointer-events: none;
 }
-/* line 1421, assets/sass/_partials/_releases.scss */
+/* line 1423, assets/sass/_partials/_releases.scss */
 body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
   margin-top: -2.25px;
   margin-top: -3.25px;
@@ -10320,87 +10320,87 @@ body.single-releases div#release-music .music-item .gradient-loader-wrapper .gra
   z-index: -1;
 }
 @media screen and (min-width: 0px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     margin-top: calc(-2.25px + -1 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     margin-top: -3.25px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     margin-top: calc(-3.25px + -0.75 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     margin-top: -4px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     height: 32px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     height: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     height: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     height: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1421, assets/sass/_partials/_releases.scss */
+  /* line 1423, assets/sass/_partials/_releases.scss */
   body.single-releases div#release-music .music-item .gradient-loader-wrapper .gradient-loader {
     height: 8px;
   }
 }
-/* line 1448, assets/sass/_partials/_releases.scss */
+/* line 1450, assets/sass/_partials/_releases.scss */
 body.single-releases section#release-artists .music-item {
   margin: auto;
 }
-/* line 1452, assets/sass/_partials/_releases.scss */
+/* line 1454, assets/sass/_partials/_releases.scss */
 body.single-releases section#release-artists a {
   overflow: hidden;
   display: block;
 }
-/* line 1456, assets/sass/_partials/_releases.scss */
+/* line 1458, assets/sass/_partials/_releases.scss */
 body.single-releases section#release-artists a .artist-title {
   font-size: 14px;
   font-size: 22.4px;
@@ -10412,86 +10412,86 @@ body.single-releases section#release-artists a .artist-title {
   animation: blurout 400ms ease-in forwards;
 }
 @media screen and (min-width: 0px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: calc(14px + 8.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: 22.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: calc(22.4px + 11.2 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: 33.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 1456, assets/sass/_partials/_releases.scss */
+  /* line 1458, assets/sass/_partials/_releases.scss */
   body.single-releases section#release-artists a .artist-title {
     line-height: 25.6px;
   }
 }
-/* line 1468, assets/sass/_partials/_releases.scss */
+/* line 1470, assets/sass/_partials/_releases.scss */
 body.single-releases section#release-artists a:hover .artist-title {
   animation: blurin 400ms ease-in forwards;
 }
-/* line 1484, assets/sass/_partials/_releases.scss */
+/* line 1486, assets/sass/_partials/_releases.scss */
 body.single-releases.is-touch section#release-artists a .artist-title {
   animation: none;
 }
-/* line 1493, assets/sass/_partials/_releases.scss */
+/* line 1495, assets/sass/_partials/_releases.scss */
 body.single-releases.is-touch section#release-artists a:hover .artist-title {
   animation: none;
 }
@@ -19433,6 +19433,7 @@ body.error404 section#page-404-content {
   width: 100%;
   text-align: center;
   flex-flow: column;
+  min-height: 80vh;
 }
 
 /*_pages-legal.scss*/
