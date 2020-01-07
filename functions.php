@@ -393,7 +393,13 @@ function my_admin_block_assets() {
 //wp_enqueue_style('admin-artist-block',''.get_stylesheet_directory_uri().'/template-parts/blocks/inpartist/assets/css/style.css', array(), '1');
 wp_enqueue_style('admin-blocks',''.get_stylesheet_directory_uri().'/admin-style.css', array(), '1');
 
- 
+//
+wp_enqueue_script('inp-admin-enquire', ''.get_stylesheet_directory_uri().'/assets/js/enquire.js', array( 'jquery' ), '', true );
+
+
+ // admin js: - review
+wp_enqueue_script('inp-admin-base', ''.get_stylesheet_directory_uri().'/assets/js/inp-admin-base.js', array( 'jquery' ), '', true );
+
 
 }
 add_action( 'enqueue_block_editor_assets', 'my_admin_block_assets' );
@@ -523,16 +529,24 @@ function my_acf_init() {
         ));
 
   // register an gallery block:
-       
+       //https://www.advancedcustomfields.com/resources/acf_register_block_type/#examples
         acf_register_block(array(
             'name'              => 'inpgallery',
             'title'             => __('Inp Gallery'),
             'description'       => __('A custom gallery block.'),
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'common',
+          //  'enqueue_script'    => '',
+
             'enqueue_assets'    => function(){
+            //  wp_enqueue_script('flickity-pgkd','https://npmcdn.com/flickity@2/dist/flickity.pkgd.js', array('jquery'), false, true);
+           //    wp_enqueue_style( 'flickity styles', 'https://npmcdn.com/flickity@2.2.1/dist/flickity.css' );
+//  //  wp_enqueue_style( 'flickity-style', 'https://npmcdn.com/flickity@2.2.1/dist/flickity.css'); // Styles moved into "block-gallery.scss"
+              wp_enqueue_script('flickity-pgkd', 'https://npmcdn.com/flickity@2/dist/flickity.pkgd.js', array( 'jquery' ), '', true );
               wp_enqueue_script('inp-gallery-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpgallery/assets/js/script.js', array( 'jquery' ), '', true );
+
             },
+
             'icon'              => 'format-gallery',
           //'mode'              => 'preview',//"auto" or "preview" This lets you control how the block is presented the Gutenberg block editor. The default is “auto” which renders the block to match the frontend until you select it, then it becomes an editor. If set to “preview” it will always look like the frontend and you can edit content in the sidebar.
             'supports'          => array( 'mode' => false ),
