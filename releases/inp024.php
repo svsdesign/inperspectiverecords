@@ -8,9 +8,9 @@
  *  Release - inp024
  */
 
+//if (is_single()) : 
 
-
-$releaseid = $artistsrelease->ID;
+ //$releaseid = $artistsrelease->ID; // I reckon this might be the issues because -> ID not being passed in
 $phptemplate = get_field('release_php_template', $releaseid);
 $phptemplatestring = 'releases/'.$phptemplate.'.php';
 $releasecode = get_field('release_code', $releaseid); // 
@@ -18,15 +18,16 @@ $releasetitle = get_field('release_title', $releaseid); //
 $releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
 $releaseproductcover = get_field('release_product_image_front', $releaseid); // 
 $releaseimage = get_field('release_vinyl_label_image', $releaseid); 
-$releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;		
 $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS	
+$releaseassetslocation = get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate.'/';		
 ?>
- 
+
+
 	 <div class="record-circle-container">
 	   
 	 	 <div class="sleave-square">
 	      
-	      <img class="record-sleave" src="<?php echo $releaseassetslocation ;?>/INP024-front_sleave.png"/>
+	      <img class="record-sleave" src="<?php echo $releaseassetslocation ;?>INP024-front_sleave.png"/>
 	    
 	    </div>  
 	    
@@ -74,12 +75,10 @@ $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relations
 	    
 	      	<div class="inner-container"> 
 	     
-	     	     	<img class="record-label" src="<?php echo $releaseimage;?>">
+	     	     	<img class="record-label" src="<?php echo $releaseimage;?>"><!--full vinyl + label -->
 
-	       <!-- <img class="record-label" src="<?php// echo $releaseassetslocation ;?>/web_label_seba_side_a_600.png"/>
-	      
-	        <img class="record-item" src="<?php //echo $releaseassetslocation ;?>/web_records_blank_black.png"/> -->
-	        
+	       <!-- <img class="record-label" src="<?php// echo $releaseassetslocation ;?>/web_label_seba_side_a_600.png"/>-->
+	     	        
 	      	</div><!-- .inner-container-->
 	      
 	   <!--   <div class="inner-container two"> 
@@ -94,3 +93,4 @@ $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relations
 
 	  </div> <!-- .record-circle-container-->
 							  
+<?php //endif; // endif is_single() ?>

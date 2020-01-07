@@ -4000,7 +4000,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(29deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(73deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -21753,9 +21753,98 @@ Move this into a seperate style sheet?
   		*/
   overflow: hidden;
   float: left;
-  margin-top: -4%;
+  margin-top: 9px;
+  margin-top: 13px;
 }
-/* line 24, assets/sass/_partials/_block-sound.scss */
+@media screen and (min-width: 0px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: calc(9px + 4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: 13px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: calc(13px + 3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: 16px;
+  }
+}
+@media (min-width: 320px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: -4.5px;
+    margin-top: -6.5px;
+  }
+}
+@media screen and (min-width: 320px) and (min-width: 0px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: calc(-4.5px + -2 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 320px) and (min-width: 960px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: -6.5px;
+  }
+}
+@media screen and (min-width: 320px) and (min-width: 960px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: calc(-6.5px + -1.5 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 320px) and (min-width: 1440px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: -8px;
+  }
+}
+
+@media (min-width: 640px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: -9px;
+    margin-top: -13px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 0px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: calc(-9px + -4 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 960px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: -13px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 960px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: calc(-13px + -3 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 1440px) {
+  /* line 8, assets/sass/_partials/_block-sound.scss */
+  .sound-block .play-icon-wrap {
+    margin-top: -16px;
+  }
+}
+
+/* line 32, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-toggle {
   height: fit-content;
   width: 100%;
@@ -21767,7 +21856,7 @@ Move this into a seperate style sheet?
   position: relative;
   overflow: hidden;
 }
-/* line 40, assets/sass/_partials/_block-sound.scss */
+/* line 48, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-toggle svg {
   display: block;
   float: left;
@@ -21775,20 +21864,20 @@ Move this into a seperate style sheet?
   height: 100%;
   width: 100%;
 }
-/* line 49, assets/sass/_partials/_block-sound.scss */
+/* line 57, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-toggle.small {
   background: transparent;
   border: 1px solid white;
 }
-/* line 58, assets/sass/_partials/_block-sound.scss */
+/* line 66, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-toggle.small:hover {
   border: 1px solid black;
 }
-/* line 62, assets/sass/_partials/_block-sound.scss */
+/* line 70, assets/sass/_partials/_block-sound.scss */
 .sound-block .play-toggle.small:hover path {
   fill: black;
 }
-/* line 70, assets/sass/_partials/_block-sound.scss */
+/* line 78, assets/sass/_partials/_block-sound.scss */
 .sound-block .show-title {
   padding-top: 4.5px;
   padding-top: 6.5px;
@@ -21799,78 +21888,78 @@ Move this into a seperate style sheet?
   font-weight: 500;
 }
 @media screen and (min-width: 0px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     padding-top: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     padding-top: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     padding-top: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     padding-top: 8px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     font-size: calc(10px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     font-size: calc(16px + 14 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     font-size: 30px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 70, assets/sass/_partials/_block-sound.scss */
+  /* line 78, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-title {
     line-height: 32px;
   }
 }
-/* line 75, assets/sass/_partials/_block-sound.scss */
+/* line 83, assets/sass/_partials/_block-sound.scss */
 .sound-block .show-start {
   font-size: 10px;
   font-size: 12.8px;
@@ -21878,58 +21967,58 @@ Move this into a seperate style sheet?
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 75, assets/sass/_partials/_block-sound.scss */
+  /* line 83, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 75, assets/sass/_partials/_block-sound.scss */
+  /* line 83, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 75, assets/sass/_partials/_block-sound.scss */
+  /* line 83, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 75, assets/sass/_partials/_block-sound.scss */
+  /* line 83, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 75, assets/sass/_partials/_block-sound.scss */
+  /* line 83, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 75, assets/sass/_partials/_block-sound.scss */
+  /* line 83, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 75, assets/sass/_partials/_block-sound.scss */
+  /* line 83, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 75, assets/sass/_partials/_block-sound.scss */
+  /* line 83, assets/sass/_partials/_block-sound.scss */
   .sound-block .show-start {
     line-height: 25.6px;
   }
 }
-/* line 79, assets/sass/_partials/_block-sound.scss */
+/* line 87, assets/sass/_partials/_block-sound.scss */
 .sound-block .details-wrap {
   min-height: 12.5vw;
 }
-/* line 83, assets/sass/_partials/_block-sound.scss */
+/* line 91, assets/sass/_partials/_block-sound.scss */
 .sound-block .details-wrap .radio-view-item {
   font-size: 10px;
   font-size: 12.8px;
@@ -21946,118 +22035,118 @@ Move this into a seperate style sheet?
   padding-top: 6.5px;
 }
 @media screen and (min-width: 0px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     line-height: 25.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     padding-top: calc(4.5px + 2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     padding-top: 6.5px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     padding-top: calc(6.5px + 1.5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 83, assets/sass/_partials/_block-sound.scss */
+  /* line 91, assets/sass/_partials/_block-sound.scss */
   .sound-block .details-wrap .radio-view-item {
     padding-top: 8px;
   }
 }
-/* line 106, assets/sass/_partials/_block-sound.scss */
+/* line 114, assets/sass/_partials/_block-sound.scss */
 .sound-block .details-wrap:hover .radio-view-item {
   opacity: 1;
   animation: opacity-in-0_5 200ms ease-in forwards;
 }
-/* line 115, assets/sass/_partials/_block-sound.scss */
+/* line 123, assets/sass/_partials/_block-sound.scss */
 .sound-block.align-right {
   width: 100%;
   float: none;
 }
-/* line 119, assets/sass/_partials/_block-sound.scss */
+/* line 127, assets/sass/_partials/_block-sound.scss */
 .sound-block.align-right .radio-item.grid, .sound-block.align-right .radio-item.cookie-notice-container {
   flex-direction: row-reverse;
   text-align: right;
 }
-/* line 124, assets/sass/_partials/_block-sound.scss */
+/* line 132, assets/sass/_partials/_block-sound.scss */
 .sound-block.align-right .radio-view-item {
   float: right;
   text-align: right;
 }
-/* line 139, assets/sass/_partials/_block-sound.scss */
+/* line 147, assets/sass/_partials/_block-sound.scss */
 .sound-block.align-center {
   float: none;
   width: 100%;
 }
-/* line 143, assets/sass/_partials/_block-sound.scss */
+/* line 151, assets/sass/_partials/_block-sound.scss */
 .sound-block.align-center .radio-item.grid, .sound-block.align-center .radio-item.cookie-notice-container {
   flex-direction: initial;
   text-align: left;
 }
-/* line 164, assets/sass/_partials/_block-sound.scss */
+/* line 172, assets/sass/_partials/_block-sound.scss */
 .sound-block.align-left {
   float: none;
   width: 100%;
 }
-/* line 168, assets/sass/_partials/_block-sound.scss */
+/* line 176, assets/sass/_partials/_block-sound.scss */
 .sound-block.align-left .radio-item.grid, .sound-block.align-left .radio-item.cookie-notice-container {
   flex-direction: initial;
   text-align: left;
 }
-/* line 176, assets/sass/_partials/_block-sound.scss */
+/* line 184, assets/sass/_partials/_block-sound.scss */
 .sound-block.align-left .radio-view-item {
   float: left;
   text-align: left;

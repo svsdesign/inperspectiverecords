@@ -24,7 +24,6 @@ if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
 
-
 // Load values and assing defaults.
 //$sound = get_field('sound') ?: 'sc track id';
 
@@ -45,26 +44,23 @@ $releasecode = get_field('release_code', $releaseid); //
 $releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
 $releaseproductcover = get_field('release_product_image_front', $releaseid); // relationship = bi-directional - IDS
 $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS
-?>
 
-<?php //if no release id selected it will give the id of the current post
-//echo get_permalink( $releaseid); 
-// see DEc 2019 post - seba relase one with and one withouth the rlease - what to do? just provide the seba id, which is what the latest?
+// colour picker:
+$colouroption = get_field('text_colour'); // relationship = bi-directional - IDS
+
+
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> inp-block block-z-index-2 grid">
          
       <?php if ($phptemplate):// has template?>
-            
+          
           <a href="<?php echo get_permalink( $releaseid); ?>">
-
-          <?php include ('releases/'.$phptemplate.'.php');?>
-
+            <?php include(locate_template('/releases/'.$phptemplate.'.php'));?>
           </a>
-
 
       <?php else: //does not have template: ?>
 
-          <a href="<?php echo get_permalink( $releaseid); ?>">
+           <a href="<?php echo get_permalink( $releaseid); ?>">
 
             <div class="record-circle-container">
                
@@ -153,6 +149,14 @@ $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relations
 <?php//
 //    wp_enqueue_script('enquire', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inprelease/assets/js/script.js', array('jquery'), null, true );
 ?>
+<style>
+#<?php echo esc_attr($id); ?> div 
+/* is this too "brutal" in terms of targeting divs within the blcok? - REview + dlete comment if okay*/
+{
+  color:<?php echo $colouroption?>;
+}
+</style>
+
 <script>
 
 

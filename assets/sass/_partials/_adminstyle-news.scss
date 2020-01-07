@@ -19,8 +19,8 @@ Further reading: 	https://github.com/WordPress/gutenberg/issues/6064
 
 
 */
-body.wp-admin{
-	// temp? i.e should this be set with js - add "imgloaded class to body?"
+body.wp-admin.loaded{
+	//This is being set with js - add "imgloaded class to body?"
 	img{
 	opacity: 1
 	}

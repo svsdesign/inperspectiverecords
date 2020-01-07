@@ -127,49 +127,49 @@ width: 100%;// this dirty?
     @include cssvalue(line-height,0.9);
     }
 
-    .release-code{
-    font-weight:100; 
-    // font-size:1.5vw;//18px;
-    @include cssvalue(padding-bottom, 0.3);
-    @include cssvalue(font-size, 0.4);
-    @include cssvalue(line-height,0.4);
-    }
-    .release-artists{
-    font-weight:400; 
-    font-style: italic;
-    //   @include cssvalue(padding-top, 0.2);
-    @include cssvalue(padding-bottom, 0.2);
+	    .release-code{
+	    font-weight:100; 
+	    // font-size:1.5vw;//18px;
+	    @include cssvalue(padding-bottom, 0.3);
+	    @include cssvalue(font-size, 0.4);
+	    @include cssvalue(line-height,0.4);
+	    }
+	    .release-artists{
+	    font-weight:400; 
+	    font-style: italic;
+	    //   @include cssvalue(padding-top, 0.2);
+	    @include cssvalue(padding-bottom, 0.2);
 
-    }
-    .release-artist{
-    float: left;
-    font-weight:400; 
-    font-style: italic;
-    //   @include cssvalue(padding-top, 0.2);
-    @include cssvalue(padding-bottom, 0.2);
-    @include cssvalue(font-size, 0.6);
-    @include cssvalue(line-height,0.7);
+	    }
+	    .release-artist{
+	    float: left;
+	    font-weight:400; 
+	    font-style: italic;
+	    //   @include cssvalue(padding-top, 0.2);
+	    @include cssvalue(padding-bottom, 0.2);
+	    @include cssvalue(font-size, 0.6);
+	    @include cssvalue(line-height,0.7);
 
-    }
+	    }
 
-    .release-artist:after{
-    content: '';
-    white-space: pre-wrap;
-    }
+	    .release-artist:after{
+	    content: '';
+	    white-space: pre-wrap;
+	    }
 
-    .release-title{
-    font-weight:600;
-    //  @include cssvalue(padding-top, 0.2);
-    @include cssvalue(padding-bottom, 0.3); 
-    }
+	    .release-title{
+	    font-weight:600;
+	    //  @include cssvalue(padding-top, 0.2);
+	    @include cssvalue(padding-bottom, 0.3); 
+	    }
 
-	.release-artist:last-child:after{
-	content: '';
-	}
+		.release-artist:last-child:after{
+		content: '';
+		}
 
 
 
-} /* .release-details */
+	} /* .release-details */
 
   .active .release-details{
   opacity: 1;

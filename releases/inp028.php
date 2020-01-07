@@ -11,9 +11,9 @@
 ?>
 
 
- <?php if ( is_single() ) : //is single content 
+ <?php//if ( is_single() ) : //is single content 
 
-	$releaseid = $artistsrelease->ID;
+	//$releaseid = $artistsrelease->ID; < this causes error - refer to inp024.php template for correct approach
 	$phptemplate = get_field('release_php_template', $releaseid);
 	$phptemplatestring = 'releases/'.$phptemplate.'.php';
 	$releasetitle = get_field('release_title', $releaseid); // 
@@ -24,7 +24,6 @@
 	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS	
   	?>
 
-   
 
 	<div class="record-square-container">
 
@@ -152,9 +151,9 @@
 	</div> <!-- .record-square-container-->								 
 */?>
 
-<?php endif; // endif is_single() ?>
+<?php // endif; // endif is_single() ?>
 
-<?php if ( is_archive() ) : //is archive content ?>
+<?php //if ( is_archive() ) : //is archive content ?>
 
 
-<?php endif; // endif is_archive() ?>
+<?php // endif; // endif is_archive() ?>

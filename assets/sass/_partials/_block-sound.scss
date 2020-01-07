@@ -15,10 +15,18 @@ width: 100%;// this dirty?
 	float: left;
 	@extend .grid-item;
 	@extend .grid-item-xs-1;
-	margin-top: -4%;// review this - its messy!
+	// review this - its messy af
 	// i need to implement a  max heigh/ height; i.e the height of th grid itme - this flex things works
 	// but needs to be say % of the gird item; i.e too big atm
 	//position: absolute;//review
+ 		@include cssvalue(margin-top, 0.5); // review this
+
+	 	@media (min-width: map-get($breakpoints,sm)) {
+ 		@include cssvalue(margin-top, -0.25); // review this
+		}
+		@media (min-width: map-get($breakpoints,md)) {
+ 		@include cssvalue(margin-top, -0.5); // review this
+		}
 	}
 
 	.play-toggle{

@@ -100,7 +100,7 @@ var adminapp = (function() {
           $("body").imagesLoaded(function(){ // consider a lazloadng options?
   
 
-           // console.log("Images have loaded")
+            console.log("Images have loaded")
                   
                  function waitloading(){
 
@@ -209,6 +209,8 @@ var adminapp = (function() {
 
       $(function () // on document.ready()
             {
+
+                 opacity(); // turn on visibility
 
                   	console.log('on document ready');
                  // 	console.log("find a selector for the block")
