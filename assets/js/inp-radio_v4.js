@@ -544,7 +544,8 @@ var headroom = new Headroom(element, options);
       // convert a SoundCloud resource URL to an API URL
       scApiUrl = function(url, apiKey) {
         var resolver = ( secureDocument || (/^https/i).test(url) ? 'https' : 'http') + '://api.' + domain + '/resolve?url=',
-            params = 'format=json&consumer_key=' + apiKey +'&callback=?';
+           // params = 'format=json&consumer_key=' + apiKey +'&callback=?'; Callback removed seems to solve the problem
+            params = 'format=json&consumer_key=' + apiKey +'';//https://stackoverflow.com/questions/30401660/if-datatype-is-json-why-would-mime-type-application-json-be-rejected?noredirect=1&lq=1
 
 //console.log(resolver);
 //.then(console.log())
