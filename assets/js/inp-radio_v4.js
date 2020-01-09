@@ -21,14 +21,8 @@
 *   The link will be automatically replaced by the HTML based player
 */
 
-
-/* TO do
-
-
-- If the player js hasn't loaded yet - but we allow teh UI elements to be visible, people will click but it won't work
-So I need to maybe create loading states (or just don't display any of the UI elements) untill we can allow for interaction
-This was happening because the Internet was slow.
-
+/*TO DO - resovel this JS error (see gdoc for error)
+ https://stackoverflow.com/questions/24528211/chrome-refuses-to-execute-an-ajax-script-due-to-wrong-mime-type
 */
 
 (function($) {
@@ -554,6 +548,7 @@ var headroom = new Headroom(element, options);
 
 //console.log(resolver);
 //.then(console.log())
+//https://stackoverflow.com/questions/40574159/refused-to-execute-script-strict-mime-type-checking-is-enabled
 
         // force the secure url in the secure environment
         if( secureDocument ) {
@@ -1288,7 +1283,10 @@ console.log("track" + track);
     loadArtworks: 5,
     // the default Api key should be replaced by your own one
     // get it here https://soundcloud.com/you/apps/new
-    apiKey: 'htuiRd1JP11Ww0X72T1C3g'
+    apiKey: 'htuiRd1JP11Ww0X72T1C3g' // only api Key I can find
+   // apiKey: 's-8Pjrp' //https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/soundcloud.py
+//apiKey:'853fdb79a14a9ed748ec9fe482e859dd' /// this is a client id though?
+    //    https://github.com/DevMountain/soundCloud-api
   };
 
 

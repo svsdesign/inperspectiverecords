@@ -145,7 +145,7 @@ var radioscriptloaded, // set as undefined initially;//
 
 
                             // console.log("else iunnit? ")
-                            console.log('body - but we wont have a radio item yet - so keep look for attrchange to the body class?' )
+                            console.log('body - but we wont have a radio item yet - so keep look for attrchange to the body class?' );
                             // here I want to look for dom changes and thenn whenn they happend we run - checkScript() 
                             //checkScript()
                             // This makes a lot changes and then runs it immediately again - not sure this is very good appraoch
@@ -203,11 +203,17 @@ var radioscriptloaded, // set as undefined initially;//
                           } //else
 
                           //console.log("itemurl ="+itemurl+"")
-
+//https://developers.soundcloud.com/docs/api/sdks#authentication
                           SC.initialize({
-                           //   client_id: '853fdb79a14a9ed748ec9fe482e859dd' // who'is this client ID? Works locally and in incognito
+                            client_id: '853fdb79a14a9ed748ec9fe482e859dd' // who'is this client ID? Works locally and in incognito
                               //client_id: '95f22ed54a5c297b1c41f72d713623ef' // Client id foudn here https://github.com/mediaelement/mediaelement/issues/2501 -
-                              client_id: 'ssV1Qfh3hGcBHMcuZ3bz3xHb3aoP5KUB'
+                             // client_id: 'ssV1Qfh3hGcBHMcuZ3bz3xHb3aoP5KUB'
+                            //client_id: '8d720a0f46531b275c7c9a82619c9d46'
+                            //client_id:'YUKXoArFcqrlQn9tfNHvvyfnDISj04zk'//https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/soundcloud.py
+
+                            //client_id: 'bda4ada8694db06efcac9cf97b872b3e'
+
+                           // redirect_uri: '//localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/callback.html'
                           });
                           //Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause().
                           //https://developers.google.com/web/updates/2017/06/play-request-was-interrupted < review

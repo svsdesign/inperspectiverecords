@@ -1679,7 +1679,8 @@ function inp_scripts()
 
     wp_enqueue_script(
         'scsdk',
-        'https://connect.soundcloud.com/sdk/sdk-3.3.0.js',
+//        'https://connect.soundcloud.com/sdk/sdk-3.3.0.js', // trying thhe other js skd: becuase of the errors
+        'https://connect.soundcloud.com/sdk/sdk-3.3.2.js',
          array('jquery'),
         false,
         true
