@@ -438,11 +438,9 @@
 							
 										<?php if($name): ?>
 
-											<div class="event-name grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
-														
-												<?php echo $name; ?>
-															
-											</div><!-- .event-name -->
+										<div class="event-name grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
+											<?php echo $name; ?>
+										</div><!-- .event-name -->
 									
 										<?php endif; //$name ?>
 
@@ -749,9 +747,8 @@
 
 		<a href="<?php the_permalink();?>" class="grid scale-me grid-item-sm-6">
  
- 		 
-			
-			<div class="date grid-item grid-item-xs-6 grid-item-sm-1 grid-item-md-1">
+ 				
+			<div class="date grid-item grid-item-xs-6 grid-item-md-1 grid-item-lg-1">
 						
 				<?php $startdate = get_field('event_start_date'); echo date_i18n('d.m.Y', $startdate);  ?>
 				<?php// $starttime = get_field('event_start_date'); echo date_i18n('h:i', $starttime);  ?>
@@ -759,7 +756,7 @@
 
 			</div><!-- .date -->
 
-			<div class="event-name grid-item grid-item-xs-6 grid-item-sm-3 grid-item-md-3">
+			<div class="event-name grid-item grid-item-xs-6 grid-item-md-3 grid-item-lg-3">
 						
 				<?php $name = the_title(); echo $name;  ?>
 							
@@ -767,7 +764,7 @@
 
 			<?php if($venue): ?>
 
-				<div class="venue grid-item grid-item-xs-6 grid-item-sm-2">
+				<div class="venue grid-item grid-item-xs-6 grid-item-md-2">
 
 					<span><?php the_field('venue'); ?></span>   
 				

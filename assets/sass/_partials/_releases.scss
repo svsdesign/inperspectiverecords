@@ -1330,6 +1330,9 @@ body.single-releases{
 
   #artist-details{
   @include padding(padding-bottom, 4);
+
+
+
   }
 
   .cover-image{
@@ -1351,6 +1354,26 @@ body.single-releases{
     background-position: center;
     background-repeat: no-repeat;;
   }
+
+  .release-format{
+//  @include cssvaluegutter(padding-left, 0.1);
+  @include cssvalue(font-size, 0.5);
+  text-transform: uppercase;
+  font-weight: $lightweight;
+  display: block;
+  width: 100%;
+  text-align: center;
+ // border-top: 1px solid $white_0-25;
+  border-bottom: 1px solid $white_0-25;
+  @include padding(padding-top, 0.5);
+  @include padding(padding-bottom, 0.5);
+
+    .format{
+    font-weight: $mediumweight;
+    display: inline-block;
+    }
+
+  }//.release-format
 
   div#release-links{
   text-align: center;

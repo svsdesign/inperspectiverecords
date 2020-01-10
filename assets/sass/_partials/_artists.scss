@@ -212,8 +212,8 @@ Review + delete
   .release-details{
   position: absolute;
   width: 100%;
-  color:white;
-  font-family:"objectivity", sans-serif;
+  color:$white;
+  //font-family:"objectivity", sans-serif;
   //font-size: 3vw;//30px;
   //line-height: 3.6vw;//36px;
   @include cssvalue(font-size, 0.6);
@@ -235,10 +235,10 @@ Review + delete
 
 
     .release-code{
-    font-weight:100; 
+    font-weight:$lightweight; 
     // font-size:1.5vw;//18px;
     @include cssvalue(padding-bottom, 0.3);
-    @include cssvalue(font-size, 0.4);
+    @include cssvalue(font-size, 0.5);
     @include cssvalue(line-height,0.4);
     }
     .release-artists{
@@ -274,11 +274,19 @@ Review + delete
     @include cssvalue(padding-bottom, 0.3); 
     }
 
-  .release-artist:last-child:after{
+    .release-artist:last-child:after{
     content: '';
-  background: red;
     }
 
+    .release-format{
+    @include cssvalue(padding-top, 0.1);
+    @include cssvaluegutter(padding-left, 0.1);
+    @include cssvalue(font-size, 0.4);
+   // @include smaller;
+    text-transform: uppercase;
+    font-weight: $mediumweight;
+    display: inline-block;
+    }
 
 
 } /* .release-details
@@ -288,9 +296,8 @@ Review + delete
 
   .active .release-details{
   opacity: 1;
-    animation-iteration-count: 1;
-    animation: 
-  increaseopacity 1000ms ease-in forwards;
+  animation-iteration-count: 1;
+  animation: increaseopacity 1000ms ease-in forwards;
   z-index: 93;//was 109 - but clashing with soundplayer;
   pointer-events:none;
   }

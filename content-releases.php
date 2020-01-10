@@ -16,6 +16,7 @@
 	//start get fields
 	$releaseid = get_the_ID();
  	$releasecode = get_field('release_code'); // INPO00
+ 	$releaseformat = get_field('release_format'); // format
  	$releasetitle = get_field('release_title'); // 
 	$releasedescription = get_field('release_description'); // 
 
@@ -48,9 +49,11 @@
 			<div class="page-titler">
 						    
 				 <span class="inner">
-							<?php echo $releasecode?>
-				</span><!-- inner -->
+				
+				<?php echo $releasecode?>
 
+				</span><!-- inner -->
+				 
 		    </div> <!--.page-title -->
 				    
 		</div><!-- .page-title-position -->
@@ -87,6 +90,18 @@
 	
 	<?php endif; //$releasebanner:?>
 
+	<?php if ($releaseformat):?>
+
+    	<div class="release-format">
+    	Format:
+
+	        <div class="format">
+			<?php echo $releaseformat;?>
+			</div>
+
+		</div>
+
+	<?php endif; // if $releaseformat) ?>
 
 	<?php if($releaselinks): ?>
 		
@@ -187,6 +202,9 @@ wp- embedd
 
 	<?php endif; // if embed ?>
  	
+
+	
+
 
 	<?php if($releasedescription): ?>
 	

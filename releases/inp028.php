@@ -14,6 +14,10 @@
  <?php//if ( is_single() ) : //is single content 
 
 	//$releaseid = $artistsrelease->ID; < this causes error - refer to inp024.php template for correct approach
+	
+	$releasecode = get_field('release_code', $releaseid); // 
+	$releaseformat = get_field('release_format', $releaseid);
+
 	$phptemplate = get_field('release_php_template', $releaseid);
 	$phptemplatestring = 'releases/'.$phptemplate.'.php';
 	$releasetitle = get_field('release_title', $releaseid); // 
@@ -51,10 +55,21 @@
 
 	      <div class="inner-container">  
 
-	        <div class="release-code">
-	     	<?php echo get_the_title( $artistsrelease->ID ); ?>
+	      <div class="release-code">
 
-	        </div>
+				<?php echo $releasecode;?>
+
+					  <?php if ($releaseformat):?>
+
+			        	<div class="release-format">
+
+						- <?php echo $releaseformat;?>
+
+						</div>
+
+					<?php endif; // if $releaseformat) ?>
+
+				</div>
 
 	        <?php if ($releasetitle):?>
 

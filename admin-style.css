@@ -3896,7 +3896,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(88deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(42deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -6103,6 +6103,15 @@ Move this into a seperate style sheet?
   animation: blurin 400ms ease-in forwards;
 }
 
+/* line 49, assets/sass/_partials/_block-artist.scss */
+body.is-touch .artist-block .banner-image .page-title-positioner {
+  animation: none;
+}
+/* line 59, assets/sass/_partials/_block-artist.scss */
+body.is-touch .artist-block:hover .banner-image .page-title-positioner {
+  animation: none;
+}
+
 /* Text Block */
 /* line 4, assets/sass/_partials/_block-text.scss */
 .text-block {
@@ -6980,44 +6989,44 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
 }
 /* line 155, assets/sass/_partials/_block-release.scss */
 .release-block .release-details .release-artist:after {
-  content: '&#47;';
+  content: '/ ';
   white-space: pre-wrap;
 }
-/* line 162, assets/sass/_partials/_block-release.scss */
+/* line 163, assets/sass/_partials/_block-release.scss */
 .release-block .release-details .release-title {
   font-weight: 600;
   padding-bottom: 5.4px;
   padding-bottom: 7.8px;
 }
 @media screen and (min-width: 0px) {
-  /* line 162, assets/sass/_partials/_block-release.scss */
+  /* line 163, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-title {
     padding-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 162, assets/sass/_partials/_block-release.scss */
+  /* line 163, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-title {
     padding-bottom: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 162, assets/sass/_partials/_block-release.scss */
+  /* line 163, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-title {
     padding-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 162, assets/sass/_partials/_block-release.scss */
+  /* line 163, assets/sass/_partials/_block-release.scss */
   .release-block .release-details .release-title {
     padding-bottom: 9.6px;
   }
 }
-/* line 168, assets/sass/_partials/_block-release.scss */
+/* line 169, assets/sass/_partials/_block-release.scss */
 .release-block .release-details .release-artist:last-child:after {
   content: '';
 }
-/* line 175, assets/sass/_partials/_block-release.scss */
+/* line 176, assets/sass/_partials/_block-release.scss */
 .release-block .active .release-details {
   opacity: 1;
   animation-iteration-count: 1;
@@ -7025,7 +7034,7 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   z-index: 93;
   pointer-events: none;
 }
-/* line 184, assets/sass/_partials/_block-release.scss */
+/* line 185, assets/sass/_partials/_block-release.scss */
 .release-block .record-circle {
   height: 25vw;
   width: 100%;
@@ -7035,47 +7044,47 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
   z-index: 90;
   overflow: hidden;
 }
-/* line 193, assets/sass/_partials/_block-release.scss */
+/* line 194, assets/sass/_partials/_block-release.scss */
 .release-block .record-item {
   position: absolute;
   width: 25vw;
   height: 25vw;
   z-index: 1;
 }
-/* line 199, assets/sass/_partials/_block-release.scss */
+/* line 200, assets/sass/_partials/_block-release.scss */
 .release-block .record-label {
   z-index: 2;
   position: absolute;
   width: 25vw;
   height: 25vw;
 }
-/* line 210, assets/sass/_partials/_block-release.scss */
+/* line 211, assets/sass/_partials/_block-release.scss */
 .release-block .inner-container {
   z-index: 30;
 }
-/* line 213, assets/sass/_partials/_block-release.scss */
+/* line 214, assets/sass/_partials/_block-release.scss */
 .release-block .inner-container.two {
   z-index: 20;
 }
-/* line 216, assets/sass/_partials/_block-release.scss */
+/* line 217, assets/sass/_partials/_block-release.scss */
 .release-block .inner-container.three {
   z-index: 10;
 }
-/* line 220, assets/sass/_partials/_block-release.scss */
+/* line 221, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-item {
   animation: moveleft 500ms ease-out forwards;
 }
-/* line 225, assets/sass/_partials/_block-release.scss */
+/* line 226, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-label {
   animation: rollingleft 500ms ease-out forwards, moveleft 500ms ease-out forwards;
 }
-/* line 230, assets/sass/_partials/_block-release.scss */
+/* line 231, assets/sass/_partials/_block-release.scss */
 .release-block .rotated.rotate .record-item {
   animation-iteration-count: 1;
   animation: moveright 500ms ease-out forwards;
   left: 0px;
 }
-/* line 236, assets/sass/_partials/_block-release.scss */
+/* line 237, assets/sass/_partials/_block-release.scss */
 .release-block .rotate .record-label {
   animation-iteration-count: 1;
   animation: rollingright 500ms ease-out forwards, moveright 500ms ease-out forwards;
@@ -7113,21 +7122,21 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
     left: 0px;
   }
 }
-/* line 282, assets/sass/_partials/_block-release.scss */
+/* line 283, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-item.two {
   animation: movelefttwo 500ms ease-out forwards;
 }
-/* line 287, assets/sass/_partials/_block-release.scss */
+/* line 288, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-label.two {
   animation: rollinglefttwo 500ms ease-out forwards, movelefttwo 500ms ease-out forwards;
 }
-/* line 290, assets/sass/_partials/_block-release.scss */
+/* line 291, assets/sass/_partials/_block-release.scss */
 .release-block .rotated.rotate .record-item.two {
   animation-iteration-count: 1;
   animation: moverighttwo 500ms ease-out forwards;
   left: 0px;
 }
-/* line 298, assets/sass/_partials/_block-release.scss */
+/* line 299, assets/sass/_partials/_block-release.scss */
 .release-block .rotate .record-label.two {
   animation-iteration-count: 1;
   animation: rollingrighttwo 500ms ease-out forwards, moverighttwo 500ms ease-out forwards;
@@ -7165,21 +7174,21 @@ TO - tidy this up, I feel there's a lot of excess code - and not very well organ
     left: 0px;
   }
 }
-/* line 335, assets/sass/_partials/_block-release.scss */
+/* line 336, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-item.three {
   animation: moveleftthree 500ms ease-out forwards;
 }
-/* line 340, assets/sass/_partials/_block-release.scss */
+/* line 341, assets/sass/_partials/_block-release.scss */
 .release-block .rotated .record-label.three {
   animation: rollingleftthree 500ms ease-out forwards,  moveleftthree 500ms ease-out forwards;
 }
-/* line 345, assets/sass/_partials/_block-release.scss */
+/* line 346, assets/sass/_partials/_block-release.scss */
 .release-block .rotated.rotate .record-item.three {
   animation-iteration-count: 1;
   animation: moverightthree 500ms ease-out forwards;
   left: 0px;
 }
-/* line 353, assets/sass/_partials/_block-release.scss */
+/* line 354, assets/sass/_partials/_block-release.scss */
 .release-block .rotate .record-label.three {
   animation-iteration-count: 1;
   animation: rollingrightthree 500ms ease-out forwards, moverightthree 500ms ease-out forwards;

@@ -26,11 +26,12 @@ if( !empty($block['align']) ) {
 
 
 $eventid = get_field('event'); //post object - IDS
+//$textcolor = get_field('text_color'); 
+
 $upcomingeventid = $eventid;          
 $eventstart = get_field('event_start_date', $eventid); // date and time picker
 $eventend = get_field('event_end_date', $eventid); // date and time picker
-$eventcolor =  get_field('event_colour');
-
+$eventcolor =  get_field('event_colour', $eventid);
 $posterart =  get_field('poster_art', $eventid); // image
 $bannerart =  get_field('banner_art', $eventid); // image - banner
 $venue =  get_field('venue', $eventid);  // text
@@ -175,3 +176,8 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
 
 
 </div><!-- .block -->
+
+
+<style>
+
+</style>

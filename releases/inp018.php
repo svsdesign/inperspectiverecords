@@ -8,7 +8,9 @@
  *  Release - inp018
  */
 
-$releaseid = $artistsrelease->ID;
+//$releaseid = $artistsrelease->ID;
+$releasecode = get_field('release_code', $releaseid); // 
+$releaseformat = get_field('release_format', $releaseid);
 $phptemplate = get_field('release_php_template', $releaseid);
 $phptemplatestring = 'releases/'.$phptemplate.'.php';
 $releasecode = get_field('release_code', $releaseid); // 
@@ -33,11 +35,21 @@ $releaselabel = get_field('release_vinyl_label_image', $releaseid);
 
 	      	<div class="inner-container">  
 
-		       	<div class="release-code">
+		       <div class="release-code">
 
-			     	<?php echo $releasecode;?>
+				<?php echo $releasecode;?>
 
-		        </div>
+					  <?php if ($releaseformat):?>
+
+			        	<div class="release-format">
+
+						- <?php echo $releaseformat;?>
+
+						</div>
+
+					<?php endif; // if $releaseformat) ?>
+
+				</div>
 
 		        <?php if ($releasetitle):?>
 

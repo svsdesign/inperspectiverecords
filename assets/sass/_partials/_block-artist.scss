@@ -37,3 +37,34 @@ width: 100%;// this dirty?
 	}
 
 } //.artist-block
+
+
+body.is-touch{
+
+
+	.artist-block{
+ 
+		.banner-image{
+	 
+		    .page-title-positioner{
+		     animation: none;
+		    }
+
+		}
+
+		&:hover{
+
+			.banner-image{
+
+				.page-title-positioner{
+		    	 animation: none;
+				}
+			}
+
+		}//hover
+
+	} //.artist-block
+
+}//body.is-touch
+
+

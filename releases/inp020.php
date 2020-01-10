@@ -11,10 +11,12 @@
 
 
 
- <?php if ( is_single() ) : //is single content 
+ <?php// if ( is_single() ) : //is single content 
 
-	$releaseid = $artistsrelease->ID;
+	//$releaseid = $artistsrelease->ID;
 	$phptemplate = get_field('release_php_template', $releaseid);
+	$releasecode = get_field('release_code', $releaseid); // 
+$releaseformat = get_field('release_format', $releaseid);
 	$phptemplatestring = 'releases/'.$phptemplate.'.php';
 	$releasetitle = get_field('release_title', $releaseid); // 
 	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
@@ -36,10 +38,22 @@
 
 	      <div class="inner-container">  
 
-	        <div class="release-code">
-	     	<?php echo get_the_title( $artistsrelease->ID ); ?>
+		<div class="release-code">
 
-	        </div>
+				<?php echo $releasecode;?>
+
+					  <?php if ($releaseformat):?>
+
+			        	<div class="release-format">
+
+						- <?php echo $releaseformat;?>
+
+						</div>
+
+					<?php endif; // if $releaseformat) ?>
+
+				</div>
+
 
 	        <?php if ($releasetitle):?>
 
@@ -84,9 +98,9 @@
 	</div> <!-- .record-circle-container-->								 
 
 
-<?php endif; // endif is_single() ?>
+<?php// endif; // endif is_single() ?>
 
-<?php if ( is_archive() ) : //is archive content ?>
+<?php //if ( is_archive() ) : //is archive content ?>
 
 
-<?php endif; // endif is_archive() ?>
+<?php //endif; // endif is_archive() ?>

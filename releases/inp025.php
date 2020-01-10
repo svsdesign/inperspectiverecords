@@ -11,6 +11,8 @@
 
 
 $phptemplate = get_field('release_php_template', $releaseid);
+	$releasecode = get_field('release_code', $releaseid); // 
+$releaseformat = get_field('release_format', $releaseid);
 $releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;	
 ?>
  
@@ -27,10 +29,22 @@ $releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$ph
 
 	      <div class="inner-container">  
 
-	        <div class="release-code">
-	     	<?php echo get_the_title( $artistsrelease->ID ); ?>
+				<div class="release-code">
 
-	        </div>
+				<?php echo $releasecode;?>
+
+					  <?php if ($releaseformat):?>
+
+			        	<div class="release-format">
+
+						- <?php echo $releaseformat;?>
+
+						</div>
+
+					<?php endif; // if $releaseformat) ?>
+
+				</div>
+
 	        <div class="release-artist">
 	          Seba
 	        </div>

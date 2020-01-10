@@ -49,7 +49,8 @@ text-align: center;
   font-weight: $boldweight;
 
     @media (min-width: map-get($breakpoints,md)) {
-    padding-right: 50%;
+   // padding-right: 50%;// change dto margin- review + delete commment
+    margin-right: 50%;// 
     }
 
   }
@@ -376,12 +377,12 @@ overflow: visible; /* this because of sticky can't be hidden? */
             overflow: hidden;
             text-align: center;
 
-              @media (min-width: map-get($breakpoints,sm)) {
+              @media (min-width: map-get($breakpoints,md)) {
               text-align: right;
               border-right: 1px solid $white_0-25;
               }
 
-              @media (min-width: map-get($breakpoints,md)) {
+              @media (min-width: map-get($breakpoints,lg)) {
               overflow: visible;//review this
               border-right: none;
               @include cssvalue(font-size, 0.4);
@@ -394,7 +395,7 @@ overflow: visible; /* this because of sticky can't be hidden? */
             @include lineheight;
             text-align: center;
 
-              @media (min-width: map-get($breakpoints,sm)) {
+              @media (min-width: map-get($breakpoints,md)) {
              text-align:left;
 
               }
@@ -407,7 +408,7 @@ overflow: visible; /* this because of sticky can't be hidden? */
             font-weight: $mediumweight;
             text-align:center;
 
-              @media (min-width: map-get($breakpoints,sm)) {
+              @media (min-width: map-get($breakpoints,md)) {
               text-align: right;
               }
 
@@ -424,7 +425,7 @@ overflow: visible; /* this because of sticky can't be hidden? */
             border-bottom: 1px solid $white_0-25;   
 
 
-             @media (min-width: map-get($breakpoints,sm)) {
+             @media (min-width: map-get($breakpoints,md)) {
              @include padding(padding-bottom, 0);
              @include padding(padding-top, 0);
           //   border-bottom: 1px solid white;   

@@ -80,7 +80,7 @@
 								<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
 								<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
 								<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
-								<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+								<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1001,500.158 492.037,246.093 492.037,754.227  z" fill-rule="nonzero"/> 
 							</svg> 
 						
 						</div>
@@ -246,7 +246,7 @@
 														<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
 														<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
 														<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
-														<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+														<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1001,500.158 492.037,246.093 492.037,754.227 z" fill-rule="nonzero"/> 
 													</svg> 
 												</div>
 	 
@@ -374,7 +374,7 @@ its out of date and needs replacing with the one as per the "single other shows"
 							<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
 							<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
 							<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
-							<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+							<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1001,500.158 492.037,246.093 492.037,754.227 z" fill-rule="nonzero"/> 
 						
 						</svg> 
 
