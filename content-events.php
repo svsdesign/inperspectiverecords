@@ -9,6 +9,22 @@
  */
 ?>
 
+<?php if ( is_home() ) :  
+	//is_home - content-events.php
+	// home artist item - but there could be two types - the top featured - or the other itemes
+	// so check against the variable that I pass trough:
+	//echo $homefeatured;?>
+
+	<?php if ($homefeatured == true):?>
+	is homefeatured content-events.php
+	<?php else: // not home feaured:?>
+	not home featured content-events.php
+	<?php endif; //if $homefeatured ?>
+
+
+
+<?php endif; //is_home() ?>
+
  <?php if ( is_single() ) : //is single content  
 	
 	$eventid = get_the_ID();	

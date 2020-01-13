@@ -9,9 +9,19 @@
  */
 ?>
 
-<?php if ( is_home() ) :?>
+<?php if ( is_home() ) :  
+	//is_home - content-radio.php
+	// home radio item - but there could be two types - the top featured - or the other itemes
+	// so check against the variable that I pass trough:
+	//echo $homefeatured;?>
 
-// home radio item
+	<?php if ($homefeatured == true):?>
+	is homefeatured - content-radio.php
+	<?php else: // not home feaured:?>
+	not home featured - content-radio.php
+	<?php endif; //if $homefeatured ?>
+
+
 
 <?php endif; //is_home() ?>
 
@@ -21,11 +31,11 @@
 	$showtitle = get_the_title();// title						
  	$showstart = get_field('show_start_date'); // date and time picker
     $showend = get_field('show_end_date');  // date and time picker
-	$featureimage =  get_field('feature_image'); // image
-	$featureimagecredit =  get_field('feature_image_credit');  // text 
- 	$description =  get_field('show_description');  // text area							 
- 	$soundcloudlink =  get_field('soundcloud_link'); //text
-	$soundcloudembed =  get_field('soundcloud_embed'); // iframe / file?
+	$featureimage = get_field('feature_image'); // image
+	$featureimagecredit = get_field('feature_image_credit');  // text 
+ 	$description = get_field('show_description');  // text area							 
+ 	$soundcloudlink = get_field('soundcloud_link'); //text
+	$soundcloudembed = get_field('soundcloud_embed'); // iframe / file?
 	$itemno = 0 ;// review the use of this
 //
 //		$isnextevent = get_post_meta($eventid, 'is-next-event' );  // if 'true' in array 

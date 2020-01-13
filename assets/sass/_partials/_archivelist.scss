@@ -251,7 +251,7 @@
       a.list-item{
        cursor: pointer;
       text-decoration: none;
-      color: white;
+      color:$white;
       position:relative;
       display:block;
       float:left;
@@ -289,6 +289,10 @@
         line-height: inherit;
         }
 
+        &.active{
+                color:$red!important;
+
+        }
 
       }//div.list-item,
       //a.list-item
@@ -369,8 +373,8 @@
 body.is-touch{ // no hover states
 
   .list-item{
-  border-top:1px solid $white_0-1;
-  border-bottom: 1px solid $white_0-1;
+  border-top:1px solid $red_0-1;// $white_0-1;
+  border-bottom: 1px solid $red_0-1;// $white_0-1;
   z-index:2;
 
       .item-text{
@@ -387,8 +391,8 @@ body.is-touch{ // no hover states
 body.is-not-touch{
 
   .list-item:hover{
-  border-top:1px solid $grey;
-  border-bottom: 1px solid $grey;
+  border-top:1px solid $red_0-1;
+  border-bottom: 1px solid $red_0-1;
   z-index:2;
 
       .item-text{

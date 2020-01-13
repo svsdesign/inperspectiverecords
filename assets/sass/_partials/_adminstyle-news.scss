@@ -34,6 +34,30 @@ body.wp-admin.post-type-news{
 	.editor-visual-editor{
  	}
 
+	.edit-post-layout{
+	// for better visual layout:
+		
+		.inp-block{
+      	zoom:75%;// so everyting visuall fits better
+		// considerations should invovled when certain things are "on" &" off" - such as block settings + all other iotion
+
+			@media (min-width: map-get($breakpoints,lg)) {
+			zoom:75%;// so everyting visuall fits better
+				
+			}
+
+      	}//		.inp-block{
+
+      	&.is-sidebar-opened{
+      			
+      			.inp-block{
+				zoom:50%;// so everyting visuall fits better
+	 			}
+      	}//&.is-sidebar-opened
+
+	}// //edit-post-layout
+
+
 	.editor-styles-wrapper{
 	background-color:$news-background-color;
 	color: $news-text-color;
@@ -51,6 +75,7 @@ body.wp-admin.post-type-news{
 		//overflow: hidden; // to solve the overflow issue - but fucks up my UI
 		//height: auto;
 		clear:both; // only 1 block per row.
+				
 		
 			// aligmnents
 

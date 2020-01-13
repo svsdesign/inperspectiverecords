@@ -15,6 +15,24 @@ TO DO IN THIS FILE:
  */
 ?>
 
+
+
+<?php if ( is_home() ) :  
+	//is_home - content-artists.php
+	// home artist item - but there could be two types - the top featured - or the other itemes
+	// so check against the variable that I pass trough:
+	//echo $homefeatured;?>
+
+	<?php if ($homefeatured == true):?>
+	is homefeatured
+	<?php else: // not home feaured:?>
+	not home featured
+	<?php endif; //if $homefeatured ?>
+
+
+
+<?php endif; //is_home() ?>
+
  	<?php if ( is_single() ) : //is single content  
 	
 	//start get fields
@@ -214,22 +232,21 @@ TO DO IN THIS FILE:
 								 
 								    <div class="record-circle rotated">
 								    
-								      <div class="inner-container"> 
+								      	<div class="inner-container"> 
 								      
+	    									<?php if ($releaselabel):?>
+									    		
+									    		<img class="record-label" src="<?php echo $releaselabel;?>"/>
 
-    									<?php if ($releaselabel):?>
-								    		
-								    		<img class="record-label" src="<?php echo $releaselabel;?>"/>
+											<?php else: // if not image use placholder - make the placeholder?>
+									    		
+									       		<img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
 
-										<?php else: // if not image use placholder - make the placeholder?>
-								    		
-								       		<img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
-
-								        <?php endif; // if $releaseproductcover?>
-								      
-								      	<img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-								        
-								      </div><!-- .inner-container-->							
+									        <?php endif; // if $releaseproductcover?>
+									      
+									      	<img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
+									        
+									    </div><!-- .inner-container-->							
 								      
 								    </div><!-- .record-circle-->
 

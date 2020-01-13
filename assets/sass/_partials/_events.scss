@@ -144,15 +144,11 @@ position: relative;
     @include cssvalue(height, 1); // 1 -padding minus (from above though -- not sure it adds up)
    
        @media (min-width: map-get($breakpoints,sm)) {
- 
          @include cssvalue(height, 0.8); // 1 -padding minus (from above though -- not sure it adds up)
-       //  @include cssvalue(padding, 0.1); // 1 -padding minus
-       padding:0;
- 
+        padding:0;
        }
 
-       @media (min-width: map-get($breakpoints,md)) {
-         
+       @media (min-width: map-get($breakpoints,md)) {      
          @include cssvalue(height, 0.8); // 1 -padding minus (from above though -- not sure it adds up)
          @include cssvalue(padding, 0.1); // 1 -padding minus
 

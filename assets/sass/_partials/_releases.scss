@@ -1363,7 +1363,7 @@ body.single-releases{
   display: block;
   width: 100%;
   text-align: center;
- // border-top: 1px solid $white_0-25;
+  border-top: 1px solid $white_0-25;
   border-bottom: 1px solid $white_0-25;
   @include padding(padding-top, 0.5);
   @include padding(padding-bottom, 0.5);

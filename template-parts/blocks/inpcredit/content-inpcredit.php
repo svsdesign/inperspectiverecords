@@ -39,7 +39,7 @@ $text_color = get_field('text_color');
 
             <div class="grid align-position credit-text-wrap">
          
-                <div class="grid-item grid-item-xs-4 grid-item-md-2 credit-inner-text-wrap">
+                <div class="grid-item grid-item-xs-4 grid-item-md-3 grid-item-lg-2 credit-inner-text-wrap">
 
                     <span class="credit-title"><?php echo $title; ?></span>
                     <span class="credit-details"><?php echo $details; ?></span>

@@ -10,15 +10,15 @@
 ?>
 
  
-<?php if ( is_home()) :?>
+<?php /*if ( is_home()) : 
 
 	<a href="<?php echo the_permalink();?>">
 			<?php the_title();?>
 	</a>
 
-<?php endif;// is home ?>
+<?php// endif;// is home */?>
 
-<?php if (is_single()) : 
+<?php if (is_single() OR  is_home()): 
 	// single
 	//$newsid = get_the_ID();
  	//$newsimage = get_field('news_featured_image'); // image

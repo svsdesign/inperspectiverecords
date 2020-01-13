@@ -8,106 +8,76 @@
  *   
  */
 
-get_header();
+get_header();?>
 
-if ( have_posts() ) :
-	while ( have_posts() ) : the_post();?>
 
-<div class="container">
+
+
+<?php 
+ // query_posts("page_id=5"); // local
+  $homepage = new WP_Query("page_id=5");
+
+  while ( $homepage->have_posts() ) : $homepage->the_post();
   
-  <div class="page-title-position">
-    <div class="page-title">
-      Artists
-    </div> <!--.page-title -->
-  </div><!-- .page-title-position -->
- 
-  <div class="image-items">
+$excludedposts = array();
 
-    <div class="image-item" data-image="andy-skopes-image" style="background-image: url('https://svsdesign.co.uk/wp-content/themes/inperspectiverecords/images/web-test-2018/artist-image-profane.jpg');">
-    </div><!-- image-item -->
+// check if the repeater field has rows of data
+if( have_rows('featured_posts') ):
 
-    <div class="image-item" data-image="breakage-image" style="background-image: url('https://svsdesign.co.uk/wp-content/themes/inperspectiverecords/images/web-test-2018/artist-image-acs.jpg');">
-    </div><!-- image-item -->
+// loop through the rows of data
+    while ( have_rows('featured_posts') ) : the_row();
 
-        <div class="image-item" data-image="acs-image" style="background-image: url('https://svsdesign.co.uk/wp-content/themes/inperspectiverecords/images/web-test-2018/artist-image-acs.jpg');">
-    </div><!-- image-item -->
-    
-       <div class="image-item" data-image="chris-image" style="background-image: url('https://svsdesign.co.uk/wp-content/themes/inperspectiverecords/images/web-test-2018/artist-image-chris.jpg');">
-    </div><!-- image-item -->
+    // check for some conditon and register bus type in array
+   // if( the_sub_field('band_food') == 'hamburger' ):
+       $excludedposts[] = get_sub_field('select_post');
+       $thispostid = get_sub_field('select_post');
+       $thisposttype = get_post_type( $thispostid );
+       $thistemplatename = 'content-'. $thisposttype .'.php';
+       $homefeatured = true;
+    //endif;
 
-    <div class="image-item" data-image="profane-image" style="background-image: url('https://svsdesign.co.uk/wp-content/themes/inperspectiverecords/images/web-test-2018/artist-image-profane.jpg');">
-    </div><!-- image-item -->
-
-  </div><!-- image-items -->
-
-  <div class="list-items">
-
-    <div class="list-item" data-imgid="andy-skopes-image">
-      <div class="item-text">
-        Andy Skopes
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-    <div class="list-item" data-imgid="acs-image">
-      <div class="item-text">
-      Acs
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-    <div class="list-item" data-imgid="breakage-image">
-    	<div class="item-text">
-      Breakage
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-    <div class="list-item" data-imgid="chris-image">
-      <div class="item-text">
-      Chris Inperspective
-      </div><!-- item-text --> 
-    </div><!-- list-item -->
-    <div class="list-item">
-      <div class="item-text">
-      Earl Grey 
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-    <div class="list-item">
-      <div class="item-text">
-      Equinox
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-    <div class="list-item">
-      <div class="item-text">
-      Fracture & Neptune
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-    <div class="list-item">
-      <div class="item-text">
-      Gilles Appleton
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-    <div class="list-item">
-      <div class="item-text">
-      Goldenchild
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-    <div class="list-item">
-      <div class="item-text">
-      Infamy
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-
-    <div class="list-item" data-imgid="profane-image">
-      <div class="item-text">
-      Profane  
-      </div><!-- item-text -->
-    </div><!-- list-item -->
-
-  </div><!-- list-items -->
+       // using the ID - I know need to find out what post type they reside in
+       //printf( __( 'The post type is: %s', 'textdomain' ), get_post_type( $thispostid ) );
+/* this too much code - keep it simpler:
+        if ($thisposttype == 'events'){
 
 
-  
-</div><!-- container -->
+        } elseif ($thisposttype == 'radio'){
 
 
-<?php	//	get_template_part( 'whitecanvas-page' );
-	endwhile;
+        } elseif ($thisposttype == 'radio'){
+
+        } */
+
+      include(locate_template($thistemplatename));
+
+     //   get_template_part( 'content', $thisposttype ); 
+
+    endwhile;
+
 endif;
 
-get_footer();
+ 
+ 
+  endwhile; 
+  wp_reset_query(); 
+//print $excludedposts[];
+    $excludedposts = implode(',', $excludedposts);
+
+echo $excludedposts;
+  ?>
+<?php /*
+// using elvis operator to ensure it returns an array if 'fixed_posts' has value
+
+$query = new WP_Query([
+  'post_type' => 'post', 
+  'post__not_in' => $excludedposts // ensure exclusion across cpt's: event, radio, artists
+]);
+*/
+
+?>
+
+
+
+
+<?php get_footer();?>

@@ -172,7 +172,7 @@ to add as part of list view
 										<span class="fade-border"></span>
 
 	
-										<?php if ($releaseimagefront  || $releaseimageback) :?>
+										<?php if ($releaseimagefront || $releaseimageback) :?>
 											
 											<div class="image-wrap grid-item grid-item-xs-6 grid-item-sm-6 grid-item-md-4 grid-item-lg-4 list">
 												 
