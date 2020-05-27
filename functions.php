@@ -508,7 +508,7 @@ function my_acf_init() {
               wp_enqueue_script('inp-release-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inprelease/assets/js/script.js', array( 'jquery' ), '', true );
            },
             'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
-            'keywords'          => array( 'inprelease'),
+            'keywords'          => array('inprelease'),
         ));
 
      // register an image block:
@@ -583,6 +583,8 @@ function my_acf_init() {
             'supports'          => array( 'mode' => false ),
             'keywords'          => array( 'inpevent'),
         ));
+
+
 
 
     }// if( function_exists('acf_register_block') )
@@ -1714,6 +1716,14 @@ function inp_scripts()
     wp_enqueue_script(
         'flickity-pgkd',
         'https://npmcdn.com/flickity@2/dist/flickity.pkgd.js',
+        array('jquery'),
+        false,
+        true
+    );
+
+    wp_enqueue_script(
+        'flickity-fade',
+        'https://unpkg.com/flickity-fade@1/flickity-fade.js',
         array('jquery'),
         false,
         true

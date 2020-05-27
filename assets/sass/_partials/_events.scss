@@ -336,9 +336,10 @@ overflow: visible; /* this because of sticky can't be hidden? */
 }
 
 
-/* archive */
 
-.post-type-archive-events{
+.post-type-archive-events, /* archive */
+.featured-home-item-events /* home 'featured' */
+{
 
    .event-item{
     min-height: 100vh;

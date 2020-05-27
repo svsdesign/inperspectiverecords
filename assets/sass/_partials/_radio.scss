@@ -302,7 +302,9 @@ overflow: visible; /* this because of sticky can't be hidden? */
 
 /* archive */
 
-body.post-type-archive-radio{
+body.post-type-archive-radio,
+.featured-home-item-radio /* home */
+{
 
       .cover-image-item{
       width: 100%;

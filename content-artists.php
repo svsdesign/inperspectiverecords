@@ -21,15 +21,51 @@ TO DO IN THIS FILE:
 	//is_home - content-artists.php
 	// home artist item - but there could be two types - the top featured - or the other itemes
 	// so check against the variable that I pass trough:
-	//echo $homefeatured;?>
+	//echo $homefeatured;
 
-	<?php if ($homefeatured == true):?>
-	is homefeatured
+	$artistid = $thispostid;// get_the_ID();
+	$artistimage = get_field('artist_profile_image', $thispostid); // image
+	$artistname = get_field('artist_name', $thispostid); // Text 
+	$artistdescription = get_field('artist_description', $thispostid); // Text	
+	//$artistlinks = get_field('artist_links'); // repeater	
+ 	$artistsreleases = get_field('releases_artists', $thispostid); // relationship = bi-directional - IDS
+
+	?>
+
+	<?php if ($homefeatured == true):
+	//is homefeatured?>
+
+		<a class="artist-item" href="<?php the_permalink($artistid);?>">
+
+			<?php if($artistname): ?>
+
+				 <div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
+										  
+					<div class="page-titler">
+								    
+						 <span class="inner">
+							<?php echo $artistname;?>
+						</span><!-- inner -->
+
+				    </div> <!--.page-title -->
+						    
+				</div><!-- .page-title-position -->
+
+			<?php endif; //$artistname?>
+			 
+			<?php if($artistimage): ?>
+
+				<div class="cover-image-item outer-grid-item outer-grid-item-sm-8" data-image="<?php echo $artistid;?>-image" style="background-image: url('<?php echo $artistimage;?>');">
+				</div><!-- image-item -->
+					
+			<?php endif; //$artistimages // what if doesn't exists??>
+
+		</a><!--.artist-item-->
+
+
 	<?php else: // not home feaured:?>
 	not home featured
 	<?php endif; //if $homefeatured ?>
-
-
 
 <?php endif; //is_home() ?>
 

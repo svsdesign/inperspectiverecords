@@ -13,12 +13,214 @@
 	//is_home - content-events.php
 	// home artist item - but there could be two types - the top featured - or the other itemes
 	// so check against the variable that I pass trough:
-	//echo $homefeatured;?>
+	//echo $homefeatured;
 
-	<?php if ($homefeatured == true):?>
-	is homefeatured content-events.php
-	<?php else: // not home feaured:?>
-	not home featured content-events.php
+			$eventstart = get_field('event_start_date', $thispostid ); // date and time picker
+			$eventend = get_field('event_end_date', $thispostid );  // date and time picker
+			$eventcolor = get_field('event_colour', $thispostid ); // colour picker
+
+			$posterart = get_field('poster_art', $thispostid ); // image
+			$venue = get_field('venue', $thispostid );  // text
+			$venuelink = get_field('venue_url', $thispostid );  // text
+			$name = get_field('event_name', $thispostid );		//text area				
+
+			//$ticketprice =  get_field('event_ticket_price'); //text
+			$fblink = get_field('facebook_link', $thispostid ); //text
+			$ralink = get_field('resident_advisor_link', $thispostid ); //text
+
+
+	?>
+
+	<?php if ($homefeatured == true): 
+	//is homefeatured content-events.php
+	//c&p from the archive if statemement below - try and mainaint same code + add the " $thispostid "
+
+			//$upcomingeventid = get_the_ID();							
+				//	$isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if 'true' in array 
+			 // 	$isupcomingevent = get_post_meta($eventid, 'is-upcoming-event' );  // if 'true' in array 
+
+				//end get fields
+			 //var_dump($isupcomingnextevent) 
+			 //echo $isupcomingevent;
+
+			//foreach($isupcomingevent as $isupcomingeven){
+		   // echo $isupcomingeven;
+			//}
+
+			if($isupcomingeven == false): // = isupcoming - not the other way round? ?>
+
+
+				<?php if($posterart): ?>
+
+					<div class="event-item event-image-item outer-grid-item inner-padded outer-grid-item-sm-6 <?php if (in_array("true", $isupcomingnextevent)): ?>next-event<?php endif; //$isupcomingnextevent ?>" style="background-image: url('<?php echo $posterart;?>');">
+				
+					<?php else:?>
+
+					<div class="event-item outer-grid-item inner-padded outer-grid-item-sm-6 <?php if (in_array("true", $isupcomingnextevent)): ?>next-event<?php endif; //$isupcomingnextevent ?>">
+
+				<?php endif; //$posterart ?>
+
+					<div class="grid">
+
+						<?php if($name): ?>
+
+							<div class="event-name grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
+										
+								<?php echo $name; ?>
+											
+							</div><!-- .event-name -->
+
+						<?php endif; //$name ?>
+
+						<div class="date grid-item grid-item-xs-6 grid-item-md-3" style="color:<?php echo $eventcolor;?>">
+									
+							<?php $startdate = get_field('event_start_date', $thispostid ); echo date_i18n('jS F Y', $startdate);?>
+							<?php //$starttime = get_field('event_start_date'); echo date_i18n('h:i', $starttime);?>
+							<?php //$endtime = get_field('event_end_date'); echo date_i18n('h:i', $endtime);  ?>
+
+						</div><!-- .date -->
+
+						<div class="event-summary grid-item grid-item-xs-6 grid-item-md-3">
+
+							<?php if($venue): ?>
+
+								<div class="venue summary-item" style="border-color:<?php echo $eventcolor;?>">
+									
+									<a class="scale-link" target="_blank" href="<?php echo $venuelink;?>" style="color:<?php echo $eventcolor;?>">
+
+									<span><?php the_field('venue', $thispostid); ?></span>   
+									<div class="svg-icon inline-icon right">
+
+									<?php
+									// set_query_var( 'event_color', $eventcolor );
+
+										$value_to_sent = $eventcolor;
+										set_query_var( 'event_color', $value_to_sent );
+
+
+									 get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
+							 		</div><!-- svg-icon inline-icon -->	
+								
+									</a> 
+
+								</div><!-- .venue -->
+
+							<?php endif; //$venue ?>	 
+
+							<?php if($ralink): ?>
+
+								<div class="price summary-item" style="border-color:<?php echo $eventcolor;?>">
+									
+									<a class="scale-link" target="_blank" href="<?php echo $ralink;?>" style="color:<?php echo $eventcolor;?>">
+										
+										<span class="">Buy Tickets</span>
+										<div class="svg-icon inline-icon right white-icon"><!-- remove this white class if not white - or just override with css?-->
+										<?php 
+
+										$value_to_sent = $eventcolor;
+										set_query_var( 'event_color', $value_to_sent );
+										get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+							 			</div><!-- svg-icon inline-icon -->	
+							 	
+						 			</a> 
+
+								</div>	
+
+							<?php endif; //$ralink ?>
+								
+							<?php if($fblink): ?>
+
+						 
+								<div class="fb-details summary-item" style="border-color:<?php echo $eventcolor;?>">
+									
+									<a class="scale-link" href="<?php echo $fblink ;?>" style="color:<?php echo $eventcolor;?>">
+										
+										<span>Facebook Event</span>	
+										<div class="svg-icon inline-icon right">
+										<?php get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
+							 			</div><!-- svg-icon facebook-logo -->	
+							 		
+									</a>
+
+								</div><!-- .fb-details -->		
+						
+							<?php endif; //$fblink ?>
+
+
+							<div class="event-link summary-item" style="border-color:<?php echo $eventcolor;?>">
+									
+									<a class="scale-link" href="<?php the_permalink( $thispostid );?>" style="color:<?php echo $eventcolor;?>">
+									
+									<span class="">More Information</span>
+									<div class="svg-icon inline-icon right white-icon">
+									<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+						 			</div><!-- svg-icon inline-icon -->	
+						 		
+								</a>
+
+
+							</div><!--.event-link"-->
+							
+						</div> <!-- .event-summary -->
+
+					</div><!--.grid -->
+
+				<?php if($posterart): ?>
+
+					</div><!--.event-item event-image-item -->
+				
+					<?php else:?>
+
+					</div><!-- .event-item -->
+
+				<?php endif; //$posterart ?>
+								                  
+			<?php else: //past event  // isnotupcoming ?>
+			
+			<div class="past-event-item">
+
+				<a href="<?php the_permalink();?>" class="grid scale-me grid-item-sm-6">
+		 
+		 				
+					<div class="date grid-item grid-item-xs-6 grid-item-md-1 grid-item-lg-1">
+								
+						<?php $startdate = get_field('event_start_date', $thispostid ); echo date_i18n('d.m.Y', $startdate);  ?>
+						<?php// $starttime = get_field('event_start_date'); echo date_i18n('h:i', $starttime);  ?>
+						<?php //$endtime = get_field('event_end_date'); echo date_i18n('h:i', $endtime);  ?>
+
+					</div><!-- .date -->
+
+					<div class="event-name grid-item grid-item-xs-6 grid-item-md-3 grid-item-lg-3">
+								
+						<?php $name = the_title( $thispostid ); echo $name;  ?>
+									
+					</div><!-- .event-name -->
+
+					<?php if($venue): ?>
+
+						<div class="venue grid-item grid-item-xs-6 grid-item-md-2">
+
+							<span><?php the_field('venue', $thispostid ); ?></span>   
+						
+						</div><!-- .venue -->
+
+					<?php endif; //$venue ?>	 
+
+				</a>
+
+			</div><!--event-item -->
+
+			<?php endif; // endif $isupcomingevent ?>
+
+
+
+
+
+	<?php else: // not home feaured:
+	//not home featured content-events.php?>
+
+
+
 	<?php endif; //if $homefeatured ?>
 
 

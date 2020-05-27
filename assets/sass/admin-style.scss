@@ -25,6 +25,8 @@ Text Domain:
 
 //@import "_partials/post-navigation"; Don't think we need this
 
+// Do I need to hav a home page "admin style aswell??" - delete this commenbt eitehr watyß
+
 /* admin only side styling */
 @import "_partials/adminstyle-archivelist"; //  for example use for page title positioner (artist block) - but this fucks up my WP UI
 @import "_partials/adminstyle-news";// - review. includs admin styles such as assigning background and general type styles

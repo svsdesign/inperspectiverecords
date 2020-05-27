@@ -29,7 +29,8 @@ text-align: center;
 
 
 body.single-artists,
-.release-block
+.release-block,
+body.home // home post
   { 
   
   .cover-image-item{
@@ -43,7 +44,6 @@ body.single-artists,
   background-position: center center;
   // @include image-blur-out;
   // filter: blur(10px);
-
   }
 
   #artist-details{
@@ -621,5 +621,39 @@ padding-bottom: 6.25vw;
 
 
 } /*body.single-artist */
+
+
+
+/* home featured */
+
+.featured-home-item-artists /* home */
+{
+
+    .artist-item{
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+
+        .cover-image-item{
+        width: 100%;
+        height:100%;
+        display: block;
+        background-size: cover;  
+        position:absolute;
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-position: center center;
+        // @include image-blur-out;
+        // filter: blur(10px);
+        }
+
+    }//.artist-item
+
+}//body.featured-home-item-artists /* home */
+
+/* end home featured */
+
 
 /*end tidy */

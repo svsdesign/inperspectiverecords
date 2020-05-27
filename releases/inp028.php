@@ -8,23 +8,17 @@
  *   TEMPLATE FOR Dissident - iNP028. 
  * 	"Digital template"
  */
-?>
 
 
- <?php//if ( is_single() ) : //is single content 
-
-	//$releaseid = $artistsrelease->ID; < this causes error - refer to inp024.php template for correct approach
-	
 	$releasecode = get_field('release_code', $releaseid); // 
 	$releaseformat = get_field('release_format', $releaseid);
-
 	$phptemplate = get_field('release_php_template', $releaseid);
 	$phptemplatestring = 'releases/'.$phptemplate.'.php';
 	$releasetitle = get_field('release_title', $releaseid); // 
 	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
 	$releaseproductcover = get_field('release_product_image_front', $releaseid); // 
 	$releaseimage = get_field('release_vinyl_label_image', $releaseid); 
-	$releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;		
+ 	$releaseassetslocation = get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate.'/';			
 	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS	
   	?>
 

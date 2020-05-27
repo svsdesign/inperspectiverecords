@@ -48,8 +48,10 @@ if($width) {
 - link to place of purchase
 - text; summary of item
 
-- What if there are multiple products?
+- If there are multiple products:
 
+    - slideshow : on autoplay
+    
 */
 $title = get_field("title");
 $subtitle = get_field("sub_title");

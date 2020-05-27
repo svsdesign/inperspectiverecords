@@ -12,12 +12,121 @@
 	//is_home - content-relases.php
 	// home artist item - but there could be two types - the top featured - or the other itemes
 	// so check against the variable that I pass trough:
-	//echo $homefeatured;?>
+	//echo $homefeatured;
+	$releaseid = $thispostid;// get_the_ID();get_the_ID();	
+	$phptemplate = get_field('release_php_template', $releaseid);
+	$phptemplatestring = 'releases/'.$phptemplate.'.php';
+	$releasetitle = get_field('release_title', $releaseid); // 
+	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
+	$releaseproductcover = get_field('release_product_image_front', $releaseid); // relationship = bi-directional - IDS
+	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS
+	?>
 
-	<?php if ($homefeatured == true):?>
-	is homefeatured - content-relases.php
+	<?php if ($homefeatured == true): 
+	//is homefeatured - content-relases.php
+	?>
+ 			
+		<?php if ($phptemplate):// has template?>
+
+			<!-- removed - review + delete	<li> -->
+				
+				<a href="<?php echo get_permalink($releaseid); ?>">
+ 
+ 				<?php include ('releases/'.$phptemplate.'.php');?>
+
+				</a>
+
+			<!-- removed - review + delete	 </li> -->
+
+		<?php else: //does not have template: ?>
+
+			<!-- removed - review + delete	<li> -->
+
+				<a href="<?php echo get_permalink($releaseid); ?>">
+
+					<div class="record-circle-container">
+					   
+					 	 <div class="sleave-square">
+					      	
+					      	<?php if ($releaseproductcover):?>
+					    		
+					    		<img class="record-sleave" src="<?php echo $releaseproductcover;?>"/>
+
+							<?php endif; // if $releaseproductcover?>
+
+					    </div>  
+					    
+					    <div class="release-details">
+
+						    <div class="inner-container">  
+
+						        <div class="release-code">
+						     	<?php echo get_the_title($releaseid); ?>
+						        </div>
+
+						        <?php if ($releasetitle):?>
+
+							        <div class="release-title">
+							     	<?php echo $releasetitle; ?>
+							        </div>
+							     
+						        <?php endif; // if $releasetitle?>
+
+						        <?php if ($releaseartists):?>
+									 
+									 <div class="release-artists">
+
+										<?php foreach($releaseartists as $releaseartist):?>
+										   	       
+											 <div class="release-artist">
+
+												<?php echo get_the_title( $releaseartist->ID ); ?>
+ 
+									        </div>
+
+								      	<?php endforeach; // if releaseartists?>
+									      
+								     </div>
+
+						        <?php endif; // if releaseartists?>
+	      
+						     </div><!-- .inner-container -->
+
+					    </div><!-- .release-details -->
+					 
+					    <div class="record-circle rotated">
+					    
+					      	<div class="inner-container"> 
+					      
+								<?php if ($releaselabel):?>
+						    		
+						    		<img class="record-label" src="<?php echo $releaselabel;?>"/>
+
+								<?php else: // if not image use placholder - make the placeholder?>
+						    		
+						       		<img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
+
+						        <?php endif; // if $releaseproductcover?>
+						      
+						      	<img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
+						        
+						    </div><!-- .inner-container-->							
+					      
+					    </div><!-- .record-circle-->
+
+					</div> <!-- .record-circle-container-->								 
+
+				</a>
+
+			<!-- removed - review + delete	 </li> -->
+
+		<?php endif;//if ($phptemplate):// has template?>
+
 	<?php else: // not home feaured:?>
+
 	not home featured - content-relases.php
+
+
 	<?php endif; //if $homefeatured ?>
 
 

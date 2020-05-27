@@ -472,7 +472,7 @@ The first
 
 
 
-        if  ($('.navigation-toggle').hasClass('toggled-on')){
+         if  ($('.navigation-toggle').hasClass('toggled-on')){
           //  console.log('if navigation was previously on - turn it off');
           //  $('body').addClass('toggled-on'); // because this was previously on
          
@@ -602,6 +602,76 @@ The first
          });
 
     } // function gallery($block)
+
+
+// external js: flickity.pkgd.js
+//https://codepen.io/desandro/pen/MagWrN
+// Add this code:
+
+Flickity.createMethods.push('_createPrevNextCells');
+
+Flickity.prototype._createPrevNextCells = function() {
+  this.on( 'select', this.setPrevNextCells );
+};
+
+Flickity.prototype.setPrevNextCells = function() {
+  // remove classes
+  changeSlideClasses( this.previousSlide, 'remove', 'is-previous' );
+  changeSlideClasses( this.nextSlide, 'remove', 'is-next' );
+  // set slides
+  this.previousSlide = this.slides[ this.selectedIndex - 1 ];
+  this.nextSlide = this.slides[ this.selectedIndex + 1 ];
+  // add classes
+  changeSlideClasses( this.previousSlide, 'add', 'is-previous' );
+  changeSlideClasses( this.nextSlide, 'add', 'is-next' );
+};
+
+function changeSlideClasses( slide, method, className ) {
+  if ( !slide ) {
+    return;
+  }
+  slide.getCellElements().forEach( function( cellElem ) {
+    cellElem.classList[ method ]( className );
+  });
+}
+
+//// end add this code
+
+
+  function homegallery(){
+    //https://flickity.metafizzy.co/options.html
+    //console.log("home gallery function");
+
+      var $thisgallery = $('body').find(".featured-home-carousel");      
+
+       $thisgallery.flickity({
+            imagesLoaded: true, 
+            setGallerySize: false, //if you prefer to size the carousel with CSS, rather than using the size of cells.
+       // default cellAlign: 'center'
+            percentPosition: false, 
+            fade: true,
+            autoPlay: 6000, // {Number}
+//https://github.com/metafizzy/flickity/issues/46
+          //  selectedAttraction: 0.01,
+           // friction: 0.15,
+            pauseAutoPlayOnHover: false, // don't think pausing is good idea; because of the size(entire view port) of the content
+            draggable: false,
+            freeScroll: false, 
+            wrapAround: true, 
+            arrowShape: { 
+              x0: 15,
+              x1: 65, y1: 50,
+              x2: 75, y2: 40,
+              x3: 35
+            }
+//            arrowShape: '82.9312793 24.4501626 86.9653917 27.5504528 49.7576146 75.9653917 12.5498374 27.5504528 16.5839498 24.4501626 49.7576146 67.615895',
+
+         });
+
+    } // function homegallery
+
+
+
 
 /*
 
@@ -748,10 +818,11 @@ The first
 
 // cookies
 
-//cookies-set cookies-revoke cookies-accepted
+    //cookies-set cookies-revoke cookies-accepted
       if ($('body.cookies-refused, body.cookies-revoke, body.cookies-set, body.cookies-not-set, body.cookies-accepted').length > 0) 
       {
-//// I got a feeling this is buggy?
+    //// I got a feeling this is buggy? 
+      //- For exmaple if you press back button: does this affect the class assigned?
 
           previewsite();
       /* 
@@ -759,8 +830,26 @@ The first
       */
       };  
 
-// end cookies
+    // end cookies
+  
+    
+      //START home page 
 
+      if ($('body.home').length > 0){
+
+
+          if ($('.featured-home-carousel').length > 0){
+
+          homegallery();// rule top featured gallery
+          } // if.featured-home-carousel
+
+         
+       /*
+       .body.home
+       */
+
+      };  
+      //END home page 
 
 
       if ($('.radio-container').length > 0) 
@@ -826,13 +915,13 @@ The first
 
 
 
-            if ($('body.single-artists, body.single-news').length > 0) 
+            if ($('body.single-artists, body.single-news, body.home').length > 0) 
             {
                         
             // console.log("if ($('body.single-artist').length > 0)");
 
 
-                 if ($('#artist-releases, .release-block').length > 0) 
+                 if ($('#artist-releases, .release-block, .featured-home-item-releases').length > 0) 
                   {
             
                    //  console.log('recordanimation');

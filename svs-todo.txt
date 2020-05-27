@@ -1,14 +1,14 @@
-I've moved this list on the drive - once done - double check this list and delete file
-
-
-
 To Do:
 
+
+STAGING
+
+Make sure this setup, so we can savely push updates live
 
 
 - Home page
 
- - Designs?
+ - finish coding designs
  
 
 - Artists
@@ -103,13 +103,6 @@ PAGES TO add
 		http://jamieking.co.uk/blog/cyber-security/policies/privacy-policy-generator.php
 
 
-- HomePage:
-
-	What to do?
-
-	Use of blocks only? But how. < look at the designs. Whats the best way to achieve this?
-
-
 
 
 - Blocks:
@@ -140,23 +133,18 @@ enqueing up admin styles and js basically; but how to enque + & also best practi
 
 CROSSBROWSER
 
-	Chris' Laptop:
+	Windows laptop:
 
 	- fonts not rendering? - sort @fontface
 	- check on a windows platform - Use Stu's laptop.
 	- Images were loading very slow - looked like imagesloaded not being used, or only on selected content - check this
 	-
 
-	Stus's Laptop
-	- ?
-	- ?
- 	- more?
 
 
 SKETCH:
 
-Tidy up my files! Make it prestenable; see it more as a way of showing design work aswell
-
+Tidy up my files:  Make it prestenable
 
 
 

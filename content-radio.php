@@ -13,10 +13,101 @@
 	//is_home - content-radio.php
 	// home radio item - but there could be two types - the top featured - or the other itemes
 	// so check against the variable that I pass trough:
-	//echo $homefeatured;?>
+	//echo $homefeatured;
+	$showid = $thispostid;//get_the_ID();	
+	$showtitle = get_the_title($thispostid);// title						
+ 	$showstart = get_field('show_start_date',$thispostid); // date and time picker
+    $showend = get_field('show_end_date',$thispostid);  // date and time picker
+	$featureimage = get_field('feature_image',$thispostid); // image
+	$featureimagecredit = get_field('feature_image_credit',$thispostid);  // text 
+ 	$description = get_field('show_description',$thispostid);  // text area							 
+ 	$soundcloudlink = get_field('soundcloud_link',$thispostid); //text
+	$soundcloudembed = get_field('soundcloud_embed',$thispostid); // iframe / file?
+	//$itemno = 0 ;// review the use of this
 
-	<?php if ($homefeatured == true):?>
-	is homefeatured - content-radio.php
+	?>
+
+	<?php if ($homefeatured == true):
+	//is homefeatured - content-radio.php?>
+	
+		<div class="radio-item">
+
+			<div class="grid" <?php if($soundcloudlink): ?>data-radio-link="<?php echo $soundcloudlink;?>"<?php endif;?>>
+			
+				 <div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
+										  
+					<div class="page-titler">
+								    
+						 <span class="inner">
+						<!--<a href="<?php //echo home_url();?>/radio">Radio</a> Is it worth adding links? review if so-->
+						Radio
+						</span><!-- inner -->
+
+				    </div> <!--.page-title -->
+
+				</div><!-- .page-title-position -->
+				
+				<?php if($featureimage): ?>
+					
+					<div class="cover-image-item outer-grid-item outer-grid-item-xs-8" style="background-image: url('<?php echo $featureimage;?>');">
+					</div><!-- .cover-image-item -->
+
+				<?php endif; //$featureimage  ?>
+
+				<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="outer-grid-item inner outer-grid-item-sm-6">
+
+					<div class="wrapping grid">	
+					
+						<a class="single-radio-item single-radio-item-<?php echo $itemno;?> grid-item grid-item-xs-1" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+
+		 					<div class="play-icon-wrap">
+
+								<div class="play-toggle small"> 
+								
+									<svg id="playertoggle_<?php echo $showid?>" class="playertoggle-inline"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+										<path id="play_<?php echo $showid?>" class="play-inline" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+										<path id="play-left_<?php echo $showid?>" class="play-left-inline" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+										<path id="play-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+										<path opacity="0" id="pause_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+										<path opacity="0" id="pause-left_<?php echo $showid?>" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+										<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+										<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+										<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
+										<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1001,500.158 492.037,246.093 492.037,754.227  z" fill-rule="nonzero"/> 
+									</svg> 
+								
+								</div>
+			
+						    </div>
+						 	
+						</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
+											
+						<div class="details-wrap grid-item grid-item-xs-5">
+									
+							<div class="radio-date">
+								<?php $showstart = get_field('show_start_date',$thispostid); echo date_i18n('jS F Y', $showstart);  ?>
+							 </div><!-- .date -->
+							
+							<?php if($showtitle): ?>
+
+								<div class="radio-name">	
+								<?php echo $showtitle; ?>
+			 					</div><!-- .event-name -->
+						
+							<?php endif; //$name ?>	
+
+						</div><!--.details-wrap -->
+						
+					</div><!-- wrapping -->
+
+				</li>
+
+			</div><!-- .grid -->
+
+		</div><!--.radio-item -->
+
+
+
 	<?php else: // not home feaured:?>
 	not home featured - content-radio.php
 	<?php endif; //if $homefeatured ?>

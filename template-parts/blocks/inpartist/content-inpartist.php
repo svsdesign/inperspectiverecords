@@ -43,21 +43,15 @@ $artistblockid = get_field('artist'); //post object - IDS
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> inp-block block-z-index-2">
 
 	<div class="grid">
- 
-                 
- 
- 		 
-						
+                						
 		<?php //foreach( $artists as $artist ): 
 		//	$artistid = $artist->ID;
 		$artistblockbanner = get_field('artist_banner_image', $artistblockid);
 		//$artistid;?>
 
-
 			<a href="<?php echo get_permalink( $artistblockid ); ?>">
 
-			   		<div class="banner-image" style="background-image: url('<?php echo $artistblockbanner;?>');">
-												   		
+			   	<div class="banner-image" style="background-image: url('<?php echo $artistblockbanner;?>');">
 												   		
 			 		<div class="page-title-positioner left-side outer-grid-item outer-grid-item-sm-8 sticky">
 											  

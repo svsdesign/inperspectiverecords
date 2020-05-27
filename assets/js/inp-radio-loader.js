@@ -68,29 +68,26 @@ var radioscriptloaded, // set as undefined initially;//
                           var track_url = itemurl;//feedsclink;
                              reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
 
+    
+                          }  else if ($('body').hasClass('home')) {
+                          // Home Page
+                            console.log('body.home')
+ 
+                            radioscriptloaded = true;  // now defined
 
-                          } else if ($('_.radio-item li').length > 0){ // we want to detect if there's a link to a sc url?
-                             // I'm not sure this is ever used? not on the archve page
-                             //suggest deleting this ?
-                             // $this is not define
-                              console.log("I'm not sure this is ever used? - delete if neeedd");
+                           
+                            itemurl = $('.radio-item li:first').data("tracklink");  
+ 
+                            // console.log("else iunnit? ")
 
-                             /* $thisitem = $this;
-                              radioscriptloaded = true;  // now defined
+                            console.log("itemurl = " +itemurl +"");
 
-                              itemurl = $thisitem.data("radio-link"); // this is a sc url but only exist on the single page atm 
-
-                              console.log(".radio-item li itemurl = " +itemurl +"");
-
-                       
-                              // permalink to a track
-                              var track_url = itemurl;//feedsclink;
-
-                              reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
-                              */
+                          // permalink to a track
+                          var track_url = itemurl;//feedsclink;
+                             reload_js(''+dir+'/assets/js/inp-radio_v4.js'); 
 
     
-                            } else if ($('.sound-block').length > 0){ 
+                          } else if ($('.sound-block').length > 0){ 
 
                                 console.log("we have a soundblock");
 
@@ -191,6 +188,23 @@ var radioscriptloaded, // set as undefined initially;//
 
                                                 }//if(evnt.newValue.search(/post-type-archive-radio/i) == -1)
                                                 
+
+                                                if (evnt.newValue.search(/home/i) == -1)
+                                                //if((evnt.newValue.search(/post-type-archive-radio/i) == -1) || (evnt.newValue.search(/single-radio/i) == -1))
+                                                { // "open" is the class name you search for inside "class" attribute
+                                                // console.log("we dont have archive radio class OR sound block class");
+                                                 // yeah but this would also be true mean that if the radio wone did exist, but the archive didn't 
+
+                                                } else {
+                                                 
+                                                //  console.log("else - so we might have the archive or soundblock class ");
+                                                // console.log("we DO have post-type-archive-radio - run script again");
+
+                                                 checkScript(); // initial run 
+
+                                                }//if(evnt.newValue.search(/post-type-archive-radio/i) == -1)
+                                      
+
                                                 // end review this Part 2 
 
 
