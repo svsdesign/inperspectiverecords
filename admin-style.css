@@ -3896,7 +3896,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(30deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(61deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -4458,39 +4458,131 @@ a._link-animation:hover span:nth-child(7) {
   }
 }
 @media (min-width: 640px) {
-  /* line 271, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .list-items div.list-item.list-item,
-  .wp-admin .list-items a.list-item.list-item {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
     padding-left: 10px;
   }
 }
 @media (min-width: 960px) {
-  /* line 276, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .list-items div.list-item.list-item,
-  .wp-admin .list-items a.list-item.list-item {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
     padding-left: 15px;
+    height: 72px;
+    height: 104px;
+    line-height: 72px;
+    line-height: 104px;
+    font-size: 22.5px;
+    font-size: 32.5px;
   }
 }
+@media screen and (min-width: 960px) and (min-width: 0px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    height: calc(72px + 32 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 960px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    height: 104px;
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 960px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    height: calc(104px + 24 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 1440px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    height: 128px;
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 0px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    line-height: calc(72px + 32 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 960px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    line-height: 104px;
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 960px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    line-height: calc(104px + 24 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 1440px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    line-height: 128px;
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 0px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    font-size: calc(22.5px + 10 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 960px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    font-size: 32.5px;
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 960px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    font-size: calc(32.5px + 7.5 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 960px) and (min-width: 1440px) {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
+    font-size: 40px;
+  }
+}
+
 @media (min-width: 1280px) {
-  /* line 281, assets/sass/_partials/_archivelist.scss */
-  .wp-admin .list-items div.list-item.list-item,
-  .wp-admin .list-items a.list-item.list-item {
+  /* line 250, assets/sass/_partials/_archivelist.scss */
+  .wp-admin .list-items div.list-item,
+  .wp-admin .list-items a.list-item {
     padding-left: 20px;
   }
 }
-/* line 286, assets/sass/_partials/_archivelist.scss */
+/* line 288, assets/sass/_partials/_archivelist.scss */
 .wp-admin .list-items div.list-item .item-text,
 .wp-admin .list-items a.list-item .item-text {
   animation: blurout 400ms ease-in forwards;
   height: inherit;
   line-height: inherit;
+  text-align: center;
 }
-/* line 292, assets/sass/_partials/_archivelist.scss */
+/* line 301, assets/sass/_partials/_archivelist.scss */
 .wp-admin .list-items div.list-item.active,
 .wp-admin .list-items a.list-item.active {
   color: #f0523b !important;
 }
-/* line 306, assets/sass/_partials/_archivelist.scss */
+/* line 314, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-items {
   width: 100%;
   height: auto;
@@ -4500,7 +4592,7 @@ a._link-animation:hover span:nth-child(7) {
   bottom: 0px;
   position: absolute;
 }
-/* line 315, assets/sass/_partials/_archivelist.scss */
+/* line 323, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-items .image-item {
   width: 100%;
   height: 0vh;
@@ -4511,7 +4603,7 @@ a._link-animation:hover span:nth-child(7) {
   filter: blur(10px);
   animation: opacityout 400ms ease-in forwards;
 }
-/* line 326, assets/sass/_partials/_archivelist.scss */
+/* line 334, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-items .image-item.active {
   display: block;
   height: 100vh;
@@ -4524,38 +4616,38 @@ a._link-animation:hover span:nth-child(7) {
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 340, assets/sass/_partials/_archivelist.scss */
+/* line 348, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-items .image-item.activated {
   opacity: 1;
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 354, assets/sass/_partials/_archivelist.scss */
+/* line 362, assets/sass/_partials/_archivelist.scss */
 .wp-admin .container.activated .image-items .image-item {
   animation: image-blur-in-active 400ms ease-in forwards;
 }
-/* line 360, assets/sass/_partials/_archivelist.scss */
+/* line 368, assets/sass/_partials/_archivelist.scss */
 .wp-admin .container.activated .list-items {
   pointer-events: none;
   animation: opacityout 400ms ease-in forwards;
 }
-/* line 375, assets/sass/_partials/_archivelist.scss */
+/* line 383, assets/sass/_partials/_archivelist.scss */
 .wp-admin body.is-touch .list-item {
   border-top: 1px solid rgba(240, 82, 59, 0.1);
   border-bottom: 1px solid rgba(240, 82, 59, 0.1);
   z-index: 2;
 }
-/* line 380, assets/sass/_partials/_archivelist.scss */
+/* line 388, assets/sass/_partials/_archivelist.scss */
 .wp-admin body.is-touch .list-item .item-text {
   animation: blurin 200ms ease-in forwards;
 }
-/* line 393, assets/sass/_partials/_archivelist.scss */
+/* line 401, assets/sass/_partials/_archivelist.scss */
 .wp-admin body.is-not-touch .list-item:hover {
   border-top: 1px solid rgba(240, 82, 59, 0.1);
   border-bottom: 1px solid rgba(240, 82, 59, 0.1);
   z-index: 2;
 }
-/* line 398, assets/sass/_partials/_archivelist.scss */
+/* line 406, assets/sass/_partials/_archivelist.scss */
 .wp-admin body.is-not-touch .list-item:hover .item-text {
   animation: blurin 200ms ease-in forwards;
 }

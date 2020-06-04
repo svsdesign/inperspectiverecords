@@ -260,38 +260,46 @@
       @include cssvalue(line-height, 3);
       width: 100%;
       font-weight: $mediumweight;
-       overflow:hidden;
+      overflow:hidden;
       border-top:1px solid transparent;
       border-bottom: 1px solid transparent;
       margin-top: -1px;  
       z-index:1;
       padding-left:map-get($gutter,xs);
-
+        
+    
         @media (min-width: map-get($breakpoints,md)) {
-          &.list-item{
             padding-left:map-get($gutter,md);
-          }
+
         }
-        @media (min-width: map-get($breakpoints,lg)) {
-          &.list-item{
-            padding-left:map-get($gutter,lg);
-          }
-        }
+
+         
+         @media (min-width: map-get($breakpoints,lg)) {
+             padding-left:map-get($gutter,lg);
+             @include cssvalue(height, 4);
+             @include cssvalue(line-height,4);
+             @include cssvalue(font-size, 1.25);
+         }
         @media (min-width: map-get($breakpoints,xl)) {
-          &.list-item{
-            padding-left:map-get($gutter,xl);
-          }
-        }
+             padding-left:map-get($gutter,xl);
+             
+         }
 
         .item-text{
         @include blur;
         height: inherit;
         line-height: inherit;
-        }
+         text-align: center;
+      
+          @media (min-width: map-get($breakpoints,md)) {
+          // text-align: left;
+
+          }
+    
+        }// .item-text
 
         &.active{
-                color:$red!important;
-
+        color:$red!important;
         }
 
       }//div.list-item,

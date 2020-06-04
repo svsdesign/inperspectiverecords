@@ -5,24 +5,22 @@
  *  Developed by Simon van Stipriaan 
  * 	http://svs.design
  *
- *   TEMPLATE FOR Will miles - 1 disc S
+ *   TEMPLATE FOR Will miles - 1 disc 
  */
 ?>
 
-
-
- <?php// if ( is_single() ) : //is single content 
-
-	//$releaseid = $artistsrelease->ID;
-	$phptemplate = get_field('release_php_template', $releaseid);
+ 
+<?php //if ( is_single() ) : //is single content 
+	//  echo $releaseid;
+ 	$phptemplate = get_field('release_php_template', $releaseid);
 	$phptemplatestring = 'releases/'.$phptemplate.'.php';
-		$releasecode = get_field('release_code', $releaseid); // 
-$releaseformat = get_field('release_format', $releaseid);
+	$releasecode = get_field('release_code', $releaseid); // 
+	$releaseformat = get_field('release_format', $releaseid);
 	$releasetitle = get_field('release_title', $releaseid); // 
 	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
 	$releaseproductcover = get_field('release_product_image_front', $releaseid); // 
 	$releaseimage = get_field('release_vinyl_label_image', $releaseid); 
-	$releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;		
+	$releaseassetslocation = ''.get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;		
 	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS	
   	?>
 	<div class="record-circle-container">
@@ -37,7 +35,7 @@ $releaseformat = get_field('release_format', $releaseid);
 
 	     <div class="sleave-square inner-sleave">
 	 
-	     	<img class="record-sleave" src="<?php echo $releaseassetslocation ;?>/pvc_sleave_400.png"/>
+	     	<img class="record-sleave" src="<?php echo $releaseassetslocation ;?>/INP026-innersleave.png"/>
 	   	
 	   	</div> 
 	    
@@ -74,11 +72,11 @@ $releaseformat = get_field('release_format', $releaseid);
 				 
 				 <div class="release-artists">
 
-					<?php foreach($releaseartists as $releaseartist):?>
+					<?php foreach ($releaseartists as $releaseartist):?>
 					   	       
 						 <div class="release-artist">
 
-							<?php echo get_the_title( $releaseartist->ID );  ?>
+							<?php echo get_the_title( $releaseartist->ID );?>
 
 				        </div>
 
@@ -97,8 +95,7 @@ $releaseformat = get_field('release_format', $releaseid);
 	      <div class="inner-container two"> 
 	      
 			<img class="record-label two" src="<?php echo $releaseimage;?>">
-
-	        
+     
 	      </div><!-- .inner-container-->							
 	      
 	    </div><!-- .record-circle-->

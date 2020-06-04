@@ -72,9 +72,14 @@ body{
 				flex-direction: row;// why the fuck this not collumn?	
 				overflow: visible;
 			   // position: absolute;
-			    height: 25vh;
-			   // bottom: initial;
+				height: 15vh;
+ 			   // bottom: initial;
 			   // top: -15%;
+			 
+			 	  @media (min-width: map-get($breakpoints,md)) {
+					height: 25vh;
+
+ 				  }
 
 
 					.inner-logo-wrap{
@@ -475,6 +480,7 @@ body{
 	 	top: 0px;
 		right:0px;	
 		z-index: 9;
+		pointer-events: none;
  			
  			.navigation-toggle{
 	 		float: right;
@@ -863,8 +869,7 @@ body{
 /* start colours for toggle files - REVIEW - this maybe not used */
 /* white */
 
-body.post-type-archive-news,
-{
+body.post-type-archive-news{
 
 	.navigation-toggle-wrap{
  
@@ -883,9 +888,9 @@ body.post-type-archive-news,
 
 				svg {
 			 
-				path{
-			//	fill:none;
-				}
+					path{
+				//	fill:none;
+					}
 
 				}
 

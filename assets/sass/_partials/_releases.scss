@@ -101,7 +101,7 @@ padding-bottom: 0vh; // it make the rotating positing nicely but not lining up w
         position: -o-sticky;
         position: sticky;
 
-        @include blur;
+        // @include blur; removed because causing lag
         opacity: 0.8;
         top: 10vh;
         width: 100%;
@@ -512,7 +512,7 @@ body.release-list-view{
           position: -o-sticky;
           position: sticky;
          // position: fixed;
-          @include blur;
+          // @include blur; remove because of lag
           opacity: 0;//don't show
           top: 50vh;
           width: 100%;

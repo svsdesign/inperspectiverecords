@@ -184,7 +184,6 @@ TO DO IN THIS FILE:
 
 				<div class="outer-grid-item inner outer-grid-item-sm-6">
 				
- 
 				<ul>
 
 				<?php foreach( $artistsreleases as $artistsrelease ): 
@@ -198,7 +197,7 @@ TO DO IN THIS FILE:
 					$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS
 					?>
 					
-					<?php if ($phptemplate):// has template?>
+					<?php if ($phptemplate):// has template ?>
 
  						<li>
 							

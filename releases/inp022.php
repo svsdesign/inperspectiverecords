@@ -8,20 +8,17 @@
  *   TEMPLATE FOR HEADWINDS
  */
 ?>
-
-
-
+ 
  <?php //if ( is_single() ) : //is single content 
-
- 	//$releaseid = $artistsrelease->ID;
-	$phptemplate = get_field('release_php_template', $releaseid);
+	//  echo $releaseid;
+ 	$phptemplate = get_field('release_php_template', $releaseid);
 	$phptemplatestring = 'releases/'.$phptemplate.'.php';
 	$releasetitle = get_field('release_title', $releaseid); // 
 	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
 	$releaseproductcover = get_field('release_product_image_front', $releaseid); // 
 	$releaseimage = get_field('release_vinyl_label_image', $releaseid); 
 	//$releaseimageone = 'http://localhost:8888/inp-wp/wp-content/uploads/2019/01/INP022_side_e.png';
-	$releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;
+	$releaseassetslocation = ''.get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;
 	$releaseimageone = ''.get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate.'/INP022-disc_side_e.png';
 	$releaseimagetwo = ''.get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate.'/INP022-disc_side_a.png';
 	$releaseimagethree = ''.get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate.'/INP022-disc_side_c.png';
