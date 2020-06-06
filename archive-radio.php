@@ -251,11 +251,11 @@ get_header();?>
 					 	<?php endif; //item no == 7  
 
 					else: // not page 1:
-					 
-					$showid = get_the_ID();	
-					$showtitle = get_the_title();// title						
-	 				$soundcloudlink = get_field('soundcloud_link');
-					?>
+						
+						$showid = get_the_ID();	
+						$showtitle = get_the_title();// title						
+						$soundcloudlink = get_field('soundcloud_link');
+						?>
 
 					 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> grid-item grid-item-xs-6 grid-item-md-3">
 
@@ -297,11 +297,7 @@ get_header();?>
 			 			</li>
  								
 					<?php endif;  //  are we on page 1
-		
-
-
 					$itemno++;
-
 					endwhile;// End the loop. ?>
 				
 		 			</div><!-- .container added this assuming we have atleast 2 items and .container div exists -->
@@ -331,19 +327,19 @@ get_header();?>
 					
 						if ($paginate):?>
 					
-						<div class="page-nav outer-grid-item outer-grid-item-xs-6 inner">
+							<div class="page-nav outer-grid-item outer-grid-item-xs-6 inner">
 
-							<div class="grid">
+								<div class="grid">
 
-								<div class="page-nav-wrapper grid-item grid-item-xs-6">
+									<div class="page-nav-wrapper grid-item grid-item-xs-6">
 
-								<?php echo $paginate;?>
+									<?php echo $paginate;?>
 
+									</div>
+								
 								</div>
-							
- 							</div>
 
-						</div>	<!-- ".page-nav-->		 
+							</div>	<!-- ".page-nav-->		 
 
 						<?php endif;  // if we have paginated links ?>
 

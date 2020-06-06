@@ -38,8 +38,7 @@ get_header(); ?>
 	</section><!--#404-details -->
 
 	<section id="page-404-content" class="grid">
-		what to add here?
-	</section><!--#404-content -->
+ 	</section><!--#404-content -->
 
 </article><!-- container -->
 

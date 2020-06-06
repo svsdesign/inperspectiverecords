@@ -797,7 +797,7 @@ body{
 			    	li:last-of-child{
  			    	}
 			    
-					@media (min-width: map-get($breakpoints,md)) {
+					@media (min-width: map-get($breakpoints,lg)) {
 	 				flex-flow:row;
 				 
 		    			li{

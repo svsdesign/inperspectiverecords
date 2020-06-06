@@ -108,14 +108,13 @@
 
 			<?php if($featureimage)://	$featureimage available?>
 
-				<img class="thumb-image-item" src="<?php//temp: add when css done. echo $featureimage;?>">
+				<img class="thumb-image-item" src="<?php echo $featureimage;?>">
 				<!--<div class="thumb-image-item" style="background-image: url('<?php // echo $featureimage;?>');">
 				</div>-->
 			<?php else: // $featureimage not available?>
 				
 
 				<?php 
- 
 				foreach($categories as $category){
 				$categoryid = $category->cat_ID;
 				//echo $categoryid;

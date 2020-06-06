@@ -148,6 +148,8 @@ TO DO:
          }// if ("ontouchstart" in window)
 
       }; //detect
+  
+  
       detecttouch(); // run functions straigh away
 
 
@@ -580,7 +582,7 @@ The first
 
     function gallery($block){
       //https://flickity.metafizzy.co/options.html
-    console.log("gallery function");
+       console.log("gallery function");
 
       var $thisgallery = $block.find(".gallery-carousel");      
 
@@ -604,38 +606,42 @@ The first
     } // function gallery($block)
 
 
-// external js: flickity.pkgd.js
-//https://codepen.io/desandro/pen/MagWrN
-// Add this code:
+  // external js: flickity.pkgd.js
+  //https://codepen.io/desandro/pen/MagWrN
+  // Add this code:
 
-Flickity.createMethods.push('_createPrevNextCells');
+  Flickity.createMethods.push('_createPrevNextCells');
 
-Flickity.prototype._createPrevNextCells = function() {
-  this.on( 'select', this.setPrevNextCells );
-};
+  Flickity.prototype._createPrevNextCells = function() {
+    this.on( 'select', this.setPrevNextCells );
+  };
 
-Flickity.prototype.setPrevNextCells = function() {
-  // remove classes
-  changeSlideClasses( this.previousSlide, 'remove', 'is-previous' );
-  changeSlideClasses( this.nextSlide, 'remove', 'is-next' );
-  // set slides
-  this.previousSlide = this.slides[ this.selectedIndex - 1 ];
-  this.nextSlide = this.slides[ this.selectedIndex + 1 ];
-  // add classes
-  changeSlideClasses( this.previousSlide, 'add', 'is-previous' );
-  changeSlideClasses( this.nextSlide, 'add', 'is-next' );
-};
+  Flickity.prototype.setPrevNextCells = function() {
+    // remove classes
+    changeSlideClasses( this.previousSlide, 'remove', 'is-previous' );
+    changeSlideClasses( this.nextSlide, 'remove', 'is-next' );
+    // set slides
+    this.previousSlide = this.slides[ this.selectedIndex - 1 ];
+    this.nextSlide = this.slides[ this.selectedIndex + 1 ];
+    // add classes
+    changeSlideClasses( this.previousSlide, 'add', 'is-previous' );
+    changeSlideClasses( this.nextSlide, 'add', 'is-next' );
+  };
 
-function changeSlideClasses( slide, method, className ) {
-  if ( !slide ) {
-    return;
+
+
+  function changeSlideClasses( slide, method, className ) {
+   
+    if ( !slide ) {
+      return;
+    }
+    slide.getCellElements().forEach( function( cellElem ) {
+      cellElem.classList[ method ]( className );
+    });
+
   }
-  slide.getCellElements().forEach( function( cellElem ) {
-    cellElem.classList[ method ]( className );
-  });
-}
 
-//// end add this code
+  //// end add this code
 
 
   function homegallery(){
@@ -671,6 +677,41 @@ function changeSlideClasses( slide, method, className ) {
     } // function homegallery
 
 
+
+    function homereleasegallery(){
+      //https://flickity.metafizzy.co/options.html
+      //console.log("home gallery function");
+  
+        var $thisgallery = $('body').find(".release-home-carousel");      
+  
+         $thisgallery.flickity({
+              imagesLoaded: true, 
+              setGallerySize: false, //if you prefer to size the carousel with CSS, rather than using the size of cells.
+         // default cellAlign: 'center'
+              percentPosition: false, 
+              // fade: true,
+              autoPlay: 6000, // {Number}
+  //https://github.com/metafizzy/flickity/issues/46
+            //  selectedAttraction: 0.01,
+             // friction: 0.15,
+              pauseAutoPlayOnHover: true,
+//              pauseAutoPlayOnHover: false, // don't think pausing is good idea; because of the size(entire view port) of the content
+              draggable: false,
+              freeScroll: false, 
+              wrapAround: true, 
+              arrowShape: { 
+                x0: 15,
+                x1: 65, y1: 50,
+                x2: 75, y2: 40,
+                x3: 35
+              }
+  //            arrowShape: '82.9312793 24.4501626 86.9653917 27.5504528 49.7576146 75.9653917 12.5498374 27.5504528 16.5839498 24.4501626 49.7576146 67.615895',
+  
+           });
+  
+      } // function homereleasegallery
+  
+  
 
 
 /*
@@ -839,10 +880,13 @@ function changeSlideClasses( slide, method, className ) {
 
 
           if ($('.featured-home-carousel').length > 0){
-
-          homegallery();// rule top featured gallery
+            homegallery();// rule top featured gallery        
           } // if.featured-home-carousel
 
+          if ($('.release-home-carousel').length > 0){
+            homereleasegallery()
+          } // if.featured-home-carousel
+  
          
        /*
        .body.home
@@ -959,470 +1003,461 @@ function changeSlideClasses( slide, method, className ) {
 
 
 
-           if ($('body.post-type-archive-releases').length > 0) 
-            {
+                if ($('body.post-type-archive-releases').length > 0) 
+                {
                      
- 
-            eventsview();// this needs to trigger other stuff like resiae as well I guess?
+        
+                    eventsview();// this needs to trigger other stuff like resiae as well I guess?
 
+                        // console.log('body.post-type-archive-releases');
 
-
-                 // console.log('body.post-type-archive-releases');
-
-           
-           function activecarousel(){
                   
+                    function activecarousel(){
+                              
 
-                  /*
-                   deconstruct this code 
+                              /*
+                              deconstruct this code 
 
-                   +
+                              +
 
-                  - apply resizing to the widht and heights on re re-size
-                  - rename items so its look like I havent robbed it
-                  - set values based on the amount of post available
-                  - lazy load on items?
-
-
-                  - have a flip options - to reveal the back, either on click or/and hover
-
-                  */
-
-                  var lastId,
-
-                  carousel = document.querySelector('.carousel'),
-                  cells = carousel.querySelectorAll('.carousel__cell'),
-                  //console.log( "cells" + cells+"" );
-                  cellItems = $(".carousel").find(".carousel__cell"),
-                  cellCount, // cellCount set from cells-range input value
-                  selectedIndex = 0,
-                  cellWidth = carousel.offsetWidth, // this should be a responsive value
-                  cellHeight = carousel.offsetHeight; // this should be a responsive value
-
-                //  orientation(); // run orientation - what class  (not sure if this has to be called here?)
-
-                  if ($('body').hasClass('horizontal')){
-                   var isHorizontal = true; 
-                   //console.log('IsHorizontal')
-                     }else{
-                   var isHorizontal = false;
-                   //console.log('NOT IsHorizontal')
-                  }; 
-
-                 //  isHorizontal = true, // should be based on the class; vert of horizontal oreination
-                  var rotateFn = isHorizontal ? 'rotateY' : 'rotateX',
-                  radius, 
-                  theta,
-                  angle,
-                  $sceneheight = $(".scene-height"),
-                  $heightitem = $(".height-item"),
-                  sceneheight = $sceneheight.outerHeight(), // if have 100vh per item - This includes a negative offset
-                 // sceneheigtItems = $sceneheight.length;
-                  sceneheigtItems = $heightitem.length, // total itemss
-                  itemheight = $heightitem.outerHeight(),
-                  totalangle = 360,
-                  anglesegment = totalangle / sceneheigtItems,
-                  heightItems = $sceneheight.find(".height-item");
-                  //console.log("selectedIndex" + selectedIndex + ""),
-
-                  scrollItems = cellItems.map(function(){
-                      var identity = $(this).attr("id"); //release-$$$
-                      var item = $('.height-item').filter("[data-active-item='"+identity+"']");
-                      //console.log(item);
-
-                      if (item.length) { return item; 
-                      }
-
-                  }); //scrollItems function
-
-                //  console.log("sceneheigtItems" + sceneheigtItems + "");
+                              - apply resizing to the widht and heights on re re-size
+                              - rename items so its look like I havent robbed it
+                              - set values based on the amount of post available
+                              - lazy load on items?
 
 
-             /*   function rotateCarousel() {
-                  console.log("set rules?");
- 
-                  //    var angle = theta * selectedIndex * -1;
-                  //  carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
-                   // rotateFn + '(' + angle + 'deg)';
-                
-                }; 
-*/
-               // rotateCarousel(); //as part of prevous fucntions
-  
-                carousel.style.transform = 'translateZ(-720px)' + rotateFn + '(0deg)';// initial valuse
-                // change opacity here
+                              - have a flip options - to reveal the back, either on click or/and hover
+
+                              */
+
+                              var lastId,
+
+                              carousel = document.querySelector('.carousel'),
+                              cells = carousel.querySelectorAll('.carousel__cell'),
+                              //console.log( "cells" + cells+"" );
+                              cellItems = $(".carousel").find(".carousel__cell"),
+                              cellCount, // cellCount set from cells-range input value
+                              selectedIndex = 0,
+                              cellWidth = carousel.offsetWidth, // this should be a responsive value
+                              cellHeight = carousel.offsetHeight; // this should be a responsive value
+
+                            //  orientation(); // run orientation - what class  (not sure if this has to be called here?)
+
+                              if ($('body').hasClass('horizontal')){
+                              var isHorizontal = true; 
+                              //console.log('IsHorizontal')
+                                }else{
+                              var isHorizontal = false;
+                              //console.log('NOT IsHorizontal')
+                              }; 
+
+                            //  isHorizontal = true, // should be based on the class; vert of horizontal oreination
+                              var rotateFn = isHorizontal ? 'rotateY' : 'rotateX',
+                              radius, 
+                              theta,
+                              angle,
+                              $sceneheight = $(".scene-height"),
+                              $heightitem = $(".height-item"),
+                              sceneheight = $sceneheight.outerHeight(), // if have 100vh per item - This includes a negative offset
+                            // sceneheigtItems = $sceneheight.length;
+                              sceneheigtItems = $heightitem.length, // total itemss
+                              itemheight = $heightitem.outerHeight(),
+                              totalangle = 360,
+                              anglesegment = totalangle / sceneheigtItems,
+                              heightItems = $sceneheight.find(".height-item");
+                              //console.log("selectedIndex" + selectedIndex + ""),
+
+                              scrollItems = cellItems.map(function(){
+                                  var identity = $(this).attr("id"); //release-$$$
+                                  var item = $('.height-item').filter("[data-active-item='"+identity+"']");
+                                  //console.log(item);
+
+                                  if (item.length) { return item; 
+                                  }
+
+                              }); //scrollItems function
+
+                            //  console.log("sceneheigtItems" + sceneheigtItems + "");
+
+
+                        /*   function rotateCarousel() {
+                              console.log("set rules?");
+            
+                              //    var angle = theta * selectedIndex * -1;
+                              //  carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
+                              // rotateFn + '(' + angle + 'deg)';
+                            
+                            }; 
+                         */
+                          // rotateCarousel(); //as part of prevous fucntions
+              
+                            carousel.style.transform = 'translateZ(-720px)' + rotateFn + '(0deg)';// initial valuse
+                            // change opacity here
 
 
 
-               //  carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn + '(' + angle + 'deg)';
-            //  console.log("Now"),
+                          //  carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn + '(' + angle + 'deg)';
+                        //  console.log("Now"),
 
-               setTimeout(function() {
+                          setTimeout(function() {
 
-               var y = $(window).scrollTop();  //your current y position on the page
-               $(window).scrollTop(y+1); // this ensure the carousell aligns up with the current page position
+                          var y = $(window).scrollTop();  //your current y position on the page
+                          $(window).scrollTop(y+1); // this ensure the carousell aligns up with the current page position
 
-               $(".scene").addClass("loaded");
-             //  console.log("class added")
-               }, 750);
-               
-           
-
-/* so what we want is as follows:
-
-10 items // x items
-each 100vh scrolling space 
-
-
-360 degrees = full rotation during the scrolling of 1000vh 
-
-*/     
-
-
-/* i ndeed to have two scroll rations
-
-so when once is active the position changes - like a paralex thing
-
-*/
-                  //removed vars from scroll function:
-                  var halfheight = ($('.height-item').height()/2),
-                  sceneheight = $('.scene-height').height(),
-                  calcheight = sceneheight - (2* halfheight);
+                          $(".scene").addClass("loaded");
+                        //  console.log("class added")
+                          }, 750);
+                          
                       
-                  // set rotateFn
-                  //carousel.style.transform = ''+ rotateFn + '';
 
-              $(window).scroll(function(){ // attach docment scroll to rotating carousel 
+            /* so what we want is as follows:
 
-                  if ($(window).scrollTop() > calcheight){
+            10 items // x items
+            each 100vh scrolling space 
 
- 
 
-                    // last active
-                     $('.height-item:last-child').addClass('last-end')
+            360 degrees = full rotation during the scrolling of 1000vh 
 
-                    } else{
-                     // not last active
-                      $('.height-item:last-child').removeClass('last-end')
+            */     
+
+
+            /* i ndeed to have two scroll rations
+
+            so when once is active the position changes - like a paralex thing
+
+            */
+                              //removed vars from scroll function:
+                              var halfheight = ($('.height-item').height()/2),
+                              sceneheight = $('.scene-height').height(),
+                              calcheight = sceneheight - (2* halfheight);
+                                  
+                              // set rotateFn
+                              //carousel.style.transform = ''+ rotateFn + '';
+
+                          $(window).scroll(function(){ // attach docment scroll to rotating carousel 
+
+                              if ($(window).scrollTop() > calcheight){
+
+            
+
+                                // last active
+                                $('.height-item:last-child').addClass('last-end')
+
+                                } else{
+                                // not last active
+                                  $('.height-item:last-child').removeClass('last-end')
+                                }
+
+                                  // selectedIndex--;
+
+                                  //var hT = $('#scroll-to').offset().top,
+                                  // hH = $('#scroll-to').outerHeight(),
+                                //  wH = $(window).height(), 
+                                  fromTop = $(this).scrollTop()
+                                  halffromBottomitem = $(".height-item:last-child").scrollTop()
+                                
+                                  //console.log("fromTop here" + fromTop +"" );
+                                  //  $('.scene-height')
+                                  // wS = $(this).scrollTop() / sceneheight / ;
+
+                                  //angle / fromTop / scen
+                                  ratio = sceneheight / totalangle; //ratio per degree
+                                    
+                                    //console.log("ratio" + ratio + "");
+
+                                    wS = fromTop / ratio;
+                                    
+                                    // console.log("wS" + wS + "");
+                                    // var radius = wS;
+                                      // ( sceneheight / totalangle )
+
+                                                      //   var angle = theta * selectedIndex * -1;
+                              // var angle = -anglesegment * wS;
+
+
+                                    var angle = - wS;////+ anglesegment);
+                                    var thisangle = angle;//Math.round(angle * 100) / 100; //2 decimal places - trying to make the transition smoother; but makes no difference dont think
+
+
+                                // console.log("thisangle" + thisangle);
+
+                                  //                                 console.log("angle" + angle + "");
+                                //  console.log("(totalangle - anglesegment)" + (totalangle - anglesegment) + "");
+
+                                    if ( angle > ((totalangle - anglesegment)*-1) ) { // only roate as far as the total angle - one segment -- currently a negative value
+                                    carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn + '(' + thisangle + 'deg)';
+
+                                    }
+                                        
+                                //if( $(this).scrollTop() >= $('#target_element').position().top ){
+                                //    do_something();
+                              // }
+            /*
+              $(".height-item").each(function(i) {
+                    if ($(this).position().top < fromTop) {
+                        var thisid = $(this).attr("id");
+                      //  console.log("thisid"+thisid+"");
+                        $(".height-item").removeClass('active');
+                        $(".carousel__cell").removeClass('active');
+                        $(".scene").find($("#release-"+thisid+"")).addClass('active')
+                        $(this).addClass('active');
+                          console.log("lastId= "+lastId+"");
+
+                          if (lastId !== thisid) {
+                              lastId = thisid;
+                      console.log("still same id?");
+                            }
+
+
+
+
                     }
+                });
 
-                       // selectedIndex--;
-
-                      //var hT = $('#scroll-to').offset().top,
-                      // hH = $('#scroll-to').outerHeight(),
-                     //  wH = $(window).height(), 
-                       fromTop = $(this).scrollTop()
-                       halffromBottomitem = $(".height-item:last-child").scrollTop()
-                     
-                       //console.log("fromTop here" + fromTop +"" );
-                      //  $('.scene-height')
-                       // wS = $(this).scrollTop() / sceneheight / ;
-
-                       //angle / fromTop / scen
-                       ratio = sceneheight / totalangle; //ratio per degree
-                        
-                        //console.log("ratio" + ratio + "");
-
-                        wS = fromTop / ratio;
-                        
-                        // console.log("wS" + wS + "");
-                         // var radius = wS;
-                          // ( sceneheight / totalangle )
-
-                                           //   var angle = theta * selectedIndex * -1;
-                  // var angle = -anglesegment * wS;
+            */
+                                  // Get id of current scroll item
+                              var cur = scrollItems.map(function(){
+                                if ($(this).offset().top < (fromTop + (itemheight/2)))
+                                  return this;
+                                  // console.log('this one '+this+'fromTop' +fromTop+'');
 
 
-                        var angle = - wS;////+ anglesegment);
-                        var thisangle = angle;//Math.round(angle * 100) / 100; //2 decimal places - trying to make the transition smoother; but makes no difference dont think
+                              });
 
+                              // Get the id of the current element
+                              cur = cur[cur.length-1];
+                              // console.log('cur'+cur+'');
+                              var id = cur && cur.length ? cur[0].id : "";
+                              //   console.log('current id ='+id+'');
+                              
+                              if (lastId !== id) {
+                                  lastId = id;
 
-                     // console.log("thisangle" + thisangle);
+                                  // this logs the id of the active item
+                                // console.log('id ='+id+'');
+                                // Remove + Set active class - on items
 
-                       //                                 console.log("angle" + angle + "");
-                     //  console.log("(totalangle - anglesegment)" + (totalangle - anglesegment) + "");
+                                  $(".height-item").removeClass("active").filter("[id='"+id+"']").addClass("active");
+                                  thisattr = $(".height-item").filter("[id='"+id+"']").attr("data-active-item");
+                                  $(".carousel__cell").removeClass("active").filter("[id='"+thisattr+"']").addClass("active");
+                                  $(".height-item").removeClass("prev-active");
+                                  $(".height-item.active").prevAll().addClass("prev-active");
 
-                        if ( angle > ((totalangle - anglesegment)*-1) ) { // only roate as far as the total angle - one segment -- currently a negative value
-                         carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn + '(' + thisangle + 'deg)';
-
-                        }
-                             
-                    //if( $(this).scrollTop() >= $('#target_element').position().top ){
-                    //    do_something();
-                   // }
-/*
-   $(".height-item").each(function(i) {
-        if ($(this).position().top < fromTop) {
-            var thisid = $(this).attr("id");
-          //  console.log("thisid"+thisid+"");
-            $(".height-item").removeClass('active');
-            $(".carousel__cell").removeClass('active');
-            $(".scene").find($("#release-"+thisid+"")).addClass('active')
-            $(this).addClass('active');
-              console.log("lastId= "+lastId+"");
-
-               if (lastId !== thisid) {
-                  lastId = thisid;
-          console.log("still same id?");
-                }
-
-
-
-
-        }
-    });
-
-*/
-                       // Get id of current scroll item
-                  var cur = scrollItems.map(function(){
-                     if ($(this).offset().top < (fromTop + (itemheight/2)))
-                       return this;
-                      // console.log('this one '+this+'fromTop' +fromTop+'');
-
-
-                   });
-
-                   // Get the id of the current element
-                   cur = cur[cur.length-1];
-                   // console.log('cur'+cur+'');
-                   var id = cur && cur.length ? cur[0].id : "";
-                   //   console.log('current id ='+id+'');
-                   
-                   if (lastId !== id) {
-                       lastId = id;
-
-                      // this logs the id of the active item
-                     // console.log('id ='+id+'');
-                     // Remove + Set active class - on items
-
-                      $(".height-item").removeClass("active").filter("[id='"+id+"']").addClass("active");
-                      thisattr = $(".height-item").filter("[id='"+id+"']").attr("data-active-item");
-                      $(".carousel__cell").removeClass("active").filter("[id='"+thisattr+"']").addClass("active");
-                      $(".height-item").removeClass("prev-active");
-                      $(".height-item.active").prevAll().addClass("prev-active");
-
-                 
-                    }; // if 
-
-
-                }); // scroll function
-
-
-/*
-                  var prevButton = document.querySelector('.previous-button');
-                  prevButton.addEventListener( 'click', function() {
-                    selectedIndex--;
-                    console.log("selectedIndex" + selectedIndex + "");
-
-                  if (!$(".carousel__cell").hasClass("active")) {
-                   
-
-                    $(".carousel").find(".carousel__cell:last-child").addClass('active');// if it doesn't have class anywhere yet- add one to first item
-
-                   
-                     } else{ // else we start changing classes base on the currently active one
-
-                     var $thisitem = $( ".carousel__cell.active" );
-                         $nextactivechild = $thisitem.prev();
-                    
-                          if($thisitem.is(':first-child')){
-                            console.log('helo firstve');
-                            $(".carousel").find(".carousel__cell:last-child").addClass('active');// if it doesn't have class anywhere yet- add one to first item
-
-                          }else{
                             
-                            $nextactivechild.addClass('active');
-                          
-                          }// last item?
-
-                         $thisitem.removeClass('active')// remove existing class
-
-                   
-                    console.log('has Active');
-                    //.addClass("active")
-
-                    } // cell active
-
-                    rotateCarousel();
-                  });
-
-*/
-/*
-                  var nextButton = document.querySelector('.next-button');
-                  nextButton.addEventListener( 'click', function() {
-                    selectedIndex++;
-                    console.log("selectedIndex" + selectedIndex + "");
-
-                  if (!$(".carousel__cell").hasClass("active")) {
-                   
-
-                    $(".carousel").find(".carousel__cell:first-child").next().addClass('active');// if it doesn't have class anywhere yet- add one to first item
-
-                   
-                     } else{ // else we start changing classes base on the currently active one
-
-                     var $thisitem = $( ".carousel__cell.active" );
-                         $nextactivechild = $thisitem.next();
-                    
-                          if($thisitem.is(':last-child')){
-                            console.log('helo firstve');
-                            $(".carousel").find(".carousel__cell:first-child").addClass('active');// if it doesn't have class anywhere yet- add one to first item
-
-                          }else{
-                            
-                            $nextactivechild.addClass('active');
-                          
-                          }// last item?
-
-                         $thisitem.removeClass('active')// remove existing class
-
-                   
-                    //console.log('has Active');
-                    //.addClass("active")
-
-                    } // cell active
-
-                    rotateCarousel();
-                  });
-*/
-               //   var cellsRange = document.querySelector('.cells-range');
-               //   cellsRange.addEventListener( 'change', changeCarousel );
-               //   cellsRange.addEventListener( 'input', changeCarousel );
-
-//window.addEventListener("resize", onOrientationChange); // I shoudl place this functiun elsewhber? -
+                                }; // if 
 
 
-                  function changeCarousel() { // this function  resizes everythinging
-                  
-                   console.log("changeCarousel function");
-
-                     /* new var for resize*/
-                    carousel = document.querySelector('.carousel'),
-
-                    cellWidth = carousel.offsetWidth, // this should be a responsive value
-                    cellHeight = carousel.offsetHeight; // this should be a responsive value
-                     /* new var for resize*/
-
-                    cellCount = sceneheigtItems; //total items vas input//cellsRange.value; // this value should be from number of posts
-                    theta = 360 / cellCount;
-                    var cellSize = isHorizontal ? cellWidth : cellHeight;
-                    radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
-                    for ( var i=0; i < cells.length; i++ ) {
-                      var cell = cells[i];
-                      if ( i < cellCount ) {
-                        // visible cell
-                        cell.style.opacity = 1;
-                        var cellAngle = theta * i;
-                        cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
-                      } else {
-                        // hidden cell
-                        cell.style.opacity = 0;
-                        cell.style.transform = 'none';
-                      }
-                    }
-
-                   // rotateCarousel();
-                  }
-
-               /*   var orientationRadios = document.querySelectorAll('input[name="orientation"]');
-                  ( function() {
-                    for ( var i=0; i < orientationRadios.length; i++ ) {
-                      var radio = orientationRadios[i];
-                      radio.addEventListener( 'change', onOrientationChange );
-                    }
-                  })();*/
-
-                  function onOrientationChange() {
-                  //  var checkedRadio = document.querySelector('input[name="orientation"]:checked');
-                    
-                       if ($('body').hasClass('horizontal')){
-                         var isHorizontal = true; 
-                        // console.log('IsHorizontal')
-                           }else{
-                         var isHorizontal = false;
-                        // console.log('NOT IsHorizontal')
-
-                        }; 
-
-                    //  isHorizontal = checkedRadio.value == 'horizontal';
-
-                        //console.log("isHorizontal = "+isHorizontal+"");
-                        rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
-                        changeCarousel();
-
-                  } // onOrientationChange
-                  
-                /*  function screenOrientationChange() {
-                    var checkedRadio = document.querySelector('input[name="orientation"]:checked');
-                    isHorizontal = checkedRadio.value == 'horizontal';
-                    rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
-                    changeCarousel();
-                  }
-*/
-                  // set initials
-                  onOrientationChange();
+                            }); // scroll function
 
 
+            /*
+                              var prevButton = document.querySelector('.previous-button');
+                              prevButton.addEventListener( 'click', function() {
+                                selectedIndex--;
+                                console.log("selectedIndex" + selectedIndex + "");
 
-// change on resize
-                      var rtime;
-                      var timeout = false;
-                      var delta = 200;
-                      $(window).resize(function() {
-                          rtime = new Date();
-                          if (timeout === false) {
-                              timeout = true;
-                              setTimeout(resizeend, delta);
-                           //console.log("herleo")
+                              if (!$(".carousel__cell").hasClass("active")) {
+                              
 
-                          }
+                                $(".carousel").find(".carousel__cell:last-child").addClass('active');// if it doesn't have class anywhere yet- add one to first item
+
+                              
+                                } else{ // else we start changing classes base on the currently active one
+
+                                var $thisitem = $( ".carousel__cell.active" );
+                                    $nextactivechild = $thisitem.prev();
+                                
+                                      if($thisitem.is(':first-child')){
+                                        console.log('helo firstve');
+                                        $(".carousel").find(".carousel__cell:last-child").addClass('active');// if it doesn't have class anywhere yet- add one to first item
+
+                                      }else{
+                                        
+                                        $nextactivechild.addClass('active');
+                                      
+                                      }// last item?
+
+                                    $thisitem.removeClass('active')// remove existing class
+
+                              
+                                console.log('has Active');
+                                //.addClass("active")
+
+                                } // cell active
+
+                                rotateCarousel();
+                              });
+
+            */
+            /*
+                              var nextButton = document.querySelector('.next-button');
+                              nextButton.addEventListener( 'click', function() {
+                                selectedIndex++;
+                                console.log("selectedIndex" + selectedIndex + "");
+
+                              if (!$(".carousel__cell").hasClass("active")) {
+                              
+
+                                $(".carousel").find(".carousel__cell:first-child").next().addClass('active');// if it doesn't have class anywhere yet- add one to first item
+
+                              
+                                } else{ // else we start changing classes base on the currently active one
+
+                                var $thisitem = $( ".carousel__cell.active" );
+                                    $nextactivechild = $thisitem.next();
+                                
+                                      if($thisitem.is(':last-child')){
+                                        console.log('helo firstve');
+                                        $(".carousel").find(".carousel__cell:first-child").addClass('active');// if it doesn't have class anywhere yet- add one to first item
+
+                                      }else{
+                                        
+                                        $nextactivechild.addClass('active');
+                                      
+                                      }// last item?
+
+                                    $thisitem.removeClass('active')// remove existing class
+
+                              
+                                //console.log('has Active');
+                                //.addClass("active")
+
+                                } // cell active
+
+                                rotateCarousel();
+                              });
+            */
+                          //   var cellsRange = document.querySelector('.cells-range');
+                          //   cellsRange.addEventListener( 'change', changeCarousel );
+                          //   cellsRange.addEventListener( 'input', changeCarousel );
+
+            //window.addEventListener("resize", onOrientationChange); // I shoudl place this functiun elsewhber? -
 
 
-                      });
-                    
-                      function resizeend() {
-                                                  //  console.log("resize iniit");
+                              function changeCarousel() { // this function  resizes everythinging
+                              
+                              console.log("changeCarousel function");
 
-                          if (new Date() - rtime < delta) {
-                              setTimeout(resizeend, delta);
-                          } else {
-                              timeout = false;
-                            var windowheight = $(window).height();
-                         // changeCarousel();
-                          
-                             onOrientationChange();
+                                /* new var for resize*/
+                                carousel = document.querySelector('.carousel'),
 
-//                          console.log("resize iniit");
-                            //  orientation(); //vertical or horizontal
+                                cellWidth = carousel.offsetWidth, // this should be a responsive value
+                                cellHeight = carousel.offsetHeight; // this should be a responsive value
+                                /* new var for resize*/
 
-                          }   //else    
+                                cellCount = sceneheigtItems; //total items vas input//cellsRange.value; // this value should be from number of posts
+                                theta = 360 / cellCount;
+                                var cellSize = isHorizontal ? cellWidth : cellHeight;
+                                radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
+                                for ( var i=0; i < cells.length; i++ ) {
+                                  var cell = cells[i];
+                                  if ( i < cellCount ) {
+                                    // visible cell
+                                    cell.style.opacity = 1;
+                                    var cellAngle = theta * i;
+                                    cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
+                                  } else {
+                                    // hidden cell
+                                    cell.style.opacity = 0;
+                                    cell.style.transform = 'none';
+                                  }
+                                }
 
-                       };//resizeend fucntion
+                              // rotateCarousel();
+                              }
 
-// //end resize
+                          /*   var orientationRadios = document.querySelectorAll('input[name="orientation"]');
+                              ( function() {
+                                for ( var i=0; i < orientationRadios.length; i++ ) {
+                                  var radio = orientationRadios[i];
+                                  radio.addEventListener( 'change', onOrientationChange );
+                                }
+                              })();*/
+
+                              function onOrientationChange() {
+                              //  var checkedRadio = document.querySelector('input[name="orientation"]:checked');
+                                
+                                  if ($('body').hasClass('horizontal')){
+                                    var isHorizontal = true; 
+                                    // console.log('IsHorizontal')
+                                      }else{
+                                    var isHorizontal = false;
+                                    // console.log('NOT IsHorizontal')
+
+                                    }; 
+
+                                //  isHorizontal = checkedRadio.value == 'horizontal';
+
+                                    //console.log("isHorizontal = "+isHorizontal+"");
+                                    rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
+                                    changeCarousel();
+
+                              } // onOrientationChange
+                              
+                            /*  function screenOrientationChange() {
+                                var checkedRadio = document.querySelector('input[name="orientation"]:checked');
+                                isHorizontal = checkedRadio.value == 'horizontal';
+                                rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
+                                changeCarousel();
+                              }
+            */
+                              // set initials
+                              onOrientationChange();
 
 
 
+            // change on resize
+                                  var rtime;
+                                  var timeout = false;
+                                  var delta = 200;
+                                  $(window).resize(function() {
+                                      rtime = new Date();
+                                      if (timeout === false) {
+                                          timeout = true;
+                                          setTimeout(resizeend, delta);
+                                      //console.log("herleo")
+
+                                      }
+
+
+                                  });
+                                
+                                  function resizeend() {
+                                                              //  console.log("resize iniit");
+
+                                      if (new Date() - rtime < delta) {
+                                          setTimeout(resizeend, delta);
+                                      } else {
+                                          timeout = false;
+                                        var windowheight = $(window).height();
+                                    // changeCarousel();
+                                      
+                                        onOrientationChange();
+
+            //                          console.log("resize iniit");
+                                        //  orientation(); //vertical or horizontal
+
+                                      }   //else    
+
+                                  };//resizeend fucntion
+
+            // //end resize
 
 
 
 
 
-        }; // activecarousel
-         activecarousel();
-      // $(window).scrollBy(1,0);
-
-
-                                          
 
 
 
+                    }; // activecarousel
+                    activecarousel();
+                  // $(window).scrollBy(1,0);
 
 
-
-                 /*
-                 body.post-type-archive-releases
-                 */
+                /*
+                body.post-type-archive-releases
+                */
 
                 };  
                      

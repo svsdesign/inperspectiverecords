@@ -30,7 +30,7 @@ margin:auto;
 position: relative;
 @include padding(margin-top, -2);
 @include padding(margin-bottom, -2);
-
+width: 100%;
 
 		.quote-blockquote{
 		@include padding(padding-top, 2);

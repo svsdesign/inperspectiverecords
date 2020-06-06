@@ -94,6 +94,7 @@
   }
 }
 
+
 /* usage
 block { 
   @include prefix(test, comma, separated, values);
@@ -106,6 +107,23 @@ block {
 */
 // it's not perfect, but it's small.
 //end https://gist.github.com/juliocesar/8105794
+
+
+
+
+@mixin center-align($position: relative, $adjust: 0) {
+
+  @if ($adjust!=0) {
+    top: calc(50% + #{$adjust});
+  } @else {
+    top: 50%;
+  }
+  
+  left: 50%;
+  position: $position;
+  transform: translate(-50%, -50%);
+
+}
 
 
 // media query mixin

@@ -8,7 +8,7 @@
   //div,
   .inp-block.block-z-index, // default
   .post-entry-content p, // normal paragraph
-  .wp-block-gallery, // gallery block
+  .wp-block-gallery // gallery block
   {
       z-index: 10;// this standard for all blocks
   }
@@ -90,9 +90,10 @@
 
 
 
-/* Start Archive */
+/* Start Archive + home */
 
-  body.post-type-archive-news{
+  body.post-type-archive-news,
+  body.home .news-home-wrapper{
   background: $news-background-color;
   
     article.news-item{
@@ -151,43 +152,46 @@
 
       }//a
 
+
+      &:hover{
+    
+        a{
+            
+            .date-wrap{
+    
+              .date{
+              }
+
+              .line{
+              }
+
+            }//.date-wrap
+
+            img.thumb-image-item{
+            animation: blurin 400ms ease-in forwards;
+            }
+
+            img.thumb-image-item.place-holder{
+            }
+
+            .news-item-title{
+            }
+
+        }//a
+
+      }//article.news-item:hover
+
+      &.item-1{
+      @include padding(padding-top, 2);
+      }
+
+      &:last-child{
+      // padding-bottom: 0;
+      @include cssvalue(padding-bottom, 1);
+      margin-bottom: 0;
+      }
+
     }//article.news-item
-
-    article.news-item:hover{
-  
-      a{
-           
-          .date-wrap{
-  
-            .date{
-            }
-
-            .line{
-            }
-
-          }//.date-wrap
-
-          img.thumb-image-item{
-          animation: blurin 400ms ease-in forwards;
-          }
-
-          img.thumb-image-item.place-holder{
-          }
-
-          .news-item-title{
-          }
-
-      }//a
-
-    }//article.news-item:hover
-
-    article.news-item.item-1{
-    @include padding(padding-top, 2);
-    }
-
-    article.news-item:last-child{
-    padding-bottom: 0;
-    }
 
     .post-navigation-wrap{
     width: 100%;
@@ -393,45 +397,37 @@
 
     }//& //body.is-touch
 
-
-
   }//body.post-type-archive-news
   
-  /* START Archive - breakpoints + different layouts*/
+  /* START Archive + Home - breakpoints + different layouts*/
 
-    @media (min-width: map-get($breakpoints,md)) {         
+  @media (min-width: map-get($breakpoints,md)) {         
    
-      body.post-type-archive-news{
-
+      body.post-type-archive-news,
+      body.home .news-home-wrapper{
+      // background-color: red;
+       
         article{
         
            a{
-
+        
                 .date-wrap{
              
-
-
-                  .date{
-         
-
-
+                  .date{  
                   }
 
                   .line{
-          
-
                   }
 
                 }//.date-wrap
 
                 img.thumb-image-item{
                 }
+
                 img.thumb-image-item.place-holder{
                 }
 
                 .news-item-title{
-             
-
                 }
 
             }//a
@@ -492,12 +488,8 @@
               .date-wrap{
               left: 33.33%;
 
-
-
                 .date{
-       
-
-
+        
                 }
 
                 .line{

@@ -222,7 +222,8 @@ font-style: normal;
 
 /* Start news typestyles */
 body.post-type-archive-news,
-body.single-news
+body.single-news,
+body.home .news-home-wrapper
 {
 color: $news-text-color;
 background: $news-background-color;
@@ -247,7 +248,9 @@ background: $news-background-color;
 body.post-type-archive-news *::-moz-selection,
 body.post-type-archive-news *::selection,
 body.single-news *::selection,
-body.single-news *::-moz-selection
+body.single-news *::-moz-selection,
+body.home .news-home-wrapper *::selection,
+body.home .news-home-wrapper *::-moz-selection
 {
 background: $news-text-color;
 color: $background-color;  

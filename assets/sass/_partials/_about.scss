@@ -11,13 +11,22 @@ body.page-id-679// live site id
 
 	#about-logo{
     min-height: 25vh;
-    padding-top: 10vh;
+	padding-top:15vh;
+	padding-bottom: 5vh;
+
 	//margin: auto;
 	//float: right;
 
+		@media (min-width: map-get($breakpoints,sm)) {
+		padding-top: 25vh;
+ 
+		}
+
 		@media (min-width: map-get($breakpoints,md)) {
 		min-height: initial;
-   		padding-top: 20vh;
+		   padding-top: 20vh;
+		   padding-bottom: 0vh;
+   
 		}
 
 		.logo-wrap{

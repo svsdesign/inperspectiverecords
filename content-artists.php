@@ -130,41 +130,44 @@ TO DO IN THIS FILE:
 
 					<div class="artist-links grid-item grid-item grid-item-xs-6 grid-item-sm-4 grid-item-md-2 grid-item-lg-2">
 						
+						<div class="artist-links-wrap">
+						
+							<div class="more-links">More <?php echo $artistname;?>:</div>
+							<ul class="links">
 
-			 			<div class="more-links">More <?php echo $artistname;?></div>
-						<ul class="links">
+								<?php while( have_rows('artist_links') ): the_row(); 
+									// vars
+									$link = get_sub_field('link_url');
+									$title = get_sub_field('link_name');
+									?>
 
-							<?php while( have_rows('artist_links') ): the_row(); 
-								// vars
-		  						$link = get_sub_field('link_url');
-		  						$title = get_sub_field('link_name');
-								?>
+									<li class="link-item">
 
-								<li class="link-item">
-
-									<?php if( $link ): ?>
-										
-										<a href="<?php echo $link; ?>">
-		 								
-											<?php if( $title ): ?>
-
-											 <?php echo $title ?>
+										<?php if( $link ): ?>
 											
-											<?php else: ?>
+											<a href="<?php echo $link; ?>">
+											
+												<?php if( $title ): ?>
 
-												Visit <?php echo $link; ?>
+												<?php echo $title ?>
+												
+												<?php else: ?>
 
-											<?php endif; ?>
+													Visit <?php echo $link; ?>
 
-		 								</a>
+												<?php endif; ?>
 
-									<?php endif; ?>
+											</a>
 
-								</li>
+										<?php endif; ?>
 
-							<?php endwhile; ?>
+									</li>
 
-						</ul>
+								<?php endwhile; ?>
+
+							</ul>
+
+						</div><!-- .artist-links-wrap -->
 
 					</div><!-- grid-item -->
 				
@@ -272,15 +275,18 @@ TO DO IN THIS FILE:
 	    									<?php if ($releaselabel):?>
 									    		
 									    		<img class="record-label" src="<?php echo $releaselabel;?>"/>
-
-											<?php else: // if not image use placholder - make the placeholder?>
+												<img class="record-item" src="<?php echo bloginfo('template_directory'); ?>/assets/img/disc_missing_label_black.png"/> -->
+										
+												<?php else: // if not image use placholder - make the placeholder?>
 									    		
-									       		<img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>
+									       		<!--<img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>-->
+												   <img class="record-item" src="<?php echo bloginfo('template_directory'); ?>/assets/img/release_placeholder_square.png"/>
 
 									        <?php endif; // if $releaseproductcover?>
 									      
-									      	<img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/>
-									        
+									      <!--	<img class="record-item" src="<?php //echo bloginfo('template_directory'); ?>/assets/img/disc_missing_label_black.png"/> -->
+										<!--	<img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/> -->
+
 									    </div><!-- .inner-container-->							
 								      
 								    </div><!-- .record-circle-->

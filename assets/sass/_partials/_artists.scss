@@ -1,26 +1,5 @@
 /*_artist.scss*/
  
-.more-links{
-font-weight: 600;
-font-style: italic;
-text-align: center;
-padding-bottom: 1vw;
-}
-
-ul.links{
-text-align: center;
-
-	li{
-		display: inline-block;
-		padding: 0 1vw 0 1vw;
-		@include li;
-		font-weight: 400;
-
-
-	}
-
-}
-
 
 /* tidy the following up: */
 
@@ -50,7 +29,9 @@ body.home // home post
 
       #artist-info{
       padding-top: 12.5vw;
-          
+      
+      
+
           @media (min-width: map-get($breakpoints,sm)) {         
           padding-top: 6.25vw;
  
@@ -68,11 +49,44 @@ body.home // home post
                text-align: left;
                }     
 
-          }
-
+          }//.artist-description
 
           .artist-links{
-            margin: auto;
+          position: relative;
+          margin:auto;
+          overflow: initial;
+
+           @media (min-width: map-get($breakpoints,md)) {         
+            margin:0;
+            }   
+
+            .artist-links-wrap{
+            position:sticky;
+           // top:0px;
+            @include cssvalue(top,3);
+
+
+              .more-links{
+              font-weight: 600;
+              font-style: italic;
+              text-align: center;
+              padding-bottom: 1vw;
+              }
+
+              ul.links{
+              text-align: center;
+
+                li{
+                display: inline-block;
+                padding: 0 1vw 0 1vw;
+                @include li;
+                font-weight: 400;
+                }
+
+              }
+
+            }//.artist-links-wrap
+
           }
 
       }

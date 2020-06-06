@@ -25,9 +25,6 @@ text-align: center;
 } /* .date-item */
 
 
-
-
-
 /* single */
 
 .single-events{
@@ -370,7 +367,7 @@ overflow: visible; /* this because of sticky can't be hidden? */
            //  @include smaller;
            //  @include lineheight;
             font-weight: $mediumweight;
-            @include cssvalue(font-size, 0.3);
+            @include cssvalue(font-size, 0.5);
             overflow: hidden;
             text-align: center;
 

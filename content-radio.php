@@ -108,8 +108,55 @@
 
 
 
-	<?php else: // not home feaured:?>
-	not home featured - content-radio.php
+	<?php else: // not home feaured:
+	// not home featured - content-radio.php
+
+
+	// Same as archicve
+
+
+	$showid = get_the_ID();	
+	$showtitle = get_the_title();// title						
+ 	$showstart = get_field('show_start_date'); // date and time picker
+    $showend = get_field('show_end_date');  // date and time picker
+	$featureimage =  get_field('feature_image'); // image
+	$featureimagecredit =  get_field('feature_image_credit');  // text
+ 	$description =  get_field('show_description');  // text area							 
+ 	$soundcloudlink =  get_field('soundcloud_link'); //text
+	$soundcloudembed =  get_field('soundcloud_embed'); // iframe / file?
+	?>
+ 	
+		<?php if($featureimage): ?>
+
+			<div class="cover-image-item outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo $featureimage;?>');">
+
+				<div class="play-icon-wrap">
+			
+					 <div class="play-toggle inline-small"> 
+									 	
+						<svg id="playertoggle_<?php echo $showid?>" class="playertoggle"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+							
+							<path class="play-inline" id="play_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+							<path class="play-left-inline"id="play-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+							<path class="play-right-inline" id="play-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+							<path opacity="0" id="pause_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+							<path opacity="0" id="pause-left_<?php echo $showid?>" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+							<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+							<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+							<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
+							<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1001,500.158 492.037,246.093 492.037,754.227 z" fill-rule="nonzero"/> 
+						
+						</svg> 
+
+					 </div> 
+
+			    </div>
+				
+			</div><!-- image-item -->
+
+		<?php endif; //$featureimage  ?>
+
+
 	<?php endif; //if $homefeatured ?>
 
 

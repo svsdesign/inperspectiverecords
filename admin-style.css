@@ -3528,13 +3528,15 @@ body.wp-admin .wp-block li {
 /* Start news typestyles */
 /* line 224, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news,
-body.single-news {
+body.single-news,
+body.home .news-home-wrapper {
   color: black;
   background: #d8d8d8;
 }
-/* line 230, assets/sass/_partials/_typography.scss */
+/* line 231, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news a,
-body.single-news a {
+body.single-news a,
+body.home .news-home-wrapper a {
   color: black;
   text-decoration: none;
   font-size: 10px;
@@ -3543,79 +3545,92 @@ body.single-news a {
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 230, assets/sass/_partials/_typography.scss */
+  /* line 231, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
-  body.single-news a {
+  body.single-news a,
+  body.home .news-home-wrapper a {
     font-size: calc(10px + 6 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_typography.scss */
+  /* line 231, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
-  body.single-news a {
+  body.single-news a,
+  body.home .news-home-wrapper a {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_typography.scss */
+  /* line 231, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
-  body.single-news a {
+  body.single-news a,
+  body.home .news-home-wrapper a {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 230, assets/sass/_partials/_typography.scss */
+  /* line 231, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
-  body.single-news a {
+  body.single-news a,
+  body.home .news-home-wrapper a {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 230, assets/sass/_partials/_typography.scss */
+  /* line 231, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
-  body.single-news a {
+  body.single-news a,
+  body.home .news-home-wrapper a {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_typography.scss */
+  /* line 231, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
-  body.single-news a {
+  body.single-news a,
+  body.home .news-home-wrapper a {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 230, assets/sass/_partials/_typography.scss */
+  /* line 231, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
-  body.single-news a {
+  body.single-news a,
+  body.home .news-home-wrapper a {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 230, assets/sass/_partials/_typography.scss */
+  /* line 231, assets/sass/_partials/_typography.scss */
   body.post-type-archive-news a,
-  body.single-news a {
+  body.single-news a,
+  body.home .news-home-wrapper a {
     line-height: 32px;
   }
 }
-/* line 236, assets/sass/_partials/_typography.scss */
+/* line 237, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news a:hover,
 body.post-type-archive-news a:visited,
 body.post-type-archive-news a:active,
 body.single-news a:hover,
 body.single-news a:visited,
-body.single-news a:active {
+body.single-news a:active,
+body.home .news-home-wrapper a:hover,
+body.home .news-home-wrapper a:visited,
+body.home .news-home-wrapper a:active {
   color: black;
 }
 
 /* body.post-type-archive-news,
    body.single-news */
 /* End news typestyles */
-/* line 247, assets/sass/_partials/_typography.scss */
+/* line 248, assets/sass/_partials/_typography.scss */
 body.post-type-archive-news *::-moz-selection,
 body.post-type-archive-news *::selection,
 body.single-news *::selection,
-body.single-news *::-moz-selection {
+body.single-news *::-moz-selection,
+body.home .news-home-wrapper *::selection,
+body.home .news-home-wrapper *::-moz-selection {
   background: black;
   color: black;
 }
@@ -3626,7 +3641,7 @@ body.single-news *::-moz-selection {
 circles https://codepen.io/YusukeNakaya/pen/KyKJBE/
 
 */
-/* line 273, assets/sass/_partials/_typography.scss */
+/* line 276, assets/sass/_partials/_typography.scss */
 div.anim-text,
 span.anim-text,
 div.link-animation,
@@ -3634,7 +3649,7 @@ a.link-animation {
   will-change: transform;
 }
 
-/* line 281, assets/sass/_partials/_typography.scss */
+/* line 284, assets/sass/_partials/_typography.scss */
 .link-animation {
   transform-style: preserve-3d;
   position: relative;
@@ -3644,232 +3659,232 @@ a.link-animation {
   overflow: visible;
   color: transparent;
 }
-/* line 290, assets/sass/_partials/_typography.scss */
+/* line 293, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text {
   position: absolute;
   color: #fff;
   transform-style: preserve-3d;
   transform-origin: left;
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(1) {
   clip-path: polygon(-30% 0, -20% 0, 20% 100%, 0% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(2) {
   clip-path: polygon(-25% 0, -15% 0, 25% 100%, 5% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(3) {
   clip-path: polygon(-20% 0, -10% 0, 30% 100%, 10% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(4) {
   clip-path: polygon(-15% 0, -5% 0, 35% 100%, 15% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(5) {
   clip-path: polygon(-10% 0, 0% 0, 40% 100%, 20% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(6) {
   clip-path: polygon(-5% 0, 5% 0, 45% 100%, 25% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(7) {
   clip-path: polygon(0% 0, 10% 0, 50% 100%, 30% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(8) {
   clip-path: polygon(5% 0, 15% 0, 55% 100%, 35% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(9) {
   clip-path: polygon(10% 0, 20% 0, 60% 100%, 40% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(10) {
   clip-path: polygon(15% 0, 25% 0, 65% 100%, 45% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(11) {
   clip-path: polygon(20% 0, 30% 0, 70% 100%, 50% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(12) {
   clip-path: polygon(25% 0, 35% 0, 75% 100%, 55% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(13) {
   clip-path: polygon(30% 0, 40% 0, 80% 100%, 60% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(14) {
   clip-path: polygon(35% 0, 45% 0, 85% 100%, 65% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(15) {
   clip-path: polygon(40% 0, 50% 0, 90% 100%, 70% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(16) {
   clip-path: polygon(45% 0, 55% 0, 95% 100%, 75% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(17) {
   clip-path: polygon(50% 0, 60% 0, 100% 100%, 80% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(18) {
   clip-path: polygon(55% 0, 65% 0, 105% 100%, 85% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(19) {
   clip-path: polygon(60% 0, 70% 0, 110% 100%, 90% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(20) {
   clip-path: polygon(65% 0, 75% 0, 115% 100%, 95% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(21) {
   clip-path: polygon(70% 0, 80% 0, 120% 100%, 100% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(22) {
   clip-path: polygon(75% 0, 85% 0, 125% 100%, 105% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(23) {
   clip-path: polygon(80% 0, 90% 0, 130% 100%, 110% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(24) {
   clip-path: polygon(85% 0, 95% 0, 135% 100%, 115% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(25) {
   clip-path: polygon(90% 0, 100% 0, 140% 100%, 120% 100%);
 }
-/* line 300, assets/sass/_partials/_typography.scss */
+/* line 303, assets/sass/_partials/_typography.scss */
 .link-animation .anim-text:nth-child(26) {
   clip-path: polygon(95% 0, 105% 0, 145% 100%, 125% 100%);
 }
-/* line 316, assets/sass/_partials/_typography.scss */
+/* line 319, assets/sass/_partials/_typography.scss */
 .link-animation .height-item {
   opacity: 0;
   position: relative;
 }
 
-/* line 325, assets/sass/_partials/_typography.scss */
+/* line 328, assets/sass/_partials/_typography.scss */
 .link-animation:hover {
   animation: blurring 1500ms ease-out forwards;
 }
-/* line 329, assets/sass/_partials/_typography.scss */
+/* line 332, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text {
   top: 0;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(1) {
   animation: wave 1000ms -5000ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(2) {
   animation: wave 1000ms -4950ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(3) {
   animation: wave 1000ms -4900ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(4) {
   animation: wave 1000ms -4850ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(5) {
   animation: wave 1000ms -4800ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(6) {
   animation: wave 1000ms -4750ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(7) {
   animation: wave 1000ms -4700ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(8) {
   animation: wave 1000ms -4650ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(9) {
   animation: wave 1000ms -4600ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(10) {
   animation: wave 1000ms -4550ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(11) {
   animation: wave 1000ms -4500ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(12) {
   animation: wave 1000ms -4450ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(13) {
   animation: wave 1000ms -4400ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(14) {
   animation: wave 1000ms -4350ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(15) {
   animation: wave 1000ms -4300ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(16) {
   animation: wave 1000ms -4250ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(17) {
   animation: wave 1000ms -4200ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(18) {
   animation: wave 1000ms -4150ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(19) {
   animation: wave 1000ms -4100ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(20) {
   animation: wave 1000ms -4050ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(21) {
   animation: wave 1000ms -4000ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(22) {
   animation: wave 1000ms -3950ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(23) {
   animation: wave 1000ms -3900ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(24) {
   animation: wave 1000ms -3850ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(25) {
   animation: wave 1000ms -3800ms ease-in-out 5 alternate;
 }
-/* line 336, assets/sass/_partials/_typography.scss */
+/* line 339, assets/sass/_partials/_typography.scss */
 .link-animation:hover .anim-text:nth-child(26) {
   animation: wave 1000ms -3750ms ease-in-out 5 alternate;
 }
@@ -3896,7 +3911,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(61deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(36deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -3959,43 +3974,43 @@ a.link-animation {
     opacity: 0;
   }
 }
-/* line 457, assets/sass/_partials/_typography.scss */
+/* line 460, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span {
   color: transparent;
   animation: blurlink 10s ease-out;
   -webkit-animation: blurlink 10s ease-out;
 }
-/* line 463, assets/sass/_partials/_typography.scss */
+/* line 466, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(1) {
   animation-delay: 0.1s;
   -webkit-animation-delay: 0.1s;
 }
-/* line 467, assets/sass/_partials/_typography.scss */
+/* line 470, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(2) {
   animation-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
 }
-/* line 471, assets/sass/_partials/_typography.scss */
+/* line 474, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(3) {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s;
 }
-/* line 475, assets/sass/_partials/_typography.scss */
+/* line 478, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(4) {
   animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
 }
-/* line 479, assets/sass/_partials/_typography.scss */
+/* line 482, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(5) {
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
 }
-/* line 483, assets/sass/_partials/_typography.scss */
+/* line 486, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(6) {
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
 }
-/* line 487, assets/sass/_partials/_typography.scss */
+/* line 490, assets/sass/_partials/_typography.scss */
 a._link-animation:hover span:nth-child(7) {
   animation-delay: 0.7s;
   -webkit-animation-delay: 0.7s;
@@ -5526,6 +5541,7 @@ i also need to ensure the z-index of other items is always more - but then would
   margin-top: -52px;
   margin-bottom: -36px;
   margin-bottom: -52px;
+  width: 100%;
 }
 @media screen and (min-width: 0px) {
   /* line 25, assets/sass/_partials/_block-quote.scss */

@@ -13,19 +13,14 @@ Make sure this setup, so we can savely push updates live
 
 - Artists
 
-	- Disc hover state still sometimes incorrect - on news single page & artists for example
-
+ 
 - Events 
 	
-	- Review styling of events page - improvements on Mobile and Desktop?
-
-
+ 
 - Radio / Player
-
  
  	- fine tune the player on the archive page - the icons; the alligment.
  	- fine tune the player - click on the title should probaly take the use to that page (and not soundcloud)
-
 
 - Releases
 
