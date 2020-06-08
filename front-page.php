@@ -42,8 +42,11 @@ get_header();?>
                         <div class="featured-home-item featured-home-item-<?php echo $thisposttype?>">
   
                             <div class="inner-home-item">
+  
+                                 <?php //the_title($thispostid); 
+                                      //echo $thistemplatename;  
 
-                                <?php include(locate_template($thistemplatename));?>
+                                include(locate_template($thistemplatename));?>
 
                             </div><!-- class="inner-home-item"-->
 
@@ -70,7 +73,9 @@ get_header();?>
                   ?>
 
                       <div class="featured-home-item featured-home-item-<?php echo $thisposttype?>">
+
                       <?php include(locate_template($thistemplatename));?>
+
                       </div><!-- .feature-home-item-->
 
                   <?php endwhile;?>
@@ -98,15 +103,14 @@ get_header();?>
       
         <?php
         // set the "paged" parameter (use 'page' if the query is on a static front page)
-        $newspaged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+        $newshomepaged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
         $newsargs = array(
           'posts_per_page' => 9, // reivew this because won'tb e right
           'post_type' => 'news',
-          'paged' => $newspaged,
-       //   'post__not_in' => $excludednewsposts // ensure exclusion across cpt's: event, radio, artists
+          'paged' => $newshomepaged,
           'post__not_in' => array($excludednewsposts),
-        //  $excludednewsposts
-    // ensure to exclude the news items here - useing array variable:
+         // $excludednewsposts
+         // ensure to exclude the news items here - useing array variable:
 
         );
         // the query
@@ -119,8 +123,6 @@ get_header();?>
           //if(1 == $paged):
           //$pageno = 'first';?>
           <?php //endif;  //  are we on page 1 ?>
-      
-
 
               <div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
                                 
@@ -166,11 +168,7 @@ get_header();?>
         
               </div><!-- .grid inner outer-grid-item outer-grid-item-xs-6 -->
 
-          Review the pagination - so link the next page into page 2 of the news archvie              
-          <?php global $news_query; // this global variable also used on news archives; so consider setting other global variable?
-          //https://kriesi.at/archives/how-to-build-a-wordpress-post-pagination-without-plugin < maybe better solution in terms of genering html
-
-          $big = 999999999; // need an unlikely integer
+           <?php global $news_query; // this global variable also used on news archives; so consider setting other global variable?          $big = 999999999; // need an unlikely integer
 
           $newspaginate = paginate_links( array(
               'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
@@ -189,13 +187,15 @@ get_header();?>
 
               <div class="grid">
 
-                  <div class="page-nav-wrapper grid-item grid-item-xs-6">
+                <div class="page-nav-wrapper grid-item grid-item-xs-6">
 
-                  <?php echo $newspaginate;?>
-
-                  </div>
+                    <a href="<?php echo get_home_url(); ?>/news/page/2">
+                      View Older News
+                    </a>
               
                 </div>
+
+              </div>  <!-- ".grid-->     
 
             </div>  <!-- ".page-nav-->     
 
@@ -204,8 +204,7 @@ get_header();?>
         <?php endif;  // if ( $news_query->have_posts
 
 
-      wp_reset_query(); 
-      ?>
+    wp_reset_query();?>
 
     </div><!-- class="news-home-wrapper"-->
 
@@ -217,9 +216,9 @@ get_header();?>
     <div class="radio-home-wrapper">
       
         <?php
-        // set the "paged" parameter (use 'page' if the query is on a static front page)
-        $radiopaged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-        $radioargs = array(
+          // set the "paged" parameter (use 'page' if the query is on a static front page)
+          $radiopaged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+          $radioargs = array(
           'posts_per_page' => 9, // review
           'post_type' => 'radio',
           'post_status' => 'publish', // only show published events
@@ -279,7 +278,7 @@ get_header();?>
                   //$pageno = 'first';?>
                   <?php //endif;  //  are we on page 1 ?>
                 
-                    <?php
+                  <?php
                   // the loop
                   $radioitemnumber = 1;
                   while ( $radio_query->have_posts() ) : $radio_query->the_post(); 
@@ -430,13 +429,13 @@ get_header();?>
 
                   // End the loop.
                   endwhile;?>
+
                 </div>  <!-- container--> 
 
         
             </div><!-- .grid inner outer-grid-item outer-grid-item-xs-6 -->
 
-        Review the pagination - so link the next page into page 2 of the radio archvie              
-        <?php global $radio_query; // this is global querry that is also on the radio archives pages; so Maybe need to set up a home global querry?
+         <?php global $radio_query; // this is global querry that is also on the radio archives pages; so Maybe need to set up a home global querry?
       //https://kriesi.at/archives/how-to-build-a-wordpress-post-pagination-without-plugin < maybe better solution in terms of genering html
 
          $big = 999999999; // need an unlikely integer
@@ -467,11 +466,13 @@ get_header();?>
 
                 <div class="page-nav-wrapper grid-item grid-item-xs-6">
 
-                <?php echo $radiopaginate;?>
+                  <a href="<?php echo get_home_url(); ?>/radio/page/2">
+                      View Older Radio
+                  </a>
 
                 </div>
             
-              </div>
+            </div>
 
           </div>  <!-- ".page-nav-->     
 
@@ -543,7 +544,7 @@ get_header();?>
                     //}
 
                     /// review the uses of these classes - there's no need for the grid item classes I don't think - check the blocks instead?
-                    ;?>
+                    ?>
             
                     <div class="release-home-item item-<?php echo $releaseitemnumber;?> grid-item <?php echo $layoutclass;?> grid-item-sm-6" data-itemnumber="<?php echo $releaseitemnumnber;?>">
                       <?php get_template_part( 'content', 'releases' );?>
@@ -557,6 +558,7 @@ get_header();?>
 
 
           <?php endif;  // if ( $release_query->have_posts
+
           wp_reset_query();?>
 
       </div><!--.release-home-carousel-->
@@ -577,7 +579,7 @@ get_header();?>
 
       </div><!-- .outer-grid-item outer-grid-item-xs-6 inner-->
 
-    </div><!-- class="release-home-wrapper"-->
+    </div><!-- class="release-home-wrapper grid"-->
 
     <!-- END RELEASES area -->
 

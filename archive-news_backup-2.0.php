@@ -23,6 +23,7 @@ get_header(); ?>
 
 		    </div> <!--.page-title -->
 
+
 		</div><!-- .page-title-position -->
 	
 		<?php
@@ -32,9 +33,12 @@ get_header(); ?>
 			'post_type' => 'news',
 			'post_status' => 'publish',
 			'paged'          => $newspaged,
+			// 'posts_per_page' => 2,
+
 		);
 		// the query
- 		$news_query = new WP_Query( $newsargs ); 
+		//$newstemp = $news_query;
+		$news_query = new WP_Query( $newsargs ); 
 	  	
 	  		if ( $news_query->have_posts() ) :?>
 
@@ -48,6 +52,7 @@ get_header(); ?>
 				We're not on page one
 				
 			<?php endif;  //  are we on page 1*/ ?>
+
 
 	
 			<div class="grid inner outer-grid-item outer-grid-item-xs-6">
@@ -79,13 +84,26 @@ get_header(); ?>
 			<?php
 			// End the loop.
 			endwhile;?>
- 
+	<?php
+//next_posts_link( 'Older Entries', $loop->max_num_pages );
+//previous_posts_link( 'Newer Entries' );
+
+	// posts_nav_link();  
+
+?>
 
  				
 		 	</div><!-- .container added this assuming we have atleast 2 items and .container div exists -->
 
 							
-			<?php	
+			<?php //global $news_query;
+			//https://kriesi.at/archives/how-to-build-a-wordpress-post-pagination-without-plugin < maybe better solution in terms of genering html
+
+			// issuess with pagination:
+			//https://wordpress.stackexchange.com/questions/44537/why-is-page-2-not-working
+			//https://wordpress.stackexchange.com/questions/44537/why-is-page-2-not-working
+		
+		
 			$big = 999999999; // need an unlikely integer
 
 			   $paginate = paginate_links( array(
@@ -94,6 +112,13 @@ get_header(); ?>
 			        'current' => max( 1, get_query_var('paged')),
 			        'total' => $news_query->max_num_pages,
 			        'prev_next' =>true,
+			       // 'before_page_number' =>'<div class="test">',
+			       // 'after_page_number' =>'</div>',
+			 	    //  'format' => '/page/%#%',  
+			//	      'current' => $current_page,  
+			//	      'total' => $total_pages,
+		 		    //   'type' =>  'plain',//list',//array',//list',
+			//     'prev_text' => '<div class="next">' . get_template_part('svg/inline', 'dm_arrow_left.svg') .'</div>',
 					'prev_text' => '<div class="small nav-previous align-left"><svg class="svg-icon previous-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div><div class="text">Newer News</div>',
 					'next_text' => '<div class="small nav-next align-right"><svg class="svg-icon next-arrow-icon" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g fill="#FFFFFF" fill-rule="nonzero"> <polygon transform="translate(19.874778, 20.000000) scale(-1, 1) rotate(-270.000000) translate(-19.874778, -20.000000) " points="19.8747779 29.2278846 37.6296018 6.12522213 39.8747779 7.85068148 19.8747779 33.8747779 -0.12522213 7.85068148 2.1199539 6.12522213"></polygon> </g> </g> </svg></div><div class="text">Older News</div>',
 		    		));
@@ -116,8 +141,12 @@ get_header(); ?>
 
 				<?php endif;  // if we have paginated links ?>
 
-			
-	
+				<?php
+			// clean up after the query and pagination
+		
+			//$news_query = null;
+			//$news_query = $newstemp;?>
+
 			<?php endif;  // if ( $news_query->have_posts
 				wp_reset_query(); 
 

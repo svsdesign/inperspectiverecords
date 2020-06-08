@@ -242,6 +242,32 @@ function remove_default_stylesheet() {
 
 	/* ARTISTS */
 
+
+
+/* This seemingly made the pagination work - but each page just displays the firs page set of posts
+
+    function bamboo_request($query_string )
+    {
+        if( isset( $query_string['page'] ) ) {
+            if( ''!=$query_string['page'] ) {
+                if( isset( $query_string['name'] ) ) {
+                    unset( $query_string['name'] );
+                }
+            }
+        }
+        return $query_string;
+    }
+    add_filter('request', 'bamboo_request');
+
+    add_action('pre_get_posts','bamboo_pre_get_posts');
+    function bamboo_pre_get_posts( $query ) { 
+        if( $query->is_main_query() && !$query->is_feed() && !is_admin() ) { 
+            $query->set( 'paged', str_replace( '/', '', get_query_var( 'page' ) ) ); 
+        } 
+    }
+*/
+
+ 
     /* NEWS */
  
     function post_type_news() {
@@ -266,8 +292,8 @@ function remove_default_stylesheet() {
         // Set other options for Custom Post Type
          
         $args = array(
-            'label'               => __( 'News', 'inperspectiverecords' ),
-            'description'         => __( 'Inperspective Label News', 'inperspectiverecords' ),
+            // 'label'               => __( 'News', 'inperspectiverecords' ),
+            // 'description'         => __( 'Inperspective Label News', 'inperspectiverecords' ),
             'labels'              => $labels,
             // Features this CPT supports in Post Editor
             'taxonomies' => array('post_tag','category'),
@@ -279,6 +305,13 @@ function remove_default_stylesheet() {
             * Parent and child items. A non-hierarchical CPT
             * is like Posts.
             */ 
+            // 'slug' => 'news',
+            // '_builtin'=> true,
+
+            '_builtin' => false, // It's a custom post type, not built in
+            '_edit_link' => 'post.php?post=%d',
+            'capability_type' => 'post',
+            'rewrite' =>  $rewrite,
             'hierarchical'        => false,
             'public'              => true,
             'show_ui'             => true,
@@ -288,24 +321,107 @@ function remove_default_stylesheet() {
           //  'menu_position'       => 5,
             'can_export'          => true,
             'has_archive'         => true,
+            // 'query_var'           => true,
+            // 'rewrite' => array('slug' => 'news', 'with_front' => true ),
+            $rewrite = array(
+                'slug'                  => 'news',
+                'with_front'            => true,
+                'pages'                 => true,
+                'feeds'                 => true,
+            ),
+
+            // 'query_var'           => 'post_type',//false,
             'exclude_from_search' => false,
-            'publicly_queryable'  => true,
-            'capability_type'     => 'post',
-        );
+            'publicly_queryable'  => true
+         );
          
         // Registering your Custom Post Type
+    //  flush_rewrite_rules(false);
+    //  flush_rewrite_rules();
+ 
         register_post_type( 'news', $args );
-     
+
+
+
     }
-     
+    
+
+    
+
+
     /* Hook into the 'init' action so that the function
     * Containing our post type registration is not 
     * unnecessarily executed. 
     */
      
-    add_action( 'init', 'post_type_news', 0 );
+    add_action( 'init', 'post_type_news' );
+ 
+ /*   add_action( 'pre_get_posts', function ( $query ) {
+        if ( $query->is_post_type_archive( 'news' ) && $query->is_main_query() && ! is_admin() ) {
+          $query->set( 'posts_per_page', 7 );
+        }
+      } );
+      */
+   /* add_action( 'pre_get_posts', function ( $q ) {
+
+        if( !is_admin() && $q->is_main_query() && $q->is_post_type_archive( 'news' ) ) {
+    
+            $q->set( 'posts_per_page', 5 );
+    
+        }
+    
+    });*/
+ /*
+    function custom_posts_per_page( $query ) {
+
+        if ( $query->is_archive('news') ) {
+            set_query_var('posts_per_page', 5);
+        }
+        }
+        add_action( 'pre_get_posts', 'custom_posts_per_page' );*/
+
+    /*
+    add_action( 'pre_get_posts' ,'wpse222471_query_post_type_news', 1, 1 );
+    function wpse222471_query_post_type_portofolio( $query )
+    {
+        if ( ! is_admin() && is_post_type_archive( 'news' ) && $query->is_main_query() )
+        {
+            $query->set( 'posts_per_page', 5 ); //set query arg ( key, value )
+        }
+    }*/
 
 
+/*
+ 
+function set_posts_per_page_for_news( $news_query ) {
+    if ( !is_admin() &&  $news_query ->is_main_query() && is_post_type_archive( 'news' ) ) {
+      $news_query->set( 'posts_per_page', '6' );
+    }
+  }
+  add_action( 'pre_get_posts', 'set_posts_per_page_for_news' );
+ */
+  
+/*
+    add_action( 'parse_query','changept' );
+    function changept() {
+        if( is_category() && !is_admin() )
+            // set_query_var( 'post_type', array( 'post', 'your_custom_type' ) );
+            set_query_var( 'post_type', array( 'post', 'news' ) );
+
+            return;
+    }
+*/
+
+    /**
+ * Fix pagination on archive pages
+ * After adding a rewrite rule, go to Settings > Permalinks and click Save to flush the rules cache
+ */
+/*
+function my_pagination_rewrite() {
+    add_rewrite_rule('news/page/?([0-9]{1,})/?$', 'index.php?category_name=blog&paged=$matches[1]', 'top');
+}
+add_action('init', 'my_pagination_rewrite');
+*/
 
 /// START BLOCKS 
 
@@ -808,15 +924,15 @@ add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );
         '_builtin' => false, // It's a custom post type, not built in
         '_edit_link' => 'post.php?post=%d',
         'capability_type' => 'post',
-       // 'rewrite' => array("slug" => "radio"), // Permalinks
-        'query_var' => true,
+        //  'rewrite' => array("slug" => "radio"), // Permalinks
+        // 'query_var' => true,
         'menu_position' => null
       );
  
-        //   flush_rewrite_rules( false );
-
+  flush_rewrite_rules( false );
 
     register_post_type( 'radio' , $args );
+    // flush_rewrite_rules();
 
 
     }
@@ -827,6 +943,41 @@ add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );
     // END CUSTOMPOST TYPE: Radio
     */
 
+    add_action( 'pre_get_posts' ,'wpse222471_query_post_type_radio', 1, 1 );
+    function wpse222471_query_post_type_portofolio( $query )
+    {
+        if ( ! is_admin() && is_post_type_archive( 'radio' ) && $query->is_main_query() )
+        {
+            $query->set( 'posts_per_page', 6 ); //set query arg ( key, value )
+        }
+    }
+
+
+
+/* setting pagination */
+// 1. Pre aug 19' I'm not sure this - radio pagination - is being used - or works- doesn't work because I'm dong a new query 
+// 2. Aug 19' - !should remove that (in the radio-arhive.php template, as I did for news - i.e the below for news works now :)
+// 3. doesnt updae teh links / or content
+function set_posts_per_page_for_radio( $radio_query ) {
+    if ( !is_admin() &&  $radio_query ->is_main_query() && is_post_type_archive( 'radio' ) ) {
+      $radio_query->set( 'posts_per_page', '4' );
+    }
+  }
+  //add_action( 'pre_get_posts', 'set_posts_per_page_for_radio' );
+  // end I'm not sure this - radio pagination - is being used - or works?
+  
+  
+  
+  /* setting pagination */
+   function set_posts_per_page_for_news( $news_query ) {
+    if ( !is_admin() &&  $news_query->is_main_query() && is_post_type_archive( 'news' ) ) {
+      $news_query->set( 'posts_per_page', '16' );
+    }
+  }
+  //add_action( 'pre_get_posts', 'set_posts_per_page_for_news' );
+   /* end setting pagination */
+  
+  /* setting pagination number */
 
 
 /* Deletet this whole comment blow - we are registering post type above iwth. the label
@@ -1944,29 +2095,6 @@ add_action( 'init', 'register_navigations' );
 /* End Add Navigations */
 
 
-/* setting pagination */
-// 1. Pre aug 19' I'm not sure this - radio pagination - is being used - or works- doesn't work because I'm dong a new query 
-// 2. Aug 19' - !should remove that (in the radio-arhive.php template, as I did for news - i.e the below for news works now :)
-function set_posts_per_page_for_radio( $radio_query ) {
-  if ( !is_admin() &&  $radio_query ->is_main_query() && is_post_type_archive( 'radio' ) ) {
-    $radio_query->set( 'posts_per_page', '4' );
-  }
-}
-add_action( 'pre_get_posts', 'set_posts_per_page_for_radio' );
-// end I'm not sure this - radio pagination - is being used - or works?
-
-
-
-/* setting pagination */
- function set_posts_per_page_for_news( $news_query ) {
-  if ( !is_admin() &&  $news_query->is_main_query() && is_post_type_archive( 'news' ) ) {
-    $news_query->set( 'posts_per_page', '16' );
-  }
-}
-add_action( 'pre_get_posts', 'set_posts_per_page_for_news' );
- /* end setting pagination */
-
-/* setting pagination number */
 
 /*admin favicons */
  function add_favicon() {
@@ -1985,6 +2113,5 @@ add_action( 'pre_get_posts', 'set_posts_per_page_for_news' );
 add_action('login_head', 'add_favicon');
 add_action('admin_head', 'add_favicon');
 /* end admin favicons */
-
 
 ?>

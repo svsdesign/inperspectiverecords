@@ -10,7 +10,7 @@
 
 get_header();?>
 
-		<article class="container grid">
+		<div class="container grid">
 		 
 			<?php
 			$now = current_time( 'timestamp' ); // Get current unix timestamp
@@ -23,7 +23,7 @@ get_header();?>
 				'post_status' => 'publish', // only show published events
 				'order' => 'DESC', // Show earlier events last
 				'paged' => $paged,
-				'posts_per_page' => 9,
+				'posts_per_page' => 2,
 
 				'orderby' =>  'meta_value',
 				'meta_key' =>  'show_start_date',
@@ -118,186 +118,187 @@ get_header();?>
 							$soundcloudembed =  get_field('soundcloud_embed'); // iframe / file?
 							$public =  get_field('is_item_public'); // iframe / file?
 							
-//var_dump($public);
+						//var_dump($public);
 
-					 // initial counter if we have post
-					if(1 == $paged): // page one: 
+								// initial counter if we have post
+								if(1 == $paged): // page one: 
 
-						if ($itemno == 1): // of first item of archive :?>
-					
-							<?php if($featureimage): ?>
-
-								<div class="cover-image-item outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo $featureimage;?>');">
-								</div><!-- image-item -->
-
-							<?php endif; //$featureimage  ?>
-
-						 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> outer-grid-item inner outer-grid-item-xs-8 outer-grid-item-sm-6 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
-
-								<div class="wrapping grid">	
+									if ($itemno == 1): // of first item of archive :?>
 								
-									<a class="radio-item radio-item-<?php echo $itemno;?> grid-item grid-item-xs-1" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+										<?php if($featureimage): ?>
 
-					 					<div class="play-icon-wrap">
+											<div class="cover-image-item outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo $featureimage;?>');">
+											</div><!-- image-item -->
 
-										 	<div class="play-toggle">
+										<?php endif; //$featureimage  ?>
 
-												<svg id="playertoggle_<?php echo $showid?>" class="playertoggle"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+										<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> outer-grid-item inner outer-grid-item-xs-8 outer-grid-item-sm-6 <?php if ($itemno != "1"):?>grid-item-md-4<?php endif;?>">
+
+											<div class="wrapping grid">	
+											
+												<a class="radio-item radio-item-<?php echo $itemno;?> grid-item grid-item-xs-1" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+
+													<div class="play-icon-wrap">
+
+														<div class="play-toggle">
+
+															<svg id="playertoggle_<?php echo $showid?>" class="playertoggle"  width="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"> 
+																
+																<path class="play-inline" id="play_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+																<path class="play-left-inline"id="play-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
+																<path class="play-right-inline" id="play-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+																<path opacity="0" id="pause_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+																<path opacity="0" id="pause-left_<?php echo $showid?>" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
+																<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
+																<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
+																<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
+																<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+															
+															</svg> 
+
+														</div>
+
+													</div>
+																		
+												</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
+											
+												<a class="view-radio-item view-radio-item-<?php echo $itemno;?> grid-item grid-item-xs-5 grid-item-sm-4 grid-item-md-5" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
 													
-													<path class="play-inline" id="play_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-													<path class="play-left-inline"id="play-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/> 
-													<path class="play-right-inline" id="play-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
-													<path opacity="0" id="pause_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-													<path opacity="0" id="pause-left_<?php echo $showid?>" d="M447,1000 0,1000 0,0 447,0 447,500.084 z" fill-rule="nonzero"/> 
-													<path opacity="0" id="pause-right_<?php echo $showid?>" d="M1000,1000 553,1000 553,0 1000,0 1000,500 z" fill-rule="nonzero"/> 
-													<path style="display:none;" id="play-path_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084" fill-rule="nonzero"/> 
-													<path style="display:none;" id="play-path-left_<?php echo $showid?>" d="M501.186,250.593 0,0 0,1000 501.186,749.407 z" fill-rule="nonzero"/>
-													<path style="display:none;" id="play-path-right_<?php echo $showid?>" d="M1000,500.083 501.186,251.083 501.186,749.084 z" fill-rule="nonzero"/> 
+													<div class="details-wrap">
+															
+														<div class="radio-date">
+															<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
+														</div><!-- .date -->
+														
+														<div class="radio-view-item">
+															View Show
+														</div><!--view-item-->
+														
+
+														<?php if($showtitle): ?>
+
+															<div class="radio-name">	
+															<?php echo $showtitle; ?>
+															</div><!-- .event-name -->
+													
+														<?php endif; //$name ?>	
+
+													</div><!--.outer-grid-item inner -->
+
+												</a>
 												
-												</svg> 
+											</div><!-- wrapping -->
 
-											</div>
+										</li>
 
-									    </div>
-														 	
-									</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
-								
-									<a class="view-radio-item view-radio-item-<?php echo $itemno;?> grid-item grid-item-xs-5 grid-item-sm-4 grid-item-md-5" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
-										
-										<div class="details-wrap">
-	 											
-											<div class="radio-date">
-												<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
-											 </div><!-- .date -->
+									<?php else:// other itmems
+									//else if ($itemno == 1){ // NOt the first item
+									?>
+
+										<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="test radio-item-li  <?php if ($itemno != "1"):?><?php if ($itemno > "7"):?> outer-grid-item outer-grid-item-xs-6 <?php else:?> grid-item grid-item-xs-6 grid-item-md-3 <?php endif;?> <?php else:?> grid-item grid-item-xs-6 <?php endif;?>">
+
+											<div class="wrapping <?php if ($itemno > "7")://if items on rows?>grid<?php endif;?>">	
 											
-											<div class="radio-view-item">
-												View Show
-											</div><!--view-item-->
+												<a class="radio-item radio-item-<?php echo $itemno;?> <?php if ($itemno > "7")://if items on rows?>grid-item grid-item-xs-1<?php endif;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+
+													<?php get_template_part( 'content-radio' );?>
+													
+												</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
 											
+												<a class="view-radio-item view-radio-item-<?php echo $itemno;?> <?php if ($itemno > "7")://if items on rows?>grid-item grid-item-xs-5<?php endif;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
+													
+													<div class="details-wrap"><!-- classes - delete? outer-grid-item inner outer-grid-item-sm-6"-->
+															
+														<div class="radio-date">
+															<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
+														</div><!-- .date -->
+														
+														<div class="radio-view-item">
+															View Show
+														</div><!--view-item-->
+														
 
-											<?php if($showtitle): ?>
+														<?php if($showtitle): ?>
 
-												<div class="radio-name">	
-												<?php echo $showtitle; ?>
-							 					</div><!-- .event-name -->
-										
-											<?php endif; //$name ?>	
+															<div class="radio-name">	
+															<?php echo $showtitle; ?>
+															</div><!-- .event-name -->
+													
+														<?php endif; //$name ?>	
 
-										</div><!--.outer-grid-item inner -->
+													</div><!--.details-wrap -->
 
-									</a>
-									
-								</div><!-- wrapping -->
+												</a>
+												
+											</div><!-- wrapping -->
 
-				 			</li>
+										</li>
 
-			 			<?php else:// other itmems
-			 			//else if ($itemno == 1){ // NOt the first item
-			 			?>
+									<?php endif;// of item = 1
 
-			 				<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="test radio-item-li  <?php if ($itemno != "1"):?><?php if ($itemno > "7"):?> outer-grid-item outer-grid-item-xs-6 <?php else:?> grid-item grid-item-xs-6 grid-item-md-3 <?php endif;?> <?php else:?> grid-item grid-item-xs-6 <?php endif;?>">
+									if($itemno == 1): ?>
+									</div>  <!-- top container--> 
+									<div class="container radio-items outer-grid-item outer-grid-item-sm-6 inner grid">  
+									<?php endif; //item no == 2  
 
-								<div class="wrapping <?php if ($itemno > "7")://if items on rows?>grid<?php endif;?>">	
-								
-									<a class="radio-item radio-item-<?php echo $itemno;?> <?php if ($itemno > "7")://if items on rows?>grid-item grid-item-xs-1<?php endif;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
-
-					 					<?php get_template_part( 'content-radio' );?>
-									 	
-									</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
-								
-									<a class="view-radio-item view-radio-item-<?php echo $itemno;?> <?php if ($itemno > "7")://if items on rows?>grid-item grid-item-xs-5<?php endif;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
-										
-										<div class="details-wrap"><!-- classes - delete? outer-grid-item inner outer-grid-item-sm-6"-->
-	 											
-											<div class="radio-date">
-												<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
-											 </div><!-- .date -->
-											
-											<div class="radio-view-item">
-												View Show
-											</div><!--view-item-->
-											
-
-											<?php if($showtitle): ?>
-
-												<div class="radio-name">	
-												<?php echo $showtitle; ?>
-							 					</div><!-- .event-name -->
-										
-											<?php endif; //$name ?>	
-
-										</div><!--.details-wrap -->
-
-									</a>
-									
-								</div><!-- wrapping -->
-
-				 			</li>
-
-						<?php endif;// of item = 1
-
-						if($itemno == 1): ?>
-						</div>  <!-- top container--> 
-				 		<div class="container radio-items outer-grid-item outer-grid-item-sm-6 inner grid">  
-					 	<?php endif; //item no == 2  
-
-						if($itemno == 7): ?>
-						</div>  <!-- container--> 
-				 		<div class="container radio-items bottom-container outer-grid-item outer-grid-item-sm-6 inner">  
-				 
-				 			<div class="bottom-title"><!-- review the usages of this, was 'Other shows' -->
- 					 		</div>
-
-					 	<?php endif; //item no == 7  
-
-					else: // not page 1:
-						
-						$showid = get_the_ID();	
-						$showtitle = get_the_title();// title						
-						$soundcloudlink = get_field('soundcloud_link');
-						?>
-
-					 	<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> grid-item grid-item-xs-6 grid-item-md-3">
-
-							<div class="wrapping">	
+									if($itemno == 7): ?>
+									</div>  <!-- container--> 
+									<div class="container radio-items bottom-container outer-grid-item outer-grid-item-sm-6 inner">  
 							
-								<a class="radio-item radio-item-<?php echo $itemno;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+										<div class="bottom-title"><!-- review the usages of this, was 'Other shows' -->
+										</div>
 
-				 					<?php get_template_part( 'content-radio' );?>
-								 	
-								</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
-							
-								<a class="view-radio-item view-radio-item-<?php echo $itemno;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
+									<?php endif; //item no == 7  
+
+								else: // not page 1:
 									
-									<div class="details-wrap"><!-- classes - delete? outer-grid-item inner outer-grid-item-sm-6"-->
- 											
-										<div class="radio-date">
-											<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
-										 </div><!-- .date -->
+									$showid = get_the_ID();	
+									$showtitle = get_the_title();// title						
+									$soundcloudlink = get_field('soundcloud_link');
+									?>
+
+									<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $itemno;?> grid-item grid-item-xs-6 grid-item-md-3">
+
+										<div class="wrapping">	
 										
-										<div class="radio-view-item">
-											View Show
-										</div><!--view-item-->
+											<a class="radio-item radio-item-<?php echo $itemno;?>" title="play <?php echo $showtitle; ?>" id="radio-item-<?php echo $showid?>">
+
+												<?php get_template_part( 'content-radio' );?>
+												
+											</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
 										
+											<a class="view-radio-item view-radio-item-<?php echo $itemno;?>" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
+												
+												<div class="details-wrap"><!-- classes - delete? outer-grid-item inner outer-grid-item-sm-6"-->
+														
+													<div class="radio-date">
+														<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
+													</div><!-- .date -->
+													
+													<div class="radio-view-item">
+														View Show
+													</div><!--view-item-->
+													
 
-										<?php if($showtitle): ?>
+													<?php if($showtitle): ?>
 
-											<div class="radio-name">	
-											<?php echo $showtitle; ?>
-						 					</div><!-- .event-name -->
-									
-										<?php endif; //$name ?>	
+														<div class="radio-name">	
+														<?php echo $showtitle; ?>
+														</div><!-- .event-name -->
+												
+													<?php endif; //$name ?>	
 
-									</div><!--.details-wrap -->
+												</div><!--.details-wrap -->
 
-								</a>
-								
-							</div><!-- wrapping -->
+											</a>
+											
+										</div><!-- wrapping -->
 
-			 			</li>
- 								
-					<?php endif;  //  are we on page 1
-					$itemno++;
+									</li>
+											
+								<?php endif;  //  are we on page 1
+								$itemno++;
+
 					endwhile;// End the loop. ?>
 				
 		 			</div><!-- .container added this assuming we have atleast 2 items and .container div exists -->
@@ -362,7 +363,7 @@ get_header();?>
 											 
 				 
 
- 		</article><!-- -->
+			</div><!-- -->
 
 
 <?php get_footer(); ?>

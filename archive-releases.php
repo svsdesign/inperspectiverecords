@@ -41,11 +41,11 @@ get_header(); ?>
 							
 		<?php
 		// set the "paged" parameter (use 'page' if the query is on a static front page)
-		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		$releasepaged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$releasesargs = array(
 			'posts_per_page' => 99,
 			'post_type' => 'releases',
-			'paged'          => $paged
+			'paged'          => $releasepaged,
 		);
 		// the query
 		$releases_query = new WP_Query( $releasesargs ); 
