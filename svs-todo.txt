@@ -4,7 +4,7 @@ To Do:
 STAGING
 
 Make sure this setup, so we can savely push updates live
-
+sftp://178.62.43.92:22//applications/hvukffatkp/public_html/wp-content/themes/inperspectiverecords
 
 - Home page
 
@@ -21,6 +21,8 @@ Make sure this setup, so we can savely push updates live
  
  	- fine tune the player on the archive page - the icons; the alligment.
  	- fine tune the player - click on the title should probaly take the use to that page (and not soundcloud)
+	- If adblocker runing - it https://stackoverflow.com/questions/4869154/how-to-detect-adblock-on-my-website
+
 
 - Releases
 
@@ -28,7 +30,7 @@ Make sure this setup, so we can savely push updates live
 	- Add all releases: i.e content for each; cover image, disc etc.
 	- create image for the white / small disc - including the sticker etc - how when it moves?
 	- Devise a design & coding solution for digital release. How do we animate them, as we can't use rolling vinyl discs.
-
+	- resolve this php template http://localhost:8888/inp-wp/artists/andy-skopes/
 
 SEO + "rich" web search / sharing
 	- what measure / changes to ensure good meta data is supplied

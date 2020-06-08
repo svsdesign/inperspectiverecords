@@ -4077,7 +4077,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(71deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(60deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -5595,29 +5595,29 @@ body.cookies-not-set.preview-site.g-scale .cookie-notice-container:after {
   background-size: 300% 300%;
 }
 
-/* line 93, assets/sass/_partials/_cookie-banner.scss */
+/* line 103, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused.post-type-archive-releases .scene-fixer, body.cookies-refused.preview-site.g-scale.post-type-archive-releases .scene-fixer {
   animation: tograyscale 2s ease-in-out forwards;
 }
-/* line 104, assets/sass/_partials/_cookie-banner.scss */
+/* line 114, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused:not(.post-type-archive-releases) .ajax-container, body.cookies-refused.preview-site.g-scale:not(.post-type-archive-releases) .ajax-container {
   animation: tograyscale 2s ease-in-out forwards;
 }
-/* line 114, assets/sass/_partials/_cookie-banner.scss */
+/* line 124, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused.preview-site.post-type-archive-releases .scene-fixer {
   animation: tocolour 1s ease-in-out forwards;
 }
-/* line 122, assets/sass/_partials/_cookie-banner.scss */
+/* line 132, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused.preview-site:not(.post-type-archive-releases) .ajax-container {
   animation: tocolour 1s ease-in-out forwards;
 }
-/* line 132, assets/sass/_partials/_cookie-banner.scss */
+/* line 142, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused.preview-site .cookie-notice-container {
   --borderWidth: 3px;
   position: relative;
   border-radius: var(--borderWidth);
 }
-/* line 138, assets/sass/_partials/_cookie-banner.scss */
+/* line 148, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused.preview-site .cookie-notice-container:after {
   content: '';
   position: absolute;
@@ -5630,45 +5630,45 @@ body.cookies-refused.preview-site .cookie-notice-container:after {
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
 }
-/* line 155, assets/sass/_partials/_cookie-banner.scss */
+/* line 165, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused.preview-site.g-scale .cookie-notice-container:after {
   background: linear-gradient(60deg, #000000, #ffffff, #000000);
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
 }
 
-/* line 169, assets/sass/_partials/_cookie-banner.scss */
+/* line 179, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted #cookie-notice {
   display: none;
 }
-/* line 174, assets/sass/_partials/_cookie-banner.scss */
+/* line 184, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted .cookie-notice-revoke-container {
   display: none !important;
   visibility: hidden;
 }
-/* line 182, assets/sass/_partials/_cookie-banner.scss */
+/* line 192, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted.post-type-archive-releases .scene-fixer {
   animation: tocolour 1s ease-in-out forwards;
 }
-/* line 190, assets/sass/_partials/_cookie-banner.scss */
+/* line 200, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted:not(.post-type-archive-releases) .ajax-container {
   animation: tocolour 1s ease-in-out forwards;
 }
-/* line 199, assets/sass/_partials/_cookie-banner.scss */
+/* line 209, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted.preview-site.g-scale.post-type-archive-releases .scene-fixer {
   animation: tograyscale 2s ease-in-out forwards;
 }
-/* line 208, assets/sass/_partials/_cookie-banner.scss */
+/* line 218, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted.preview-site.g-scale:not(.post-type-archive-releases) .ajax-container {
   animation: tograyscale 2s ease-in-out forwards;
 }
-/* line 216, assets/sass/_partials/_cookie-banner.scss */
+/* line 226, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted.preview-site .cookie-notice-container {
   --borderWidth: 3px;
   position: relative;
   border-radius: var(--borderWidth);
 }
-/* line 222, assets/sass/_partials/_cookie-banner.scss */
+/* line 232, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted.preview-site .cookie-notice-container:after {
   content: '';
   position: absolute;
@@ -5681,56 +5681,61 @@ body.cookies-accepted.preview-site .cookie-notice-container:after {
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
 }
-/* line 240, assets/sass/_partials/_cookie-banner.scss */
+/* line 250, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted.preview-site.g-scale .cookie-notice-container:after {
   background: linear-gradient(60deg, #000000, #ffffff, #000000);
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
 }
 
-/* line 260, assets/sass/_partials/_cookie-banner.scss */
+/* line 270, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-accepted #cn-accept-cookie {
   opacity: 0.2;
 }
 
-/* line 280, assets/sass/_partials/_cookie-banner.scss */
+/* line 290, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused #cookie-cont {
-  width: 6.25vw;
-  height: 6.25vw;
   background: transparent;
 }
-@media (min-width: 320px) {
-  /* line 280, assets/sass/_partials/_cookie-banner.scss */
+@media (min-width: 0px) {
+  /* line 290, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused #cookie-cont {
     width: 12.5vw;
     height: 12.5vw;
   }
 }
-/* line 292, assets/sass/_partials/_cookie-banner.scss */
+@media (min-width: 320px) {
+  /* line 290, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-refused #cookie-cont {
+    width: 12.5vw;
+    height: 12.5vw;
+  }
+}
+/* line 305, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused #cookie-notice {
   height: 100%;
   padding: 30%;
 }
-/* line 297, assets/sass/_partials/_cookie-banner.scss */
+/* line 310, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused .cookie-notice-container {
   display: none;
 }
-/* line 302, assets/sass/_partials/_cookie-banner.scss */
+/* line 315, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused #cn-refuse-cookie {
   opacity: 0.2;
 }
-/* line 306, assets/sass/_partials/_cookie-banner.scss */
+/* line 319, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused #cn-revoke-cookie {
   height: inherit;
 }
-/* line 310, assets/sass/_partials/_cookie-banner.scss */
+/* line 323, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused .cookie-notice-revoke-container {
   height: inherit;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
 }
-/* line 319, assets/sass/_partials/_cookie-banner.scss */
+/* line 332, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused .cookie-notice-revoke-container a {
   height: inherit;
   padding: 0px;
@@ -5748,78 +5753,78 @@ body.cookies-refused .cookie-notice-revoke-container a {
   color: transparent;
 }
 @media screen and (min-width: 0px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     font-size: calc(10px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     font-size: 12.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     font-size: calc(12.8px + 6.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     font-size: 19.2px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     line-height: calc(18px + 2.8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     line-height: 20.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     line-height: calc(26px + -0.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     line-height: 25.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     font-size: calc(7.2px + 3.2 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     font-size: 10.4px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     font-size: calc(10.4px + 2.4 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 319, assets/sass/_partials/_cookie-banner.scss */
+  /* line 332, assets/sass/_partials/_cookie-banner.scss */
   body.cookies-refused .cookie-notice-revoke-container a {
     font-size: 12.8px;
   }
 }
-/* line 333, assets/sass/_partials/_cookie-banner.scss */
+/* line 346, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-refused .cookie-notice-revoke-container a:after {
   content: '';
   position: absolute;
@@ -5832,23 +5837,111 @@ body.cookies-refused .cookie-notice-revoke-container a:after {
   background-size: 800% 800%;
 }
 
-/* line 355, assets/sass/_partials/_cookie-banner.scss */
+/* line 368, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-set.cookies-revoke #cookie-cont {
   width: 100%;
   height: inherit;
   background: black;
 }
-/* line 361, assets/sass/_partials/_cookie-banner.scss */
+/* line 374, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-set.cookies-revoke #cookie-notice {
   display: flex;
 }
-/* line 366, assets/sass/_partials/_cookie-banner.scss */
+/* line 379, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-set.cookies-revoke .cookie-notice-container {
   display: flex;
 }
-/* line 370, assets/sass/_partials/_cookie-banner.scss */
+/* line 383, assets/sass/_partials/_cookie-banner.scss */
 body.cookies-set.cookies-revoke .footer-wrap {
-  padding-bottom: 200px;
+  padding-bottom: 144px;
+  padding-bottom: 208px;
+}
+@media screen and (min-width: 0px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: calc(144px + 64 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: 208px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: calc(208px + 48 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: 256px;
+  }
+}
+@media (min-width: 320px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: 108px;
+    padding-bottom: 156px;
+  }
+}
+@media screen and (min-width: 320px) and (min-width: 0px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: calc(108px + 48 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 320px) and (min-width: 960px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: 156px;
+  }
+}
+@media screen and (min-width: 320px) and (min-width: 960px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: calc(156px + 36 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 320px) and (min-width: 1440px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: 192px;
+  }
+}
+
+@media (min-width: 640px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: 108px;
+    padding-bottom: 156px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 0px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: calc(108px + 48 * (100vw - 0px) / 960);
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 960px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: 156px;
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 960px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: calc(156px + 36 * (100vw - 960px) / 480);
+  }
+}
+@media screen and (min-width: 640px) and (min-width: 1440px) {
+  /* line 383, assets/sass/_partials/_cookie-banner.scss */
+  body.cookies-set.cookies-revoke .footer-wrap {
+    padding-bottom: 192px;
+  }
 }
 
 /* start styling 
@@ -5861,7 +5954,7 @@ TO DO:"
 "
 
 */
-/* line 405, assets/sass/_partials/_cookie-banner.scss */
+/* line 425, assets/sass/_partials/_cookie-banner.scss */
 #cookie-cont {
   display: block;
   position: fixed;
@@ -5874,7 +5967,7 @@ TO DO:"
   z-index: 99999;
 }
 
-/* line 417, assets/sass/_partials/_cookie-banner.scss */
+/* line 437, assets/sass/_partials/_cookie-banner.scss */
 #cookie-notice {
   display: block;
   pointer-events: initial;
@@ -5889,65 +5982,65 @@ TO DO:"
   line-height: 26px;
 }
 @media screen and (min-width: 0px) {
-  /* line 417, assets/sass/_partials/_cookie-banner.scss */
+  /* line 437, assets/sass/_partials/_cookie-banner.scss */
   #cookie-notice {
     font-size: calc(10px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 417, assets/sass/_partials/_cookie-banner.scss */
+  /* line 437, assets/sass/_partials/_cookie-banner.scss */
   #cookie-notice {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 417, assets/sass/_partials/_cookie-banner.scss */
+  /* line 437, assets/sass/_partials/_cookie-banner.scss */
   #cookie-notice {
     font-size: calc(16px + 14 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 417, assets/sass/_partials/_cookie-banner.scss */
+  /* line 437, assets/sass/_partials/_cookie-banner.scss */
   #cookie-notice {
     font-size: 30px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 417, assets/sass/_partials/_cookie-banner.scss */
+  /* line 437, assets/sass/_partials/_cookie-banner.scss */
   #cookie-notice {
     line-height: calc(18px + 8 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 417, assets/sass/_partials/_cookie-banner.scss */
+  /* line 437, assets/sass/_partials/_cookie-banner.scss */
   #cookie-notice {
     line-height: 26px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 417, assets/sass/_partials/_cookie-banner.scss */
+  /* line 437, assets/sass/_partials/_cookie-banner.scss */
   #cookie-notice {
     line-height: calc(26px + 6 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 417, assets/sass/_partials/_cookie-banner.scss */
+  /* line 437, assets/sass/_partials/_cookie-banner.scss */
   #cookie-notice {
     line-height: 32px;
   }
 }
 
-/* line 436, assets/sass/_partials/_cookie-banner.scss */
+/* line 456, assets/sass/_partials/_cookie-banner.scss */
 .cn-top {
   top: 0;
 }
 
-/* line 440, assets/sass/_partials/_cookie-banner.scss */
+/* line 460, assets/sass/_partials/_cookie-banner.scss */
 .cn-bottom {
   bottom: 0;
 }
 
-/* line 444, assets/sass/_partials/_cookie-banner.scss */
+/* line 464, assets/sass/_partials/_cookie-banner.scss */
 .cookie-notice-container {
   text-align: left;
   width: 100%;
@@ -5958,7 +6051,7 @@ TO DO:"
 */
 }
 
-/* line 463, assets/sass/_partials/_cookie-banner.scss */
+/* line 483, assets/sass/_partials/_cookie-banner.scss */
 .cookie-notice-revoke-container {
   position: absolute;
   bottom: 0;
@@ -5967,18 +6060,18 @@ TO DO:"
   visibility: hidden;
 }
 
-/* line 471, assets/sass/_partials/_cookie-banner.scss */
+/* line 491, assets/sass/_partials/_cookie-banner.scss */
 .cn-top .cookie-notice-revoke-container {
   top: 0;
   bottom: auto;
 }
 
-/* line 476, assets/sass/_partials/_cookie-banner.scss */
+/* line 496, assets/sass/_partials/_cookie-banner.scss */
 #cookie-notice .cn-revoke-cookie {
   margin: 0;
 }
 
-/* line 480, assets/sass/_partials/_cookie-banner.scss */
+/* line 500, assets/sass/_partials/_cookie-banner.scss */
 .cn-button.wp-default,
 .cn-button.wp-default:hover,
 .cn-button.bootstrap,
@@ -5987,7 +6080,7 @@ TO DO:"
   text-decoration: none;
 }
 
-/* line 494, assets/sass/_partials/_cookie-banner.scss */
+/* line 514, assets/sass/_partials/_cookie-banner.scss */
 .cn-button.wp-default,
 .cn-button.bootstrap,
 .cn-button {
@@ -6009,7 +6102,7 @@ TO DO:"
   display: block;
 }
 @media screen and (min-width: 0px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6017,7 +6110,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6025,7 +6118,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6033,7 +6126,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6041,7 +6134,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6049,7 +6142,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6057,7 +6150,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6065,7 +6158,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6073,7 +6166,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6081,7 +6174,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6089,7 +6182,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6097,7 +6190,7 @@ TO DO:"
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 494, assets/sass/_partials/_cookie-banner.scss */
+  /* line 514, assets/sass/_partials/_cookie-banner.scss */
   .cn-button.wp-default,
   .cn-button.bootstrap,
   .cn-button {
@@ -6105,7 +6198,7 @@ TO DO:"
   }
 }
 
-/* line 529, assets/sass/_partials/_cookie-banner.scss */
+/* line 549, assets/sass/_partials/_cookie-banner.scss */
 .cn-button.wp-default:hover,
 .cn-button.bootstrap:hover,
 .cn-button:hover {
@@ -6114,7 +6207,7 @@ TO DO:"
   border: 1px solid white;
 }
 
-/* line 538, assets/sass/_partials/_cookie-banner.scss */
+/* line 558, assets/sass/_partials/_cookie-banner.scss */
 .cn-button.bootstrap {
   /*   font-family: sans-serif;
      display: inline-block;
@@ -6157,7 +6250,7 @@ TO DO:"
      */
 }
 
-/* line 580, assets/sass/_partials/_cookie-banner.scss */
+/* line 600, assets/sass/_partials/_cookie-banner.scss */
 .cn-button.bootstrap:hover {
   /*
   color: #fff;
@@ -6171,7 +6264,7 @@ TO DO:"
   */
 }
 
-/* line 594, assets/sass/_partials/_cookie-banner.scss */
+/* line 614, assets/sass/_partials/_cookie-banner.scss */
 #cn-notice-text {
   padding-bottom: 5.4px;
   padding-bottom: 7.8px;
@@ -6179,55 +6272,55 @@ TO DO:"
   padding-top: 7.8px;
 }
 @media screen and (min-width: 0px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-bottom: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-bottom: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-bottom: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-bottom: 9.6px;
   }
 }
 @media screen and (min-width: 0px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-top: calc(5.4px + 2.4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-top: 7.8px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-top: calc(7.8px + 1.8 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 1440px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-top: 9.6px;
   }
 }
 @media (min-width: 640px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-bottom: 9px;
     padding-bottom: 13px;
@@ -6236,49 +6329,49 @@ TO DO:"
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-bottom: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-bottom: 13px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-bottom: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-bottom: 16px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 0px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-top: calc(9px + 4 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-top: 13px;
   }
 }
 @media screen and (min-width: 640px) and (min-width: 960px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-top: calc(13px + 3 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 640px) and (min-width: 1440px) {
-  /* line 594, assets/sass/_partials/_cookie-banner.scss */
+  /* line 614, assets/sass/_partials/_cookie-banner.scss */
   #cn-notice-text {
     padding-top: 16px;
   }
@@ -6296,14 +6389,14 @@ TO DO:"
     }
 }
  */
-/* line 617, assets/sass/_partials/_cookie-banner.scss */
+/* line 637, assets/sass/_partials/_cookie-banner.scss */
 .cn-revoke-cookie.cn-button {
   width: 100%;
   background: transparent;
   color: white;
 }
 
-/* line 624, assets/sass/_partials/_cookie-banner.scss */
+/* line 644, assets/sass/_partials/_cookie-banner.scss */
 #cn-accept-cookie {
   display: block;
   float: left;
@@ -6312,19 +6405,19 @@ TO DO:"
   border: 1px solid white;
 }
 @media (min-width: 320px) {
-  /* line 624, assets/sass/_partials/_cookie-banner.scss */
+  /* line 644, assets/sass/_partials/_cookie-banner.scss */
   #cn-accept-cookie {
     flex: auto;
   }
 }
-/* line 637, assets/sass/_partials/_cookie-banner.scss */
+/* line 657, assets/sass/_partials/_cookie-banner.scss */
 #cn-accept-cookie:hover {
   background: white;
   color: black;
   border: 1px solid white;
 }
 
-/* line 645, assets/sass/_partials/_cookie-banner.scss */
+/* line 665, assets/sass/_partials/_cookie-banner.scss */
 #cn-more-info {
   background: transparent;
   color: white;
@@ -6333,13 +6426,13 @@ TO DO:"
   clear: both;
 }
 @media (min-width: 320px) {
-  /* line 645, assets/sass/_partials/_cookie-banner.scss */
+  /* line 665, assets/sass/_partials/_cookie-banner.scss */
   #cn-more-info {
     flex: auto;
   }
 }
 
-/* line 661, assets/sass/_partials/_cookie-banner.scss */
+/* line 681, assets/sass/_partials/_cookie-banner.scss */
 #cn-refuse-cookie {
   float: right;
   display: block;
@@ -6347,7 +6440,7 @@ TO DO:"
   color: white;
 }
 @media (min-width: 320px) {
-  /* line 661, assets/sass/_partials/_cookie-banner.scss */
+  /* line 681, assets/sass/_partials/_cookie-banner.scss */
   #cn-refuse-cookie {
     flex: auto;
     margin-right: 10px;
@@ -6357,49 +6450,49 @@ TO DO:"
   }
 }
 @media screen and (min-width: 320px) and (min-width: 0px) {
-  /* line 661, assets/sass/_partials/_cookie-banner.scss */
+  /* line 681, assets/sass/_partials/_cookie-banner.scss */
   #cn-refuse-cookie {
     margin-right: calc(10px + 20 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 320px) and (min-width: 960px) {
-  /* line 661, assets/sass/_partials/_cookie-banner.scss */
+  /* line 681, assets/sass/_partials/_cookie-banner.scss */
   #cn-refuse-cookie {
     margin-right: 30px;
   }
 }
 @media screen and (min-width: 320px) and (min-width: 960px) {
-  /* line 661, assets/sass/_partials/_cookie-banner.scss */
+  /* line 681, assets/sass/_partials/_cookie-banner.scss */
   #cn-refuse-cookie {
     margin-right: calc(30px + 10 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 320px) and (min-width: 1440px) {
-  /* line 661, assets/sass/_partials/_cookie-banner.scss */
+  /* line 681, assets/sass/_partials/_cookie-banner.scss */
   #cn-refuse-cookie {
     margin-right: 40px;
   }
 }
 @media screen and (min-width: 320px) and (min-width: 0px) {
-  /* line 661, assets/sass/_partials/_cookie-banner.scss */
+  /* line 681, assets/sass/_partials/_cookie-banner.scss */
   #cn-refuse-cookie {
     margin-left: calc(5px + 10 * (100vw - 0px) / 960);
   }
 }
 @media screen and (min-width: 320px) and (min-width: 960px) {
-  /* line 661, assets/sass/_partials/_cookie-banner.scss */
+  /* line 681, assets/sass/_partials/_cookie-banner.scss */
   #cn-refuse-cookie {
     margin-left: 15px;
   }
 }
 @media screen and (min-width: 320px) and (min-width: 960px) {
-  /* line 661, assets/sass/_partials/_cookie-banner.scss */
+  /* line 681, assets/sass/_partials/_cookie-banner.scss */
   #cn-refuse-cookie {
     margin-left: calc(15px + 5 * (100vw - 960px) / 480);
   }
 }
 @media screen and (min-width: 320px) and (min-width: 1440px) {
-  /* line 661, assets/sass/_partials/_cookie-banner.scss */
+  /* line 681, assets/sass/_partials/_cookie-banner.scss */
   #cn-refuse-cookie {
     margin-left: 20px;
   }
@@ -7622,7 +7715,7 @@ TO DO:"
   filter: grayscale(1);
   top: 0px;
   bottom: 0px;
-  position: absolute;
+  position: sticky;
 }
 /* line 323, assets/sass/_partials/_archivelist.scss */
 .image-items .image-item {
@@ -7640,49 +7733,49 @@ TO DO:"
   display: block;
   height: 100vh;
   top: 0;
+  bottom: 0px;
   opacity: 1;
   background-repeat: no-repeat;
   background-position: center center;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 348, assets/sass/_partials/_archivelist.scss */
+/* line 350, assets/sass/_partials/_archivelist.scss */
 .image-items .image-item.activated {
   opacity: 1;
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
 
-/* line 362, assets/sass/_partials/_archivelist.scss */
+/* line 364, assets/sass/_partials/_archivelist.scss */
 .container.activated .image-items .image-item {
   animation: image-blur-in-active 400ms ease-in forwards;
 }
-/* line 368, assets/sass/_partials/_archivelist.scss */
+/* line 370, assets/sass/_partials/_archivelist.scss */
 .container.activated .list-items {
   pointer-events: none;
   animation: opacityout 400ms ease-in forwards;
 }
 
-/* line 383, assets/sass/_partials/_archivelist.scss */
+/* line 385, assets/sass/_partials/_archivelist.scss */
 body.is-touch .list-item {
   border-top: 1px solid rgba(240, 82, 59, 0.1);
   border-bottom: 1px solid rgba(240, 82, 59, 0.1);
   z-index: 2;
 }
-/* line 388, assets/sass/_partials/_archivelist.scss */
+/* line 390, assets/sass/_partials/_archivelist.scss */
 body.is-touch .list-item .item-text {
   animation: blurin 200ms ease-in forwards;
 }
 
-/* line 401, assets/sass/_partials/_archivelist.scss */
+/* line 403, assets/sass/_partials/_archivelist.scss */
 body.is-not-touch .list-item:hover {
   border-top: 1px solid rgba(240, 82, 59, 0.1);
   border-bottom: 1px solid rgba(240, 82, 59, 0.1);
   z-index: 2;
 }
-/* line 406, assets/sass/_partials/_archivelist.scss */
+/* line 408, assets/sass/_partials/_archivelist.scss */
 body.is-not-touch .list-item:hover .item-text {
   animation: blurin 200ms ease-in forwards;
 }

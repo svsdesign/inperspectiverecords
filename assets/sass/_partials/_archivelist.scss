@@ -318,7 +318,7 @@
     filter: grayscale(1);
     top:0px;
     bottom:0px;
-    position: absolute;
+    position:sticky;
 
         .image-item{
         width: 100%;
@@ -335,11 +335,13 @@
         display: block;
         height: 100vh;
         top: 0;
+        bottom:0px;
         opacity: 1;
         background-repeat: no-repeat;
         background-position: center center;
-        position: -webkit-sticky;
-        position: sticky;
+        position: fixed;
+        // position: -webkit-sticky;
+        // position: sticky;
 
         @include focus;
         @include image-blur;

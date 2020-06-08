@@ -3911,7 +3911,7 @@ a.link-animation {
     transform: translate(0%, 0%) scale(0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(0%, 0%) scale(0.9) rotateX(36deg) rotateY(10deg);
+    transform: translate(0%, 0%) scale(0.9) rotateX(81deg) rotateY(10deg);
   }
   100% {
     transform: translate(0%, 0%) scale(1.1) rotateX(0deg) rotateY(0deg);
@@ -4605,7 +4605,7 @@ a._link-animation:hover span:nth-child(7) {
   filter: grayscale(1);
   top: 0px;
   bottom: 0px;
-  position: absolute;
+  position: sticky;
 }
 /* line 323, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-items .image-item {
@@ -4623,46 +4623,46 @@ a._link-animation:hover span:nth-child(7) {
   display: block;
   height: 100vh;
   top: 0;
+  bottom: 0px;
   opacity: 1;
   background-repeat: no-repeat;
   background-position: center center;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 348, assets/sass/_partials/_archivelist.scss */
+/* line 350, assets/sass/_partials/_archivelist.scss */
 .wp-admin .image-items .image-item.activated {
   opacity: 1;
   animation: blurin 200ms ease-in forwards;
   animation: image-blur-in 400ms ease-in-out forwards;
 }
-/* line 362, assets/sass/_partials/_archivelist.scss */
+/* line 364, assets/sass/_partials/_archivelist.scss */
 .wp-admin .container.activated .image-items .image-item {
   animation: image-blur-in-active 400ms ease-in forwards;
 }
-/* line 368, assets/sass/_partials/_archivelist.scss */
+/* line 370, assets/sass/_partials/_archivelist.scss */
 .wp-admin .container.activated .list-items {
   pointer-events: none;
   animation: opacityout 400ms ease-in forwards;
 }
-/* line 383, assets/sass/_partials/_archivelist.scss */
+/* line 385, assets/sass/_partials/_archivelist.scss */
 .wp-admin body.is-touch .list-item {
   border-top: 1px solid rgba(240, 82, 59, 0.1);
   border-bottom: 1px solid rgba(240, 82, 59, 0.1);
   z-index: 2;
 }
-/* line 388, assets/sass/_partials/_archivelist.scss */
+/* line 390, assets/sass/_partials/_archivelist.scss */
 .wp-admin body.is-touch .list-item .item-text {
   animation: blurin 200ms ease-in forwards;
 }
-/* line 401, assets/sass/_partials/_archivelist.scss */
+/* line 403, assets/sass/_partials/_archivelist.scss */
 .wp-admin body.is-not-touch .list-item:hover {
   border-top: 1px solid rgba(240, 82, 59, 0.1);
   border-bottom: 1px solid rgba(240, 82, 59, 0.1);
   z-index: 2;
 }
-/* line 406, assets/sass/_partials/_archivelist.scss */
+/* line 408, assets/sass/_partials/_archivelist.scss */
 .wp-admin body.is-not-touch .list-item:hover .item-text {
   animation: blurin 200ms ease-in forwards;
 }

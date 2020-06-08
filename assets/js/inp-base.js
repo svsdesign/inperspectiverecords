@@ -684,18 +684,16 @@ The first
   
         var $thisgallery = $('body').find(".release-home-carousel");      
   
-         $thisgallery.flickity({
+          $thisgallery.flickity({
               imagesLoaded: true, 
               setGallerySize: false, //if you prefer to size the carousel with CSS, rather than using the size of cells.
-         // default cellAlign: 'center'
               percentPosition: false, 
-              // fade: true,
               autoPlay: 6000, // {Number}
-  //https://github.com/metafizzy/flickity/issues/46
-            //  selectedAttraction: 0.01,
-             // friction: 0.15,
+              // https://github.com/metafizzy/flickity/issues/46
+              // selectedAttraction: 0.01,
+              // friction: 0.15,
               pauseAutoPlayOnHover: true,
-//              pauseAutoPlayOnHover: false, // don't think pausing is good idea; because of the size(entire view port) of the content
+              // pauseAutoPlayOnHover: false, // don't think pausing is good idea; because of the size(entire view port) of the content
               draggable: false,
               freeScroll: false, 
               wrapAround: true, 
@@ -705,9 +703,8 @@ The first
                 x2: 75, y2: 40,
                 x3: 35
               }
-  //            arrowShape: '82.9312793 24.4501626 86.9653917 27.5504528 49.7576146 75.9653917 12.5498374 27.5504528 16.5839498 24.4501626 49.7576146 67.615895',
-  
-           });
+                // arrowShape: '82.9312793 24.4501626 86.9653917 27.5504528 49.7576146 75.9653917 12.5498374 27.5504528 16.5839498 24.4501626 49.7576146 67.615895',
+          });
   
       } // function homereleasegallery
   

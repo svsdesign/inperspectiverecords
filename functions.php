@@ -200,7 +200,7 @@ function remove_default_stylesheet() {
 	        'not_found_in_trash'  => __( 'Not found in Trash', 'inperspectiverecords' ),
 	    );
 	     
-	// Set other options for Custom Post Type
+	    // Set other options for Custom Post Type
 	     
 	    $args = array(
 	        'label'               => __( 'artists', 'inperspectiverecords' ),
@@ -263,7 +263,7 @@ function remove_default_stylesheet() {
             'not_found_in_trash'  => __( 'Not found in Trash', 'inperspectiverecords' ),
         );
          
-    // Set other options for Custom Post Type
+        // Set other options for Custom Post Type
          
         $args = array(
             'label'               => __( 'News', 'inperspectiverecords' ),
@@ -594,17 +594,128 @@ function my_acf_init() {
 
 
 
-function my_acf_block_render_callback( $block ) {
-    
-    // convert name ("acf/quote") into path friendly slug ("quote")
-    $slug = str_replace('acf/', '', $block['name']);
-    
-    // include a template part from within the "template-parts/block" folder
-    if( file_exists( get_theme_file_path("/template-parts/blocks/{$slug}/content-{$slug}.php") ) ) {
-        include( get_theme_file_path("/template-parts/blocks/{$slug}/content-{$slug}.php") );
-    } //if
+    function my_acf_block_render_callback( $block ) {
+        
+        // convert name ("acf/quote") into path friendly slug ("quote")
+        $slug = str_replace('acf/', '', $block['name']);
+        
+        // include a template part from within the "template-parts/block" folder
+        if( file_exists( get_theme_file_path("/template-parts/blocks/{$slug}/content-{$slug}.php") ) ) {
+            include( get_theme_file_path("/template-parts/blocks/{$slug}/content-{$slug}.php") );
+        } //if
+
+    }
+
+
+
+/**
+ * Templates and Page IDs without editor
+ *
+ */
+function ea_disable_editor( $id = false ) {
+
+	$excluded_templates = array(
+		// 'page-grid.php'//,
+		//'templates/contact.php'
+	);
+
+	$excluded_ids = array(
+        get_option( 'page_on_front' ), // home = 237
+        679, // About Page
+        681, // home page
+        574 // news
+	);
+
+	if( empty( $id ) )
+		return false;
+
+	$id = intval( $id );
+	$template = get_page_template_slug( $id );
+
+	return in_array( $id, $excluded_ids ) || in_array( $template, $excluded_templates );
+}
+
+/**
+ * Disable Gutenberg by template
+ *
+ */
+function ea_disable_gutenberg( $can_edit, $post_type ) {
+
+	if( ! ( is_admin() && !empty( $_GET['post'] ) ) )
+		return $can_edit;
+
+	if( ea_disable_editor( $_GET['post'] ) )
+        $can_edit = false;
+        
+    if ($post_type === 'projects') 
+        return false;
+
+	return $can_edit;
 
 }
+add_filter( 'gutenberg_can_edit_post_type', 'ea_disable_gutenberg', 10, 2 );
+add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
+
+/**
+ * Disable Classic Editor by template
+ *
+ */
+ 
+function ea_disable_classic_editor() {
+
+	$screen = get_current_screen();
+	if( 'page' !== $screen->id || ! isset( $_GET['post']) )
+		return;
+
+	if( ea_disable_editor( $_GET['post'] ) ) {
+		remove_post_type_support( 'page', 'editor' );
+	}
+
+}
+add_action( 'admin_head', 'ea_disable_classic_editor' );
+
+
+
+/**
+ * Allow Block options
+ *
+ */
+
+ 
+function allowed_block_types( $allowed_blocks, $post ) {
+ 
+	$allowed_blocks = array(
+        'acf/inpquote',
+        'acf/inpcredit',
+        'acf/inpartist',
+        'acf/inptext',
+        'acf/inpsound',
+        'acf/inprelease',
+        'acf/inpimage',
+        'acf/inpgallery',
+        'acf/inpmerch',
+        'acf/inpevent'
+
+	);
+ 
+	if( $post->post_type === 'page' ) {
+        $allowed_blocks[] = 
+       // 'core/shortcode';
+        'core/paragraph';// consider keeping this
+
+	}
+ 
+	return $allowed_blocks;
+ 
+}
+add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );
+
+
+
+
+
+
+
 
  
 

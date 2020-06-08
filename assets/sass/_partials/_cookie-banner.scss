@@ -80,6 +80,16 @@ body.cookies-not-set // if no preferences set yet
 
     }//&.preview-site.g-scale
 
+    .footer-wrap{
+     
+    @media (min-width: map-get($breakpoints,sm)) {
+
+        }
+
+    @media (min-width: map-get($breakpoints,md)) {
+        }
+
+    }// .footer-wrap
 
 }//body.cookies-not-set
 
@@ -278,9 +288,12 @@ body.cookies-accepted
 body.cookies-refused{
 
     #cookie-cont{
-    width: 6.25vw;
-    height: 6.25vw;
     background: transparent;// this se twith js at the mo ;( so have to veridre- find better solution
+
+        @media (min-width: map-get($breakpoints,xs)) { 
+        width: 12.5vw;
+        height: 12.5vw;
+        }  
 
         @media (min-width: map-get($breakpoints,sm)) { 
         width: 12.5vw;
@@ -369,11 +382,18 @@ body.cookies-set.cookies-revoke{
     
     .footer-wrap{
     // add sufficient padding - also ensure applied on "non-set cookieie3s"
-    padding-bottom: 200px;// don't use px
+         @include cssvalue(padding-bottom, 8);
+    
+        @media (min-width: map-get($breakpoints,sm)) {
+        @include cssvalue(padding-bottom, 6);
+        }
 
-    // set via js - probably better
-    }
+        @media (min-width: map-get($breakpoints,md)) {
+        @include cssvalue(padding-bottom, 6);
+        }
 
+    }// .footer-wrap
+  
 }//body.cookies-set.cookies-revoke
 
  
