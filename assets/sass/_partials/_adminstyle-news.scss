@@ -38,11 +38,11 @@ body.wp-admin.post-type-news{
 	// for better visual layout:
 		
 		.inp-block{
-      	zoom:75%;// so everyting visuall fits better
+      	// zoom:75%;// so everyting visuall fits better
 		// considerations should invovled when certain things are "on" &" off" - such as block settings + all other iotion
 
 			@media (min-width: map-get($breakpoints,lg)) {
-			zoom:75%;// so everyting visuall fits better
+			// zoom:75%;// so everyting visuall fits better
 				
 			}
 
@@ -51,7 +51,7 @@ body.wp-admin.post-type-news{
       	&.is-sidebar-opened{
       			
       			.inp-block{
-				zoom:50%;// so everyting visuall fits better
+				// zoom:50%;// so everyting visuall fits better
 	 			}
       	}//&.is-sidebar-opened
 

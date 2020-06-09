@@ -22,7 +22,7 @@ sftp://178.62.43.92:22//applications/hvukffatkp/public_html/wp-content/themes/in
  	- fine tune the player on the archive page - the icons; the alligment.
  	- fine tune the player - click on the title should probaly take the use to that page (and not soundcloud)
 	- If adblocker runing - it https://stackoverflow.com/questions/4869154/how-to-detect-adblock-on-my-website
-
+- https://stackoverflow.com/questions/50298970/adblocker-catch-neterr-blocked-by-client
 
 - Releases
 

@@ -563,6 +563,10 @@ function my_acf_init() {
             'keywords'          => array( 'inpcredit'),
         ));
     
+        // register a spacer block
+    
+       
+    
 
     // register an artist block:
     
@@ -577,6 +581,9 @@ function my_acf_init() {
             },
             'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
             'keywords'          => array( 'inpartist'),
+            'supports' 		=> array(
+                'align' 	=> false,
+            ),
         ));
 
     
@@ -610,6 +617,9 @@ function my_acf_init() {
             },
             'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
             'keywords'          => array( 'inpsound'),
+            'supports' 		=> array(
+                'align' 	=> false,
+            ),
         ));
   
     // register a release block:
@@ -625,6 +635,9 @@ function my_acf_init() {
            },
             'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
             'keywords'          => array('inprelease'),
+            'supports' 		=> array(
+                'align' 	=> false,
+            ),
         ));
 
      // register an image block:
@@ -667,6 +680,9 @@ function my_acf_init() {
           //'mode'              => 'preview',//"auto" or "preview" This lets you control how the block is presented the Gutenberg block editor. The default is “auto” which renders the block to match the frontend until you select it, then it becomes an editor. If set to “preview” it will always look like the frontend and you can edit content in the sidebar.
             'supports'          => array( 'mode' => false ),
             'keywords'          => array( 'inpgallery'),
+            'supports' 		=> array(
+                'align' 	=> false,
+            ),
         ));
 
         
@@ -681,8 +697,11 @@ function my_acf_init() {
             },
             'icon'              => 'universal-access',
           //'mode'              => 'preview',//"auto" or "preview" This lets you control how the block is presented the Gutenberg block editor. The default is “auto” which renders the block to match the frontend until you select it, then it becomes an editor. If set to “preview” it will always look like the frontend and you can edit content in the sidebar.
-            'supports'          => array( 'mode' => false ),
             'keywords'          => array( 'inpmerch'),
+            'supports' 		=> array(
+                'align' 	=> false,
+                'mode' => false 
+            ),
         ));
 
         acf_register_block(array(
@@ -696,10 +715,29 @@ function my_acf_init() {
             },
             'icon'              => 'calendar-alt',
           //'mode'              => 'preview',//"auto" or "preview" This lets you control how the block is presented the Gutenberg block editor. The default is “auto” which renders the block to match the frontend until you select it, then it becomes an editor. If set to “preview” it will always look like the frontend and you can edit content in the sidebar.
-            'supports'          => array( 'mode' => false ),
-            'keywords'          => array( 'inpevent'),
+             'keywords'          => array( 'inpevent'),
+             'supports' 		=> array(
+                'align' 	=> false,
+                'mode' => false 
+            ),
         ));
 
+        acf_register_block(array(
+            'name'              => 'inpspacer',
+            'title'             => __('Inp Spacer'),
+            'description'       => __('A Spacer block.'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'common',// https://www.advancedcustomfields.com/resources/acf_register_block_type/ + https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
+            'enqueue_assets'    => function(){
+            //  wp_enqueue_script('inp-credit-script', ''.get_stylesheet_directory_uri().'/template-parts/blocks/inpcredit/assets/js/script.js', array( 'jquery' ), '', true );
+            },
+            'icon'              => 'admin-comments',//https://developer.wordpress.org/resource/dashicons/
+            'keywords'          => array( 'inpspacer'),
+            'supports' 		=> array(
+                'align' 	=> false,
+                'mode' => false 
+            ),
+        ));
 
 
 
@@ -790,13 +828,10 @@ function ea_disable_classic_editor() {
 }
 add_action( 'admin_head', 'ea_disable_classic_editor' );
 
-
-
 /**
  * Allow Block options
  *
  */
-
  
 function allowed_block_types( $allowed_blocks, $post ) {
  
@@ -809,9 +844,9 @@ function allowed_block_types( $allowed_blocks, $post ) {
         'acf/inprelease',
         'acf/inpimage',
         'acf/inpgallery',
-        'acf/inpmerch',
-        'acf/inpevent'
-
+        // 'acf/inpmerch', enable when finished
+        'acf/inpevent',
+        'acf/inpspacer'
 	);
  
 	if( $post->post_type === 'page' ) {
@@ -825,13 +860,6 @@ function allowed_block_types( $allowed_blocks, $post ) {
  
 }
 add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );
-
-
-
-
-
-
-
 
  
 

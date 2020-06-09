@@ -76,17 +76,35 @@ width: 100%;// this dirty?
 	}       
 
 	.show-title{
-	@include cssvalue(padding-top, 0.25);
+	// @include cssvalue(padding-top, 0.25);
 	@include h1;
-    font-weight: $boldweight;
+	padding-top: 0px;
+	font-weight: $boldweight;
+	width: 100%;
 	}
 	.show-start{
 	@include smaller;
-	
+	width: 100%;	
 	}
+
 	.details-wrap{
-		//@extend .push-item-right-xs-1;
-		min-height: 12.5vw; // ensure visibility
+	//@extend .push-item-right-xs-1;
+	// min-height: 12.5vw; // ensure visibility
+	align-self: center;
+	height: auto;
+	align-content: center;
+	min-height: initial;
+	display: flex;
+	flex-wrap: wrap;
+	// @include cssvalue(margin-top, 0.5);  
+
+	@media (min-width: map-get($breakpoints,sm)) {
+ 	//  @include cssvalue(margin-top, -0.25); 
+	}
+
+	@media (min-width: map-get($breakpoints,md)) {
+//   @include cssvalue(margin-top, -0.5); // review this
+	}
 
 		.radio-view-item{
 		@include smaller;
