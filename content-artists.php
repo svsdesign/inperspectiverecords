@@ -275,16 +275,16 @@ TO DO IN THIS FILE:
 	    									<?php if ($releaselabel):?>
 									    		
 									    		<img class="record-label" src="<?php echo $releaselabel;?>"/>
-												<img class="record-item" src="<?php echo bloginfo('template_directory'); ?>/assets/img/disc_missing_label_black.png"/> -->
+												<img class="record-item" src="<?php echo bloginfo('template_directory'); ?>/dist/img/disc_missing_label_black.png"/> -->
 										
 												<?php else: // if not image use placholder - make the placeholder?>
 									    		
 									       		<!--<img class="record-label" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_label_seba_side_a_600.png"/>-->
-												   <img class="record-item" src="<?php echo bloginfo('template_directory'); ?>/assets/img/release_placeholder_square.png"/>
+												   <img class="record-item" src="<?php echo bloginfo('template_directory'); ?>/dist/img/release_placeholder_square.png"/>
 
 									        <?php endif; // if $releaseproductcover?>
 									      
-									      <!--	<img class="record-item" src="<?php //echo bloginfo('template_directory'); ?>/assets/img/disc_missing_label_black.png"/> -->
+									      <!--	<img class="record-item" src="<?php //echo bloginfo('template_directory'); ?>/dist/img/disc_missing_label_black.png"/> -->
 										<!--	<img class="record-item" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/web_records_blank_black.png"/> -->
 
 									    </div><!-- .inner-container-->							

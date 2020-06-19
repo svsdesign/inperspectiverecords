@@ -51,7 +51,7 @@ $contactintro = get_field( 'contact_intro' ); // text area
 
 				<div class="logo-wrap grid-item grid-item-xs-4 grid-item-sm-3 grid-item-lg-2 push-item-left-md-4 push-item-left-lg-3">
 
-	 				<img class="logo-image" src="<?php echo bloginfo('template_directory'); ?>/assets/svg/inp_logo_white.svg">
+	 				<img class="logo-image" src="<?php echo bloginfo('template_directory'); ?>/dist/svg/inp_logo_white.svg">
 				
 				</div><!-- .logo-wrap -->
 

@@ -199,11 +199,15 @@
 		</div><!-- .page-title-position -->
 		
 		<?php if($featureimage): ?>
-
+		
+			<div class="cover-image-item outer-grid-item outer-grid-item-xs-8" style="background-image: url('<?php echo $featureimage;?>');">
+			</div><!-- .cover-image-item -->
 			
-		<div class="cover-image-item outer-grid-item outer-grid-item-xs-8" style="background-image: url('<?php echo $featureimage;?>');">
-		</div><!-- .cover-image-item -->
-
+		<?php else: //$featureimage  ?>
+		
+			<div class="cover-image-item outer-grid-item outer-grid-item-xs-8" style="background-image: url('<?php echo bloginfo('template_directory')?>/dist/img/radio_placeholder_1.jpg');">
+			</div><!-- .cover-image-item -->
+	
 		<?php endif; //$featureimage  ?>
 
 		<li data-trackid="<?php echo $showid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="outer-grid-item inner outer-grid-item-sm-6">

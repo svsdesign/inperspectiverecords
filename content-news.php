@@ -122,19 +122,19 @@
 
 				if($categoryid == '7' ): // if merchandise: ?>
 				
-					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/assets/img/news_placeholder_1.png">
+					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/dist/img/news_placeholder_1.png">
  
 				<?php elseif ($categoryid == '8' ): // if release: ?>
 				
-					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/assets/img/release_placeholder_square.png">
+					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/dist/img/release_placeholder_square.png">
  
 				<?php elseif ($categoryid == '1' ): // if Uncategorised: ?>
 					
-					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/assets/img/news_placeholder_1.png">
+					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/dist/img/news_placeholder_1.png">
  		
 				<?php else: // No Category has been ticked: ?>
 
-					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/assets/img/news_placeholder_1.png">
+					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/dist/img/news_placeholder_1.png">
  
 				<?php endif; //$categories  ?>
 
@@ -259,19 +259,19 @@
 
 				if($categoryid == '7' ): // if merchandise: ?>
 				
-					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/assets/img/news_placeholder_1.png">
+					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/dist/img/news_placeholder_1.png">
  
 				<?php elseif ($categoryid == '8' ): // if release: ?>
 				
-					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/assets/img/release_placeholder_square.png">
+					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/dist/img/release_placeholder_square.png">
  
 				<?php elseif ($categoryid == '1' ): // if Uncategorised: ?>
 					
-					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/assets/img/news_placeholder_1.png">
+					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/dist/img/news_placeholder_1.png">
  		
 				<?php else: // No Category has been ticked: ?>
 
-					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/assets/img/news_placeholder_1.png">
+					<img class="thumb-image-item place-holder" src="<?php echo bloginfo('template_directory'); ?>/dist/img/news_placeholder_1.png">
  
 				<?php endif; //$categories  ?>
 

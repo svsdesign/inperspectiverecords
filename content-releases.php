@@ -507,7 +507,7 @@ wp- embedd
 				<?php if ($releaseimagefront):?>
 				<img class="front" src="<?php echo $releaseimagefront;?>"/>
 				<?php else:?>
-				<img class="front" src="<?php echo bloginfo('template_directory'); ?>/assets/img/release_placeholder_square.png"/>
+				<img class="front" src="<?php echo bloginfo('template_directory'); ?>/dist/img/release_placeholder_square.png"/>
 
 				<?php endif; // endif is_single() ?>
 
@@ -523,7 +523,7 @@ wp- embedd
 			<?php else:?>
 				 
 				<style>
-					#release-<?php echo $releaseid?>.carousel__cell:after {content:''; background-image: url('<?php echo bloginfo('template_directory'); ?>/assets/img/release_placeholder_square.png');}
+					#release-<?php echo $releaseid?>.carousel__cell:after {content:''; background-image: url('<?php echo bloginfo('template_directory'); ?>/dist/img/release_placeholder_square.png');}
 				</style>
 			
 			<?php endif; // endif is_single() ?>
