@@ -19,14 +19,14 @@
 	<?php wp_head(); ?>
 
 <!-- site icons -->	 		
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/favicon-16x16.png">
-	<link rel="manifest" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/site.webmanifest">
-	<link rel="mask-icon" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/safari-pinned-tab.svg" color="#000000">
-	<link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo bloginfo('template_directory'); ?>/dist/site-icons/front-end/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo bloginfo('template_directory'); ?>/dist/site-icons/front-end/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo bloginfo('template_directory'); ?>/dist/site-icons/front-end/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo bloginfo('template_directory'); ?>/dist/site-icons/front-end/site.webmanifest">
+	<link rel="mask-icon" href="<?php echo bloginfo('template_directory'); ?>/dist/site-icons/front-end/safari-pinned-tab.svg" color="#000000">
+	<link rel="shortcut icon" href="<?php echo bloginfo('template_directory'); ?>/dist/site-icons/front-end/favicon.ico">
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-config" content="<?php echo bloginfo('template_directory'); ?>/assets/site-icons/front-end/browserconfig.xml">
+	<meta name="msapplication-config" content="<?php echo bloginfo('template_directory'); ?>/dist/site-icons/front-end/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<!-- end site icons -->
 
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
   theme_directory = "<?php echo get_template_directory_uri() ?>";
 </script>
 
-<body <?php body_class('not-admin'); // 'dev-on' - whilst working site leave dev-on by default ?>>
+<body <?php body_class('not-admin');?> >
 
-	<?php include( 'navigation.php' );?>
+	<?php include('navigation.php');?>
 
 	<?php //query to return all the radio items
 	$radioquery = array(

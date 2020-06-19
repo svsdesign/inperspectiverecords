@@ -506,6 +506,13 @@ its out of date and needs replacing with the one as per the "single other shows"
 		<?php if($featureimage): ?>
 
 			<div class="cover-image-item outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo $featureimage;?>');">
+		
+		<?php else: //$featureimage  ?>
+		
+			<div class="cover-image-item outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo bloginfo('template_directory')?>/dist/img/radio_placeholder_1.jpg');">
+
+		<?php endif; //$featureimage  ?>
+
 
 				<div class="play-icon-wrap">
 			
@@ -531,6 +538,5 @@ its out of date and needs replacing with the one as per the "single other shows"
 				
 			</div><!-- image-item -->
 
-		<?php endif; //$featureimage  ?>
-
+ 
 <?php endif; ?>
