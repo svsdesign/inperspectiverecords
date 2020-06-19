@@ -10,6 +10,8 @@
 
 get_header();?>
 
+<div class="ajax-container" data-barba="container" data-barba-namespace="archive-radio">
+
 		<div class="container grid">
 		 
 			<?php
@@ -364,6 +366,7 @@ get_header();?>
 				 
 
 			</div><!-- -->
-
+			
+</div><!-- class="ajax-container" data-barba="container" data-barba-namespace -->
 
 <?php get_footer(); ?>

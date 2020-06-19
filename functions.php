@@ -506,8 +506,8 @@ function my_admin_block_assets() {
 //https://kinsta.com/blog/critical-rendering-path/
 //https://modularwp.com/gutenberg-block-custom-styles/
 
-//wp_enqueue_style('admin-artist-block',''.get_stylesheet_directory_uri().'/template-parts/blocks/inpartist/assets/css/style.css', array(), '1');
-wp_enqueue_style('admin-blocks',''.get_stylesheet_directory_uri().'/admin-style.css', array(), '1');
+ //wp_enqueue_style('admin-blocks',''.get_stylesheet_directory_uri().'/admin-style.css', array(), '1');
+    wp_enqueue_style('admin-blocks',''.get_stylesheet_directory_uri().'/dist/admin-style.css', array(), '1');
 
 //
 wp_enqueue_script('inp-admin-enquire', ''.get_stylesheet_directory_uri().'/assets/js/enquire.js', array( 'jquery' ), '', true );
@@ -1892,17 +1892,50 @@ function inp_scripts()
         true
     );
 */
-    wp_enqueue_script('jquery');
+
+        if ( !is_admin() ) :
+            // Remove as we don't want WP built it jQuery
+            wp_deregister_script( 'jquery' );
+
+        endif;
+    // wp_enqueue_script('jquery');
+
+    wp_enqueue_style( 'inp-style', get_stylesheet_directory_uri().'/dist/css/style.min.css' );
+  
+  
+
+
+ // Browserify & jQuery for local development
+ if ( $_SERVER['REMOTE_ADDR'] === '::1' || $_SERVER['REMOTE_ADDR'] === '127.0.0.1' ):
+
+    wp_enqueue_script( 'jquery', get_template_directory_uri() .'/dist/js/jquery.js', array(), null, false );
+    wp_enqueue_script( '__bs_script__', 'http://'. $_SERVER['SERVER_NAME'] .':3000/browser-sync/browser-sync-client.js', array(), '2.17.3', true );
+
+else:
+
+    wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js', array(), null, false );
+
+endif;
+
+// Pull in any vendors scripts and site app
+wp_enqueue_script('inp-vendors', get_template_directory_uri() .'/dist/js/vendors.min.js', array('jquery'), filemtime( get_stylesheet_directory().'/dist/js/vendors.min.js' ), true );
+wp_enqueue_script('inp-app', get_template_directory_uri() .'/dist/js/app.min.js', array('jquery','inp-vendors'), filemtime( get_stylesheet_directory().'/dist/js/app.min.js' ), true );
+
+// Localise our app scipt above with any PHP/site variables we may need - might not need this;'r evies
+$theme_vars = array(
+    'base_url' => home_url(),
+    'template_url' => get_stylesheet_directory_uri(),
+    'root' => esc_url_raw( rest_url() ),
+    'nonce' => wp_create_nonce( 'wp_rest' )
+);
+wp_localize_script('inp-app', 'WP_settings', $theme_vars );
+
+
+
+
+
 
 /*
-    wp_enqueue_script( // review if we're using this?
-        'mutation-summary',
-        get_stylesheet_directory_uri().'/assets/js/mutation-summary.js',
-       //  array('jquery'),
-        '0.1.1',
-        true
-    ); */
-
     wp_enqueue_script(
         'attrchange', 
         'https://cdnjs.cloudflare.com/ajax/libs/attrchange/2.0.1/attrchange.min.js',
@@ -1916,17 +1949,19 @@ function inp_scripts()
 
   //  wp_enqueue_style( 'flickity-style', 'https://npmcdn.com/flickity@2.2.1/dist/flickity.css'); // Styles moved into "block-gallery.scss"
  
-    wp_enqueue_style( 'inp-style', get_stylesheet_uri() );
-  
+   	  
 
 	wp_enqueue_script(
 		'barba', 
 		'https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js',
 		false,
 		true
-	);
+    );
     
-	  
+
+
+
+   
 	wp_enqueue_script(
 		'enquire', 
 		get_stylesheet_directory_uri().'/assets/js/enquire.js',
@@ -2018,7 +2053,7 @@ function inp_scripts()
         false,
         true
     );
-
+*/
 
  /*
     wp_enqueue_script(
@@ -2049,38 +2084,6 @@ function inp_scripts()
     );
 */
 
- 	//if (basename($template) == 'systems-page.php' || basename($template) == 'front-page.php') {
-       
-
-/*
-         wp_enqueue_script(
-            'typed',
-			get_stylesheet_directory_uri().'/assets/js/typed.min.js',
-    		array('jquery'),
-            false,
-            true
-        );
-
-        wp_enqueue_script(
-            'isotope',
-            'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.1/isotope.pkgd.min.js',
-            array('jquery'),
-            '3.0.1',
-            true
-        );
-
-   	
-
-   		wp_enqueue_script(
-            'flickity',
-			get_stylesheet_directory_uri().'/assets/js/flickity.pkgd.min.js',
-			array('jquery'),
-            false,
-            true
-        );
-*/
-
-   // }// if (basename($template) == 'systems-page.php')
 
 };
 add_action('wp_enqueue_scripts', 'inp_scripts');

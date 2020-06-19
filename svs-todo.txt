@@ -1,22 +1,6 @@
 To Do:
 
-
-STAGING
-
-Make sure this setup, so we can savely push updates live
-sftp://178.62.43.92:22//applications/hvukffatkp/public_html/wp-content/themes/inperspectiverecords
-
-- Home page
-
- - finish coding designs
- 
-
-- Artists
-
- 
-- Events 
-	
- 
+  
 - Radio / Player
  
  	- fine tune the player on the archive page - the icons; the alligment.
@@ -38,10 +22,7 @@ SEO + "rich" web search / sharing
 
 Glitches + bugs
 
-	- Transition from artist single (will miles for example) to release, the disc image are blown up; visually looks shite. probably need to constrain sizes of the dics markup or similar - 
-	- Is there a glitch with my carousel sizing on the release page? - Coming from other pages (events) it was too big & a screen resize didn't seem to resolve the issue.
-	- Should there be a more seemles transition between the artist archive archive page and artist posts, in terms of the bg image blur & remaining loading. Or is that and old design idea? 
-	- Check my whole site on a touch devices. What are the current dev issues: hover states etc? Check player!
+ 	- Check my whole site on a touch devices. What are the current dev issues: hover states etc? Check player!
 
 
 PAGES TO add
@@ -81,8 +62,6 @@ PAGES TO add
 	All this to be designed (& sourced/write the copy) & Coded.
 
 
-
-
 	Check list of legal requirements
 	- https://www.hallaminternet.com/internet-marketing-and-the-law-legal-issues-affecting-you-and-your-website/
 
@@ -100,23 +79,7 @@ PAGES TO add
 		http://jamieking.co.uk/blog/cyber-security/policies/privacy-policy-generator.php
 
 
-
-
-- Blocks:
-
-	I would suggest looking into the CMS complications before code any more blocks.
-
-	- Finish off styling on blocks that I've created already
-		- Sound blocks:
-			- revise iconography; its shit. consider white outline + animation
-	- Add additional blocks: php, js , styling etc.
-		Addition blocks:
-			- A merch block. Image & copy + link to 3rd party if required. Design > Code
-
-	- How to disavle blocks that I don't want.https://rudrastyh.com/gutenberg/remove-default-blocks.html
-
-
-Tidy up To Do's:
+ Tidy up To Do's:
 
 - go through all files and adress current comments. Ensure everything is resolve.
 - Tidy up the formatting of my markup; make it "clean" as fuck.
@@ -127,29 +90,15 @@ WP CMS:
 - how do I improve the UI so that we're able to see more accurately what layout is being created:
 enqueing up admin styles and js basically; but how to enque + & also best practice for writing code for use within the CMS?
 -- Go through the functions & ACF CMS - ensure no reference to previious iuse of code & asign correct instructions accordingluy
-
-CROSSBROWSER
-
-	Windows laptop:
-
-	- fonts not rendering? - sort @fontface
-	- check on a windows platform - Use Stu's laptop.
-	- Images were loading very slow - looked like imagesloaded not being used, or only on selected content - check this
-	-
-
-
+ 
 
 SKETCH:
 
 Tidy up my files:  Make it prestenable
 
-
-
 LIVE SITE:
 
-- add all the events that I've worked on in the past: artwork, artist etc.
-
-
+ 
 3rd Party Scripts:
 
 install Yoast

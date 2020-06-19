@@ -9,7 +9,8 @@
  */  
  get_header(); ?>
 
-  
+<div class="ajax-container" data-barba="container" data-barba-namespace="archive-artists">
+
 	   <article class="container grid">
 					
 				 <div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
@@ -103,9 +104,10 @@
 			<?php else:  ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 				<?php get_template_part( 'content', 'none' ); ?>
-			<?php endif; ?>
-								 
+			<?php endif; ?>							 
 
 	</article>  <!-- container -->
+
+</div><!-- class="ajax-container" data-barba="container" data-barba-namespace="archive-artists"-->
 
 <?php get_footer(); ?>

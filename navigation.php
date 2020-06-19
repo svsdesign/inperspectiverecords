@@ -22,13 +22,12 @@
 
 			<div class="menu-wrap grid">
 
-
 				<div id="logo-wrap" class="">
 
 					<div class="inner-logo-wrap">
 				
 						<a class="home-logo-link" alt="home" href="<?php echo get_home_url(); ?>">
-							<?php get_template_part('/assets/svg/inline-inp_logo.svg');?>
+							<?php get_template_part('/dist/svg/inline-inp_logo.svg');?>
 						</a>
 
 					</div>
@@ -98,6 +97,18 @@
 			</svg>
 
 		</div>
+
+		<div id="mobile-logo-wrap" class="">
+
+			<div class="inner-logo-wrap">
+
+				<a class="home-logo-link" alt="home" href="<?php echo get_home_url(); ?>">
+					<?php get_template_part('/dist/svg/inline-inp_logo.svg');?>
+				</a>
+
+			</div>
+
+		</div><!-- #mobile-logo-wrap -->
 
  	</div>
 		

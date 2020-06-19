@@ -11,6 +11,8 @@
    
  get_header(); ?>
 
+
+<div class="ajax-container" data-barba="container" data-barba-namespace="archive-events">
   
    <article class="container grid">
 	
@@ -340,6 +342,8 @@
 
 		</section><!-- -->						 
 	 
- 		</article>  <!-- container -->
+	</article>  <!-- container -->
 
+</div><!-- class="ajax-container" data-barba="container" data-barba-namespace -->
+		 
 <?php get_footer(); ?>

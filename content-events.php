@@ -32,8 +32,8 @@
 	?>
 
 	<?php if ($homefeatured == true): 
-	//is homefeatured content-events.php
-	//c&p from the archive if statemement below - try and mainaint same code + add the " $thispostid "
+		//is homefeatured content-events.php
+		//c&p from the archive if statemement below - try and mainaint same code + add the " $thispostid "
 
 			//$upcomingeventid = get_the_ID();							
 				//	$isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if 'true' in array 
@@ -98,7 +98,7 @@
 										set_query_var( 'event_color', $value_to_sent );
 
 
-									 get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
+									 get_template_part('/dist/svg/inline-inp_location-marker.svg'); ?>
 							 		</div><!-- svg-icon inline-icon -->	
 								
 									</a> 
@@ -119,7 +119,7 @@
 
 										$value_to_sent = $eventcolor;
 										set_query_var( 'event_color', $value_to_sent );
-										get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+										get_template_part('/dist/svg/inline-inp_arrow-right.svg'); ?>
 							 			</div><!-- svg-icon inline-icon -->	
 							 	
 						 			</a> 
@@ -129,15 +129,14 @@
 							<?php endif; //$ralink ?>
 								
 							<?php if($fblink): ?>
-
-						 
+		 
 								<div class="fb-details summary-item" style="border-color:<?php echo $eventcolor;?>">
 									
 									<a class="scale-link" href="<?php echo $fblink ;?>" style="color:<?php echo $eventcolor;?>">
 										
 										<span>Facebook Event</span>	
 										<div class="svg-icon inline-icon right">
-										<?php get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
+										<?php get_template_part('/dist/svg/inline-inp_facebook-logo.svg'); ?>
 							 			</div><!-- svg-icon facebook-logo -->	
 							 		
 									</a>
@@ -146,18 +145,16 @@
 						
 							<?php endif; //$fblink ?>
 
-
 							<div class="event-link summary-item" style="border-color:<?php echo $eventcolor;?>">
 									
 									<a class="scale-link" href="<?php the_permalink( $thispostid );?>" style="color:<?php echo $eventcolor;?>">
 									
 									<span class="">More Information</span>
 									<div class="svg-icon inline-icon right white-icon">
-									<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+									<?php get_template_part('/dist/svg/inline-inp_arrow-right.svg'); ?>
 						 			</div><!-- svg-icon inline-icon -->	
 						 		
 								</a>
-
 
 							</div><!--.event-link"-->
 							
@@ -180,8 +177,7 @@
 			<div class="past-event-item">
 
 				<a href="<?php the_permalink();?>" class="grid scale-me grid-item-sm-6">
-		 
-		 				
+		 	
 					<div class="date grid-item grid-item-xs-6 grid-item-md-1 grid-item-lg-1">
 								
 						<?php $startdate = get_field('event_start_date', $thispostid ); echo date_i18n('d.m.Y', $startdate);  ?>
@@ -211,10 +207,6 @@
 			</div><!--event-item -->
 
 			<?php endif; // endif $isupcomingevent ?>
-
-
-
-
 
 	<?php else: // not home feaured:
 	//not home featured content-events.php?>
@@ -263,11 +255,7 @@
 	  //  echo "is upcoming event? ";
 	  //  echo $isupcomingeven;
 
-	};
-
-	?>
-
-
+	};?>
 
 
 	<section id="event-details" class="grid <?php if (in_array("true", $isnextevent)): ?>next-event<?php endif; //$isnextevent ?>">
@@ -333,7 +321,7 @@
 
 							<span><?php the_field('venue'); ?></span>   
 							<div class="svg-icon inline-icon right">
-							<?php get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
+							<?php get_template_part('/dist/svg/inline-inp_location-marker.svg'); ?>
 					 		</div><!-- svg-icon inline-icon -->	
 						
 							</a> 
@@ -350,7 +338,7 @@
 								
 								<span class="">Buy Tickets</span>
 								<div class="svg-icon inline-icon right white-icon">
-								<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+								<?php get_template_part('/dist//svg/inline-inp_arrow-right.svg'); ?>
 					 			</div><!-- svg-icon inline-icon -->	
 					 		
 					 		</a> 
@@ -370,7 +358,7 @@
 									
 										<span>Facebook Event</span>
 										<div class="svg-icon inline-icon right">
-										<?php get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
+										<?php get_template_part('/dist/svg/inline-inp_facebook-logo.svg'); ?>
 					 					</div><!-- svg-icon inline-icon -->	
 					
 				
@@ -488,7 +476,9 @@
 																<span>
 																<?php echo $name; ?>
 																</span>
-
+																<div class="arrow more">
+																<?php get_template_part('/dist/svg/inline-inp_arrow-right.svg');?>		
+																</div>	
 															</a>
 													    
 													    <?php /*
@@ -687,7 +677,7 @@
 													<?php 			
 													$value_to_sent = $eventcolor;
 													set_query_var( 'event_color', $value_to_sent );
-													get_template_part('/assets/svg/inline-inp_location-marker.svg');
+													get_template_part('/dist/svg/inline-inp_location-marker.svg');
 													?>
 											 		</div><!-- svg-icon inline-icon -->	
 												
@@ -708,7 +698,7 @@
 														<?php
 														$value_to_sent = $eventcolor;
 														set_query_var( 'event_color', $value_to_sent );
-														get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+														get_template_part('/dist/svg/inline-inp_arrow-right.svg'); ?>
 											 			</div><!-- svg-icon inline-icon -->	
 											 		
 											 		</a> 
@@ -728,7 +718,7 @@
 														<?php
 															$value_to_sent = $eventcolor;
 															set_query_var( 'event_color', $value_to_sent );
-														 get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
+														 get_template_part('/dist//svg/inline-inp_facebook-logo.svg'); ?>
 									 					</div><!-- svg-icon inline-icon -->	
 									
 													</a>
@@ -746,7 +736,7 @@
 													<?php 
 													$value_to_sent = $eventcolor;
 													set_query_var( 'event_color', $value_to_sent );
-													get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+													get_template_part('/dist/svg/inline-inp_arrow-right.svg'); ?>
 										 			</div><!-- svg-icon inline-icon -->	
 										 													 		
 												</a>
@@ -791,7 +781,7 @@
 	 		<span>View All Events</span>
 			
 			<div class="svg-icon black">
-				<?php get_template_part('/assets/svg/inline-rs_three_lines.svg'); ?>
+				<?php get_template_part('/dist/svg/inline-rs_three_lines.svg'); ?>
 	 		</div><!-- svg-icon black -->
 		</a> <!--  -->																	
 		
@@ -882,7 +872,7 @@
 								set_query_var( 'event_color', $value_to_sent );
 
 
-							 get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
+							 get_template_part('/dist/svg/inline-inp_location-marker.svg'); ?>
 					 		</div><!-- svg-icon inline-icon -->	
 						
 							</a> 
@@ -903,7 +893,7 @@
 
 								$value_to_sent = $eventcolor;
 								set_query_var( 'event_color', $value_to_sent );
-								get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+								get_template_part('/dist/svg/inline-inp_arrow-right.svg'); ?>
 					 			</div><!-- svg-icon inline-icon -->	
 					 	
 				 			</a> 
@@ -921,7 +911,7 @@
 								
 								<span>Facebook Event</span>	
 								<div class="svg-icon inline-icon right">
-								<?php get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
+								<?php get_template_part('/dist/svg/inline-inp_facebook-logo.svg'); ?>
 					 			</div><!-- svg-icon facebook-logo -->	
 					 		
 							</a>
@@ -937,7 +927,7 @@
 							
 							<span class="">More Information</span>
 							<div class="svg-icon inline-icon right white-icon">
-							<?php get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+							<?php get_template_part('/dist/svg/inline-inp_arrow-right.svg'); ?>
 				 			</div><!-- svg-icon inline-icon -->	
 				 		
 						</a>

@@ -13,8 +13,8 @@
 		<?php include( 'navigation-footer.php' ); // this good idea? - to place inside ajax??>
 	</div>
 
-  </div><!-- ajax-container -->
-</div><!-- ajax-wrapper -->
+ <!--  </div>ajax-container -->
+</div><!-- ajax-wrapper --><!--<data-barba="wrapper-->
 
 <?php get_template_part( 'grid-system' );?>
 <?php wp_footer(); ?>

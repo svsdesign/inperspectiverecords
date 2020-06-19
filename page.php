@@ -8,20 +8,24 @@
  *   
  */
 
-get_header();
+get_header();?>
 
-if ( have_posts() ) :
+	<div class="ajax-container" data-barba="container" data-barba-namespace="page">
 
-	while ( have_posts() ) : the_post();?>
+		<?php if ( have_posts() ) :
 
-		<article class="container grid">
+			while ( have_posts() ) : the_post();?>
 
-			<?php get_template_part( 'content-page' );?>
+				<article class="container grid">
 
-	    </article><!-- container -->
+					<?php get_template_part( 'content-page' );?>
 
-	<?php endwhile;
+				</article><!-- container -->
 
-endif;
+			<?php endwhile;
 
-get_footer();
+		endif;?>
+
+	</div><!-- class="ajax-container" data-barba="container" data-barba-namespace -->
+
+<?php get_footer();?>

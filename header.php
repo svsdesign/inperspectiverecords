@@ -138,11 +138,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 		<?php wp_reset_query(); ?>	
+	
+	<div id="ajax-wrapper" data-barba="wrapper">
 
-
-		
-	<div id="ajax-wrapper">
-
-	  <div class="ajax-container">
 
  

@@ -13,6 +13,9 @@
 
 get_header();?>
 
+<div class="ajax-container" data-barba="container" data-barba-namespace="front-page">
+
+ 
     <!-- START featured area -->
     <?php if ($sitelocation = 'local'){
      $homepage = new WP_Query("page_id=681"); // local - was 5
@@ -582,5 +585,7 @@ get_header();?>
     </div><!-- class="release-home-wrapper grid"-->
 
     <!-- END RELEASES area -->
+
+</div><!-- class="ajax-container" data-barba="container" data-barba-namespace -->
 
 <?php get_footer();?>

@@ -10,6 +10,7 @@
 
 get_header(); ?>
 
+<div class="ajax-container" data-barba="container" data-barba-namespace="archive-releases">
   
 	<article class="container grid scene-wrapper">
 				 
@@ -253,7 +254,7 @@ to add as part of list view
 											 
  	</article>  <!-- container -->
 
- 
+</div><!-- class="ajax-container" data-barba="container" data-barba-namespace -->
 
 <?php get_footer(); ?>
 

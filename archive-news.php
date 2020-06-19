@@ -10,7 +10,9 @@
 
    
 get_header(); ?>
-  
+
+<div class="ajax-container" data-barba="container" data-barba-namespace="archive-news">
+ 
 	<div class="container grid">
 			
 		 <div class="page-title-positioner outer-grid-item outer-grid-item-sm-8 sticky">
@@ -125,5 +127,7 @@ get_header(); ?>
 			?>
 
 	</div>  <!-- container -->
+
+</div><!-- class="ajax-container" data-barba="container" data-barba-namespace -->
 
 <?php get_footer(); ?>

@@ -5,7 +5,7 @@
  *  Developed by Simon van Stipriaan 
  * 	http://svs.design
  *
- *   TEMPLATE FOR Will miles - 1 disc S
+ *   TEMPLATE FOR 
  */
 ?>
 

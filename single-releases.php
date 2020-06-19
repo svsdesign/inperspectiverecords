@@ -9,8 +9,10 @@
  */
 
 get_header(); ?>
+ 
+ <div class="ajax-container" data-barba="container" data-barba-namespace="single-post">
 
-	<?php if ( have_posts() ) : ?>
+	<?php  if ( have_posts() ) : ?>
 
 	    <article class="grid">
 
@@ -26,7 +28,8 @@ get_header(); ?>
 
 	    </article>
 
-	<?php wp_reset_query(); //reset  ?>			
- 
+	<?php wp_reset_query(); //reset?>	
 
-<?php get_footer(); ?>
+</div><!-- class="ajax-container" data-barba="container" data-barba-namespace -->
+
+<?php get_footer();?>

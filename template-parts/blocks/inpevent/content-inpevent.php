@@ -94,7 +94,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
                 <?php
                 $value_to_sent = $eventcolor;
                 set_query_var( 'event_color', $value_to_sent );
-                 get_template_part('/assets/svg/inline-inp_location-marker.svg'); ?>
+                 get_template_part('./dist/svg/inline-inp_location-marker.svg'); ?>
                 </div><!-- svg-icon inline-icon --> 
               
                 </a> 
@@ -114,7 +114,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
                   <?php 
                   $value_to_sent = $eventcolor;
                   set_query_var( 'event_color', $value_to_sent );
-                  get_template_part('/assets/svg/inline-inp_arrow-right.svg'); ?>
+                  get_template_part('./dist/svg/inline-inp_arrow-right.svg'); ?>
                   </div><!-- svg-icon inline-icon --> 
                 
                 </a> 
@@ -134,7 +134,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
                   <?php
                   $value_to_sent = $eventcolor;
                   set_query_var( 'event_color', $value_to_sent );
-                   get_template_part('/assets/svg/inline-inp_facebook-logo.svg'); ?>
+                   get_template_part('./dist/svg/inline-inp_facebook-logo.svg'); ?>
                   </div><!-- svg-icon inline-icon --> 
         
                 </a>
@@ -152,7 +152,7 @@ $isupcomingnextevent = get_post_meta($upcomingeventid, 'is-next-event' );  // if
                 <?php
                 $value_to_sent = $eventcolor;
                 set_query_var( 'event_color', $value_to_sent );
-                get_template_part('/assets/svg/inline-inp_arrow-right.svg');
+                get_template_part('./dist/svg/inline-inp_arrow-right.svg');
                  ?>
                 </div><!-- svg-icon inline-icon --> 
                                         

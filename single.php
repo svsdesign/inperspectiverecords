@@ -8,25 +8,26 @@
  *   
  */
 
-get_header();
+get_header();?>
 
-if ( have_posts() ) :?>
-   
-    <article class="grid">
-    
-    	<?php while ( have_posts() ) : the_post();?>
+	<div class="ajax-container" data-barba="container" data-barba-namespace="single">
 
- 			<?php the_title();?>
+		<?php if ( have_posts() ) :?>
+		
+			<article class="grid">
+			
+				<?php while ( have_posts() ) : the_post();?>
 
-	  		<?php get_template_part('content'); ?>
+					<?php the_title();?>
 
- 	  	<?php endwhile;?>
+					<?php get_template_part('content'); ?>
 
-	</article>
+				<?php endwhile;?>
 
-<?php endif;?>
+			</article>
 
- <?php// wp_reset_query(); //reset  ?>			
- 
+		<?php endif;?>
+
+	</div><!-- class="ajax-container" data-barba="container" data-barba-namespace -->
 
 <?php get_footer(); ?>
