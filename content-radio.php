@@ -29,7 +29,7 @@
 
 	<?php if ($homefeatured == true):
 	//is homefeatured - content-radio.php?>
-	
+
 		<div class="radio-item">
 
 			<div class="grid" <?php if($soundcloudlink): ?>data-radio-link="<?php echo $soundcloudlink;?>"<?php endif;?>>
@@ -49,8 +49,13 @@
 				
 				<?php if($featureimage): ?>
 					
-					<div class="cover-image-item outer-grid-item outer-grid-item-xs-8" style="background-image: url('<?php echo $featureimage;?>');">
-					</div><!-- .cover-image-item -->
+				<div class="cover-image-item home-showcase outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo $featureimage;?>');">
+				</div><!-- .cover-image-item -->
+
+				<?php else: //$featureimage  ?>
+
+				<div class="cover-image-item home-showcase outer-grid-item outer-grid-item-xs-8" style="background-image: url('<?php echo bloginfo('template_directory')?>/dist/img/radio_placeholder_1.jpg');">
+				</div><!-- .cover-image-item -->
 
 				<?php endif; //$featureimage  ?>
 
@@ -81,23 +86,32 @@
 						    </div>
 						 	
 						</a><!-- .radio-item outer-grid-item outer-grid-item-sm-8-->
-											
-						<div class="details-wrap grid-item grid-item-xs-5">
+ 						
+						<a class="view-radio-item details-wrap grid-item grid-item-xs-5" href="<?php echo the_permalink();?>" title="view <?php echo $showtitle; ?>" id="view-radio-item-<?php echo $showid?>">
+ 				
+							<div class="details-wrap">
 									
-							<div class="radio-date">
-								<?php $showstart = get_field('show_start_date',$thispostid); echo date_i18n('jS F Y', $showstart);  ?>
-							 </div><!-- .date -->
+								<div class="radio-date">
+									<?php $showstart = get_field('show_start_date'); echo date_i18n('jS F Y', $showstart);  ?>
+									</div><!-- .date -->
+								
+								<div class="radio-view-item">
+									View Show
+								</div><!--view-item-->
+								
+
+								<?php if($showtitle): ?>
+
+									<div class="radio-name">	
+									<?php echo $showtitle; ?>
+									</div><!-- .event-name -->
 							
-							<?php if($showtitle): ?>
+								<?php endif; //$name ?>	
 
-								<div class="radio-name">	
-								<?php echo $showtitle; ?>
-			 					</div><!-- .event-name -->
-						
-							<?php endif; //$name ?>	
+							</div><!--.outer-grid-item inner -->
 
-						</div><!--.details-wrap -->
-						
+						</a>
+									
 					</div><!-- wrapping -->
 
 				</li>

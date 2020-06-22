@@ -9,10 +9,8 @@
  */
 ?>
 
- 
 <?php if ( is_home()):
 	
-
 	$newsid = $thispostid;//get_the_ID();	- this coming from the , $thispostid ); 
 	$date = get_the_date('jS F Y', $thispostid);
 	$featureimage = get_field('feature_image', $thispostid); // image
@@ -21,12 +19,10 @@
  	$thepostcontent = get_post_field('post_content', $newsid);
  	$blocks = parse_blocks($thepostcontent);
 
-
 	if ($homefeatured == true):?>
 
 		<div class="container post-entry-content grid inner outer-grid-item outer-grid-item-xs-8">
 
-		
 			<div class="post-entry-details grid inner outer-grid-item outer-grid-item-xs-6">
 		 
 			 	<div class="grid-item grid-item-xs-8 grid-item-sm-4 grid-item-md-3">
