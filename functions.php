@@ -499,7 +499,7 @@ function wpse324908_allowed_block_types( $allowed_blocks, $post ) {
 //end allow only certain blocks:
 
  */
-
+/* delete this
 function my_admin_block_assets() {
 //https://wp.zacgordon.com/2017/12/26/how-to-add-javascript-and-css-to-gutenberg-blocks-the-right-way-in-plugins-and-themes/
 //https://support.advancedcustomfields.com/forums/topic/js-fires-before-block-is-rendered/
@@ -520,7 +520,7 @@ wp_enqueue_script('inp-admin-base', ''.get_stylesheet_directory_uri().'/assets/j
 }
 add_action( 'enqueue_block_editor_assets', 'my_admin_block_assets' );
 
-
+*/
  
 
 add_action('acf/init', 'my_acf_init');
@@ -2104,6 +2104,24 @@ add_action('wp_enqueue_scripts', 'inp_scripts');
 //}
 //add_action( 'enqueue_block_editor_assets', 'theme_editor_styles' );
 
+
+
+
+function my_admin_block_assets() {
+ 
+	//wp_enqueue_style('admin-artist-block',''.get_stylesheet_directory_uri().'/template-parts/blocks/inpartist/assets/css/style.css', array(), '1');
+	wp_enqueue_style('admin-blocks',''.get_stylesheet_directory_uri().'/dist/css/admin.style.min.css', array(), '1');
+
+	//enquire js
+	// wp_enqueue_script('th-admin-enquire', ''.get_stylesheet_directory_uri().'/assets/js/enquire.js', array( 'jquery' ), '', true );
+
+
+	 // admin js: - review
+	wp_enqueue_script('inp-admin-site', ''.get_stylesheet_directory_uri().'/dist/js/app.admin.min.js', array( 'jquery' ), '', true );
+
+}
+add_action( 'enqueue_block_editor_assets', 'my_admin_block_assets' );
+ 
 
 /* Add Navigations */
 
