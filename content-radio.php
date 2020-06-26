@@ -40,7 +40,7 @@
 								    
 						 <span class="inner">
 						<!--<a href="<?php //echo home_url();?>/radio">Radio</a> Is it worth adding links? review if so-->
-						Radio
+						Podcasts
 						</span><!-- inner -->
 
 				    </div> <!--.page-title -->

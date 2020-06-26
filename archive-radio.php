@@ -25,7 +25,7 @@ get_header();?>
 				'post_status' => 'publish', // only show published events
 				'order' => 'DESC', // Show earlier events last
 				'paged' => $paged,
-				'posts_per_page' => 12,
+				// 'posts_per_page' => 12,this being added via the functions.php - ensure it works and delete this
 
 				'orderby' =>  'meta_value',
 				'meta_key' =>  'show_start_date',
@@ -70,7 +70,7 @@ get_header();?>
 						    <div class="page-titler">
 						    
 							    <span class="inner">
-									Radio
+									Podcasts
 							  	</span><!-- inner -->
 
 						    </div> <!--.page-title -->
@@ -90,7 +90,7 @@ get_header();?>
 						    <div class="page-titler">
 						    
 							    <span class="inner">
-									Radio
+									Podcasts
 							  	</span><!-- inner -->
 
 						    </div> <!--.page-title -->

@@ -931,14 +931,14 @@ add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );
     function post_type_radio() {
 
      $labels = array(
-        'name' => _x('Radio', 'post type general name'),
-        'singular_name' => _x('Radio', 'post type singular name'),
-        'add_new' => _x('Add New', 'radio'),
-        'add_new_item' => __('Add New Radio'),
-        'edit_item' => __('Edit Radio'),
-        'new_item' => __('New Radio'),
-        'view_item' => __('View Radio'),
-        'search_items' => __('Search Radio'),
+        'name' => _x('Podcasts', 'post type general name'),
+        'singular_name' => _x('Podcasts', 'post type singular name'),
+        'add_new' => _x('Add New', 'podcast'),
+        'add_new_item' => __('Add New Podcasts'),
+        'edit_item' => __('Edit Podcasts'),
+        'new_item' => __('New Podcasts'),
+        'view_item' => __('View Podcasts'),
+        'search_items' => __('Search Podcasts'),
         'not_found' =>  __('Nothing found'),
         'not_found_in_trash' => __('Nothing found in Trash'),
         'parent_item_colon' => ''
@@ -952,7 +952,7 @@ add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );
         '_builtin' => false, // It's a custom post type, not built in
         '_edit_link' => 'post.php?post=%d',
         'capability_type' => 'post',
-        //  'rewrite' => array("slug" => "radio"), // Permalinks
+        'rewrite' => array("slug" => "podcasts"), // Permalinks
         // 'query_var' => true,
         'menu_position' => null
       );
@@ -960,7 +960,7 @@ add_filter( 'allowed_block_types', 'allowed_block_types', 10, 2 );
   flush_rewrite_rules( false );
 
     register_post_type( 'radio' , $args );
-    // flush_rewrite_rules();
+    flush_rewrite_rules();
 
 
     }
@@ -1007,40 +1007,11 @@ function set_posts_per_page_for_radio( $radio_query ) {
   
   /* setting pagination number */
 
-
-/* Deletet this whole comment blow - we are registering post type above iwth. the label
-
-	function post_type_radio() {
-
  
-	    register_post_type( 'radio', array(
-	        'label' => __('Radio'),
-	        'singular_label' => __('Radio Item'),
-	        'public' => true,
-	        'has_archive' => true,
-	        'show_ui' => true,
-	        '_builtin' => false, // It's a custom post type, not built in
-	        '_edit_link' => 'post.php?post=%d',
-	        'capability_type' => 'post',
-	        'rewrite' => array("slug" => "radio"), // Permalinks
-	     	'query_var' => true,
-	        'menu_position' => null,
-	     ));
-	        // add the following function if you are getting
-	        // a 'Page not found' error from your permalink
-	        //flush_rewrite_rules( false );
-	}
-
-	 add_action('init', 'post_type_radio');
-
-*/
 /*
 // END CUSTOMPOST TYPE: Radio
 
-
-	*/
-
-	/* EVENTS - will require different post type options - check out RS; the way events are code in this- */
+ 
 
 /*
 *
