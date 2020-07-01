@@ -5,7 +5,7 @@
  *  Developed by Simon van Stipriaan 
  * 	http://svs.design
  *
- *   TEMPLATE SE4006. 
+ *   TEMPLATE SE4003 - SE4008
  * 	"Digital template"
  */
 
@@ -17,6 +17,8 @@
 	$releasetitle = get_field('release_title', $releaseid); // 
 	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
 	$releaseproductcover = get_field('release_product_image_front', $releaseid); // 
+	$releaseproductcoverback = get_field('release_product_image_back', $releaseid); // 
+
 	$releaseimage = get_field('release_vinyl_label_image', $releaseid); 
  	$releaseassetslocation = get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate.'/';			
 	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS	
@@ -35,9 +37,9 @@
 		    
 		    </div>
 		  
-		    <div class="flip-card-back" style="background-image:url('<?php echo $releaseassetslocation ;?>digital-cover-back.png')">		
+		    <div class="flip-card-back" style="background-image:url('<?php echo $releaseproductcoverback?>')">		
 
-		    	<img class="record-sleave back" src="<?php echo $releaseassetslocation ;?>digital-icon_v2.png">
+		    	<!--<img class="record-sleave back" src="<?php //echo $releaseassetslocation ;?>digital-icon_v2.png"> -->
 
 		    </div>
 

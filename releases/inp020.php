@@ -9,14 +9,12 @@
  */
 ?>
 
+ <?php // if ( is_single() ) : //is single content 
 
-
- <?php// if ( is_single() ) : //is single content 
-
-	//$releaseid = $artistsrelease->ID;
+ 	$releaseid = $artistsrelease->ID;
 	$phptemplate = get_field('release_php_template', $releaseid);
 	$releasecode = get_field('release_code', $releaseid); // 
-$releaseformat = get_field('release_format', $releaseid);
+	$releaseformat = get_field('release_format', $releaseid);
 	$phptemplatestring = 'releases/'.$phptemplate.'.php';
 	$releasetitle = get_field('release_title', $releaseid); // 
 	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
