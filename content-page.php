@@ -226,9 +226,9 @@ $contactintro = get_field( 'contact_intro' ); // text area
 
 		<?php if($contactintro) :?>
 
-			<div id="contact-intro-copy" class="grid">
+			<div id="contact-intro-copy" class="outer-grid-item inner outer-grid-item-xs-6">
 
-				<div id="contact-intro-copy-inner" class="outer-grid-item inner outer-grid-item-xs-6">
+				<div id="contact-intro-copy-inner" class="">
 
 					<div class="grid">
 
@@ -250,7 +250,7 @@ $contactintro = get_field( 'contact_intro' ); // text area
 							   	$email = get_sub_field('contact_email'); 
 							   	?>
 
-								   	<div class="contact-item grid-item grid-item-xs-6 grid-item-sm-6 grid-item-md-3 grid-item-lg-2">
+								   	<div class="contact-item grid-item grid-item-xs-6 grid-item-sm-6 grid-item-md-3 grid-item-xl-2">
 
 								   		<div class="contact-title">
 										<?php echo $title;?>:

@@ -8,10 +8,10 @@
  *   TEMPLATE FOR PICTURE DISCS
  */
 ?>
-
+ 
  <?php // if ( is_single() ) : //is single content 
 
- 	$releaseid = $artistsrelease->ID;
+ 	// $releaseid = $artistsrelease->ID;
 	$phptemplate = get_field('release_php_template', $releaseid);
 	$releasecode = get_field('release_code', $releaseid); // 
 	$releaseformat = get_field('release_format', $releaseid);
@@ -23,7 +23,9 @@
 	$releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;	
 	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS	
   	?>
-	<div class="record-circle-container">
+
+
+ 	<div class="record-circle-container">
 								   
 	 	 <div class="sleave-square">
 	      		       	

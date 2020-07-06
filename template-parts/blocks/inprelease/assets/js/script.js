@@ -16,18 +16,21 @@
 
     var initializeBlock = function( $block ) {
               
-        //$block.find('img').doSomething();
-
-        var $thiscontainer = $block.find(".record-circle-container"),
-          //  $thiscontainer = $(this),
-            $thiscircle = $block.find(".record-circle");
+ 
+        var $thiscontainer = $block.find(".record-circle-container, .record-square-container"),
+            $thiscircle = $block.find(".record-circle"),
+            $thissquare = $block.find(".flip-card");// was: .record-square
+          
+            $thiscontainer.removeClass("active","flipping","flipped");// incase its active still - seems to be some buggy behavior atm
+            $thissquare.removeClass("flipping");// in an effort to reset?
             $thiscontainer.removeClass("active","rotating","rotated");// incase its active still - seems to be some buggy behavior atm
+            // $thiscontainer.css("pointer-events","initial");// allow pointer events now that the js is ready
             $thiscontainer.css("pointer-events","initial");// allow pointer events now that the js is ready
-            //$thiscontainer.css("background","red");
-      //console.log('just remove classes');
-    //    setTimeout(function(){
+
+
+          squarehover();
           circlehover();
-    //    }, 1000);
+ 
 
         function circlehover(){
 
@@ -53,6 +56,36 @@
 
            }//        function circlehover(){
 
+        function squarehover(){
+
+           
+        $thissquare.hover(function() {
+          console.log("this square hover")
+
+
+      //$thiscircle.mouseover(function() {
+          if($thissquare.hasClass("flipping")){
+          console.log("has class flipping")
+
+        
+          $thissquare.removeClass("flipping"); 
+          $thissquare.removeClass("flip");
+          $thiscontainer.removeClass("active");
+
+        } else {
+        console.log("DOES NOT have class flipping")
+
+           $thissquare.addClass("flipping");
+           $thissquare.addClass("flip");
+           $thiscontainer.addClass("active");
+
+        } // if
+
+       }); // hover
+
+
+ 
+         }//        function circlehover(){
 
 
     }//var initializeBlock = function( $block ) 
@@ -65,7 +98,7 @@
         if ($("body").hasClass("wp-admin")) {
             //console.log("is admin")
 
-            $(".record-circle-container").each(function() {
+            $(".record-circle-container, .record-square-container").each(function() {
 
                 initializeBlock( $(this) );
             });
