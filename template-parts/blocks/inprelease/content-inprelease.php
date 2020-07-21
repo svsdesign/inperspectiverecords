@@ -47,7 +47,9 @@ $releaselabel = get_field('release_vinyl_label_image', $releaseid); // relations
 
 // colour picker:
 $colouroption = get_field('text_colour'); // relationship = bi-directional - IDS
+$size = 'large';
 
+$frontthumb = $releaseproductcover['sizes'][ $size ]; 
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> inp-block block-z-index-2 grid">
@@ -68,7 +70,7 @@ $colouroption = get_field('text_colour'); // relationship = bi-directional - IDS
                     
                     <?php if ($releaseproductcover):?>
                     
-                    <img class="record-sleave" src="<?php echo $releaseproductcover;?>">
+                    <img class="record-sleave" src="<?php echo $frontthumb;?>">
 
                 <?php else: // if not image use placholder - make the placeholder?>
                     

@@ -9,74 +9,6 @@
  */
  
 
-
-/*
-TO DO:
-
-
-- // go trough my code and remove any traces of system
-
--finishin this list - refer to sketch file + finish the planning document designs; sitemap and content for each box + signup designs with chris first?
-REGISTER POSTTYPES:
-
-- artist
-	- archive
-	- single
-		- current artist
-		- past artists
-
-- news 
-	- archive
-	- single
-
-- releases
-	- archive
-	- single
-		- available
-		- archived
-
-- event
-	- archive
-	- single
-		- past
-		- current
-		- next
-
-- radio
-	- archive
-	- single
-
-REGISTER PAGE TYPES
-- about
-- t&c
-
-
-
-- Further considerations:
-disabling some of the standard blocks - i.e especially the layout; collumns and tables etc.
-     - Related reading: https://developer.wordpress.org/block-editor/developers/themes/theme-support/
-    - Do I use block manager or just allow/confgure blocks via php? Markup exmaple below
-*/
-   /* 
-    START set up re-directs - if need to maybe re-direct "non public" radtio items? 
-
-    function wpse_45164_redirect_press()
-    {
-        if ( ! is_singular( 'project' ) )
-            return;
-
-       // wp_redirect( get_post_type_archive_link( 'project' ), 301 ); // this send to post archive
-         $page = get_page_by_title('projects');
-         wp_redirect(get_permalink($page->ID), 301 ); // redirect single projects to the projects page.
-        exit;
-    }
-    add_action( 'template_redirect', 'wpse_45164_redirect_press' );
-
-     
-    END set up re-directs
-    */
-
-
 //determine if wer're local or nott
 
 $root = get_stylesheet_directory_uri();
@@ -89,8 +21,6 @@ $sitelocation = 'live';
 //end determine if wer're local or nott
 
 // add further classes to the admin menu
-
-
 
 function wpse_320244_admin_body_class($classes) {
 //https://wordpress.stackexchange.com/questions/320244/how-do-i-add-a-custom-body-class-to-the-admin-area-of-a-page
@@ -128,8 +58,6 @@ function wpse_320244_admin_body_class($classes) {
 add_filter('admin_body_class', 'wpse_320244_admin_body_class');
 
 // END add further classes to the admin menu
-
-
 
 
 /* "Un-register" the normal post + associated functions and options
@@ -305,9 +233,6 @@ function remove_default_stylesheet() {
             * Parent and child items. A non-hierarchical CPT
             * is like Posts.
             */ 
-            // 'slug' => 'news',
-            // '_builtin'=> true,
-
             '_builtin' => false, // It's a custom post type, not built in
             '_edit_link' => 'post.php?post=%d',
             'capability_type' => 'post',
@@ -341,14 +266,10 @@ function remove_default_stylesheet() {
  
         register_post_type( 'news', $args );
 
-
-
     }
     
 
-    
-
-
+     
     /* Hook into the 'init' action so that the function
     * Containing our post type registration is not 
     * unnecessarily executed. 
@@ -498,29 +419,7 @@ function wpse324908_allowed_block_types( $allowed_blocks, $post ) {
 }
 //end allow only certain blocks:
 
- */
-/* delete this
-function my_admin_block_assets() {
-//https://wp.zacgordon.com/2017/12/26/how-to-add-javascript-and-css-to-gutenberg-blocks-the-right-way-in-plugins-and-themes/
-//https://support.advancedcustomfields.com/forums/topic/js-fires-before-block-is-rendered/
-//https://kinsta.com/blog/critical-rendering-path/
-//https://modularwp.com/gutenberg-block-custom-styles/
-
- //wp_enqueue_style('admin-blocks',''.get_stylesheet_directory_uri().'/admin-style.css', array(), '1');
-    wp_enqueue_style('admin-blocks',''.get_stylesheet_directory_uri().'/dist/admin-style.css', array(), '1');
-
-//
-wp_enqueue_script('inp-admin-enquire', ''.get_stylesheet_directory_uri().'/assets/js/enquire.js', array( 'jquery' ), '', true );
-
-
- // admin js: - review
-wp_enqueue_script('inp-admin-base', ''.get_stylesheet_directory_uri().'/assets/js/inp-admin-base.js', array( 'jquery' ), '', true );
-
-
-}
-add_action( 'enqueue_block_editor_assets', 'my_admin_block_assets' );
-
-*/
+ */ 
  
 
 add_action('acf/init', 'my_acf_init');
@@ -566,8 +465,6 @@ function my_acf_init() {
         // register a spacer block
     
        
-    
-
     // register an artist block:
     
         acf_register_block(array(
@@ -603,7 +500,7 @@ function my_acf_init() {
         ));
 
     
-    // register a sound block:
+     // register a sound block:
     
         acf_register_block(array(
             'name'              => 'inpsound',
@@ -744,8 +641,6 @@ function my_acf_init() {
     }// if( function_exists('acf_register_block') )
 
 }//function my_acf_init() {
-
-
 
 
     function my_acf_block_render_callback( $block ) {
@@ -1232,39 +1127,6 @@ function custom_radio_column( $column, $post_id ) {
 //END - Add the custom columns to the radio post type:
 
 
- 
-//add_action( 'pre_get_posts', 'events_custom_orderby' );
-//add_action( 'pre_get_posts', 'radio_custom_orderby' );
-/*
-function events_custom_orderby( $query ) {
-  if ( ! is_admin() )
-    return;
-
-  $orderby = $query->get('orderby');
-
-    if ( 'event_start_date' == $orderby ) {
-    $query->set( 'meta_key', 'event_start_date' );
-    $query->set( 'orderby', 'meta_value' );
-  }
-
-}
-
-function radio_custom_orderby( $query ) {
- if ( ! is_admin() )
-    return;
-
-  $orderby = $query->get('orderby');
-
-  if ( 'show_start_date' == $orderby ) {
-    $query->set( 'meta_key', 'show_start_date' );
-    $query->set( 'orderby', 'meta_value' );
-  }
-
-}
-
-*/
-  
-
 function my_radio_sortable_columns( $columns )
 {
     $columns['show_start_date'] = 'show_start_date';
@@ -1548,110 +1410,7 @@ END event
 *
 */
 
-/* Bi-directional - not sure this is going to work becuase the fileds are differently names? */
-/*
-function bidirectional_acf_update_value( $value, $post_id, $field  ) {
-    
-    // vars
-    $field_name = $field['name'];
-    $field_key = $field['key'];
-    $global_name = 'is_updating_' . $field_name;
-    
-    
-    // bail early if this filter was triggered from the update_field() function called within the loop below
-    // - this prevents an inifinte loop
-    if( !empty($GLOBALS[ $global_name ]) ) return $value;
-    
-    
-    // set global variable to avoid inifite loop
-    // - could also remove_filter() then add_filter() again, but this is simpler
-    $GLOBALS[ $global_name ] = 1;
-    
-    
-    // loop over selected posts and add this $post_id
-    if( is_array($value) ) {
-    
-        foreach( $value as $post_id2 ) {
-            
-            // load existing related posts
-            $value2 = get_field($field_name, $post_id2, false);
-            
-            
-            // allow for selected posts to not contain a value
-            if( empty($value2) ) {
-                
-                $value2 = array();
-                
-            }
-            
-            
-            // bail early if the current $post_id is already found in selected post's $value2
-            if( in_array($post_id, $value2) ) continue;
-            
-            
-            // append the current $post_id to the selected post's 'related_posts' value
-            $value2[] = $post_id;
-            
-            
-            // update the selected post's value (use field's key for performance)
-            update_field($field_key, $value2, $post_id2);
-            
-        }
-    
-    }
-    
-    
-    // find posts which have been removed
-    $old_value = get_field($field_name, $post_id, false);
-    
-    if( is_array($old_value) ) {
-        
-        foreach( $old_value as $post_id2 ) {
-            
-            // bail early if this value has not been removed
-            if( is_array($value) && in_array($post_id2, $value) ) continue;
-            
-            
-            // load existing related posts
-            $value2 = get_field($field_name, $post_id2, false);
-            
-            
-            // bail early if no value
-            if( empty($value2) ) continue;
-            
-            
-            // find the position of $post_id within $value2 so we can remove it
-            $pos = array_search($post_id, $value2);
-            
-            
-            // remove
-            unset( $value2[ $pos] );
-            
-            
-            // update the un-selected post's value (use field's key for performance)
-            update_field($field_key, $value2, $post_id2);
-            
-        }
-        
-    }
-    
-    
-    // reset global varibale to allow this filter to function as per normal
-    $GLOBALS[ $global_name ] = 0;
-    
-    
-    // return
-    return $value;
-    
-}
-
-add_filter('acf/update_value/name=related_posts', 'bidirectional_acf_update_value', 10, 3);
-
-*/
-
-
-/* end Bi-directional */
-
+ 
 /* fields: in CPT: releases. releases_artists - field key: field_5c44546ed39be 
 
 */
@@ -1904,177 +1663,8 @@ wp_localize_script('inp-app', 'WP_settings', $theme_vars );
 
 
 
-
-
-/*
-    wp_enqueue_script(
-        'attrchange', 
-        'https://cdnjs.cloudflare.com/ajax/libs/attrchange/2.0.1/attrchange.min.js',
-        array('jquery'),
-        false,
-        true
-    );
-
-
-    //wp_enqueue_style( 'flickity-style', get_stylesheet_directory_uri().'/assets/j/enquire.js',);
-
-  //  wp_enqueue_style( 'flickity-style', 'https://npmcdn.com/flickity@2.2.1/dist/flickity.css'); // Styles moved into "block-gallery.scss"
- 
-   	  
-
-	wp_enqueue_script(
-		'barba', 
-		'https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js',
-		false,
-		true
-    );
-    
-
-
-
-   
-	wp_enqueue_script(
-		'enquire', 
-		get_stylesheet_directory_uri().'/assets/js/enquire.js',
-		array('jquery'),
-		false,
-		true
-	);
-
-	wp_enqueue_script(
-		'inp-ajax', 
-		get_stylesheet_directory_uri().'/assets/js/inp-ajax.js',
-		array('jquery'),
-		false,
-		true
-	);
-
- 
-	wp_enqueue_script(
-		'inp-base', 
-		get_stylesheet_directory_uri().'/assets/js/inp-base.js',
-		array('jquery'),
-		false,
-		true
-	);
-
-    wp_enqueue_script(
-        'isotope',
-        'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js',
-         array('jquery'),
-        '4.1.3',
-        true
-    );
-
-	wp_enqueue_script(
-        'snapsvg',
-		'https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js',
-		 array('jquery'),
-		false,
-		true
-    ); 
-    
-
-    wp_enqueue_script(
-        'scsdk',
-//        'https://connect.soundcloud.com/sdk/sdk-3.3.0.js', // trying thhe other js skd: becuase of the errors
-        'https://connect.soundcloud.com/sdk/sdk-3.3.2.js',
-         array('jquery'),
-        false,
-        true
-    );
-
-    wp_enqueue_script(
-        'radioloader',
-        get_stylesheet_directory_uri().'/assets/js/inp-radio-loader.js',
-        array('jquery'),
-        false,
-        true
-    );
-
-    wp_enqueue_script(
-        'headroom',
-        'https://cdnjs.cloudflare.com/ajax/libs/headroom/0.10.3/headroom.min.js',
-        array('jquery'),
-        false,
-        true
-    );
-
-    wp_enqueue_script(
-        'headroom-jquery',
-        'https://cdnjs.cloudflare.com/ajax/libs/headroom/0.10.3/jQuery.headroom.min.js',
-        array('jquery'),
-        false,
-        true
-    );
-
-
-    wp_enqueue_script(
-        'flickity-pgkd',
-        'https://npmcdn.com/flickity@2/dist/flickity.pkgd.js',
-        array('jquery'),
-        false,
-        true
-    );
-
-    wp_enqueue_script(
-        'flickity-fade',
-        'https://unpkg.com/flickity-fade@1/flickity-fade.js',
-        array('jquery'),
-        false,
-        true
-    );
-*/
-
- /*
-    wp_enqueue_script(
-        'inp-radio-loader', 
-        get_stylesheet_directory_uri().'/assets/js/inp-radio-loader.js',
-        array('jquery'),
-        false,
-        true
-    );
-*/
-
-
- /*
-    wp_enqueue_script(
-        'inpradio',
-        'http://localhost:8888/inp-wp/wp-content/themes/inperspectiverecords/assets/js/inp-radio.js',
-         array('jquery'),
-        false,
-        true
-    );
-*/
-   /* wp_enqueue_script(
-        'mcval', 
-        get_stylesheet_directory_uri().'/assets/js/mc-val.js',
-        array('jquery'),
-        false,
-        true
-    );
-*/
-
-
 };
 add_action('wp_enqueue_scripts', 'inp_scripts');
-
-
-
-
-// Enqueue WordPress theme styles within Gutenberg. 
-// I need to find a better solution for this.
-// have disabled this for now, because causing issues with CMS markups
-//function theme_editor_styles() {
-    //wp_enqueue_style( 'editor-style', get_stylesheet_directory_uri() . '/css/editor.css' ); // i basically need to make another stylesheet for my admin
-  //  wp_enqueue_style( 'editor-style', get_stylesheet_uri() ); // i basically need to make another stylesheet for my admin
-
-   // wp_enqueue_style( 'system-style', get_stylesheet_uri() );
-
-
-//}
-//add_action( 'enqueue_block_editor_assets', 'theme_editor_styles' );
-
 
 
 

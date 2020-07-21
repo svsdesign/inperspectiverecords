@@ -1,4 +1,4 @@
-# Felicity McCabe WordPress Theme
+# Inperspective Records Theme
 
 ## Development
 

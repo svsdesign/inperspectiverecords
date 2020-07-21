@@ -14,6 +14,7 @@ $phptemplate = get_field('release_php_template', $releaseid);
 	$releasecode = get_field('release_code', $releaseid); // 
 $releaseformat = get_field('release_format', $releaseid);
 $releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;	
+
 ?>
  
 

@@ -136,11 +136,16 @@ get_header(); ?>
 					$releaseid = get_the_ID();
 				 	$releasetitle = get_field('release_title'); // 
 				 	$releasecode = get_field('release_code'); // 
-					$releaseimagefront = get_field('release_product_image_front'); // Text
+					$releaseimagefront = get_field('release_product_image_front'); 
+
 					$releaseimageback = get_field('release_product_image_back'); // Text
 					//end get fields
+ 
 
-					// post object relation
+					$size = 'large';
+					$frontthumb = $releaseimagefront['sizes'][ $size ]; 
+					$backthumb = $$releaseimageback['sizes'][ $size ]; 
+										// post object relation
 					$releaseartists = get_field('releases_artists'); // relationship = bi-directional - IDS
 					?>			
 
@@ -178,12 +183,11 @@ to add as part of list view
 											<div class="image-wrap grid-item grid-item-xs-6 grid-item-sm-6 grid-item-md-4 grid-item-lg-4 list">
 												 
 												<div class="images">
-												 
-													<img class="front" src="<?php echo $releaseimagefront;?>"/>
-													<img class="back" src="<?php echo $releaseimageback;?>"/>
-
+							
+												<img class="front" src="<?php echo $frontthumb;?>"/>
+												<img class="back" src="<?php echo $backthumb;?>"/>
+												
 												</div><!-- images-->
-
 
 											</div>
 										

@@ -13,6 +13,8 @@
 	//  echo $releaseid;
  	$phptemplate = get_field('release_php_template', $releaseid);
 	$phptemplatestring = 'releases/'.$phptemplate.'.php';
+	$releasecode = get_field('release_code', $releaseid); // 
+	$releaseformat = get_field('release_format', $releaseid);
 	$releasetitle = get_field('release_title', $releaseid); // 
 	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
 	$releaseproductcover = get_field('release_product_image_front', $releaseid); // 

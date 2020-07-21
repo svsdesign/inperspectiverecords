@@ -20,7 +20,9 @@
 	$releaseimage = get_field('release_vinyl_label_image', $releaseid); 
  	$releaseassetslocation = get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate.'/';			
 	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS	
-  	?>
+	$size = 'large';
+	$frontthumb = $releaseproductcover['sizes'][ $size ]; 
+	?>
 
 
 	<div class="record-square-container">
@@ -31,7 +33,7 @@
 		  
 		    <div class="flip-card-front">
 			
-				<img class="record-sleave" src="<?php echo $releaseproductcover;?>">
+				<img class="record-sleave" src="<?php echo $frontthumb;?>">
 		    
 		    </div>
 		  

@@ -26,14 +26,17 @@
 	$releaseimage = get_field('release_vinyl_label_image', $releaseid); 
 	$releaseassetslocation =  get_stylesheet_directory_uri().'/releases/assets/'.$phptemplate;		
 	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS	
-  	?>
+	$size = 'large';
+	$frontthumb = $releaseproductcover['sizes'][ $size ]; 
+	?>
+
 	<div class="record-circle-container">
 								   
 	 	 <div class="sleave-square">
 	      		       	
  	      <!-- 	<img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/pvc_sleave_400-v7.png"/>
  	       	<img class="record-sleave" src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/pvc_sleave_400.png"/> -->
-			<img class="record-sleave" src="<?php echo $releaseproductcover;?>">
+			<img class="record-sleave" src="<?php echo $frontthumb;?>">
 
 	    </div>  
 

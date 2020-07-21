@@ -37,38 +37,14 @@
 	<meta name="author" content="svs.design"/>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-	
- <!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
 
- <!-- Cookie Consent by https://www.FreePrivacyPolicy.com - not sure this the best solution- try cookie concsent plugin that nick
-<script type="text/javascript" src="//www.FreePrivacyPolicy.com/cookie-consent/releases/3.0.0/cookie-consent.js"></script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-    cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"dark","change_preferences_selector":"#changePreferences","language":"en","website_name":"svsdesign"});
-});
-</script>
--->
-<!-- Unnamed script -->
-<!-- example of how its add markup for "cookie using scripts scripts such as googl this just exmpale is theirs <script type="text/plain" cookie-consent="tracking" src="//www.FreePrivacyPolicy.com/cookie-consent/releases/3.0.0/cookie-consent.js"></script> -->
-
-<!-- end of Unnamed script-->
-
-<!-- <noscript>GDPR Cookie Consent by <a href="https://www.freeprivacypolicy.com/">FreePrivacyPolicy</a></noscript> -->
-<!-- End Cookie Consent -->
-<!-- caching issues on safari during dev:https://stackoverflow.com/questions/11754305/why-my-mobile-safari-cache-wont-clear -->
-<!--
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="-1"> -->
-<!-- eventually remove this I think? -->
-
-<?php// header('Content-Type: application/json');?>
-
+	<script>
+	/* used for determining if we're local or live */
+	theme_directory = "<?php echo get_template_directory_uri() ?>";
+	</script>
 </head>
 
-<script>
-/* used for determining if we're local or live */
-  theme_directory = "<?php echo get_template_directory_uri() ?>";
-</script>
+
 
 <body <?php body_class('not-admin');?> >
 

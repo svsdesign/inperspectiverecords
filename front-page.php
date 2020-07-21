@@ -305,7 +305,10 @@ get_header();?>
             
                             <div class="cover-image-item home-showcase outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo $featureimage;?>');">
                             </div><!-- image-item -->
-            
+                          
+                            <?php else: ?>
+                              <div class="cover-image-item home-showcase outer-grid-item outer-grid-item-sm-8" style="background-image: url('<?php echo bloginfo("template_directory"); ?>/dist/img/radio_placeholder_1.jpg');">
+                            </div><!-- image-item -->
                           <?php endif; //$featureimage  ?>
                           
                           <li data-trackid="<?php echo $radioid?>" data-tracklink="<?php echo $soundcloudlink;?>" class="radio-item-li radio-item-li-<?php echo $radioitemnumber;?> outer-grid-item inner outer-grid-item-xs-8 outer-grid-item-sm-6 <?php if ($radioitemnumber != "1"):?>grid-item-md-4<?php endif;?>">

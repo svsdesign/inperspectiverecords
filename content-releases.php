@@ -18,7 +18,9 @@
 	$phptemplatestring = 'releases/'.$phptemplate.'.php';
 	$releasetitle = get_field('release_title', $releaseid); // 
 	$releaseartists = get_field('releases_artists', $releaseid); // relationship = bi-directional - IDS
+	$size = 'large';
 	$releaseproductcover = get_field('release_product_image_front', $releaseid); // relationship = bi-directional - IDS
+	$frontthumb = $releaseproductcover['sizes'][ $size ]; 
 	$releaselabel = get_field('release_vinyl_label_image', $releaseid); // relationship = bi-directional - IDS
 	?>
 
@@ -50,7 +52,7 @@
 					      	
 					      	<?php if ($releaseproductcover):?>
 					    		
-					    		<img class="record-sleave" src="<?php echo $releaseproductcover;?>"/>
+					    		<img class="record-sleave" src="<?php echo $frontthumb;?>"/>
 
 							<?php endif; // if $releaseproductcover?>
 
@@ -148,7 +150,7 @@
 				  
 				  <?php if ($releaseproductcover):?>
 					
-					<img class="record-sleave" src="<?php echo $releaseproductcover;?>"/>
+					<img class="record-sleave" src="<?php echo $frontthumb;?>"/>
 
 				<?php endif; // if $releaseproductcover?>
 
@@ -240,11 +242,12 @@
 	$releaseartists = get_field('releases_artists'); // relationship = bi-directional - IDS
 	$releasebanner = get_field('release_cover_image'); // image
 	$releaselinks = get_field('release_buy_links'); // repeater
+	$size = 'large';
 
 	$buydescription = get_field('buy_release_description'); // text
 	$bcembedid = get_field('bc_id'); // text (id)
 
-//release_product_image_front
+	//release_product_image_front
 //release_product_image_back
 
 	/* but I need to create a whole range of tocnte:
@@ -495,17 +498,24 @@ wp- embedd
 
 	$releaseid = get_the_ID();
  	$releasetitle = get_field('release_title'); // 
-	$releaseimagefront = get_field('release_product_image_front'); // Text
-	$releaseimageback = get_field('release_product_image_back'); // Text
+	$releaseimagefront = get_field('release_product_image_front'); 
+	$releaseimageback = get_field('release_product_image_back'); 
+	// $size = 'thumbnail';
  	$releaseartists = get_field('releases_artists'); // relationship = bi-directional - IDS
+	$size = 'large';
+	$frontthumb = $releaseimagefront['sizes'][ $size ]; 
+	$backthumb = $$releaseimageback['sizes'][ $size ]; 
+
 	?>
 
 	<div id="release-<?php echo $releaseid?>" class="carousel__cell <?php if($firstdisc==0) { $firstdisc=1; echo 'active'; };?>">
 
 			<a href="<?php echo the_permalink();?>" class="">
-
+ 
 				<?php if ($releaseimagefront):?>
-				<img class="front" src="<?php echo $releaseimagefront;?>"/>
+				<!--<img class="front" src="<?php //echo $releaseimagefront;?>"/> -->
+				<img class="front" src="<?php echo $frontthumb;?>"/>
+
 				<?php else:?>
 				<img class="front" src="<?php echo bloginfo('template_directory'); ?>/dist/img/release_placeholder_square.png"/>
 
@@ -514,10 +524,10 @@ wp- embedd
 			</a><!-- list-item --> 		 	
 			
 
-			<?php if ($releaseimagefront):?>
+			<?php if ($releaseimageback):?>
 
 				<style>
-					#release-<?php echo $releaseid?>.carousel__cell:after {content:''; background-image: url('<?php echo $releaseimageback;?>');}
+					#release-<?php echo $releaseid?>.carousel__cell:after {content:''; background-image: url('<?php echo $frontthumb;?>');}
 				</style>
 			
 			<?php else:?>
