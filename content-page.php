@@ -147,7 +147,7 @@ $contactintro = get_field( 'contact_intro' ); // text area
 					<div class="time-line-item image" id="item-id-<?php echo get_row_index(); ?>">
 
 
-						<?php if($timelineimage)
+						<?php if($timelineimage):
 							/*	
 
 					<img src="http://localhost:8888/inp-wp/wp-content/uploads/2019/01/crowd_test_1200.png" class="image full">
@@ -159,7 +159,7 @@ $contactintro = get_field( 'contact_intro' ); // text area
 
 
  					 */		
-						 :?>
+						 ?>
 	 
 				 			<div class="time-line-image-item-wrap align-<?php echo $align ; ?>">
 								<img src="<?php echo $timelineimage; ?>" class="image" style="max-width:<?php if($maxsize):?><?php echo $maxsize; ?>px<?php else:?>max-content<?php endif;?>; width:<?php echo $size; ?>%;">
