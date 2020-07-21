@@ -41,7 +41,9 @@
 	<script>
 	/* used for determining if we're local or live */
 	theme_directory = "<?php echo get_template_directory_uri() ?>";
+
 	</script>
+	
 </head>
 
 
